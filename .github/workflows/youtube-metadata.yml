@@ -1,0 +1,49 @@
+name: YouTube metadata
+
+# Pushes the title, description, tags and chapters of every video whose video.json changed to YouTube.
+on:
+  push:
+    branches: [main]
+    paths: ['videos/*/video.json']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+      YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+      YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Skip without YouTube credentials
+        id: credentials
+        run: |
+          if [ -z "$YOUTUBE_REFRESH_TOKEN" ]; then
+            echo "YouTube secrets are not set: nothing to do. See tools/youtube/README.md."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.credentials.outputs.ready == 'true'
+        with:
+          python-version: '3.12'
+
+      - name: Update the changed videos
+        if: steps.credentials.outputs.ready == 'true'
+        run: |
+          pip install -r tools/youtube/requirements.txt
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python tools/youtube/youtube.py update --all
+          else
+            changed=$(git diff --name-only HEAD~1 HEAD -- 'videos/*/video.json' | cut -d/ -f2 | sort -u)
+            [ -n "$changed" ] && python tools/youtube/youtube.py update $changed
+          fi

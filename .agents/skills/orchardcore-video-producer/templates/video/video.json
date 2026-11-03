@@ -1,0 +1,42 @@
+{
+  "title": "Secrets: One Secure Home for the Sensitive Values of Your Site | Orchard Core",
+  "description": "One or two sentences on the problem the feature solves.\n\nOne or two sentences on how the feature solves it.\n\nIn this video:\n• What the first chapter covers\n• What the second chapter covers\n• What the last chapter covers",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Secrets/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Secrets/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Secrets"
+  }
+}
