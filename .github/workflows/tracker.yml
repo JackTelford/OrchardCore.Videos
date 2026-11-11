@@ -1,7 +1,9 @@
 name: Tracker
 
 # Checks the content of the videos and the tracker on every pull request: the storyboards and video.json files match
-# the format and the writing rules, every catalog feature is covered, and TRACKER.md is up to date.
+# the format and the writing rules, and every catalog feature is covered. A video's pull request changes only its own
+# folder and its entry in tracker/videos.json, so TRACKER.md and tracker/COVERAGE.md (generated, shared by every
+# video) are not checked there: they are refreshed in a pull request of their own, and a manual run checks them.
 on:
   pull_request:
   workflow_dispatch:
@@ -25,5 +27,6 @@ jobs:
       - name: Validate the tracker
         run: python tools/tracker.py validate
 
-      - name: Check that TRACKER.md is up to date
+      - name: Check that TRACKER.md and tracker/COVERAGE.md are up to date
+        if: github.event_name == 'workflow_dispatch'
         run: python tools/tracker.py report --check

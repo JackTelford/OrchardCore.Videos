@@ -71,11 +71,11 @@ and the tracker maps each one to its videos (`tracker/COVERAGE.md`).
 python tools/tracker.py next --status planned          # the next videos to write (next, alone: the next to record)
 python tools/tracker.py set <slug> content-draft       # or content-ready, recording --by <name>, recorded, ...
 python tools/validate_content.py                       # before every commit
-python tools/tracker.py report                         # rewrites TRACKER.md and tracker/COVERAGE.md
 ```
 
-The pull request of a video includes its tracker change. The statuses, and what moves a video from one to the next,
-are in [tracker/README.md](tracker/README.md).
+The pull request of a video holds its folder and its entry in `tracker/videos.json`, and leaves `TRACKER.md` and
+`tracker/COVERAGE.md` alone: `python tools/tracker.py report` rewrites them in a pull request of its own. The
+statuses, and what moves a video from one to the next, are in [tracker/README.md](tracker/README.md).
 
 ## Requirements
 

@@ -21,12 +21,15 @@ YouTube by hand, and **no video file is ever committed**, here or in the Orchard
 ## The tracker
 
 Every video is planned in `tracker/videos.json`, and [TRACKER.md](TRACKER.md) shows where each one stands. **When you
-start or finish a video, update the tracker**, and include the change in the video's pull request:
+start or finish a video, update its entry in the tracker**, and include the change in the video's pull request:
 
 ```bash
 python tools/tracker.py set <slug> <status>    # content-draft, content-ready, recording --by <name>, recorded, in-review --pr <url>
-python tools/tracker.py report                 # rewrites TRACKER.md
 ```
+
+A video's pull request holds `videos/<slug>/` and that video's entry in `tracker/videos.json`, nothing else: leave
+`TRACKER.md` and `tracker/COVERAGE.md` alone (`python tools/tracker.py report` refreshes them, in a pull request of
+their own), so pull requests of different videos never conflict.
 
 Pick the next video with `python tools/tracker.py next` (the next to record) or `next --status planned` (the next to
 write). The **Tracker** workflow checks every pull request with `tools/validate_content.py` and

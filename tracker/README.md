@@ -89,10 +89,17 @@ Every session that writes or records videos follows the same routine:
 1. Read [TRACKER.md](../TRACKER.md), and pick the next videos: `python tools/tracker.py next --status planned` for the
    next to write, `python tools/tracker.py next` for the next to record (`content-ready`, in priority and series order).
 2. Mark each one when you start (`tracker.py set <slug> content-draft`, or `recording --by <name>`).
-3. When a video is done: `python tools/validate_content.py`, `tracker.py set <slug> <status>`, then
-   `python tools/tracker.py report`, and commit the video's folder with `tracker/` and `TRACKER.md`.
-4. A pull request holds one series, or up to about 15 videos, with its tracker changes. The **Tracker** workflow runs
-   `validate_content.py`, `tracker.py validate` and `tracker.py report --check` on it.
+3. When a video is done: `python tools/validate_content.py <slug>`, then `tracker.py set <slug> <status>`, and commit
+   the video's folder with its entry in `tracker/videos.json`.
+4. **A pull request holds one video**: `videos/<slug>/` and that video's entry in `tracker/videos.json`, nothing else.
+   `TRACKER.md`, `tracker/COVERAGE.md`, `catalog/DOC-ISSUES.md` and `tracker/SPEC-QUESTIONS.md` are shared by every
+   video, so a video's pull request leaves them alone (two pull requests that change them would conflict). Run
+   `python tools/tracker.py report` in a pull request of its own to refresh the dashboard, and record a documentation
+   issue or a question about the specification in the same way, or in the pull request description. The **Tracker**
+   workflow runs `validate_content.py` and `tracker.py validate` on every pull request, and `report --check` when run
+   by hand.
+5. After a video's pull request is merged, `python tools/tracker.py sync` fills in what only the merged history knows
+   (`contentCommit`, `merged`).
 
 Sessions working in parallel each take a series, touch only their series' `videos/<slug>/` folders and
 `tracker/videos.json`, and pull and merge before every push; nobody rebases a shared branch.

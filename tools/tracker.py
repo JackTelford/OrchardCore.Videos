@@ -256,7 +256,7 @@ def cmd_set(args) -> int:
 
     video["status"] = target
     save_videos(videos)
-    print(f"{args.slug}: {current} -> {target}. Run `python tools/tracker.py report` and commit tracker/ and TRACKER.md.")
+    print(f"{args.slug}: {current} -> {target}. Commit videos/{args.slug}/ with this entry of tracker/videos.json (TRACKER.md is refreshed in its own pull request).")
     return 0
 
 
