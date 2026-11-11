@@ -1,0 +1,51 @@
+{
+  "title": "Setup: Install Your First Orchard Core Site | Orchard Core",
+  "description": "An Orchard Core site is empty until you set it up. The Setup screen asks for the name of the site, a recipe, a time zone, a database and the first user, and builds the site from the answers.\n\nThis video answers each question on the Setup screen, explains what Finish Setup does and which database choices need more information, and then signs in to the admin of the site to check the settings that setup saved.\n\nIn this video:\n• What setup does\n• The setup questions: site, recipe, time zone and database\n• Super user and Finish Setup\n• Sign in and check the result",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Setup",
+    "Installation",
+    "Recipes"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Setup/"
+    },
+    {
+      "label": "Database providers",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Data/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Setup/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Setup"
+  }
+}
