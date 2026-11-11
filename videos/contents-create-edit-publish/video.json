@@ -1,0 +1,54 @@
+{
+  "title": "Content Items: Create, Edit and Publish | Orchard Core",
+  "description": "Pages, articles, and blogs on an Orchard Core site are content items, and editors need to know how to create one, publish it, change it, and take it off the site.\n\nThe Content Items page lists the content items of your site. From it you create an item of a content type, save it as a draft or publish it, edit it, unpublish it, and delete it, and you see each change on the site itself.\n\nIn this video:\n• What content items and content types are\n• The Content Items page\n• Creating and publishing a content item\n• Viewing the published page on your site\n• Editing an item and publishing the change\n• Unpublishing and deleting an item",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "content management",
+    "content items",
+    "content types",
+    "publish content",
+    "drafts"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Contents",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Documentation: Content Management",
+      "url": "https://docs.orchardcore.net/en/latest/topics/content-management/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Contents/README.md",
+    "src/docs/topics/content-management/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Contents"
+  }
+}

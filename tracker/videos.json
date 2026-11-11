@@ -461,9 +461,9 @@
       "src/docs/reference/modules/Contents/README.md",
       "src/docs/topics/content-management/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.8,
+    "words": 722,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
