@@ -1,0 +1,242 @@
+[
+  {
+    "series": "Getting Started",
+    "path": "Getting Started and Setup",
+    "order": 1,
+    "description": "What Orchard Core is, installing a first site, and finding your way around the admin."
+  },
+  {
+    "series": "Content Management",
+    "path": "Content Management",
+    "order": 2,
+    "description": "Creating, finding, previewing, scheduling and cleaning up content items."
+  },
+  {
+    "series": "Content Types",
+    "path": "Content Modeling",
+    "order": 3,
+    "description": "Modeling content: types, parts and their settings, from the admin and from code."
+  },
+  {
+    "series": "Content Fields",
+    "path": "Content Modeling",
+    "order": 4,
+    "description": "The built-in content fields, their editors, and relating content items."
+  },
+  {
+    "series": "Content Parts",
+    "path": "Content Modeling",
+    "order": 5,
+    "description": "The smaller built-in parts: titles, aliases, custom site settings."
+  },
+  {
+    "series": "Lists",
+    "path": "Content Modeling",
+    "order": 6,
+    "description": "Containers of content items: blogs, news, galleries."
+  },
+  {
+    "series": "Flows",
+    "path": "Content Modeling",
+    "order": 7,
+    "description": "Building pages from widgets with the Flow and Bag parts."
+  },
+  {
+    "series": "Taxonomies",
+    "path": "Content Modeling",
+    "order": 8,
+    "description": "Categorizing content with taxonomies, terms and tags."
+  },
+  {
+    "series": "Media",
+    "path": "Media",
+    "order": 9,
+    "description": "The media library, media fields, profiles, security and storage."
+  },
+  {
+    "series": "Menus and Navigation",
+    "path": "Navigation, Routing and SEO",
+    "order": 10,
+    "description": "Menus for visitors, and how themes render navigation."
+  },
+  {
+    "series": "Routing",
+    "path": "Navigation, Routing and SEO",
+    "order": 11,
+    "description": "URLs of content items, the home page, and URL rewriting."
+  },
+  {
+    "series": "SEO and Analytics",
+    "path": "Navigation, Routing and SEO",
+    "order": 12,
+    "description": "Search engine optimization, sitemaps, feeds and analytics."
+  },
+  {
+    "series": "Themes",
+    "path": "Design: Themes, Templates and Widgets",
+    "order": 13,
+    "description": "Choosing and creating themes for the front end and the admin."
+  },
+  {
+    "series": "Templates and Liquid",
+    "path": "Design: Themes, Templates and Widgets",
+    "order": 14,
+    "description": "Liquid templates, shortcodes and overriding shapes from the admin."
+  },
+  {
+    "series": "Display Management",
+    "path": "Design: Themes, Templates and Widgets",
+    "order": 15,
+    "description": "How Orchard Core renders a page: shapes, alternates and placement."
+  },
+  {
+    "series": "Layers and Widgets",
+    "path": "Design: Themes, Templates and Widgets",
+    "order": 16,
+    "description": "Widgets in zones, shown by layers and their rules."
+  },
+  {
+    "series": "Search and Indexing",
+    "path": "Search and Queries",
+    "order": 17,
+    "description": "Indexes, search providers and the front-end search page."
+  },
+  {
+    "series": "Queries",
+    "path": "Search and Queries",
+    "order": 18,
+    "description": "Saved queries over indexes and the database, and where to use them."
+  },
+  {
+    "series": "Workflows",
+    "path": "Workflows and Automation",
+    "order": 19,
+    "description": "Automating tasks with workflows: events, tasks, HTTP, timers."
+  },
+  {
+    "series": "Users",
+    "path": "Users, Roles and Security",
+    "order": 20,
+    "description": "User accounts, sign-in, registration and profiles."
+  },
+  {
+    "series": "Roles and Permissions",
+    "path": "Users, Roles and Security",
+    "order": 21,
+    "description": "Roles, permissions and content-level access."
+  },
+  {
+    "series": "Site Security",
+    "path": "Users, Roles and Security",
+    "order": 22,
+    "description": "Hardening a site: HTTPS, headers, CORS, bots, rate limits."
+  },
+  {
+    "series": "Secrets",
+    "path": "Users, Roles and Security",
+    "order": 23,
+    "description": "One secure home for passwords, API keys and certificates."
+  },
+  {
+    "series": "Audit Trail",
+    "path": "Users, Roles and Security",
+    "order": 24,
+    "description": "Who changed what, when, and restoring earlier versions."
+  },
+  {
+    "series": "External Authentication",
+    "path": "Sign-In Providers and OpenID Connect",
+    "order": 25,
+    "description": "Signing in with Microsoft, Google, Meta, GitHub and X accounts."
+  },
+  {
+    "series": "OpenID Connect",
+    "path": "Sign-In Providers and OpenID Connect",
+    "order": 26,
+    "description": "Orchard Core as an identity provider, and as a client of one."
+  },
+  {
+    "series": "Localization",
+    "path": "Localization",
+    "order": 27,
+    "description": "Multilingual sites: cultures, translated content and translated UI."
+  },
+  {
+    "series": "Recipes",
+    "path": "Deployment and Recipes",
+    "order": 28,
+    "description": "Setting up and updating sites from recipe files."
+  },
+  {
+    "series": "Deployment",
+    "path": "Deployment and Recipes",
+    "order": 29,
+    "description": "Moving configuration and content between environments."
+  },
+  {
+    "series": "Multi-Tenancy",
+    "path": "Multi-Tenancy",
+    "order": 30,
+    "description": "Running many sites from one application."
+  },
+  {
+    "series": "GraphQL",
+    "path": "APIs and Headless",
+    "order": 31,
+    "description": "Querying content with GraphQL."
+  },
+  {
+    "series": "Headless and APIs",
+    "path": "APIs and Headless",
+    "order": 32,
+    "description": "Decoupled and headless sites, REST endpoints and API documentation."
+  },
+  {
+    "series": "Email, SMS and Notifications",
+    "path": "Email, SMS and Notifications",
+    "order": 33,
+    "description": "Sending email and text messages, and notifying users."
+  },
+  {
+    "series": "Forms",
+    "path": "Forms",
+    "order": 34,
+    "description": "Building forms from widgets and processing what visitors submit."
+  },
+  {
+    "series": "Data Pipelines",
+    "path": "Data Pipelines",
+    "order": 35,
+    "description": "Exporting, transforming and importing data with pipelines."
+  },
+  {
+    "series": "Performance and Background Work",
+    "path": "Performance and Caching",
+    "order": 36,
+    "description": "Caching, compression, profiling and background tasks."
+  },
+  {
+    "series": "Diagnostics and Logging",
+    "path": "Diagnostics and Monitoring",
+    "order": 37,
+    "description": "Error pages, health checks, logs and telemetry."
+  },
+  {
+    "series": "Hosting and Production",
+    "path": "Hosting and Production",
+    "order": 38,
+    "description": "Configuration, data, data protection and running at scale."
+  },
+  {
+    "series": "Extending Orchard Core",
+    "path": "Developer: Modules and Extending",
+    "order": 39,
+    "description": "Writing modules: parts, fields, drivers, settings, steps and activities."
+  },
+  {
+    "series": "Build a Site",
+    "path": "Build a Site",
+    "order": 40,
+    "description": "Cross-feature walkthroughs that build a whole site, step by step."
+  }
+]

@@ -26,6 +26,9 @@ This table is generated from each video's `video.json` by `python tools/youtube/
 | --- | --- |
 | `videos/<slug>/` | One video: `video.json` (YouTube title, description, tags, chapters, links, id), `storyboard.json` (narration), `slides.py`, `recorder/Scenes*.cs`, `durations.json`, captions, and a README on how to record it again |
 | `videos/*-walkthroughs/` | Reels: existing silent screencasts joined into one video per area, built by `scripts/reel.py` from `reel.json` |
+| `catalog/` | Every Orchard Core feature, read from the source by `tools/catalog.py`: what a video could show |
+| `tracker/`, `TRACKER.md` | The plan of every video, its status, and the dashboard generated from it (see below) |
+| `tools/tracker.py`, `tools/validate_content.py` | The tracker's commands, and the check of every video's content |
 | `.agents/skills/orchardcore-video-producer/` | The skill: the video specification, the narration, recording and assembly scripts, the shared recorder, a worked example (`examples/secrets-module/`) and a template for a video's folder (`templates/video/`) |
 | `branding/` | The Orchard Core logo and the Open Sans font every video uses |
 | `tools/youtube/` | Uploads a video, pushes `video.json` changes, computes chapters, fills in the docs embeds, and writes the table above |
@@ -55,6 +58,24 @@ A video's versions are its releases (`<slug>/v1`, `<slug>/v2`, ...): a re-record
 version on YouTube becomes unlisted. Changing a published video's title, description or chapters is an edit to its
 `video.json`; merging it updates YouTube. See [SETUP.md](SETUP.md) and `tools/youtube/README.md` for the secrets these
 workflows need.
+
+## Tracker
+
+Every planned video has an entry in `tracker/videos.json`, from `planned` to `published`, and
+[TRACKER.md](TRACKER.md) shows the progress of each series. `catalog/features.json` lists every Orchard Core feature,
+and the tracker maps each one to its videos (`tracker/COVERAGE.md`).
+
+**Every session that writes or records a video updates the tracker when it starts and when it finishes the video:**
+
+```bash
+python tools/tracker.py next --status planned          # the next videos to write (next, alone: the next to record)
+python tools/tracker.py set <slug> content-draft       # or content-ready, recording --by <name>, recorded, ...
+python tools/validate_content.py                       # before every commit
+```
+
+The pull request of a video holds its folder and its entry in `tracker/videos.json`, and leaves `TRACKER.md` and
+`tracker/COVERAGE.md` alone: `python tools/tracker.py report` rewrites them in a pull request of its own. The
+statuses, and what moves a video from one to the next, are in [tracker/README.md](tracker/README.md).
 
 ## Requirements
 

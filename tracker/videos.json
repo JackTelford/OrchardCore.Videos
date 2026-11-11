@@ -1,0 +1,7047 @@
+[
+  {
+    "slug": "orchard-core-overview",
+    "title": "Orchard Core: What It Is and What You Can Build",
+    "series": "Getting Started",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "topic:README",
+      "topic:glossary"
+    ],
+    "docs": [
+      "src/docs/README.md",
+      "src/docs/reference/README.md",
+      "src/docs/reference/glossary/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "setup-first-site",
+    "title": "Setup: Install Your First Orchard Core Site",
+    "series": "Getting Started",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Setup"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Setup/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "starter-recipes",
+    "title": "Starter Recipes: Choose How Your Site Starts",
+    "series": "Getting Started",
+    "order": 3,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "guide:getting-started/starter-recipes",
+      "TheBlogTheme",
+      "TheAgencyTheme",
+      "TheComingSoonTheme",
+      "TheTheme"
+    ],
+    "docs": [
+      "src/docs/getting-started/starter-recipes.md",
+      "src/docs/reference/modules/Resources/README.md",
+      "src/docs/reference/modules/Widgets/README.md",
+      "src/docs/reference/modules/Flow/BagPart.md",
+      "src/docs/reference/modules/Tenants/README.md",
+      "src/docs/reference/modules/Themes/README.md",
+      "src/docs/reference/modules/Admin/README.md",
+      "src/docs/reference/modules/Navigation/README.md",
+      "src/docs/reference/modules/Notifications/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "admin-tour",
+    "title": "The Admin: Find Your Way Around Orchard Core",
+    "series": "Getting Started",
+    "order": 4,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Admin",
+      "OrchardCore.Contents.QuickNavigation",
+      "TheAdmin",
+      "OrchardCore.Navigation"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Admin/README.md",
+      "src/docs/reference/modules/Contents/README.md",
+      "src/docs/reference/modules/AdminMenu/README.md",
+      "src/docs/reference/modules/Localize/README.md",
+      "src/docs/reference/modules/Navigation/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "site-settings-general",
+    "title": "Site Settings: Name, Time Zone, Page Size and More",
+    "series": "Getting Started",
+    "order": 5,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Settings"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Settings/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "features-manage",
+    "title": "Features: Enable and Disable What Your Site Uses",
+    "series": "Getting Started",
+    "order": 6,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Features"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Features/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "features-dependencies",
+    "title": "Features: Dependencies and Features That Enable Others",
+    "series": "Getting Started",
+    "order": 7,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Features"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Features/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "admin-settings",
+    "title": "Admin Settings: Tailor the Admin for Your Editors",
+    "series": "Getting Started",
+    "order": 8,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Admin"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Admin/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "admin-dashboard",
+    "title": "Admin Dashboard: Build a Start Page for Your Editors",
+    "series": "Getting Started",
+    "order": 9,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.AdminDashboard"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AdminDashboard/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "admin-menus-custom",
+    "title": "Admin Menus: Add Your Own Links to the Admin Navigation",
+    "series": "Getting Started",
+    "order": 10,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.AdminMenu"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AdminMenu/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "test-drive-orchard-core",
+    "title": "Test Drive Orchard Core: Run It From Source",
+    "series": "Getting Started",
+    "order": 11,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "guide:getting-started/test-drive-orchard-core"
+    ],
+    "docs": [
+      "src/docs/getting-started/test-drive-orchard-core.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "create-cms-web-application",
+    "title": "Create a CMS Web Application With dotnet new",
+    "series": "Getting Started",
+    "order": 12,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "guide:getting-started",
+      "guide:getting-started/templates",
+      "guide:guides/create-cms-application",
+      "OrchardCore.Logging.NLog"
+    ],
+    "docs": [
+      "src/docs/getting-started/README.md",
+      "src/docs/getting-started/templates/README.md",
+      "src/docs/guides/create-cms-application/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "auto-setup",
+    "title": "Auto Setup: Install Sites Without the Setup Screen",
+    "series": "Getting Started",
+    "order": 13,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.AutoSetup"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AutoSetup/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "docker-orchard-core",
+    "title": "Docker: Run Orchard Core in a Container",
+    "series": "Getting Started",
+    "order": 14,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:topics/docker"
+    ],
+    "docs": [
+      "src/docs/topics/docker/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "ai-quick-start",
+    "title": "AI Quick Start: Build Orchard Core Sites With a Coding Agent",
+    "series": "Getting Started",
+    "order": 15,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:getting-started/ai-quick-start"
+    ],
+    "docs": [
+      "src/docs/getting-started/ai-quick-start.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "development-tools",
+    "title": "Development Tools: Preview Packages and Local NuGet Feeds",
+    "series": "Getting Started",
+    "order": 16,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:getting-started/development-tools",
+      "guide:getting-started/preview-package-source",
+      "guide:topics/local-nuget-packages"
+    ],
+    "docs": [
+      "src/docs/getting-started/development-tools.md",
+      "src/docs/getting-started/preview-package-source.md",
+      "src/docs/topics/local-nuget-packages/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "contents-create-edit-publish",
+    "title": "Content Items: Create, Edit and Publish",
+    "series": "Content Management",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Contents",
+      "guide:topics/content-management"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Contents/README.md",
+      "src/docs/topics/content-management/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "contents-list-search-filter",
+    "title": "Content Items List: Search, Filter and Act on Many Items",
+    "series": "Content Management",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Contents"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Contents/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "contents-drafts-versions",
+    "title": "Drafts and Versions: Change Content Without Losing the Live Page",
+    "series": "Content Management",
+    "order": 3,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Contents"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Contents/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-preview",
+    "title": "Content Preview: See Your Changes Before You Publish",
+    "series": "Content Management",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentPreview"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentPreview/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "publish-later-archive-later",
+    "title": "Publish Later and Archive Later: Schedule Your Content",
+    "series": "Content Management",
+    "order": 5,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.PublishLater",
+      "OrchardCore.ArchiveLater"
+    ],
+    "docs": [
+      "src/docs/reference/modules/PublishLater/README.md",
+      "src/docs/reference/modules/ArchiveLater/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "html-and-markdown-editors",
+    "title": "Html and Markdown: Write the Body of Your Content",
+    "series": "Content Management",
+    "order": 6,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Html",
+      "OrchardCore.Markdown"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Html/README.md",
+      "src/docs/reference/modules/Markdown/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-version-pruning",
+    "title": "Content Version Pruning: Remove Old Versions Automatically",
+    "series": "Content Management",
+    "order": 7,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Contents.VersionPruning"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Contents/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-types-overview",
+    "title": "Content Types: Model the Content of Your Site",
+    "series": "Content Types",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.ContentTypes",
+      "topic:ContentParts"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentTypes/README.md",
+      "src/docs/reference/modules/ContentParts/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-types-create",
+    "title": "Content Types: Create a Type and Add Parts and Fields",
+    "series": "Content Types",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.ContentTypes"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentTypes/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-types-settings",
+    "title": "Content Type Settings: Creatable, Listable, Draftable and More",
+    "series": "Content Types",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentTypes"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentTypes/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-parts-reusable",
+    "title": "Content Parts: Create Reusable Groups of Fields",
+    "series": "Content Types",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentTypes",
+      "topic:ContentParts"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentTypes/README.md",
+      "src/docs/reference/modules/ContentParts/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-definitions-in-code",
+    "title": "Content Definitions in Code: Migrations and Recipes",
+    "series": "Content Types",
+    "order": 5,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentTypes",
+      "topic:Migrations"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentTypes/README.md",
+      "src/docs/reference/modules/Migrations/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-definition-stores",
+    "title": "Content Definition Stores: Keep Types in the Database or a File",
+    "series": "Content Types",
+    "order": 6,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Contents.FileContentDefinition",
+      "guide:guides/content-definitions"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md",
+      "src/docs/guides/content-definitions/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-fields-overview",
+    "title": "Content Fields: Text, Numbers, Dates and Yes or No",
+    "series": "Content Fields",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.ContentFields"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentFields/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-fields-links-html-youtube",
+    "title": "Content Fields: Links, Rich Text, Markdown and YouTube Videos",
+    "series": "Content Fields",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentFields",
+      "OrchardCore.Markdown"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentFields/README.md",
+      "src/docs/reference/modules/Markdown/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-fields-editors",
+    "title": "Field Editors and Display Modes: One Field, Many Faces",
+    "series": "Content Fields",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentFields"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentFields/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-picker-fields",
+    "title": "Content Picker and User Picker Fields: Relate Content Items",
+    "series": "Content Fields",
+    "order": 4,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.ContentFields",
+      "OrchardCore.Search.Lucene.ContentPicker",
+      "OrchardCore.Search.Elasticsearch.ContentPicker",
+      "guide:topics/content-relationships"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentFields/README.md",
+      "src/docs/reference/modules/Lucene/README.md",
+      "src/docs/reference/modules/Elasticsearch/README.md",
+      "src/docs/topics/content-relationships/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "spatial-geo-point-field",
+    "title": "Geo Point Field: Add Locations to Content Items",
+    "series": "Content Fields",
+    "order": 5,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Spatial"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Spatial/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "title-part",
+    "title": "Title Part: Titles, Generated Titles and Display Text",
+    "series": "Content Parts",
+    "order": 1,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Title"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Title/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "alias-part",
+    "title": "Alias Part: Give Content Items a Stable Name",
+    "series": "Content Parts",
+    "order": 2,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Alias"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Alias/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "custom-settings",
+    "title": "Custom Settings: Turn a Content Type Into Site Settings",
+    "series": "Content Parts",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.CustomSettings"
+    ],
+    "docs": [
+      "src/docs/reference/modules/CustomSettings/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "lists-overview",
+    "title": "Lists: Group Content Items in a Container",
+    "series": "Lists",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Lists"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Lists/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "lists-ordering-paging",
+    "title": "Lists: Ordering, Paging and Contained Types",
+    "series": "Lists",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Lists"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Lists/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "lists-in-templates",
+    "title": "Lists in Templates: Liquid Filters for Containers and Their Items",
+    "series": "Lists",
+    "order": 3,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Lists"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Lists/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "flows-flow-part",
+    "title": "Flow Part: Build Pages From Widgets",
+    "series": "Flows",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Flows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Flow/BagPart.md",
+      "src/docs/reference/modules/Flow/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "flows-bag-part",
+    "title": "Bag Part: Embed Content Items Inside a Content Item",
+    "series": "Flows",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Flows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Flow/BagPart.md",
+      "src/docs/reference/modules/Flow/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "flows-templates",
+    "title": "Flow and Bag Parts: Templates and Alternates for Their Widgets",
+    "series": "Flows",
+    "order": 3,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Flows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Flow/BagPart.md",
+      "src/docs/reference/modules/Flow/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "taxonomies-overview",
+    "title": "Taxonomies: Categorize Your Content",
+    "series": "Taxonomies",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Taxonomies"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Taxonomies/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "taxonomies-create-terms",
+    "title": "Taxonomies: Create a Taxonomy and Organize Its Terms",
+    "series": "Taxonomies",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Taxonomies"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Taxonomies/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "taxonomies-field-and-tags",
+    "title": "Taxonomy Field: Categories and Tags on Your Content",
+    "series": "Taxonomies",
+    "order": 3,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Taxonomies"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Taxonomies/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "taxonomies-term-pages",
+    "title": "Taxonomies: Term Pages That List Their Content",
+    "series": "Taxonomies",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Taxonomies"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Taxonomies/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "taxonomies-contents-list-filters",
+    "title": "Taxonomies: Filter the Content Items List by Term",
+    "series": "Taxonomies",
+    "order": 5,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Taxonomies.ContentsAdminList"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Taxonomies/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "taxonomies-query-content",
+    "title": "Taxonomies in Code: Query Content Items by Term",
+    "series": "Taxonomies",
+    "order": 6,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Taxonomies",
+      "guide:guides/query-content-items-based-on-taxonomy"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Taxonomies/README.md",
+      "src/docs/guides/query-content-items-based-on-taxonomy/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-overview",
+    "title": "Media: Manage the Files of Your Site",
+    "series": "Media",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Media",
+      "guide:topics/media"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media/MediaGallery.md",
+      "src/docs/reference/modules/Media/README.md",
+      "src/docs/reference/modules/Media.Slugify/README.md",
+      "src/docs/topics/media/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-library-basics",
+    "title": "Media Library: Upload, Organize and Reuse Files",
+    "series": "Media",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Media"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media/MediaGallery.md",
+      "src/docs/reference/modules/Media/README.md",
+      "src/docs/reference/modules/Media.Slugify/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-field",
+    "title": "Media Field: Attach Images and Files to Content",
+    "series": "Media",
+    "order": 3,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Media",
+      "guide:topics/media/media-picker"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media/MediaGallery.md",
+      "src/docs/reference/modules/Media/README.md",
+      "src/docs/reference/modules/Media.Slugify/README.md",
+      "src/docs/topics/media/media-picker.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-profiles",
+    "title": "Media Profiles: Resize and Crop Images Consistently",
+    "series": "Media",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Media"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media/MediaGallery.md",
+      "src/docs/reference/modules/Media/README.md",
+      "src/docs/reference/modules/Media.Slugify/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-secure-media",
+    "title": "Secure Media: Control Who Sees Each Media Folder",
+    "series": "Media",
+    "order": 5,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Media.Security"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Security/Permissions.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-settings",
+    "title": "Media Settings: Options, Allowed Files and the Media API",
+    "series": "Media",
+    "order": 6,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Media"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media/MediaGallery.md",
+      "src/docs/reference/modules/Media/README.md",
+      "src/docs/reference/modules/Media.Slugify/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-uploads",
+    "title": "Media Uploads: Slugified Names, Resumable Uploads and Live Updates",
+    "series": "Media",
+    "order": 7,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Media.Slugify",
+      "OrchardCore.Media.Tus",
+      "OrchardCore.Media.SignalR"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media.Slugify/README.md",
+      "src/docs/reference/modules/Media/MediaGallery.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-cache",
+    "title": "Media Cache: Purge the Local Copy of Remote Media",
+    "series": "Media",
+    "order": 8,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Media.Cache"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Security/Permissions.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-in-templates",
+    "title": "Media in Templates: Image Resizing, Asset URLs and Tag Helpers",
+    "series": "Media",
+    "order": 9,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Media"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media/MediaGallery.md",
+      "src/docs/reference/modules/Media/README.md",
+      "src/docs/reference/modules/Media.Slugify/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-azure-blob-storage",
+    "title": "Azure Media Storage: Keep Media in Azure Blob Storage",
+    "series": "Media",
+    "order": 10,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Media.Azure.Storage",
+      "OrchardCore.Media.Azure.ImageCache"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media.Azure/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: record against the Azurite emulator in Docker."
+  },
+  {
+    "slug": "media-amazon-s3",
+    "title": "Amazon S3 Media Storage: Keep Media in an S3 Bucket",
+    "series": "Media",
+    "order": 11,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Media.AmazonS3",
+      "OrchardCore.Media.AmazonS3.ImageCache"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media.AmazonS3/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: record against an S3-compatible emulator (MinIO or LocalStack) in Docker."
+  },
+  {
+    "slug": "file-upload-security",
+    "title": "File Upload Security: Antivirus Scanning and Temporary Files",
+    "series": "Media",
+    "order": 12,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Antivirus.ClamAV",
+      "topic:core/file-upload-security",
+      "topic:core/temporary-file-storage"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Antivirus/README.md",
+      "src/docs/reference/core/file-upload-security.md",
+      "src/docs/reference/core/temporary-file-storage.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: ClamAV in Docker, with the EICAR test file."
+  },
+  {
+    "slug": "menus-overview",
+    "title": "Menus: Build the Navigation of Your Site",
+    "series": "Menus and Navigation",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Menu",
+      "guide:topics/navigation"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Menu/README.md",
+      "src/docs/topics/navigation/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "menus-item-types",
+    "title": "Menu Items: Links, Content Items, HTML and Permissions",
+    "series": "Menus and Navigation",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Menu"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Menu/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "navigation-in-themes",
+    "title": "Navigation in Themes: Render Menus, Breadcrumbs and Pagers",
+    "series": "Menus and Navigation",
+    "order": 3,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Navigation",
+      "OrchardCore.Menu"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Navigation/README.md",
+      "src/docs/reference/modules/Menu/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "autoroute-urls",
+    "title": "Autoroute: Friendly URLs for Your Content Items",
+    "series": "Routing",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Autoroute"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Autoroute/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "autoroute-patterns",
+    "title": "Autoroute Patterns: Generate URLs With Liquid",
+    "series": "Routing",
+    "order": 2,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Autoroute"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Autoroute/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "home-route",
+    "title": "Home Page: Choose What Your Site Shows First",
+    "series": "Routing",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.HomeRoute",
+      "OrchardCore.Autoroute"
+    ],
+    "docs": [
+      "src/docs/reference/modules/HomeRoute/README.md",
+      "src/docs/reference/modules/Autoroute/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "url-rewriting",
+    "title": "URL Rewriting: Redirect and Rewrite Requests",
+    "series": "Routing",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.UrlRewriting"
+    ],
+    "docs": [
+      "src/docs/reference/modules/UrlRewriting/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "seo-meta",
+    "title": "SEO Meta: Titles, Descriptions and Social Sharing Cards",
+    "series": "SEO and Analytics",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Seo"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Seo/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "seo-robots",
+    "title": "Robots: Tell Search Engines What to Crawl",
+    "series": "SEO and Analytics",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Seo"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Seo/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "sitemaps-create",
+    "title": "Sitemaps: Help Search Engines Find Your Pages",
+    "series": "SEO and Analytics",
+    "order": 3,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Sitemaps"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Sitemaps/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "sitemaps-indexes-and-cache",
+    "title": "Sitemap Indexes and the Sitemaps Cache",
+    "series": "SEO and Analytics",
+    "order": 4,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Sitemaps",
+      "OrchardCore.Sitemaps.Cleanup"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Sitemaps/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "sitemaps-localized-and-razor-pages",
+    "title": "Sitemaps for Localized Content and Razor Pages",
+    "series": "SEO and Analytics",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.ContentLocalization.Sitemaps",
+      "OrchardCore.Sitemaps.RazorPages"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentLocalization/README.md",
+      "src/docs/reference/modules/Sitemaps/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "feeds-rss",
+    "title": "Feeds: Publish an RSS Feed of Your Content",
+    "series": "SEO and Analytics",
+    "order": 6,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Feeds",
+      "OrchardCore.Lists"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Feeds/README.md",
+      "src/docs/reference/modules/Lists/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "google-analytics-tag-manager",
+    "title": "Google Analytics and Tag Manager: Measure Your Visitors",
+    "series": "SEO and Analytics",
+    "order": 7,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Google.Analytics",
+      "OrchardCore.Google.TagManager"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Google/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "meta-pixel",
+    "title": "Meta Pixel: Track Conversions From Meta Ads",
+    "series": "SEO and Analytics",
+    "order": 8,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Facebook.Pixel"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Security/Permissions.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "themes-choose",
+    "title": "Themes: Change the Look of Your Site",
+    "series": "Themes",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Themes",
+      "TheTheme",
+      "TheBlogTheme",
+      "TheAgencyTheme",
+      "TheComingSoonTheme",
+      "SafeMode"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Themes/README.md",
+      "src/docs/reference/modules/Admin/README.md",
+      "src/docs/reference/modules/Navigation/README.md",
+      "src/docs/reference/modules/Notifications/README.md",
+      "src/docs/reference/modules/Resources/README.md",
+      "src/docs/reference/modules/Widgets/README.md",
+      "src/docs/reference/modules/Flow/BagPart.md",
+      "src/docs/reference/modules/Tenants/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "theme-create",
+    "title": "Create a Theme: Your First Orchard Core Theme",
+    "series": "Themes",
+    "order": 2,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "guide:getting-started/theme"
+    ],
+    "docs": [
+      "src/docs/getting-started/theme.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "theme-from-html-template",
+    "title": "Create a Theme From an HTML Template",
+    "series": "Themes",
+    "order": 3,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:topics/display/theme-from-html-template"
+    ],
+    "docs": [
+      "src/docs/topics/display/theme-from-html-template.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "resources-scripts-styles",
+    "title": "Resources: Declare and Include Scripts and Stylesheets",
+    "series": "Themes",
+    "order": 4,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Resources"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Resources/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "admin-theme-create",
+    "title": "Create an Admin Theme: Restyle the Admin",
+    "series": "Themes",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:guides/create-admin-theme",
+      "topic:themes/admin-theme",
+      "TheAdmin"
+    ],
+    "docs": [
+      "src/docs/guides/create-admin-theme/README.md",
+      "src/docs/reference/themes/admin-theme.md",
+      "src/docs/reference/modules/Admin/README.md",
+      "src/docs/reference/modules/AdminMenu/README.md",
+      "src/docs/reference/modules/Localize/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "liquid-basics",
+    "title": "Liquid: Objects, Filters and Tags in Orchard Core",
+    "series": "Templates and Liquid",
+    "order": 1,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Liquid",
+      "OrchardCore.Liquid.Core"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Liquid/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "liquid-display-content",
+    "title": "Liquid: Display Content Items, Shapes and Zones",
+    "series": "Templates and Liquid",
+    "order": 2,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Liquid"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Liquid/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "templates-override-shapes",
+    "title": "Templates: Override Shapes From the Admin With Liquid",
+    "series": "Templates and Liquid",
+    "order": 3,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Templates"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Templates/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "templates-preview",
+    "title": "Templates: Preview a Template on Any Page Before You Save It",
+    "series": "Templates and Liquid",
+    "order": 4,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Templates"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Templates/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "admin-templates",
+    "title": "Admin Templates: Customize Admin Screens With Liquid",
+    "series": "Templates and Liquid",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.AdminTemplates"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Notifications/README.md",
+      "src/docs/reference/modules/Tenants/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "liquid-part-and-field",
+    "title": "Liquid Part and Liquid Field: Content That Runs Templates",
+    "series": "Templates and Liquid",
+    "order": 6,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Liquid"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Liquid/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "create-liquid-widget",
+    "title": "Create a Liquid Widget Without Writing a Module",
+    "series": "Templates and Liquid",
+    "order": 7,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:guides/create-liquid-widget"
+    ],
+    "docs": [
+      "src/docs/guides/create-liquid-widget/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "shortcodes-built-in",
+    "title": "Shortcodes: Embed Images and Links in Your Text",
+    "series": "Templates and Liquid",
+    "order": 8,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Shortcodes"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Shortcodes/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "shortcode-templates",
+    "title": "Shortcode Templates: Write Your Own Shortcodes With Liquid",
+    "series": "Templates and Liquid",
+    "order": 9,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Shortcodes.Templates"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Security/Permissions.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "display-shapes",
+    "title": "Shapes: How Orchard Core Renders a Page",
+    "series": "Display Management",
+    "order": 1,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "topic:DisplayManagement",
+      "guide:topics/display",
+      "guide:topics/display/shapes"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DisplayManagement/README.md",
+      "src/docs/topics/display/README.md",
+      "src/docs/topics/display/shapes.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "display-alternates",
+    "title": "Shape Alternates: Customize the Display of One Type or One Item",
+    "series": "Display Management",
+    "order": 2,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "topic:DisplayManagement"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DisplayManagement/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "placement-files",
+    "title": "Placement: Decide Where Parts and Fields Appear",
+    "series": "Display Management",
+    "order": 3,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "topic:Placement"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Placement/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "placements-admin",
+    "title": "Placements Module: Edit Placement From the Admin",
+    "series": "Display Management",
+    "order": 4,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Placements",
+      "OrchardCore.Placements.FileStorage"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Placements/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "razor-helpers",
+    "title": "Razor Helpers and Tag Helpers for Orchard Core Themes",
+    "series": "Display Management",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "topic:Razor"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Razor/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "widgets-overview",
+    "title": "Widgets: Add Content Blocks to Your Pages",
+    "series": "Layers and Widgets",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Widgets"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Widgets/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "layers-zones",
+    "title": "Layers: Show Widgets on the Right Pages",
+    "series": "Layers and Widgets",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Layers"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Layers/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "rules-conditions",
+    "title": "Rules: Conditions That Decide When a Layer Shows",
+    "series": "Layers and Widgets",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Rules"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Rules/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Admin video: the JavaScript condition is named in words only, never typed on screen."
+  },
+  {
+    "slug": "meta-social-plugins",
+    "title": "Meta Social Plugins: Like, Share and Comments Widgets",
+    "series": "Layers and Widgets",
+    "order": 4,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Facebook.Widgets",
+      "OrchardCore.Facebook",
+      "guide:guides/integrate-facebook-plugins"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Facebook/README.md",
+      "src/docs/guides/integrate-facebook-plugins/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "search-overview",
+    "title": "Search: Add Site Search to Your Site",
+    "series": "Search and Indexing",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Search",
+      "OrchardCore.Indexing",
+      "guide:topics/search"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Search/README.md",
+      "src/docs/reference/modules/Indexing/README.md",
+      "src/docs/topics/search/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "indexing-indexes",
+    "title": "Indexes: Create, Rebuild and Reset Search Indexes",
+    "series": "Search and Indexing",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Indexing",
+      "OrchardCore.Indexing.Worker"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Indexing/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "lucene-search",
+    "title": "Lucene: Full-Text Search With No External Service",
+    "series": "Search and Indexing",
+    "order": 3,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Lucene",
+      "OrchardCore.Search.Lucene.Worker"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Lucene/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "elasticsearch-search",
+    "title": "Elasticsearch: Search Indexes on an Elasticsearch Server",
+    "series": "Search and Indexing",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Elasticsearch",
+      "OrchardCore.Search.Elasticsearch.Worker"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Elasticsearch/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: record against Elasticsearch in Docker."
+  },
+  {
+    "slug": "azure-ai-search",
+    "title": "Azure AI Search: Connect Your Site and Create Indexes",
+    "series": "Search and Indexing",
+    "order": 5,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.AzureAI"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AzureAISearch/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service with no local emulator: the recording plan must use a stand-in endpoint, or the video stays blocked."
+  },
+  {
+    "slug": "azure-ai-search-queries",
+    "title": "Azure AI Search Queries: Search From a Saved Query",
+    "series": "Search and Indexing",
+    "order": 6,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.AzureAI",
+      "OrchardCore.Queries"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AzureAISearch/README.md",
+      "src/docs/reference/modules/Queries/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service with no local emulator: the recording plan must use a stand-in endpoint, or the video stays blocked."
+  },
+  {
+    "slug": "search-settings",
+    "title": "Site Search Settings: Index, Fields and Results Page",
+    "series": "Search and Indexing",
+    "order": 7,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Search"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Search/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "media-indexing",
+    "title": "Search Media Files: Index PDF, Office and Text Documents",
+    "series": "Search and Indexing",
+    "order": 8,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Media.Indexing",
+      "OrchardCore.Media.Indexing.Pdf",
+      "OrchardCore.Media.Indexing.OpenXML",
+      "OrchardCore.Media.Indexing.Text"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "full-text-search-guide",
+    "title": "Implement Full-Text Search: From Index to Results Page",
+    "series": "Search and Indexing",
+    "order": 9,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:guides/implement-fulltext-search"
+    ],
+    "docs": [
+      "src/docs/guides/implement-fulltext-search/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "lucene-query-syntax",
+    "title": "Lucene Query Syntax: Write Precise Search Queries",
+    "series": "Search and Indexing",
+    "order": 10,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:guides/lucene-query-syntax"
+    ],
+    "docs": [
+      "src/docs/guides/lucene-query-syntax/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "indexing-developer",
+    "title": "Indexing in Code: Index Your Own Data and Fields",
+    "series": "Search and Indexing",
+    "order": 11,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Indexing"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Indexing/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "queries-overview",
+    "title": "Queries: Save and Reuse Search and Database Queries",
+    "series": "Queries",
+    "order": 1,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Queries",
+      "OrchardCore.Queries.Core"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Queries/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "queries-sql",
+    "title": "SQL Queries: Query Content Items With SQL",
+    "series": "Queries",
+    "order": 2,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Queries.Sql"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Queries/README.md",
+      "src/docs/reference/modules/SQLIndexing/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "queries-lucene-elasticsearch",
+    "title": "Lucene and Elasticsearch Queries: Search From a Saved Query",
+    "series": "Queries",
+    "order": 3,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Lucene",
+      "OrchardCore.Elasticsearch",
+      "OrchardCore.Queries"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Lucene/README.md",
+      "src/docs/reference/modules/Elasticsearch/README.md",
+      "src/docs/reference/modules/Queries/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "queries-in-templates-and-api",
+    "title": "Queries in Liquid, Razor and the API",
+    "series": "Queries",
+    "order": 4,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Queries"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Queries/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "sql-indexing-content-fields",
+    "title": "Content Fields Indexing: Query Fields With SQL",
+    "series": "Queries",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.ContentFields.Indexing.SQL",
+      "OrchardCore.ContentFields.Indexing.SQL.UserPicker"
+    ],
+    "docs": [
+      "src/docs/reference/modules/SQLIndexing/README.md",
+      "src/docs/reference/modules/ContentFields/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflows-overview",
+    "title": "Workflows: Automate Tasks Without Writing Code",
+    "series": "Workflows",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Workflows",
+      "guide:topics/workflows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md",
+      "src/docs/topics/workflows/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflows-send-email-on-publish",
+    "title": "Workflows: Send an Email When Content Is Published",
+    "series": "Workflows",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Workflows",
+      "OrchardCore.Contents",
+      "OrchardCore.Email"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md",
+      "src/docs/reference/modules/Contents/README.md",
+      "src/docs/reference/modules/Email/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: a local SMTP catcher (smtp4dev in Docker). Admin video: type plain values only; no Liquid or JavaScript expression on screen."
+  },
+  {
+    "slug": "workflows-events-tasks-outcomes",
+    "title": "Workflows: Events, Tasks and Outcomes",
+    "series": "Workflows",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Workflows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflows-content-tasks",
+    "title": "Workflows: Create, Update and Publish Content Automatically",
+    "series": "Workflows",
+    "order": 4,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Workflows",
+      "OrchardCore.Contents"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md",
+      "src/docs/reference/modules/Contents/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflows-instances",
+    "title": "Workflow Instances: Follow and Troubleshoot Each Run",
+    "series": "Workflows",
+    "order": 5,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Workflows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflows-timers",
+    "title": "Timer Workflows: Run Tasks on a Schedule",
+    "series": "Workflows",
+    "order": 6,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Workflows.Timers"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflows-http",
+    "title": "HTTP Workflows: Handle Requests and Call Web APIs",
+    "series": "Workflows",
+    "order": 7,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Workflows.Http"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Scripting/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflows-user-events",
+    "title": "Workflows: React to Registrations, Sign-Ins and Role Changes",
+    "series": "Workflows",
+    "order": 8,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Workflows",
+      "OrchardCore.Users"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md",
+      "src/docs/reference/modules/Users/README.md",
+      "src/docs/reference/modules/Users/TicketStore.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Admin video: type plain values only; no Liquid or JavaScript expression on screen."
+  },
+  {
+    "slug": "workflows-expressions-and-loops",
+    "title": "Workflows in Depth: Expressions, Variables, Branches and Loops",
+    "series": "Workflows",
+    "order": 9,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Workflows",
+      "OrchardCore.Scripting"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md",
+      "src/docs/reference/modules/Scripting/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflows-session-activities",
+    "title": "Workflows and the Database Session: Commit, Fork and Join",
+    "series": "Workflows",
+    "order": 10,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Workflows.Session"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "users-manage",
+    "title": "Users: Create, Edit, Disable and Delete Accounts",
+    "series": "Users",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Users",
+      "guide:topics/security/users"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Users/README.md",
+      "src/docs/reference/modules/Users/TicketStore.md",
+      "src/docs/topics/security/users.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "users-login-settings",
+    "title": "User Login Settings: Sign-In Options and Lockout",
+    "series": "Users",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Users",
+      "guide:topics/security/login"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Users/README.md",
+      "src/docs/reference/modules/Users/TicketStore.md",
+      "src/docs/topics/security/login.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "users-registration",
+    "title": "User Registration: Let Visitors Create Accounts",
+    "series": "Users",
+    "order": 3,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Users.Registration",
+      "guide:topics/security/registration"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Facebook/README.md",
+      "src/docs/reference/modules/GitHub/README.md",
+      "src/docs/reference/modules/Google/README.md",
+      "src/docs/topics/security/registration.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: a local SMTP catcher (smtp4dev in Docker) for the confirmation email."
+  },
+  {
+    "slug": "users-reset-password",
+    "title": "Reset Password: Let Users Recover Their Accounts",
+    "series": "Users",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Users.ResetPassword"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Users/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: a local SMTP catcher (smtp4dev in Docker)."
+  },
+  {
+    "slug": "users-change-email",
+    "title": "Change Email: Let Users Update Their Email Address",
+    "series": "Users",
+    "order": 5,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Users.ChangeEmail"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Users/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "users-two-factor-authentication",
+    "title": "Two-Factor Authentication: Authenticator App, Email and SMS",
+    "series": "Users",
+    "order": 6,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Users.2FA",
+      "OrchardCore.Users.2FA.AuthenticatorApp",
+      "OrchardCore.Users.2FA.Email",
+      "OrchardCore.Users.2FA.Sms"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Security/Permissions.md",
+      "src/docs/reference/modules/Users/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "users-custom-user-settings",
+    "title": "Custom User Settings: Add Your Own Fields to User Profiles",
+    "series": "Users",
+    "order": 7,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Users.CustomUserSettings"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Users/CustomUserSettings/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "users-time-zone-and-culture",
+    "title": "User Time Zone and Culture: Personal Preferences for Each User",
+    "series": "Users",
+    "order": 8,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Users.TimeZone",
+      "OrchardCore.Users.Localization"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Users/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "users-password-and-lockout-options",
+    "title": "Password and Lockout Options: Configure ASP.NET Core Identity",
+    "series": "Users",
+    "order": 9,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:guides/password-configuration",
+      "guide:guides/lockout-configuration"
+    ],
+    "docs": [
+      "src/docs/guides/password-configuration/README.md",
+      "src/docs/guides/lockout-configuration/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "users-ticket-store",
+    "title": "Authentication Ticket Store: Keep Sign-In Tickets on the Server",
+    "series": "Users",
+    "order": 10,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Users.Authentication.CacheTicketStore"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Users/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "roles-and-permissions",
+    "title": "Roles and Permissions: Control Who Can Do What",
+    "series": "Roles and Permissions",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Roles",
+      "OrchardCore.Roles.Core",
+      "guide:topics/security/roles"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Roles/README.md",
+      "src/docs/reference/modules/Security/Permissions.md",
+      "src/docs/topics/security/roles.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "roles-content-permissions",
+    "title": "Content Permissions: By Content Type and by Owner",
+    "series": "Roles and Permissions",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Contents",
+      "OrchardCore.Roles"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Contents/README.md",
+      "src/docs/reference/modules/Roles/README.md",
+      "src/docs/reference/modules/Security/Permissions.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "secure-your-site",
+    "title": "Secure Your Site: A Checklist for Administrators",
+    "series": "Site Security",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "guide:topics/security",
+      "guide:topics/security/security-settings"
+    ],
+    "docs": [
+      "src/docs/topics/security/README.md",
+      "src/docs/topics/security/security-settings.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "security-https",
+    "title": "HTTPS: Require Secure Connections",
+    "series": "Site Security",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Https"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Https/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "security-headers",
+    "title": "Security Headers: Content Security Policy and More",
+    "series": "Site Security",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Security"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Security/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "security-cors",
+    "title": "CORS: Allow Other Sites to Call Your APIs",
+    "series": "Site Security",
+    "order": 4,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Cors"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Cors/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "security-recaptcha",
+    "title": "reCAPTCHA: Keep Bots Out of Sign-In, Registration and Forms",
+    "series": "Site Security",
+    "order": 5,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ReCaptcha",
+      "OrchardCore.ReCaptcha.Users"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ReCaptcha/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: use Google's published reCAPTCHA test keys, which always pass."
+  },
+  {
+    "slug": "security-rate-limits",
+    "title": "Rate Limits: Protect Your Site From Floods of Requests",
+    "series": "Site Security",
+    "order": 6,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.RateLimits"
+    ],
+    "docs": [
+      "src/docs/reference/modules/RateLimits/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "security-reverse-proxy",
+    "title": "Reverse Proxy Settings: Run Behind a Load Balancer",
+    "series": "Site Security",
+    "order": 7,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.ReverseProxy"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ReverseProxy/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "html-sanitizer",
+    "title": "HTML Sanitizer: Keep Unsafe Markup Out of Content",
+    "series": "Site Security",
+    "order": 8,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "topic:Sanitizer"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Sanitizer/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "secrets-manage",
+    "title": "Secrets: Store Passwords and API Keys Safely",
+    "series": "Secrets",
+    "order": 1,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Secrets"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Secrets/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "secrets-migrate-and-stores",
+    "title": "Secrets: Move Existing Credentials and Change Stores",
+    "series": "Secrets",
+    "order": 2,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Secrets"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Secrets/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "secrets-azure-key-vault",
+    "title": "Secrets in Azure Key Vault",
+    "series": "Secrets",
+    "order": 3,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Secrets.AzureKeyVault"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Secrets/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service with no local emulator for Key Vault: plan a stand-in or keep it blocked."
+  },
+  {
+    "slug": "secrets-in-your-module",
+    "title": "Secrets in Your Module: Offer Secret Inputs in Your Settings",
+    "series": "Secrets",
+    "order": 4,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Secrets"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Secrets/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "audit-trail-overview",
+    "title": "Audit Trail: See Who Changed What and When",
+    "series": "Audit Trail",
+    "order": 1,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.AuditTrail"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AuditTrail/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "audit-trail-settings",
+    "title": "Audit Trail Settings: Events, Retention and User Events",
+    "series": "Audit Trail",
+    "order": 2,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.AuditTrail",
+      "OrchardCore.Users.AuditTrail"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AuditTrail/README.md",
+      "src/docs/reference/modules/Users/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "audit-trail-restore-content",
+    "title": "Audit Trail: Compare and Restore Content Versions",
+    "series": "Audit Trail",
+    "order": 3,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.AuditTrail"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AuditTrail/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "external-login-settings",
+    "title": "External Login: Let Users Sign In With Other Accounts",
+    "series": "External Authentication",
+    "order": 1,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Users.ExternalAuthentication"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Users/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "microsoft-entra-id-login",
+    "title": "Microsoft Entra ID: Sign In With Work Accounts",
+    "series": "External Authentication",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Microsoft.Authentication.AzureAD",
+      "guide:guides/microsoft-entra-id-integration"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Microsoft.Authentication/README.md",
+      "src/docs/guides/microsoft-entra-id-integration/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: show the settings with fake ids; the sign-in round trip needs a test tenant, so stop at the redirect."
+  },
+  {
+    "slug": "microsoft-account-login",
+    "title": "Microsoft Account: Sign In With Personal Microsoft Accounts",
+    "series": "External Authentication",
+    "order": 3,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Microsoft.Authentication.MicrosoftAccount"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Microsoft.Authentication/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: show the settings with fake ids; stop at the redirect."
+  },
+  {
+    "slug": "google-login",
+    "title": "Google Sign-In: Let Users Sign In With Google",
+    "series": "External Authentication",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Google.GoogleAuthentication"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Google/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: show the settings with fake ids; stop at the redirect."
+  },
+  {
+    "slug": "meta-login",
+    "title": "Meta Login: Let Users Sign In With Facebook",
+    "series": "External Authentication",
+    "order": 5,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Facebook.Login",
+      "OrchardCore.Facebook"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Facebook/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: show the settings with fake ids; stop at the redirect."
+  },
+  {
+    "slug": "github-login",
+    "title": "GitHub Sign-In: Let Developers Sign In With GitHub",
+    "series": "External Authentication",
+    "order": 6,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.GitHub.Authentication"
+    ],
+    "docs": [
+      "src/docs/reference/modules/GitHub/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: show the settings with fake ids; stop at the redirect."
+  },
+  {
+    "slug": "x-twitter-integration",
+    "title": "X (Twitter): Sign In With X and Post From Workflows",
+    "series": "External Authentication",
+    "order": 7,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Twitter.Signin",
+      "OrchardCore.Twitter"
+    ],
+    "docs": [
+      "src/docs/reference/modules/X/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: show the settings with fake keys; never post."
+  },
+  {
+    "slug": "openid-overview",
+    "title": "OpenID Connect: Orchard Core as an Identity Provider",
+    "series": "OpenID Connect",
+    "order": 1,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.OpenId"
+    ],
+    "docs": [
+      "src/docs/reference/modules/OpenId/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "openid-server-settings",
+    "title": "OpenID Connect Server: Flows, Endpoints and Keys",
+    "series": "OpenID Connect",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.OpenId.Server"
+    ],
+    "docs": [
+      "src/docs/reference/modules/OpenId/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "openid-applications-scopes",
+    "title": "OpenID Connect Applications and Scopes",
+    "series": "OpenID Connect",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.OpenId.Management"
+    ],
+    "docs": [
+      "src/docs/reference/modules/OpenId/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "openid-client",
+    "title": "OpenID Connect Client: Sign In With Another Identity Provider",
+    "series": "OpenID Connect",
+    "order": 4,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.OpenId.Client"
+    ],
+    "docs": [
+      "src/docs/reference/modules/OpenId/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Stand-in: a second local tenant acts as the OpenID Connect server."
+  },
+  {
+    "slug": "openid-token-validation",
+    "title": "OpenID Connect Token Validation: Protect Your APIs",
+    "series": "OpenID Connect",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.OpenId.Validation"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Media/MediaGallery.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "openid-secrets",
+    "title": "OpenID Connect Signing and Encryption Keys as Secrets",
+    "series": "OpenID Connect",
+    "order": 6,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.OpenId.Secrets"
+    ],
+    "docs": [
+      "src/docs/reference/modules/OpenId/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "openid-client-credentials-api",
+    "title": "Call the Orchard Core API With Client Credentials",
+    "series": "OpenID Connect",
+    "order": 7,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.OpenId.Server",
+      "OrchardCore.OpenId.Management",
+      "OrchardCore.Contents"
+    ],
+    "docs": [
+      "src/docs/reference/modules/OpenId/README.md",
+      "src/docs/reference/modules/Contents/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "localization-cultures",
+    "title": "Cultures: Make Your Site Multilingual",
+    "series": "Localization",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Localization",
+      "guide:topics/localize"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Localize/javascript-localization.md",
+      "src/docs/reference/modules/Localize/README.md",
+      "src/docs/topics/localize/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-localization",
+    "title": "Content Localization: Translate Your Content Items",
+    "series": "Localization",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.ContentLocalization"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentLocalization/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-culture-picker",
+    "title": "Content Culture Picker: Let Visitors Switch Languages",
+    "series": "Localization",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentLocalization.ContentCulturePicker"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentLocalization/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "admin-culture-and-language-header",
+    "title": "Admin Culture Picker and the Content-Language Header",
+    "series": "Localization",
+    "order": 4,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Localization.AdminCulturePicker",
+      "OrchardCore.Localization.ContentLanguageHeader"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Localize/javascript-localization.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "data-localization",
+    "title": "Dynamic Translations: Translate Type Names and Other Site Data",
+    "series": "Localization",
+    "order": 5,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.DataLocalization"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DataLocalization/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "localization-po-files",
+    "title": "Translate the UI: Install and Write PO Files",
+    "series": "Localization",
+    "order": 6,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:guides/install-localization-files",
+      "OrchardCore.Localization"
+    ],
+    "docs": [
+      "src/docs/guides/install-localization-files/README.md",
+      "src/docs/reference/modules/Localize/javascript-localization.md",
+      "src/docs/reference/modules/Localize/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "localization-in-modules",
+    "title": "Localize a Module: Strings, Plurals and Extraction",
+    "series": "Localization",
+    "order": 7,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Localization",
+      "OrchardCore.Localization.Extraction"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Localize/javascript-localization.md",
+      "src/docs/reference/modules/Localize/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "localization-javascript",
+    "title": "JavaScript Localization: Translate Strings in Scripts",
+    "series": "Localization",
+    "order": 8,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Localization"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Localize/javascript-localization.md",
+      "src/docs/reference/modules/Localize/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "recipes-overview",
+    "title": "Recipes: Set Up and Update Sites From a File",
+    "series": "Recipes",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Recipes",
+      "OrchardCore.Recipes.Core"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Recipes/README.md",
+      "src/docs/reference/modules/UrlRewriting/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "recipes-write",
+    "title": "Write a Recipe: Steps, Variables and Content",
+    "series": "Recipes",
+    "order": 2,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Recipes"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Recipes/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "deployment-overview",
+    "title": "Deployment: Move Configuration and Content Between Sites",
+    "series": "Deployment",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Deployment"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Deployment/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "deployment-plans",
+    "title": "Deployment Plans: Choose What to Export",
+    "series": "Deployment",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Deployment"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Deployment/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "deployment-import",
+    "title": "Import: Package and JSON Import",
+    "series": "Deployment",
+    "order": 3,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Deployment"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Deployment/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "deployment-remote",
+    "title": "Remote Deployment: Send a Plan Straight to Another Site",
+    "series": "Deployment",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Deployment.Remote"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Deployment.Remote/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Stand-in: a second local tenant is the remote instance."
+  },
+  {
+    "slug": "deployment-content-actions",
+    "title": "Export Content From the List: Download, Add to Plan, Send",
+    "series": "Deployment",
+    "order": 5,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Contents.Deployment.Download",
+      "OrchardCore.Contents.Deployment.AddToDeploymentPlan",
+      "OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Contents/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "tenants-overview",
+    "title": "Tenants: Run Many Sites From One Application",
+    "series": "Multi-Tenancy",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Tenants"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "tenants-create-and-setup",
+    "title": "Tenants: Create a Tenant and Set It Up",
+    "series": "Multi-Tenancy",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Tenants"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "tenants-manage",
+    "title": "Tenants: Edit, Disable, Reload and Remove",
+    "series": "Multi-Tenancy",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Tenants"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "tenants-feature-profiles",
+    "title": "Tenant Feature Profiles: Limit the Features of Each Tenant",
+    "series": "Multi-Tenancy",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Tenants.FeatureProfiles"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "tenants-workflow-tasks",
+    "title": "Workflows for Tenants: Create and Set Up Tenants Automatically",
+    "series": "Multi-Tenancy",
+    "order": 5,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Tenants",
+      "OrchardCore.Workflows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md",
+      "src/docs/reference/modules/Workflows/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Admin video: type plain values only; no Liquid or JavaScript expression on screen."
+  },
+  {
+    "slug": "tenants-static-files",
+    "title": "Static Files per Tenant: Serve Each Tenant's Own Files",
+    "series": "Multi-Tenancy",
+    "order": 6,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Tenants.FileProvider"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "shells-and-configuration",
+    "title": "Shells and Configuration: How Tenants Are Configured",
+    "series": "Multi-Tenancy",
+    "order": 7,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "topic:Shells",
+      "OrchardCore.Shells.Azure",
+      "topic:Configuration",
+      "guide:topics/configuration"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Shells/README.md",
+      "src/docs/reference/modules/Configuration/README.md",
+      "src/docs/topics/configuration/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "graphql-overview",
+    "title": "GraphQL: Query Your Content With One Request",
+    "series": "GraphQL",
+    "order": 1,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Apis.GraphQL"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Apis.GraphQL/README.md",
+      "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "graphql-graphiql",
+    "title": "GraphiQL: Explore and Test GraphQL Queries",
+    "series": "GraphQL",
+    "order": 2,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Apis.GraphQL"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Apis.GraphQL/README.md",
+      "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "graphql-filters-paging",
+    "title": "GraphQL: Filter, Sort and Page Content Items",
+    "series": "GraphQL",
+    "order": 3,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Apis.GraphQL"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Apis.GraphQL/README.md",
+      "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "graphql-settings-permissions",
+    "title": "GraphQL: Settings, Permissions and Hidden Fields",
+    "series": "GraphQL",
+    "order": 4,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Apis.GraphQL"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Apis.GraphQL/README.md",
+      "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "graphql-extend",
+    "title": "Extend GraphQL: Add Your Own Types and Queries",
+    "series": "GraphQL",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Apis.GraphQL"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Apis.GraphQL/README.md",
+      "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "decoupled-cms",
+    "title": "Decoupled CMS: Razor Pages With Orchard Core Content",
+    "series": "Headless and APIs",
+    "order": 1,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "guide:guides/decoupled-cms"
+    ],
+    "docs": [
+      "src/docs/guides/decoupled-cms/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "headless-front-end",
+    "title": "Headless: Serve Content to Any Front End",
+    "series": "Headless and APIs",
+    "order": 2,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Apis.GraphQL",
+      "OrchardCore.Cors",
+      "OrchardCore.OpenId.Server"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Apis.GraphQL/README.md",
+      "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md",
+      "src/docs/reference/modules/Cors/README.md",
+      "src/docs/reference/modules/OpenId/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-rest-api",
+    "title": "Content API: Read and Write Content Items Over HTTP",
+    "series": "Headless and APIs",
+    "order": 3,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Contents"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Contents/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "openapi-docs",
+    "title": "OpenAPI: Document Your APIs With Swagger, ReDoc and Scalar",
+    "series": "Headless and APIs",
+    "order": 4,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.OpenApi",
+      "OrchardCore.OpenApi.SwaggerUI",
+      "OrchardCore.OpenApi.ReDocUI",
+      "OrchardCore.OpenApi.ScalarUI"
+    ],
+    "docs": [
+      "src/docs/reference/modules/OpenApi/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "blazor-cms",
+    "title": "Blazor: A Blazor Server Front End for Orchard Core Content",
+    "series": "Headless and APIs",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:guides/create-blazor-cms"
+    ],
+    "docs": [
+      "src/docs/guides/create-blazor-cms/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "xml-rpc-remote-publishing",
+    "title": "XML-RPC: Publish From Desktop Blogging Clients",
+    "series": "Headless and APIs",
+    "order": 6,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.XmlRpc",
+      "OrchardCore.RemotePublishing"
+    ],
+    "docs": [
+      "src/docs/reference/modules/XmlRpc/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "email-smtp",
+    "title": "Email: Configure SMTP and Send a Test Email",
+    "series": "Email, SMS and Notifications",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Email",
+      "OrchardCore.Email.Smtp"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Email/README.md",
+      "src/docs/reference/modules/Email.Smtp/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: a local SMTP catcher (smtp4dev in Docker)."
+  },
+  {
+    "slug": "email-azure-communication-services",
+    "title": "Azure Communication Services Email",
+    "series": "Email, SMS and Notifications",
+    "order": 2,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Email.Azure"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Email.Azure/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service with no local emulator: show the settings with fake values, and the test page without sending."
+  },
+  {
+    "slug": "sms-settings",
+    "title": "SMS: Configure a Provider and Send a Test Message",
+    "series": "Email, SMS and Notifications",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Sms",
+      "OrchardCore.Sms.Azure"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Sms/README.md",
+      "src/docs/reference/modules/Sms.Azure/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: use the provider that writes messages to the log, or fake values without sending."
+  },
+  {
+    "slug": "notifications",
+    "title": "Notifications: Keep Users Informed in the Admin, by Email and SMS",
+    "series": "Email, SMS and Notifications",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Notifications",
+      "OrchardCore.Notifications.Email",
+      "OrchardCore.Notifications.Sms"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Notifications/README.md",
+      "src/docs/reference/modules/Sms/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "email-sms-in-code",
+    "title": "Send Email, SMS and Notifications From Your Module",
+    "series": "Email, SMS and Notifications",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Email",
+      "OrchardCore.Sms",
+      "OrchardCore.Notifications"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Email/README.md",
+      "src/docs/reference/modules/Sms/README.md",
+      "src/docs/reference/modules/Notifications/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "forms-contact-form",
+    "title": "Forms: Build a Contact Form From Widgets",
+    "series": "Forms",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "OrchardCore.Forms"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Forms/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "forms-validation",
+    "title": "Forms: Validate What Visitors Type",
+    "series": "Forms",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Forms"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Forms/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "forms-workflows",
+    "title": "Forms and Workflows: Process Each Submission",
+    "series": "Forms",
+    "order": 3,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Forms",
+      "OrchardCore.Workflows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Forms/README.md",
+      "src/docs/reference/modules/Workflows/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: a local SMTP catcher (smtp4dev in Docker) if the workflow sends email."
+  },
+  {
+    "slug": "data-pipelines-overview",
+    "title": "Data Pipelines: Move and Transform Your Site's Data",
+    "series": "Data Pipelines",
+    "order": 1,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.DataPipelines",
+      "OrchardCore.DataPipelines.Core"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DataPipelines/README.md",
+      "src/docs/reference/modules/DataSources/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "data-pipelines-export-csv",
+    "title": "Data Pipelines: Export Content Items to a CSV File",
+    "series": "Data Pipelines",
+    "order": 2,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.DataPipelines"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DataPipelines/README.md",
+      "src/docs/reference/modules/DataSources/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Admin video: no formula or calculated field on screen; those belong to data-sources-developer."
+  },
+  {
+    "slug": "data-pipelines-import",
+    "title": "Data Pipelines: Import Rows as Content Items",
+    "series": "Data Pipelines",
+    "order": 3,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.DataPipelines"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DataPipelines/README.md",
+      "src/docs/reference/modules/DataSources/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Admin video: no formula or calculated field on screen; those belong to data-sources-developer."
+  },
+  {
+    "slug": "data-pipelines-schedule-history",
+    "title": "Data Pipelines: Schedule Runs and Read the History",
+    "series": "Data Pipelines",
+    "order": 4,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.DataPipelines"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DataPipelines/README.md",
+      "src/docs/reference/modules/DataSources/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Admin video: no formula or calculated field on screen; those belong to data-sources-developer."
+  },
+  {
+    "slug": "data-pipelines-destinations",
+    "title": "Data Pipelines: Deliver Files by Link, Email, FTP and SFTP",
+    "series": "Data Pipelines",
+    "order": 5,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.DataPipelines",
+      "OrchardCore.DataPipelines.Ftp",
+      "OrchardCore.DataPipelines.Sftp"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DataPipelines/README.md",
+      "src/docs/reference/modules/DataSources/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External services: an FTP and an SFTP server in Docker, and a local SMTP catcher."
+  },
+  {
+    "slug": "data-pipelines-workflows",
+    "title": "Data Pipelines and Workflows: Run a Pipeline From a Workflow",
+    "series": "Data Pipelines",
+    "order": 6,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.DataPipelines",
+      "OrchardCore.Workflows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DataPipelines/README.md",
+      "src/docs/reference/modules/DataSources/README.md",
+      "src/docs/reference/modules/Workflows/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Admin video: no formula or calculated field on screen; those belong to data-sources-developer."
+  },
+  {
+    "slug": "data-sources-developer",
+    "title": "Data Sources: Expose Your Module's Data to Pipelines",
+    "series": "Data Pipelines",
+    "order": 7,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.DataPipelines.Core"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DataPipelines/README.md",
+      "src/docs/reference/modules/DataSources/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "background-tasks",
+    "title": "Background Tasks: See, Schedule and Run Them",
+    "series": "Performance and Background Work",
+    "order": 1,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.BackgroundTasks"
+    ],
+    "docs": [
+      "src/docs/reference/modules/BackgroundTasks/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "background-tasks-developer",
+    "title": "Write a Background Task: Schedules, Locks and Monitoring",
+    "series": "Performance and Background Work",
+    "order": 2,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.BackgroundTasks"
+    ],
+    "docs": [
+      "src/docs/reference/modules/BackgroundTasks/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "dynamic-cache",
+    "title": "Dynamic Cache: Cache Parts of a Page",
+    "series": "Performance and Background Work",
+    "order": 3,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.DynamicCache"
+    ],
+    "docs": [
+      "src/docs/reference/modules/DynamicCache/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "redis",
+    "title": "Redis: Distributed Cache, Locks, Bus and Data Protection",
+    "series": "Performance and Background Work",
+    "order": 4,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Redis",
+      "OrchardCore.Redis.Cache",
+      "OrchardCore.Redis.Lock",
+      "OrchardCore.Redis.Bus",
+      "OrchardCore.Redis.DataProtection"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Redis/README.md",
+      "src/docs/reference/modules/AutoSetup/README.md",
+      "src/docs/reference/modules/BackgroundTasks/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: Redis in Docker."
+  },
+  {
+    "slug": "response-compression",
+    "title": "Response Compression: Smaller Responses With Gzip and Brotli",
+    "series": "Performance and Background Work",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.ResponseCompression"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ResponseCompression/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "mini-profiler",
+    "title": "Mini Profiler: Find What Makes a Page Slow",
+    "series": "Performance and Background Work",
+    "order": 6,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.MiniProfiler"
+    ],
+    "docs": [
+      "src/docs/reference/modules/MiniProfiler/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "signalr",
+    "title": "SignalR: Real-Time Updates and Backplanes",
+    "series": "Performance and Background Work",
+    "order": 7,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.SignalR",
+      "OrchardCore.SignalR.Redis",
+      "OrchardCore.SignalR.Azure"
+    ],
+    "docs": [
+      "src/docs/reference/modules/SignalR/README.md",
+      "src/docs/reference/modules/Media/MediaGallery.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: Redis in Docker for the backplane; the Azure SignalR Service only in words."
+  },
+  {
+    "slug": "diagnostics-error-pages",
+    "title": "Error Pages: Customize Not Found and Error Pages",
+    "series": "Diagnostics and Logging",
+    "order": 1,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Diagnostics"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Diagnostics/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "health-checks",
+    "title": "Health Checks: Let Your Host Know the Site Is Up",
+    "series": "Diagnostics and Logging",
+    "order": 2,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.HealthChecks"
+    ],
+    "docs": [
+      "src/docs/reference/modules/HealthChecks/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "logging",
+    "title": "Logging: Configure NLog and Serilog",
+    "series": "Diagnostics and Logging",
+    "order": 3,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Logging.NLog",
+      "OrchardCore.Logging.Serilog"
+    ],
+    "docs": [
+      "src/docs/getting-started/templates/README.md",
+      "src/docs/reference/modules/Logging.Serilog/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "opentelemetry",
+    "title": "OpenTelemetry: Traces, Metrics and Logs for Each Tenant",
+    "series": "Diagnostics and Logging",
+    "order": 4,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.OpenTelemetry"
+    ],
+    "docs": [
+      "src/docs/reference/modules/OpenTelemetry/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "Local stand-in: the .NET Aspire dashboard in Docker as the OTLP endpoint."
+  },
+  {
+    "slug": "debugging-settings",
+    "title": "Debugging Settings: Show Errors While You Build a Site",
+    "series": "Diagnostics and Logging",
+    "order": 5,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Settings"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Settings/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "go-to-production",
+    "title": "Go to Production: A Checklist for a Live Orchard Core Site",
+    "series": "Hosting and Production",
+    "order": 1,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "guide:topics/configuration",
+      "OrchardCore.Https",
+      "OrchardCore.ReverseProxy",
+      "guide:guides/data-protection"
+    ],
+    "docs": [
+      "src/docs/topics/configuration/README.md",
+      "src/docs/reference/modules/Https/README.md",
+      "src/docs/reference/modules/ReverseProxy/README.md",
+      "src/docs/guides/data-protection/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "configuration-appsettings",
+    "title": "Configuration: appsettings, Environment Variables and Tenants",
+    "series": "Hosting and Production",
+    "order": 2,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "topic:Configuration",
+      "guide:topics/configuration"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Configuration/README.md",
+      "src/docs/topics/configuration/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "azure-key-vault-configuration",
+    "title": "Azure Key Vault Configuration: Keep Settings Out of Files",
+    "series": "Hosting and Production",
+    "order": 3,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Configuration.KeyVault"
+    ],
+    "docs": [
+      "src/docs/reference/modules/KeyVault.Azure/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service with no local emulator for Key Vault: plan a stand-in or keep it blocked."
+  },
+  {
+    "slug": "data-and-yessql",
+    "title": "Data in Orchard Core: Databases, YesSql and Documents",
+    "series": "Hosting and Production",
+    "order": 4,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "topic:Data",
+      "guide:topics/data",
+      "guide:topics/data/yessql"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Data/README.md",
+      "src/docs/topics/data/README.md",
+      "src/docs/topics/data/yessql.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "data-protection",
+    "title": "Data Protection Keys: Share Them Across Servers",
+    "series": "Hosting and Production",
+    "order": 5,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:guides/data-protection",
+      "OrchardCore.DataProtection.Azure",
+      "OrchardCore.Redis.DataProtection"
+    ],
+    "docs": [
+      "src/docs/guides/data-protection/README.md",
+      "src/docs/reference/modules/DataProtection.Azure/README.md",
+      "src/docs/reference/modules/Redis/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: Azurite in Docker for the Azure Blob Storage key ring."
+  },
+  {
+    "slug": "web-farm",
+    "title": "Run in a Web Farm: Distributed Tenants, Workers and Shared Storage",
+    "series": "Hosting and Production",
+    "order": 6,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Tenants.Distributed",
+      "OrchardCore.Shells.Azure",
+      "OrchardCore.Indexing.Worker",
+      "OrchardCore.Search.Lucene.Worker",
+      "OrchardCore.Search.Elasticsearch.Worker"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Tenants/README.md",
+      "src/docs/reference/modules/Shells/README.md",
+      "src/docs/reference/modules/Indexing/README.md",
+      "src/docs/reference/modules/Lucene/README.md",
+      "src/docs/reference/modules/Elasticsearch/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External services: Redis and Azurite in Docker; two local instances of the site."
+  },
+  {
+    "slug": "module-create",
+    "title": "Create a Module: Your First Orchard Core Module",
+    "series": "Extending Orchard Core",
+    "order": 1,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "guide:guides/create-install-custom-module",
+      "topic:Modules"
+    ],
+    "docs": [
+      "src/docs/guides/create-install-custom-module/README.md",
+      "src/docs/reference/modules/Modules/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "modular-mvc-application",
+    "title": "A Modular ASP.NET Core MVC Application With Orchard Core",
+    "series": "Extending Orchard Core",
+    "order": 2,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:guides/create-modular-application-mvc"
+    ],
+    "docs": [
+      "src/docs/guides/create-modular-application-mvc/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "data-migrations",
+    "title": "Data Migrations: Create and Update Your Module's Data",
+    "series": "Extending Orchard Core",
+    "order": 3,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "topic:Migrations"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Migrations/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-part-create",
+    "title": "Write a Content Part With a Display Driver",
+    "series": "Extending Orchard Core",
+    "order": 4,
+    "audience": "developer",
+    "priority": 1,
+    "features": [
+      "topic:ContentParts",
+      "topic:DisplayManagement"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentParts/README.md",
+      "src/docs/reference/modules/DisplayManagement/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "content-field-create",
+    "title": "Write a Content Field With Its Editor and Settings",
+    "series": "Extending Orchard Core",
+    "order": 5,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentFields"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentFields/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "site-settings-create",
+    "title": "Add Site Settings to Your Module",
+    "series": "Extending Orchard Core",
+    "order": 6,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Settings"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Settings/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "admin-menu-add",
+    "title": "Add Admin Menu Entries to Your Module",
+    "series": "Extending Orchard Core",
+    "order": 7,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:guides/add-admin-menu"
+    ],
+    "docs": [
+      "src/docs/guides/add-admin-menu/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "permissions-create",
+    "title": "Permissions: Declare Them and Check Them in Your Module",
+    "series": "Extending Orchard Core",
+    "order": 8,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Roles"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Roles/README.md",
+      "src/docs/reference/modules/Security/Permissions.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "yessql-indexes",
+    "title": "YesSql Indexes: Query Your Own Documents",
+    "series": "Extending Orchard Core",
+    "order": 9,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "guide:topics/data/yessql"
+    ],
+    "docs": [
+      "src/docs/topics/data/yessql.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "recipe-step-create",
+    "title": "Write a Recipe Step",
+    "series": "Extending Orchard Core",
+    "order": 10,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Recipes"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Recipes/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "deployment-step-create",
+    "title": "Write a Deployment Step",
+    "series": "Extending Orchard Core",
+    "order": 11,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Deployment"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Deployment/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 5.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "workflow-activity-create",
+    "title": "Write a Workflow Activity",
+    "series": "Extending Orchard Core",
+    "order": 12,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Workflows"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Workflows/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "liquid-filter-create",
+    "title": "Write a Liquid Filter",
+    "series": "Extending Orchard Core",
+    "order": 13,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Liquid"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Liquid/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "scripting-javascript",
+    "title": "Scripting: JavaScript in Workflows and Recipes",
+    "series": "Extending Orchard Core",
+    "order": 14,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.Scripting"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Scripting/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "run-code-on-startup",
+    "title": "Run Code When a Tenant Starts",
+    "series": "Extending Orchard Core",
+    "order": 15,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:guides/run-code-on-startup"
+    ],
+    "docs": [
+      "src/docs/guides/run-code-on-startup/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "csproj-module-metadata",
+    "title": "Module Metadata in Your Project File",
+    "series": "Extending Orchard Core",
+    "order": 16,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:guides/leverage-csproj-meta-info"
+    ],
+    "docs": [
+      "src/docs/guides/leverage-csproj-meta-info/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "source-generators",
+    "title": "Source Generators: Less Boilerplate in Your Modules",
+    "series": "Extending Orchard Core",
+    "order": 17,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.SourceGenerators"
+    ],
+    "docs": [
+      "src/docs/topics/source-generators/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "encoding-settings",
+    "title": "Encoding Settings: Render Non-ASCII Text Without Encoding",
+    "series": "Extending Orchard Core",
+    "order": 18,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "guide:guides/encoding-settings"
+    ],
+    "docs": [
+      "src/docs/guides/encoding-settings/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 3,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "build-a-blog",
+    "title": "Build a Blog: Posts, Categories, Tags and a Menu",
+    "series": "Build a Site",
+    "order": 1,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "TheBlogTheme",
+      "OrchardCore.Lists",
+      "OrchardCore.Taxonomies",
+      "OrchardCore.Menu",
+      "OrchardCore.Autoroute"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Resources/README.md",
+      "src/docs/reference/modules/Widgets/README.md",
+      "src/docs/reference/modules/Lists/README.md",
+      "src/docs/reference/modules/Taxonomies/README.md",
+      "src/docs/reference/modules/Menu/README.md",
+      "src/docs/reference/modules/Autoroute/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "build-a-company-website",
+    "title": "Build a Company Website With the Agency Theme",
+    "series": "Build a Site",
+    "order": 2,
+    "audience": "admin",
+    "priority": 1,
+    "features": [
+      "TheAgencyTheme",
+      "OrchardCore.Flows",
+      "OrchardCore.Forms",
+      "OrchardCore.Menu"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Flow/BagPart.md",
+      "src/docs/reference/modules/Tenants/README.md",
+      "src/docs/reference/modules/Flow/README.md",
+      "src/docs/reference/modules/Forms/README.md",
+      "src/docs/reference/modules/Menu/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "build-a-product-catalog",
+    "title": "Build a Product Catalog: Types, Categories and Search",
+    "series": "Build a Site",
+    "order": 3,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.ContentTypes",
+      "OrchardCore.Taxonomies",
+      "OrchardCore.Media",
+      "OrchardCore.Search"
+    ],
+    "docs": [
+      "src/docs/reference/modules/ContentTypes/README.md",
+      "src/docs/reference/modules/Taxonomies/README.md",
+      "src/docs/reference/modules/Media/MediaGallery.md",
+      "src/docs/reference/modules/Media/README.md",
+      "src/docs/reference/modules/Media.Slugify/README.md",
+      "src/docs/reference/modules/Search/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "build-a-landing-page",
+    "title": "Build a Landing Page With Flows, Widgets and Layers",
+    "series": "Build a Site",
+    "order": 4,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Flows",
+      "OrchardCore.Widgets",
+      "OrchardCore.Layers"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Flow/BagPart.md",
+      "src/docs/reference/modules/Flow/README.md",
+      "src/docs/reference/modules/Widgets/README.md",
+      "src/docs/reference/modules/Layers/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 6,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "build-a-members-area",
+    "title": "Build a Members Area: Registration, Roles and Members-Only Pages",
+    "series": "Build a Site",
+    "order": 5,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Users.Registration",
+      "OrchardCore.Roles",
+      "OrchardCore.Contents"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Facebook/README.md",
+      "src/docs/reference/modules/GitHub/README.md",
+      "src/docs/reference/modules/Google/README.md",
+      "src/docs/reference/modules/Roles/README.md",
+      "src/docs/reference/modules/Security/Permissions.md",
+      "src/docs/reference/modules/Contents/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service: a local SMTP catcher (smtp4dev in Docker)."
+  },
+  {
+    "slug": "build-a-multilingual-site",
+    "title": "Build a Multilingual Site: Cultures, Translations and a Picker",
+    "series": "Build a Site",
+    "order": 6,
+    "audience": "admin",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Localization",
+      "OrchardCore.ContentLocalization",
+      "OrchardCore.ContentLocalization.ContentCulturePicker"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Localize/javascript-localization.md",
+      "src/docs/reference/modules/Localize/README.md",
+      "src/docs/reference/modules/ContentLocalization/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "build-a-coming-soon-page",
+    "title": "Launch a Coming Soon Page While You Build Your Site",
+    "series": "Build a Site",
+    "order": 7,
+    "audience": "admin",
+    "priority": 3,
+    "features": [
+      "TheComingSoonTheme"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Themes/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  },
+  {
+    "slug": "build-a-headless-site",
+    "title": "Build a Headless Site: Content in Orchard Core, Front End Anywhere",
+    "series": "Build a Site",
+    "order": 8,
+    "audience": "developer",
+    "priority": 2,
+    "features": [
+      "OrchardCore.Apis.GraphQL",
+      "OrchardCore.Queries",
+      "OrchardCore.Cors"
+    ],
+    "docs": [
+      "src/docs/reference/modules/Apis.GraphQL/README.md",
+      "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md",
+      "src/docs/reference/modules/Queries/README.md",
+      "src/docs/reference/modules/Cors/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 7.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": ""
+  }
+]
