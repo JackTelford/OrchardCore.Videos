@@ -18,6 +18,20 @@ YouTube by hand, and **no video file is ever committed**, here or in the Orchard
                                                                                              the docs pages
 ```
 
+## The tracker
+
+Every video is planned in `tracker/videos.json`, and [TRACKER.md](TRACKER.md) shows where each one stands. **When you
+start or finish a video, update the tracker**, and include the change in the video's pull request:
+
+```bash
+python tools/tracker.py set <slug> <status>    # content-draft, content-ready, recording --by <name>, recorded, in-review --pr <url>
+python tools/tracker.py report                 # rewrites TRACKER.md
+```
+
+Pick the next video with `python tools/tracker.py next` (the next to record) or `next --status planned` (the next to
+write). The **Tracker** workflow checks every pull request with `tools/validate_content.py` and
+`tools/tracker.py validate`. The statuses are described in [tracker/README.md](tracker/README.md).
+
 ## 1. Make the video
 
 Follow the skill in `.agents/skills/orchardcore-video-producer/SKILL.md` (an AI coding agent picks it up when asked
@@ -64,6 +78,7 @@ reviewer can watch it.
 - [ ] `thumbnail.jpg`, and captions for a narrated video
 - [ ] `python tools/youtube/youtube.py description <slug>` prints what YouTube will show, without an error
 - [ ] `python tools/youtube/youtube.py index` updated the table in `README.md`
+- [ ] `python tools/tracker.py set <slug> ...` and `python tools/tracker.py report`: the tracker change is in the pull request
 
 ## 3. Publishing (maintainers)
 

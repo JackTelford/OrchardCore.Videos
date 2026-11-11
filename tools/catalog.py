@@ -874,7 +874,7 @@ def build(source_root: Path, commit: str, date: str) -> None:
 
     CATALOG.mkdir(exist_ok=True)
     data = {"source": {"repository": "OrchardCMS/OrchardCore", "commit": commit, "scannedOn": date}, "features": out}
-    (CATALOG / "features.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (CATALOG / "features.json").write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
 
     write_excluded(source, features, out)
     write_source(commit, date, out)
@@ -915,7 +915,7 @@ def write_source(commit: str, date: str, entries: list[dict]) -> None:
         "Then compare `features.json` with the tracker: `python tools/tracker.py validate` lists every feature that no",
         "video covers and that `tracker/NO-VIDEO.md` doesn't explain.",
     ]
-    (CATALOG / "SOURCE.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (CATALOG / "SOURCE.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def write_excluded(source: Source, features: list[dict], entries: list[dict]) -> None:
@@ -962,7 +962,7 @@ def write_excluded(source: Source, features: list[dict], entries: list[dict]) ->
         else:
             reason = "Library with no feature, screen or documentation page of its own."
         lines.append(f"| `src/OrchardCore/{name}` | {reason} |")
-    (CATALOG / "EXCLUDED.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (CATALOG / "EXCLUDED.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def main() -> int:

@@ -10,3 +10,4 @@
 - [ ] `thumbnail.jpg`, and captions for a narrated video
 - [ ] `python tools/youtube/youtube.py description <slug>` runs without an error
 - [ ] `python tools/youtube/youtube.py index` updated the table in `README.md`
+- [ ] `python tools/tracker.py set <slug> ...` and `python tools/tracker.py report`, committed with the video

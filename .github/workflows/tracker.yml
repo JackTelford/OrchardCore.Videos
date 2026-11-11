@@ -1,0 +1,29 @@
+name: Tracker
+
+# Checks the content of the videos and the tracker on every pull request: the storyboards and video.json files match
+# the format and the writing rules, every catalog feature is covered, and TRACKER.md is up to date.
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate the content of the videos
+        run: python tools/validate_content.py
+
+      - name: Validate the tracker
+        run: python tools/tracker.py validate
+
+      - name: Check that TRACKER.md is up to date
+        run: python tools/tracker.py report --check
