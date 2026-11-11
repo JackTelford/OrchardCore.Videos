@@ -85,6 +85,9 @@
         ],
         "contentParts": [
           "DashboardPart"
+        ],
+        "contentTypes": [
+          "HtmlDashboardWidget (DashboardWidget)"
         ]
       }
     },
@@ -1922,6 +1925,15 @@
       "surfaces": {
         "contentParts": [
           "FacebookPluginPart"
+        ],
+        "contentTypes": [
+          "FacebookChat (Widget)",
+          "FacebookComments (Widget)",
+          "FacebookContinueWith (Widget)",
+          "FacebookLike (Widget)",
+          "FacebookQuote (Widget)",
+          "FacebookSave (Widget)",
+          "FacebookShare (Widget)"
         ]
       }
     },
@@ -2340,9 +2352,6 @@
       "surfaces": {
         "contentParts": [
           "HtmlBodyPart"
-        ],
-        "contentTypes": [
-          "Contents"
         ],
         "graphql": [
           "HtmlBodyPart"
@@ -3536,6 +3545,12 @@
           "MenuItemPermissionPart",
           "MenuItemsListPart",
           "MenuPart"
+        ],
+        "contentTypes": [
+          "ContentMenuItem (MenuItem)",
+          "HtmlMenuItem (MenuItem)",
+          "LinkMenuItem (MenuItem)",
+          "Menu"
         ],
         "graphql": [
           "HtmlMenuItemPart",
@@ -6923,7 +6938,13 @@
       "flags": [
         "AdminTheme"
       ],
-      "surfaces": {}
+      "surfaces": {
+        "setupRecipes": [
+          "Blank",
+          "Headless"
+        ],
+        "contentTypes": []
+      }
     },
     {
       "id": "TheAgencyTheme",
@@ -6942,7 +6963,25 @@
       "hasUi": true,
       "summary": "A theme adapted for agency websites.",
       "flags": [],
-      "surfaces": {}
+      "surfaces": {
+        "setupRecipes": [
+          "Agency"
+        ],
+        "contentTypes": [
+          "Blockquote (Widget)",
+          "Client",
+          "Container (Widget)",
+          "Image (Widget)",
+          "LandingPage",
+          "Milestone",
+          "Page",
+          "Paragraph (Widget)",
+          "Project",
+          "RawHtml (Widget)",
+          "Service",
+          "TeamMember"
+        ]
+      }
     },
     {
       "id": "TheBlogTheme",
@@ -6961,7 +7000,24 @@
       "hasUi": true,
       "summary": "A theme adapted for blogs.",
       "flags": [],
-      "surfaces": {}
+      "surfaces": {
+        "setupRecipes": [
+          "Blog"
+        ],
+        "contentTypes": [
+          "Article",
+          "Blockquote (Widget)",
+          "Blog",
+          "BlogPost",
+          "Category",
+          "Container (Widget)",
+          "Image (Widget)",
+          "Page",
+          "Paragraph (Widget)",
+          "RawHtml (Widget)",
+          "Tag"
+        ]
+      }
     },
     {
       "id": "TheComingSoonTheme",
@@ -6979,7 +7035,16 @@
       "hasUi": true,
       "summary": "Landing page for a project that is under construction.",
       "flags": [],
-      "surfaces": {}
+      "surfaces": {
+        "setupRecipes": [
+          "ComingSoon"
+        ],
+        "contentTypes": [
+          "ComingSoon",
+          "Register (Widget)",
+          "SocialIcon"
+        ]
+      }
     },
     {
       "id": "TheTheme",
@@ -7001,7 +7066,12 @@
       "hasUi": true,
       "summary": "The default Theme.",
       "flags": [],
-      "surfaces": {}
+      "surfaces": {
+        "setupRecipes": [
+          "SaaS"
+        ],
+        "contentTypes": []
+      }
     },
     {
       "id": "OrchardCore.Configuration.KeyVault",

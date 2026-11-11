@@ -17,7 +17,7 @@ Every entry of `catalog/features.json` and the videos that cover it. 260 of 275 
 | `OrchardCore.AuditTrail` | feature | Security | admin | `audit-trail-overview`, `audit-trail-settings`, `audit-trail-restore-content` |
 | `OrchardCore.Autoroute` | feature | Navigation | both | `autoroute-urls`, `autoroute-patterns`, `home-route`, `build-a-blog` |
 | `OrchardCore.AutoSetup` | feature | Infrastructure | developer | `auto-setup` |
-| `OrchardCore.AzureAI` | feature | Search | both | `azure-ai-search` |
+| `OrchardCore.AzureAI` | feature | Search | both | `azure-ai-search`, `azure-ai-search-queries` |
 | `OrchardCore.BackgroundTasks` | feature | Tasks | both | `background-tasks`, `background-tasks-developer` |
 | `OrchardCore.ContentFields` | feature | Content Management | both | `content-fields-overview`, `content-fields-links-html-youtube`, `content-fields-editors`, `content-picker-fields`, `content-field-create` |
 | `OrchardCore.ContentFields.Indexing.SQL` | feature | Content Management | developer | `sql-indexing-content-fields` |
@@ -114,7 +114,7 @@ Every entry of `catalog/features.json` and the videos that cover it. 260 of 275 
 | `OrchardCore.Placements` | feature | Development | both | `placements-admin` |
 | `OrchardCore.Placements.FileStorage` | feature | Development | developer | `placements-admin` |
 | `OrchardCore.PublishLater` | feature | Content Management | admin | `publish-later-archive-later` |
-| `OrchardCore.Queries` | feature | Content Management | both | `queries-overview`, `queries-lucene-elasticsearch`, `queries-in-templates-and-api`, `build-a-headless-site` |
+| `OrchardCore.Queries` | feature | Content Management | both | `azure-ai-search-queries`, `queries-overview`, `queries-lucene-elasticsearch`, `queries-in-templates-and-api`, `build-a-headless-site` |
 | `OrchardCore.Queries.Core` | feature | Content Management | both | `queries-overview` |
 | `OrchardCore.Queries.Sql` | feature | Content Management | both | `queries-sql` |
 | `OrchardCore.RateLimits` | feature | Security | both | `security-rate-limits` |

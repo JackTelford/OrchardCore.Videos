@@ -628,7 +628,8 @@ def describe_surfaces(source: Source, feature: dict, startups: list[dict]) -> di
             found = source.class_text(name, directory, st["file"])
             if not found:
                 continue
-            for tm in re.finditer(r"AlterTypeDefinitionAsync\(\s*(\"\w+\"|[\w.]+)", found[1]):
+            # A literal name, or a constant of a class (a lowercase identifier is a variable, built from data).
+            for tm in re.finditer(r"AlterTypeDefinitionAsync\(\s*(\"\w+\"|[A-Z]\w*\.[\w.]+)", found[1]):
                 try:
                     type_name = source.constants.resolve(tm.group(1), name)
                 except SystemExit:
@@ -638,9 +639,47 @@ def describe_surfaces(source: Source, feature: dict, startups: list[dict]) -> di
                 label = f"{type_name} ({stereo.group(1)})" if stereo else type_name
                 if label not in s["contentTypes"]:
                     s["contentTypes"].append(label)
+            # Types and widgets a migration creates by running a recipe of the module.
+            for rm in re.finditer(r"ExecuteAsync\(\s*\$?\"([\w/.-]+?)(?:\{RecipesConstants\.RecipeExtension\}|\.recipe\.json)\"", found[1]):
+                base = rm.group(1).split("/")[-1] + ".recipe.json"
+                for recipe in sorted(directory.rglob(base)):
+                    for label in recipe_types(recipe):
+                        if label not in s["contentTypes"]:
+                            s["contentTypes"].append(label)
         for tm in re.finditer(r"Register\w*(?:Tag|Block)\w*\(\s*\"([a-z_]+)\"", body):
             s["liquidTags"].append(tm.group(1))
     return {k: sorted(set(v)) if k not in ("adminMenu", "permissions", "conditional") else v for k, v in s.items()}, ui
+
+
+def load_recipe(path: Path) -> dict:
+    try:
+        return json.loads(strip_comments(read(path)))
+    except json.JSONDecodeError as error:
+        raise SystemExit(f"Can't read the recipe {path}: {error}")
+
+
+def recipe_types(path: Path) -> list[str]:
+    """The content types a recipe's ContentDefinition steps create, with their stereotype ("Menu (Menu)")."""
+    labels = []
+    for step in load_recipe(path).get("steps", []):
+        if str(step.get("name", "")).lower() != "contentdefinition":
+            continue
+        for content_type in step.get("ContentTypes", []):
+            settings = content_type.get("Settings", {}).get("ContentTypeSettings", {})
+            stereotype = settings.get("Stereotype")
+            labels.append(f"{content_type['Name']} ({stereotype})" if stereotype else content_type["Name"])
+    return labels
+
+
+def theme_recipes(directory: Path) -> tuple[list[str], list[str]]:
+    """The setup recipes a theme ships, by name, and the content types they create."""
+    names, types = [], []
+    for path in sorted((directory / "Recipes").glob("*.recipe.json")) if (directory / "Recipes").exists() else []:
+        recipe = load_recipe(path)
+        if recipe.get("issetuprecipe") is True or recipe.get("IsSetupRecipe") is True:
+            names.append(recipe.get("name") or path.stem)
+            types += [t for t in recipe_types(path) if t not in types]
+    return names, types
 
 
 def scan_api(source: Source, directory: Path) -> list[tuple[str, str | None]]:
@@ -785,6 +824,11 @@ def build(source_root: Path, commit: str, date: str) -> None:
                 surfaces["api"].append(route)
         surfaces["api"].sort()
         f["surfaces"] = {k: v for k, v in surfaces.items() if v}
+        if f["kind"] == "theme":
+            recipes, types = theme_recipes(f["_dir"])
+            if recipes:
+                f["surfaces"]["setupRecipes"] = recipes
+                f["surfaces"]["contentTypes"] = sorted(set(f["surfaces"].get("contentTypes", [])) | set(types))
         f["_ui"] = ui or f["kind"] == "theme"
 
     # The Liquid tags and filters the framework libraries register are there whenever Liquid is.

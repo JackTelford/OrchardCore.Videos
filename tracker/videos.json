@@ -2665,7 +2665,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "Admin video: the JavaScript condition is named in words only, never typed on screen."
   },
   {
     "slug": "meta-social-plugins",
@@ -2809,7 +2809,7 @@
   },
   {
     "slug": "azure-ai-search",
-    "title": "Azure AI Search: Search Indexes in Azure",
+    "title": "Azure AI Search: Connect Your Site and Create Indexes",
     "series": "Search and Indexing",
     "order": 5,
     "audience": "admin",
@@ -2834,10 +2834,38 @@
     "notes": "External service with no local emulator: the recording plan must use a stand-in endpoint, or the video stays blocked."
   },
   {
+    "slug": "azure-ai-search-queries",
+    "title": "Azure AI Search Queries: Search From a Saved Query",
+    "series": "Search and Indexing",
+    "order": 6,
+    "audience": "developer",
+    "priority": 3,
+    "features": [
+      "OrchardCore.AzureAI",
+      "OrchardCore.Queries"
+    ],
+    "docs": [
+      "src/docs/reference/modules/AzureAISearch/README.md",
+      "src/docs/reference/modules/Queries/README.md"
+    ],
+    "status": "planned",
+    "estimatedMinutes": 4.5,
+    "words": 0,
+    "contentCommit": "",
+    "recordedBy": "",
+    "recordedOn": "",
+    "reviewedBy": "",
+    "pullRequest": "",
+    "release": "",
+    "youtubeId": "",
+    "publishedOn": "",
+    "notes": "External service with no local emulator: the recording plan must use a stand-in endpoint, or the video stays blocked."
+  },
+  {
     "slug": "search-settings",
     "title": "Site Search Settings: Index, Fields and Results Page",
     "series": "Search and Indexing",
-    "order": 6,
+    "order": 7,
     "audience": "admin",
     "priority": 2,
     "features": [
@@ -2863,7 +2891,7 @@
     "slug": "media-indexing",
     "title": "Search Media Files: Index PDF, Office and Text Documents",
     "series": "Search and Indexing",
-    "order": 7,
+    "order": 8,
     "audience": "admin",
     "priority": 3,
     "features": [
@@ -2892,7 +2920,7 @@
     "slug": "full-text-search-guide",
     "title": "Implement Full-Text Search: From Index to Results Page",
     "series": "Search and Indexing",
-    "order": 8,
+    "order": 9,
     "audience": "developer",
     "priority": 2,
     "features": [
@@ -2918,7 +2946,7 @@
     "slug": "lucene-query-syntax",
     "title": "Lucene Query Syntax: Write Precise Search Queries",
     "series": "Search and Indexing",
-    "order": 9,
+    "order": 10,
     "audience": "developer",
     "priority": 3,
     "features": [
@@ -2944,7 +2972,7 @@
     "slug": "indexing-developer",
     "title": "Indexing in Code: Index Your Own Data and Fields",
     "series": "Search and Indexing",
-    "order": 10,
+    "order": 11,
     "audience": "developer",
     "priority": 3,
     "features": [
@@ -3160,7 +3188,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": "External service: a local SMTP catcher (smtp4dev in Docker)."
+    "notes": "External service: a local SMTP catcher (smtp4dev in Docker). Admin video: type plain values only; no Liquid or JavaScript expression on screen."
   },
   {
     "slug": "workflows-events-tasks-outcomes",
@@ -3193,7 +3221,7 @@
     "title": "Workflows: Create, Update and Publish Content Automatically",
     "series": "Workflows",
     "order": 4,
-    "audience": "admin",
+    "audience": "developer",
     "priority": 2,
     "features": [
       "OrchardCore.Workflows",
@@ -3273,7 +3301,7 @@
     "title": "HTTP Workflows: Handle Requests and Call Web APIs",
     "series": "Workflows",
     "order": 7,
-    "audience": "admin",
+    "audience": "developer",
     "priority": 2,
     "features": [
       "OrchardCore.Workflows.Http"
@@ -3321,7 +3349,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "Admin video: type plain values only; no Liquid or JavaScript expression on screen."
   },
   {
     "slug": "workflows-expressions-and-loops",
@@ -5013,7 +5041,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "Admin video: type plain values only; no Liquid or JavaScript expression on screen."
   },
   {
     "slug": "tenants-static-files",
@@ -5570,7 +5598,7 @@
     "title": "Forms and Workflows: Process Each Submission",
     "series": "Forms",
     "order": 3,
-    "audience": "admin",
+    "audience": "developer",
     "priority": 2,
     "features": [
       "OrchardCore.Forms",
@@ -5646,7 +5674,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "Admin video: no formula or calculated field on screen; those belong to data-sources-developer."
   },
   {
     "slug": "data-pipelines-import",
@@ -5673,7 +5701,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "Admin video: no formula or calculated field on screen; those belong to data-sources-developer."
   },
   {
     "slug": "data-pipelines-schedule-history",
@@ -5700,7 +5728,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "Admin video: no formula or calculated field on screen; those belong to data-sources-developer."
   },
   {
     "slug": "data-pipelines-destinations",
@@ -5758,7 +5786,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "Admin video: no formula or calculated field on screen; those belong to data-sources-developer."
   },
   {
     "slug": "data-sources-developer",

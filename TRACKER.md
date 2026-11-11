@@ -4,11 +4,11 @@ The progress of every planned Orchard Core video. The source of truth is `tracke
 
 <!-- tracker:start -->
 
-**257 videos** in 40 series, about 21 hours in all. Content written: **0** (0%). Published: **0** (0%).
+**258 videos** in 40 series, about 21 hours in all. Content written: **0** (0%). Published: **0** (0%).
 
 | Status | Videos |
 | --- | ---: |
-| `planned` | 257 |
+| `planned` | 258 |
 | `content-draft` | 0 |
 | `content-ready` | 0 |
 | `recording` | 0 |
@@ -41,7 +41,7 @@ Content is the share of videos that are `content-ready` or later; published, the
 | Design: Themes, Templates and Widgets | Templates and Liquid | 9 | `░░░░░░░░░░` 0 | `░░░░░░░░░░` 0 |
 | Design: Themes, Templates and Widgets | Display Management | 5 | `░░░░░░░░░░` 0 | `░░░░░░░░░░` 0 |
 | Design: Themes, Templates and Widgets | Layers and Widgets | 4 | `░░░░░░░░░░` 0 | `░░░░░░░░░░` 0 |
-| Search and Queries | Search and Indexing | 10 | `░░░░░░░░░░` 0 | `░░░░░░░░░░` 0 |
+| Search and Queries | Search and Indexing | 11 | `░░░░░░░░░░` 0 | `░░░░░░░░░░` 0 |
 | Search and Queries | Queries | 5 | `░░░░░░░░░░` 0 | `░░░░░░░░░░` 0 |
 | Workflows and Automation | Workflows | 10 | `░░░░░░░░░░` 0 | `░░░░░░░░░░` 0 |
 | Users, Roles and Security | Users | 10 | `░░░░░░░░░░` 0 | `░░░░░░░░░░` 0 |
@@ -175,12 +175,13 @@ In series order. P is the priority: 1 core, 2 common, 3 niche.
 | Search and Indexing | 2 | Indexes: Create, Rebuild and Reset Search Indexes (`indexing-indexes`) | admin | 1 | 5 | `planned` |  |
 | Search and Indexing | 3 | Lucene: Full-Text Search With No External Service (`lucene-search`) | admin | 1 | 5 | `planned` |  |
 | Search and Indexing | 4 | Elasticsearch: Search Indexes on an Elasticsearch Server (`elasticsearch-search`) | admin | 2 | 5 | `planned` |  |
-| Search and Indexing | 5 | Azure AI Search: Search Indexes in Azure (`azure-ai-search`) | admin | 3 | 5 | `planned` |  |
-| Search and Indexing | 6 | Site Search Settings: Index, Fields and Results Page (`search-settings`) | admin | 2 | 4 | `planned` |  |
-| Search and Indexing | 7 | Search Media Files: Index PDF, Office and Text Documents (`media-indexing`) | admin | 3 | 4 | `planned` |  |
-| Search and Indexing | 8 | Implement Full-Text Search: From Index to Results Page (`full-text-search-guide`) | developer | 2 | 6 | `planned` |  |
-| Search and Indexing | 9 | Lucene Query Syntax: Write Precise Search Queries (`lucene-query-syntax`) | developer | 3 | 5 | `planned` |  |
-| Search and Indexing | 10 | Indexing in Code: Index Your Own Data and Fields (`indexing-developer`) | developer | 3 | 5 | `planned` |  |
+| Search and Indexing | 5 | Azure AI Search: Connect Your Site and Create Indexes (`azure-ai-search`) | admin | 3 | 5 | `planned` |  |
+| Search and Indexing | 6 | Azure AI Search Queries: Search From a Saved Query (`azure-ai-search-queries`) | developer | 3 | 4.5 | `planned` |  |
+| Search and Indexing | 7 | Site Search Settings: Index, Fields and Results Page (`search-settings`) | admin | 2 | 4 | `planned` |  |
+| Search and Indexing | 8 | Search Media Files: Index PDF, Office and Text Documents (`media-indexing`) | admin | 3 | 4 | `planned` |  |
+| Search and Indexing | 9 | Implement Full-Text Search: From Index to Results Page (`full-text-search-guide`) | developer | 2 | 6 | `planned` |  |
+| Search and Indexing | 10 | Lucene Query Syntax: Write Precise Search Queries (`lucene-query-syntax`) | developer | 3 | 5 | `planned` |  |
+| Search and Indexing | 11 | Indexing in Code: Index Your Own Data and Fields (`indexing-developer`) | developer | 3 | 5 | `planned` |  |
 | Queries | 1 | Queries: Save and Reuse Search and Database Queries (`queries-overview`) | developer | 1 | 5 | `planned` |  |
 | Queries | 2 | SQL Queries: Query Content Items With SQL (`queries-sql`) | developer | 2 | 5.5 | `planned` |  |
 | Queries | 3 | Lucene and Elasticsearch Queries: Search From a Saved Query (`queries-lucene-elasticsearch`) | developer | 2 | 5 | `planned` |  |
@@ -189,10 +190,10 @@ In series order. P is the priority: 1 core, 2 common, 3 niche.
 | Workflows | 1 | Workflows: Automate Tasks Without Writing Code (`workflows-overview`) | admin | 1 | 5 | `planned` |  |
 | Workflows | 2 | Workflows: Send an Email When Content Is Published (`workflows-send-email-on-publish`) | admin | 1 | 5.5 | `planned` |  |
 | Workflows | 3 | Workflows: Events, Tasks and Outcomes (`workflows-events-tasks-outcomes`) | admin | 2 | 5 | `planned` |  |
-| Workflows | 4 | Workflows: Create, Update and Publish Content Automatically (`workflows-content-tasks`) | admin | 2 | 5 | `planned` |  |
+| Workflows | 4 | Workflows: Create, Update and Publish Content Automatically (`workflows-content-tasks`) | developer | 2 | 5 | `planned` |  |
 | Workflows | 5 | Workflow Instances: Follow and Troubleshoot Each Run (`workflows-instances`) | admin | 2 | 4 | `planned` |  |
 | Workflows | 6 | Timer Workflows: Run Tasks on a Schedule (`workflows-timers`) | admin | 2 | 4 | `planned` |  |
-| Workflows | 7 | HTTP Workflows: Handle Requests and Call Web APIs (`workflows-http`) | admin | 2 | 5.5 | `planned` |  |
+| Workflows | 7 | HTTP Workflows: Handle Requests and Call Web APIs (`workflows-http`) | developer | 2 | 5.5 | `planned` |  |
 | Workflows | 8 | Workflows: React to Registrations, Sign-Ins and Role Changes (`workflows-user-events`) | admin | 3 | 4.5 | `planned` |  |
 | Workflows | 9 | Workflows in Depth: Expressions, Variables, Branches and Loops (`workflows-expressions-and-loops`) | developer | 2 | 6 | `planned` |  |
 | Workflows | 10 | Workflows and the Database Session: Commit, Fork and Join (`workflows-session-activities`) | developer | 3 | 4 | `planned` |  |
@@ -277,7 +278,7 @@ In series order. P is the priority: 1 core, 2 common, 3 niche.
 | Email, SMS and Notifications | 5 | Send Email, SMS and Notifications From Your Module (`email-sms-in-code`) | developer | 3 | 5 | `planned` |  |
 | Forms | 1 | Forms: Build a Contact Form From Widgets (`forms-contact-form`) | admin | 1 | 5.5 | `planned` |  |
 | Forms | 2 | Forms: Validate What Visitors Type (`forms-validation`) | admin | 2 | 4.5 | `planned` |  |
-| Forms | 3 | Forms and Workflows: Process Each Submission (`forms-workflows`) | admin | 2 | 5.5 | `planned` |  |
+| Forms | 3 | Forms and Workflows: Process Each Submission (`forms-workflows`) | developer | 2 | 5.5 | `planned` |  |
 | Data Pipelines | 1 | Data Pipelines: Move and Transform Your Site's Data (`data-pipelines-overview`) | admin | 2 | 4.5 | `planned` |  |
 | Data Pipelines | 2 | Data Pipelines: Export Content Items to a CSV File (`data-pipelines-export-csv`) | admin | 2 | 6 | `planned` |  |
 | Data Pipelines | 3 | Data Pipelines: Import Rows as Content Items (`data-pipelines-import`) | admin | 3 | 5.5 | `planned` |  |
