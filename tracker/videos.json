@@ -325,9 +325,9 @@
       "src/docs/getting-started/templates/README.md",
       "src/docs/guides/create-cms-application/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.0,
+    "words": 903,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

@@ -1,0 +1,279 @@
+{
+  "title": "Create a CMS Web Application With dotnet new",
+  "output": "create-cms-web-application",
+  "spoken": {
+    "Program.cs": "Program dot C.S.",
+    "dotnet": "dot net",
+    "occms": "O.C.C.M.S.",
+    "ocmodulecms": "O.C. module C.M.S.",
+    "octheme": "O.C. theme",
+    "NLog": "N Log",
+    "NuGet": "New Get",
+    "Sqlite": "S.Q. Lite",
+    "OrchardCore.ProjectTemplates": "Orchard Core Project Templates",
+    "ORCHARD_APP_DATA": "Orchard App Data",
+    "App_Data": "App Data",
+    "MySite": "My Site",
+    "/admin": "slash admin"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Create a CMS Web Application With dotnet new",
+      "subtitle": "From an empty folder to a running Orchard Core site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core is a content management system and application framework built on ASP.NET Core. A dotnet new template creates a web application that uses it. In this video, we install the template, create a project, run it, set up the site, and sign in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two ways to start",
+      "subtitle": "By hand, or from a template",
+      "clips": [
+        {
+          "id": "01-ways",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ways-1",
+              "text": "An Orchard Core site is an ASP.NET Core web application that references the Orchard Core packages. You can build one by hand: create an empty web project, add the CMS package, register Orchard Core in Program.cs, and remove the default pages."
+            },
+            {
+              "id": "ways-2",
+              "text": "The template does that work in one command. It writes the project file, the logging setup, and the launch settings. By default, the package versions match the version of the templates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Install the templates",
+      "subtitle": "One NuGet package, installed once",
+      "clips": [
+        {
+          "id": "02-install",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "install-1",
+              "text": "You need the .NET SDK and a terminal. The templates are one NuGet package, OrchardCore.ProjectTemplates. Install it once, with dotnet new install and the package ID."
+            },
+            {
+              "id": "install-2",
+              "text": "To install a specific release, add an at sign and the version number after the package ID. Preview packages come from a separate NuGet source, which the documentation describes."
+            },
+            {
+              "id": "install-3",
+              "text": "The package also holds templates for an MVC web application, for modules, and for themes. Each has a short name. The one for a CMS web application is occms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create the project",
+      "subtitle": "dotnet new occms",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Create an empty folder, open a terminal in it, and run dotnet new occms with the name option. The name becomes the project folder and the project file. Here, the name is MySite."
+            },
+            {
+              "id": "create-2",
+              "text": "The folder holds the project file, Program.cs, an app settings file, the NLog configuration, and the launch settings. Orchard Core itself comes from NuGet packages, not from source files."
+            },
+            {
+              "id": "create-3",
+              "text": "The project file references two packages. One provides logging with NLog. The other, the CMS targets package, brings in the Orchard Core modules and the starter themes."
+            },
+            {
+              "id": "create-4",
+              "text": "The CMS targets package builds on a smaller one, the CMS Core targets package: the modules and the admin theme, without front end themes. The documentation suggests it for headless sites, and for sites with their own theme."
+            },
+            {
+              "id": "create-5",
+              "text": "Program.cs has three Orchard Core lines. Use N Log Host connects the logger. Add Orchard CMS registers the services, and Use Orchard Core adds Orchard Core to the request pipeline."
+            },
+            {
+              "id": "create-6",
+              "text": "The template takes options. Logger selects NLog, Serilog, or none, and NLog is the default. Orchard Version selects the version of the packages. Framework selects the target framework of the project."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Run the project",
+      "subtitle": "The launch settings and the console",
+      "clips": [
+        {
+          "id": "04-run",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Run the application with dotnet run, and pass the path of the project file with the project option. Run it from the folder that holds MySite."
+            },
+            {
+              "id": "run-2",
+              "text": "The MySite profile in the launch settings defines two addresses: https on port 5001, and http on port 5000. The console prints both when the server starts. Open the https address in a browser."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Set up the site",
+      "subtitle": "Complete the Setup screen",
+      "clips": [
+        {
+          "id": "05-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "The site is not set up yet, so the first request shows the Setup screen. It asks a few questions about the site, its database, and its super user."
+            },
+            {
+              "id": "setup-2",
+              "text": "Let's name the site. The name is used as the default title of your pages."
+            },
+            {
+              "id": "setup-3",
+              "text": "Recipes set up a site with pre-configured options, features and settings. The Recipe menu lists the ones that come with the CMS package. Let's choose Blog."
+            },
+            {
+              "id": "setup-4",
+              "text": "Default Time Zone is the time zone used by default when dates and times are displayed and edited. Choose the one your site uses."
+            },
+            {
+              "id": "setup-5",
+              "text": "The database is Sqlite, which needs no connection string. It stores the data of the site in a file in the App_Data folder."
+            },
+            {
+              "id": "setup-6",
+              "text": "The super user has all the rights. Let's enter a user name, an email address, and a password, and confirm the password. The Password field shows the rules a password must follow."
+            },
+            {
+              "id": "setup-7",
+              "text": "Select Finish Setup. A few seconds later, Orchard Core redirects to the home page. The Blog recipe created this blog, and the site is ready."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Sign in to the admin",
+      "subtitle": "The first sign-in",
+      "clips": [
+        {
+          "id": "06-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "admin-1",
+              "text": "The admin site is at /admin. You are not signed in yet, so Orchard Core shows the Log in page."
+            },
+            {
+              "id": "admin-2",
+              "text": "Enter the user name of the super user and its password, and select Log in."
+            },
+            {
+              "id": "admin-3",
+              "text": "The admin opens with a welcome message: your site is ready. Browse the menu to see what you can configure, and start writing content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Logging and site data",
+      "subtitle": "NLog, Serilog, and the App_Data folder",
+      "clips": [
+        {
+          "id": "07-logging",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "log-1",
+              "text": "The NLog configuration sends the logs to a file in the logs folder of App_Data, one file for each day. The hosting lifetime events, such as the listening addresses, also go to the console."
+            },
+            {
+              "id": "log-2",
+              "text": "The log levels come from the Logging section of the app settings file. Change the Default level there to log more or less."
+            },
+            {
+              "id": "log-3",
+              "text": "With the Serilog option, the template adds the Serilog package, a Serilog section in the app settings file, and no NLog configuration. With none, it adds no logging package."
+            },
+            {
+              "id": "data-1",
+              "text": "App_Data holds the data of the site: the Sqlite database file, uploaded media, and the logs. The ORCHARD_APP_DATA environment variable sets another folder for the data of the site."
+            },
+            {
+              "id": "data-2",
+              "text": "To stop the server, press Control and C in the terminal. The data stays in App_Data, so running the project again starts the same site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Where to go next",
+      "subtitle": "Modules, themes, and Auto Setup",
+      "clips": [
+        {
+          "id": "08-next",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "next-1",
+              "text": "The same package has templates for modules and themes: ocmodulecms and octheme. Create them next to the web application, and reference them from it, to extend your site."
+            },
+            {
+              "id": "next-2",
+              "text": "To install a site without the Setup screen, add the Auto Setup feature to Program.cs. It sets the site up on the first request, from values in the configuration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Create a CMS Web Application With dotnet new",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is a running Orchard Core site from one template: install it once, create a project, run it, and set it up. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
