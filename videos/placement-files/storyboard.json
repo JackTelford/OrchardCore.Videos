@@ -1,0 +1,240 @@
+{
+  "title": "Placement: Decide Where Parts and Fields Appear",
+  "output": "placement-files",
+  "spoken": {
+    "placement.json": "placement dot JSON",
+    "ContentPart_Summary": "Content Part Summary",
+    "ContentPart_Edit": "Content Part Edit",
+    "TextField_Display": "Text Field Display",
+    "TextField_Edit": "Text Field Edit",
+    "Article-Subtitle": "Article dash Subtitle",
+    "Article-Image": "Article dash Image",
+    "Parts.Article": "Parts dot Article"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Placement: Decide Where Parts and Fields Appear",
+      "subtitle": "Move, hide and group shapes with a placement file",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A display driver gives the shape of a part or a field a default place. A placement file changes that place without touching code. This video shows the file format, how to target a shape, and how to move, hide and group shapes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Shapes and places",
+      "subtitle": "Where a shape appears",
+      "clips": [
+        {
+          "id": "01-places",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "places-1",
+              "text": "A display driver builds a shape for a part or a field, and gives it a default location: a zone, and optionally a position. This text field driver uses the Content zone for the Detail and Summary display types."
+            },
+            {
+              "id": "places-2",
+              "text": "A placement file overrides that default. It moves a shape to another zone or position, hides it, or groups it into tabs, cards and columns. It works for the front end and for the content editors of the admin."
+            },
+            {
+              "id": "places-3",
+              "text": "A rule finds a shape by its shape type, its differentiator and its display type. It can also look at the content item the shape was built from, and at the request path."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The placement file",
+      "subtitle": "Rules, filters and placement information",
+      "clips": [
+        {
+          "id": "02-file",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "file-1",
+              "text": "Any module or theme can contain a placement.json file at its root, and so can the startup project of your site. The file is an object whose properties are shape types. Each property holds an array of rules."
+            },
+            {
+              "id": "file-2",
+              "text": "A rule has two kinds of properties, and all of them are optional. Filters choose the shapes it applies to: displayType, differentiator, contentType, contentPart and path. Placement information says what to do with them: place, alternates, wrappers and shape."
+            },
+            {
+              "id": "file-3",
+              "text": "The displayType and differentiator filters must equal the shape's own values. The contentType filter accepts content types and stereotypes, and a star at the end matches every name starting with that text."
+            },
+            {
+              "id": "file-4",
+              "text": "The contentPart filter matches items that have the part. The path filter matches the request path, and a star at the end matches every path starting with that text."
+            },
+            {
+              "id": "file-5",
+              "text": "The place property sets the location, and a dash hides the shape. The alternates property adds alternate shape types, and wrappers adds wrapper shapes. The shape property replaces the shape type with the one you name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Targeting parts and fields",
+      "subtitle": "Shape types and differentiators",
+      "clips": [
+        {
+          "id": "03-target",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "target-1",
+              "text": "A rule's property name is the shape type, and it is not always the part's name. A part with a display driver, such as TitlePart, is a shape of its own. Its differentiator is the part's name, even for a named part."
+            },
+            {
+              "id": "target-2",
+              "text": "A dynamic part, which has no class of its own, is displayed with the ContentPart shape, and the differentiator is still the part's name. For other display types, the shape type carries the display type, as in ContentPart_Summary."
+            },
+            {
+              "id": "target-3",
+              "text": "A field is a shape named after its field type, such as TextField. Its differentiator is the part name, a dash, and the field name, as in Article-Subtitle. A content type's own part is named after the type."
+            },
+            {
+              "id": "target-4",
+              "text": "Editor shapes end in Edit, such as TextField_Edit, and keep the same differentiator. To move or hide a whole row of the editor, label included, use ContentPart_Edit, with the content type, a dash and the part name as the differentiator."
+            },
+            {
+              "id": "target-5",
+              "text": "A field with a display mode needs the longer form. The shape type ends in Display, as in TextField_Display, and the differentiator ends with the full shape type, which includes the display mode."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Places",
+      "subtitle": "Zones, positions, tabs, cards and columns",
+      "clips": [
+        {
+          "id": "04-place",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "place-1",
+              "text": "A place starts with a zone name. A colon adds a position, and a dot reaches into a zone, as in Parts.Article, where the editor holds the shapes of the part named Article. A leading slash targets a layout zone."
+            },
+            {
+              "id": "place-2",
+              "text": "Positions compare as numbers: two comes before ten, and one point five fits between one and two. Before and after mark the ends; start and end go beyond them. No position counts as zero, or as the part's position in an editor."
+            },
+            {
+              "id": "place-3",
+              "text": "In the editor, a place can also name groups. A hash adds a tab, a percent sign a card, and a pipe a column. A semicolon after the name sets the group's position, and an underscore sets a column's width."
+            },
+            {
+              "id": "place-4",
+              "text": "These rules put a media field in a tab named Media, shown first, and an HTML field in the Content tab, shown second. Shapes without a group join the Content tab. Tabs can hold cards, and cards can hold columns."
+            },
+            {
+              "id": "place-5",
+              "text": "In a display driver, the Location method also takes a fluent builder. Zone, Tab, Card and Column chain on one builder, and the result is the string you would otherwise write by hand."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "In the editor",
+      "subtitle": "Move a field and group another",
+      "clips": [
+        {
+          "id": "05-before",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "before-1",
+              "text": "This is the editor of an Article, before the startup project of the site has a placement file. The Title comes first, then the Permalink and the body. The Subtitle and the Banner Image come last."
+            },
+            {
+              "id": "before-2",
+              "text": "The Subtitle is a TextField named Subtitle, so its editor shape is TextField_Edit with the differentiator Article-Subtitle. The Banner Image is a MediaField named Image, so its differentiator is Article-Image, not Banner Image."
+            }
+          ]
+        },
+        {
+          "id": "05-rules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "The startup project of the site holds this placement.json. The first rule moves the Subtitle to position zero point five of the Parts zone, between the Title and the Permalink. The second puts the Banner Image in a tab named Media."
+            }
+          ]
+        },
+        {
+          "id": "05-after",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "after-1",
+              "text": "With the file in place, the same editor has two tabs, Content and Media. The Subtitle sits directly under the Title, because a position of zero point five falls between the Title and the Permalink."
+            },
+            {
+              "id": "after-2",
+              "text": "The Banner Image has left the Content tab. Opening the Media tab shows it on its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Which rule wins",
+      "subtitle": "Precedence and common mistakes",
+      "clips": [
+        {
+          "id": "06-wins",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "wins-1",
+              "text": "When several placement files place the same shape, the startup project wins, then the active theme, then the modules. A module that depends on another wins over it. The active theme is the front end theme, or the admin theme in the admin."
+            },
+            {
+              "id": "wins-2",
+              "text": "Inside one file, when several rules match a shape, the last one wins. A property that placement does not know, such as a misspelled filter, is ignored, so the rule matches more shapes than you intended."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Placement: Decide Where Parts and Fields Appear",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Placement files keep the layout of parts and fields out of your drivers and templates. A separate video covers the Placements module, which edits placement from the admin. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2523,9 +2523,9 @@
     "docs": [
       "src/docs/reference/modules/Placement/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.6,
+    "words": 986,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
