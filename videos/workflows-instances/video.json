@@ -1,0 +1,45 @@
+{
+  "title": "Workflow Instances: Follow and Troubleshoot Each Run | Orchard Core",
+  "description": "When a workflow waits, fails or finishes, you need to know which run did what, and why.\n\nEvery run of a workflow is an instance. The list of instances shows each one with its status, and the page of an instance shows the activities it ran, its variables and its journal. From there you can find the error that stopped a run, retry it, and retry, cancel or delete several instances at once.\n\nIn this video:\n• What an instance is\n• The list of instances\n• Open an instance\n• Troubleshoot a faulted instance\n• Act on several instances",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Workflow instances"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows"
+  }
+}

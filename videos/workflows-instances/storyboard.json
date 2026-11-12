@@ -1,0 +1,186 @@
+{
+  "title": "Workflow Instances: Follow and Troubleshoot Each Run",
+  "output": "workflows-instances",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Workflow Instances",
+      "subtitle": "Follow and troubleshoot each run",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every time a workflow runs, Orchard Core creates an instance that records the run. In this video, you'll see how to list instances, follow what each one did, and retry or clean up the ones that failed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What an instance is",
+      "subtitle": "One run of a workflow",
+      "clips": [
+        {
+          "id": "01-instance",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "instance-1",
+              "text": "A workflow is a definition: its activities, and the connections between them. Each time an event starts it, Orchard Core creates an instance, which is one run of that definition, with its own values and its own history."
+            },
+            {
+              "id": "status-1",
+              "text": "Some instances have not ended. Halted means the instance waits for an event before it goes on. Running counts the instances in progress: Idle, Starting, Resuming or Executing."
+            },
+            {
+              "id": "status-2",
+              "text": "The rest have stopped. Finished means the instance reached its last activity. Faulted means an activity failed, and Aborted means the instance was canceled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The list of instances",
+      "subtitle": "Every run, with its status",
+      "clips": [
+        {
+          "id": "02-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Open Design, Workflows. A workflow that has instances shows an Instances badge, and the Instances button in the toolbar lists the instances of every workflow."
+            },
+            {
+              "id": "list-2",
+              "text": "Each row shows the instance's ID, its status, the version of the workflow it runs on, and when it was created. The workflow's name comes first, and the newest instance is at the top."
+            },
+            {
+              "id": "list-3",
+              "text": "The counts above the list show how many instances have each status. Select Faulted to list only those. The drop-downs in the toolbar filter by workflow, status and creation date, and change the order."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Open an instance",
+      "subtitle": "The page of a waiting run",
+      "clips": [
+        {
+          "id": "03-waiting",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "Select Halted, then open an instance. Its page shows the workflow ID, when it was created and its status, above the workflow itself."
+            },
+            {
+              "id": "open-2",
+              "text": "The workflow appears as it was when the instance started. The toolbar names the version the instance runs on, so changes published later do not affect it."
+            },
+            {
+              "id": "open-3",
+              "text": "The Blocking badge marks the activity the instance waits on, here Wait for payment. The activities and connections the instance ran are highlighted in green."
+            },
+            {
+              "id": "open-4",
+              "text": "The Variables tab lists the variables of the workflow, with the values this instance has, such as the order number it started with."
+            },
+            {
+              "id": "open-5",
+              "text": "The Journal tab lists the activities the instance ran, in order. Select one to open its panel, then select its Details tab. Under This instance, it says Waiting on this activity or Not waiting on this activity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Troubleshoot a faulted instance",
+      "subtitle": "Find the error, then retry",
+      "clips": [
+        {
+          "id": "04-faulted",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "fault-1",
+              "text": "Back on the list, select Faulted and open an instance. A faulted instance adds a Fault Message to the details, which shows the error that stopped it."
+            },
+            {
+              "id": "fault-2",
+              "text": "On the canvas, a red outline marks the activity that faulted, here Check stock. Nothing after it is highlighted, because the instance never reached it."
+            },
+            {
+              "id": "fault-3",
+              "text": "In the Journal tab, each record shows the activity, its status and how long it took, and its outcome when it has one. The record of the failed activity carries the error instead."
+            },
+            {
+              "id": "fault-4",
+              "text": "Select the failed record. The activity panel opens on its Runs tab, which lists every time the instance ran that activity, and the error of the run."
+            },
+            {
+              "id": "fault-5",
+              "text": "After you fix the cause, such as a service that was down, select Retry from here. A dialog explains that the instance runs again from this activity, with its current state. Retrying needs the Execute workflows permission."
+            },
+            {
+              "id": "fault-6",
+              "text": "Confirming runs the instance again, and a message reports the status it reached. A retry uses the version the instance started on. To use a later version, select Restart, which starts another instance with the same input."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Act on several instances",
+      "subtitle": "Retry, cancel and delete",
+      "clips": [
+        {
+          "id": "05-bulk",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "bulk-1",
+              "text": "To act on several instances at once, check two or more in the list. An Actions menu appears, with Retry, Cancel and Delete."
+            },
+            {
+              "id": "bulk-2",
+              "text": "Retry runs the faulted instances again from the activity they faulted at, and leaves the others alone. A message says how many ran again, and how many could not be retried."
+            },
+            {
+              "id": "bulk-3",
+              "text": "Cancel sets every checked instance that is not Finished to Aborted, faulted ones included. Halted instances stop waiting for their events. Delete removes the instances you checked."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Workflow Instances",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "An instance records one run: its status, the activities it ran, and the error that stopped it. From the list, you can retry, cancel or delete instances. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
