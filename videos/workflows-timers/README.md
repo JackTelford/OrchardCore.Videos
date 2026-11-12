@@ -1,6 +1,6 @@
 # Timer Workflows: Run Tasks on a Schedule
 
-**YouTube:** not published yet · **Length:** 3:59 · **Feature:** [OrchardCore.Workflows.Timers](https://docs.orchardcore.net/en/latest/reference/modules/Workflows/)
+**YouTube:** not published yet · **Length:** 4:02 · **Feature:** [OrchardCore.Workflows.Timers](https://docs.orchardcore.net/en/latest/reference/modules/Workflows/)
 
 The video shows how the Timer Event of the Workflows module runs a workflow on a CRON schedule, or makes a workflow wait for the next scheduled time. It enables the Timer Workflows Activities feature, builds a workflow named Scheduled check with a Timer Event and a Log Task, publishes it, and follows its instances in the admin: one instance that waits, and one finished instance for each run. A closing chapter of slides covers the one-minute check, restarts, and keeping the list of instances short.
 

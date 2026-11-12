@@ -96,7 +96,7 @@
             },
             {
               "id": "create-4",
-              "text": "The Timer Event is marked Start, and its settings open at the bottom of the canvas. The CRON Expression field holds the default, every five minutes. For this demonstration, type five stars separated by spaces: every minute."
+              "text": "The Timer Event is marked Start, and its settings open in a panel on the canvas. The CRON Expression field holds the default, every five minutes. For this demonstration, type five stars separated by spaces: every minute."
             },
             {
               "id": "create-5",
@@ -112,7 +112,7 @@
             },
             {
               "id": "create-8",
-              "text": "A draft doesn't run. Click Publish, and the workflow runs on its schedule."
+              "text": "A draft doesn't run. Click Publish, and the workflow runs on its schedule. Each run is recorded as an instance."
             }
           ]
         }
