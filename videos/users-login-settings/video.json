@@ -1,0 +1,55 @@
+{
+  "title": "User Login Settings: Sign-In Options and Lockout | Orchard Core",
+  "description": "How people sign in to your Orchard Core site, whether they stay signed in after they close the browser, and what happens after too many wrong passwords depend on options you set in the admin and on options a developer sets for the site.\n\nThe User Login page under Settings, Security holds the sign-in options: Remember me, the theme of the login page, local password login, and which details of a user can be edited. A locked account shows a Locked badge in the Users list, where an administrator unlocks it.\n\nIn this video:\n• What the User Login settings control, and what they leave to a developer\n• The login page and where its settings are\n• Remember me and persistent sign-in cookies\n• Rendering the login page with the site theme\n• Disabling local password login\n• Editing the user name, email and phone number of a user\n• Account lockout, and unlocking a user",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Login",
+    "Users",
+    "Authentication",
+    "Account lockout",
+    "Remember me"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Users"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Login",
+      "url": "https://docs.orchardcore.net/en/latest/topics/security/login/"
+    },
+    {
+      "label": "Documentation: Users module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Users/README.md",
+    "src/docs/reference/modules/Users/TicketStore.md",
+    "src/docs/topics/security/login.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users"
+  }
+}
