@@ -1,0 +1,54 @@
+{
+  "title": "Microsoft Entra ID: Sign In With Work Accounts | Orchard Core",
+  "description": "People who work for an organization already have an account in Microsoft Entra ID. Asking them to keep a separate password for your site adds one more credential to manage.\n\nThe Microsoft Entra ID feature of Orchard Core adds a sign-in button to the login page. People sign in at Microsoft, and the site matches them to a linked user, links an account with the same email address, or registers a local account when external registration is allowed.\n\nIn this video:\n• How the sign-in works\n• Registering the app in the Azure portal\n• The tenant ID and who can sign in\n• Enabling the feature\n• Configuring Display Name, AppId, TenantId and CallbackPath\n• The sign-in button on the login page\n• Matching the person to a user\n• Roles from Entra ID groups",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MicrosoftEntraID"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Microsoft Entra ID",
+    "Azure Active Directory",
+    "External authentication",
+    "Single sign-on",
+    "OpenID Connect"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "External Authentication"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Microsoft.Authentication/"
+    },
+    {
+      "label": "Guide: Microsoft Entra ID as an external identity provider",
+      "url": "https://docs.orchardcore.net/en/latest/guides/microsoft-entra-id-integration/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Microsoft.Authentication/README.md",
+    "src/docs/guides/microsoft-entra-id-integration/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Microsoft.Authentication.AzureAD"
+  }
+}
