@@ -3728,9 +3728,9 @@
       "src/docs/reference/modules/Roles/README.md",
       "src/docs/reference/modules/Security/Permissions.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.1,
+    "words": 769,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
