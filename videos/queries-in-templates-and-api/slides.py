@@ -103,7 +103,7 @@ METHODS = [
 PERMISSIONS = [
     ("1", "Execute Api - All queries", "Runs every query."),
     ("2", "Execute Api - RecentBlogPosts", "Runs one query, named after it."),
-    ("3", "Manage queries", "Includes both. Administrator and Editor have it by default."),
+    ("3", "Manage queries", "Includes both."),
     ("!", "Without the permission: Not Found", "The endpoint does not answer Unauthorized."),
 ]
 
