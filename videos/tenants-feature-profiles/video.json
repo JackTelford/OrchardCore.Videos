@@ -1,0 +1,48 @@
+{
+  "title": "Tenant Feature Profiles: Limit the Features of Each Tenant | Orchard Core",
+  "description": "On a multi-tenant Orchard Core site, every tenant is offered the same features, and the administrator of a tenant can enable them.\n\nThe Tenant Feature Profiles feature lets the Default tenant create named lists of Exclude and Include rules, and assign a profile to a tenant to decide which features that tenant is offered.\n\nIn this video:\n• Why feature profiles exist\n• How Exclude and Include rules, their order and feature dependencies work\n• Enabling the Tenant Feature Profiles feature\n• Creating a feature profile\n• Assigning a profile to a tenant\n• Checking the features a tenant is offered",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MultiTenancy"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "multi-tenancy",
+    "tenants",
+    "feature profiles",
+    "Tenant Feature Profiles"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Multi-Tenancy"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Tenants.FeatureProfiles"
+  }
+}
