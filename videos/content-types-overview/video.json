@@ -1,0 +1,52 @@
+{
+  "title": "Content Types: Model the Content of Your Site | Orchard Core",
+  "description": "Every kind of content on an Orchard Core site, from a page to a blog post to a menu, is defined by a content type. Until content types, parts and fields are clear, it is hard to know where to change what editors fill in.\n\nThis video explains how a content type is made of parts, how fields hold values such as text, numbers, dates and images, and where to manage all of it in the admin, using the Article type as the example.\n\nIn this video:\n• The content model: items, types, parts and fields\n• The Content Types page\n• Inside a content type: settings, fields and parts\n• From type to editor: what editors fill in and visitors see\n• The Content Parts page",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Content Types",
+    "Content Parts",
+    "Content Fields",
+    "Content Modeling",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Types"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Content Types",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/"
+    },
+    {
+      "label": "Documentation: Content Parts",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentParts/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentTypes/README.md",
+    "src/docs/reference/modules/ContentParts/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentTypes"
+  }
+}
