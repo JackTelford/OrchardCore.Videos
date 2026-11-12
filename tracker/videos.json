@@ -403,9 +403,9 @@
     "docs": [
       "src/docs/getting-started/ai-quick-start.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.6,
+    "words": 835,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
