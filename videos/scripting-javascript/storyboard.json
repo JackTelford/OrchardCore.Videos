@@ -61,7 +61,7 @@
             },
             {
               "id": "recipe-2",
-              "text": "Variables declared at the top are computed the first time a script reads them, then reused. Three methods exist only in a recipe: variables, parameters, which reads a value passed during setup, and configuration, which reads a configuration key of the tenant."
+              "text": "Variables declared at the top are computed on first read, then reused. Three methods exist only in a recipe: variables, parameters, which reads a value of the recipe environment such as the admin user id, and configuration, which reads a tenant configuration key."
             }
           ]
         }
@@ -132,7 +132,7 @@
             },
             {
               "id": "add-2",
-              "text": "Register the provider as a singleton in the Startup class of your module. The factory runs lazily, the first time a script reads the name, with the services of that evaluation."
+              "text": "Register the provider as a singleton in the Startup class of your module. The factory usually runs lazily, the first time a script reads the name, with the services of that evaluation."
             },
             {
               "id": "add-3",

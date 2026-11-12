@@ -1,6 +1,6 @@
 # Scripting: JavaScript in Workflows and Recipes
 
-**YouTube:** not published yet · **Length:** 4:48 · **Feature:** `OrchardCore.Scripting` ([Scripting](https://docs.orchardcore.net/en/latest/reference/modules/Scripting/))
+**YouTube:** not published yet · **Length:** 4:49 · **Feature:** `OrchardCore.Scripting` ([Scripting](https://docs.orchardcore.net/en/latest/reference/modules/Scripting/))
 
 A video for module and theme authors. It shows how the Scripting module evaluates a script by its prefix, where scripts
 run (recipes, workflows, layer rules and external logins), which methods a script can call, and how to add a method of

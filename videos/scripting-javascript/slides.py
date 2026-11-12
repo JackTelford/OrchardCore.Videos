@@ -116,7 +116,7 @@ public sealed class Startup : StartupBase
 
 STARTUP_NOTES = [
     "One provider for the tenant, registered when the module's feature is enabled.",
-    "The factory runs when a script first reads the name, not when the engine starts.",
+    "Usually the factory runs when a script first reads the name, not when the engine starts.",
     "It receives the services of the evaluation that reads it.",
 ]
 
