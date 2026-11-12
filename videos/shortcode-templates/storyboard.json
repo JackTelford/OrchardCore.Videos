@@ -85,7 +85,7 @@
             },
             {
               "id": "template-2",
-              "text": "Liquid encodes every output. The template captures its markup, cleans it with the sanitize HTML filter, and writes it with the raw filter, which skips the encoding. Values from the arguments and the content stay encoded, so they can't add markup."
+              "text": "Liquid encodes every output. The template captures its markup, cleans it with the sanitize HTML filter, which removes unsafe markup, and writes it with the raw filter, which skips the encoding."
             }
           ]
         },

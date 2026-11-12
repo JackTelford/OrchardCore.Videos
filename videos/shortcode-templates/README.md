@@ -1,6 +1,6 @@
 # Shortcode Templates: Write Your Own Shortcodes With Liquid
 
-**YouTube:** not published yet · **Length:** 4:25 · **Feature:** `OrchardCore.Shortcodes.Templates` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Shortcodes/#shortcode-templates))
+**YouTube:** not published yet · **Length:** 4:21 · **Feature:** `OrchardCore.Shortcodes.Templates` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Shortcodes/#shortcode-templates))
 
 The video shows how to write a shortcode as a Liquid template from the admin. It explains the three values a template
 receives (Args, Content and Context), creates the `primary` template under Design, Shortcodes, and uses it from the

@@ -37,7 +37,7 @@ prove. Commit: the Orchard Core source at `92db4a83`.
    any case, and `[primary Hello]` gives a positional argument that `Args.Text` does not see. The same cache gave a
    second check, with Fluid.Core 3.0.0-beta.9 (again not the version Orchard Core pins): inside `capture`, `{{ Args.Text }}`
    is encoded and the captured markup is not encoded a second time, so `<b>x</b>` as a value is printed as text. Confirm
-   on the site that `[primary text="<b>x</b>"]` shows the tags as text, since `template-2` says values cannot add markup. Do the same with `[primary]<b>x</b>[/primary]`: `TemplateShortcodeProvider` passes the content as an object (`Content`, a `LiquidContentAccessor`), and the source does not show whether `{{ Content }}` encodes it the way `{{ Args.Text }}` is encoded. If either value prints as markup, change `template-2`.
+   on the site that `[primary text="<b>x</b>"]` shows the tags as text, to learn what the template does with markup in a value (the narration of `template-2` makes no claim about it). Do the same with `[primary]<b>x</b>[/primary]`: `TemplateShortcodeProvider` passes the content as an object (`Content`, a `LiquidContentAccessor`), and the source does not show whether `{{ Content }}` encodes it the way `{{ Args.Text }}` is encoded.
 2. **CodeMirror editors.** `#Usage` and `#Content` are CodeMirror editors started with `autoCloseTags: true`. The plan sets their
    value with `setValue`, which always works. To show typing instead, confirm whether typing `>` inserts a closing tag in the
    `liquid` mode; if it does, type the template without the closing tags and check the result line by line.
