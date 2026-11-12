@@ -1,0 +1,54 @@
+{
+  "title": "Create a Module: Your First Orchard Core Module | Orchard Core",
+  "description": "Your own code reaches an Orchard Core site through a module, but what makes a project a module, and what makes a site load and enable it, is not obvious from the project alone.\n\nThis video creates a module from the Orchard Core module template, describes it in its manifest, references it from the web project, and enables it from Tools, Features. You also see the page the module adds, and how a recipe enables the same feature.\n\nIn this video:\n• What a module is: a project, a manifest, and features\n• Create the module from the module template\n• Describe the module in its manifest\n• Install the module by referencing it from the web project\n• Enable the module from Tools, Features\n• See the page the module adds to the site\n• Enable the feature from a recipe\n• What to check when the module is missing",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AspNetCore"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Orchard Core modules",
+    "Module development",
+    "Features",
+    "Manifest",
+    "Project templates"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Create and install a custom module",
+      "url": "https://docs.orchardcore.net/en/latest/guides/create-install-custom-module/"
+    },
+    {
+      "label": "Documentation: Modules",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Modules/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/create-install-custom-module/README.md",
+    "src/docs/reference/modules/Modules/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/create-install-custom-module"
+  }
+}
