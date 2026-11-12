@@ -254,7 +254,7 @@ COMPARE = [
 ]
 
 COMMON = [
-    ("1", "The tenant name", "Part of the output of the template, with either library."),
+    ("1", "The tenant name", "Part of the log files of the template, with either library."),
     ("2", "The logs folder", "App_Data/logs by default."),
     ("3", "OpenTelemetry", "Covered by a separate video."),
 ]

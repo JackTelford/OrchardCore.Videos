@@ -186,7 +186,7 @@
             },
             {
               "id": "compare-2",
-              "text": "With either library, the template's output includes the tenant name, and by default the files go to the logs folder of App_Data. To export logs to a collector, a separate video covers OpenTelemetry."
+              "text": "With either library, the template's log files include the tenant name, and by default the files go to the logs folder of App_Data. To export logs to a collector, a separate video covers OpenTelemetry."
             }
           ]
         }

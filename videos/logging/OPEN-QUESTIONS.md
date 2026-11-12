@@ -60,3 +60,4 @@ replacement):
     providers, such as NLog or Serilog". The template calls `UseSerilog` with its default arguments, and Serilog's host
     integration may not pass the events to other logging providers unless it is asked to. Confirm that a site made with
     the template's Serilog call exports its logs through OpenTelemetry, before any video says that it does.
+13. **The Serilog path.** The template's File sink path is the relative `App_Data/logs/orchard-log.txt`; Serilog resolves it against the process's current directory, not the content root. `compare-2` says only "by default the files go to the logs folder of App_Data". Confirm where the file lands when the site is started from another directory.
