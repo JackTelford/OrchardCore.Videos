@@ -1,0 +1,295 @@
+{
+  "title": "Secure Your Site: A Checklist for Administrators",
+  "output": "secure-your-site",
+  "spoken": { "HSTS": "H.S.T.S." },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Secure Your Site",
+      "subtitle": "A checklist for administrators",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Security in Orchard Core is not one setting. It is a set of pages in the admin, each covering one part of the site. This video is a checklist of those pages, with what to look for on each."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The checklist",
+      "subtitle": "Four questions to ask of your site",
+      "clips": [
+        {
+          "id": "01-overview",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "overview-1",
+              "text": "The checklist asks four questions of your site: who can do what, how do people sign in, how are connections and requests protected, and what is kept safe and recorded. The pages that answer them sit under Access Control, Settings and Tools."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Turn on what you need",
+      "subtitle": "The security features of the site",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Many security features stay off until you enable them. In Tools, Features, the Security group lists them, such as HTTPS, CORS Configuration, ReCaptcha and Rate Limits, each with a button that enables or disables it."
+            },
+            {
+              "id": "features-2",
+              "text": "A feature adds its pages to the admin menu only when it is enabled, so a missing page can mean that its feature is off."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Who can do what",
+      "subtitle": "Roles, permissions and accounts",
+      "clips": [
+        {
+          "id": "03-roles",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "roles-1",
+              "text": "Start with roles. Under Access Control, Roles, each role is a named group of permissions. Anonymous is every visitor who is not signed in, and Authenticated is every signed-in user."
+            },
+            {
+              "id": "roles-2",
+              "text": "Open Anonymous. Each permission allowed here is open to every visitor, and signed-in users receive it too. Keep this list to what visitors need."
+            },
+            {
+              "id": "roles-3",
+              "text": "Then open Editor and search for Manage Roles. Permissions marked Security Critical could let a user elevate their other permissions, so grant them with extreme consideration, and only to roles you trust."
+            }
+          ]
+        },
+        {
+          "id": "03-users",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "users-1",
+              "text": "Next, Access Control, Users. Each account is listed with its roles. Check that every account still belongs to someone who needs access, and that its roles match the work that person does."
+            },
+            {
+              "id": "users-2",
+              "text": "To remove access, open an account's Actions menu and choose Disable, which blocks sign-in but keeps the account. The filters can show only enabled users, or only disabled users."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "How people sign in",
+      "subtitle": "Login, two-factor authentication and registration",
+      "clips": [
+        {
+          "id": "04-login",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "Settings, Security, User Login sets how people sign in. Disable local password login turns passwords off when everyone uses an external provider, so keep at least one administrator with a linked account."
+            },
+            {
+              "id": "login-2",
+              "text": "With a two-factor method enabled, a Two-Factor Authentication tab appears. Require two-factor authentication specific roles lets you choose roles, such as Administrator, whose users are sent to set it up the next time they sign in."
+            }
+          ]
+        },
+        {
+          "id": "04-registration",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "registration-1",
+              "text": "The Users Registration feature lets visitors create their own accounts. On the Registration page, decide whether Users must verify their email address, which blocks sign-in until the address is confirmed, and whether Users must be approved before they can log in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Protect the connection",
+      "subtitle": "HTTPS, security headers and reverse proxies",
+      "clips": [
+        {
+          "id": "05-https",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "https-1",
+              "text": "On the HTTPS page, Require HTTPS redirects plain HTTP requests to a secure address. HSTS mode controls the Strict Transport Security header. Browsers that receive it may stop connecting over HTTP if HTTPS later becomes unavailable, so use it with caution."
+            },
+            {
+              "id": "https-2",
+              "text": "These options are disabled, because this page was opened over plain HTTP, and a warning says that changing HTTPS-only settings over HTTP has been prevented. Open the page over HTTPS to change them."
+            }
+          ]
+        },
+        {
+          "id": "05-headers",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "headers-1",
+              "text": "Security Headers tells browsers how to treat your pages. Content Security Policy lists what a page may load, Permissions Policy limits browser features such as the camera, and Referrer Policy controls what a browser shares when a visitor leaves a page."
+            }
+          ]
+        },
+        {
+          "id": "05-proxy",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "proxy-1",
+              "text": "If a proxy or load balancer sits in front of your site, Reverse Proxy decides which forwarded headers the site processes: X-Forwarded-For, X-Forwarded-Proto and X-Forwarded-Host. Turn on only the headers your own proxy sends."
+            },
+            {
+              "id": "proxy-2",
+              "text": "This matters for rate limits too. Without the forwarded address, every anonymous visitor appears to come from the address of the proxy, and all of them share one budget."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Stop abuse",
+      "subtitle": "Robots, floods of requests and other websites",
+      "clips": [
+        {
+          "id": "06-recaptcha",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "recaptcha-1",
+              "text": "reCaptcha helps keep robots out. Enter the Site Key and Secret Key from your Google reCaptcha account. With the ReCaptcha Users feature enabled, the sign-in, registration and password recovery pages then ask for the challenge."
+            }
+          ]
+        },
+        {
+          "id": "06-rate-limits",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "rate-1",
+              "text": "Rate Limits caps how many requests a client can send. Under Tools, Rate Limits, the Default Global Policy limits each signed-in user, or each IP address for anonymous visitors, per minute."
+            },
+            {
+              "id": "rate-2",
+              "text": "Read-only Policies lists the limits that features add themselves, such as the ones for signing in. Add Policy creates your own, for example for a path such as an API."
+            }
+          ]
+        },
+        {
+          "id": "06-cors",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cors-1",
+              "text": "CORS decides which other websites may call your site from a visitor's browser. On the Cross-Origin Resource Sharing page, Add a policy, and list each allowed origin instead of choosing Allow any origin."
+            },
+            {
+              "id": "cors-2",
+              "text": "Allow credentials lets requests carry credentials such as cookies, and the page does not allow it together with Allow any origin. Allow only the methods and headers that the other site needs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Keep records and secrets",
+      "subtitle": "Audit Trail and Secrets",
+      "clips": [
+        {
+          "id": "07-audit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "audit-1",
+              "text": "Audit Trail logs changes and events. In Settings, Audit Trail, Events to record chooses what is logged, and Login failed stays off until you tick it."
+            },
+            {
+              "id": "audit-2",
+              "text": "Old events are removed on a schedule, and the Trimming tab controls it. Retention period sets how many days an event is kept, and ten days is the default, so raise it if you need a longer history."
+            },
+            {
+              "id": "audit-3",
+              "text": "The log itself is under Tools, Audit Trail. Each event shows what happened, who did it and when, and the list can be filtered by date or category. Administrators cannot edit the log."
+            }
+          ]
+        },
+        {
+          "id": "07-secrets",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "secrets-1",
+              "text": "Keep passwords and API keys as secrets. Under Tools, Security, Secrets, each value is encrypted and never displayed again, and settings refer to a secret by its name. Migrate Secrets moves credentials still kept in settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Review the checklist",
+      "subtitle": "What to keep and what to change",
+      "clips": [
+        {
+          "id": "08-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "Keep Anonymous short, and disable accounts nobody uses. Require two-factor authentication for administrators, and decide whether users must verify their email address and whether registrations need approval."
+            },
+            {
+              "id": "recap-2",
+              "text": "Require HTTPS, set security headers, and enable only the forwarded headers your proxy sends. Add reCaptcha, rate limits and a narrow CORS policy. Record events, and keep credentials as secrets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Secure Your Site",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the checklist: who can do what, how people sign in, how connections and requests are protected, and what is kept and recorded. Review these pages whenever your people or features change. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
