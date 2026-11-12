@@ -1,0 +1,48 @@
+{
+  "title": "Elasticsearch: Search Indexes on an Elasticsearch Server | Orchard Core",
+  "description": "Some sites keep their search indexes on a dedicated Elasticsearch server instead of on the web server that runs the site.\n\nThe Orchard Core Elasticsearch module connects the site to that server, creates indexes of your content on it, keeps them up to date, and lets the search page of your site read from them.\n\nIn this video:\n• How the site, the Elasticsearch server and the index fit together\n• Enabling the Elasticsearch and Search features\n• Creating an index of Article content, with its Elasticsearch settings\n• Choosing the index for the search page of your site\n• Other tools: Query Index, Index Info, Run Elasticsearch Query and the index settings of parts and fields",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Elasticsearch"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Elasticsearch",
+    "Search",
+    "Indexing",
+    "Full-text search"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Elasticsearch/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Elasticsearch/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Elasticsearch"
+  }
+}
