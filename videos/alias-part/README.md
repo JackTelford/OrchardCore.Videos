@@ -1,6 +1,6 @@
 # Alias Part: Give Content Items a Stable Name
 
-**YouTube:** not published yet · **Length:** 4:19 · **Feature:** [OrchardCore.Alias](https://docs.orchardcore.net/en/latest/reference/modules/Alias/)
+**YouTube:** not published yet · **Length:** 4:20 · **Feature:** [OrchardCore.Alias](https://docs.orchardcore.net/en/latest/reference/modules/Alias/)
 
 A walkthrough of the Alias part of Orchard Core on a site made with the Blog recipe: why a content item needs a name
 that does not change from one site to another, how to check that the Alias feature is enabled, how to add the part to
