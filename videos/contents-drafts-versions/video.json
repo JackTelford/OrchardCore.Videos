@@ -1,0 +1,50 @@
+{
+  "title": "Drafts and Versions: Change Content Without Losing the Live Page | Orchard Core",
+  "description": "Editing a page that is live on your site should not change what visitors see until you decide. Orchard Core keeps the published version of a content item while you work on a draft of it.\n\nThis video shows how a content item keeps a published version and a draft, how to save a draft, preview it, publish it, discard it or unpublish a page, and how to find the drafts that wait on your site.\n\nIn this video:\n• Drafts and versions: published and draft, the badges of the Content Items list, and the Draftable and Versionable settings\n• Save a draft: edit a published page without changing the site, and preview the draft\n• Publish or discard the draft: Publish Draft and Discard Draft in the Actions menu\n• Unpublish a page: take a page off the site without deleting it, and publish it again\n• Find the drafts: the Only draft items filter\n• Permissions and older versions: who can save, publish, discard and unpublish, and where older versions go",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "content management",
+    "content items",
+    "draft",
+    "publish",
+    "unpublish",
+    "content versions"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Contents/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Contents"
+  }
+}

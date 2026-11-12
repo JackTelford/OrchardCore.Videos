@@ -1,0 +1,199 @@
+{
+  "title": "Drafts and Versions",
+  "output": "contents-drafts-versions",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Drafts and Versions",
+      "subtitle": "Change content without losing the live page",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "An editor can change a page without changing what visitors see. In this video, you save changes as a draft, preview them, publish or discard them, and unpublish a page. Then you find the drafts that wait for publication."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Drafts and versions",
+      "subtitle": "How a content item keeps its history",
+      "clips": [
+        {
+          "id": "01-versions",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "versions-1",
+              "text": "A content item, such as an article, can have more than one version. The published version is the one visitors see. A draft is a version you are working on, and visitors cannot see it."
+            },
+            {
+              "id": "versions-2",
+              "text": "When you edit a published item and save a draft, the published version stays as it is. Your changes go into a separate version. Publishing the draft makes it the live one, and the version it replaces stays stored."
+            },
+            {
+              "id": "versions-3",
+              "text": "The Content Items list shows the state of each item with badges. Published means a live version exists. Draft means the last saved version is not live, and an item can show both."
+            },
+            {
+              "id": "versions-4",
+              "text": "Two settings of a content type control this. Draftable adds the Save Draft button, and Versionable keeps the published version while you edit. Types you create in the admin have both, and so does the Article type in this video."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Save a draft",
+      "subtitle": "Edit a published page without changing the site",
+      "clips": [
+        {
+          "id": "02-draft",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "draft-1",
+              "text": "In Content, Content Items, the About article is published, and its row shows the Published badge. Let's click Edit to change its subtitle."
+            },
+            {
+              "id": "draft-2",
+              "text": "The Edit Article page opens. Let's change the Subtitle to a different sentence. In the bottom bar, Publish would make the change live, so let's click Save Draft instead."
+            },
+            {
+              "id": "draft-3",
+              "text": "Save Draft returns to the list, with the message: Your Article draft has been saved. The row shows two badges, Published and Draft, because the item has a live version and a draft."
+            },
+            {
+              "id": "draft-4",
+              "text": "Let's click View to open the live page. The subtitle is the original text, because visitors see only the published version."
+            },
+            {
+              "id": "draft-5",
+              "text": "Back in the list, let's click Preview Draft. It opens the draft in a separate tab, where the subtitle shows the change. Only users who may preview content can open it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Publish or discard the draft",
+      "subtitle": "Choose what happens to your changes",
+      "clips": [
+        {
+          "id": "03-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "publish-1",
+              "text": "Back in the list, let's open the Actions menu of the About row and click Publish Draft. The draft becomes the published version, and the message says: That Article has been published. The Draft badge disappears."
+            },
+            {
+              "id": "publish-2",
+              "text": "Let's click View to open the live page again. It shows the changed subtitle, because the draft is the published version."
+            },
+            {
+              "id": "publish-3",
+              "text": "Next, a change that you decide not to keep. Let's go back to the list, edit the Subtitle once more, and save it with Save Draft. The row shows the Draft badge again."
+            },
+            {
+              "id": "publish-4",
+              "text": "Discard Draft, in the same menu, asks you to confirm. After you click Yes, the message says: The Article draft has been removed. The row shows only the Published badge again, and the live page was never affected."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Unpublish a page",
+      "subtitle": "Take a page off the site without deleting it",
+      "clips": [
+        {
+          "id": "04-unpublish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "unpublish-1",
+              "text": "In the Actions menu of the About row, Unpublish takes the page out of public view, and asks you to confirm first. After you click Yes, the message says: The Article has been unpublished."
+            },
+            {
+              "id": "unpublish-2",
+              "text": "The item is not deleted. Its row shows only the Draft badge, and the View button is gone, because no version is published."
+            },
+            {
+              "id": "unpublish-3",
+              "text": "Publish Draft, in the Actions menu, puts the page back on the site. The row shows the Published badge again, and the View button returns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Find the drafts",
+      "subtitle": "See which items wait for publication",
+      "clips": [
+        {
+          "id": "05-find",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "As the list grows, drafts can go unnoticed. Parking Information has a Published and a Draft badge: its draft is waiting. Spring Event has only a Draft badge, so it has no published version."
+            },
+            {
+              "id": "find-2",
+              "text": "Let's open the Filters menu, the funnel button next to the search box, and click Only draft items. The list shows every item that has a draft, with or without a published version: here, Parking Information and Spring Event."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Permissions and older versions",
+      "subtitle": "Who releases a change, and where old versions go",
+      "clips": [
+        {
+          "id": "06-limits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "limits-1",
+              "text": "Saving a draft needs permission to edit content. Publishing, publishing a draft and unpublishing need permission to publish content, and discarding a draft needs permission to delete content. A user who can only edit prepares changes that someone else releases."
+            },
+            {
+              "id": "limits-2",
+              "text": "Older versions stay in the database, and Content Version Pruning can remove them. When the Audit Trail module is enabled and set to record a content type, it records that type's changes and can restore a recorded version as a draft. Separate videos cover both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Drafts and Versions",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Save Draft keeps the live page as it is, and Publish Draft, Discard Draft and Unpublish decide what happens next. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
