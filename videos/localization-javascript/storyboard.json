@@ -1,0 +1,196 @@
+{
+  "title": "JavaScript Localization in Orchard Core",
+  "output": "localization-javascript",
+  "spoken": {
+    "GetJSLocalizations": "Get JavaScript Localizations",
+    "GetLocalizations": "Get Localizations",
+    "IJSLocalizer": "I JavaScript Localizer",
+    "UpdateLocalizationCatalog": "Update Localization Catalog",
+    "OrchardCore.Localization.Build": "Orchard Core dot Localization dot Build",
+    "setTranslations": "set Translations",
+    "getTranslations": "get Translations",
+    "AddPolicy": "Add Policy",
+    "AddScoped": "Add Scoped",
+    "C#": "C sharp",
+    "PO file": "P.O. file",
+    "PO entries": "P.O. entries"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "JavaScript Localization in Orchard Core",
+      "subtitle": "Translate the strings of your scripts with PO files",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Scripts that draw part of a page need labels in the language of the visitor. Orchard Core gives them strings from the same PO files as your C# code. In this video, we'll write a localizer, pass its strings to a script, and translate them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why scripts need a localizer",
+      "subtitle": "A script can't call the string localizer",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Your C# code translates text with a string localizer that reads PO files. A script runs in the browser, where it can't call that localizer, but the editor it draws still needs translated labels."
+            },
+            {
+              "id": "why-2",
+              "text": "IJSLocalizer connects the two. A localizer returns a dictionary for a group name, the view writes the dictionary into the page, and the script reads it from there."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Write a localizer",
+      "subtitle": "A class and a registration",
+      "clips": [
+        {
+          "id": "02-localizer",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "localizer-1",
+              "text": "A localizer is a class that implements IJSLocalizer. It injects the string localizer of its own type, and GetLocalizations receives the name of a group."
+            },
+            {
+              "id": "localizer-2",
+              "text": "When the group is yours, return a dictionary: each key, such as AddPolicy, is the name the script reads, and each value is a localized string, whose English text translators see. For any other group, return null."
+            },
+            {
+              "id": "localizer-3",
+              "text": "Register the class in the Startup of your module with AddScoped. Any number of modules can register a localizer, and each one answers only the groups it owns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Pass the strings to the script",
+      "subtitle": "From the view to the page, and into the script",
+      "clips": [
+        {
+          "id": "03-pass",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "In a Razor view, call GetJSLocalizations on the Orchard helper with a group name. It asks every registered localizer, and returns the merged dictionary, translated for the culture of the request."
+            },
+            {
+              "id": "view-2",
+              "text": "Serialize the dictionary to JSON, and put it in a data attribute of the element your script works on. The strings arrive with the page."
+            },
+            {
+              "id": "script-1",
+              "text": "In the script, find that element, parse the attribute once, and pass the dictionary to setTranslations."
+            },
+            {
+              "id": "script-2",
+              "text": "Orchard Core's helper merges it into one shared object, which getTranslations returns anywhere in your app. A component reads a string by its key, such as AddPolicy, and shows the translated text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Translate with PO files",
+      "subtitle": "The same files as your C# code",
+      "clips": [
+        {
+          "id": "04-po",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "po-1",
+              "text": "Translations are ordinary PO entries. The context is the full name of the localizer class, and the message ID is the English text from the string localizer call."
+            },
+            {
+              "id": "po-2",
+              "text": "Put the file where Orchard Core looks for PO files: in a Localization folder of your module, of the site, or of a tenant. Restart the application after you edit one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "See it in the admin",
+      "subtitle": "The CORS settings page in French",
+      "clips": [
+        {
+          "id": "05-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "admin-1",
+              "text": "The CORS settings page is drawn by a script. Its search box, its Add a policy button and its Default Policy badge are strings from the cors-admin group."
+            },
+            {
+              "id": "admin-2",
+              "text": "Request the page in French, and the same strings come from a PO file instead. Nothing in the script changes."
+            },
+            {
+              "id": "admin-3",
+              "text": "Open a policy, and its titles, hints and buttons are translated too. Each one is a key of the dictionary that the view passed to the script."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Groups and templates",
+      "subtitle": "Several groups, and a template for translators",
+      "clips": [
+        {
+          "id": "06-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "groups-1",
+              "text": "A view can request several groups in one call. Each group is resolved in turn, a localizer that returns null is skipped, and when two entries share a key, the last one wins."
+            },
+            {
+              "id": "template-1",
+              "text": "Translators work from a template. Add the OrchardCore.Localization.Build package to your project, and run its UpdateLocalizationCatalog target. It reads the string localizer calls in C#, not your script files."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "JavaScript Localization in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's JavaScript localization: a localizer per module, a dictionary per group, and the same PO files for your scripts as for your C# code. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
