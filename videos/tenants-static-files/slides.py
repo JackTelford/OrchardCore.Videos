@@ -59,7 +59,8 @@ public sealed class FileProviderStartup : StartupBase
     {
         services.AddSingleton<ITenantFileProvider>(serviceProvider =>
         {
-            // ...
+            var shellOptions = serviceProvider.GetRequiredService<IOptions<ShellOptions>>();
+            var shellSettings = serviceProvider.GetRequiredService<ShellSettings>();
             var contentRoot = GetContentRoot(shellOptions.Value, shellSettings);
             if (!Directory.Exists(contentRoot))
             {
@@ -74,6 +75,7 @@ public sealed class FileProviderStartup : StartupBase
         });
     }
 }
+
 """
 
 PIPELINE = """
@@ -158,7 +160,7 @@ def slide(step_id, chapter_title, label):
 
     if step_id == "code-1":
         image = slide_base(chapter_title, label, "Registering the provider")
-        draw_code(image, (96, 240, W - 96, 1030), "Startup.cs", "csharp", SERVICES, types=TYPES, size=24)
+        draw_code(image, (96, 240, W - 96, 1030), "Startup.cs", "csharp", SERVICES, types=TYPES, size=22)
         return image
 
     if step_id == "code-2":
