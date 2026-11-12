@@ -1,0 +1,60 @@
+{
+  "title": "Build a Multilingual Site: Cultures, Translations and a Picker | Orchard Core",
+  "description": "Visitors expect a site in their own language, and a site that shows one language to everyone leaves part of its audience out.\n\nOrchard Core handles this with three features: Localization defines the cultures of the site, Content Localization gives a content item one translation for each culture, and Content Culture Picker adds a language menu to the navigation bar.\n\nIn this video:\n• How a multilingual site works\n• Enable the features\n• Add the cultures\n• Make a type translatable\n• Translate a page\n• Add the culture picker\n• Switch languages on the site\n• How the picker chooses a page",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Localization"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "multilingual site",
+    "localization",
+    "content localization",
+    "culture picker",
+    "translation",
+    "internationalization"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Build a Site"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Localization",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/"
+    },
+    {
+      "label": "Documentation: Content Localization",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentLocalization/"
+    },
+    {
+      "label": "Documentation: JavaScript Localization",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Localize/javascript-localization.md",
+    "src/docs/reference/modules/Localize/README.md",
+    "src/docs/reference/modules/ContentLocalization/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Localization"
+  }
+}
