@@ -1,0 +1,48 @@
+{
+  "title": "Write a Recipe Step | Orchard Core",
+  "description": "Orchard Core ships recipe steps for features, themes, roles, content and more. A module that keeps its own configuration or data can add a step of its own, and a recipe can then use it.\n\nA recipe step is a handler that owns a step name. It derives from NamedRecipeStepHandler, reads its data from the step, reports problems in the Errors list, and is registered with AddRecipeExecutionStep in the Startup class of the module. The code in this video comes from the Orchard Core source and its documentation.\n\nIn this video:\n• What a recipe step is, and how Orchard Core runs it\n• The step handler: IRecipeStepHandler and NamedRecipeStepHandler\n• Reading the step with ToObject, or as a JSON node\n• Registering the handler in Startup\n• Using the step in a recipe, and the Recipes page\n• Reporting problems with the Errors list\n• Handling more than one step name\n• The parts of a recipe step",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CSharp"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Recipes",
+    "Recipe steps",
+    "C#",
+    "Modules"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Recipes/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Recipes/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Recipes"
+  }
+}
