@@ -1,0 +1,291 @@
+{
+  "title": "Two-Factor Authentication",
+  "output": "users-two-factor-authentication",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Two-Factor Authentication",
+      "subtitle": "Sign-in codes from an authenticator app, email or SMS",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A password alone can be guessed or stolen. Two-factor authentication adds a one-time code to the sign-in. In this video, we enable the authenticator app, email and SMS methods, set up each one, and see how users sign in with them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How two-factor sign-in works",
+      "subtitle": "A password and a one-time code",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "With two-factor authentication, signing in takes two steps. The user enters a username and password, then a one-time code from a second source that only the user has."
+            },
+            {
+              "id": "how-2",
+              "text": "Orchard Core offers three methods. An authenticator app generates codes on the user's own device. The Email method sends a code to a verified email address, and the SMS method sends a text message to a verified phone number."
+            },
+            {
+              "id": "how-3",
+              "text": "An administrator turns the methods on and sets the rules for the site. Each user then sets up their own methods, and can turn two-factor authentication off, unless the site requires it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the methods",
+      "subtitle": "One feature for each method",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for two-factor. There is one feature for each method: Two-Factor Authenticator App Method, Two-Factor Email Method, and Two-Factor SMS Method."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's select the three methods and choose Bulk Actions, Enable. Orchard Core also enables the features they depend on, such as Two-Factor Authentication Services, which provides the core services of every method."
+            },
+            {
+              "id": "enable-3",
+              "text": "The Email and SMS methods send their codes through the site's email and SMS providers. Both providers are already configured on this site, and separate videos cover them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Site settings",
+      "subtitle": "Rules for every user",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Let's open Settings, Security, User Login, and select the Two-Factor Authentication tab. The first group, Two-Factor Settings, holds the rules of the site."
+            },
+            {
+              "id": "settings-2",
+              "text": "Allow users to remember client adds a Remember this device option to the code prompt. Number of recovery codes to generate sets how many recovery codes each user receives."
+            },
+            {
+              "id": "settings-3",
+              "text": "To require two-factor authentication for some users only, select Require two-factor authentication specific roles and pick the roles. A user in any selected role must use it."
+            },
+            {
+              "id": "settings-4",
+              "text": "Require two-factor authentication makes it mandatory for every user, whatever their roles. A user who has not enabled it must do so right after signing in."
+            },
+            {
+              "id": "settings-5",
+              "text": "Let's clear the roles option, because Require two-factor authentication already covers every user, and save the settings."
+            }
+          ]
+        },
+        {
+          "id": "03-tab",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tab-1",
+              "text": "The same tab also holds the Email Subject and Email Body of the email code, the Message Body of the SMS code, and Show email address in the app for the authenticator app."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Set up an authenticator app",
+      "subtitle": "Scan, verify and keep the recovery codes",
+      "clips": [
+        {
+          "id": "04-app",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "app-1",
+              "text": "Users manage their own two-factor authentication from the user menu. Let's choose Security, which opens the Two-Factor Authentication page, with a row for each method."
+            },
+            {
+              "id": "app-2",
+              "text": "Next to Authenticator app, let's choose Add. The page shows a QR code and a key. Scan the code with an authenticator app, such as Microsoft Authenticator or Google Authenticator, or type the key into the app."
+            },
+            {
+              "id": "app-3",
+              "text": "The app then shows a one-time code. Let's enter it in Verification code, and choose Verify."
+            },
+            {
+              "id": "app-4",
+              "text": "Verifying the app enables two-factor authentication and generates the recovery codes. The Recovery Codes page lists them and does not show them again later, so store them in a safe place."
+            },
+            {
+              "id": "app-5",
+              "text": "Under Recovery options, Reset codes opens a page with a Generate Recovery Codes button, which creates another set. The Two-Factor Authentication page warns when only a few codes are left."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Sign in with a code",
+      "subtitle": "The second step of the sign-in",
+      "clips": [
+        {
+          "id": "05-signin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signin-1",
+              "text": "Let's sign in again. After the username and password, the page asks for a verification code from the authenticator app."
+            },
+            {
+              "id": "signin-2",
+              "text": "Remember this device lets this browser skip the code at later sign-ins. Sign in another way switches to the next method, and the recovery code link is for a lost device."
+            },
+            {
+              "id": "signin-3",
+              "text": "Let's enter the code from the app and choose Log in. The sign-in completes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Email and SMS codes",
+      "subtitle": "Two more methods",
+      "clips": [
+        {
+          "id": "06-methods",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "methods-1",
+              "text": "Email authentication needs no setup when the user's email address is verified: the row shows Verified. If it is not, the row offers Verify Email, which sends a verification email."
+            },
+            {
+              "id": "methods-2",
+              "text": "With more than one method, Preferred Two-Factor Method sets the method that the sign-in offers first. Let's choose the authenticator app, and Update."
+            }
+          ]
+        },
+        {
+          "id": "06-email",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "email-1",
+              "text": "At the code prompt, Sign in another way switches to the Email method."
+            },
+            {
+              "id": "email-2",
+              "text": "The click here link sends a one-time code to the verified email address, and a message confirms that it was sent."
+            },
+            {
+              "id": "email-3",
+              "text": "Let's type the code from the email and choose Log in."
+            }
+          ]
+        },
+        {
+          "id": "06-sms",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "sms-1",
+              "text": "SMS authentication starts with a phone number. Let's choose Verify Phone Number, enter the number with its country code, and choose Request Code."
+            },
+            {
+              "id": "sms-2",
+              "text": "The site sends a text message to that number. Let's enter the code from the message and choose Verify. SMS authentication then shows Verified."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "A required second factor",
+      "subtitle": "What a user sees when the site requires it",
+      "clips": [
+        {
+          "id": "07-required",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "required-1",
+              "text": "Let's sign in as Jamie, a user who has not enabled two-factor authentication. Because the site requires it, Jamie is sent to the Two-Factor Authentication page right after signing in, with a message to enable it before proceeding."
+            },
+            {
+              "id": "required-2",
+              "text": "Jamie's email address is verified, so Enable is available. Choosing it turns on two-factor authentication and opens the Recovery Codes page."
+            },
+            {
+              "id": "required-3",
+              "text": "Because the site requires it, the page shows Enabled in place of a button to disable it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Disable it for a user",
+      "subtitle": "When a user loses access",
+      "clips": [
+        {
+          "id": "08-disable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "disable-1",
+              "text": "Let's open Access Control, Users. A user who loses access to every method and to the recovery codes cannot sign in, but an administrator can turn two-factor authentication off for that account."
+            },
+            {
+              "id": "disable-2",
+              "text": "The permission Disable two-factor authentication for any user allows it. In the Actions menu of Jamie's row, choose Disable two-factor authentication, and confirm. The account signs in without a code, and since the site requires it, Jamie must enable it again after signing in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Two-Factor Authentication",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's two-factor authentication: a one-time code from an authenticator app, email or SMS, set up by each user and required by the site when you choose. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
