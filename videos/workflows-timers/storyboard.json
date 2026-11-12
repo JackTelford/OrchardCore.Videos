@@ -1,0 +1,189 @@
+{
+  "title": "Timer Workflows",
+  "output": "workflows-timers",
+  "spoken": {
+    "CRON": "cron",
+    "UTC": "U.T.C."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Timer Workflows",
+      "subtitle": "Run tasks on a schedule",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some jobs belong on a schedule: a reminder every Monday, a cleanup every night, a report every morning. The Timer Event runs a workflow at the times you choose. In this video, you enable the timer, build a scheduled workflow, and watch it run."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a timer works",
+      "subtitle": "The clock as an event",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A workflow usually starts when something happens, such as a content item being published. The Timer Event makes the clock the event: the workflow runs each time its schedule comes due."
+            },
+            {
+              "id": "how-2",
+              "text": "Placed in the middle of a workflow, the Timer Event instead makes the workflow wait until the next time its schedule matches, and then continues with the activities that follow."
+            },
+            {
+              "id": "how-3",
+              "text": "The schedule is a CRON expression, written as five fields separated by spaces: the minute, the hour, the day of the month, the month, and the day of the week. A star matches every value of its field."
+            },
+            {
+              "id": "how-4",
+              "text": "Here are four examples: every five minutes, which is the default; every hour, on the hour; every day at 8:00; and on the first day of each month at 9:00."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the timer",
+      "subtitle": "A feature of its own",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "The Timer Event comes from a feature of its own. Open Tools, Features, and search for Timer."
+            },
+            {
+              "id": "enable-2",
+              "text": "Timer Workflows Activities, in the Workflows category, needs the Workflows feature, which this site already has enabled. Click Enable, and the Timer Event is available in the workflow designer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Build a scheduled workflow",
+      "subtitle": "Timer Event, CRON Expression and a task",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "In the Design menu, open Workflows. The list is empty, so let's click Create Workflow."
+            },
+            {
+              "id": "create-2",
+              "text": "A workflow only needs a name. Let's call this one Scheduled check, and click Create and open the designer."
+            },
+            {
+              "id": "create-3",
+              "text": "An empty workflow offers common events to start it with. A workflow that runs on a schedule starts with the Timer Event, so let's click it."
+            },
+            {
+              "id": "create-4",
+              "text": "The Timer Event is marked Start, and its settings open in a panel on the canvas. The CRON Expression field holds the default, every five minutes. For this demonstration, type five stars separated by spaces: every minute."
+            },
+            {
+              "id": "create-5",
+              "text": "The expression is read in UTC by default. Check Use site time zone to read it in the time zone of your site instead."
+            },
+            {
+              "id": "create-6",
+              "text": "Click the Done outcome of the Timer Event, and choose Log Task. The Log Task writes a line to the log of the site, which keeps this example small."
+            },
+            {
+              "id": "create-7",
+              "text": "In Text, enter the scheduled check ran. The designer saves your changes as you make them, in a draft."
+            },
+            {
+              "id": "create-8",
+              "text": "A draft doesn't run. Click Publish, and the workflow runs on its schedule. Each run is recorded as an instance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Watch it run",
+      "subtitle": "The instances of a timer workflow",
+      "clips": [
+        {
+          "id": "04-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "The site checks its timers once a minute, so an instance appears within about a minute of publishing. Click Instances next to Scheduled check: one instance is Halted, because it waits for the schedule to come due."
+            },
+            {
+              "id": "run-2",
+              "text": "Each time the schedule comes due, the waiting instance continues through the Log Task and is Finished, and the next instance starts waiting. The Finished count goes up by one for every run."
+            },
+            {
+              "id": "run-3",
+              "text": "Open a finished instance. Its page highlights the Timer Event and the Log Task, the activities that this run executed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Good to know",
+      "subtitle": "Precision, restarts and housekeeping",
+      "clips": [
+        {
+          "id": "05-know",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "know-1",
+              "text": "A background task named Timed Workflow Starter does the checking, so a timer can run up to about a minute after its time. A schedule finer than a minute is not possible."
+            },
+            {
+              "id": "know-2",
+              "text": "Timers work only while the site runs. By default, after a restart they resume once the site has served its first request."
+            },
+            {
+              "id": "know-3",
+              "text": "A timer that fires often leaves one instance for each run. To keep the list short, check Delete successfully completed workflows on the Workflow tab, and publish."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Timer Workflows",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Timer Event turns a CRON expression into a schedule for a workflow, or into a wait in the middle of one. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
