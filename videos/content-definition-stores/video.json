@@ -1,0 +1,54 @@
+{
+  "title": "Content Definition Stores: Keep Types in the Database or a File | Orchard Core",
+  "description": "Orchard Core records the content types and parts of each tenant in a content definition. The database stores it by default, and a site that keeps it in a file needs to know how the store is chosen and how to move the definitions back.\n\nThe File Content Definition feature replaces the database store with one that writes ContentDefinition.json for each tenant. A deployment plan with the Update Content Definitions step exports the definitions, and Package Import brings them into the database.\n\nIn this video:\n• Where definitions are kept: the content definition record and IContentDefinitionStore\n• The File Content Definition feature: registration, the file of each tenant, and the empty start\n• Moving the definitions to the database with a deployment plan\n• Keeping the feature out of other tenants with a feature profile",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "ContentTypes"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Content Definition",
+    "Content Types",
+    "File Content Definition",
+    "IContentDefinitionStore",
+    "Deployment Plan",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Types"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Understanding Content Definition Stores",
+      "url": "https://docs.orchardcore.net/en/latest/guides/content-definitions/"
+    },
+    {
+      "label": "Documentation: Tenants and feature profiles",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md",
+    "src/docs/guides/content-definitions/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Contents.FileContentDefinition"
+  }
+}
