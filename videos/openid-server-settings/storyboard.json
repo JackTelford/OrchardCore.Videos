@@ -1,0 +1,248 @@
+{
+  "title": "OpenID Connect Server: Flows, Endpoints and Keys",
+  "output": "openid-server-settings",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "OpenID Connect Server: Flows, Endpoints and Keys",
+      "subtitle": "Choose what your identity provider offers",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core can act as an identity provider for your applications. One settings page decides which endpoints it offers, which flows applications can use, and which keys and token options it uses. In this video, we'll enable the server and go through that page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the server is organized",
+      "subtitle": "Endpoints, flows, and keys",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "With the OpenID Connect Authorization Server feature, client applications can ask your site to sign users in and issue tokens. A client can be a website or a service that calls your APIs."
+            },
+            {
+              "id": "idea-2",
+              "text": "Endpoints are the addresses that applications call. Flows are the ways an application can get a token, and each flow needs certain endpoints. Keys are the signing and encryption certificates the server uses."
+            },
+            {
+              "id": "idea-3",
+              "text": "Applications and scopes have their own pages. An application can use only the flows that you allow on the server settings page, so these settings limit every application."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the server",
+      "subtitle": "One feature, in Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features, and search for OpenID. The OpenID Connect features are listed together, under the OpenID Connect category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable in the row of OpenID Connect Authorization Server. Orchard Core also enables the features it depends on, such as OpenID Connect Management UI."
+            },
+            {
+              "id": "enable-3",
+              "text": "The Settings menu has an OpenID Connect section with Authorization Server. Applications and Scopes appear under Access Control, OpenID Connect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Endpoints",
+      "subtitle": "The addresses applications call",
+      "clips": [
+        {
+          "id": "03-endpoints",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "endpoints-1",
+              "text": "Open Settings, OpenID Connect, Authorization Server. A warning at the top says the website might restart when you save, which can make it briefly unresponsive."
+            },
+            {
+              "id": "endpoints-2",
+              "text": "Until you save, the page shows the defaults. Every endpoint is enabled, and only the authorization code and refresh token flows are allowed."
+            },
+            {
+              "id": "endpoints-3",
+              "text": "Under Endpoints, each Enable checkbox turns on one endpoint, and its address appears beside it. Enable Token Endpoint is where applications exchange a code, credentials, or a refresh token for tokens."
+            },
+            {
+              "id": "endpoints-4",
+              "text": "Enable Authorization Endpoint is where users are sent to sign in and, depending on the application, to give their consent. Enable Pushed Authorization Endpoint can be enabled only together with it."
+            },
+            {
+              "id": "endpoints-5",
+              "text": "Enable End Session Endpoint lets applications sign users out. Require logout confirmation asks users to confirm. When it is cleared, an application that sends a valid hint for the signed-in user can skip the prompt."
+            },
+            {
+              "id": "endpoints-6",
+              "text": "Enable User Info Endpoint answers only for access tokens that represent users. Enable Introspection Endpoint and Enable Revocation Endpoint add the endpoints for checking and revoking tokens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Flows",
+      "subtitle": "How an application gets a token",
+      "clips": [
+        {
+          "id": "04-flows",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "flows-1",
+              "text": "Under Flows, you choose how applications can get tokens. A flow is shown only while the endpoints and flows it needs are enabled."
+            },
+            {
+              "id": "flows-2",
+              "text": "Let's see that. When we clear Enable Token Endpoint, every flow that needs it disappears and is cleared, while Allow Implicit Flow stays, because it only needs the authorization endpoint."
+            },
+            {
+              "id": "flows-3",
+              "text": "Reloading the page discards that change. Allow Authorization Code Flow is for users who sign in through a browser: they sign in on your site, and the application exchanges a code for tokens."
+            },
+            {
+              "id": "flows-4",
+              "text": "Allow Implicit Flow returns tokens straight from the authorization endpoint. Allow Hybrid Flow returns an authorization code together with tokens."
+            },
+            {
+              "id": "flows-5",
+              "text": "Allow Password Flow lets an application send a user's name and password to the token endpoint. Allow Refresh Token Flow lets an application exchange a refresh token for fresh tokens, and needs the password, authorization code, or hybrid flow."
+            },
+            {
+              "id": "flows-6",
+              "text": "Allow Client Credentials Flow is for applications that act as themselves, with no user. The application authenticates with its own client identifier and secret, and receives the roles assigned to it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Requirements for every application",
+      "subtitle": "Proof key and pushed authorization",
+      "clips": [
+        {
+          "id": "05-global",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "global-1",
+              "text": "Require Proof Key for Code Exchange is a global setting. It applies to every registered application, whether or not the application enables it, so check that your client libraries support it first."
+            },
+            {
+              "id": "global-2",
+              "text": "Require Pushed Authorization Requests works the same way, and needs the pushed authorization endpoint. Let's select it, clear Enable Pushed Authorization Endpoint, and select Save."
+            },
+            {
+              "id": "global-3",
+              "text": "The page returns with an error, and nothing is saved: the pushed authorization endpoint must be enabled when enforcing pushed authorization requests. The settings are checked this way every time you save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Keys and token options",
+      "subtitle": "Advanced Options",
+      "clips": [
+        {
+          "id": "06-advanced",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "advanced-1",
+              "text": "Advanced Options are optional. Authority is the base address of this site as the identity server. When it is empty, Orchard Core builds it from the site's host."
+            },
+            {
+              "id": "advanced-2",
+              "text": "The server uses a signing certificate and an encryption certificate. If you select none, Orchard Core creates self-signed certificates for the site. When the site starts, it creates new ones if the existing ones expire within a week."
+            },
+            {
+              "id": "advanced-3",
+              "text": "To use your own, choose a store location for the encryption or the signing certificate. Then choose a store name, and then the certificate. Only certificates with a private key are listed."
+            },
+            {
+              "id": "advanced-4",
+              "text": "Disable Rolling Refresh Tokens lets a refresh token be reused until it expires, instead of being marked as redeemed after it is used."
+            },
+            {
+              "id": "advanced-5",
+              "text": "Token Format sets the format of access tokens. ASP.NET Core Data Protection is the default. JSON Web Token produces standard access tokens that are signed and, unless you turn it off, encrypted."
+            },
+            {
+              "id": "advanced-6",
+              "text": "With JSON Web Token selected, Disable Access Token Encryption becomes available. Selecting it leaves the access tokens unencrypted, which lets third-party resource servers use them. Use Reference Access Tokens keeps tokens in the database and returns fixed-size tokens to clients."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Save the settings",
+      "subtitle": "Apply them to every application",
+      "clips": [
+        {
+          "id": "07-save",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "save-1",
+              "text": "Let's save a working configuration. We select Allow Client Credentials Flow and Require Proof Key for Code Exchange, and then select Save."
+            },
+            {
+              "id": "save-2",
+              "text": "A message confirms the update, and the site reloads its configuration. Applications are registered on their own page, which offers only the flows you allowed here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "OpenID Connect Server: Flows, Endpoints and Keys",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the OpenID Connect Authorization Server: endpoints, flows, and keys, set from a single page. Keeping the keys as secrets is covered in a separate video. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
