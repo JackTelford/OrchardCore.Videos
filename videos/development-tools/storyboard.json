@@ -53,7 +53,7 @@
             },
             {
               "id": "tools-4",
-              "text": "smtp4dev is a small SMTP server that runs locally to test email. Install it with dotnet, then enter a sender email address, host name and port number in the SMTP settings of Orchard Core. Its web interface lets you browse the emails it processed."
+              "text": "smtp4dev is an SMTP server that runs locally to test email. Install it with dotnet, enable the SMTP Email Provider feature, and enter a sender email address, host name and port number under Settings, Communication, Email. Its web interface lists the emails it processed."
             }
           ]
         }
@@ -86,7 +86,7 @@
             },
             {
               "id": "config-1",
-              "text": "A NuGet.config file adds the same source. This one lists two sources: nuget.org under the key NuGet, and the preview feed under the key OrchardCorePreview."
+              "text": "A NuGet.config file adds the same source. This one clears the inherited sources, then lists two: nuget.org under the key NuGet, and the preview feed under the key OrchardCorePreview."
             },
             {
               "id": "cli-1",
@@ -123,7 +123,7 @@
             },
             {
               "id": "local-4",
-              "text": "Then update your NuGet.config file so its package sources point to the feed. This one lists the local feed, named MyFeed, and nuget.org."
+              "text": "Then update your NuGet.config file so its package sources point to the feed. This one clears the inherited sources, then lists the local feed, named MyFeed, and nuget.org."
             },
             {
               "id": "local-5",

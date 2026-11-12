@@ -1,6 +1,6 @@
 # Development Tools: Preview Packages and Local NuGet Feeds
 
-**YouTube:** not published yet · **Length:** 4:26 · **Feature:** `guide:getting-started/development-tools` ([documentation](https://docs.orchardcore.net/en/latest/getting-started/development-tools/))
+**YouTube:** not published yet · **Length:** 4:29 · **Feature:** `guide:getting-started/development-tools` ([documentation](https://docs.orchardcore.net/en/latest/getting-started/development-tools/))
 
 A video for developers who build sites, modules and themes with Orchard Core. It covers the editors and utilities the
 documentation suggests, the three ways to add the preview package feed (Visual Studio, a NuGet.config file and the .NET
