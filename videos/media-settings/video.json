@@ -1,0 +1,58 @@
+{
+  "title": "Media Settings: Options, Allowed Files and the Media API | Orchard Core",
+  "description": "The Media module has settings for the file types it accepts, the largest upload, caching and storage, and for how the Media Library signs in to its web service. Some are read-only values set in the configuration of the site, and one is a setting you change in the admin.\n\nThis video reads the Media options page, shows how allowed and restricted file extensions decide what can be uploaded, and walks through the Media API authentication setting and the recipe that prepares Bearer authentication.\n\nIn this video:\n• The Options and API pages under Settings, Media\n• Allowed and restricted file extensions, and the permission restricted types need\n• Limits, caching and storage on the Options page\n• The Media API: Cookie or Bearer authentication",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Media",
+    "Media Library",
+    "Media settings",
+    "File upload",
+    "Media API"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Media",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/"
+    },
+    {
+      "label": "Documentation: Media Gallery",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Documentation: Media Slugify",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media/MediaGallery.md",
+    "src/docs/reference/modules/Media/README.md",
+    "src/docs/reference/modules/Media.Slugify/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media"
+  }
+}

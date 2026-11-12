@@ -1488,9 +1488,9 @@
       "src/docs/reference/modules/Media/README.md",
       "src/docs/reference/modules/Media.Slugify/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.7,
+    "words": 700,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

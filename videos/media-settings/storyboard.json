@@ -1,0 +1,195 @@
+{
+  "title": "Orchard Core Media settings",
+  "output": "media-settings",
+  "spoken": {
+    "Cdn": "C.D.N."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Media settings",
+      "subtitle": "Options, allowed files and the Media API",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Media module keeps the files of your site. Its settings control which file types are accepted, how large an upload can be, and how the Media Library signs in to the Media API. Let's see where they are."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Pages under Settings, Media",
+      "subtitle": "What you read and what you change",
+      "clips": [
+        {
+          "id": "01-pages",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pages-1",
+              "text": "The Media module lets a site tune many behaviors: the accepted file types, the largest upload, how long browsers keep files, and where files are stored. These values are set in the configuration of the site, outside the admin."
+            },
+            {
+              "id": "pages-2",
+              "text": "The Options and API pages under Settings, Media show them. Options is read-only, and API holds the one setting you can change here: how the Media Library signs in to the Media API. Each page has its own permission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Allowed file types",
+      "subtitle": "Allowed and restricted extensions",
+      "clips": [
+        {
+          "id": "02-rules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "Every upload is checked against two lists: a type in the allowed list is accepted from anyone who may upload media, and a type in the restricted list also needs an extra permission. A type in neither list is refused."
+            }
+          ]
+        },
+        {
+          "id": "02-lists",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "lists-1",
+              "text": "Let's open Settings, Media, Options. A note at the top says where these values are configured, and links to the documentation. Nothing on this page can be edited."
+            },
+            {
+              "id": "lists-2",
+              "text": "Supported sizes are the widths and heights you can pick from the Width and Height lists when you create a media profile."
+            },
+            {
+              "id": "lists-3",
+              "text": "Restricted file extensions names the risky types: style sheets, scripts and SVG images. The hint names the permission you need, Upload media file extensions requiring additional permission, on top of the usual media permissions."
+            },
+            {
+              "id": "lists-4",
+              "text": "Allowed file extensions lists the other types a media uploader may add: here, images, documents, audio and video. The two lists cannot overlap, and a list you configure replaces the default list."
+            }
+          ]
+        },
+        {
+          "id": "02-role",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "role-1",
+              "text": "You grant that permission to a role, under Access Control, Roles. Searching a role's permissions for it shows a Security Critical badge, so grant it with care."
+            }
+          ]
+        },
+        {
+          "id": "02-upload",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "upload-1",
+              "text": "Let's try the rules in Media, Library. We choose Upload files and pick a text file. Its extension is in neither list, so the Media Library refuses it with a Validation error notification."
+            },
+            {
+              "id": "upload-2",
+              "text": "An SVG image is a restricted type. This user holds the permission, so the upload goes through, and the file appears in the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Limits, caching and storage",
+      "subtitle": "The rest of the Options page",
+      "clips": [
+        {
+          "id": "03-values",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "values-1",
+              "text": "Max browser cache days is how many days a browser may keep a media file. Max secure files browser cache days does the same for secure files, and zero means no caching. Max cache days is how long a resized image stays valid."
+            },
+            {
+              "id": "values-2",
+              "text": "Max file size is the largest upload, in bytes, and a larger file is refused before the upload starts. Max upload chunk size and Temporary file lifetime control chunked uploads and their temporary files."
+            },
+            {
+              "id": "values-3",
+              "text": "Cdn base url, when set, is placed in front of the path when images are served. Assets request path and Assets path say where media is served from and where its files are stored."
+            },
+            {
+              "id": "values-4",
+              "text": "Thumbnails disabled says whether the grid view is turned off. Storage provider names where files are kept. The last four rows show a check or a cross for what the storage supports and which features are on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The Media API",
+      "subtitle": "Cookie or Bearer authentication",
+      "clips": [
+        {
+          "id": "04-api",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "api-1",
+              "text": "Next, Settings, Media, API. The page has one option, Media API authentication. The hint says it controls how the Media Gallery, which is the Media Library screen, uploads and real-time updates sign in to the Media API."
+            },
+            {
+              "id": "api-2",
+              "text": "Cookie is the default. It uses your admin session, so the Media Library works with no extra setup. Exactly one scheme is active at a time, never both."
+            },
+            {
+              "id": "api-3",
+              "text": "Bearer uses OAuth2 bearer tokens. It needs the OpenID Connect Token Validation feature and a registered client. Without that setup, the Media Library cannot sign in, and it tells you to check OpenID Connect or switch back to Cookie."
+            },
+            {
+              "id": "api-4",
+              "text": "We set it back to Cookie and select Save, and a notification says Site settings updated successfully. Saving a different scheme makes the site reload."
+            }
+          ]
+        },
+        {
+          "id": "04-recipes",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "recipes-1",
+              "text": "To prepare Bearer, open Tools, Recipes and search for Media API. The Bearer recipe switches the scheme, enables the OpenID Connect features it needs, and registers a client. Its description says to replace the local address with your own before you run it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Media settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Options page shows how your site handles files, and the API page chooses how the Media Library signs in. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
