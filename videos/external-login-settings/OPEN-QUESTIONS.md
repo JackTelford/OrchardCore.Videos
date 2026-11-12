@@ -108,3 +108,11 @@ the Email field is shown on the form whenever the address is empty (`RegisterExt
 (`reg-5`) states only the case where the provider shares an email address.
 **Confirm (not narrated):** what the visitor sees when the provider shares no email address and all three options are
 selected (the registration probably fails validation and the form is shown with an error).
+
+## 10. Reviewer note: the sentence about a missing email address was removed
+
+The earlier text of `reg-5` said the email option "has no effect" when the provider shares no email address. The source
+does not settle it: with all three options selected the controller still attempts the direct registration with an empty
+address (`ExternalAuthenticationsController.cs:201-224`) and shows an error and the form when it fails, and the
+Email field is shown whenever the address is empty (`RegisterExternalLogin.cshtml:25`). The narration now states only the
+case with a shared address. A person may confirm the other case on a running site (see question 9).

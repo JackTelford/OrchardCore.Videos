@@ -128,7 +128,7 @@
             },
             {
               "id": "reg-5",
-              "text": "When all three are selected and the provider shares an email address, the site creates the account directly and skips the form. Without a shared address, the email option has no effect."
+              "text": "When all three are selected and the provider shares an email address, the site creates the account directly and skips the form."
             },
             {
               "id": "reg-6",
