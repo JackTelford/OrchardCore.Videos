@@ -1,6 +1,6 @@
 # Logging: Configure NLog and Serilog
 
-**YouTube:** not published yet · **Length:** 5:02 · **Feature:** `OrchardCore.Logging.NLog` ([documentation](https://docs.orchardcore.net/en/latest/getting-started/templates/)) and `OrchardCore.Logging.Serilog` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Logging.Serilog/))
+**YouTube:** not published yet · **Length:** 5:03 · **Feature:** `OrchardCore.Logging.NLog` ([documentation](https://docs.orchardcore.net/en/latest/getting-started/templates/)) and `OrchardCore.Logging.Serilog` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Logging.Serilog/))
 
 A video for developers about the two logging libraries of Orchard Core. It explains why the tenant name belongs in a log,
 how the Orchard Core CMS project template chooses a logger (`nlog`, `serilog` or `none`), and how each library is

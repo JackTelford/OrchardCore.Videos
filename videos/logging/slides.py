@@ -358,7 +358,7 @@ def slide(step_id, chapter_title, label):
     if step_id == "serilog-2":
         image = slide_base(chapter_title, label, "UseSerilogTenantNameLogging")
         draw_code(image, (96, 240, 1180, 700), "Program.cs", "csharp", SERILOG_PIPELINE, types=TYPES, size=26)
-        note_cards(image, [("Placed after", "the middleware that resolves the tenant"), ("It adds", "the tenant name middleware")],
+        note_cards(image, [("Placed after", "the tenant is resolved"), ("It adds", "the tenant name middleware")],
                    (1230, 240, W - 96, 700))
         return image
 

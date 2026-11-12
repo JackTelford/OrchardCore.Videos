@@ -153,7 +153,7 @@
             },
             {
               "id": "serilog-4",
-              "text": "The library also has UseSerilogWeb. It makes the same UseSerilog call, so one line can replace the first call. The tenant middleware is still added in UseOrchardCore."
+              "text": "The library also has UseSerilogWeb. It makes the same UseSerilog call, so one line can replace the first call. The call that adds the tenant middleware stays in UseOrchardCore."
             },
             {
               "id": "serilog-5",
