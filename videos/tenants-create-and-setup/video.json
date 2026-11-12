@@ -1,0 +1,49 @@
+{
+  "title": "Tenants: Create a Tenant and Set It Up | Orchard Core",
+  "description": "Adding a site to an Orchard Core application takes two stages: you create a tenant, and then you set it up. The Setup screen asks different questions depending on the presets the tenant was given.\n\nThis video follows both stages from the administration of the Default tenant: the Create Tenant form and its presets, the Uninitialized state, the Setup screen of the tenant, the site it produces, and the Create & Setup shortcut.\n\nIn this video:\n• The two stages: create the tenant, then set it up\n• Adding a tenant: name, category, prefix, hostname, recipe and database presets\n• The tenant in the list, Uninitialized until it is set up\n• The Setup screen of the tenant: site name, time zone and super user\n• Opening the site and finding its sign-in\n• Create & Setup: straight to the Setup screen",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MultiTenancy"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "multi-tenancy",
+    "tenants",
+    "tenant setup",
+    "Setup screen",
+    "Orchard Core admin"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Multi-Tenancy"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Tenants"
+  }
+}
