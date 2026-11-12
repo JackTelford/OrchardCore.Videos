@@ -92,3 +92,13 @@ The plan opens `/Admin/Roles/Index`, not `/Admin/Roles`. The roles controller de
 mapper replaces `{action}` with the action name and adds no shorter route for Index
 (`OrchardCore.Modules/OrchardCore.Admin/AdminAreaControllerRouteMapper.cs:36-52`). To confirm: `/Admin/Roles/Index` opens
 the Roles page, and `/Admin/Roles/Edit/Proofreader` opens the permissions of the role once it exists.
+
+## 8. The first group of the permissions list (`perms-1`)
+
+- Checked in the source: the groups are sorted by title, then by source
+  (`OrchardCore.Modules/OrchardCore.Roles/Views/Admin/_RolePermissions.cshtml:55`). A group made from a permission category shows
+  only its title; a group made from a feature shows the feature identifier beside the title in brackets
+  (`Views/Admin/_RolePermissions.cshtml:57-63`, `Controllers/AdminController.cs:~330-345`). The narration says only that groups are
+  "usually one for each feature".
+- To confirm: the first group on the page of a role of the Blog site is a feature group (for example Admin), so the ring
+  around its legend shows a title and an identifier. If it is a category group, ring the first group that shows both.
