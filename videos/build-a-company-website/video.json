@@ -1,0 +1,68 @@
+{
+  "title": "Build a Company Website With the Agency Theme | Orchard Core",
+  "description": "A company website needs sections for its services, projects and team, a menu that leads visitors to them, and a way for visitors to get in touch.\n\nThe Agency theme and its setup recipe create a landing page whose Services, Portfolio, About, Team and Clients sections are Bag parts of the Flows module. This video edits those sections, builds a contact form with the Forms module, and adds the form page to the main menu.\n\nIn this video:\n• The Agency recipe, and the Bag parts behind its sections\n• The starting site, section by section\n• Editing the landing page: change an item, add a service, reorder cards\n• Adding a contact form with the Forms module\n• Adding the form page to the main menu with a Content Menu Item\n• The finished site\n• What you built",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Agency theme",
+    "company website",
+    "landing page",
+    "Bag part",
+    "Flows",
+    "Forms",
+    "Menu",
+    "tutorial"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Build a Site"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Bag part",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/BagPart/"
+    },
+    {
+      "label": "Documentation: Flows",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/"
+    },
+    {
+      "label": "Documentation: Forms",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Forms/"
+    },
+    {
+      "label": "Documentation: Menu",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Menu/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Flow/BagPart.md",
+    "src/docs/reference/modules/Tenants/README.md",
+    "src/docs/reference/modules/Flow/README.md",
+    "src/docs/reference/modules/Forms/README.md",
+    "src/docs/reference/modules/Menu/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "TheAgencyTheme"
+  }
+}
