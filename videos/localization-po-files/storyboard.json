@@ -1,0 +1,233 @@
+{
+  "title": "Translate the UI: Install and Write PO Files",
+  "output": "localization-po-files",
+  "spoken": {
+    "OrchardCore.Features.Views.Admin.Features": "Orchard Core dot Features dot Views dot Admin dot Features",
+    "MyNamespace.MyService": "My Namespace dot My Service",
+    "Localization/fr.po": "Localization slash F.R. dot P.O.",
+    "?culture=fr": "question mark culture equals F.R.",
+    "fr.zip": "F.R. dot zip",
+    "fr-CA": "F.R. dash C.A.",
+    "such as fr.": "such as F.R.",
+    "named fr,": "named F.R.,",
+    "the fr files": "the F.R. files",
+    "App_Data": "App Data",
+    "parent culture(s)": "parent cultures",
+    "msgctxt": "message context",
+    "msgid": "message I.D.",
+    "msgstr": "message string",
+    "PO": "P.O."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Translate the UI: Install and Write PO Files",
+      "subtitle": "Where the translations of Orchard Core come from",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core reads the translations of its interface from PO files. In this video you install the community French files, enable them on a site, see where PO files are read from, and write PO entries of your own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How translations are stored",
+      "subtitle": "PO files and their entries",
+      "clips": [
+        {
+          "id": "01-po",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "po-1",
+              "text": "A PO file, short for Portable Object, is a plain text file with one entry for each translated text. An entry holds a context in msgctxt, the original text in msgid, and its translation in msgstr."
+            },
+            {
+              "id": "po-2",
+              "text": "The name of the file, or of the folder that holds it, is the culture, such as fr. Orchard Core loads the files of the culture of the request, and shows the original text for every text that has no translation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Install community translations",
+      "subtitle": "Download and extract the French files",
+      "clips": [
+        {
+          "id": "02-install",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "install-1",
+              "text": "The community translates Orchard Core on Crowdin, and anyone can add a language or improve one. In the Orchard Core project, select French, then Download or Upload, and then Download translations. The browser saves a zip file named fr.zip."
+            },
+            {
+              "id": "install-2",
+              "text": "Create a folder named Localization in the root of your site, and extract fr.zip into it. The result is a folder named fr, with one PO file for each module."
+            },
+            {
+              "id": "install-3",
+              "text": "The CMS application targets publish the Localization folder with the site. Other projects include the folder as content in the project file. With Docker, keep PO files in Localization, not App_Data, because a volume mounted on App_Data hides the files it already contains."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable the culture",
+      "subtitle": "The Localization feature and the Cultures page",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "To use the files, enable the Localization feature. Let's open Tools, Features, and search for Localization."
+            },
+            {
+              "id": "enable-2",
+              "text": "Localization is listed under the Internationalization category. Let's select its Enable button."
+            },
+            {
+              "id": "enable-3",
+              "text": "The feature adds a Localization group to the Settings menu. Let's open Settings, Localization, Cultures."
+            },
+            {
+              "id": "enable-4",
+              "text": "The table lists the cultures of the site. Let's choose French in the list, select Add culture, and then select Save."
+            },
+            {
+              "id": "enable-5",
+              "text": "Saving restarts the site, and a notice confirms it: The site has been restarted for the settings to take effect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "See the translation",
+      "subtitle": "Test a culture with the query string",
+      "clips": [
+        {
+          "id": "04-query",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "To test a culture, add ?culture=fr to the address of a page. The culture has to be one of the supported cultures of the site. Let's open the Features page this way."
+            }
+          ]
+        },
+        {
+          "id": "04-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-2",
+              "text": "This recording uses a small French file with entries for a few texts of the Features page. The title, the search box, the Bulk Actions button, the Enable buttons, and the count of features are in French."
+            },
+            {
+              "id": "result-3",
+              "text": "The menu on the left stays in English, because the file has no entry for its texts. Orchard Core shows the original text for a text without an entry."
+            },
+            {
+              "id": "result-4",
+              "text": "A browser configured with French as its language gets the same translations, without the query string."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Where PO files are read",
+      "subtitle": "Locations and load order",
+      "clips": [
+        {
+          "id": "05-where",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "Orchard Core searches several places for a file named after the culture: the Localization folder of each module and theme, the Localization folder of the site, and the Localization folder of each tenant, under App_Data, Sites."
+            },
+            {
+              "id": "where-2",
+              "text": "Files can also be split by module. The community download uses a folder named after the culture, with one file for each module. A folder named after the module works too."
+            },
+            {
+              "id": "where-3",
+              "text": "All the files found for a culture are merged. When two files define the same entry, the later one wins, in the order of this list. The culture folder loads last, so its entries replace those of the site and tenant files."
+            },
+            {
+              "id": "where-4",
+              "text": "A file serves only the culture in its path. For a regional culture such as fr-CA, write fr-CA files, or select Fall back to parent culture(s), so that missing texts are looked up in the fr files."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Write your own entries",
+      "subtitle": "Contexts, original text and translation",
+      "clips": [
+        {
+          "id": "06-write",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "write-1",
+              "text": "In a file such as Localization/fr.po, you write entries for your own texts. For a service, the context is the full name of the type the localizer is created for, here MyNamespace.MyService."
+            },
+            {
+              "id": "write-2",
+              "text": "For a view, the context is the path of the view, starting at the module folder, with dots and without the extension. The Features page uses OrchardCore.Features.Views.Admin.Features."
+            },
+            {
+              "id": "write-3",
+              "text": "An entry without a context applies wherever a text has no entry of its own context: Orchard Core looks for the entry with the context first, and then for the one without. An entry with an empty translation is ignored."
+            },
+            {
+              "id": "write-4",
+              "text": "To translate a single tenant, put the file in the Localization folder of that tenant, under App_Data, Sites. The other tenants do not read it. Its entries are merged with the other files, and the culture folder wins for the same entry."
+            },
+            {
+              "id": "write-5",
+              "text": "Keep the numbered placeholders of the original text in the translation. After you edit a PO file, restart the application, because translations are loaded once and kept. Plural forms have a separate video."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Translate the UI: Install and Write PO Files",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "PO files are plain text, named after a culture, and read from a few folders. Install the community files, add your own entries for the texts they do not cover, and restart the application. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

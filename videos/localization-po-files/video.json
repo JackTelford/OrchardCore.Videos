@@ -1,0 +1,58 @@
+{
+  "title": "Translate the UI: Install and Write PO Files | Orchard Core",
+  "description": "Orchard Core shows its interface in the culture of the request, with the texts of the PO files of that culture. Knowing where those files go, which one wins, and how an entry is written is what lets a site use another language.\n\nThis video installs the community French files, enables them on a site, and writes PO entries of your own.\n\nIn this video:\n• How PO files store translations: context, original text and translation\n• Install the community French files and publish them with your site\n• Enable the Localization feature and add a culture\n• Test a culture with the culture query string\n• Where PO files are read, and which file wins\n• Write your own entries for services, views and tenants",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Localization"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Localization",
+    "Internationalization",
+    "PO files",
+    "Translation"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Localization"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Installing localization files",
+      "url": "https://docs.orchardcore.net/en/latest/guides/install-localization-files/"
+    },
+    {
+      "label": "Documentation: Localization module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/"
+    },
+    {
+      "label": "Documentation: JavaScript localization",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/install-localization-files/README.md",
+    "src/docs/reference/modules/Localize/javascript-localization.md",
+    "src/docs/reference/modules/Localize/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Localization"
+  }
+}
