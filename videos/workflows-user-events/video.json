@@ -1,0 +1,55 @@
+{
+  "title": "Workflows: React to Registrations, Sign-Ins and Role Changes | Orchard Core",
+  "description": "Registrations, role changes and sign-ins are moments a site often has to react to: greeting an account, telling an editor, or keeping a record of what happened.\n\nThe Users module provides events for Workflows, so a workflow can start whenever an account is created, updated or signed in. Build the workflows in the admin designer with an event and a Notify Task, publish them, and follow each run in the workflow instances.\n\nIn this video:\n• The user events and the user tasks, and what starts each event\n• Respond to a created account with User Created Event and a Notify Task\n• Create a user and see the notification from the workflow\n• Respond to a role change with User Updated Event\n• Respond to a sign-in with User Loggedin Event\n• Follow the runs in the workflow instances, and read the Correlation ID",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Workflows",
+    "Users",
+    "User events",
+    "Automation",
+    "Notifications",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Workflows",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Documentation: Users",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md",
+    "src/docs/reference/modules/Users/README.md",
+    "src/docs/reference/modules/Users/TicketStore.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows"
+  }
+}

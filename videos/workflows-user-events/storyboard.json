@@ -1,0 +1,224 @@
+{
+  "title": "Workflows: React to Registrations, Sign-Ins and Role Changes",
+  "output": "workflows-user-events",
+  "spoken": {
+    "Loggedin": "Logged in",
+    "Loggedout": "Logged out",
+    "loggedin": "logged in",
+    "jamie.chen": "jamie dot chen"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Workflows and user events",
+      "subtitle": "Start a workflow when an account is created, changed or signs in",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site often has to react when an account is created, when the roles of a user change, or when someone signs in. Workflows can start from each of these user events. In this video, you'll build a workflow for each one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "User events",
+      "subtitle": "What can start a workflow",
+      "clips": [
+        {
+          "id": "01-events",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "events-1",
+              "text": "The Users module provides events for Workflows. User Created Event runs when an account is created, by an administrator or by a registration. User Updated Event runs whenever an account is saved, for example when its roles change."
+            },
+            {
+              "id": "events-2",
+              "text": "User Confirmed Event runs when someone follows the link in a confirmation email. User Enabled Event, User Disabled Event and User Deleted Event run when an account is enabled, disabled or deleted."
+            },
+            {
+              "id": "events-3",
+              "text": "User Loggedin Event and User Loggedout Event follow the sessions of a user. Both pass the user name and the roles to the workflow. The sign-in event also runs for logins through an external provider, and passes that provider."
+            },
+            {
+              "id": "events-4",
+              "text": "The Users module provides three tasks. Assign User Role Task adds a user to a role, and Validate User Task checks whether the visitor is signed in and in a role. Register User Task creates an account from form fields, and needs the Email feature."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Respond to a created account",
+      "subtitle": "One event and one task",
+      "clips": [
+        {
+          "id": "02-build",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "When the Workflows feature is enabled, Design, Workflows lists the workflows of the site. Select Create Workflow, enter Account created as the name, and select Create and open the designer."
+            },
+            {
+              "id": "build-2",
+              "text": "An empty workflow starts with an event. Select User Created Event. The designer adds it as the start activity, and marks it with a Start badge."
+            },
+            {
+              "id": "build-3",
+              "text": "Select the Done outcome of the event, search for notify, and pick Notify Task. The designer adds it to the right, already connected."
+            },
+            {
+              "id": "build-4",
+              "text": "A Notify Task shows a message to the person whose action started the workflow. Set Notification Type to Information, and enter A user account was created as the Message."
+            },
+            {
+              "id": "build-5",
+              "text": "Select Publish. The designer saves a draft as you work, but only the published workflow responds to events."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a user",
+      "subtitle": "The event starts the workflow",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Let's trigger the event by creating a user. Open Access Control, Users, and select Add User."
+            },
+            {
+              "id": "create-2",
+              "text": "Enter jamie.chen as the user name, and an email address at example.com. Select Generate password, which fills both password fields, and then select Save."
+            },
+            {
+              "id": "create-3",
+              "text": "The Users list returns with the notification from the workflow: A user account was created. The event started the workflow when the account was created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Respond to a role change",
+      "subtitle": "User Updated Event",
+      "clips": [
+        {
+          "id": "04-roles",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "roles-1",
+              "text": "Back in Design, Workflows, create a second workflow named Role changed, and open the designer."
+            },
+            {
+              "id": "roles-2",
+              "text": "Search the Activities pane for user updated, and select the User Updated card. The designer adds User Updated Event as the start activity."
+            },
+            {
+              "id": "roles-3",
+              "text": "Add a Notify Task after the Done outcome, as before. Set Notification Type to Information, and enter A user account was updated as the Message."
+            },
+            {
+              "id": "roles-4",
+              "text": "Select Publish, and the workflow responds to its event from then on."
+            },
+            {
+              "id": "roles-5",
+              "text": "In Access Control, Users, select Edit for jamie.chen. The Roles list is part of the account, so check Editor and select Save."
+            },
+            {
+              "id": "roles-6",
+              "text": "The Users list returns with the notification from the workflow. The role change saved the account, so User Updated Event started it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Respond to a sign-in",
+      "subtitle": "User Loggedin Event",
+      "clips": [
+        {
+          "id": "05-signin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signin-1",
+              "text": "In Design, Workflows, create a third workflow named Welcome back, and open the designer."
+            },
+            {
+              "id": "signin-2",
+              "text": "Search the Activities pane for loggedin, and select the User Logged in card. The designer adds User Loggedin Event as the start activity."
+            },
+            {
+              "id": "signin-3",
+              "text": "Add a Notify Task after the Done outcome. Set Notification Type to Information, and enter Welcome back as the Message."
+            },
+            {
+              "id": "signin-4",
+              "text": "Select Publish. Then open the user menu in the top bar and select Log off, which signs you out."
+            },
+            {
+              "id": "signin-5",
+              "text": "Log in again as admin. When the sign-in succeeds, User Loggedin Event starts the workflow, and its notification appears on the page that follows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Follow the runs",
+      "subtitle": "Workflow instances",
+      "clips": [
+        {
+          "id": "06-instances",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "instances-1",
+              "text": "Select Instances. Each run of a workflow is an instance, listed with its workflow and its status. Here, every instance is Finished."
+            },
+            {
+              "id": "instances-2",
+              "text": "Open an instance. The read-only designer highlights the activities it ran, and the Correlation ID is the ID of the user the event was about."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Workflows and user events",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "These events let a workflow react to registrations, role changes and sign-ins. A separate video covers expressions, which let a task use the user that the event is about. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
