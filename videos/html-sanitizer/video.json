@@ -1,0 +1,47 @@
+{
+  "title": "HTML Sanitizer: Keep Unsafe Markup Out of Content | Orchard Core",
+  "description": "Authors write HTML, and Markdown that becomes HTML, and that markup can hold scripts that run in a visitor's browser.\n\nThe Orchard Core HTML Sanitizer cleans the final rendered HTML each time content is displayed, while the HTML or Markdown an author wrote is stored as written. It applies to the body parts and fields by default, and you configure it in code.\n\nIn this video:\n• How the sanitizer cleans rendered content, and where it applies\n• The Sanitize Html setting of a part\n• Sanitizing HTML in Razor, Liquid and your own services\n• Configuring the allowed tags, attributes and schemes, and the cache rule",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "HTML sanitizer",
+    "cross-site scripting",
+    "content security"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Site Security"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Sanitizer/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Sanitizer/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:Sanitizer"
+  }
+}
