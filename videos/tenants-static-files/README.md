@@ -10,7 +10,7 @@ chapters YouTube shows are in `video.json`.
 
 ## Recording it again
 
-The video was recorded on a **fresh site** with fake data only, so it needs no mask script. The full plan, with every
+The video is recorded on a **fresh site** with fake data only, so it needs no mask script. The full plan, with every
 action, selector and source reference, is in [`recording-plan.md`](recording-plan.md); questions that a person must
 confirm on a running site are in [`OPEN-QUESTIONS.md`](OPEN-QUESTIONS.md).
 
