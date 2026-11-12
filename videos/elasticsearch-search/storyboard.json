@@ -1,0 +1,196 @@
+{
+  "title": "Orchard Core Elasticsearch",
+  "output": "elasticsearch-search",
+  "spoken": {
+    "/search": "slash search"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Elasticsearch",
+      "subtitle": "Search indexes on an Elasticsearch server",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Elasticsearch is a search server that runs apart from your site. In this video, you enable the Orchard Core Elasticsearch module, create an index of your articles on the server, and use that index for the search page of your site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How it fits together",
+      "subtitle": "The site, the server and the index",
+      "clips": [
+        {
+          "id": "01-fit",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "fit-1",
+              "text": "The server can be a cloud service, an installation on your own machines, or a Docker container for development and testing. The Orchard Core module does not install it: it connects to a server that is already running."
+            },
+            {
+              "id": "fit-2",
+              "text": "The connection belongs to the configuration of the site, so whoever hosts the site sets it, with the server address and any credentials. No admin screen edits it. Without a valid address, the menu entry Run Elasticsearch Query stays hidden."
+            },
+            {
+              "id": "fit-3",
+              "text": "On the server, an index holds a copy of the content of the types you choose, and Orchard Core updates it when that content changes. The search page of your site reads from the index. The Lucene module can run alongside Elasticsearch."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the module",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features and filter the list for Elasticsearch. It shows Elasticsearch, Elasticsearch (Obsolete), Elasticsearch Worker and Elasticsearch Content Picker. Of these four, Elasticsearch is the one this video enables."
+            },
+            {
+              "id": "enable-2",
+              "text": "Elasticsearch is the module itself. Elasticsearch (Obsolete) is kept for backwards compatibility, so leave it alone. Let's select Enable on Elasticsearch, and a message confirms it."
+            },
+            {
+              "id": "enable-3",
+              "text": "The Search feature provides frontend search capabilities against indexes. Let's enable it too, because the search page of the site comes from it."
+            },
+            {
+              "id": "enable-4",
+              "text": "With the module enabled and the connection valid, Search, Queries lists Run Elasticsearch Query. Its presence shows that the site configuration holds a valid server address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create an index",
+      "subtitle": "Search, Indexes",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Let's open Search, Indexes. The page lists every index of the site, whatever its provider, and Add index offers the available sources."
+            },
+            {
+              "id": "create-2",
+              "text": "The sources are grouped by provider. Under Elasticsearch, Content in Elasticsearch creates an index from the content of your site. Let's choose Add."
+            },
+            {
+              "id": "create-3",
+              "text": "Index Name is the technical name of the index, in lowercase, and on the server the tenant name goes in front of it. Name is the label the admin shows, and it follows the Index Name until you change it. Let's type articles."
+            },
+            {
+              "id": "create-4",
+              "text": "Content types lists what can be indexed. Let's select Article. Culture stays on Any culture, and without Index Latest version, only published versions are indexed."
+            },
+            {
+              "id": "create-5",
+              "text": "Analyzer picks how Elasticsearch breaks text into terms. Its list holds the analyzers defined for the site, and standard when none is defined. Store Source Data keeps the fields of each document in the index, and it is checked by default."
+            },
+            {
+              "id": "create-6",
+              "text": "Default Query Settings control how the search page queries this index. Search type starts as Multi-Match Query (Default), and Query field names lists the fields to search, with the full-text field already selected. We keep these values."
+            },
+            {
+              "id": "create-7",
+              "text": "Save creates the index on the Elasticsearch server and fills it in the background. The list shows the index, with badges for its provider, Elasticsearch, and its type, Content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Search your site",
+      "subtitle": "Default search index and the search page",
+      "clips": [
+        {
+          "id": "04-search",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "search-1",
+              "text": "The search page of the site queries the default search index. Under Settings, Search, Site Search, Default search index lists the indexes of the site. Let's choose articles and save."
+            },
+            {
+              "id": "search-2",
+              "text": "Let's open the search page, at /search on the site, and search for harvest."
+            },
+            {
+              "id": "search-3",
+              "text": "The page asks Elasticsearch for matching content items and lists them. Only articles appear, since the index covers only the Article type. An article that you publish later is added to the index when it is published."
+            },
+            {
+              "id": "search-4",
+              "text": "Visitors who are not signed in can search only when their role may query the index, through the permission named Query any index or Query 'articles' Index."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Other tools",
+      "subtitle": "Query Index, Index Info and Run Elasticsearch Query",
+      "clips": [
+        {
+          "id": "05-tools",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tools-1",
+              "text": "Each Elasticsearch index adds two entries to its Actions menu. Query Index runs a query against the index, and Index Info shows how Elasticsearch describes the index, for reference."
+            },
+            {
+              "id": "tools-2",
+              "text": "Search, Queries, Run Elasticsearch Query opens a query screen for any Elasticsearch index. It takes queries in the Elasticsearch query format, and its results list the documents it finds."
+            },
+            {
+              "id": "tools-3",
+              "text": "The pages that edit a part of a content type, or a field of a part, have an Elasticsearch Index settings section. Its checkbox, Include this element in the index, adds the value of that element to the index."
+            },
+            {
+              "id": "tools-4",
+              "text": "The other Actions entries, Synchronize, Reset, Rebuild and Force Delete, work the same for every provider, and a separate video covers them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Elasticsearch",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Connect the site, enable the module, create an index of your content, and choose it for the search page. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
