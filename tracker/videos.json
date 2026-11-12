@@ -216,9 +216,9 @@
     "docs": [
       "src/docs/reference/modules/Admin/README.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 3.5,
-    "words": 0,
+    "words": 527,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

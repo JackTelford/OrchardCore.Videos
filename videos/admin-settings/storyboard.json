@@ -1,0 +1,172 @@
+{
+  "title": "Orchard Core Admin Settings",
+  "output": "admin-settings",
+  "spoken": {
+    "Ctrl+K": "Control K"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Admin Settings",
+      "subtitle": "Tailor the admin for your editors",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The admin is where your editors spend their day. One settings page changes how its menu, top bar, and lists look and behave for everyone who signs in. Let's go through each option under Settings, Admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What the settings change",
+      "subtitle": "Three areas, one page",
+      "clips": [
+        {
+          "id": "01-areas",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "areas-1",
+              "text": "The options fall into three areas: the admin menu, the top bar and page headings, and the lists of items. They belong to the site, so they apply to everyone who uses its admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Open the admin settings",
+      "subtitle": "Settings, Admin",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "Let's open Settings in the admin menu, and then Admin. By default, only the Administrator role can open this page."
+            },
+            {
+              "id": "open-2",
+              "text": "Each option has a label and a short hint. Changes apply when you click Save, and a notification confirms that the site settings were updated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The admin menu",
+      "subtitle": "The Filter box, the New entry, and how sections open",
+      "clips": [
+        {
+          "id": "03-menu",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "menu-1",
+              "text": "Enable Admin Menu filter puts a Filter box above the admin menu. Let's check it, along with Display New menu, and click Save."
+            },
+            {
+              "id": "menu-2",
+              "text": "Typing in the Filter box hides every item that does not match, and keeps the groups that hold a match. Typing Roles leaves Roles and the group that holds it."
+            },
+            {
+              "id": "menu-3",
+              "text": "Display New menu adds a New entry at the top of the admin menu. It lists the content types that can be created, such as Article and Page, so an editor can create content from anywhere in the admin."
+            },
+            {
+              "id": "menu-4",
+              "text": "Navigation menu behavior decides how the sections of the menu open. With Focused, only the section of the current page is open, and opening a section closes the others."
+            },
+            {
+              "id": "menu-5",
+              "text": "With Persistent, sections stay open until you close them, from page to page, so several can be open at once. The section of the current page is always open."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The top bar and page headings",
+      "subtitle": "Quick navigation, theme toggler, titles and breadcrumb",
+      "clips": [
+        {
+          "id": "04-topbar",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "top-1",
+              "text": "Enable quick navigation shows a magnifier in the top bar. It opens a palette of admin pages, also with Ctrl+K. Typing filters the pages, and Enter opens the highlighted one."
+            },
+            {
+              "id": "top-2",
+              "text": "Enable theme toggler adds a Toggle theme button, with Auto, Light, and Dark. Each person's choice is kept in that person's browser."
+            },
+            {
+              "id": "top-3",
+              "text": "Display titles in top bar moves the title of each page from the page into the top bar. Let's check it."
+            },
+            {
+              "id": "top-4",
+              "text": "Show breadcrumb controls the trail of links above the title, which on pages such as the content editor leads back to Manage Content. Let's clear it, and click Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Lists and actions",
+      "subtitle": "Layouts for rows, and for the actions of each row",
+      "clips": [
+        {
+          "id": "05-lists",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "lists-1",
+              "text": "List layout sets how lists such as Content Items show their rows: Use configuration default, List, or Grid. Let's choose Grid."
+            },
+            {
+              "id": "lists-2",
+              "text": "Actions layout sets how actions appear: as Buttons, or in a single compact Menu. It covers the actions of each row and the secondary actions in the bottom action bar of edit pages. Let's choose Menu, and click Save."
+            },
+            {
+              "id": "lists-3",
+              "text": "Content Items shows a column for Title, Type, Status, and Last modified, and the actions of each row sit behind one ellipsis button. Let's open the menu of a row."
+            },
+            {
+              "id": "lists-4",
+              "text": "Let users choose the layout of a list adds List and Grid buttons above the rows. The choice is kept for that list, for that person only. Clear the option, and every list follows the site layout."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Admin Settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That covers the options on the admin settings page. Together, they shape the menu, the top bar, and the lists for the people who use the admin every day. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
