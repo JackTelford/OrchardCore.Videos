@@ -3392,9 +3392,9 @@
     "docs": [
       "src/docs/reference/modules/Tenants/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.6,
+    "words": 688,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

@@ -1,0 +1,211 @@
+{
+  "title": "Workflows and the Database Session",
+  "output": "workflows-session-activities",
+  "spoken": {
+    "ISession": "I Session",
+    "SaveAsync": "Save Async",
+    "SaveChangesAsync": "Save Changes Async",
+    "WaitAll": "Wait All",
+    "WaitAny": "Wait Any"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Workflows and the Database Session",
+      "subtitle": "Commit, Fork and Join",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "While a workflow runs, everything its activities save goes through one database session. The Session Workflows Activities feature adds a task that commits it. You'll see that task, and how it works with Fork and Join."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The database session",
+      "subtitle": "One scope, one session, one commit",
+      "clips": [
+        {
+          "id": "01-session",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "session-1",
+              "text": "A workflow runs inside the shell scope of the request, or the background task, that triggers it. Every activity of that run receives the same ISession, created once for each scope."
+            },
+            {
+              "id": "session-2",
+              "text": "The shell scope commits the session when it ends, and cancels it if an exception is thrown. Saving a document only records the change, so nothing is committed before then."
+            },
+            {
+              "id": "session-3",
+              "text": "The workflow manager follows the same rule. It saves the instance through the store, which calls SaveAsync on the session, and never commits."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Commit Transaction",
+      "subtitle": "A task that commits the session",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for session. Under Workflows, Session Workflows Activities provides the session-related activities, and it depends on the Workflows feature."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's enable it. The page reloads with a notification, and the feature adds a single activity, Commit Transaction Task."
+            }
+          ]
+        },
+        {
+          "id": "02-activity",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "activity-1",
+              "text": "In the workflow designer, the Activities pane lists the task in the Session category. Search for commit, and Commit Transaction appears, described as Commit the current transaction."
+            },
+            {
+              "id": "activity-2",
+              "text": "On the canvas, the card shows Commit Transaction Task, with the outcomes Done, Valid and Invalid. Its editor holds only a title and the retry settings of every task."
+            }
+          ]
+        },
+        {
+          "id": "02-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "commit-1",
+              "text": "Here is the task. When the model state of the current request is invalid, it returns the outcomes Done and Invalid, and commits nothing."
+            },
+            {
+              "id": "commit-2",
+              "text": "Otherwise it calls SaveChangesAsync, which commits the whole session: everything saved in the scope so far, including what the request saved before the workflow started. It returns Done and Valid, so Done fires in both cases."
+            },
+            {
+              "id": "commit-3",
+              "text": "The model state belongs to the controller or page handling the request. When none sets it, the model updater is empty, so the model state is valid and the task follows Valid."
+            },
+            {
+              "id": "commit-4",
+              "text": "The feature registers the task in a startup class limited to it, with an empty display driver and view model, because the task has no settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Fork and Join",
+      "subtitle": "Branches share one session",
+      "clips": [
+        {
+          "id": "03-branches",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "fork-1",
+              "text": "Fork and Join belong to the Workflows module, not to the Session feature. A Fork returns one outcome for each name in its Forks setting, and each outcome starts a branch."
+            },
+            {
+              "id": "fork-2",
+              "text": "The workflow manager pushes the next activity of every outcome onto a stack, and runs them in one loop. The branches run one after the other, on the same session."
+            },
+            {
+              "id": "fork-3",
+              "text": "A Join in WaitAll mode, the default, continues with the outcome Joined once every inbound branch has arrived. WaitAny continues when any inbound branch has arrived, and drops the waiting activities upstream."
+            }
+          ]
+        },
+        {
+          "id": "03-workflow",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "workflow-1",
+              "text": "This workflow, Order handoff, starts with Started By Workflow Event and forks into Billing and Shipping. Each branch is a Log task that stands in for real work."
+            },
+            {
+              "id": "workflow-2",
+              "text": "Both branches lead to a Join. After it, Commit Transaction commits the work of both branches at once, and its Valid outcome leads to a last Log task."
+            },
+            {
+              "id": "workflow-3",
+              "text": "Double-click the Fork to open its editor. Forks holds comma-separated names, and each name becomes an outcome. The Join has a Mode, WaitAll or WaitAny."
+            }
+          ]
+        },
+        {
+          "id": "03-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Let's run it. Run… starts the published version. With no input variables, the dialog only needs a click on Run, and the instance finishes."
+            },
+            {
+              "id": "run-2",
+              "text": "Open the instance, and select its Journal tab. The records list the activities in the order they ran. The Join appears twice: it waits for the first branch, and continues after the second."
+            },
+            {
+              "id": "run-3",
+              "text": "Commit Transaction completes with the outcomes Done and Valid, since nothing added an error to the model state. The last Log task follows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Where to commit",
+      "subtitle": "Placing the task in a workflow",
+      "clips": [
+        {
+          "id": "04-where",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "Place the task after a Join in WaitAll mode. By then, every branch has saved its changes to the session, and one commit writes them all."
+            },
+            {
+              "id": "where-2",
+              "text": "Connect Invalid to the activities that handle a failed validation. The admin content editor cancels the session when its model state is invalid. The task only skips its own commit, and the scope commits when it ends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Workflows and the Database Session",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Session Workflows Activities feature adds the Commit Transaction task, which commits the session in the middle of a run, and it works with Fork and Join like any other activity. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
