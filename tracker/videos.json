@@ -6622,9 +6622,9 @@
     "docs": [
       "src/docs/reference/modules/Workflows/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.9,
+    "words": 887,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

@@ -1,0 +1,253 @@
+{
+  "title": "Write a Workflow Activity",
+  "output": "workflow-activity-create",
+  "spoken": {
+    "CreateWorkflowExpressionEditorAsync": "Create Workflow Expression Editor Async",
+    "WorkflowExpressionInputValidator": "Workflow Expression Input Validator",
+    "WorkflowExpressionEditor": "Workflow Expression Editor",
+    "WorkflowExpressionInput": "Workflow Expression Input",
+    "WorkflowExpression": "Workflow Expression",
+    "IActivityDescription": "I Activity Description",
+    "IWorkflowManager": "I Workflow Manager",
+    "TriggerEventAsync": "Trigger Event Async",
+    "GetPossibleOutcomes": "Get Possible Outcomes",
+    "ActivityDisplayDriver": "Activity Display Driver",
+    "ConfigureServices": "Configure Services",
+    "RequireFeatures": "Require Features",
+    "OrchardCore.Workflows": "Orchard Core dot Workflows",
+    "EventActivity": "Event Activity",
+    "TaskActivity": "Task Activity",
+    "ExecuteAsync": "Execute Async",
+    "ResumeAsync": "Resume Async",
+    "EditActivity": "Edit Activity",
+    "UpdateActivity": "Update Activity",
+    "AddActivity": "Add Activity",
+    "GetProperty": "Get Property",
+    "SetProperty": "Set Property",
+    "DisplayText": "Display Text",
+    "NotifyTask": "Notify Task"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Write a Workflow Activity",
+      "subtitle": "A task activity, from its class to the designer",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every step of a workflow is an activity, and your module can add its own. Let's read the Notify Task activity of the Workflows module part by part: its class, its editor, its views and its registration. Then let's find them in the workflow designer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What an activity is",
+      "subtitle": "Tasks, events and outcomes",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A workflow is a set of activities connected to each other. A task does some work and continues. An event halts the workflow until something happens, and only an event can start a workflow."
+            },
+            {
+              "id": "idea-2",
+              "text": "Each activity returns outcomes, which are named exits such as Done. The designer draws a port for each outcome, and a transition connects that port to the next activity."
+            },
+            {
+              "id": "idea-3",
+              "text": "A task with settings needs an activity class, a display driver with its view model, three views, and one call that registers it. The Notify Task of the Workflows module has every part, so let's read it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The activity class",
+      "subtitle": "Names, services, settings and work",
+      "clips": [
+        {
+          "id": "02-class",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "class-1",
+              "text": "NotifyTask derives from TaskActivity, passing its own type, which sets the activity's Name to the class name. Workflow definitions refer to the activity by that name. IActivityDescription declares the display name and the category as localization sources, which DisplayText and Category translate."
+            },
+            {
+              "id": "class-2",
+              "text": "The constructor asks for the services the activity needs. Activities are created with constructor injection, so NotifyTask receives the notifier, the expression evaluator and the localizers."
+            },
+            {
+              "id": "class-3",
+              "text": "Settings are properties that read and write through GetProperty and SetProperty. The values are stored by property name in the activity's Properties, which the workflow saves. Message is a WorkflowExpression, evaluated each time the activity runs."
+            },
+            {
+              "id": "class-4",
+              "text": "GetPossibleOutcomes lists the outcomes, here only Done. ExecuteAsync does the work: it evaluates the message, adds the notification, and returns the outcome by name. The workflow follows the transitions of that outcome."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The editor",
+      "subtitle": "Display driver, view model and views",
+      "clips": [
+        {
+          "id": "03-editor",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "driver-1",
+              "text": "The display driver derives from ActivityDisplayDriver, with the activity and a view model. EditActivity copies the settings into the view model, and UpdateActivity copies the posted values back. Message is required."
+            },
+            {
+              "id": "shapes-1",
+              "text": "The base class builds three shapes named after the activity class: Thumbnail, Design and Edit. You write one Razor view for each, and the Workflows module keeps them in the Items folder under Views."
+            },
+            {
+              "id": "views-1",
+              "text": "The Thumbnail view is the card of the activity in the Activities pane: a title and a description. The designer replaces the icon at the start of the title with the icon from the registration."
+            },
+            {
+              "id": "views-2",
+              "text": "The Design view is the body of the activity on the canvas. It shows the notification type as a title, unless the Title field is set, and the message in quotes."
+            },
+            {
+              "id": "views-3",
+              "text": "The Edit view holds only your own settings: a label, an input and a hint for each. The module adds a Title field before it and, for a task, a When it fails section after it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Settings with expressions",
+      "subtitle": "Choosing the syntax of an expression",
+      "clips": [
+        {
+          "id": "04-expressions",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "expr-1",
+              "text": "A setting that takes an expression in a choice of syntaxes uses a WorkflowExpressionInput in its view model. The driver reads it back with the WorkflowExpressionInputValidator, which reports a missing expression or a syntax that is not allowed."
+            },
+            {
+              "id": "expr-2",
+              "text": "In the Edit view, CreateWorkflowExpressionEditorAsync builds the WorkflowExpressionEditor shape from the bound property. It shows the syntax and the expression together, with the label and hint you set."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Registering the activity",
+      "subtitle": "One call in your module",
+      "clips": [
+        {
+          "id": "05-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "AddActivity registers the activity and its display driver, in the ConfigureServices method of a Startup class. The optional icon is a Font Awesome class. Without one, the designer uses the category's icon, or a generic one."
+            },
+            {
+              "id": "register-2",
+              "text": "Your module's feature depends on OrchardCore.Workflows, as the Timers feature does, and registers its activities in its Startup. A module that works without workflows marks a Startup with RequireFeatures instead, as the Contents module does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "In the designer",
+      "subtitle": "Where each view appears",
+      "clips": [
+        {
+          "id": "06-designer",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "designer-1",
+              "text": "Let's find the three views in the workflow designer. Under Design, Workflows, we open Notify editors, a workflow that starts with a Content Published Event. A separate video covers building workflows in the designer."
+            },
+            {
+              "id": "designer-2",
+              "text": "In the Activities pane, let's search for notify. Under UI, the category from the class, the card shows the bell icon from the registration, and the title and description of the Thumbnail view."
+            },
+            {
+              "id": "designer-3",
+              "text": "Let's add it after the event. Clicking the Done port opens a list of activities, and picking Notify Task adds it to the right, already connected."
+            },
+            {
+              "id": "designer-4",
+              "text": "The header shows the display text, Notify Task. The body is the Design view: a Success Notification title, and the message in quotes, left empty. The node also shows an issue, because Message is required."
+            },
+            {
+              "id": "designer-5",
+              "text": "The designer opens the settings of an added activity at the bottom of the canvas. That is the Edit view: Notification Type and Message, with the Title field before them and the When it fails section after them."
+            },
+            {
+              "id": "designer-6",
+              "text": "Let's choose Information and type a message. When the field loses focus, the designer applies the change, and the Design view shows Information Notification with the message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Event activities",
+      "subtitle": "Activities that wait to be triggered",
+      "clips": [
+        {
+          "id": "07-event",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "event-1",
+              "text": "An event derives from EventActivity instead, as this one from the Data Pipelines module does. The base class's Execute method halts the workflow, and the event's Resume method runs when the event arrives. EventActivity isn't generic, so the event overrides Name itself."
+            },
+            {
+              "id": "event-2",
+              "text": "Your code triggers the event by calling TriggerEventAsync on IWorkflowManager, with the activity's name and an input dictionary. The call starts the workflows that begin with the event, and resumes those that wait for it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Write a Workflow Activity",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A task activity is a class, a display driver with a view model, three views and one registration. An event follows the same shape and waits to be triggered. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
