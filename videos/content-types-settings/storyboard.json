@@ -1,0 +1,202 @@
+{
+  "title": "Content Type Settings: Creatable, Listable, Draftable and More",
+  "output": "content-types-settings",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Type Settings",
+      "subtitle": "Creatable, Listable, Draftable and more",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Content types in Orchard Core have settings that decide where their items appear, how they are saved, and who can work with them. In this video, we'll look at Creatable, Listable, Draftable, Versionable and Securable, and at the Stereotype, Category and Thumbnail settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The options of a content type",
+      "subtitle": "Where they are and what they do",
+      "clips": [
+        {
+          "id": "01-options",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "options-1",
+              "text": "You find these settings by editing a content type, under Design, Content Definition, Content Types. A type you create there starts with Creatable, Listable, Draftable, Versionable and Securable all checked, and you clear the ones you don't want."
+            },
+            {
+              "id": "options-2",
+              "text": "Creatable offers the type when someone creates an item. Listable shows its items in Manage Content. Draftable adds the Save Draft button, and Versionable lets an item keep more than one version."
+            },
+            {
+              "id": "options-3",
+              "text": "Securable gives the type its own permissions for roles. Stereotype, Category and Thumbnail are text settings: a stereotype groups types for a feature, and a category and a thumbnail organize types in a picker."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Creatable and Listable",
+      "subtitle": "Where a type is offered and listed",
+      "clips": [
+        {
+          "id": "02-visibility",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "visibility-1",
+              "text": "This is Manage Content, and the Event items are listed here. The New button offers Event as a type to create, and the Content Type filter offers it as a type to list."
+            },
+            {
+              "id": "visibility-2",
+              "text": "Let's open the settings of Event. On the Content Types page, Event has a Create New Event button, and Edit opens its settings."
+            },
+            {
+              "id": "visibility-3",
+              "text": "The form begins with the Technical Name, which can't be changed, and the Display Name. Description comes next, and its text appears under the name of the type on the Content Types page."
+            },
+            {
+              "id": "visibility-4",
+              "text": "Each checkbox has a hint next to its label that explains what it does. Let's clear Creatable and Listable."
+            },
+            {
+              "id": "visibility-5",
+              "text": "Choose Save. Back on Content Types, Event has lost its Create New Event button, while List Items is still there."
+            },
+            {
+              "id": "visibility-6",
+              "text": "On Manage Content, the New button no longer offers Event, the Content Type filter no longer lists it, and its items have left the list."
+            },
+            {
+              "id": "visibility-7",
+              "text": "The items still exist. List Items on the Content Types page opens them, because a page that asks for one specific type lists it even when the type isn't Listable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Draftable and Versionable",
+      "subtitle": "Drafts and earlier versions",
+      "clips": [
+        {
+          "id": "03-drafts",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "drafts-1",
+              "text": "This is the editor of a published Event. Publish makes your changes live, and Save Draft stores them without publishing. The Save Draft button is here because Event is Draftable."
+            },
+            {
+              "id": "drafts-2",
+              "text": "Let's change the title and choose Save Draft. In Manage Content, the Event shows two badges, Published and Draft."
+            },
+            {
+              "id": "drafts-3",
+              "text": "The published version stays in place while the draft waits. That is what Versionable provides: an item can keep more than one version. Without it, an item has a single version."
+            },
+            {
+              "id": "drafts-4",
+              "text": "Let's clear Draftable next. On the Edit Content Type page for Event, the Draftable checkbox is checked. Uncheck it, and choose Save."
+            },
+            {
+              "id": "drafts-5",
+              "text": "Open another Event. Publish is still there, but Save Draft is gone, because the type no longer supports drafts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Securable",
+      "subtitle": "Permissions for a single type",
+      "clips": [
+        {
+          "id": "04-securable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "securable-1",
+              "text": "Securable gives a content type permissions of its own. To see them, go to Access Control, Roles, and edit the Editor role."
+            },
+            {
+              "id": "securable-2",
+              "text": "Searching the permissions for Event finds a group named Event Content Type - Event. It lists permissions such as publish, edit, delete, view, preview and clone for Event items, and a permission to list them."
+            },
+            {
+              "id": "securable-3",
+              "text": "Let's clear Securable. On the Edit Content Type page for Event, uncheck Securable, and choose Save. After that, we return to the Editor role."
+            },
+            {
+              "id": "securable-4",
+              "text": "Searching the Editor role for Event again finds nothing. Without Securable, the Roles page offers no permissions for the type, so the general content permissions decide what a role can do with its items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Stereotype, category and thumbnail",
+      "subtitle": "Grouping types in a picker",
+      "clips": [
+        {
+          "id": "05-pickers",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "pickers-1",
+              "text": "Paragraph is a widget, so its Stereotype is Widget. Features that work with widgets offer only the types that have this stereotype."
+            },
+            {
+              "id": "pickers-2",
+              "text": "The hint under the Stereotype box gives examples, such as Widget and MenuItem. A stereotype of your own is made of letters and digits, and starts with a letter."
+            },
+            {
+              "id": "pickers-3",
+              "text": "Category groups types in a picker, and Thumbnail is the path of an image shown with the type. Let's enter Text as the category, a placeholder image as the thumbnail, and choose Save."
+            },
+            {
+              "id": "pickers-4",
+              "text": "Next, let's create a Page. Its editor is set to Blocks, so the plus button, Add Widget, opens a picker named Select Widget."
+            },
+            {
+              "id": "pickers-5",
+              "text": "The sidebar lists categories, starting with All. Text shows only the types of that category, each with its thumbnail and an Add button. Types without a category appear under All."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Type Settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Content type settings decide where items are offered, how they are saved, and who can work with them. Check the options a type needs, clear the others, and use stereotype, category and thumbnail to organize it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

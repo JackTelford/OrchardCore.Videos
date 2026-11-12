@@ -1,0 +1,50 @@
+{
+  "title": "Content Type Settings: Creatable, Listable, Draftable and More | Orchard Core",
+  "description": "Every content type in Orchard Core has checkboxes and text settings that decide where its items are offered and listed, how they are saved, and who can work with them. They sit together on the Edit Content Type page, and it is not always clear what each one changes.\n\nThis video changes the options in the admin: it clears Creatable, Listable, Draftable and Securable, saves a draft of a published item, and fills in Category and Thumbnail. It shows the effect in Manage Content, in the content editor, in the permissions of a role and in the widget picker.\n\nIn this video:\n• The options of a content type and where to find them\n• Creatable and Listable: where a type is offered and listed\n• Draftable and Versionable: drafts and earlier versions\n• Securable: permissions for a single type\n• Stereotype, Category and Thumbnail: grouping types in a picker",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Content Types",
+    "Content Type Settings",
+    "Draft",
+    "Versioning",
+    "Permissions",
+    "Stereotype"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Types"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentTypes/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentTypes"
+  }
+}
