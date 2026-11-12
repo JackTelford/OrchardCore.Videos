@@ -1,0 +1,172 @@
+{
+  "title": "Module Metadata in Your Project File",
+  "output": "csproj-module-metadata",
+  "spoken": {
+    "Manifest.cs": "Manifest dot C.S.",
+    "OrchardCoreModules": "Orchard Core Modules",
+    "OrchardCoreFeatures": "Orchard Core Features",
+    "OrchardCoreThemes": "Orchard Core Themes",
+    "OrchardCoreAttributes": "Orchard Core Attributes",
+    "OrchardCoreDebugTargets": "Orchard Core Debug Targets",
+    "OrchardCoreEmbeddingAfterTargets": "Orchard Core Embedding After Targets",
+    "OrchardCoreEmbeddingBeforeTargets": "Orchard Core Embedding Before Targets",
+    "OrchardCore.Module.Targets": "Orchard Core Module Targets",
+    "OrchardCore.Theme.Targets": "Orchard Core Theme Targets",
+    "AfterResolveReferences": "After Resolve References",
+    "GenerateAssemblyInfo": "Generate Assembly Info",
+    "InternalsVisibleTo": "Internals Visible To",
+    "DefaultTenant": "Default Tenant",
+    "AlwaysEnabled": "Always Enabled",
+    "EnabledByDependencyOnly": "Enabled By Dependency Only",
+    "ModuleType": "Module Type",
+    "MSBuild": "M.S. Build"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Module Metadata in Your Project File",
+      "subtitle": "Declare a module, its features, or a theme in the project file",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A module, a theme, or a feature describes itself to Orchard Core with a name, a category, a description, and dependencies. In this video, you declare that information in the project file, instead of in the Manifest.cs file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why the project file",
+      "subtitle": "Values the build already knows",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A module made from the project template comes with a Manifest.cs file. Its attributes carry the name, the author, the website, and the version, typed by hand."
+            },
+            {
+              "id": "why-2",
+              "text": "The build already knows some of those values, such as the project name and the assembly version. The build can write the attributes for you, following the pattern of InternalsVisibleTo: an item in the project file becomes an assembly attribute."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Declare a module",
+      "subtitle": "The OrchardCoreModules item",
+      "clips": [
+        {
+          "id": "02-module",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "module-1",
+              "text": "Declare a module with an OrchardCoreModules item in an item group. Its Include value is the module identifier, normally the project name."
+            },
+            {
+              "id": "module-2",
+              "text": "The rest is metadata of the item: Name, Category, Priority, Description, Author, Website, Version, Dependencies, Tags, and ModuleType. Dependencies and Tags are lists, separated by semicolons, commas, or spaces."
+            },
+            {
+              "id": "module-3",
+              "text": "Because these are MSBuild values, they can come from properties. Here, the identifier is the project name, and the version is the assembly version, so each value has one source."
+            },
+            {
+              "id": "module-4",
+              "text": "Three flags control how a feature is enabled. DefaultTenant restricts it to the default tenant, AlwaysEnabled prevents it from being disabled, and EnabledByDependencyOnly allows it to be enabled only as a dependency. Write each as true or false."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Features and themes",
+      "subtitle": "One item for each feature and theme, or one list for all",
+      "clips": [
+        {
+          "id": "03-parts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "parts-1",
+              "text": "A module declares each of its features with an OrchardCoreFeatures item. A feature takes a name, a category, a priority, a description, dependencies, and the three flags. The author, website, version, and tags belong to the module."
+            },
+            {
+              "id": "parts-2",
+              "text": "As soon as a module project declares a feature, the module itself is no longer a feature, unless one of the declared features has its identifier. A feature whose category, priority, or description is empty uses the module's."
+            },
+            {
+              "id": "parts-3",
+              "text": "A theme uses an OrchardCoreThemes item. Its metadata is a module's, except ModuleType, plus Base, which names the base theme. A theme project references OrchardCore.Theme.Targets, and a module project references OrchardCore.Module.Targets."
+            },
+            {
+              "id": "parts-4",
+              "text": "To keep every declaration in one list, use OrchardCoreAttributes items. Each has a Type: feature or theme, and any other value means a module. The item then takes the metadata of that type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Remove Manifest.cs, then build",
+      "subtitle": "Rules, messages, and where the values show",
+      "clips": [
+        {
+          "id": "04-build",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "When the project file declares the module, remove its attributes from Manifest.cs, since the Module attribute can be applied only once to an assembly. Comment out the contents of the file, or delete it."
+            },
+            {
+              "id": "build-2",
+              "text": "The build enforces three rules. A project declares at most one module, at most one theme, and never a module together with a theme. A project can declare any number of features."
+            },
+            {
+              "id": "build-3",
+              "text": "To see what the build embeds, set the OrchardCoreDebugTargets property to true. The build then prints a message for each module and each feature, with most of the values of the item."
+            },
+            {
+              "id": "build-4",
+              "text": "The embedding runs after the targets named by OrchardCoreEmbeddingAfterTargets, AfterResolveReferences by default. It runs before those named by OrchardCoreEmbeddingBeforeTargets, GenerateAssemblyInfo by default."
+            },
+            {
+              "id": "build-5",
+              "text": "After a build, the site reads the values from the assembly. The Features page, under Tools, lists a feature with its name, identifier, category, description, and dependencies. The Themes page, under Design, shows a theme's description, author, website, tags, and version."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Thanks for watching",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Item lists in the project file describe a module, its features, or a theme, and the build turns them into the attributes that Manifest.cs holds. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

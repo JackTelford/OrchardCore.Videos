@@ -6726,9 +6726,9 @@
     "docs": [
       "src/docs/guides/leverage-csproj-meta-info/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.7,
+    "words": 552,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
