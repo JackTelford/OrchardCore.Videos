@@ -1,0 +1,51 @@
+{
+  "title": "Error Pages: Customize Not Found and Error Pages | Orchard Core",
+  "description": "A broken link or a denied request ends in an error page. By default, that page is a single heading with a fixed message.\n\nThe Orchard Diagnostics feature draws each error page from a shape named HttpError, with an alternate for every status. A view in your theme or a template written in the admin replaces the page of any status.\n\nIn this video:\n• How an error status becomes a page\n• The built-in Not Found, Forbidden and fallback pages\n• Replacing a page with a view in a theme\n• Replacing a page with a template in the admin, and moving it in a recipe\n• Which template is used first, and when no page is drawn",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "ErrorPages"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "error pages",
+    "404 page",
+    "Not Found",
+    "Diagnostics",
+    "Liquid",
+    "Razor",
+    "theme"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Diagnostics and Logging"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Diagnostics/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Diagnostics/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Diagnostics"
+  }
+}

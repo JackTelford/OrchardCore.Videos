@@ -1,0 +1,196 @@
+{
+  "title": "Error pages in Orchard Core",
+  "output": "diagnostics-error-pages",
+  "spoken": {
+    "HttpError-NotFound.cshtml": "HTTP Error dash Not Found dot C.S.H.T.M.L.",
+    "HttpError-NotFound.liquid": "HTTP Error dash Not Found dot liquid",
+    "HttpErrorShapeViewModel": "HTTP Error Shape View Model",
+    "HttpError__MethodNotAllowed": "HTTP Error underscore underscore Method Not Allowed",
+    "HttpError__NotFound": "HTTP Error underscore underscore Not Found",
+    "HttpError__404": "HTTP Error underscore underscore 404",
+    "HttpStatusCode": "HTTP Status Code",
+    "HttpError": "HTTP Error",
+    "BadRequest": "Bad Request",
+    "TooManyRequests": "Too Many Requests",
+    "NotFound": "Not Found"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Error pages in Orchard Core",
+      "subtitle": "Replace the Not Found page and the other HTTP error pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "When a visitor follows a broken link, or a signed-in user lacks permission for a page, the site shows an error page. The Orchard Diagnostics feature draws it from a template. In this video, you replace the Not Found page in two ways."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How error pages work",
+      "subtitle": "From an error status to a template",
+      "clips": [
+        {
+          "id": "01-flow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "flow-1",
+              "text": "When a request ends with an error status, such as 404, the Orchard Diagnostics feature runs the request again against the Error route. The status code is the last part of the path."
+            },
+            {
+              "id": "flow-2",
+              "text": "The Error action builds a shape of type HttpError. For a 404, it adds two alternates, which are more specific template names: HttpError__404 for the number, and HttpError__NotFound for the name of the status."
+            },
+            {
+              "id": "flow-3",
+              "text": "The module has a view for BadRequest, Unauthorized, Forbidden, NotFound and TooManyRequests. Every other status uses the fallback view, HttpError, unless you add a template for it, such as HttpError__MethodNotAllowed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The built-in pages",
+      "subtitle": "Not Found, Forbidden and the fallback",
+      "clips": [
+        {
+          "id": "02-builtin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "builtin-1",
+              "text": "Let's request a page that does not exist. The site answers with the Not Found page of the Diagnostics feature, drawn inside the layout of the active theme."
+            },
+            {
+              "id": "builtin-2",
+              "text": "To preview another status, open the Error route with its code. For 403, the Forbidden page appears. The Users module uses this page when access is denied."
+            },
+            {
+              "id": "builtin-3",
+              "text": "A status without its own view, such as 405, shows the fallback view, which reads: An error occurred while executing this request."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Replace a page in a theme",
+      "subtitle": "A view named after the shape",
+      "clips": [
+        {
+          "id": "03-theme",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "theme-1",
+              "text": "To replace the page in a theme, add a view named HttpError-NotFound.cshtml to its Views folder. The hyphen in the file name stands for the two underscores of the shape name."
+            },
+            {
+              "id": "theme-2",
+              "text": "A Liquid view takes the same place, when the Liquid feature is enabled. Name it HttpError-NotFound.liquid, and write the markup with Liquid. The t filter passes the text to localization, so it can be translated."
+            },
+            {
+              "id": "theme-3",
+              "text": "The fallback view is HttpError. Its model, HttpErrorShapeViewModel, holds the Code and the HttpStatusCode of the request. Both are empty when an unhandled exception led to the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Replace a page in the admin",
+      "subtitle": "A template written with the Templates feature",
+      "clips": [
+        {
+          "id": "04-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "admin-1",
+              "text": "You can also replace the page from the admin, without changing a theme. With the Templates feature enabled, open Design, then Templates, and select Add Template."
+            },
+            {
+              "id": "admin-2",
+              "text": "The name of a template is the name of the shape, so let's type HttpError__NotFound. The Content field takes a Liquid template."
+            },
+            {
+              "id": "admin-3",
+              "text": "Let's write a heading, and pass its text through the t filter so it can be translated. Then select Save, and the template appears in the list."
+            },
+            {
+              "id": "admin-4",
+              "text": "Let's request the missing page again. It shows your heading in place of the built-in one."
+            }
+          ]
+        },
+        {
+          "id": "04-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "The Templates recipe step creates templates when a recipe runs. It maps each template name to its Description and Content. The All Templates deployment step exports the templates of a site in the same format."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Order and limits",
+      "subtitle": "Which template is used, and when no page is drawn",
+      "clips": [
+        {
+          "id": "05-limits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rank-1",
+              "text": "For a status, the names are tried in a fixed order: the name of the status, then the number, then HttpError. The built-in views use the names, so for 404 a template named HttpError__404 never replaces the built-in page."
+            },
+            {
+              "id": "rank-2",
+              "text": "For each name, a template written in the admin wins over a view in the theme, and a view in the theme wins over the view of the module."
+            },
+            {
+              "id": "limits-1",
+              "text": "A path that ends in a known file extension, such as a missing image, keeps its plain error status and gets no error page."
+            },
+            {
+              "id": "limits-2",
+              "text": "When the site does not run in the Development environment, an unhandled exception goes to the Error route with no status code, and the HttpError view draws the page. In Development, that handler is not registered."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Error pages in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Error pages are shapes, so a view in your theme or a template in the admin changes any of them. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
