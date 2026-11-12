@@ -3532,9 +3532,9 @@
     "docs": [
       "src/docs/reference/modules/Users/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.3,
+    "words": 498,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
