@@ -1,0 +1,245 @@
+{
+  "title": "Data Pipelines: Deliver Files by Link, Email, FTP and SFTP",
+  "output": "data-pipelines-destinations",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Data Pipelines: Deliver Files by Link, Email, FTP and SFTP",
+      "subtitle": "Send the files a pipeline creates to people and servers",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A pipeline that creates a file has done half of its job. The file still has to reach someone. In this video, you add four destinations to a pipeline: a download link, an email, an FTP server, and an SFTP server."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a destination does",
+      "subtitle": "Four ways to deliver a file",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A destination is the last step of a pipeline. It receives the files that a Create a file step or a Zip files step produces, and delivers them. One output can feed several destinations, and each one receives every file."
+            },
+            {
+              "id": "why-2",
+              "text": "Here are four destinations; others save to the media library or send to a web API. Share a download link and Send by email need the Email feature and an email provider. The upload steps need Data Pipelines - FTP and Data Pipelines - SFTP."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the upload features",
+      "subtitle": "Data Pipelines - FTP and Data Pipelines - SFTP",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Let's open Tools, Features, and search for pipelines. Data Pipelines is enabled, but the two upload features are not. They add the steps that upload files to a server."
+            },
+            {
+              "id": "features-2",
+              "text": "Let's select both features, open Bulk Actions, and choose Enable. A message confirms that the two features are enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Share a download link",
+      "subtitle": "A secure link for users of the site",
+      "clips": [
+        {
+          "id": "03-link",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "link-1",
+              "text": "Let's open Tools, Data Pipelines, Pipelines, and edit Blog posts export. This pipeline reads the blog posts and writes them to a CSV file with the Create a file step."
+            },
+            {
+              "id": "link-2",
+              "text": "Let's click the output of Create a file. The list that opens, Add a step after Files, offers the steps that can receive files. Let's search for share, and choose Share a download link."
+            },
+            {
+              "id": "link-3",
+              "text": "Recipients are users of the site, by user name or email, separated by commas. Each one gets the link by email. A name that matches no user stops the run."
+            },
+            {
+              "id": "link-4",
+              "text": "Days the link works is 7 by default. Maximum downloads counts the uses of all recipients together, and 0 means no limit, so let's allow 3. Email subject and Message shape the email."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Send by email",
+      "subtitle": "The files as attachments",
+      "clips": [
+        {
+          "id": "04-email",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "email-1",
+              "text": "Next, let's right-click Create a file and choose Add a step after it. Then let's search for email, and choose Send by email."
+            },
+            {
+              "id": "email-2",
+              "text": "To takes email addresses separated by commas or semicolons, and Cc and Bcc work the same way. Unlike the download link, these can be any addresses."
+            },
+            {
+              "id": "email-3",
+              "text": "Subject and Body are the text of the email. They can use the name of the pipeline, the date of the run, and the names of the attached files. The body is plain text unless you check The body is HTML."
+            },
+            {
+              "id": "email-4",
+              "text": "Maximum size (MB) caps the attachments, because most mail servers refuse large emails. The step fails when the files weigh more. By default, it sends nothing when it receives no files."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Upload to an FTP server",
+      "subtitle": "Copy the files to a folder",
+      "clips": [
+        {
+          "id": "05-ftp",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "ftp-1",
+              "text": "Let's add another step after Create a file, and choose Upload to an FTP server. It asks for the Host, the Port, the User name, and the Password of the account on the server."
+            },
+            {
+              "id": "ftp-2",
+              "text": "Encryption starts on a TLS option, which a real server should keep. This test server has no certificate, so let's choose None (plain FTP), and the editor warns that the credentials and the files travel in clear text."
+            },
+            {
+              "id": "ftp-3",
+              "text": "Remote folder is created when it doesn't exist, and an empty one means the folder the user starts in. Replace existing files is checked, so a file with the same name is overwritten."
+            },
+            {
+              "id": "ftp-4",
+              "text": "Passwords are encrypted, and the editor never shows them again. The card on the canvas shows where the files go, and marks the connection as not encrypted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Upload to an SFTP server",
+      "subtitle": "Copy the files over SSH",
+      "clips": [
+        {
+          "id": "06-sftp",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "sftp-1",
+              "text": "Let's add the last destination, Upload to an SFTP server. It asks for the same Host, Port, User name, and Password. A Private key can replace the password, or be used with it when the server asks for both."
+            },
+            {
+              "id": "sftp-2",
+              "text": "Host key fingerprint makes the step refuse a server that presents another key. Without it, the host is not verified, and the log of a run shows the fingerprint to copy here. Let's paste the fingerprint of this test server."
+            },
+            {
+              "id": "sftp-3",
+              "text": "Remote folder works as it does for FTP, and an empty one means the home folder of the user. With the upload set up, the canvas shows four destinations, each connected to the Create a file step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Publish and run",
+      "subtitle": "Read what the run delivered",
+      "clips": [
+        {
+          "id": "07-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Changes are saved as a draft, and runs use only the published version. Let's select Publish. The plain FTP connection raises a warning, so the designer asks for a confirmation: Publish anyway."
+            },
+            {
+              "id": "run-2",
+              "text": "A published pipeline runs with the access of the user who published it, so publishing vouches for what it does. Let's select Run, and wait while the run executes in the background."
+            },
+            {
+              "id": "run-3",
+              "text": "In the History tab, the run succeeded. Deliveries lists what each destination did: the link shared with its recipient, the email, and the two uploads, with the address of each file."
+            },
+            {
+              "id": "run-4",
+              "text": "Log keeps the messages of the run, including the warning about the FTP connection. Open the run shows the same deliveries under Delivered, and the rows and files of every step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Check the shared links",
+      "subtitle": "See and revoke what a run shared",
+      "clips": [
+        {
+          "id": "08-links",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "links-1",
+              "text": "Let's open Tools, Shared Links. The list shows the link as Active, with its kind, its recipient, the pipeline that shared it, and how many of its three uses it has had."
+            },
+            {
+              "id": "links-2",
+              "text": "The link itself is only in the email: the admin never shows it. In Actions, Revoke the link stops it from working before it expires, and Delete removes it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Data Pipelines: Deliver Files by Link, Email, FTP and SFTP",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Destinations turn the files of a pipeline into deliveries: a secure link, an email, or an upload to a file server. Add them after Create a file, publish the pipeline, and read the result in the run. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

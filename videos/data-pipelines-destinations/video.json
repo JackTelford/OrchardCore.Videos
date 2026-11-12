@@ -1,0 +1,54 @@
+{
+  "title": "Data Pipelines: Deliver Files by Link, Email, FTP and SFTP | Orchard Core",
+  "description": "A pipeline that creates a file is only useful when the file reaches someone.\n\nThe destination steps of Data Pipelines deliver the files of a run: they share a secure download link with users of the site, send an email with the files attached, or upload the files to an FTP or an SFTP server. This video adds the four destinations to one pipeline, publishes it, and reads what the run delivered.\n\nIn this video:\n• What a destination does, and the four it covers\n• Enabling the FTP and SFTP features\n• Sharing a download link with users of the site\n• Sending the files by email\n• Uploading to an FTP server\n• Uploading to an SFTP server\n• Publishing the pipeline and reading what the run delivered\n• Checking the shared links",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "DataPipelines"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Data Pipelines",
+    "FTP",
+    "SFTP",
+    "Email",
+    "Download link",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Data Pipelines"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Data Pipelines",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/"
+    },
+    {
+      "label": "Documentation: Data Sources",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataSources/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DataPipelines/README.md",
+    "src/docs/reference/modules/DataSources/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataPipelines"
+  }
+}
