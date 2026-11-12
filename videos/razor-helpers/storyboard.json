@@ -1,0 +1,172 @@
+{
+  "title": "Razor Helpers and Tag Helpers for Orchard Core Themes",
+  "output": "razor-helpers",
+  "spoken": {
+    "contentitemid": "content item id",
+    "asp-name": "A.S.P. name",
+    "asset-src": "asset source",
+    "img-width": "image width",
+    "img-height": "image height",
+    "img-resize-mode": "image resize mode"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Razor Helpers and Tag Helpers",
+      "subtitle": "Reach Orchard Core from the views of a theme",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "When you write a theme in Razor, its views reach Orchard Core in two ways. The Orchard helper adds methods that load content, build URLs and convert text, and tag helpers render shapes and resources. This video shows what each one offers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The Orchard helper",
+      "subtitle": "A property, or an injected service",
+      "clips": [
+        {
+          "id": "01-helper",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "helper-1",
+              "text": "In a Razor view, Orchard is a property of the view's base class. A theme sets that base class once, with an inherits directive in its view imports file, and every view of the theme gets the property."
+            },
+            {
+              "id": "helper-2",
+              "text": "A view that doesn't use that base class, such as a Razor Page, injects I Orchard Helper under the name Orchard. A controller or a service takes it as a constructor parameter. The interface has one member, the current HTTP context."
+            },
+            {
+              "id": "helper-3",
+              "text": "The helpers are extension methods, and each module defines those of its own features: Contents, Alias, Autoroute, Media, Markdown, Queries, Lists and Taxonomies, among others. In a theme, add a reference to the module or package whose method isn't found."
+            },
+            {
+              "id": "helper-4",
+              "text": "Many helpers also call services that their module registers, so the module's feature has to be enabled on the site too. The reference makes the method compile, and the feature makes it work."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Content items",
+      "subtitle": "Load them, then display them",
+      "clips": [
+        {
+          "id": "02-content",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "Four helpers load one content item from what you know of it: its id, alias, slug or handle. A handle combines a prefix, such as alias, slug or contentitemid, with a value. Each helper returns null when nothing matches."
+            },
+            {
+              "id": "content-2",
+              "text": "These helpers return the published version by default. The alias and slug helpers take a Boolean flag for the most recent version. The handle and id helpers take Version Options, which can ask for the most recent version, draft or published."
+            },
+            {
+              "id": "content-3",
+              "text": "To list items, Get Recent Content Items By Content Type Async returns the published items of a type, newest first, ten by default. For any other condition, Query Content Items Async takes a query over the content item index."
+            },
+            {
+              "id": "content-4",
+              "text": "To render an item, call Display Async with the item and a display type, such as Summary. It returns rendered markup, which the view writes out. Where Model is dynamic, the view casts the item first, because extension methods can't take dynamic arguments."
+            },
+            {
+              "id": "content-5",
+              "text": "Display Async extends the interface behind the view's Orchard property, not I Orchard Helper itself, so an injected helper doesn't offer it. Its display type defaults to an empty string, which means Detail, and it takes an optional group id and updater."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Helpers for the page",
+      "subtitle": "Culture, URLs, markup and data",
+      "clips": [
+        {
+          "id": "03-page",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "Culture Name and Culture Dir return the name and direction of the current culture. Is Right To Left returns a Boolean. A layout uses them to set the language and direction of the page, and to pick a stylesheet."
+            },
+            {
+              "id": "page-2",
+              "text": "Asset Url turns a media library path into its public URL, with optional width, height and resize mode. Is Image File checks the extension. Resource Url adds the CDN base URL to a resource path, when one is set and debug mode is off."
+            },
+            {
+              "id": "page-3",
+              "text": "Four helpers work on text. Liquid To HTML Async, Markdown To HTML Async and Shortcodes To HTML Async render a string as markup, and Sanitize Html cleans HTML. Markdown To HTML Async sanitizes its result unless you pass sanitize false."
+            },
+            {
+              "id": "page-4",
+              "text": "For data, Content Query Async runs a saved query by name and returns its content items. Query List Items Async returns the items of a list, and Get Taxonomy Term Async finds a term from its taxonomy and its own id."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Tag helpers",
+      "subtitle": "Elements for shapes and resources",
+      "clips": [
+        {
+          "id": "04-tag",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tag-1",
+              "text": "A tag helper is an HTML-like element that runs on the server while the view renders. A theme turns each set on with an add Tag Helper directive in its view imports file, and references the project or package that holds it."
+            },
+            {
+              "id": "tag-2",
+              "text": "The shape element renders a shape by its type. The menu element renders a menu by its alias, and the content item element renders a content item by its handle. Other attributes become shape properties, and the prop prefix keeps a value's type."
+            },
+            {
+              "id": "tag-3",
+              "text": "The zone element adds its content to a named zone of the layout, and renders nothing where it stands. Here a view adds a heading to the Title zone, which the layout of the admin theme renders with Render Section Async."
+            },
+            {
+              "id": "tag-4",
+              "text": "A script or style with an asp-name attribute registers a named resource. A script's at attribute picks Head or Foot; a style renders in the head unless at is Inline. The resources element renders them: Header in the head, Foot Script at the body's end."
+            },
+            {
+              "id": "tag-5",
+              "text": "The Media module adds attributes to the image element: asset-src resolves a media library path, and img-width, img-height and img-resize-mode request a resized copy. Separate videos cover resources and media in more depth."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Razor Helpers and Tag Helpers",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Those are the Orchard helper and the tag helpers of a theme, and the documentation pages of their modules list the rest. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
