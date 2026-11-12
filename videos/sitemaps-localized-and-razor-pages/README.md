@@ -1,6 +1,6 @@
 # Sitemaps for Localized Content and Razor Pages
 
-**YouTube:** not published yet · **Length:** 4:02 · **Feature:** [`OrchardCore.ContentLocalization.Sitemaps`](https://docs.orchardcore.net/en/latest/reference/modules/Sitemaps/#localized-sitemaps) and [`OrchardCore.Sitemaps.RazorPages`](https://docs.orchardcore.net/en/latest/reference/modules/Sitemaps/#decoupled-razor-pages)
+**YouTube:** not published yet · **Length:** 3:56 · **Feature:** [`OrchardCore.ContentLocalization.Sitemaps`](https://docs.orchardcore.net/en/latest/reference/modules/Sitemaps/#localized-sitemaps) and [`OrchardCore.Sitemaps.RazorPages`](https://docs.orchardcore.net/en/latest/reference/modules/Sitemaps/#decoupled-razor-pages)
 
 A video for developers about two features that extend the Sitemaps module. Localized Content Item Sitemaps adds an
 alternate link with `hreflang` for every localization of a content item. Sitemaps for Decoupled Razor Pages lists the

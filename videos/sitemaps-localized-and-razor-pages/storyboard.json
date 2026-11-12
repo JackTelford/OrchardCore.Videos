@@ -43,7 +43,7 @@
           "steps": [
             {
               "id": "routes-1",
-              "text": "For each content item, the Sitemap Content Types source needs two answers: is its type routeable, and what is its URL. Providers give both answers, and a coordinator asks them one after the other."
+              "text": "For each content item, the Sitemap Content Types source of a sitemap needs two answers: is its type routeable, and what is its URL. Providers give both answers, and a coordinator asks them one after the other."
             },
             {
               "id": "routes-2",
@@ -113,7 +113,7 @@
             },
             {
               "id": "raz-1",
-              "text": "In a decoupled site, your own Razor Pages display the content, so its type has no Autoroute part. Configure SitemapsRazorPagesOptions in Program.cs: ConfigureContentType takes the name of the content type, and PageName names the Razor Page."
+              "text": "Configure SitemapsRazorPagesOptions in Program.cs. ConfigureContentType takes the name of the content type, and PageName names the Razor Page that displays it."
             },
             {
               "id": "raz-2",
@@ -131,7 +131,7 @@
           "steps": [
             {
               "id": "raz-4",
-              "text": "Let's open the Sitemap Content Types source of the Site Pages sitemap, and clear Index All Content Types. Select Content Types lists Decoupled Blog Post next to Article, although it has no Autoroute part, because the Razor Pages provider lists it as routeable."
+              "text": "Let's open the Sitemap Content Types source of the sitemap, and clear Index All Content Types. Select Content Types lists Decoupled Blog Post next to Article, although it has no Autoroute part, because the Razor Pages provider lists it as routeable."
             }
           ]
         },
