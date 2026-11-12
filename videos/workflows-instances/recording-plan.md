@@ -281,7 +281,8 @@ first action of `list-1`.
   holds the three Faulted instances, and the **Faulted** button is the selected one); then `HighlightAsync` the group of
   drop-downs in the toolbar (`.btn-group.filter`). Do not open or change the drop-downs.
 - On screen at the end: the list of the three Faulted instances, the counts bar with **Faulted 3** selected, and a green ring on
-  the toolbar's **Workflow**, **Status**, **Created** and **Sort** drop-downs.
+  the four drop-downs of the toolbar (the second to fourth read **Status**, **Created** and **Sort**; the first reads **Workflow** or
+  **All workflows**, see `OPEN-QUESTIONS.md`, question 12).
 - Label from: `WF/Views/Workflow/Index.cshtml:37-45, 66-75` (the counts and their labels); `WF/Views/WorkflowInstancesFilters.cshtml:16-20`
   (**Workflow**, **Status**, **Created**, **Sort**); `WF/Controllers/WorkflowController.cs:285-305` (the choices). The drop-downs submit the filter when a choice is made
   (`IDXJS`, "changed.bs.select"), which this clip does not use.

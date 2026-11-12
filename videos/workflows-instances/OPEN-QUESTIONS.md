@@ -118,3 +118,12 @@ and say so in the plan.
 **Wait for payment** is both an activity the instance ran (a journal record with the status Waiting, so a green border and a green mark on its header) and the
 activity it waits on (the **Blocking** badge and a blue ring): `DES/styles/designer.css:1195-1198, 1279-1285`. The narration says only that what the instance ran is
 highlighted in green and that the badge marks the activity it waits on. Confirm on screen that both read clearly in the frame of `open-3`.
+
+## 12. The text on the Workflow drop-down of the toolbar
+
+On the page of every workflow's instances the first drop-down has the title **Workflow** and the choices **All workflows** and the workflow names
+(`WF/Views/WorkflowInstancesFilters.cshtml:16`, `WF/Controllers/WorkflowController.cs:312-317`). The choice **All workflows** has an empty value, and the
+drop-down is not set to show a fixed text (the other three are: `data-selected-text-format="static"`), so the button may read **All workflows** instead of
+**Workflow**. The narration of `list-3` names the filter by what it filters ("workflow, status and creation date"), not by the button text. Confirm
+what the button reads in the frame at the end of `list-3`.
+
