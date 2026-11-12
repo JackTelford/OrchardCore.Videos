@@ -1,6 +1,6 @@
 # Audit Trail Settings: Events, Retention and User Events
 
-**YouTube:** not published yet · **Length:** 4:18 · **Feature:** [OrchardCore.AuditTrail](https://docs.orchardcore.net/en/latest/reference/modules/AuditTrail/) and [OrchardCore.Users.AuditTrail](https://docs.orchardcore.net/en/latest/reference/modules/Users/#audit-trail-integration)
+**YouTube:** not published yet · **Length:** 4:28 · **Feature:** [OrchardCore.AuditTrail](https://docs.orchardcore.net/en/latest/reference/modules/AuditTrail/) and [OrchardCore.Users.AuditTrail](https://docs.orchardcore.net/en/latest/reference/modules/Users/#audit-trail-integration)
 
 This video shows the settings of the Audit Trail module: which events are recorded and for which content types, whether
 the client IP address is stored, how long events are kept before the trimming task deletes them, and which properties of

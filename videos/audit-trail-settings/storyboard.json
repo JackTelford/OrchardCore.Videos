@@ -97,7 +97,7 @@
           "steps": [
             {
               "id": "trim-1",
-              "text": "Events add up, so the module trims them. On the Trimming tab, Retention period is the number of days an event is kept, and it starts at 10."
+              "text": "Events add up, so the module trims them. Let's open the Trimming tab. Retention period is the number of days an event is kept, and it starts at 10."
             },
             {
               "id": "trim-2",
@@ -130,7 +130,7 @@
             },
             {
               "id": "options-2",
-              "text": "ErasingRedactor stores an empty value, which shows that the property had a value without revealing it. HmacRedactor stores a hash of the value, and is offered only when a key is configured."
+              "text": "ErasingRedactor stores an empty value, which shows that the property had a value without revealing it. HmacRedactor stores a hash, a scrambled form that cannot be turned back into the value, and is offered only when a key is configured."
             }
           ]
         },
@@ -152,7 +152,11 @@
             },
             {
               "id": "users-4",
-              "text": "With properties chosen, a snapshot is saved when a user is created, updated, enabled, disabled, or confirmed. It appears as User Snapshot on the Details page of that event. When a user is deleted, that user's snapshots are removed from earlier events."
+              "text": "With properties chosen, a snapshot is saved when a user is created, updated, enabled, disabled, or confirmed. It appears as User Snapshot on the Details page of that event."
+            },
+            {
+              "id": "users-5",
+              "text": "When a user is deleted, the snapshots of that user are removed from the earlier events of the Audit Trail."
             }
           ]
         }
@@ -169,11 +173,11 @@
           "steps": [
             {
               "id": "result-1",
-              "text": "Under Tools, Audit Trail, the list shows what these settings produce. A failed sign-in attempt appears as a Login failed event in the User category."
+              "text": "Under Tools, Audit Trail, the list shows what these settings produce. Someone tried to sign in with an unknown user name, and that failed attempt appears as a Login failed event in the User category."
             },
             {
               "id": "result-2",
-              "text": "Entries recorded after you allowed the client IP address carry a badge with that address. Entries for a Page appear too, because Page is an allowed content type."
+              "text": "Entries recorded after you allowed the client IP address carry a badge with that address. A published Page appears too, because Page is an allowed content type."
             },
             {
               "id": "result-3",

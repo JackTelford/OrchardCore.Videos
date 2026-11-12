@@ -193,6 +193,11 @@ Starts on: `await scene.OpenAsync("/Admin")` (menu groups closed), then `StartCa
   - On screen when the narration ends: the hint under the list (it mentions the "User Snapshot" property) ringed, with the **Save** button below.
   - Labels: the hint `US/Views/AuditTrailAdmin/Index.cshtml:37`; the events that store a snapshot (Created, Updated, Enabled, Disabled, Confirmed) `US/AuditTrail/Handlers/UserEventHandler.cs:90-100`, `:125-126` and `:231-237`; the removal of snapshots when a user is deleted `US/AuditTrail/Handlers/UserEventHandler.cs:102-121`; "User Snapshot" on the Details page `US/Views/Items/AuditTrailUserEventDetail.DetailAdmin.cshtml:20`.
 
+- `users-5`
+  - Actions: none; keep the frame of `users-4` (the hint ringed) until the narration ends. Do not click the link in the hint.
+  - On screen when the narration ends: the same frame as at the end of `users-4`.
+  - Labels: the removal of the snapshots of a deleted user `US/AuditTrail/Handlers/UserEventHandler.cs:102-121`.
+
 ### 05-result (recording)
 
 Starts on: `await scene.OpenAsync("/Admin")` (menu groups closed), then `StartCaptureAsync()`. Starts from snapshot C: the seed data of section 1 exists.
