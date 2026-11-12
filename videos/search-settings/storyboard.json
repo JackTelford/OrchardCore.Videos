@@ -1,0 +1,220 @@
+{
+  "title": "Site Search Settings",
+  "output": "search-settings",
+  "spoken": {
+    "/search/Pages": "slash search slash Pages",
+    "/search": "slash search",
+    "term(s)": "terms"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Site Search Settings",
+      "subtitle": "The default index, the placeholder and who can search",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Visitors search your site on one page, and that page queries one search index. In this video, you choose the default index, set the placeholder text of the search box, try the page, and give visitors permission to search."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How site search fits together",
+      "subtitle": "The page, the index and the settings",
+      "clips": [
+        {
+          "id": "01-overview",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "overview-1",
+              "text": "The Search module adds a search page to the front end of your site, at /search. It shows a search box and the results for the terms a visitor enters."
+            },
+            {
+              "id": "overview-2",
+              "text": "The page queries an index, which a search provider builds, such as Lucene, Elasticsearch or Azure AI Search. This video starts with two Lucene indexes, named Posts and Pages, that the site has."
+            },
+            {
+              "id": "overview-3",
+              "text": "Two choices belong to the page itself. You make both under Settings, Search, Site Search: the default index the page queries, and the placeholder text of the search box."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Choose the default index",
+      "subtitle": "What the page queries when the address names no index",
+      "clips": [
+        {
+          "id": "02-default",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "default-1",
+              "text": "When the address names no index and no default index is set, the search page shows a warning: No default search index has been configured."
+            },
+            {
+              "id": "default-2",
+              "text": "Let's open the admin menu and choose Settings, then Search, then Site Search. The page has two fields: Default search index, and Placeholder."
+            },
+            {
+              "id": "default-3",
+              "text": "The Default search index list holds the name of every index of the site. Let's choose Posts. A hint below the list reads: The default index to use for the search page."
+            },
+            {
+              "id": "default-4",
+              "text": "Select Save. The page confirms: Site settings updated successfully. The search page queries the Posts index whenever the address names no other index."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Try the search page",
+      "subtitle": "The search box and the results",
+      "clips": [
+        {
+          "id": "03-search",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "search-1",
+              "text": "Let's open the search page. The search box shows the standard text: Enter your search term(s)."
+            },
+            {
+              "id": "search-2",
+              "text": "Let's search for exploration. The page lists the posts that match, each shown with its summary."
+            },
+            {
+              "id": "search-3",
+              "text": "A search that matches nothing shows a message in place of the list: There are no such results."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The results page",
+      "subtitle": "Summaries, paging and highlights",
+      "clips": [
+        {
+          "id": "04-results",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "results-1",
+              "text": "The results page lists the content items that match, and shows each one with its Summary display."
+            },
+            {
+              "id": "results-2",
+              "text": "The number of results on a page is the Page size, under Settings, General. When more results match, previous and next links appear below the list."
+            },
+            {
+              "id": "results-3",
+              "text": "Some providers return highlights. When a search returns them, each result shows its title as a link, followed by the highlighted excerpts, in place of the summary."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Set the placeholder",
+      "subtitle": "The text inside the search box",
+      "clips": [
+        {
+          "id": "05-placeholder",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "placeholder-1",
+              "text": "Back in Site Search, the Placeholder field sets the text inside the search box. Let's enter Search the blog. Leave the field empty to keep the standard text."
+            },
+            {
+              "id": "placeholder-2",
+              "text": "Select Save, then open the search page again. The search box shows Search the blog."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Choose another index",
+      "subtitle": "The address and the Search Form widget",
+      "clips": [
+        {
+          "id": "06-address",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "address-1",
+              "text": "The default index applies when the address names no index. The address /search/Pages queries the index named Pages instead, and an index name that does not exist returns a not found error."
+            },
+            {
+              "id": "address-2",
+              "text": "The Search Form widget places a search box in a layer zone or on a page. Its Index Name field is left empty to use the default index. Its Placeholder field is required, and separate from the site setting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Who can search",
+      "subtitle": "Permissions for the search page",
+      "clips": [
+        {
+          "id": "07-permissions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "permissions-1",
+              "text": "Searching needs permission, which roles grant. Let's open Access Control, Roles. The Administrator role has Manage Search Settings and Query any index by default."
+            },
+            {
+              "id": "permissions-2",
+              "text": "A visitor who is not signed in, and has no permission, is asked to sign in. To let visitors search, let's edit the Anonymous role, and type Query in the Search permissions box."
+            },
+            {
+              "id": "permissions-3",
+              "text": "Query any index lets a role search every index. Query 'Posts' Index lets it search only Posts. Let's check Allow for Query 'Posts' Index."
+            },
+            {
+              "id": "permissions-4",
+              "text": "Select Save. The roles list confirms: Role updated successfully."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Site Search Settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Site Search settings choose the index the search page queries and the text of its search box, and permissions decide who can search. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
