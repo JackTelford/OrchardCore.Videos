@@ -1,0 +1,254 @@
+{
+  "title": "Navigation in Themes",
+  "output": "navigation-in-themes",
+  "spoken": {
+    "MenuItemLink": "Menu Item Link",
+    "MenuItem": "Menu Item",
+    "PagerSlim": "Pager Slim",
+    "PagerParameters": "Pager Parameters",
+    "PagerOptions": "Pager Options",
+    "PagerAsync": "Pager Async",
+    "Pager_PageSizeSelector": "Pager Page Size Selector",
+    "Pager_Link": "Pager Link",
+    "IBreadcrumbProvider": "I Breadcrumb Provider",
+    "AddBreadcrumbProvider": "Add Breadcrumb Provider",
+    "DetailAdmin": "Detail Admin",
+    "Model.Items": "Model dot Items",
+    "shape_pager": "shape pager"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Navigation in Themes",
+      "subtitle": "Render menus, breadcrumbs and pagers",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Menus, breadcrumb trails and pagers are shapes in Orchard Core, so your theme decides how they look. This video shows how to render each one from a theme, and how to override its template."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Navigation shapes",
+      "subtitle": "What a theme controls",
+      "clips": [
+        {
+          "id": "01-shapes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shapes-1",
+              "text": "A shape is a named piece of output that a template draws. To change the markup, add a template with the shape's name to your theme's Views folder. A more specific name, called an alternate, targets one menu, one trail, or one pager."
+            },
+            {
+              "id": "shapes-2",
+              "text": "The Menu module provides the Menu shape, for menus that editors build in the admin. The Navigation module, which is always enabled, provides the Breadcrumb, Pager and PagerSlim shapes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Rendering a menu",
+      "subtitle": "The menu tag helper and the shape tag",
+      "clips": [
+        {
+          "id": "02-render",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "render-1",
+              "text": "In a Razor layout, the menu tag helper renders a menu by its alias. The cache attributes, which need the Dynamic Cache feature, keep the output for five minutes and vary it by the user's roles."
+            },
+            {
+              "id": "render-2",
+              "text": "Publishing the menu drops the cached copy, because the cache tag is the menu's alias. In Liquid, the shape tag takes the same values, with underscores in the cache parameter names."
+            }
+          ]
+        },
+        {
+          "id": "02-menu-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "menusite-1",
+              "text": "Let's edit Main Menu, in Content, Menus. Its Alias field holds main-menu, the name that the layout looks up with the alias prefix, and the two link items below it are what the theme draws."
+            },
+            {
+              "id": "menusite-2",
+              "text": "On the site, the layout renders that alias in the navigation bar. The links are the same items; only the markup around them comes from the theme's templates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Menu templates",
+      "subtitle": "Menu, MenuItem and MenuItemLink",
+      "clips": [
+        {
+          "id": "03-templates",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "templates-1",
+              "text": "The Menu template receives the menu shape and creates the outer list. It displays each entry of Model.Items, and every entry is a MenuItem shape."
+            },
+            {
+              "id": "templates-2",
+              "text": "The MenuItem template draws one list item and its sub items. It displays the same shape again as a MenuItemLink, which draws the anchor."
+            },
+            {
+              "id": "templates-3",
+              "text": "MenuItemLink has a template for each type of menu item, such as the link, content and HTML menu items. The address of a link or HTML item is checked before the template runs, so an unsafe address arrives empty."
+            },
+            {
+              "id": "templates-4",
+              "text": "To target one case, use an alternate name. A menu's name is its title as one word, without spaces or hyphens, each word capitalized, as the first card shows. The name, a content type and a level combine, and the most specific template wins."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Breadcrumbs",
+      "subtitle": "Trails, providers and templates",
+      "clips": [
+        {
+          "id": "04-trail",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "trail-1",
+              "text": "Reference the Navigation Core tag helpers in your view imports. Then add the breadcrumb tag helper to a view, in the Title zone that the admin theme renders, with a stable name and the title of the current page."
+            },
+            {
+              "id": "trail-2",
+              "text": "Declare only the ancestors as breadcrumb item children. Each links to an action or a URL, and a permission turns its link into plain text for users who lack it. The current page comes last, never as a link."
+            }
+          ]
+        },
+        {
+          "id": "04-provider",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "provider-1",
+              "text": "To change the ancestors of any trail, implement IBreadcrumbProvider and register it with AddBreadcrumbProvider. A provider sees every visible trail, so it checks the trail name first. Providers run before the current page is appended."
+            }
+          ]
+        },
+        {
+          "id": "04-trail-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "trailsite-1",
+              "text": "In the admin, edit an item of Main Menu. The trail reads Dashboard, Manage Content, Edit Main Menu, and the current page, Edit Link Menu Item. The Dashboard link comes from a provider that the Admin Dashboard feature registers."
+            },
+            {
+              "id": "trailsite-2",
+              "text": "The Show breadcrumb setting, under Settings, Admin, controls the trail on admin screens. Let's clear it and save."
+            },
+            {
+              "id": "trailsite-3",
+              "text": "With it cleared, the same screen shows only the heading, because the tag helper always renders the title."
+            }
+          ]
+        },
+        {
+          "id": "04-theme",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "trailtheme-1",
+              "text": "The Breadcrumb template draws the trail and the heading together. The display type is DetailAdmin in the admin and Detail elsewhere, and the trail's name is another alternate, so a theme can restyle one trail or one context."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Pagers",
+      "subtitle": "Page links, slim pagers and page sizes",
+      "clips": [
+        {
+          "id": "05-pager-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pager-1",
+              "text": "In a controller, build a Pager from the request's PagerParameters and the PagerOptions, count the items, and create the shape with PagerAsync. Query only the items of the current page, and pass the shape to the view."
+            },
+            {
+              "id": "pager-2",
+              "text": "The view displays the shape; in Liquid, the shape_pager tag sets its texts and classes first. The slim pager needs no item count, because it only links to the previous and next pages."
+            }
+          ]
+        },
+        {
+          "id": "05-pager-blog",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "blogpager-1",
+              "text": "On the home page of the blog, The Blog Theme draws the slim pager with the shape pager tag. The first page offers Older Posts, and the second page offers Newer Posts."
+            }
+          ]
+        },
+        {
+          "id": "05-pager-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "adminpager-1",
+              "text": "In the admin, the list of Blog Post content items shows the full pager: numbered pages, with links to the first, previous, next and last pages. The Items per page selector at its end appears when the site allows page size selection."
+            }
+          ]
+        },
+        {
+          "id": "05-pager-theme",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pagertheme-1",
+              "text": "A theme restyles a pager by overriding the templates of its parts. The Default Theme wraps the pager in a nav element, and each part, such as Previous or Next, turns into a Pager_Link that adds the Bootstrap classes."
+            },
+            {
+              "id": "pagertheme-2",
+              "text": "When page size selection is allowed in Settings, General, both pagers render an Items per page selector. The Navigation module provides plain markup for it, and a theme styles it with its own Pager_PageSizeSelector template."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Navigation in Themes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how a theme renders menus, breadcrumb trails and pagers: shapes you call from a layout or a view, and templates you override by name. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
