@@ -68,7 +68,7 @@
           "steps": [
             {
               "id": "write-1",
-              "text": "A handler implements IModularTenantEvents. It has five methods: ActivatingAsync and ActivatedAsync when the tenant starts, TerminatingAsync and TerminatedAsync when it is released, and RemovingAsync when it is removed."
+              "text": "A handler implements IModularTenantEvents. It has five methods: ActivatingAsync and ActivatedAsync when the tenant starts, TerminatingAsync and TerminatedAsync when it is released, for example on a reload, and RemovingAsync when it is removed."
             },
             {
               "id": "write-2",
@@ -202,7 +202,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A tenant event handler runs your code as a tenant starts, stops, or is removed. Implement the interface, register the class in your Startup class, and Orchard Core calls it. Thanks for watching."
+              "text": "Implement the interface, register the class in your Startup class, and Orchard Core runs your code as a tenant starts, stops, or is removed. Thanks for watching."
             }
           ]
         }

@@ -206,13 +206,13 @@ def slide(step_id, chapter_title, label):
 
     if step_id == "write-2":
         image = slide_base(chapter_title, label, "Inherit from ModularTenantEvents")
-        draw_code(image, (96, 240, W - 96, 1030), "MyStartupTaskService.cs", "csharp", HANDLER, types=TYPES, size=26,
+        draw_code(image, (96, 240, W - 96, 1030), "MyStartupTaskService.cs", "csharp", HANDLER, types=TYPES, size=24,
                   highlight={5, 14, 15, 16, 17, 18, 19, 20})
         return image
 
     if step_id == "write-3":
         image = slide_base(chapter_title, label, "Services come from the tenant")
-        draw_code(image, (96, 240, W - 96, 1030), "MyStartupTaskService.cs", "csharp", HANDLER, types=TYPES, size=26,
+        draw_code(image, (96, 240, W - 96, 1030), "MyStartupTaskService.cs", "csharp", HANDLER, types=TYPES, size=24,
                   highlight={5, 6, 7, 8, 9, 10, 11, 12, 20})
         return image
 
@@ -238,9 +238,9 @@ def slide(step_id, chapter_title, label):
 
     if step_id == "order-3":
         image = slide_base(chapter_title, label, "Both are used by Orchard Core")
-        draw_code(image, (96, 240, W - 96, 630), "AutomaticDataMigrations.cs", "csharp", MIGRATIONS, types=TYPES, size=24)
+        draw_code(image, (96, 240, W - 96, 630), "AutomaticDataMigrations.cs", "csharp", MIGRATIONS, types=TYPES, size=22)
         draw_code(image, (96, 650, W - 96, 1030), "PreloadSiteSettingsTenantEventHandler.cs", "csharp", PRELOAD,
-                  types=TYPES, size=24)
+                  types=TYPES, size=22)
         return image
 
     if step_id == "run-1":
