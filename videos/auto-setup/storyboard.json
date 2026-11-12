@@ -1,0 +1,227 @@
+{
+  "title": "Orchard Core Auto Setup",
+  "output": "auto-setup",
+  "spoken": {
+    "Program.cs": "Program dot C.S.",
+    "appsettings.json": "app settings dot J.S.O.N.",
+    "RequestUrlHost": "Request U.R.L. Host",
+    "RequestUrlPrefix": "Request U.R.L. Prefix",
+    "OrchardCore.AutoSetup": "Orchard Core dot Auto Setup",
+    "OrchardCore.Cms.Web": "Orchard Core dot C.M.S. dot Web",
+    "America/Los_Angeles": "America slash Los Angeles",
+    "/harbor/autosetup": "slash harbor slash autosetup",
+    "/autosetup": "slash autosetup",
+    "OrchardCore": "Orchard Core"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Auto Setup",
+      "subtitle": "Install sites from configuration, without the Setup screen",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "An Orchard Core site that is not installed starts on the Setup screen, where a person answers a few questions. The Auto Setup module answers them from configuration. In this video, you register it, configure it, and watch a site install itself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The Setup screen",
+      "subtitle": "The questions that Auto Setup answers",
+      "clips": [
+        {
+          "id": "01-setup-screen",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "This is the Setup screen of a site that is not installed. It asks \"What is the name of your site?\", then the Recipe and the Default Time Zone."
+            },
+            {
+              "id": "setup-2",
+              "text": "Next comes \"What type of database to use?\" Providers that run on a server also ask for a Table Prefix, a Connection String, and a Table Schema."
+            },
+            {
+              "id": "setup-3",
+              "text": "Last is the Super User: User Name, Email, Password, and Password Confirmation. Auto Setup supplies every one of these answers from configuration, so nobody fills in this form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Register the module",
+      "subtitle": "A setup feature of the host",
+      "clips": [
+        {
+          "id": "02-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "Auto Setup is a setup feature of the host. In Program.cs, AddSetupFeatures registers OrchardCore.AutoSetup after AddOrchardCms. The OrchardCore.Cms.Web project in the Orchard Core source does exactly this."
+            },
+            {
+              "id": "register-2",
+              "text": "The module ships with the Orchard Core CMS packages, but the CMS web application template does not register it, so you add the call yourself. The Features page has no Enable button for it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Configure the tenants",
+      "subtitle": "One entry per site",
+      "clips": [
+        {
+          "id": "03-configure",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "config-1",
+              "text": "The configuration lives in the AutoSetup section under OrchardCore, for example in appsettings.json. Its Tenants list holds one entry per site, and exactly one entry must have the ShellName Default."
+            },
+            {
+              "id": "config-2",
+              "text": "Each key answers a question of the Setup screen. SiteName is the name of your site, and AdminUsername, AdminEmail, and AdminPassword describe the Super User."
+            },
+            {
+              "id": "config-3",
+              "text": "RecipeName is the name of a setup recipe, such as Blog, Agency, or SaaS. It is not the display name: the Setup screen shows Software as a Service for SaaS. SiteTimeZone is a time zone identifier, such as America/Los_Angeles."
+            },
+            {
+              "id": "config-4",
+              "text": "DatabaseProvider is Sqlite, SqlConnection for SQL Server, MySql, or Postgres. Every provider except Sqlite needs a DatabaseConnectionString. DatabaseTablePrefix and DatabaseSchema are optional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Keep secrets out of files",
+      "subtitle": "Environment variables and user secrets",
+      "clips": [
+        {
+          "id": "04-secrets",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "secrets-1",
+              "text": "The section holds an administrator password, and a connection string for most providers. In production, supply them as environment variables, where a double underscore separates each level and array items are numbered from zero."
+            },
+            {
+              "id": "secrets-2",
+              "text": "During development, user secrets keep the values out of source control. The dotnet user-secrets command takes the same keys, separated by colons, and the OrchardCore.Cms.Web project has a user secrets ID."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The first request",
+      "subtitle": "A site installs itself",
+      "clips": [
+        {
+          "id": "05-first-request",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "first-1",
+              "text": "This host has the configuration and no data. Let's request its home page, which starts the installation."
+            },
+            {
+              "id": "first-2",
+              "text": "The installation ran during that request, and Auto Setup redirected the browser to the root of the site. The navigation bar shows the SiteName from the configuration, and the content comes from the Blog recipe."
+            },
+            {
+              "id": "first-3",
+              "text": "Let's open the login page, and log in with the user name and the password from the configuration."
+            },
+            {
+              "id": "first-4",
+              "text": "In the admin, Settings, General shows the Site name and the Default Time Zone that the configuration set. The Setup screen uses the same setup service."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "More than one site",
+      "subtitle": "Tenants and the AutoSetup path",
+      "clips": [
+        {
+          "id": "06-tenants",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tenants-1",
+              "text": "The Tenants list can hold more sites. When Auto Setup installs the Default tenant, it also creates a tenant for every other entry, routed by its RequestUrlHost or RequestUrlPrefix. Each one installs on its own first request."
+            },
+            {
+              "id": "tenants-2",
+              "text": "By default, the first request to a tenant starts its installation. When AutoSetupPath is set, only that path does: /autosetup for the Default tenant, and /harbor/autosetup for a tenant with the prefix harbor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "When it runs",
+      "subtitle": "Validation, failures, and several instances",
+      "clips": [
+        {
+          "id": "07-checks",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "Auto Setup validates its configuration first. When a required key is missing, or there is not exactly one Default tenant, it logs the errors and does not start. It acts only on sites that are not installed."
+            },
+            {
+              "id": "check-2",
+              "text": "When an installation succeeds, an Information level log entry names the site that Auto Setup provisioned. When it fails, for example because the database is unreachable or the password is rejected, the response is 503 Service Unavailable, and the log lists the errors."
+            },
+            {
+              "id": "lock-1",
+              "text": "When several instances share one database, register the Redis Lock feature as a setup feature too, and set the Redis configuration. The instances take the lock one at a time, so the site is installed once."
+            },
+            {
+              "id": "lock-2",
+              "text": "The lock options are optional. When you set LockOptions, give both LockTimeout and LockExpiration a value above zero, in milliseconds. Without LockOptions, a distributed lock uses 60 seconds for each."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Auto Setup",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Auto Setup answers the questions of the Setup screen from configuration. Register it in the host, describe each tenant, keep the secrets in environment variables, and the site installs itself on its first request. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
