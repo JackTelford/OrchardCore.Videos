@@ -4924,9 +4924,9 @@
     "docs": [
       "src/docs/reference/modules/Tenants/README.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 4.5,
-    "words": 0,
+    "words": 682,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

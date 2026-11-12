@@ -1,0 +1,48 @@
+{
+  "title": "Tenants: Run Many Sites From One Application | Orchard Core",
+  "description": "One Orchard Core application can host many separate websites, called tenants. Each tenant has its own address and its own state, and you manage all of them from the Default tenant.\n\nThe Tenants module adds the Multi-Tenancy menu to the Default tenant, with a list of every tenant and the buttons that apply to each state. This video explains what a tenant is, where the Tenants feature is, and how to read the list.\n\nIn this video:\n• What a tenant is: one application, many sites\n• The features and the permissions of the Tenants module\n• Enabling the Tenants feature\n• The list of tenants, with search, filters and bulk actions\n• The states of a tenant and the buttons of each state\n• The Add Tenant form",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MultiTenancy"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Multi-tenancy",
+    "Tenants",
+    "Default tenant",
+    "Tenant management"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Multi-Tenancy"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Tenants"
+  }
+}
