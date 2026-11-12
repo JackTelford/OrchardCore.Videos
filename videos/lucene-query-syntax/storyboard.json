@@ -39,7 +39,7 @@
           "steps": [
             {
               "id": "parse-1",
-              "text": "The search page hands the typed text to the Lucene search service. The service creates a MultiFieldQueryParser from the index's default fields and its analyzer, and parses the text into a query. If parsing fails, it logs the error and returns no results."
+              "text": "The search page hands the typed text to the Lucene search service. The service creates a MultiFieldQueryParser from the index's default fields and its analyzer, and parses the text into a query."
             },
             {
               "id": "parse-2",
@@ -114,7 +114,7 @@
           "steps": [
             {
               "id": "wild-1",
-              "text": "A question mark stands for exactly one character. Replace the letter i of quince with a question mark, and the query still lists both posts that contain quince."
+              "text": "A question mark stands for exactly one character. Replace the letter i of quince with a question mark, and the query lists both posts that contain quince."
             },
             {
               "id": "wild-2",
@@ -126,7 +126,7 @@
             },
             {
               "id": "wild-4",
-              "text": "A tilde after a single word is a fuzzy search. It finds words within two edits of the one typed, so the misspelling quinse still lists both posts that contain quince."
+              "text": "A tilde after a single word is a fuzzy search. It finds words within two edits of the one typed, so the misspelling quinse lists both posts that contain quince."
             },
             {
               "id": "wild-5",
@@ -182,7 +182,7 @@
           "steps": [
             {
               "id": "saved-1",
-              "text": "Lucene queries accept the same syntax in a query_string query, such as one run from Search, Queries, Run Lucene Query. The text goes to a QueryParser, with the default field from the query, which is empty when omitted."
+              "text": "Lucene queries accept the same syntax in a query_string query, such as one run from Search, Queries, Run Lucene Query. The text goes to a QueryParser, whose default field is the one the query names, or empty when it names none."
             },
             {
               "id": "saved-2",

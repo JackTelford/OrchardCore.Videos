@@ -1,6 +1,6 @@
 # Lucene Query Syntax: Write Precise Search Queries
 
-**YouTube:** not published yet · **Length:** 4:58 · **Feature:** `guide:guides/lucene-query-syntax` ([Lucene Query Syntax](https://docs.orchardcore.net/en/latest/guides/lucene-query-syntax/))
+**YouTube:** not published yet · **Length:** 4:54 · **Feature:** `guide:guides/lucene-query-syntax` ([Lucene Query Syntax](https://docs.orchardcore.net/en/latest/guides/lucene-query-syntax/))
 
 A developer video about the text a visitor types into the search page of an Orchard Core site. It shows how the Lucene
 search service parses that text with a `MultiFieldQueryParser`, using the default fields and the analyzer of the
