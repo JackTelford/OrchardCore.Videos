@@ -1,6 +1,6 @@
 # Extend GraphQL: Add Your Own Types and Queries
 
-**YouTube:** not published yet · **Length:** 6:04 · **Feature:** `OrchardCore.Apis.GraphQL` ([GraphQL](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/), [GraphQL Abstractions](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL.Abstractions/))
+**YouTube:** not published yet · **Length:** 6:08 · **Feature:** `OrchardCore.Apis.GraphQL` ([GraphQL](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/), [GraphQL Abstractions](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL.Abstractions/))
 
 The video is for developers of modules. It shows how the GraphQL schema of Orchard Core is built from registered
 services, and the four pieces a module registers to extend it: an object type for a content part, an input type with an

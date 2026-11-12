@@ -3,30 +3,20 @@
 What was checked in the Orchard Core source (commit `92db4a83`, no running site), and what a person must confirm on a
 running site before recording. Paths are relative to `src/` of `OrchardCMS/OrchardCore`.
 
-## 1. The field of a part is named `autoroute`, not `autoroutePart`
+## 1. The Autoroute part is collapsed: `path`, not `autoroute { path }`
 
-The narration (`part-4`, `explorer-1`, `explorer-2`, `where-1`), the slide of `part-4` and the three queries of
-`recording-plan.md` use `autoroute`, from the code:
+The Autoroute module configures its part as collapsed
+(`OrchardCore.Modules/OrchardCore.Autoroute/Startup.cs:92-98`, `partOptions.Collapse = true`). For a collapsed part,
+`TypedContentTypeBuilder.cs:66-90` adds the fields of the object type (`path`) directly to the content type, and `:122-130`
+adds the input fields (`path`, `path_contains`, ...) directly to the `where` argument. So the queries of the clips use
+`path` and `where: { path_contains: "harvest" }`. A part that is not collapsed gets a field named `partName.ToFieldName()`
+(`StringExtensions.cs:10`: no trailing `Part`, camel case), which is what `part-4` says. The documentation shows
+`autoroutePart` and nested queries (`docs/reference/modules/Contents/README.md:321` and `:444-453`,
+`docs/reference/modules/Alias/README.md:282-305`, `docs/reference/modules/Apis.GraphQL.Abstractions/README.md:127-131`).
 
-- `OrchardCore/OrchardCore.ContentManagement.GraphQL/Extensions/StringExtensions.cs:10`: `ToFieldName()` removes a
-  trailing `Part` and writes the rest in camel case;
-- `OrchardCore/OrchardCore.ContentManagement.GraphQL/Queries/Types/TypedContentTypeBuilder.cs:44`: the field of a part on
-  a content type, and its field in the `where` argument (`:134-139`), are named with `partName.ToFieldName()`.
-
-So `AutoroutePart` gives `autoroute`. A comment in `OrchardCore/OrchardCore.ContentManagement.GraphQL/Queries/ContentItemsFieldType.cs:294`
-speaks of "ones with the part suffix removed by the dsl", which agrees. No file of the source tree outside `docs/` (code,
-views, scripts, recipes) uses `autoroutePart` or `aliasPart` as a GraphQL field name; the only `autoroutePart` in the
-GraphQL code is the alias of the index, `Autoroute/GraphQL/AutoroutePartIndexAliasProvider.cs:12`, which is not a field.
-The documentation says `autoroutePart` instead
-(`docs/reference/modules/Contents/README.md:321` and `:444-453`, `docs/reference/modules/Alias/README.md:282-305`,
-`docs/reference/modules/Apis.GraphQL.Abstractions/README.md:127-131`); the release notes of an early version mention
-a fix about the `Part` suffix of part names in `where` statements (`docs/releases/1.0.0-beta3.md:88`). This is reported as a
-documentation issue.
-
-To confirm: in GraphiQL, run `{ blogPost { autoroute { path } } }` and
-`{ blogPost(where: { autoroute: { path_contains: "harvest" } }) { displayText } }`. If the site instead accepts
-`autoroutePart`, the narration of the four steps above, the card of `part-4`, and the queries of `03-explorer` and
-`05-where` change, and the video is recorded after that.
+To confirm: in GraphiQL, run `{ blogPost { displayText path } }` and
+`{ blogPost(where: { path_contains: "harvest" }) { displayText path } }`; the Explorer should list `path` under `blogPost`
+and no `autoroute` field. Read from the source only, not run.
 
 ## 2. GraphiQL: controls that belong to the library, and the layout
 
@@ -38,7 +28,7 @@ not verified:
 - the play button is `button.execute-button`, titled "Execute Query (Ctrl-Enter)"; the editor is `.queryWrap` and the
   results pane `.resultWrap`;
 - the Explorer (`.graphiql-explorer-root`, verified in `graphiql-orchard.css:5`) shows `blogPost` expanded, with
-  `autoroute` checked, when the query comes from the `query` parameter of the address (`App.tsx:46`), and its root
+  `path` checked, when the query comes from the `query` parameter of the address (`App.tsx:46`), and its root
   fields are listed once the introspection request has answered (the wait of every clip);
 - with the admin menu expanded, GraphiQL is 260 pixels narrower (`Views/Admin/Index.cshtml:10`); at 1536x864 the
   Explorer, the editor and the results must all stay readable. If they do not, record the three clips with the menu
@@ -95,7 +85,7 @@ The `spoken` map of `storyboard.json` was written without hearing the voice. Che
 `scripts/pronounce.py` before narrating, in particular:
 
 - `GraphiQL` spoken as "Graphical" (the project's own pronunciation), `YesSql` as "Yes Sequel";
-- `autoroute`, `siteCultures` (spoken "site cultures") and `blogPost` (spoken "blog post");
+- `siteCultures` (spoken "site cultures") and `blogPost` (spoken "blog post");
 - the two library names of `schema-4`, `OrchardCore.Apis.GraphQL.Abstractions` and
   `OrchardCore.ContentManagement.GraphQL`, spoken as words without dots, which make `schema-4` longer than its
   26 counted words suggest;
@@ -103,5 +93,5 @@ The `spoken` map of `storyboard.json` was written without hearing the voice. Che
 
 ## 6. Length
 
-The narration is 909 words, 6:04 at 150 words per minute. The identifiers spoken as
+The narration is 920 words, 6:08 at 150 words per minute. The identifiers spoken as
 several words (see 5) make the voice slower than the count.

@@ -318,7 +318,7 @@ def slide(step_id, chapter_title, label):
         image = slide_base(chapter_title, label, "How the part is found")
         bullets(image, [
             ("1", "Matched by name", "The name of the part class must equal the name of the part on the content type."),
-            ("2", "One field per part", "AutoroutePart becomes the field autoroute: the name without Part, in camel case."),
+            ("2", "One field per part", "Fields sit under the part name without Part, in camel case. Autoroute collapses its part: path sits on the content type."),
             ("3", "Every content type", "Each content type that has the part gets the field, unless its GraphQL options hide or collapse the part."),
         ])
         return image
@@ -405,7 +405,7 @@ def slide(step_id, chapter_title, label):
         bullets(image, [
             ("1", "Autoroute and Alias", "An object type, an input type, an alias provider and an index."),
             ("2", "Localization and Layers", "A schema builder with an object type."),
-            ("3", "Media", "A schema builder with arguments, and an object type for the media field."),
+            ("3", "Media", "A schema builder, and an object type for the media field."),
             ("4", "Content management GraphQL library", "ContentItemFilters, a GraphQLFilter registered with AddGraphQLFilterType."),
         ])
         return image

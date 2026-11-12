@@ -112,7 +112,7 @@ in place (its path is `blog/post-1`): `explorer-2` lists four posts, with that o
 
 ### Check the seed
 
-Open `/Admin/GraphQL`, run `{ blogPost { displayText autoroute { path } } }` and `{ siteCultures { culture default } }`
+Open `/Admin/GraphQL`, run `{ blogPost { displayText path } }` and `{ siteCultures { culture default } }`
 (the queries of `03-explorer` and `07-run`), and compare with the end states described for `explorer-2` and `run-2`. Then stop the site, and copy its
 `App_Data` folder aside together with `state.json`.
 
@@ -150,7 +150,7 @@ The results pane is `.resultWrap`; wait for text in it with a concrete condition
 Starts on:
 
 ```
-/Admin/GraphQL?query=%7B%0A%20%20blogPost%20%7B%0A%20%20%20%20displayText%0A%20%20%20%20autoroute%20%7B%0A%20%20%20%20%20%20path%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D
+/Admin/GraphQL?query=%7B%0A%20%20blogPost%20%7B%0A%20%20%20%20displayText%0A%20%20%20%20path%0A%20%20%7D%0A%7D
 ```
 
 which puts this query in the editor:
@@ -159,9 +159,7 @@ which puts this query in the editor:
 {
   blogPost {
     displayText
-    autoroute {
-      path
-    }
+    path
   }
 }
 ```
@@ -176,9 +174,9 @@ Wait for `.graphiql-explorer-root` to contain the text `blogPost`.
 - `explorer-2`: actions: `ClearHighlightsAsync()`, click the play button (`button.execute-button`), wait until the
   results pane contains the text `"path"`, wait 1.5 seconds, then `HighlightAsync` on the Explorer
   (`.graphiql-explorer-root`) and nothing else. On screen when the narration ends: the results pane showing
-  `data.blogPost` with an entry per post, each with `displayText` and `autoroute.path`; first
+  `data.blogPost` with an entry per post, each with `displayText` and `path`; first
   `Orchard Tour Dates` with `blog/orchard-tour-dates`, then `Pruning in Winter` and `Harvest Notes`; and the Explorer
-  ringed, with `blogPost` open and `autoroute` checked under it. The label "Explorer" comes from
+  ringed, with `blogPost` open and `path` checked under it. The label "Explorer" comes from
   `src/OrchardCore.Modules/OrchardCore.Apis.GraphQL/Assets/js/App.tsx:118`.
 
 ## Clip `05-where` (chapter 05: Try the filter)
@@ -186,18 +184,16 @@ Wait for `.graphiql-explorer-root` to contain the text `blogPost`.
 Starts on:
 
 ```
-/Admin/GraphQL?query=%7B%0A%20%20blogPost%28where%3A%20%7B%20autoroute%3A%20%7B%20path_contains%3A%20%22harvest%22%20%7D%20%7D%29%20%7B%0A%20%20%20%20displayText%0A%20%20%20%20autoroute%20%7B%0A%20%20%20%20%20%20path%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D
+/Admin/GraphQL?query=%7B%0A%20%20blogPost%28where%3A%20%7B%20path_contains%3A%20%22harvest%22%20%7D%29%20%7B%0A%20%20%20%20displayText%0A%20%20%20%20path%0A%20%20%7D%0A%7D
 ```
 
 which puts this query in the editor:
 
 ```graphql
 {
-  blogPost(where: { autoroute: { path_contains: "harvest" } }) {
+  blogPost(where: { path_contains: "harvest" }) {
     displayText
-    autoroute {
-      path
-    }
+    path
   }
 }
 ```
@@ -205,11 +201,12 @@ which puts this query in the editor:
 Wait for `.graphiql-explorer-root` to contain the text `blogPost`.
 
 - `where-1`: actions: `HighlightAsync` on the query editor (`.queryWrap`) with the caption `where`. On screen when
-  the narration ends: the editor with the query above, ringed, and the results pane empty. The argument names `where`,
-  `autoroute` and `path_contains` come from the schema, not from a label: `where` from
-  `src/OrchardCore/OrchardCore.ContentManagement.GraphQL/Queries/ContentItemsFieldType.cs:44-50`, `autoroute` from
-  `src/OrchardCore/OrchardCore.ContentManagement.GraphQL/Queries/Types/TypedContentTypeBuilder.cs:44` and `:134-139`, and
-  `path_contains` from `src/OrchardCore/OrchardCore.Apis.GraphQL.Abstractions/Queries/WhereInputObjectGraphType.cs:57`.
+  the narration ends: the editor with the query above, ringed, and the results pane empty. The argument names `where` and
+  `path_contains` come from the schema, not from a label: `where` from
+  `src/OrchardCore/OrchardCore.ContentManagement.GraphQL/Queries/ContentItemsFieldType.cs:44-50`, `path` and the lack of
+  an `autoroute` level from the collapse of the part (`src/OrchardCore.Modules/OrchardCore.Autoroute/Startup.cs:92-98`,
+  `src/OrchardCore/OrchardCore.ContentManagement.GraphQL/Queries/Types/TypedContentTypeBuilder.cs:66-90` and `:122-130`),
+  and `path_contains` from `src/OrchardCore/OrchardCore.Apis.GraphQL.Abstractions/Queries/WhereInputObjectGraphType.cs:57`.
 - `where-2`: actions: `ClearHighlightsAsync()`, click the play button, wait until the results pane contains the text
   `harvest-notes`, wait 1.5 seconds. On screen when the narration ends: the results pane showing a single entry,
   `Harvest Notes` with `blog/harvest-notes`, and none of the other posts.

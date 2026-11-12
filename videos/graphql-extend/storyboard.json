@@ -104,7 +104,7 @@
             },
             {
               "id": "part-4",
-              "text": "The match is made by name. By default, a content type whose part has the same name as the part class gets a field for it. The field is the part name without Part, in camel case, so AutoroutePart becomes autoroute."
+              "text": "The match is made by name: the part on the content type must be named like the part class. Its fields then sit under the part name without Part, in camel case. Autoroute collapses its part, so path sits directly on the content type."
             }
           ]
         }
@@ -121,11 +121,11 @@
           "steps": [
             {
               "id": "explorer-1",
-              "text": "This is GraphiQL, under Tools. The query asks for the display text of each blogPost, and for autoroute, the field that comes from the object type the Autoroute module registers."
+              "text": "This is GraphiQL, under Tools. The query asks for the display text of each blogPost, and for path, a field that comes from the object type the Autoroute module registers."
             },
             {
               "id": "explorer-2",
-              "text": "Run the query. Each post comes back with its display text and its path, read from the AutoroutePart. The Explorer on the left lists autoroute among the fields of blogPost."
+              "text": "Run the query. Each post comes back with its display text and its path, read from the AutoroutePart. The Explorer on the left lists path among the fields of blogPost."
             }
           ]
         }
@@ -167,7 +167,7 @@
           "steps": [
             {
               "id": "where-1",
-              "text": "In GraphiQL, the where argument of blogPost accepts autoroute, with the path filters inside it. This query asks for the posts whose path contains harvest."
+              "text": "In GraphiQL, the where argument of blogPost accepts the path filters directly, because the Autoroute module collapses its part. This query asks for the posts whose path contains harvest."
             },
             {
               "id": "where-2",
@@ -250,7 +250,7 @@
             },
             {
               "id": "hook-3",
-              "text": "Register a filter with AddGraphQLFilterType, naming the type to filter and the filter. Every registered filter runs, in order, for each content type query. Do not end the query in PreQueryAsync, because the module still adds conditions to it."
+              "text": "Register a filter with AddGraphQLFilterType, naming the type to filter and the filter. Every registered filter runs, in order, for each content type query. The module then adds its own conditions to the query that the filters return."
             }
           ]
         }
@@ -267,7 +267,7 @@
           "steps": [
             {
               "id": "source-1",
-              "text": "Orchard Core's own source shows a working example of each piece. Autoroute and Alias filter by a part, Localization and Layers add queries, Media adds arguments, and the content management GraphQL library holds the filter."
+              "text": "Orchard Core's own source shows a working example of each piece. Autoroute and Alias filter by a part, Localization and Layers add queries, Media adds a query and a field type, and the content management GraphQL library holds the filter."
             }
           ]
         }
