@@ -1,0 +1,294 @@
+{
+  "title": "Orchard Core Sitemaps",
+  "output": "sitemaps-create",
+  "spoken": {
+    " .xml.": " dot X.M.L.",
+    " .xml,": " dot X.M.L.,",
+    "Base url": "Base U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Sitemaps",
+      "subtitle": "Help search engines find your pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A sitemap lists the pages of your site in a form that search engines read. The Sitemaps module builds that list from your content. In this video, you create a sitemap, choose its content, and control single pages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a sitemap is",
+      "subtitle": "A list of pages for search engines",
+      "clips": [
+        {
+          "id": "01-what",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "A sitemap is an XML document that lists the addresses of your pages. Each entry can also carry the date the page last changed, how often it changes, and its priority compared with other pages."
+            },
+            {
+              "id": "what-2",
+              "text": "In Orchard Core, a sitemap has a name, a permalink that ends in .xml, and an Enabled setting. Browsing to the permalink shows the sitemap, which is built from its sources."
+            },
+            {
+              "id": "what-3",
+              "text": "A source decides what the sitemap lists. Sitemap Content Types lists the content items of the content types you choose. Sitemap Custom Path lists a single address that you type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Before you start",
+      "subtitle": "Enable the module and set the Base url",
+      "clips": [
+        {
+          "id": "02-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "Sitemaps is a feature that you enable. Open Tools, Features, search for Sitemaps, and enable the feature named Sitemaps."
+            },
+            {
+              "id": "setup-2",
+              "text": "Its pages appear under Tools, Search Engine Optimization: Sitemaps, Sitemap Indexes, and Sitemaps Cache. Open Sitemaps."
+            },
+            {
+              "id": "setup-3",
+              "text": "A warning says the Base url setting is empty. Every address in a sitemap starts with the Base url, so a sitemap needs it."
+            },
+            {
+              "id": "setup-4",
+              "text": "Open Settings, General. Enter the address of your site in Base url, and save. Sitemaps use it to build each address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a sitemap",
+      "subtitle": "A name, a permalink and an Enabled setting",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "On the Sitemaps page, choose Add Sitemap. Type a Name. Let's call this sitemap Pages."
+            },
+            {
+              "id": "create-2",
+              "text": "Permalink is the address where the sitemap is served, after the Base url. Leave it empty, and the module builds it from the name, ending in .xml."
+            },
+            {
+              "id": "create-3",
+              "text": "Enabled is checked. If you uncheck it, the module stops serving the sitemap, but keeps it. Choose Create."
+            },
+            {
+              "id": "create-4",
+              "text": "The sitemap appears in the list with an Enabled badge. Its buttons manage the sources, view the sitemap, edit its name, permalink, and Enabled setting, or delete it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add a source",
+      "subtitle": "Choose what the sitemap lists",
+      "clips": [
+        {
+          "id": "04-source",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "A sitemap lists nothing until it has a source. Choose Manage Sources, and then Add Source."
+            },
+            {
+              "id": "source-2",
+              "text": "Available Sources offers Sitemap Content Types and Sitemap Custom Path. Choose Add on Sitemap Content Types."
+            },
+            {
+              "id": "source-3",
+              "text": "Index All Content Types is checked. The sitemap then lists every published content item whose content type has the Autoroute part, because Autoroute gives an item its address."
+            },
+            {
+              "id": "source-4",
+              "text": "Change Frequency and Priority are the defaults for these entries. Priority runs from zero to one, and ranks a page against the other pages of your site. Choose Create."
+            },
+            {
+              "id": "source-5",
+              "text": "The source is listed with the badge All. The sitemap serves an entry for each of those content items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "View the sitemap",
+      "subtitle": "What search engines receive",
+      "clips": [
+        {
+          "id": "05-view",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "Choose View. The sitemap opens in another tab, at its permalink on your site."
+            },
+            {
+              "id": "view-2",
+              "text": "Each content item has an entry with its address and, when it has one, its last modified date. The change frequency and the priority come from the source."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Choose content types",
+      "subtitle": "List only some of them",
+      "clips": [
+        {
+          "id": "06-types",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "To list only some types, go back to Manage Sources, choose Edit on the source, and uncheck Index All Content Types."
+            },
+            {
+              "id": "types-2",
+              "text": "A list of content types appears. Only content types with the Autoroute part are listed. Check Article and Blog Post."
+            },
+            {
+              "id": "types-3",
+              "text": "Each checked type has its own Change Frequency and Priority. Set Blog Post to Weekly with a higher priority, and Article to Monthly. Then choose Save."
+            },
+            {
+              "id": "types-4",
+              "text": "The source shows a badge for each selected type. Viewing the sitemap again lists only articles and blog posts, with the values you set."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Add a custom path",
+      "subtitle": "One address that you type",
+      "clips": [
+        {
+          "id": "07-path",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "path-1",
+              "text": "The Tags page of this site is not in the sitemap, because the source selects only two content types. Choose Add Source, and then Add on Sitemap Custom Path."
+            },
+            {
+              "id": "path-2",
+              "text": "Type tags as the Path. The hint shows the format, with no leading slash. A path cannot contain spaces, dots, or most other punctuation."
+            },
+            {
+              "id": "path-3",
+              "text": "Set Change Frequency to Monthly, and choose Create. The source is listed with its path and the label Sitemap Custom Path."
+            },
+            {
+              "id": "path-4",
+              "text": "Viewing the sitemap shows the Tags address next to the articles and blog posts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Control a single page",
+      "subtitle": "The Sitemap part",
+      "clips": [
+        {
+          "id": "08-part",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "To control a single page, add the Sitemap part to its content type. A part adds its settings to every item of the type. Open Design, Content Definition, Content Types, and edit Article."
+            },
+            {
+              "id": "part-2",
+              "text": "Choose Add Parts, check Sitemap, and choose Add Selected Parts. Content items are listed without this part. It lets a single item be excluded or configured."
+            },
+            {
+              "id": "part-3",
+              "text": "Open Content, Content Items, and edit the About article. The Sitemap settings are on the SEO tab. Check Override sitemap configuration to show them."
+            },
+            {
+              "id": "part-4",
+              "text": "Exclude removes this item from the sitemaps that list it. Change Frequency and Priority replace the source's values for this item only. Check Exclude, and choose Publish."
+            },
+            {
+              "id": "part-5",
+              "text": "Publishing makes the sitemap build again on its next view. View it, and About is gone. Items that do not override the configuration keep the values of their source."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Reaching search engines",
+      "subtitle": "Sitemaps in the robots file",
+      "clips": [
+        {
+          "id": "09-reach",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "reach-1",
+              "text": "When the SEO feature is enabled, the site serves a robots file. If the site has no robots file of its own and the Base url is set, the module can list your enabled sitemaps and sitemap indexes in it."
+            },
+            {
+              "id": "reach-2",
+              "text": "It does so once Include all sitemaps is checked and saved. You find that setting under Settings, Search, Search Engine Optimization, Robots. A separate video covers the robots file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Sitemaps",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You created a sitemap, chose what it lists, and controlled single pages. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
