@@ -1,0 +1,49 @@
+{
+  "title": "Encoding Settings: Render Non-ASCII Text Without Encoding | Orchard Core",
+  "description": "By default, the encoders of ASP.NET Core encode every character outside the ASCII range. Accented and non-Latin text reaches the page source as character codes, and the response gets bigger.\n\nOrchard Core takes its encoders from dependency injection, so one WebEncoderOptions setting in your web application lets the encoders keep the Unicode ranges you use as they are. Your own code follows the same setting when it takes the encoders from dependency injection too.\n\nIn this video:\n• Why the default encoders encode non-ASCII text\n• How to allow the Unicode ranges you use, and why every tenant shares the setting\n• How to inject HtmlEncoder, UrlEncoder and JavaScriptEncoder in your own code",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AspNetCore"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Unicode",
+    "encoding",
+    "HtmlEncoder",
+    "WebEncoderOptions",
+    "dependency injection"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/encoding-settings/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/encoding-settings/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/encoding-settings"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "title": "Customizing encoding settings",
+  "output": "encoding-settings",
+  "spoken": {
+    "HtmlEncoder.Default": "HTML Encoder dot Default",
+    "UnicodeRanges.All": "Unicode Ranges dot All",
+    "WebEncoderOptions": "Web Encoder Options",
+    "TextEncoderSettings": "Text Encoder Settings",
+    "HtmlEncoder": "HTML Encoder",
+    "Latin1Supplement": "Latin 1 Supplement",
+    "BasicLatin": "Basic Latin",
+    "Program.cs": "Program dot C.S."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Customizing encoding settings",
+      "subtitle": "Render non-ASCII text without encoding it",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core writes text through the encoders of ASP.NET Core, which by default encode every character outside the ASCII range. In this video, we'll see why, how to allow the Unicode ranges you use, and how to use the same encoders in your own code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why text is encoded",
+      "subtitle": "The default safe list of the encoders",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "ASP.NET Core has an encoder for HTML, one for URLs, and one for JavaScript. By default, each of them leaves only the Basic Latin range, which is ASCII, as it is, and encodes everything else."
+            },
+            {
+              "id": "why-2",
+              "text": "Take a title such as Café Münster. With the default encoders, the page source holds each accented letter as a character code. The browser shows the same text, but the source is longer and harder to read."
+            },
+            {
+              "id": "why-3",
+              "text": "That is technically correct, but it makes the response bigger. Orchard Core registers the web encoders once for the host, and its Liquid templates and shape renderer take the HTML encoder from dependency injection, so one setting reaches them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Allow the ranges you use",
+      "subtitle": "WebEncoderOptions in the host application",
+      "clips": [
+        {
+          "id": "02-config",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "config-1",
+              "text": "To change the default, configure WebEncoderOptions in the Program.cs file of your web application. Set its TextEncoderSettings to allow UnicodeRanges.All. The first lines of the file import the three namespaces that these types need."
+            },
+            {
+              "id": "config-2",
+              "text": "UnicodeRanges.All covers the whole Basic Multilingual Plane. WebEncoderOptions holds the options that the HTML encoder, the URL encoder, and the JavaScript encoder share, so this one call configures all three."
+            },
+            {
+              "id": "config-3",
+              "text": "The default list is cautious on purpose: ASP.NET Core documents it as protection against browser bugs. So ideally you allow only the ranges your text uses, instead of all of them."
+            },
+            {
+              "id": "config-4",
+              "text": "Latin1Supplement, for example, holds accented letters like those in Café Münster. BasicLatin and Latin1Supplement together cover that title, so the call lists only those two ranges."
+            },
+            {
+              "id": "config-5",
+              "text": "The call belongs to the host application. Orchard Core shares the singleton services of the host with every tenant, and the encoders are singletons, so every tenant uses the same encoders."
+            },
+            {
+              "id": "config-6",
+              "text": "With those two ranges allowed, the page source holds the title as it is written. The browser shows the same text either way, and the source is shorter and more readable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Encoders in your code",
+      "subtitle": "Inject them, don't call the static ones",
+      "clips": [
+        {
+          "id": "03-inject",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "inject-1",
+              "text": "In your own code, take the encoders from dependency injection. Add an HtmlEncoder parameter to the constructor of your service, and keep it in a field."
+            },
+            {
+              "id": "inject-2",
+              "text": "Then call Encode on that field wherever your code writes text. The Title module's MetaWeblog driver does this: it receives an HtmlEncoder in its constructor, and encodes the title with it."
+            },
+            {
+              "id": "inject-3",
+              "text": "Don't call HtmlEncoder.Default, or the default of any other encoder. The static encoders use only the Basic Latin safe list, so the ranges you configured do not apply to them. An injected encoder follows your settings."
+            },
+            {
+              "id": "inject-4",
+              "text": "The URL encoder and the JavaScript encoder work the same way. The Google Analytics filter of Orchard Core takes both in its constructor, and encodes the tracking ID with each of them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Customizing encoding settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's encoding settings: allow the Unicode ranges your text uses in the host application, and take the encoders from dependency injection in your own code. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

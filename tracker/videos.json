@@ -6778,9 +6778,9 @@
     "docs": [
       "src/docs/guides/encoding-settings/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.3,
+    "words": 492,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
