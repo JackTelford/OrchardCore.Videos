@@ -1,0 +1,47 @@
+{
+  "title": "Lists: Group Content Items in a Container | Orchard Core",
+  "description": "Some content belongs together: the posts of a blog, the pages of a help center. Without a container, each item stands alone, and nothing says which items go together.\n\nThe Lists module adds the List part. A content type that has it becomes a list: a content item that holds other content items, with its own admin page to create and find them, and a page on the site that shows the published ones.\n\nIn this video:\n• What a list is\n• The Blog as a list in the admin\n• Creating a list type with the List part\n• Creating a list and adding items to it\n• Finding items by status and by title\n• Seeing the list on the site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Lists",
+    "Content Items",
+    "Content Types",
+    "Content Management"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Lists"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lists/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Lists/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Lists"
+  }
+}
