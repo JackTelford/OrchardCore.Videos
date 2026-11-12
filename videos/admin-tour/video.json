@@ -1,0 +1,68 @@
+{
+  "title": "The Admin: Find Your Way Around Orchard Core | Orchard Core",
+  "description": "The admin of an Orchard Core site holds many pages, from content and themes to users and settings. Finding the one you need starts with knowing the ways to reach it: the menu, the breadcrumb, quick navigation from the keyboard, and the logo.\n\nThis video tours the admin of a site made with the Blog recipe: its start page, its menu, the breadcrumb, quick navigation, and the tools in the top bar.\n\nIn this video:\n• The admin at a glance: its three parts, its own theme, and the permission that opens it\n• The start page and its cards\n• The admin menu: sections, the current page, and the collapsed menu\n• Page titles and the breadcrumb\n• Quick navigation with Ctrl+K\n• Content Quick Navigation: content items in the palette\n• The top bar: Visit Site, the theme toggle, and your user menu\n• Four ways to reach a page",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Orchard Core admin",
+    "admin menu",
+    "quick navigation",
+    "breadcrumb"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Admin",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Admin/"
+    },
+    {
+      "label": "Documentation: Contents",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Documentation: Admin Menu",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AdminMenu/"
+    },
+    {
+      "label": "Documentation: Navigation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Navigation/"
+    },
+    {
+      "label": "Documentation: Localization",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Admin/README.md",
+    "src/docs/reference/modules/Contents/README.md",
+    "src/docs/reference/modules/AdminMenu/README.md",
+    "src/docs/reference/modules/Localize/README.md",
+    "src/docs/reference/modules/Navigation/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Admin"
+  }
+}
