@@ -1,0 +1,261 @@
+{
+  "title": "Media in Templates",
+  "output": "media-in-templates",
+  "spoken": {
+    "OrchardCore.Media.Core.Processing": "Orchard Core dot Media dot Core dot Processing",
+    "OrchardCore.Media": "Orchard Core dot Media",
+    "asset_url": "asset URL",
+    "img_tag": "image tag",
+    "resize_url": "resize URL",
+    "append_version": "append version",
+    "data_order": "data underscore order",
+    "data-order": "data dash order",
+    "AssetProfileUrlAsync": "Asset Profile URL Async",
+    "AssetUrl": "Asset URL",
+    "IsImageFile": "Is Image File",
+    "resizeMode": "resize mode",
+    "bgColor": "B.G. color",
+    "appendVersion": "append version",
+    "asset-src": "asset source",
+    "asset-href": "asset H ref",
+    "img-width": "image width",
+    "img-height": "image height",
+    "img-resize-mode": "image resize mode",
+    "img-quality": "image quality",
+    "img-format": "image format",
+    "img-bgcolor": "image B.G. color",
+    "img-profile": "image profile",
+    "img-anchor": "image anchor",
+    "asp-append-version": "A.S.P. append version",
+    "bgcolor": "B.G. color",
+    "WebP": "web P",
+    "src": "source",
+    "href": "H ref",
+    "img": "image"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Media in Templates",
+      "subtitle": "Image resizing, asset URLs and tag helpers",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A media field stores the path of a file in the media library, not its address. In this video, you will turn those paths into URLs, resize images on demand, and render images and links with Liquid filters, Razor helpers, and tag helpers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "From a path to an image",
+      "subtitle": "How the Media module serves a resized image",
+      "clips": [
+        {
+          "id": "01-path",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "path-1",
+              "text": "A template turns that path into a public URL. The URL is the media request path, with the URL prefix of the tenant and the CDN base URL added when the site uses them."
+            },
+            {
+              "id": "path-2",
+              "text": "A resized URL adds commands to the query string, such as the width, the height, and the resize mode. The Media module resizes the image when the browser requests it, and keeps the result in a cache for the next request."
+            },
+            {
+              "id": "path-3",
+              "text": "By default, the Media module signs the commands with a token that is unique to the tenant. Templates add the token for you, so any size works. A URL without a token only accepts the supported sizes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Liquid filters",
+      "subtitle": "Asset URLs, image tags and resizing",
+      "clips": [
+        {
+          "id": "02-liquid",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "liquid-1",
+              "text": "The asset_url filter turns a path into a URL. The img_tag filter writes an img element from a URL, and each named argument becomes an attribute. An underscore in an argument name becomes a dash, so data_order is written as data-order."
+            },
+            {
+              "id": "liquid-2",
+              "text": "The resize_url filter adds resize commands to a URL. Name each argument: width, height, and mode. Without a mode, max fits the image inside the size and keeps its proportions, even when you pass only a width."
+            },
+            {
+              "id": "liquid-3",
+              "text": "Crop fills the size and cuts what falls outside. Pad fits the image inside the size and fills the rest with a background color. Stretch fills the size and ignores the proportions."
+            },
+            {
+              "id": "liquid-4",
+              "text": "Set the pad color with bgcolor, as a hexadecimal value. Quality applies to JPEG and WebP images. Format accepts GIF, JPEG, PNG, and WebP, and without it, the image keeps the format of its source file."
+            },
+            {
+              "id": "liquid-5",
+              "text": "When the field settings Allow media text and Allow anchors are on, the field stores a text and an anchor for each file. Use the text as the alt attribute, and pass the anchor to resize_url to center a crop on it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Media profiles",
+      "subtitle": "Resize commands under a name",
+      "clips": [
+        {
+          "id": "03-profile",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "profile-1",
+              "text": "A media profile stores resize commands under a name. The Profiles page, under Media, lists the profiles of the site, with their hints."
+            },
+            {
+              "id": "profile-2",
+              "text": "Let's open thumbnail. Its Width and Height are 160, its Resize Mode is Crop, and Format and Quality keep their defaults."
+            },
+            {
+              "id": "profile-3",
+              "text": "A template refers to a profile by its name alone. The Liquid filters, the Razor helpers, and the tag helpers each accept that name, and the next slides show how."
+            }
+          ]
+        },
+        {
+          "id": "03-use",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "profile-4",
+              "text": "In Liquid, pass the name with the profile argument. Any other argument you name, such as mode, overrides the value that the profile defines."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Razor helpers",
+      "subtitle": "Asset URLs and profiles from a view",
+      "clips": [
+        {
+          "id": "04-razor",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "razor-1",
+              "text": "In a Razor view, the Orchard property gives you the helpers. AssetUrl maps a path to a URL, and IsImageFile checks the extension. The display template of the media field uses both to choose between an img element and a link."
+            },
+            {
+              "id": "razor-2",
+              "text": "AssetUrl takes the resize options of the Liquid filter, and appendVersion, as named parameters: width, height, resizeMode, quality, format, anchor, and bgColor. Resize mode and format are enums: add a using for OrchardCore.Media.Core.Processing."
+            },
+            {
+              "id": "razor-3",
+              "text": "For a media profile, call AssetProfileUrlAsync with the profile name, and await it. Optional parameters override the profile. Resizing applies when you pass a width, a height, or a profile."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Tag helpers",
+      "subtitle": "Images and links from media paths",
+      "clips": [
+        {
+          "id": "05-tags",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tag-1",
+              "text": "To use the tag helpers, reference the OrchardCore.Media package and register them in the view imports file. On an img element, asset-src sets src from a media path. On a link, asset-href sets href."
+            },
+            {
+              "id": "tag-2",
+              "text": "The resize attributes are img-width, img-height, img-resize-mode, img-quality, and img-format. They apply when a width, a height, or a profile is set. For a pad, img-bgcolor sets the background color."
+            },
+            {
+              "id": "tag-3",
+              "text": "Use img-profile for a media profile, and the other attributes override it. Pass an anchor with img-anchor. Add asp-append-version to put a hash of the file in the URL."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The result in the browser",
+      "subtitle": "One image, five renditions",
+      "clips": [
+        {
+          "id": "06-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "This page shows one image five times, with different resize arguments. Under each image, the page prints the URL that the filter returned, without its token."
+            },
+            {
+              "id": "result-2",
+              "text": "Max keeps the proportions. Crop fills the square. Pad adds bars in the background color, and stretch squeezes the whole picture into the square."
+            },
+            {
+              "id": "result-3",
+              "text": "The last image uses the thumbnail profile. The other four ask for 200 pixels, which is not a supported size, and they work because the token signs the commands."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Versions and the image engine",
+      "subtitle": "Cache busting and a custom engine",
+      "clips": [
+        {
+          "id": "07-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "end-1",
+              "text": "Each syntax can append a version, a hash of the source file: the append_version filter, the appendVersion parameter, and asp-append-version. When the file is replaced, the URL changes, and so does the resized file in the cache."
+            },
+            {
+              "id": "end-2",
+              "text": "To resize with another library, implement I Image Processing Engine, and replace its registration. The Media module validates the request first, so the engine receives typed commands and never reads the query string."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Media in Templates",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's media in templates: asset URLs for paths, signed resize URLs for images, and profiles by name, in Liquid, Razor, and tag helpers. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
