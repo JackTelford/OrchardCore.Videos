@@ -229,7 +229,7 @@
             },
             {
               "id": "task-3",
-              "text": "The execution state on these pages is kept in memory by the server that rendered them, so behind a load balancer they need session affinity."
+              "text": "The execution state on these pages is kept in memory by the server that rendered them, so behind a load balancer, a page shows the state of whichever server answered the request."
             }
           ]
         }

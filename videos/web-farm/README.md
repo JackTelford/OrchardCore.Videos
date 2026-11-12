@@ -1,6 +1,6 @@
 # Run in a Web Farm: Distributed Tenants, Workers and Shared Storage
 
-**YouTube:** not published yet · **Length:** 6:30 · **Feature:** `OrchardCore.Tenants.Distributed` ([Tenants](https://docs.orchardcore.net/en/latest/reference/modules/Tenants/))
+**YouTube:** not published yet · **Length:** 6:33 · **Feature:** `OrchardCore.Tenants.Distributed` ([Tenants](https://docs.orchardcore.net/en/latest/reference/modules/Tenants/))
 
 The video shows what Orchard Core keeps on each server of a web farm, and what keeps the servers in step: the tenant
 settings shared through the Azure Shells Configuration provider, the Distributed Tenants feature with a Redis cache, and
