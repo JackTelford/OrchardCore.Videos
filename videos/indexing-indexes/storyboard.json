@@ -1,0 +1,240 @@
+{
+  "title": "Indexes in Orchard Core",
+  "output": "indexing-indexes",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Indexes in Orchard Core",
+      "subtitle": "Create, rebuild and reset search indexes",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Search needs an index. The Indexing module creates, edits and rebuilds indexes from one page of the admin. In this video, you add an index, see what Synchronize, Reset and Rebuild do, and keep indexes up to date."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What an index is",
+      "subtitle": "A copy of your content, built for searching",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A search index is a copy of your content, arranged so that a search can find words quickly. The site searches the index instead of reading every content item."
+            },
+            {
+              "id": "why-2",
+              "text": "The Indexing module manages indexes. A provider stores them: Lucene, Elasticsearch or Azure AI Search, each enabled as a feature. A source decides what an index holds, for example the content items of the site."
+            },
+            {
+              "id": "why-3",
+              "text": "When a content item changes, the site updates the indexes that include its content type, and records the change in a log. The optional Indexing Worker is a background task that goes through that log every minute by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add an index",
+      "subtitle": "Provider, name, content types and options",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "This site has the Lucene feature enabled. Open Search, then Indexes. The list is empty, and the page says there are no indexes."
+            },
+            {
+              "id": "create-2",
+              "text": "Select Add index. Available Sources groups the sources by provider. Under Lucene, select Add on the Content in Lucene card."
+            },
+            {
+              "id": "create-3",
+              "text": "Index Name is the name the provider uses, and it can't be changed after you save. Type articles, and the Name field fills in from it."
+            },
+            {
+              "id": "create-4",
+              "text": "Name identifies the index in the list and must be unique. Culture is set to Any culture, which indexes the content of every culture."
+            },
+            {
+              "id": "create-5",
+              "text": "Content types lists the content types of the site. Choose at least one. Let's select Article, so the index holds articles."
+            },
+            {
+              "id": "create-6",
+              "text": "Index Latest version is unchecked, so only the published version of a content item is indexed. Lucene adds options of its own, which a separate video covers."
+            },
+            {
+              "id": "create-7",
+              "text": "Select Save. A message says that an index was created and that the synchronizing process was triggered in the background."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Three ways to update an index",
+      "subtitle": "Synchronize, Reset and Rebuild",
+      "clips": [
+        {
+          "id": "03-update",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "diff-1",
+              "text": "Synchronize applies the content changes that the index has not processed. Entries that did not change stay as they are."
+            },
+            {
+              "id": "diff-2",
+              "text": "Reset starts again from the beginning of the log, so every recorded update is processed again. The index keeps its entries, and entries are added or updated as needed."
+            },
+            {
+              "id": "diff-3",
+              "text": "Rebuild deletes the index, creates it empty, and fills it again from the log. The refill runs in the background, so searches can return incomplete results until it finishes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Run the actions",
+      "subtitle": "Synchronize, Reset and Rebuild on an index",
+      "clips": [
+        {
+          "id": "04-actions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "actions-1",
+              "text": "On the Indexes page, a second index, pages, holds the Page content type. Each index has Edit and Delete buttons, and an Actions menu. The badges show the provider, Lucene, and the type of source, Content."
+            },
+            {
+              "id": "actions-2",
+              "text": "Open the Actions menu. Query Index comes from Lucene. Synchronize, Reset and Rebuild manage the index, and Force Delete removes it."
+            },
+            {
+              "id": "actions-3",
+              "text": "Select Synchronize. A message says the synchronizing process was triggered in the background."
+            },
+            {
+              "id": "actions-4",
+              "text": "Select Reset. A message says the index was reset, and that the synchronizing process was triggered in the background."
+            },
+            {
+              "id": "actions-5",
+              "text": "Select Rebuild. A message says the index was rebuilt, and that the synchronizing process was triggered in the background."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Edit and delete indexes",
+      "subtitle": "Change an index, remove one, act on several",
+      "clips": [
+        {
+          "id": "05-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "On the Indexes page, select Edit on the articles index. Index Name is disabled and can't be changed. Name, Culture, Content types and Index Latest version can be edited."
+            },
+            {
+              "id": "edit-2",
+              "text": "Let's select Blog Post as a second content type, and check Index Latest version, so a draft is indexed when an item has one. Select Save."
+            },
+            {
+              "id": "edit-3",
+              "text": "A message says the index was updated. Saving does not process content again, so use Reset to process the log again and add content of the added type, or Rebuild to start from an empty index."
+            },
+            {
+              "id": "edit-4",
+              "text": "Delete asks you to confirm before it removes the index. If Delete reports an error, Force Delete in the Actions menu removes the index from the site even when the provider could not delete it. Let's cancel both."
+            },
+            {
+              "id": "edit-5",
+              "text": "To act on several indexes at once, select them in the list. The Actions menu above the list then offers Synchronize, Reset, Rebuild and Delete."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Keep indexes current",
+      "subtitle": "The Indexing Worker",
+      "clips": [
+        {
+          "id": "06-worker",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "worker-1",
+              "text": "Let's open Tools, Features and search for Indexing Worker. It adds a background task that periodically synchronizes the indexes with the content items that changed. Select Enable."
+            },
+            {
+              "id": "worker-2",
+              "text": "With the Background Tasks feature enabled, Tools, Background Tasks lists it as Indexes Content Updater, with a description. By default it runs every minute."
+            },
+            {
+              "id": "worker-3",
+              "text": "Saving content updates the indexes with or without the worker. The worker also synchronizes every content index on a schedule, so you don't have to select Synchronize yourself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Who can manage indexes",
+      "subtitle": "The Manage Indexes permission",
+      "clips": [
+        {
+          "id": "07-permission",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "The Indexes page, and adding, editing, deleting, synchronizing, resetting and rebuilding an index, need the Manage Indexes permission. Administrators have it by default, and you can give it to other roles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Indexes in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Add an index, choose its content types, use Synchronize, Reset or Rebuild when it needs attention, and let the Indexing Worker apply pending changes on a schedule. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

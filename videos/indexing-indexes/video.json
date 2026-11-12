@@ -1,0 +1,48 @@
+{
+  "title": "Indexes: Create, Rebuild and Reset Search Indexes | Orchard Core",
+  "description": "A search index that is missing, out of date or built for the wrong content gives wrong search results, and it is not always clear which action brings an index back in line.\n\nThe Indexing module lists every index of a site on one page. You add an index from a provider such as Lucene, choose what it holds, and use Synchronize, Reset and Rebuild to bring it up to date, while the Indexing Worker applies pending changes in the background.\n\nIn this video:\n• What an index is, and who does what\n• Add an index: provider, name, content types and options\n• Synchronize, Reset and Rebuild: how they differ\n• Run the actions on an index\n• Edit and delete indexes, and act on several at once\n• Keep indexes current with the Indexing Worker\n• Who can manage indexes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Search"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Search",
+    "Search index",
+    "Indexing",
+    "Lucene"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Indexing/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Indexing/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Indexing"
+  }
+}
