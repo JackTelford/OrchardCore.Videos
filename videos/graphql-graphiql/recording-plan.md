@@ -1,6 +1,6 @@
 # Recording plan: GraphiQL
 
-A selector written here stands for `scene.Page.Locator(...)`. Orchard Core paths are relative to `src/` of the
+A selector written here stands for `scene.Page.Locator(...)`. Orchard Core paths are relative to `src/`; a bare file name such as `ContentItemsFieldType.cs` is in `OrchardCore/OrchardCore.ContentManagement.GraphQL/Queries/` of the
 OrchardCore checkout. The labels of GraphiQL itself (Docs, Prettify, History, Query Variables, the play button) are drawn
 by the GraphiQL library that the module bundles, so their source is the quoted string in
 `OrchardCore.Modules/OrchardCore.Apis.GraphQL/wwwroot/Scripts/graphiql-orchard.js` (one line, so no line number).
@@ -34,7 +34,7 @@ OPEN-QUESTIONS.md lists what to confirm on the running site while recording.
      "A field guide to quiet places", "Notes from the launch pad", and the recipe's own post. A 404 means the feature is
      not enabled (the path is mapped only while the feature is enabled, `Startup.cs`, `Configure`); a response with
      `errors` means the query failed; a missing title means that post was saved as a draft, not published (the
-     default `status` is published, `ContentItemsFieldType.cs:232-237`). Create the posts in the order above, so that the
+     default `status` is published, `ContentItemsFieldType.cs:232-240` and the `DefaultValue` of `status`, line 74). Create the posts in the order above, so that the
      order of the results is the one the narration and the slides show.
 - No external service, no mask script: the site is fresh and holds only the fake data above. The Explorer, the Docs and
   the result show content types and the three titles; no user name, email or phone number is queried.
@@ -94,7 +94,7 @@ state is restored from the browser, so this check is needed on every take. Move 
   `ClickAndWaitForNavigationAsync` on it; wait for the schema (step 2 of "every clip", without collapsing the menu).
   When the narration ends: GraphiQL is open at `/Admin/GraphQL`, the menu still expanded, with Tools open and GraphiQL
   marked as the current item. Label: `OrchardCore.Apis.GraphQL/AdminMenu.cs:18-19` ("Tools", "GraphiQL"); the permission
-  that shows the item: `AdminMenu.cs:21`, `GraphQLPermissions.cs:12` ("Execute GraphQL.").
+  that shows the item: `AdminMenu.cs:21`, `OrchardCore/OrchardCore.Apis.GraphQL.Abstractions/GraphQLPermissions.cs:12` ("Execute GraphQL.").
 - `open-2`: click `.leftbar-compactor` and wait 400 ms (the menu collapses and GraphiQL takes the width). Then, one after
   the other, with `PauseAsync(1200)` between them and `ClearHighlightsAsync()` after each: `HighlightAsync` on
   `.graphiql-explorer-root` with the caption "Explorer", on `section.query-editor` with the caption "Query", and on
@@ -181,7 +181,7 @@ query on one line and the Query Variables pane open and showing `{ "first": 2 }`
   until the result contains exactly one `"displayText"`
   (`...innerText.split('"displayText"').length === 2`). When the narration ends: the pane shows `"first": 1`, the editor
   still shows the same query, the result lists one blog post. With `first` of 2 the two newest posts come back ("A field guide
-  to quiet places", "Notes from the launch pad"), with 1 only the newest (`ContentItemsFieldType.cs:203-228`; without
+  to quiet places", "Notes from the launch pad"), with 1 only the newest (`ContentItemsFieldType.cs:205-212` (`first`, `Take`); without
   `orderBy` the order is `CreatedUtc` descending, line 472).
 
 ### `06-errors`: When a query fails (chapter 06)
