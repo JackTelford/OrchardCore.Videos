@@ -1,0 +1,51 @@
+{
+  "title": "Write a Deployment Step | Orchard Core",
+  "description": "A deployment plan exports configuration and content as a package, using the steps that Orchard Core and its modules provide. A module that keeps its own data needs a deployment step of its own.\n\nA deployment step is a class that a plan stores, a source that adds recipe steps and files to the package, a display driver with its views, and one registration. This video reads how the All Features step is written, then adds that step to a plan and follows the package it builds.\n\nIn this video:\n• How a deployment plan becomes a package\n• The step: Name, Category and Title\n• The source: recipe steps and files\n• The editor: a display driver and its views\n• The registration in a startup class\n• The step in a plan\n• The package and its recipe step",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Deployment"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Deployment",
+    "Deployment plan",
+    "Deployment step",
+    "Recipes",
+    "Display driver",
+    "Module development",
+    "C#"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Deployment/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Deployment/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Deployment"
+  }
+}

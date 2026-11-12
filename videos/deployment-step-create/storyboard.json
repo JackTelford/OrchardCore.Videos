@@ -1,0 +1,260 @@
+{
+  "title": "Write a Deployment Step",
+  "output": "deployment-step-create",
+  "spoken": {
+    "IDeploymentTargetProvider": "I Deployment Target Provider",
+    "CommonLocalizationSources": "Common Localization Sources",
+    "FeaturesLocalizationSources": "Features Localization Sources",
+    "DeploymentSourceBase": "Deployment Source Base",
+    "IDeploymentSource": "I Deployment Source",
+    "IgnoreDisabledFeatures": "Ignore Disabled Features",
+    "OrchardCore.Deployment": "Orchard Core dot Deployment",
+    "RequireFeatures": "Require Features",
+    "AddDeployment": "Add Deployment",
+    "DeploymentStep": "Deployment Step",
+    "DisplayDriver": "Display Driver",
+    "DisplayAsync": "Display Async",
+    "UpdateAsync": "Update Async",
+    "ProcessAsync": "Process Async",
+    "SetFileAsync": "Set File Async",
+    "FileBuilder": "File Builder",
+    "FeatureStep": "Feature Step",
+    "JsonIgnore": "Json Ignore",
+    "Recipe.json": "Recipe dot JSON"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Write a Deployment Step",
+      "subtitle": "Add your own step to Orchard Core deployment plans",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A deployment plan collects what you export from a site into one package. In this video, we'll read how the All Features step is written, and what your own deployment step needs: a step, a source, an editor, and a registration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a deployment step works",
+      "subtitle": "From a plan to a package",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A deployment plan is an ordered list of steps. When you execute it, Orchard Core passes each step to every deployment source. The sources add recipe steps and files to a package, which contains a Recipe.json file."
+            },
+            {
+              "id": "how-2",
+              "text": "A deployment step of your own has three parts. The step stores its settings in the plan, and the source adds recipe steps and files to the package. A display driver gives the step its card, summary, and editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The step",
+      "subtitle": "The class that a plan stores",
+      "clips": [
+        {
+          "id": "02-step",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "step-1",
+              "text": "Let's read the All Features step. It derives from DeploymentStep. Name is saved with the plan, and the other properties hold its settings, here a single option, IgnoreDisabledFeatures."
+            },
+            {
+              "id": "step-2",
+              "text": "Category groups the step in the list of steps you can add to a plan. All Features uses Infrastructure, one of the CommonLocalizationSources that modules share."
+            },
+            {
+              "id": "step-3",
+              "text": "Title is the display name of the step, and the heading of its add and edit screens. A module declares its titles in an internal class of localization sources, such as FeaturesLocalizationSources."
+            },
+            {
+              "id": "step-4",
+              "text": "Mark Category and Title with JsonIgnore. A plan is saved as JSON, and these two values are never stored with it: they are always read from the type of the step."
+            },
+            {
+              "id": "step-5",
+              "text": "A plan stores each step under its full type name and its assembly name. The recipe step that creates plans uses the class name. If you rename or move the class, existing plans show the step as unavailable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The source",
+      "subtitle": "It builds the content of the package",
+      "clips": [
+        {
+          "id": "03-source",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "A source implements IDeploymentSource. Deriving from DeploymentSourceBase checks the type of each step for you, and calls your ProcessAsync only for steps of your type."
+            },
+            {
+              "id": "source-2",
+              "text": "To add a recipe step, add a JSON object to the Steps of the result. The All Features source adds a Feature step that lists the enabled features, and the disabled ones too, unless Ignore disabled features is checked."
+            },
+            {
+              "id": "source-3",
+              "text": "To add a file, call SetFileAsync on the FileBuilder of the result, as the Custom File source does. Orchard Core creates sources with dependency injection, so a constructor can take the services the source needs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The editor",
+      "subtitle": "A display driver and its views",
+      "clips": [
+        {
+          "id": "04-editor",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "editor-1",
+              "text": "A display driver derives from DisplayDriver of DeploymentStep and your step. DisplayAsync builds a Summary shape, which the plan shows for the step, and a Thumbnail shape, which is the card in the list of available steps."
+            },
+            {
+              "id": "editor-2",
+              "text": "Edit returns the editor shape, initialized from a view model. UpdateAsync binds the posted values to the step, and returns the editor again."
+            },
+            {
+              "id": "editor-3",
+              "text": "To validate the input, add an error to the model state in UpdateAsync, as the Custom File step does for its File Name. The step is saved only when the model state is valid."
+            },
+            {
+              "id": "editor-4",
+              "text": "Each shape is a Razor view in the Views folder of the module, usually under Items. The file name is the shape type, with dots in place of underscores."
+            },
+            {
+              "id": "editor-5",
+              "text": "The edit view is the form. It binds an input to the view model with a tag helper, and uses the same wrapper and hint markup as the editors of the other steps."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Registration",
+      "subtitle": "One call in a startup class",
+      "clips": [
+        {
+          "id": "05-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "AddDeployment registers the source, the step, and the display driver together. The Features module calls it from its startup class for All Features."
+            },
+            {
+              "id": "register-2",
+              "text": "A module that works without Deployment, like Roles, calls it in a startup class marked RequireFeatures for OrchardCore.Deployment. The step is registered only when the Deployment feature is enabled."
+            },
+            {
+              "id": "register-3",
+              "text": "When the feature that registers a step is disabled, the plans that contain it keep the step's data. The plan shows the step as unavailable, with a Delete button and no Edit button."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The step in a plan",
+      "subtitle": "Add it, edit it, execute the plan",
+      "clips": [
+        {
+          "id": "06-plan",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "plan-1",
+              "text": "Let's use the All Features step. In Tools, Deployments, Plans, Add Deployment Plan asks for a name, and Create opens the plan."
+            },
+            {
+              "id": "plan-2",
+              "text": "Add Step opens the Available Steps dialog. The steps are grouped by category, and the category of All Features is Infrastructure."
+            },
+            {
+              "id": "plan-3",
+              "text": "Select Infrastructure to see the card of the step. It shows the title and the description from the thumbnail view."
+            },
+            {
+              "id": "plan-4",
+              "text": "Add opens the editor. Its heading is the title of the step, and the checkbox, Ignore disabled features, comes from the edit view."
+            },
+            {
+              "id": "plan-5",
+              "text": "Let's check Ignore disabled features, and select Create. The plan lists the step with its summary view, next to Edit and Delete."
+            },
+            {
+              "id": "plan-6",
+              "text": "Execute lists the available targets. File Download builds the package from the steps of the plan, in order, and downloads it as a zip file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "The package",
+      "subtitle": "What the step adds",
+      "clips": [
+        {
+          "id": "07-package",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "package-1",
+              "text": "In the package, Recipe.json lists the recipe steps of the plan in order. The one that the source added is the Feature step, and its name property selects the recipe step that imports it."
+            },
+            {
+              "id": "package-2",
+              "text": "On import, FeatureStep, the recipe step handler named Feature, enables and disables those features. A separate video covers writing a recipe step."
+            },
+            {
+              "id": "package-3",
+              "text": "To send the package somewhere other than a download, implement IDeploymentTargetProvider, and register it. Each target names the route of an action that sends it, and Execute lists the targets next to File Download."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Write a Deployment Step",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A deployment step is a step class, a source, a display driver, and a registration. The Deployment page of the documentation lists these parts. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
