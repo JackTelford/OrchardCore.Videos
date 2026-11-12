@@ -1,0 +1,51 @@
+{
+  "title": "A Modular ASP.NET Core MVC Application With Orchard Core | Orchard Core",
+  "description": "A modular ASP.NET Core MVC application splits into a web application, which supplies the layout, and modules, which bring their own controllers, views and routes. Orchard Core's templates create both, and a project reference connects them.\n\nThis video creates a web application and a module from the templates, reads the code they contain, runs the application, and registers a route so that the module answers requests for the home page.\n\nIn this video:\n• What you build: a web application, a module and a reference\n• Creating the projects with the Orchard Core templates\n• The web application: Program.cs, the project file and the layout\n• The module: project file, manifest, controller, view and Startup class\n• How Orchard Core finds the module\n• Running the application and the default address of the module\n• A route for the home page",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AspNetCore",
+    "MVC"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "MVC",
+    "modular application",
+    "Orchard Core module",
+    "dotnet new",
+    "project templates",
+    "Razor",
+    "routing"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/create-modular-application-mvc/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/create-modular-application-mvc/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/create-modular-application-mvc"
+  }
+}

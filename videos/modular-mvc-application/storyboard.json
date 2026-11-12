@@ -1,0 +1,265 @@
+{
+  "title": "A Modular ASP.NET Core MVC Application With Orchard Core",
+  "output": "modular-mvc-application",
+  "spoken": {
+    "OrchardCore.Application.Mvc.Targets": "Orchard Core dot Application dot M.V.C. dot Targets",
+    "OrchardCore.Module.Targets": "Orchard Core dot Module dot Targets",
+    "OrchardCore.ProjectTemplates": "Orchard Core dot Project Templates",
+    "OrchardCore.Mvc.HelloWorld": "Orchard Core dot M.V.C. dot Hello World",
+    "OrchardCore.Mvc.Web": "Orchard Core dot M.V.C. dot Web",
+    "Program.cs": "Program dot C.S.",
+    "Manifest.cs": "Manifest dot C.S.",
+    "MapAreaControllerRoute": "Map Area Controller Route",
+    "ConfigureServices": "Configure Services",
+    "AddOrchardCore": "Add Orchard Core",
+    "UseOrchardCore": "Use Orchard Core",
+    "AddMvc": "Add M.V.C.",
+    "StartupBase": "Startup Base",
+    "HomeController": "Home Controller",
+    "dotnet": "dot net",
+    "Mvc": "M.V.C."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "A Modular ASP.NET Core MVC Application With Orchard Core",
+      "subtitle": "A web application for the layout, a module for the page",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A modular ASP.NET Core MVC application is made of a web application and modules. In this video, you create both with the Orchard Core templates. The web application supplies the layout, and the module answers requests at its own address and at the home page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What you build",
+      "subtitle": "A web application, a module and a reference",
+      "clips": [
+        {
+          "id": "01-build",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "You build two projects and connect them. The web application hosts Orchard Core and supplies the layout. The module holds a controller, an action, and a view, and answers the requests that reach it."
+            },
+            {
+              "id": "build-2",
+              "text": "The package of the web application brings the modular framework and ASP.NET Core MVC, and none of the CMS modules. The application runs the modules it references, so the module is what gives it pages."
+            },
+            {
+              "id": "build-3",
+              "text": "Orchard Core's repository includes a similar sample, with the OrchardCore.Mvc.Web application and the OrchardCore.Mvc.HelloWorld module. You need the .NET SDK, a text editor, and a terminal where you run dotnet commands."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the projects",
+      "subtitle": "Templates, a reference and a solution",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Orchard Core provides code generation templates for dotnet new. Install them first, from the OrchardCore.ProjectTemplates package. The documentation page also shows how to install the templates of the development branch."
+            },
+            {
+              "id": "create-2",
+              "text": "In an empty folder that will hold both projects, the first command creates the web application, from the Orchard Core Mvc Web App template. The name you pass becomes the name of the project and of its folder."
+            },
+            {
+              "id": "create-3",
+              "text": "The second command creates the module, from the Orchard Core Mvc Module template. The two projects sit side by side, each in a folder named after its project."
+            },
+            {
+              "id": "create-4",
+              "text": "The web application has to reference the module. The dotnet add reference command adds the project reference, and Orchard Core relies on that reference to find the module."
+            },
+            {
+              "id": "create-5",
+              "text": "Optionally, add a solution file that references both projects, to open them together in Visual Studio. The dotnet new sln command creates it, and dotnet sln add adds each project."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The web application",
+      "subtitle": "Hosting Orchard Core and supplying the layout",
+      "clips": [
+        {
+          "id": "03-web",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "web-1",
+              "text": "In the web application, Program.cs registers Orchard Core with AddOrchardCore. AddMvc adds ASP.NET Core MVC with support for modules, and UseOrchardCore adds the Orchard Core middleware to the request pipeline."
+            },
+            {
+              "id": "web-2",
+              "text": "The project file references the OrchardCore.Application.Mvc.Targets package. A view start file sets the layout of the application, and the views of the module use that layout too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The module",
+      "subtitle": "A project file, a manifest, a controller and a Startup class",
+      "clips": [
+        {
+          "id": "04-module",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "mod-1",
+              "text": "The project file of the module uses the Razor SDK, which Orchard Core requires on a module so that its views are precompiled. The OrchardCore.Module.Targets package turns the project into an Orchard Core module."
+            },
+            {
+              "id": "mod-2",
+              "text": "Manifest.cs describes the module with the Module attribute: name, author, website, version, description, and category. The template sets the name, the description, and the category to the name of the project."
+            },
+            {
+              "id": "mod-3",
+              "text": "HomeController is a regular MVC controller. Its Index action returns the view, and the Index view, in Views, Home, holds one line of text: Hello from OrchardCore.Mvc.HelloWorld."
+            },
+            {
+              "id": "mod-4",
+              "text": "Startup derives from StartupBase, which Orchard Core uses to initialize a module. ConfigureServices registers the services of the module, and Configure builds its part of the request pipeline and its routes. The template leaves both empty."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "How Orchard Core finds the module",
+      "subtitle": "Two builds and a startup",
+      "clips": [
+        {
+          "id": "05-find",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "When the module builds, the OrchardCore.Module.Targets package marks its assembly as an Orchard Core module, and embeds the files of the module in that assembly."
+            },
+            {
+              "id": "find-2",
+              "text": "When the web application builds, it records the names of the modules it references, whether they are projects or packages. At startup, Orchard Core reads that list, which is how it learns about the module."
+            },
+            {
+              "id": "find-3",
+              "text": "The application runs a single tenant, which is one site, with every feature of those modules enabled. There is no setup screen, and the module needs no activation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Run the application",
+      "subtitle": "The default address of the module",
+      "clips": [
+        {
+          "id": "06-start",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "From the folder that holds both projects, dotnet run starts the web application. The console shows the addresses it listens on."
+            }
+          ]
+        },
+        {
+          "id": "06-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-2",
+              "text": "Let's browse to the address of the module: its identifier, the controller, and the action. The page says Hello from OrchardCore.Mvc.HelloWorld."
+            },
+            {
+              "id": "run-3",
+              "text": "The navigation bar and the footer come from the layout of the web application. The text between them comes from the view of the module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "A route for the home page",
+      "subtitle": "Answer requests at the root address",
+      "clips": [
+        {
+          "id": "07-route",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "route-1",
+              "text": "By default, a module serves each action at an address made of the area, the controller, the action, and an optional last segment. The area is the identifier of the module: the name of its project, unless the manifest sets a different identifier."
+            },
+            {
+              "id": "route-2",
+              "text": "To answer requests for the home page, register a route in the Configure method of the Startup class. MapAreaControllerRoute takes a name, the area name, an empty pattern, and defaults that select the Home controller and its Index action."
+            },
+            {
+              "id": "route-3",
+              "text": "Then change the Index view so that it shows a heading with the text Hello World."
+            },
+            {
+              "id": "route-4",
+              "text": "Routes are registered when Orchard Core builds the pipeline of the tenant, on its first request. Each Startup class runs its Configure method then, which is why you restart the application after changing a route."
+            }
+          ]
+        },
+        {
+          "id": "07-home",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "home-1",
+              "text": "After a restart, let's browse to the root address. The home page shows Hello World, with the layout of the web application around it."
+            },
+            {
+              "id": "home-2",
+              "text": "The default address answers as well. The route of the module adds to the default route, and does not replace it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "A Modular ASP.NET Core MVC Application With Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A modular MVC application is a web application that hosts Orchard Core and supplies the layout, plus modules that supply controllers, views, and routes. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
