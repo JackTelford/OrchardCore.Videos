@@ -1,6 +1,6 @@
 # Send Email, SMS and Notifications From Your Module
 
-**YouTube:** not published yet · **Length:** 5:33 · **Feature:** `OrchardCore.Email` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Email/)), `OrchardCore.Sms` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Sms/)), `OrchardCore.Notifications` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Notifications/))
+**YouTube:** not published yet · **Length:** 5:31 · **Feature:** `OrchardCore.Email` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Email/)), `OrchardCore.Sms` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Sms/)), `OrchardCore.Notifications` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Notifications/))
 
 A video for module authors. It shows, on slides, how a class of a module sends an email with `IEmailService`, an SMS
 with `ISmsService`, and a notification with `INotificationService`: what to inject, what to put in the message, and what

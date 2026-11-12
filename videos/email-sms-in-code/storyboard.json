@@ -98,7 +98,7 @@
             },
             {
               "id": "sms-3",
-              "text": "Providers validate differently. The Azure Communication Services provider returns a failed result for a missing number or body, but the Twilio provider throws an exception. Check both before you send."
+              "text": "Providers validate differently. The Azure Communication Services provider returns a failed result for a missing number or body, but the Twilio provider throws an exception. Check the number and the body before you send."
             },
             {
               "id": "sms-4",
@@ -202,7 +202,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "That's how a module sends email, SMS, and notifications: inject the service, check its result, and register a type for your notifications. The admin side of notifications has its own video. Thanks for watching."
+              "text": "That's how a module sends email, SMS, and notifications: inject the service, check its result, and register a type for your notifications. Thanks for watching."
             }
           ]
         }
