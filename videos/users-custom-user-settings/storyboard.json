@@ -213,7 +213,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Custom user settings turn content types into tabs on the Edit User page. The documentation page covers the details, including how developers read the values in templates. Thanks for watching."
+              "text": "Custom user settings turn content types into tabs on the Edit User page, and the documentation page covers the details for developers. Thanks for watching."
             }
           ]
         }
