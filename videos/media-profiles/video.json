@@ -1,0 +1,58 @@
+{
+  "title": "Media Profiles: Resize and Crop Images Consistently | Orchard Core",
+  "description": "A picture in the Media Library keeps its own size, but a site needs it wide for a banner in one place and small for a thumbnail in another. Writing those sizes out page by page makes them hard to keep the same.\n\nMedia profiles give each size a name. A profile stores image settings such as a width, a height, a resize mode, a format and a quality, and a theme asks for it by name, so one change reaches every page that uses it.\n\nIn this video:\n• Why media profiles exist\n• The Media Profiles page\n• The resize modes: Max, Crop, Pad and Stretch\n• Creating a profile\n• Changing the banner profile and seeing it on the site\n• Searching for and deleting profiles",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Media",
+    "Media Profiles",
+    "Image resizing",
+    "Image cropping"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/"
+    },
+    {
+      "label": "Documentation: Media Gallery",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Documentation: Media Slugify",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media/MediaGallery.md",
+    "src/docs/reference/modules/Media/README.md",
+    "src/docs/reference/modules/Media.Slugify/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media"
+  }
+}

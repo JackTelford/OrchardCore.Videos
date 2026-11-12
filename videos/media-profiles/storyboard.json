@@ -1,0 +1,209 @@
+{
+  "title": "Orchard Core media profiles",
+  "output": "media-profiles",
+  "spoken": {
+    "336699": "three three six six nine nine"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core media profiles",
+      "subtitle": "Resize and crop images the same way everywhere",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site shows pictures in several sizes: a banner, a thumbnail, a card image. Media profiles give each size a name, so every page produces it the same way. You will create a profile, learn the resize modes, and see a change on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why media profiles",
+      "subtitle": "One name for each image size",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A picture uploaded to the Media Library keeps its own size, but a page needs it wide for a banner, small for a thumbnail, and different again for a card. Spelling those sizes out in every page makes them hard to keep the same."
+            },
+            {
+              "id": "why-2",
+              "text": "A media profile is a named set of image settings, such as width, height, resize mode, format and quality. A theme asks for it by name, and Orchard Core makes the image when a page needs it. The original file stays as it is."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Media Profiles page",
+      "subtitle": "Where profiles live",
+      "clips": [
+        {
+          "id": "02-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "In the admin menu, open Media, then Profiles. The Media Profiles page lists each profile by name, with its hint underneath. By default, only administrators have the Manage Media Profiles permission that the page needs."
+            },
+            {
+              "id": "list-2",
+              "text": "This site comes from the Blog recipe, which adds one profile: banner. Its hint describes a banner image of 2048 by 600 pixels, cropped. The Blog theme uses it for the large picture at the top of the home page, posts and About page."
+            },
+            {
+              "id": "list-3",
+              "text": "The search box filters the list by name. Each row has Edit and Delete buttons, and Add Media Profile opens the form that creates a profile."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Resize modes",
+      "subtitle": "Fit, fill, pad or stretch",
+      "clips": [
+        {
+          "id": "03-modes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "modes-1",
+              "text": "The Resize Mode setting decides how a picture meets the width and height. Max, the default, fits the whole picture inside them, keeps its proportions, and never enlarges a small picture. Crop makes a large picture fill the size, cutting away what falls outside."
+            },
+            {
+              "id": "modes-2",
+              "text": "Pad also fits the whole picture, then fills the empty space with a Background Color. Stretch forces the picture to the exact width and height, which distorts it when the proportions differ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create a profile",
+      "subtitle": "A thumbnail, step by step",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Let's create a profile for thumbnails. On the Media Profiles page, Add Media Profile opens the Create Media Profile form."
+            },
+            {
+              "id": "create-2",
+              "text": "The Name is required. A theme asks for the profile by this name, and Orchard Core saves it in lowercase, so let's type thumbnail. The Hint is a note for your team, shown under the name in the list."
+            },
+            {
+              "id": "create-3",
+              "text": "Width and Height each offer a list of sizes in pixels, and Default applies no size to that side. Custom Size shows a box for any other number, so let's type 320 for Width and choose 240 for Height."
+            },
+            {
+              "id": "create-4",
+              "text": "Let's set Resize Mode to Crop, so a large picture fills the whole thumbnail size. The Background Color field stays hidden, because it appears only for Pad and BoxPad."
+            },
+            {
+              "id": "create-5",
+              "text": "Format converts the image, and Default keeps the format of the original. Quality is a percentage for Jpg and WebP images, and at 100 the default quality applies. Let's choose Jpg and a quality of 80."
+            },
+            {
+              "id": "create-6",
+              "text": "Auto Orient is ticked by default. It turns the image to match the orientation recorded in its EXIF metadata. Save adds the profile to the list, with the hint under the name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "A profile on the site",
+      "subtitle": "Change banner, change every header",
+      "clips": [
+        {
+          "id": "05-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "This is the home page. The large picture behind the title is a photo from the Media Library, cut to a wide strip by the banner profile."
+            },
+            {
+              "id": "site-2",
+              "text": "The Blog theme asks for banner on the home page, on blog posts, and on the About page. A change to the profile changes all three."
+            },
+            {
+              "id": "site-3",
+              "text": "Back on the Media Profiles page, let's choose Edit for banner. The form has the same fields as the one that creates a profile."
+            },
+            {
+              "id": "site-4",
+              "text": "Let's choose Pad as the Resize Mode. The Background Color field appears, so let's type a color code for the empty space, such as 336699, and save."
+            },
+            {
+              "id": "site-5",
+              "text": "On the home page, the photo sits in the middle of the header, with the color on both sides."
+            },
+            {
+              "id": "site-6",
+              "text": "A blog post shows the same change, because its header uses the same profile."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Search and delete",
+      "subtitle": "Keep the list tidy",
+      "clips": [
+        {
+          "id": "06-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "On the Media Profiles page, to find a profile, type part of its name in the search box and press Enter. The list shows only the matching profiles."
+            },
+            {
+              "id": "manage-2",
+              "text": "Edit also lets you rename a profile. A theme that asks for the old name gets none of the profile's settings, so change the theme with the name."
+            },
+            {
+              "id": "manage-3",
+              "text": "Delete asks you to confirm, and then removes the profile. Let's delete thumbnail, so that only banner remains."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core media profiles",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how media profiles work: one name for each image size, created in Media, Profiles, and used by every page that asks for it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
