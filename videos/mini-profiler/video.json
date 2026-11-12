@@ -1,0 +1,49 @@
+{
+  "title": "Mini Profiler: Find What Makes a Page Slow | Orchard Core",
+  "description": "A page is slow, and the cause can be a view, a shape, or a database command that runs more often than it should.\n\nThe Orchard Core Mini Profiler module adds the MiniProfiler widget to pages. It times the request, its MVC filters and views, the shapes it renders, and the YesSql commands it runs, so you can read where the time goes.\n\nIn this video:\n• What the Mini Profiler records, and why to use it with care\n• Enabling the feature in Tools, Features\n• Choosing who sees the widget with two permissions\n• Reading a profile: the timing tree, the shapes, and the queries view\n• Duplicate and error badges, and the time between queries\n• The widget in the admin\n• Setting the options, and securing the results\n• Adding your own steps to a profile\n• What to check when the widget or a result is missing",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MiniProfiler"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Mini Profiler",
+    "MiniProfiler",
+    "performance",
+    "profiling",
+    "YesSql"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Performance and Background Work"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/MiniProfiler/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/MiniProfiler/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.MiniProfiler"
+  }
+}

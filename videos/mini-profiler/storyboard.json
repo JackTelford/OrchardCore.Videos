@@ -1,0 +1,236 @@
+{
+  "title": "The Orchard Core Mini Profiler module",
+  "output": "mini-profiler",
+  "spoken": {
+    "MiniProfilerOptions": "Mini Profiler Options",
+    "MiniProfiler.Current": "Mini Profiler dot Current",
+    "MiniProfiler": "Mini Profiler",
+    "ConfigureServices": "Configure Services",
+    "AddOrchardCms": "Add Orchard C.M.S.",
+    "IgnoredPaths": "Ignored Paths",
+    "PopupRenderPosition": "Popup Render Position",
+    "ResultsAuthorize": "Results Authorize",
+    "ShouldProfile": "Should Profile"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Mini Profiler module",
+      "subtitle": "Find what makes a page slow",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A page loads slowly, and you do not know where the time goes. The Mini Profiler module times a request, the shapes it renders, and the SQL commands it runs. This video shows how to enable it, read a profile, and keep it safe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What the Mini Profiler records",
+      "subtitle": "Requests, shapes and SQL commands",
+      "clips": [
+        {
+          "id": "01-records",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "The Mini Profiler module integrates MiniProfiler with a tenant. It records request timings, MVC filters and views, the shapes Orchard Core renders a page from, and the YesSql database commands, then adds a widget to HTML pages for users who have the permission."
+            },
+            {
+              "id": "what-2",
+              "text": "Use it to investigate a specific performance problem. Profiling adds work to every request of an enabled tenant, and it can expose route names, SQL statements and timing details, so it should not be broadly available on a production site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features. The page groups features by category, and Mini Profiler is in Performance. Search for Mini Profiler to find it."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable for the feature. A message confirms it. The feature has no settings page: the widget appears on the pages you open next."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose who sees the widget",
+      "subtitle": "Two permissions",
+      "clips": [
+        {
+          "id": "03-roles",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "roles-1",
+              "text": "Open Access Control, Roles, and edit the Editor role. Search its permissions for Mini Profiler to find the two that control the widget."
+            },
+            {
+              "id": "roles-2",
+              "text": "View Mini Profiler widget on front end pages covers the site, and View Mini Profiler widget on back end pages covers the admin. The Administrator role has both by default. Grant them to another role only if its members may inspect profiling data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Read a profile",
+      "subtitle": "The timing tree and the queries view",
+      "clips": [
+        {
+          "id": "04-profile",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "profile-1",
+              "text": "Browse to the home page while signed in as an administrator. The widget is in the top-left corner, and its button shows how long the request took."
+            },
+            {
+              "id": "profile-2",
+              "text": "Click the button to open the profile. It lists the steps of the request as a tree, and each row shows the duration of that step, without the time of its children."
+            },
+            {
+              "id": "profile-3",
+              "text": "Steps that took very little time are hidden until you choose show trivial. The shapes appear as rows named Shape, followed by the shape type."
+            },
+            {
+              "id": "profile-4",
+              "text": "Click the SQL duration of a step to open the queries view. The commands are numbered in the order they ran, each with its duration, its start time, the step that ran it, and its SQL statement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Duplicates, errors and gaps",
+      "subtitle": "Reading the queries view",
+      "clips": [
+        {
+          "id": "05-flags",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "flags-1",
+              "text": "In the queries view, hover a badge to read more. Duplicate marks a command whose text already ran earlier in the request, which often points to a missing cache or a query inside a loop. Error marks a command that threw an exception."
+            },
+            {
+              "id": "flags-2",
+              "text": "Rows between the queries show how long the request ran without queries, and which step spent most of that time. A red exclamation mark on a step or on the widget button flags duplicate or failing commands."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The widget in the admin",
+      "subtitle": "Docked to the edge, behind a toggle",
+      "clips": [
+        {
+          "id": "06-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "admin-1",
+              "text": "In the admin, the widget is docked to the middle of the right edge, clear of the menu. The Hide MiniProfiler toggle tucks it away, and the browser remembers the choice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Configure and secure it",
+      "subtitle": "Options, permissions and result authorization",
+      "clips": [
+        {
+          "id": "07-configure",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "conf-1",
+              "text": "The module registers MiniProfilerOptions for each tenant, and does not read them from configuration. Set them with ConfigureServices after AddOrchardCms: here, IgnoredPaths skips a health check path and PopupRenderPosition moves the widget to the right."
+            },
+            {
+              "id": "conf-2",
+              "text": "Three controls are separate. The widget permissions decide whether the widget is added to a page, ResultsAuthorize protects the result endpoints and is not set by the module, and ShouldProfile decides whether a request is recorded at all."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Add your own steps",
+      "subtitle": "Custom timings",
+      "clips": [
+        {
+          "id": "08-custom",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "custom-1",
+              "text": "Code running during a profiled request can add its own steps. Wrap the work in a using block that calls Step on MiniProfiler.Current. It is null when the request is not profiled, so use the null-conditional operator."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "When something is missing",
+      "subtitle": "The widget and expired results",
+      "clips": [
+        {
+          "id": "09-missing",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "missing-1",
+              "text": "If the widget does not appear, check the feature, the permission, and that the theme renders the Footer zone. If a result is missing, it may have expired: results stay in memory for 30 minutes, and instances do not share them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Mini Profiler module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Mini Profiler shows where a request spends its time, from shapes to SQL commands. Use it to investigate a specific problem, and limit who can see it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
