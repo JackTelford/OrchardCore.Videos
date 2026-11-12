@@ -1,0 +1,55 @@
+{
+  "title": "Shape Alternates: Customize the Display of One Type or One Item | Orchard Core",
+  "description": "A content type or a single content item sometimes needs markup of its own, but editing a shared template or a module changes every page that uses it.\n\nShape alternates solve this. Orchard Core tries more specific template names before the shape type, so a file in the Views folder of a theme can target one content type, or one content item by its path, and the module stays untouched.\n\nIn this video:\n• How a template is chosen: shape types, alternates and file names\n• The alternates of a content item: content type, path and alias\n• A template for every item of one content type\n• A template for a single content item\n• Finding the template that rendered a shape with the shape debug information\n• Adding your own alternates from a template or from code",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Theming"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "shape alternates",
+    "shapes",
+    "templates",
+    "Liquid",
+    "Razor",
+    "theming",
+    "display management"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Display Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DisplayManagement/"
+    },
+    {
+      "label": "Templates and the alternates of content items",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Templates/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DisplayManagement/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:DisplayManagement"
+  }
+}
