@@ -1,0 +1,62 @@
+{
+  "title": "Build a Landing Page With Flows, Widgets and Layers | Orchard Core",
+  "description": "A landing page presents one offer on one page. Its editors need blocks they can size, align and order, and extra content that shows on that page only, without writing code.\n\nThe Flows module builds the page from widgets in the page editor. The Layers module places widgets in the zones of the theme, and shows them on the pages where a rule is true.\n\nIn this video:\n• Three building blocks: Flows, widgets and layers\n• Build the page with a Flow: blocks, sizes and alignment\n• Create a layer: a name and a rule\n• Check the zones: where widgets can go\n• Add a widget to the layer: content, zone and layer\n• See the result: where the widget shows\n• Flow or layer: choosing between them",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "landing page",
+    "Flows",
+    "Widgets",
+    "Layers"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Build a Site"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Flows",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/"
+    },
+    {
+      "label": "Documentation: Bag part",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/BagPart/"
+    },
+    {
+      "label": "Documentation: Widgets",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Widgets/"
+    },
+    {
+      "label": "Documentation: Layers",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Layers/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Flow/BagPart.md",
+    "src/docs/reference/modules/Flow/README.md",
+    "src/docs/reference/modules/Widgets/README.md",
+    "src/docs/reference/modules/Layers/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Flows"
+  }
+}
