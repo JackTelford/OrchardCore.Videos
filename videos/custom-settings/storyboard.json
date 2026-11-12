@@ -1,0 +1,229 @@
+{
+  "title": "Orchard Core Custom Settings",
+  "output": "custom-settings",
+  "spoken": {
+    "CustomSettings": "Custom Settings"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Custom Settings",
+      "subtitle": "Turn a content type into site settings",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some values belong to the whole site: an announcement, a contact address, a switch. Custom Settings turns a content type into a section of the Settings menu. You create one, edit its values, control who can change it, and add it to a deployment plan."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What Custom Settings are",
+      "subtitle": "Site-wide values, shaped by a content type",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Site settings are values that belong to the whole site, not to one page. The Settings menu groups them into sections, such as General and Debugging. Custom Settings adds sections of your own."
+            },
+            {
+              "id": "idea-2",
+              "text": "A content type describes the fields of one kind of content. Give it the CustomSettings stereotype, a label that marks its purpose, and it becomes a section of the Settings menu."
+            },
+            {
+              "id": "idea-3",
+              "text": "Its fields become the form you fill in. The values are saved with the site settings, so they do not appear in the list of content items. A site holds one set of values for each section."
+            },
+            {
+              "id": "idea-4",
+              "text": "Create a separate content type for every section. Marking a type that already has content items with this stereotype breaks those items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Custom Settings is a feature of its own. If it is not enabled on your site, open Tools, then Features, and search for Custom Settings."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable next to Custom Settings. A message confirms that the feature was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create the content type",
+      "subtitle": "A type with two fields and a stereotype",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "A section starts as a content type. Open Design, Content Definition, Content Types, and select Create new type."
+            },
+            {
+              "id": "type-2",
+              "text": "Enter Announcement Banner as the Display Name. The Technical Name fills in from it, and the saved values are stored under that name. Select Create."
+            },
+            {
+              "id": "type-3",
+              "text": "A message confirms the type, and the Add Parts page opens. A section can use parts, but this one needs only fields, so select Cancel."
+            },
+            {
+              "id": "fields-1",
+              "text": "The Fields section of the type is empty. Select Add Field."
+            },
+            {
+              "id": "fields-2",
+              "text": "Enter Banner Text as the Display Name. The Field Type list offers Boolean Field, Text Field and others. Choose Text Field, then select Save."
+            },
+            {
+              "id": "fields-3",
+              "text": "Add a second field the same way. Name it Show Banner, choose Boolean Field, which is a checkbox, and select Save."
+            },
+            {
+              "id": "opts-1",
+              "text": "A type starts with Creatable, Listable, Draftable, Versionable and Securable checked. A settings section needs none of them, so clear all five checkboxes."
+            },
+            {
+              "id": "opts-2",
+              "text": "Select Save. Do this before you set the stereotype, because the editor hides most of these options once a stereotype is saved."
+            },
+            {
+              "id": "stereo-1",
+              "text": "Back in the list, select Edit for Announcement Banner. Then enter CustomSettings in the Stereotype box."
+            },
+            {
+              "id": "stereo-2",
+              "text": "Select Save. A message confirms the update, and the type is a settings section."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Edit the settings",
+      "subtitle": "Settings, Announcement Banner",
+      "clips": [
+        {
+          "id": "04-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "Open Settings in the menu. Announcement Banner is listed beside the sections that Orchard Core provides, under the display name of the type."
+            },
+            {
+              "id": "edit-2",
+              "text": "The page shows the two fields of the type. Enter a message in Banner Text, check Show Banner, and select Save."
+            },
+            {
+              "id": "edit-3",
+              "text": "A message confirms that the site settings were updated, and the page shows the saved values. Templates and code can read them from the site settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Control who can edit it",
+      "subtitle": "One permission for each section",
+      "clips": [
+        {
+          "id": "05-permission",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "Every section has a permission of its own. No role receives it automatically, but the Administrator role has every permission."
+            },
+            {
+              "id": "perm-2",
+              "text": "To grant it, open Access Control, then Roles, and select Edit for the Editor role."
+            },
+            {
+              "id": "perm-3",
+              "text": "Search the permissions for Announcement Banner. Manage Custom Settings - Announcement Banner is listed in the Custom Settings group."
+            },
+            {
+              "id": "perm-4",
+              "text": "Check Allow and select Save. Members of the Editor role can open the section under Settings. Roles without the permission do not see it in the menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Move settings to another site",
+      "subtitle": "A deployment plan step",
+      "clips": [
+        {
+          "id": "06-deploy",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "deploy-1",
+              "text": "A deployment plan can carry the values to another site. Open Tools, Deployments, Plans, and select Manage Steps for a plan."
+            },
+            {
+              "id": "deploy-2",
+              "text": "Select Add Step. In Available Steps, filter for Custom Settings and select Add."
+            },
+            {
+              "id": "deploy-3",
+              "text": "Include all custom settings is checked, which exports every section. Clear it to pick the sections to include. Leave it checked and select Create."
+            },
+            {
+              "id": "deploy-4",
+              "text": "The plan lists the Custom Settings step with the badge All. The step carries the values only. To move the content type as well, add an Update Content Definitions step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Custom Settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A content type with the CustomSettings stereotype becomes a section of the Settings menu, with its own permission. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
