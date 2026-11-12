@@ -1,0 +1,252 @@
+{
+  "title": "The Orchard Core admin",
+  "output": "admin-tour",
+  "spoken": {
+    "Ctrl+K": "Control K",
+    "Esc key": "Escape key"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core admin",
+      "subtitle": "Find your way around",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The admin is where you manage your Orchard Core site: its content, design, users, and settings. In this video, let's tour the admin of a site made with the Blog recipe: the start page, the menu, the breadcrumb, quick navigation, and the top bar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The admin at a glance",
+      "subtitle": "Three parts, one theme, and one permission",
+      "clips": [
+        {
+          "id": "01-glance",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "glance-1",
+              "text": "Every admin page has the same three parts. The top bar holds your tools, the menu on the left leads to the other pages, and the rest of the screen is the page itself, with its breadcrumb and title."
+            },
+            {
+              "id": "glance-2",
+              "text": "The admin has its own theme, called The Admin Theme, which is separate from the theme of your site. Only users who have the Access admin panel permission can open it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The start page",
+      "subtitle": "Where the admin opens",
+      "clips": [
+        {
+          "id": "02-start",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "start-1",
+              "text": "By default, you reach the admin by adding Admin to the address of your site and signing in. Its start page welcomes you, and cards link to common tasks: Create content, Customize theme, and Manage users."
+            },
+            {
+              "id": "start-2",
+              "text": "The Learn more card links to the documentation. Its Documentation button opens the documentation in a separate tab."
+            },
+            {
+              "id": "start-3",
+              "text": "The logo and the site name in the top bar bring you back to this page from anywhere in the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The admin menu",
+      "subtitle": "Sections, pages, and where you are",
+      "clips": [
+        {
+          "id": "03-menu",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "menu-1",
+              "text": "The menu on the left has a section for each area of your site, such as Content, Design, Access Control, Tools, and Settings. Features you enable add their own pages to the menu."
+            },
+            {
+              "id": "menu-2",
+              "text": "Let's open Content, and then Design. By default, opening a section closes the others, so one section is open at a time."
+            },
+            {
+              "id": "menu-3",
+              "text": "Open Content, and then Content Items. When the page loads, the menu marks it and opens its section, so you can see where you are."
+            },
+            {
+              "id": "menu-4",
+              "text": "The menu shows only the pages that your user may open. A user with fewer permissions sees fewer entries than an administrator."
+            },
+            {
+              "id": "menu-5",
+              "text": "Blog and Main Menu are links from a custom admin menu that the Blog recipe created. Under Tools, Admin Menus, you can build your own."
+            },
+            {
+              "id": "menu-6",
+              "text": "The button at the bottom of the menu collapses it to icons. Hover over an icon to see its section, and click the button again to expand the menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Pages and breadcrumbs",
+      "subtitle": "Titles, and the trail back",
+      "clips": [
+        {
+          "id": "04-pages",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "pages-1",
+              "text": "The Content Items page lists the content items of your site, such as articles and blog posts. In the menu it is Content Items, and the title at the top of the page is Manage Content."
+            },
+            {
+              "id": "pages-2",
+              "text": "Let's open the About article. Above its title, the breadcrumb shows where the page sits: Manage Content, Article, and then Edit Article."
+            },
+            {
+              "id": "pages-3",
+              "text": "Each earlier step of the breadcrumb is a link. Click Manage Content to go back to the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Quick navigation",
+      "subtitle": "Jump to a page from the keyboard",
+      "clips": [
+        {
+          "id": "05-quick",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "quick-1",
+              "text": "Quick navigation opens a palette, a search box for the pages of the menu. Press Ctrl+K, or click the magnifier in the top bar."
+            },
+            {
+              "id": "quick-2",
+              "text": "Type part of a page name, such as user. The palette lists the matching pages, and under each name it shows the sections that hold the page."
+            },
+            {
+              "id": "quick-3",
+              "text": "Move through the results with the arrow keys. The Esc key closes the palette, and Enter opens the highlighted page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Content in quick navigation",
+      "subtitle": "Add your content items to the palette",
+      "clips": [
+        {
+          "id": "06-content",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "By default, the palette lists only the pages of the menu. The Content Quick Navigation feature adds content items to it. On the Features page, under Tools, type quick in the Search box."
+            },
+            {
+              "id": "content-2",
+              "text": "Click Enable on its row. A message confirms that the feature was enabled."
+            },
+            {
+              "id": "content-3",
+              "text": "Press Ctrl+K and type the word about. The About article appears, with Content as its path. The palette lists only items that you are allowed to edit."
+            },
+            {
+              "id": "content-4",
+              "text": "By default, the palette considers the last 50 content items that were updated. The option Recent content items in quick navigation, under Settings, Admin, changes that number."
+            },
+            {
+              "id": "content-5",
+              "text": "The same page holds the other options of the admin, such as Enable theme toggler, Enable Admin Menu filter, and Navigation menu behavior. A separate video covers them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "The top bar",
+      "subtitle": "Visit Site, the theme toggle, and your user menu",
+      "clips": [
+        {
+          "id": "07-topbar",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "top-1",
+              "text": "In the top bar, Visit Site opens the front end of your site in the same tab, so you can see what a visitor sees."
+            },
+            {
+              "id": "top-2",
+              "text": "Back in the admin, the theme toggle offers Auto, Light, and Dark. Auto follows the setting of your device, and Dark changes the whole admin. Your browser remembers the choice."
+            },
+            {
+              "id": "top-3",
+              "text": "Your user menu shows who is signed in. It links to your profile and lets you change your password, and Log off ends your session."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Ways to reach a page",
+      "subtitle": "A summary",
+      "clips": [
+        {
+          "id": "08-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "In short: the menu leads to the pages, quick navigation finds a page by name, the breadcrumb leads back up, and the logo returns you to the start page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core admin",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Orchard Core admin: a menu that follows your permissions, quick navigation from the keyboard, and a top bar with your tools. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
