@@ -1,6 +1,6 @@
 # Flow and Bag Parts: Templates and Alternates for Their Widgets
 
-**YouTube:** not published yet · **Length:** 4:31 · **Feature:** `OrchardCore.Flows` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Flow/))
+**YouTube:** not published yet · **Length:** 4:36 · **Feature:** `OrchardCore.Flows` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Flow/))
 
 A video for module and theme authors. It shows the shapes that the Flow Part and the Bag Part render, the template file
 names and alternates that target a part, a widget type or a display type, the way a Liquid template can read the items

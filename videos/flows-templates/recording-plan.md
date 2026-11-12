@@ -63,7 +63,7 @@ example:
 `await scene.Page.EvaluateAsync("document.querySelector('#parts').scrollIntoView({ block: 'center' })")`.
 Then `await scene.StartCaptureAsync()`.
 
-- `display-1` (about 10 s of narration). Actions:
+- `display-1` (about 13 s of narration). Actions:
   1. `await scene.HighlightAsync(scene.Page.Locator("#parts li").Filter(new() { HasText = "Services" }))`, without a
      caption. The row shows the part's display name "Services" (`agency.recipe.json:219`) and its Edit and Remove
      buttons.
@@ -78,15 +78,15 @@ Then `await scene.StartCaptureAsync()`.
      The page becomes `/Admin/ContentTypes/LandingPage/ContentParts/Services/Edit`, titled "Edit Part - Services"
      (`OrchardCore.ContentTypes/Views/Admin/EditTypePart.cshtml:22`).
   3. Wait until `scene.Page.GetByLabel("Display Type", new() { Exact = true })` is visible.
-  4. Scroll with `await scene.ScrollAsync(0, ...)` (highlights are cleared, since they are fixed on the screen) until
-     the field **Display Type**, its placeholder and the hint below it are all inside the viewport. The settings above
-     it (Contained Content Types, the list of content types) are taller than the viewport, so a scroll is expected.
+  4. Scroll the field to the middle of the viewport (highlights are cleared, since they are fixed on the screen):
+     `await scene.Page.GetByLabel("Display Type", new() { Exact = true }).EvaluateAsync("e => e.scrollIntoView({ block: 'center' })")`,
+     then `await scene.PauseAsync(400)`. The hint sits right under the field, so both are inside the viewport.
   5. `await scene.HighlightAsync(scene.Page.GetByLabel("Display Type", new() { Exact = true }))`. `HighlightAsync`
      scrolls the field into view by itself, but it does not bring the hint into view: do step 4 first.
   - Visible at the end of the narration: the text field Display Type with the grey placeholder **Summary**, a green
     ring around it, and the hint "The display type to use when rendering the content items. Default is Summary."
     under it. Nothing is typed and nothing is saved: leave the page with the Cancel button or by closing the scene.
-  - Labels: "Display Type", the placeholder `Summary` and the hint come from
+  - Labels: "Edit" as for `display-1`; "Display Type", the placeholder `Summary` and the hint come from
     `OrchardCore.Flows/Views/BagPartSettings.Edit.cshtml:40-43`.
 
 ## Clip `06-debug` (chapter 06, before the slide `source-1`)
@@ -98,9 +98,8 @@ has the single option "Write shape debug information", unchecked, and the Save b
 Settings, then Debugging (`OrchardCore.Settings/AdminMenu.cs:36` and `:46`). Then `await scene.StartCaptureAsync()`.
 
 - `debug-1` (about 7 s of narration). Actions:
-  1. If the admin menu shows the entry **Debugging** under **Settings**, ring it with `scene.HighlightAsync`; if the
-     menu is collapsed, skip this action.
-  2. `await scene.HighlightAsync(scene.Page.GetByLabel("Write shape debug information"))`.
+  1. `await scene.HighlightAsync(scene.Page.GetByLabel("Write shape debug information"))`.
+  The admin menu is not highlighted, whatever state it is in.
   - Visible at the end of the narration: the checkbox with its label "Write shape debug information" and the hint
     "Wrap rendered shapes in HTML comments to help identify the template or binding that produced each fragment.",
     with a green ring around the checkbox. The checkbox is still unchecked.
@@ -110,15 +109,13 @@ Settings, then Debugging (`OrchardCore.Settings/AdminMenu.cs:36` and `:46`). The
   2. `await scene.ClickAsync(scene.Page.GetByLabel("Write shape debug information"))`, which checks it.
   3. Save the settings. The controller suspends the shell release request only when the model is invalid
      (`OrchardCore.Settings/Controllers/AdminController.cs:106-127`), which suggests that a valid save reloads the
-     tenant, so the redirect that shows the notification can take several seconds. Time one take first:
-     - If the page is back within about 4 s, use
-       `await scene.ClickAndWaitForNavigationAsync(scene.Page.GetByRole(AriaRole.Button, new() { Name = "Save", Exact = true }))`.
-     - Otherwise cut the wait out of the clip: `await scene.MoveToAsync(save)`, then
-       `await scene.OffCameraAsync(() => scene.WaitForNavigationAsync(() => save.ClickAsync()))`, where `save` is the
-       same locator. The condition (a navigation that has not happened yet) is specific to the new state.
-  4. Wait until the text "Site settings updated successfully." is visible
-     (`await scene.Page.GetByText("Site settings updated successfully.").WaitForAsync()`); if this wait is also
-     slow, put it inside the same `OffCameraAsync` call.
+     tenant, so the redirect that shows the notification can take several seconds. Always cut the wait out of the clip, so
+     there is nothing to time: with `save` = `scene.Page.GetByRole(AriaRole.Button, new() { Name = "Save", Exact = true })`,
+     run `await scene.MoveToAsync(save)`, then
+     `await scene.OffCameraAsync(() => scene.WaitForNavigationAsync(() => save.ClickAsync()))`.
+  4. Inside the same `OffCameraAsync` call, after the navigation, wait until the text "Site settings updated
+     successfully." is visible
+     (`await scene.Page.GetByText("Site settings updated successfully.").WaitForAsync()`).
   - Visible at the end of the narration: the checkbox checked and the notification "Site settings updated
     successfully.".
   - Labels: "Save" from `OrchardCore.Settings/Views/SiteSettings.SaveButton.cshtml:2`; the notification from

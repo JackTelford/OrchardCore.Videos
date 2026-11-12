@@ -54,11 +54,11 @@
             },
             {
               "id": "flow-2",
-              "text": "Each remaining widget is built with the display type of the item that holds the Flow. In Detail, its shape is Widget, and one of its alternates is named after the widget's content type."
+              "text": "Each remaining widget is built with the display type of the item that holds the Flow, such as Detail. Its shape is Widget, and one of its alternates, a more specific name that a template can target, is named after the widget's content type."
             },
             {
               "id": "flow-3",
-              "text": "When a widget has Flow metadata, the template adds CSS classes for the type, the alignment and the size, such as widget-paragraph and widget-size-100. A widget template prints them with Model.Classes."
+              "text": "When a widget has Flow metadata, the template adds CSS classes to its shape for the type, the alignment and the size, such as widget-paragraph and widget-size-100."
             }
           ]
         }
@@ -75,7 +75,7 @@
           "steps": [
             {
               "id": "widget-1",
-              "text": "To change how Paragraph widgets render, add Widget-Paragraph.liquid to the Views folder of your theme. This is the template of The Blog Theme: an article that uses Model.Classes as its class attribute, around the rendered paragraph."
+              "text": "To change how Paragraph widgets render, add Widget-Paragraph.liquid to the Views folder of your theme. This is the template of The Blog Theme: an article element whose class attribute is Model.Classes, around the rendered paragraph."
             },
             {
               "id": "widget-2",
@@ -83,7 +83,7 @@
             },
             {
               "id": "widget-3",
-              "text": "The Flow Part expresses the alignment and the size of a widget as classes. Print Model.Classes in your own template to keep them, as The Blog Theme does."
+              "text": "A widget can have these alignment and size classes. Print Model.Classes in your own template to keep them, as The Blog Theme does."
             }
           ]
         }
@@ -110,11 +110,11 @@
           "steps": [
             {
               "id": "display-1",
-              "text": "A Bag Part can be named, so one content type can hold several. The Landing Page type here has named Bag Parts, such as Services."
+              "text": "This is the editor of the Landing Page content type. A Bag Part can be named, so one type can hold several, and Landing Page has named Bag Parts such as Services."
             },
             {
               "id": "display-2",
-              "text": "Editing a Bag Part shows its settings. Display Type has the placeholder Summary, and its hint says that Summary is the default for rendering the contained items."
+              "text": "Edit the Services part to see its settings. Display Type has the placeholder Summary, and its hint says that Summary is the default for rendering the contained items."
             }
           ]
         },
@@ -124,7 +124,7 @@
           "steps": [
             {
               "id": "items-1",
-              "text": "Each item renders as a content item of its own type. A Paragraph widget renders as Widget, so with Summary its template is Widget-Paragraph.Summary.liquid. A Service item has no stereotype, so it renders as Content."
+              "text": "The shape of each item depends on its content type. A Paragraph widget has the Widget stereotype, so its shape is Widget, and with Summary its template is Widget-Paragraph.Summary.liquid. A Service item has no stereotype, so its shape is Content."
             },
             {
               "id": "items-2",
@@ -153,7 +153,7 @@
             },
             {
               "id": "part-3",
-              "text": "An empty Flow or Bag renders as FlowPart_Empty or BagPart_Empty, and the Flows module ships empty templates for them. A placement rule can set the shape to FlowPart to use the full template."
+              "text": "An empty Flow or Bag renders as FlowPart_Empty or BagPart_Empty, and the Flows module ships empty templates for them. A rule in a placement file can set the shape to FlowPart to use the full template."
             },
             {
               "id": "part-4",
@@ -226,7 +226,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A Flow or a Bag renders its items like any other content item. Name a template after the part, the content type or the widget, and add the display type. Thanks for watching."
+              "text": "A template named after the part, the content type or the widget, with the display type added, changes how a Flow or a Bag renders. Thanks for watching."
             }
           ]
         }

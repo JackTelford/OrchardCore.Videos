@@ -61,12 +61,13 @@ The map is applied with `str.replace` in the order written, so the longer names 
 ## Timing and layout of the two clips
 
 - `06-debug`: the controller suspends the shell release only when the model is invalid, which suggests that a valid
-  save of the site settings reloads the tenant (not run), so the redirect after Save can take several seconds, while `debug-2` is about 9 s of narration. A person must time the save on the recording machine and choose
-  between the two variants written in `recording-plan.md` (on camera, or cut with `OffCameraAsync`).
+  save of the site settings reloads the tenant (not run), so the redirect after Save can take several seconds, while `debug-2` is about 9 s of narration. The plan always
+  cuts the wait with `OffCameraAsync`. A person must confirm on the recording machine that the clip still shows the
+  checked box and the notification when the narration ends.
 
 - `03-display`: the position of the **Parts** list on the page "Edit Content Type - Landing Page", and of the field
   Display Type on "Edit Part - Services", depends on the height of the settings above them. A person must check that
   the Services row, and then the field with its placeholder and hint, fit in the 1536x864 viewport after the scroll
   written in `recording-plan.md`.
-- `06-debug`: whether the admin menu shows the entry Debugging under Settings on a freshly opened
-  `/Admin/Settings/debugging` page (the narration says "open Settings, Debugging").
+- `06-debug`: the narration says "open Settings, Debugging" while the clip shows the page itself (the plan opens it
+  by its address and highlights only the option). Confirm that this matches the menu path on a running site.
