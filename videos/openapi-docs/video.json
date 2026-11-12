@@ -1,0 +1,52 @@
+{
+  "title": "OpenAPI: Document Your APIs With Swagger, ReDoc and Scalar | Orchard Core",
+  "description": "An API that is not documented is hard to use, and documentation written by hand drifts away from the code.\n\nThe OpenApi module builds an OpenAPI document from the endpoints your Orchard Core site exposes, and shows it in Swagger UI, ReDoc, or Scalar. Each explorer is a feature you enable on its own, and Swagger UI and Scalar send requests with a bearer token that they acquire for you.\n\nIn this video:\n• How the module turns your endpoints into an OpenAPI document\n• Enabling the OpenApi, Swagger UI, ReDoc UI, and Scalar UI features\n• Who can open the explorers, and how they sign in to the API\n• Browsing and trying out operations in Swagger UI\n• ReDoc and Scalar, the other two explorers\n• Allowing anonymous access to the API schema\n• Documenting your own controllers and endpoints",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "OpenAPI",
+    "Swagger"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "OpenAPI",
+    "Swagger",
+    "Swagger UI",
+    "ReDoc",
+    "Scalar",
+    "NSwag",
+    "API documentation"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Headless and APIs"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenApi/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/OpenApi/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenApi"
+  }
+}
