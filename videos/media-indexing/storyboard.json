@@ -97,7 +97,7 @@
             },
             {
               "id": "field-4",
-              "text": "The same page has Allow media text, which lets editors type a description for each file. When it is selected, the descriptions are indexed as MediaText. Let's save the settings."
+              "text": "The same page has Allow media text, which lets editors type a description for each file. On a new field it is selected, and the descriptions are indexed as MediaText. Let's leave it as it is and save the settings."
             }
           ]
         }

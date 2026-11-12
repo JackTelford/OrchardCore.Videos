@@ -67,10 +67,12 @@ answer differs, changes the narration or recording-plan.md. Paths are relative t
     The same Include checkbox exists for Elasticsearch and Azure AI Search, but the video shows Lucene only. The Stored
     option of the Lucene settings is not needed for searching and is not mentioned.
 
-11. **Allow media text.** The video only points at the Allow media text checkbox and says that, when it is selected, the
-    descriptions are indexed as MediaText (`src/OrchardCore.Modules/OrchardCore.Media/Indexing/MediaFieldIndexHandler.cs:45`).
-    The recording does not select it. Confirm on a running site that a description typed in the Media text window of the
-    field editor is found by a search once the MediaText name is ticked.
+11. **Allow media text.** The video points at the Allow media text checkbox and says that it is selected on a new field and that,
+    when it is selected, the descriptions are indexed as MediaText (`src/OrchardCore.Modules/OrchardCore.Media/Indexing/MediaFieldIndexHandler.cs:45`).
+    The default comes from `MediaFieldSettings.AllowMediaText = true` (`src/OrchardCore/OrchardCore.Media.Core/Settings/MediaFieldSettings.cs`)
+    and from a field with no stored settings being read as a new settings object (`src/OrchardCore/OrchardCore.ContentManagement.Abstractions/Metadata/Models/ContentDefinition.cs:16-21`).
+    The recording does not change the checkbox. Confirm on the running site that it is ticked right after Save & Configure, and
+    that a description typed in the Media text window of the field editor is found by a search once the MediaText name is ticked.
 
 12. **Is the PDF text read as separate words?** The PDF reader concatenates the letters of each page
     (`src/OrchardCore.Modules/OrchardCore.Media.Indexing.Pdf/Services/PdfMediaFileTextProvider.cs`, the loop over

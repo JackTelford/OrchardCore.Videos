@@ -148,10 +148,10 @@ feature registers the handler that adds them) and `03-field`; the search in `06-
   - On screen when the narration ends: the Lucene Index settings section with "Include this element in the index" ticked, and Keyword and Stored cleared, with the hint "Check to index as a keyword value (indexed as a single token)."
   - Labels: `src/OrchardCore.Modules/OrchardCore.Lucene/Views/LuceneContentIndexSettings.Edit.cshtml:5` (heading), `:13` (Include this element in the index), `:19-20` (Keyword and its hint), `:24` (Stored). The section is shown to users who have the Manage Lucene indexes permission; the admin has it by default (`.../OrchardCore.Lucene/Permissions.cs`).
 - `field-4`
-  - Scroll to the checkbox **Allow media text** (`label:has-text("Allow media text")`) and highlight it with the caption `Allow media text`. Do not change it (it stays cleared, so the editor of an article shows no Media text button). Clear the highlight.
+  - Scroll to the checkbox **Allow media text** (`label:has-text("Allow media text")`) and highlight it with the caption `Allow media text`. Do not change it: on a new Media Field it is already ticked (`MediaFieldSettings.AllowMediaText` starts as true, `src/OrchardCore/OrchardCore.Media.Core/Settings/MediaFieldSettings.cs:10-11`), and the editor of an article then shows a Media text button for each file. Clear the highlight.
   - Scroll to the bottom and click **Save** (`button.save`) with `ClickAndWaitForNavigationAsync`.
   - On screen when the narration ends: "Edit Content Type - Article" with the message `The "Documents" field settings have been saved.` and the field Documents in the Fields list.
-  - Labels: `src/OrchardCore.Modules/OrchardCore.Media/Views/MediaFieldSettings.Edit.cshtml:25` (Allow media text); the MediaText name is added only when it is on: `src/OrchardCore.Modules/OrchardCore.Media/Indexing/MediaFieldIndexHandler.cs:12,45`; Save and message `src/OrchardCore.Modules/OrchardCore.ContentTypes/Controllers/AdminController.cs:908`.
+  - Labels: `src/OrchardCore.Modules/OrchardCore.Media/Views/MediaFieldSettings.Edit.cshtml:25` (Allow media text); the MediaText descriptions of the files are indexed only when it is on (`src/OrchardCore.Modules/OrchardCore.Media/Indexing/MediaFieldIndexHandler.cs:45`), while the names ending in MediaText and FileText are listed in the index whether it is on or not (the same file, lines 25-33); Save and message `src/OrchardCore.Modules/OrchardCore.ContentTypes/Controllers/AdminController.cs:908`.
 
 ### Chapter 04, `04-publish` (starts on `/Admin`, any admin page)
 
@@ -164,7 +164,7 @@ feature registers the handler that adds them) and `03-field`; the search in `06-
   - Scroll to the Documents field (`.field-wrapper-article-documents`). Click its **Add media** button (`.field-wrapper-article-documents button:has-text("Add media")`).
   - Wait, with `scene.OffCameraAsync`, until the window titled **Select Media** (`.mf-picker-shell`) has finished loading (it first shows "Loading media browser...") and lists `garden-planting-guide.pdf`. Tick the checkbox in its row (`.file-item:has-text("garden-planting-guide.pdf") input[name='select-file']`); the footer reads "1 selected".
   - Click **OK** (`.mf-picker-shell button:has-text("OK")`). The window closes.
-  - On screen when the narration ends: the Documents field shows the attached PDF (file name `garden-planting-guide.pdf`) and the Add media button.
+  - On screen when the narration ends: the Documents field shows the attached PDF (file name `garden-planting-guide.pdf`) and the Add media button (the file also shows a Media text button, because Allow media text is ticked; leave it unused).
   - Labels: `src/OrchardCore.Modules/OrchardCore.Media/Services/MediaJSLocalizer.cs:119` (Add media), `:137` (Select Media), `:126` (OK); `.../Assets/media-picker/src/components/MediaPickerModal.vue:18,39,49`; `.../Assets/media-gallery/src/components/FileItemsComponent.vue:35` (row checkbox); `.../Views/MediaField.Edit.cshtml:34` (the field's CSS class).
 - `publish-3`
   - Scroll to the bottom and click **Publish** (`button.publish`) with `ClickAndWaitForNavigationAsync`.

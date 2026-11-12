@@ -1,6 +1,6 @@
 # Search Media Files: Index PDF, Office and Text Documents
 
-**YouTube:** not published yet · **Length:** 4:20 · **Feature:** [OrchardCore.Media.Indexing](https://docs.orchardcore.net/en/latest/reference/modules/Media/)
+**YouTube:** not published yet · **Length:** 4:24 · **Feature:** [OrchardCore.Media.Indexing](https://docs.orchardcore.net/en/latest/reference/modules/Media/)
 
 The Media Indexing features add the text of files attached to a content item to a search index, so site search finds the
 content item by words that only its files hold. The video explains what is read (PDF files, Word and PowerPoint files,
