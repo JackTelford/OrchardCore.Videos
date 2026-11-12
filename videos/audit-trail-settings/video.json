@@ -1,0 +1,54 @@
+{
+  "title": "Audit Trail Settings: Events, Retention and User Events | Orchard Core",
+  "description": "An audit trail is only useful when it records the right events, keeps them for the right time, and stores no more personal data than a site needs.\n\nThe Audit Trail settings of Orchard Core choose which events are recorded, which content types they apply to, how long events are kept, and which properties of a user are stored.\n\nIn this video:\n• Where the Audit Trail and Users Audit Trail settings are\n• Choosing the events, the content types and the client IP address to record\n• Setting how long events are kept\n• Choosing which user properties are stored, and how they are redacted\n• Seeing the result in the Audit Trail list",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AuditTrail"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Audit Trail",
+    "Audit log",
+    "Data retention",
+    "User events",
+    "Security"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Audit Trail"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Audit Trail",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AuditTrail/"
+    },
+    {
+      "label": "Documentation: Users Audit Trail",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/#audit-trail-integration"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/AuditTrail/README.md",
+    "src/docs/reference/modules/Users/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AuditTrail"
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "title": "Audit Trail Settings",
+  "output": "audit-trail-settings",
+  "spoken": {
+    "PartialAsteriskRedactor": "Partial Asterisk Redactor",
+    "ErasingRedactor": "Erasing Redactor",
+    "HmacRedactor": "H.M.A.C. Redactor"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Audit Trail Settings",
+      "subtitle": "Choose what is recorded, how long it is kept, and what is stored about users",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Audit Trail module keeps a log of changes and events in the back end. Its settings decide which events are recorded, how long they are kept, and what is stored about users. In this video, you set up each of them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Where the settings are",
+      "subtitle": "Two features and two settings pages",
+      "clips": [
+        {
+          "id": "01-where",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "Audit Trail and Users Audit Trail are two separate features. Enable both under Tools, Features, and their settings pages become available under Settings."
+            },
+            {
+              "id": "where-2",
+              "text": "Settings, Audit Trail has an Events tab and a Trimming tab, and a Content tab when the Contents feature is enabled. Settings, Security, User Audit Trail is a separate page for what is stored about users."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Events and content types",
+      "subtitle": "Choose what the Audit Trail records",
+      "clips": [
+        {
+          "id": "02-events",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "events-1",
+              "text": "Let's open Settings, Audit Trail. The Events tab lists every event the module can record, grouped by category, each with a description and an Enabled checkbox."
+            },
+            {
+              "id": "events-2",
+              "text": "The Content category covers content items: created, saved, published, unpublished, removed, cloned, and restored. The User category covers sign-ins and changes to user accounts."
+            },
+            {
+              "id": "events-3",
+              "text": "Each category has a Select all checkbox. Login failed is the one built-in event that starts switched off, so let's select it to record failed sign-in attempts."
+            },
+            {
+              "id": "events-4",
+              "text": "Below the table, Allow client IP address adds the address each event came from. An IP address can be personal data, so check the rules for your site. Let's select it."
+            },
+            {
+              "id": "events-5",
+              "text": "Content events need one more choice. On the Content tab, Allowed content types starts with nothing selected, so no content events are recorded until you select at least one."
+            },
+            {
+              "id": "events-6",
+              "text": "Let's select Page. An event is recorded only when it is enabled on the Events tab and, for content, when its content type is selected here."
+            },
+            {
+              "id": "events-7",
+              "text": "Select Save. The message Site settings updated successfully confirms the change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Retention",
+      "subtitle": "Choose how long events are kept",
+      "clips": [
+        {
+          "id": "03-trimming",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "trim-1",
+              "text": "Events add up, so the module trims them. Let's open the Trimming tab. Retention period is the number of days an event is kept, and it starts at 10."
+            },
+            {
+              "id": "trim-2",
+              "text": "A background task deletes the events older than the retention period. By default, it runs once a day, and Last run shows when it last ran."
+            },
+            {
+              "id": "trim-3",
+              "text": "Let's keep events for 90 days instead. Select the field and type 90."
+            },
+            {
+              "id": "trim-4",
+              "text": "To keep events indefinitely, you would select Disable trimming task. Let's leave it cleared and select Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "User events",
+      "subtitle": "Choose what is stored about a user",
+      "clips": [
+        {
+          "id": "04-options",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "options-1",
+              "text": "For each property of a user, you choose how its value is stored. Store keeps it as text. PartialAsteriskRedactor keeps the first and last character and hides the rest with asterisks."
+            },
+            {
+              "id": "options-2",
+              "text": "ErasingRedactor stores an empty value, which shows that the property had a value without revealing it. HmacRedactor stores a hash, a scrambled form that cannot be turned back into the value, and is offered only when a key is configured."
+            }
+          ]
+        },
+        {
+          "id": "04-users",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "users-1",
+              "text": "Settings, Security, User Audit Trail lists User Properties to Store. By default, a user event stores the user's name and ID, and these settings add a User Snapshot of the properties you choose."
+            },
+            {
+              "id": "users-2",
+              "text": "Each property of a user has its own drop-down, and every one starts empty, which means the property is not stored. The password hash, reset token and user tokens are never offered."
+            },
+            {
+              "id": "users-3",
+              "text": "Let's choose PartialAsteriskRedactor for Email. Then select Save, and the page reloads with your choice."
+            },
+            {
+              "id": "users-4",
+              "text": "With properties chosen, a snapshot is saved when a user is created, updated, enabled, disabled, or confirmed. It appears as User Snapshot on the Details page of that event."
+            },
+            {
+              "id": "users-5",
+              "text": "When a user is deleted, the snapshots of that user are removed from the earlier events of the Audit Trail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The result",
+      "subtitle": "Events in the Audit Trail list",
+      "clips": [
+        {
+          "id": "05-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "Under Tools, Audit Trail, the list shows what these settings produce. Someone tried to sign in with an unknown user name, and that failed attempt appears as a Login failed event in the User category."
+            },
+            {
+              "id": "result-2",
+              "text": "Entries recorded after you allowed the client IP address carry a badge with that address. A published Page appears too, because Page is an allowed content type."
+            },
+            {
+              "id": "result-3",
+              "text": "Select Details on the Login failed entry. Event Info lists the category, the event name, who triggered it and when, and the Client IP address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Audit Trail Settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Three settings shape the Audit Trail: which events it records, how long it keeps them, and what it stores about users. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
