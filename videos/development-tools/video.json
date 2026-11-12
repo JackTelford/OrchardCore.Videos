@@ -1,0 +1,59 @@
+{
+  "title": "Development Tools: Preview Packages and Local NuGet Feeds | Orchard Core",
+  "description": "Building with Orchard Core means choosing an editor, a few utilities and a source of packages. The release packages come from NuGet, but the development code and your own copy of the source code come from somewhere else.\n\nThis video covers the tools the documentation suggests, shows three ways to add the preview package feed, and builds a local NuGet feed from a fork or a branch of the source code.\n\nIn this video:\n• Editors and utilities: Visual Studio, Visual Studio Code, JetBrains Rider, DB Browser for SQLite and smtp4dev\n• Preview packages: what they are, when to use them, and how to add the preview feed in Visual Studio, in a NuGet.config file and with the .NET CLI\n• A local NuGet feed: pack the source code, publish the packages to a feed, and point your project at it",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "NuGet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "NuGet",
+    "preview packages",
+    "local NuGet feed",
+    "Visual Studio",
+    "development tools"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Development Tools",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/development-tools/"
+    },
+    {
+      "label": "Documentation: Add preview package source",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/preview-package-source/"
+    },
+    {
+      "label": "Documentation: Using a local copy of Orchard Core source code as nuget packages",
+      "url": "https://docs.orchardcore.net/en/latest/topics/local-nuget-packages/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/getting-started/development-tools.md",
+    "src/docs/getting-started/preview-package-source.md",
+    "src/docs/topics/local-nuget-packages/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:getting-started/development-tools"
+  }
+}
