@@ -1,6 +1,6 @@
 # Email: Configure SMTP and Send a Test Email
 
-**YouTube:** not published yet · **Length:** 4:32 · **Feature:** [OrchardCore.Email](https://docs.orchardcore.net/en/latest/reference/modules/Email/)
+**YouTube:** not published yet · **Length:** 4:25 · **Feature:** [OrchardCore.Email](https://docs.orchardcore.net/en/latest/reference/modules/Email/)
 
 How a site sends email, and how to check it. The video enables the SMTP Email Provider (the Email feature comes with
 it), connects the site to an SMTP server on the SMTP tab under Settings, Communication, Email, sends a message from

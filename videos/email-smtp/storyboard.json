@@ -21,7 +21,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "Orchard Core sends email for account confirmations, password resets, notifications, and workflows. In this video, we enable the SMTP provider, connect the site to a mail server, and send a test email to check that it works."
+              "text": "Orchard Core sends email for account confirmations, password resets, notifications, and workflows. Let's enable the SMTP provider, connect the site to a mail server, and send a test email to check that it works."
             }
           ]
         }
@@ -50,7 +50,7 @@
             },
             {
               "id": "plan-1",
-              "text": "Let's enable the SMTP provider, configure it, and send a test email. To see the message arrive, we use a local test mail server, so nothing reaches a real inbox."
+              "text": "Let's enable the SMTP provider, configure it, and send a test email. A local test mail server shows the message arriving, so nothing reaches a real inbox."
             }
           ]
         }
@@ -112,15 +112,15 @@
             },
             {
               "id": "config-5",
-              "text": "Under Network delivery options, Host name is the address of the SMTP server, and Port number is the port it listens on. Our test server is on localhost, at port 2525."
+              "text": "Under Network delivery options, Host name is the address of the SMTP server, and Port number is the port it listens on. The test server is on localhost, at port 2525."
             },
             {
               "id": "config-6",
-              "text": "Encryption method to use offers None, SSL/TLS, and STARTTLS. Our test server accepts plain connections, so we choose None. Auto Select Encryption method would choose it from the port instead."
+              "text": "Encryption method to use offers None, SSL/TLS, and STARTTLS. The test server accepts plain connections, so let's choose None. Auto Select Encryption method would choose it from the port instead."
             },
             {
               "id": "config-7",
-              "text": "Require credentials adds the Use Windows authentication option, and the User name and Password fields, for servers that ask for a sign-in. Our test server does not, so we leave it unchecked."
+              "text": "Require credentials adds the Use Windows authentication option, and the User name and Password fields, for servers that ask for a sign-in. The test server does not, so let's leave it unchecked."
             },
             {
               "id": "config-8",
@@ -149,7 +149,7 @@
             },
             {
               "id": "test-2",
-              "text": "In To, we enter the recipient, jamie.chen@example.com. Sender is optional: when it is empty, the message uses the sender email address of the SMTP settings."
+              "text": "In To, let's enter the recipient, jamie.chen@example.com. Sender is optional: when it is empty, the message uses the sender email address of the SMTP settings."
             },
             {
               "id": "test-3",
@@ -178,7 +178,7 @@
             },
             {
               "id": "inbox-2",
-              "text": "Let's open the message. The sender is the address from the SMTP settings, and the subject and the text are the ones we typed on the Email Test page."
+              "text": "Let's open the message. The sender is the address from the SMTP settings, and the subject and the text are the ones from the Email Test page."
             }
           ]
         }
@@ -212,7 +212,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "The Email feature holds the settings, and the SMTP Email Provider sends the messages. Enable it, configure your mail server, and check it with the Email Test page. Thanks for watching."
+              "text": "Enable the SMTP Email Provider, configure your mail server, and check it with the Email Test page. Thanks for watching."
             }
           ]
         }
