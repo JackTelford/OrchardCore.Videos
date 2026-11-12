@@ -61,7 +61,7 @@
           "steps": [
             {
               "id": "part-1",
-              "text": "Let's add the Liquid part to a content type named Notice. On the Edit Content Type page, under Parts, choose Add Parts."
+              "text": "Let's add the Liquid part to a content type named Notice, which has a Title part. On the Edit Content Type page, under Parts, choose Add Parts."
             },
             {
               "id": "part-2",
@@ -106,7 +106,7 @@
             },
             {
               "id": "field-3",
-              "text": "Edit the notice. The editor is labeled with the display name of the field, Closing Note, and its hint reads: The content of the field, in Liquid format. This template links to the item with the display URL filter."
+              "text": "Edit the notice. The editor is labeled with the display name of the field, Closing Note, and its hint reads: The content of the field, in Liquid format. Write a template that links to the item with the display URL filter."
             },
             {
               "id": "field-4",

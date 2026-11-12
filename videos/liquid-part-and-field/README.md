@@ -1,6 +1,6 @@
 # Liquid Part and Liquid Field: Content That Runs Templates
 
-**YouTube:** not published yet · **Length:** 4:20 · **Feature:** `OrchardCore.Liquid` ([Liquid](https://docs.orchardcore.net/en/latest/reference/modules/Liquid/))
+**YouTube:** not published yet · **Length:** 4:22 · **Feature:** `OrchardCore.Liquid` ([Liquid](https://docs.orchardcore.net/en/latest/reference/modules/Liquid/))
 
 The Liquid part and the Liquid field store a Liquid template inside a content item and run it when the content is
 displayed. The video adds each one in the admin, writes a template that reads the site and the content item, and shows
