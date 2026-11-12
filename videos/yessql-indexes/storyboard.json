@@ -1,0 +1,262 @@
+{
+  "title": "YesSql Indexes: Query Your Own Documents",
+  "output": "yessql-indexes",
+  "spoken": {
+    "UserByRoleNameIndex": "User By Role Name Index",
+    "CreateReduceIndexTableAsync": "Create Reduce Index Table Async",
+    "CreateMapIndexTableAsync": "Create Map Index Table Async",
+    "AlterIndexTableAsync": "Alter Index Table Async",
+    "AddScopedIndexProvider": "Add Scoped Index Provider",
+    "AddIndexProvider": "Add Index Provider",
+    "IScopedIndexProvider": "I Scoped Index Provider",
+    "SingleRecordPerDocument": "Single Record Per Document",
+    "ExclusiveToDocumentType": "Exclusive To Document Type",
+    "NoIndexOptimizations": "No Index Optimizations",
+    "SkipDeduplication": "Skip Deduplication",
+    "SaveChangesAsync": "Save Changes Async",
+    "SaveAsync": "Save Async",
+    "ContentItemIndex": "Content Item Index",
+    "AliasPartIndex": "Alias Part Index",
+    "ProductIndex": "Product Index",
+    "ProductPart": "Product Part",
+    "AliasPart": "Alias Part",
+    "IContentManager": "I Content Manager",
+    "ISession": "I Session",
+    "IndexProvider": "Index Provider",
+    "MapIndex": "Map Index",
+    "UserIndex": "User Index",
+    "DocumentId": "Document I.D.",
+    "YesSql": "Yes Sequel",
+    "ORM": "O.R.M.",
+    "CreateIndex": "Create Index",
+    "RoleName": "Role Name",
+    "Sku": "S.K.U."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "YesSql Indexes",
+      "subtitle": "Query your own documents",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core stores most of its data as JSON documents, and an index is what lets you query them. In this video, you define a YesSql index, register it, create its table, and query it with ISession."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Documents and indexes",
+      "subtitle": "Why YesSql needs indexes",
+      "clips": [
+        {
+          "id": "01-docs",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Orchard Core does not use an ORM such as Entity Framework. Content items, users, settings, and workflows are saved with YesSql, a document database interface over a relational database: SQL Server, SQLite, MySQL, or PostgreSQL."
+            },
+            {
+              "id": "why-2",
+              "text": "YesSql serializes an object to JSON and stores it as a row of a document table. There is no schema to migrate, so adding a part or a field to a content type never requires a database migration."
+            },
+            {
+              "id": "why-3",
+              "text": "The limit is that SQL cannot query inside a JSON document efficiently. An index solves it: a plain class with the properties you want to query, kept by YesSql in a regular SQL table."
+            },
+            {
+              "id": "why-4",
+              "text": "When a document is created, updated, or deleted, YesSql recomputes its index rows in the same transaction. A property you query must be part of an index. Everything else stays only in the JSON."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "A map index",
+      "subtitle": "From a document to index rows",
+      "clips": [
+        {
+          "id": "02-map",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "map-1",
+              "text": "A map index is a class that inherits from MapIndex. Its properties are the columns you query on. ProductIndex has a Sku, a Price, and the Published flag of the content item."
+            },
+            {
+              "id": "map-2",
+              "text": "An IndexProvider describes how to map a document type to index rows. In Describe, For names the index, When selects the content items that have a ProductPart, and Map builds a row from the part."
+            },
+            {
+              "id": "map-3",
+              "text": "Each version of a content item is its own document, so ProductIndex has a row for every version. The Published flag lets a query choose the published version."
+            },
+            {
+              "id": "map-4",
+              "text": "Map can return null, and the document then has no row. AliasPartIndex does this when the alias is empty. It is a map index too, with rows only for content items that have an AliasPart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Register and create the table",
+      "subtitle": "The provider and a data migration",
+      "clips": [
+        {
+          "id": "03-setup",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "In the Startup class of your module, AddIndexProvider registers the provider as a singleton. A provider that needs scoped services implements IScopedIndexProvider, and AddScopedIndexProvider registers it at the session level."
+            },
+            {
+              "id": "setup-2",
+              "text": "The index table comes from a data migration. CreateMapIndexTableAsync declares a column for each property. The documentation on data migrations advises setting the length of every string column, as Sku does here."
+            },
+            {
+              "id": "setup-3",
+              "text": "AlterIndexTableAsync with CreateIndex adds a database index on DocumentId and the columns you filter on, which speeds up those queries. Orchard Core runs the migration when the tenant starts. A separate video covers data migrations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Query your documents",
+      "subtitle": "ISession and your index",
+      "clips": [
+        {
+          "id": "04-query",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "query-1",
+              "text": "Inject ISession and call Query with the document type and the index type. The predicate filters the index table with SQL, and YesSql then loads and deserializes the matching documents."
+            },
+            {
+              "id": "query-2",
+              "text": "The session is a unit of work: SaveAsync and Delete are buffered, and SaveChangesAsync runs the commands in one transaction. Orchard Core calls it when the shell scope of the tenant ends. A session from any other scope is not committed for you."
+            },
+            {
+              "id": "query-3",
+              "text": "To combine indexes, call With on the query. Orchard Core's user picker filters users through UserByRoleNameIndex and UserIndex, and takes 50 of the matches."
+            },
+            {
+              "id": "query-4",
+              "text": "For content items, prefer IContentManager, which handles loading, versions, and handlers. Use ISession when you need to query your own indexes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "A reduce index",
+      "subtitle": "Aggregate a group of documents",
+      "clips": [
+        {
+          "id": "05-reduce",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "reduce-1",
+              "text": "A reduce index aggregates a group of documents, like a SQL GROUP BY. UserByRoleNameIndex holds a RoleName and a Count. Map emits a row for each role of a user, and Group chooses RoleName as the key."
+            },
+            {
+              "id": "reduce-2",
+              "text": "Reduce adds the counts of a group into one row. Delete subtracts the counts of the removed rows, and returns null when none is left. CreateReduceIndexTableAsync creates its table."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "See the tables",
+      "subtitle": "Index rows in the database",
+      "clips": [
+        {
+          "id": "06-tables",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tables-1",
+              "text": "The SQL Queries feature adds Run SQL Query, under Search, Queries. It runs SQL against the database of the site, and adds the table prefix of the tenant for you."
+            },
+            {
+              "id": "tables-2",
+              "text": "A link on this page queries all content items. It selects every row of ContentItemIndex, the table that YesSql keeps in step with the content item documents."
+            },
+            {
+              "id": "tables-3",
+              "text": "Each result is a row of the index. It holds the columns of ContentItemIndex, including a DocumentId that points back to the document the row was computed from."
+            },
+            {
+              "id": "tables-4",
+              "text": "A reduce index row does not point to one document: it aggregates a group of them. In UserByRoleNameIndex, each row is a role, with the Count of the users that have it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Declare the records",
+      "subtitle": "What an index holds",
+      "clips": [
+        {
+          "id": "07-declare",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "declare-1",
+              "text": "A map index can hold several records for a document. A query that joins it must then group its matches by document, and a page has to read every match before it can be sorted."
+            },
+            {
+              "id": "declare-2",
+              "text": "SingleRecordPerDocument declares that the map returns at most one record per document. A query that joins only such indexes is not grouped, and saving a document throws if the map returns several."
+            },
+            {
+              "id": "declare-3",
+              "text": "ExclusiveToDocumentType declares that only documents of the provider's type have records in the index, so a count reads the index tables without joining the document table. ContentItemIndex declares both."
+            },
+            {
+              "id": "declare-4",
+              "text": "NoIndexOptimizations opts a query out of these optimizations, as Orchard Core does for a text search in the content picker. SkipDeduplication skips the grouping when a query joins an index with several records but matches only one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "YesSql Indexes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's a YesSql index: a class, a provider, a table, and a query through ISession. The documentation page, How YesSql works, goes through each step. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
