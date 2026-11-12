@@ -1,0 +1,286 @@
+{
+  "title": "Export Content Items to a CSV File",
+  "output": "data-pipelines-export-csv",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Export Content Items to a CSV File",
+      "subtitle": "Save your blog posts as a file in the media library",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Someone asks for the content of your site in a spreadsheet. In this video, we design a data pipeline that reads the blog posts, writes them to a CSV file, and saves the file in the media library."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a pipeline works",
+      "subtitle": "Sources, transforms, files and destinations",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A data pipeline is a chain of steps. A source step reads rows from a data source, such as the content items of a content type, the users of the site, or a saved query."
+            },
+            {
+              "id": "idea-2",
+              "text": "Transform steps change the rows: they filter, sort, group and join them. This pipeline needs none, because the source itself can choose its fields and filter its rows."
+            },
+            {
+              "id": "idea-3",
+              "text": "A file step writes the rows to a CSV file, an Excel workbook, JSON or JSON Lines. A destination step then delivers the file. Here, it saves the file in a folder of the media library."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the pipeline",
+      "subtitle": "A name, then the designer",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "With the Data Pipelines feature enabled, the Tools menu has a Data Pipelines entry. Pipelines lists the pipelines of the site, and Run History lists their runs. Let's open Pipelines."
+            },
+            {
+              "id": "create-2",
+              "text": "The list is empty. Let's select Add Pipeline, type Blog posts export as the name, and select Create."
+            },
+            {
+              "id": "create-3",
+              "text": "The designer opens. The toolbox on the left groups the steps as Sources, Transforms, Files and Destinations. The canvas holds the pipeline, and the panel on the right has the Pipeline, Issues and History tabs."
+            },
+            {
+              "id": "create-4",
+              "text": "The Pipeline tab also holds a description, which the list of pipelines shows. Let's write what this pipeline does. The designer saves a draft as you work, and the toolbar says Draft saved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Read the blog posts",
+      "subtitle": "A source, its fields and a filter",
+      "clips": [
+        {
+          "id": "03-source",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "Every pipeline starts with a source. Let's select Add a data source. The dialog lists the data sets you may read, and its left column filters them by data source: Content items, Queries and Users."
+            },
+            {
+              "id": "source-2",
+              "text": "Each content type is a data set. Let's type blog in the Filter box, and add Blog Post."
+            },
+            {
+              "id": "source-3",
+              "text": "The Read a data source step appears on the canvas, and its settings open in the panel below. The data set is Blog Post, from Content items."
+            },
+            {
+              "id": "source-4",
+              "text": "Fields to read chooses the columns. Let's keep Title, Subtitle, Author and Created. With no field selected, the step reads every field."
+            },
+            {
+              "id": "source-5",
+              "text": "Filters keep only the rows that match. Let's select Add a filter, and set Published equals Yes. Posts that are drafts stay out of the file."
+            },
+            {
+              "id": "source-6",
+              "text": "In the Data tab, Preview runs the pipeline up to this step on a sample of the rows. It shows six rows, one for each published post."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Write the CSV file",
+      "subtitle": "Format, name and columns",
+      "clips": [
+        {
+          "id": "04-file",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "file-1",
+              "text": "Select the Rows port at the right edge of the step. A list offers the steps that accept rows. Let's choose Create a file."
+            },
+            {
+              "id": "file-2",
+              "text": "The Format is CSV, comma separated values, by default. The File name is written without its extension, so let's type blog-posts, and the step adds the extension of the format."
+            },
+            {
+              "id": "file-3",
+              "text": "Start with a row of column names is on. Let's also turn on Name the columns with the labels of the fields, so the first row uses labels such as Title and Created, not technical names."
+            },
+            {
+              "id": "file-4",
+              "text": "A comma separates the values by default. For tab-separated values, type tab in the CSV delimiter box."
+            },
+            {
+              "id": "file-5",
+              "text": "The Data tab previews the file this step creates: its name, its type, its size and its six rows. A preview delivers nothing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Save the file",
+      "subtitle": "Deliver it to the media library",
+      "clips": [
+        {
+          "id": "05-deliver",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "deliver-1",
+              "text": "Select the Files port of the file step, and the list offers the steps that accept files. Let's choose Save to the media library."
+            },
+            {
+              "id": "deliver-2",
+              "text": "Folder is the folder of the media library that receives the file. Let's type exports. Left empty, the file goes to the root."
+            },
+            {
+              "id": "deliver-3",
+              "text": "The warning is about other formats. By default, the media library accepts CSV files and Excel workbooks, but not JSON, JSON Lines or zip files."
+            },
+            {
+              "id": "deliver-4",
+              "text": "Replace a file with the same name is on, so each run overwrites the previous file. Without it, the file is saved under a name with a number appended."
+            },
+            {
+              "id": "deliver-5",
+              "text": "The Data tab shows what the step would receive: the file. Destinations are never executed by a preview, so the media library stays untouched."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Publish the pipeline",
+      "subtitle": "Runs use the published version",
+      "clips": [
+        {
+          "id": "06-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "publish-1",
+              "text": "The Issues tab lists what must be fixed before the pipeline can be published, and what deserves a look. It reports no issues."
+            },
+            {
+              "id": "publish-2",
+              "text": "A run executes the published version, never the draft. Let's select Publish. A message confirms it, and the toolbar shows the published version."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Who can publish and run",
+      "subtitle": "Permissions",
+      "clips": [
+        {
+          "id": "07-access",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "access-1",
+              "text": "A published pipeline runs with the access of the user who published it. It reads and writes only what that user may read and write."
+            },
+            {
+              "id": "access-2",
+              "text": "That is why the Manage data pipelines permission, which covers designing and publishing, is security critical. Run data pipelines allows running them, and View data pipelines and their runs allows viewing them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Run the pipeline",
+      "subtitle": "Follow the run in the History tab",
+      "clips": [
+        {
+          "id": "08-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Let's select Run. The run is queued, and it executes in the background. The History tab opens and follows it."
+            },
+            {
+              "id": "run-2",
+              "text": "When the run ends, its status is Succeeded. The read step shows six rows, and the last two steps show one file each. Deliveries records where the file was saved."
+            },
+            {
+              "id": "run-3",
+              "text": "Select Open the run for the full page. It lists the status of each step, what was delivered, and the log. The Run History link there lists the runs of this pipeline."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Find the file",
+      "subtitle": "In the media library",
+      "clips": [
+        {
+          "id": "09-media",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "media-1",
+              "text": "Let's open Media, Library, and select the exports folder. The CSV file is here, with the name we typed."
+            },
+            {
+              "id": "media-2",
+              "text": "Each run replaces the file. Open it in a spreadsheet application, and each published post is one row."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Export Content Items to a CSV File",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A source, a file and a destination are enough to export content in a format other tools read. Separate videos cover running pipelines on a schedule, and delivering files by email. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

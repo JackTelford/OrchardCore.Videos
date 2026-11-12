@@ -1,0 +1,54 @@
+{
+  "title": "Data Pipelines: Export Content Items to a CSV File | Orchard Core",
+  "description": "Teams often need the content of a site in a spreadsheet, for a report or for another system. Copying it by hand is slow, and it has to be repeated whenever the content changes.\n\nA data pipeline reads the content items of a content type, writes them to a CSV file, and saves the file in the media library. You design it in the browser, publish it, and run it whenever you need a fresh file.\n\nIn this video:\n• How a pipeline chains a source, a file and a destination\n• Creating a pipeline in the designer\n• Reading the blog posts, choosing their fields and filtering them\n• Writing the CSV file and naming its columns\n• Saving the file to a folder of the media library\n• Publishing the pipeline\n• Who can publish and run pipelines\n• Running the pipeline and following the run\n• Finding the file in the media library",
+  "hashtags": [
+    "OrchardCore",
+    "DataPipelines",
+    "CSV"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Data Pipelines",
+    "CSV",
+    "Export",
+    "Content items",
+    "Media library",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Data Pipelines"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/"
+    },
+    {
+      "label": "Data sources documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataSources/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DataPipelines/README.md",
+    "src/docs/reference/modules/DataSources/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataPipelines"
+  }
+}
