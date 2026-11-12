@@ -1,0 +1,219 @@
+{
+  "title": "External Login: Let Users Sign In With Other Accounts",
+  "output": "external-login-settings",
+  "spoken": {
+    "OpenIdConnect": "OpenID Connect"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "External Login",
+      "subtitle": "Let users sign in with accounts from other services",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Many visitors already have an account with another service. External authentication lets them use it to sign in to your Orchard Core site. This video covers the feature, the login page it changes, and the settings that control it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How it works",
+      "subtitle": "One feature shared by every provider",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A provider feature, such as Google, Microsoft, GitHub, Meta or X, or an OpenID Connect provider, adds a button to the login page when it is configured. The provider confirms who the visitor is, and your site keeps a local user account for them."
+            },
+            {
+              "id": "how-2",
+              "text": "The External Authentication feature holds what every provider shares: the pages a visitor sees on a first sign-in, a page to manage linked accounts, and the settings for login and registration. Each provider adds its own settings, covered in its own video."
+            },
+            {
+              "id": "how-3",
+              "text": "Each time a visitor signs in with a provider, the site asks up to three questions in order: is this provider account already linked to a local user, does a local user have the email address the provider shares, and are new registrations allowed?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable a provider",
+      "subtitle": "External Authentication turns on with it",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Open Tools, Features. A search for External Authentication does not list it at first, because the Visibility filter hides on-demand features: the ones Orchard Core turns on only when another feature needs them."
+            },
+            {
+              "id": "features-2",
+              "text": "Clear Hide on demand. External Authentication is listed, but its Enable button is inactive, so you cannot turn it on yourself."
+            },
+            {
+              "id": "features-3",
+              "text": "Enable a provider feature instead. Here that is OpenID Connect Client Integration, with a provider named Example Accounts set up beforehand. The Google, Microsoft, GitHub, Meta and X provider features depend on External Authentication in the same way."
+            },
+            {
+              "id": "features-4",
+              "text": "Search again. External Authentication is enabled, and its Disable button is inactive. A tooltip explains that the feature is enabled based on dependency."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The login page",
+      "subtitle": "A button for each provider",
+      "clips": [
+        {
+          "id": "03-login",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "Here is the login page for a signed-out visitor. The local form is on the left, and on the right, under Use another service to log in, each configured provider has a button. This provider is named Example Accounts."
+            },
+            {
+              "id": "login-2",
+              "text": "Let's select Example Accounts. The provider confirms who the visitor is, then sends the browser back to the site."
+            },
+            {
+              "id": "login-3",
+              "text": "The site refuses the sign-in with the message New registrations are disabled for this site. The visitor has no local account, and the registration settings do not allow one to be created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Registration settings",
+      "subtitle": "Decide who can create an account",
+      "clips": [
+        {
+          "id": "04-registration",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "reg-1",
+              "text": "To change that, open Settings, Security, Registration. These External Authentication settings decide what happens when a visitor without a local account signs in with a provider."
+            },
+            {
+              "id": "reg-2",
+              "text": "Disable new external registration is selected. While it is, only people who already have a local account can sign in with a provider. That is why the visitor was refused."
+            },
+            {
+              "id": "reg-3",
+              "text": "Clear it, and select Save. The site confirms with the message Site settings updated successfully."
+            },
+            {
+              "id": "reg-4",
+              "text": "Three options control what a first-time visitor is asked for: Do not ask username, Do not ask email address, and Do not create local password. Each one removes its fields from the registration form."
+            },
+            {
+              "id": "reg-5",
+              "text": "When all three are selected and the provider shares an email address, the site creates the account directly and skips the form."
+            },
+            {
+              "id": "reg-6",
+              "text": "The last option, Use a script to generate userName based on external provider claims, lets a developer write the rule for usernames."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "First sign-in",
+      "subtitle": "Create the local account",
+      "clips": [
+        {
+          "id": "05-register",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "new-1",
+              "text": "Back on the login page, the visitor selects Example Accounts again. This time the site accepts the sign-in and shows a page headed Create a new account."
+            },
+            {
+              "id": "new-2",
+              "text": "The page says the visitor authenticated with the provider, and asks for the rest: a Username, filled in with a generated value, an Email, a Password, and Confirm password."
+            },
+            {
+              "id": "new-3",
+              "text": "The visitor completes the fields and selects Register. The site creates the local account, links it to the provider, and signs the visitor in. The visitor's page of external logins then lists the link under Registered Logins, as OpenIdConnect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Login settings",
+      "subtitle": "Go straight to the provider",
+      "clips": [
+        {
+          "id": "06-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "loginset-1",
+              "text": "Open Settings, Security, User Login, and select the External Login tab. Use external provider for login applies when only one provider is defined: the login page then sends visitors straight to it."
+            },
+            {
+              "id": "loginset-2",
+              "text": "The second option, Use a script to set user roles, user claims and user properties based on external provider claims, runs a developer's script at each external sign-in. This video does not cover scripts."
+            },
+            {
+              "id": "loginset-3",
+              "text": "Select Use external provider for login, and select Save."
+            }
+          ]
+        },
+        {
+          "id": "06-straight",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "straight-1",
+              "text": "A signed-out visitor who opens the login page does not see the login form. The browser goes to the provider and comes back with the visitor signed in, which the list under Registered Logins confirms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "External Login",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "External Authentication is the shared layer behind every sign-in provider: a button on the login page, rules for first-time visitors, and two groups of settings. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

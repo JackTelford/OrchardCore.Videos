@@ -1,0 +1,47 @@
+{
+  "title": "External Login: Let Users Sign In With Other Accounts | Orchard Core",
+  "description": "Visitors who already have an account with another service must create and remember a separate account for your site.\n\nThe External Authentication feature lets them sign in with the account they have, and your site keeps a local user for each of them. This video shows how a provider feature turns External Authentication on, what the login page and the first sign-in look like, and the registration and login settings that control it.\n\nIn this video:\n• How external authentication works\n• Enabling a provider feature\n• The login page and its provider button\n• Registration settings\n• The first sign-in of a visitor\n• Login settings",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "External login",
+    "OpenID Connect",
+    "Authentication",
+    "Login"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "External Authentication"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Users/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users.ExternalAuthentication"
+  }
+}
