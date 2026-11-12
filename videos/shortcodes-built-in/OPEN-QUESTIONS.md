@@ -91,7 +91,8 @@ of the file on the site". A person confirms what appears on the page of the reco
 ## 8. Pronunciation
 
 `storyboard.json` has `"spoken": { "asset_url": "asset underscore U.R.L." }`. A person must confirm this spelling with
-`scripts/pronounce.py` before narrating, as the skill requires for a new spelling. Also check how the voice says
+`scripts/pronounce.py` before narrating, as the skill requires for a new spelling. The same applies to the new entries for the file names `home-bg.jpg` and `post-bg.jpg`
+("home dash B.G. dot J.P.G.", "post dash B.G. dot J.P.G."). Also check how the voice says
 "alt" (in `which-1` and `options-2`) and "locale".
 
 ## 9. Text in the dialog

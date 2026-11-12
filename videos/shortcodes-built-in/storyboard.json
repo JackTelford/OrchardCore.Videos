@@ -2,7 +2,9 @@
   "title": "Orchard Core shortcodes",
   "output": "shortcodes-built-in",
   "spoken": {
-    "asset_url": "asset underscore U.R.L."
+    "asset_url": "asset underscore U.R.L.",
+    "home-bg.jpg": "home dash B.G. dot J.P.G.",
+    "post-bg.jpg": "post dash B.G. dot J.P.G."
   },
   "chapters": [
     {
