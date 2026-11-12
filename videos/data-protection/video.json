@@ -1,0 +1,60 @@
+{
+  "title": "Data Protection Keys: Share Them Across Servers | Orchard Core",
+  "description": "Orchard Core protects authentication cookies, anti-forgery tokens and saved credentials with Data Protection keys. By default each tenant keeps its keys in a local folder, which breaks a load-balanced site because every server has different keys.\n\nThe Distributed Data Protection features keep the key ring of each tenant in Azure Blob Storage or in Redis, so every server reads the same keys.\n\nIn this video:\n• Why the keys matter, and where they live by default\n• The three places for the key ring\n• Enabling a key store under Tools, Features\n• Azure Blob Storage: settings, blob layout and a container per tenant\n• Redis: settings, key names and persistence\n• Checking the log and the store",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Azure",
+    "Redis"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Data Protection",
+    "Azure Blob Storage",
+    "Redis",
+    "Load balancing",
+    "Multi-tenant"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Hosting and Production"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Data Protection in Orchard Core",
+      "url": "https://docs.orchardcore.net/en/latest/guides/data-protection/"
+    },
+    {
+      "label": "Documentation: Data Protection (Azure Storage)",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataProtection.Azure/"
+    },
+    {
+      "label": "Documentation: Redis",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Redis/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/data-protection/README.md",
+    "src/docs/reference/modules/DataProtection.Azure/README.md",
+    "src/docs/reference/modules/Redis/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataProtection.Azure"
+  }
+}

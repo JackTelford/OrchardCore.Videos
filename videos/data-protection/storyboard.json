@@ -1,0 +1,214 @@
+{
+  "title": "Data Protection Keys: Share Them Across Servers",
+  "output": "data-protection",
+  "spoken": {
+    "App_Data": "App Data",
+    "appsettings.json": "app settings dot JSON",
+    "OrchardCore.DataProtection.Azure": "Orchard Core dot Data Protection dot Azure",
+    "DataProtection-Keys": "Data Protection Keys",
+    "dataprotection": "data protection",
+    "ConnectionString": "Connection String",
+    "ContainerName": "Container Name",
+    "BlobName": "Blob Name",
+    "CreateContainer": "Create Container",
+    "InstancePrefix": "Instance Prefix",
+    "AllowAdmin": "Allow Admin",
+    "ShellSettings": "Shell Settings",
+    "AOF": "A.O.F.",
+    "RDB": "R.D.B."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Data Protection Keys",
+      "subtitle": "Share them across servers",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core protects sign-in cookies, anti-forgery tokens and saved credentials with encryption keys. On one server they sit in a local folder; several servers must share them. You will see where the keys live, and how to store them in Azure Blob Storage or Redis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why the keys matter",
+      "subtitle": "What they protect, and what fails with several servers",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "ASP.NET Core Data Protection protects the values that a site hands to the browser or keeps for later. Orchard Core uses it for authentication cookies, anti-forgery tokens, saved credentials such as an SMTP password, and temporary data. User passwords are not part of it."
+            },
+            {
+              "id": "why-2",
+              "text": "By default, each tenant has its own key ring, in a folder named DataProtection-Keys inside the tenant's folder under App_Data. The application name is the tenant name, so one tenant cannot decrypt what another tenant encrypted. Nothing needs configuring."
+            },
+            {
+              "id": "why-3",
+              "text": "The local folder breaks in a load-balanced site. Each server has its own keys, so a cookie issued by one server fails on another. A folder that does not survive a restart or a redeployment loses the keys, which invalidates existing cookies and tokens."
+            },
+            {
+              "id": "why-4",
+              "text": "The keys also guard stored data. Secrets and saved credentials are encrypted with the keys of the tenant, so a database backup alone cannot decrypt them. The key ring needs durable storage and a backup of its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Where the keys can live",
+      "subtitle": "The local folder, Azure Blob Storage or Redis",
+      "clips": [
+        {
+          "id": "02-places",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "places-1",
+              "text": "You can keep the key ring of each tenant in three places: the local folder, an Azure Blob Storage container, or Redis. Two features provide the shared places: Distributed Data Protection (Azure Storage) and Distributed Data Protection (Redis). Enable the one for your store."
+            },
+            {
+              "id": "places-2",
+              "text": "A feature replaces the local folder only when its settings exist. When a feature is enabled without settings, the tenant keeps the local folder, and the feature writes an entry to the log."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable a key store",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Features are managed under Tools, Features. Let's search for data protection. Two features remain, both in the Security category: Distributed Data Protection (Azure Storage), and Distributed Data Protection (Redis)."
+            },
+            {
+              "id": "enable-2",
+              "text": "Each row shows the name of the feature, its identifier, and its description. A recipe uses the identifier to enable the feature. Distributed Data Protection (Redis) also lists Redis, the feature it depends on."
+            },
+            {
+              "id": "enable-3",
+              "text": "Let's enable Distributed Data Protection (Azure Storage) with its Enable button. A message confirms that the feature was enabled. Without settings, it changes nothing, and the local folder stays in use."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Azure Blob Storage",
+      "subtitle": "Settings, blob layout and a container per tenant",
+      "clips": [
+        {
+          "id": "04-azure",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "azure-1",
+              "text": "The Azure settings go in the OrchardCore section of appsettings.json, under DataProtection, then Azure. ConnectionString is required. Without it, the feature registers nothing and writes a critical entry to the log."
+            },
+            {
+              "id": "azure-2",
+              "text": "ContainerName defaults to dataprotection and is always lowercased, and BlobName is optional. CreateContainer is true by default, so the container is created if it does not exist. Set it to false when the container already exists."
+            },
+            {
+              "id": "azure-3",
+              "text": "By default, one container holds the keys of all tenants, as an XML file in a folder named after the tenant. When a tenant is removed, the feature deletes that tenant's file."
+            },
+            {
+              "id": "azure-4",
+              "text": "For a container per tenant, use Liquid. ContainerName and BlobName are the only settings that accept a template, and the ShellSettings of the tenant are available in it. Only the default Liquid filters and tags can be used."
+            },
+            {
+              "id": "azure-5",
+              "text": "The startup of the feature runs after the default registration. When a connection string exists, it removes the default key management setup and persists the keys to a blob, using the container and blob names you saw."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Redis",
+      "subtitle": "Settings, key names and persistence",
+      "clips": [
+        {
+          "id": "05-redis",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "redis-1",
+              "text": "Redis is configured in the OrchardCore section, under Redis. Configuration is the connection string, and it is required. InstancePrefix is added to every key, so applications can share a server, and AllowAdmin allows admin commands."
+            },
+            {
+              "id": "redis-2",
+              "text": "The key ring of each tenant is stored under one Redis key, built from the instance prefix, the tenant name, and DataProtection-Keys. The slide shows the key of the Default tenant, with the prefix MyApp followed by a colon."
+            },
+            {
+              "id": "redis-3",
+              "text": "Data protection keys are not cache entries, so the Redis server needs AOF or RDB persistence, and a backup strategy. The feature logs a warning when persistence is not confirmed, and it can only check it when AllowAdmin is true."
+            },
+            {
+              "id": "redis-4",
+              "text": "When Redis is configured, the feature adds a key management setup. It builds the Redis key of the tenant, and sets the XML repository of the key manager to a Redis repository for that key."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Check the result",
+      "subtitle": "The log and the store",
+      "clips": [
+        {
+          "id": "06-check",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "After the site starts, read the log. A critical entry about a missing connection string means the Azure feature is not active. An error entry saying the Redis features are not active means the Redis configuration is missing or invalid."
+            },
+            {
+              "id": "check-2",
+              "text": "Then look in the store. In Azure, look for one XML file for each tenant, and in Redis, for one key for each tenant. Servers that point at the same store share the key ring."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Data Protection Keys",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Shared, durable keys let every server read the cookies and saved credentials of a tenant. A separate video covers the other Redis features. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
