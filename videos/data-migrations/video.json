@@ -1,0 +1,48 @@
+{
+  "title": "Data Migrations: Create and Update Your Module's Data | Orchard Core",
+  "description": "A module that stores data needs that data to exist in every tenant, and to change as the module changes. Each tenant has its own data, so a change has to run once, in order, for each of them.\n\nA data migration is a class of numbered steps that Orchard Core runs as a tenant starts. This video shows how to write one, register it, see one run, and what a step can do.\n\nIn this video:\n• Why a module needs data migrations\n• The migration class: CreateAsync, UpdateFrom steps and versions\n• Registering a migration in a Startup class\n• Watching a migration run when a feature is enabled\n• Changing content definitions\n• Creating and altering index tables\n• Running a recipe from a migration\n• Updating existing content\n• Rules to keep when you change a migration",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "data migrations",
+    "DataMigration",
+    "module development",
+    "content types",
+    "recipes"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Migrations/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Migrations/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:Migrations"
+  }
+}
