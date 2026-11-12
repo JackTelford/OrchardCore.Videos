@@ -1,0 +1,50 @@
+{
+  "title": "Queries in Liquid, Razor and the API | Orchard Core",
+  "description": "A saved query in Orchard Core has a name, and templates, views and other applications need a way to run it and read its results.\n\nLiquid templates run a query with the Queries property and the query filter, Razor views call ContentQueryAsync or QueryAsync on the Orchard helper, and the web API returns the result as JSON at api/queries/{name}. All three pass parameters to the query, and the API checks a permission.\n\nIn this video:\n• The RecentBlogPosts query and its limit parameter\n• The Queries property and the query filter in Liquid\n• ContentQueryAsync and QueryAsync in Razor\n• The api/queries endpoint, its permissions and its sign-in\n• Choosing between the three",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid",
+    "Razor"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Queries",
+    "Liquid",
+    "Razor",
+    "Web API",
+    "SQL"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Queries"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Queries/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Queries/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Queries"
+  }
+}
