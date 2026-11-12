@@ -1,0 +1,54 @@
+{
+  "title": "Notifications: Keep Users Informed in the Admin, by Email and SMS | Orchard Core",
+  "description": "Users miss what happens on a site when nothing tells them. Sending a message by hand to each person does not keep up with the events of a site.\n\nThe Notifications module stores a notification for each user in a notification center, shows it from a bell in the admin, and can also send it by email or SMS as each user chooses. A workflow sends the notifications without code.\n\nIn this video:\n• How notifications reach users: the notification center, the methods and the senders\n• Enabling the Notifications, Email Notifications and SMS Notifications features\n• Sending a notification with a workflow\n• The notification bell in the top bar\n• The notification center: search, filters and bulk actions\n• The notification preferences of each user\n• What email and SMS deliveries send and need",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Notifications"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Notifications",
+    "Notification center",
+    "Workflows",
+    "Email notifications",
+    "SMS notifications"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Email, SMS and Notifications"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Notifications/"
+    },
+    {
+      "label": "SMS documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Sms/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Notifications/README.md",
+    "src/docs/reference/modules/Sms/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Notifications"
+  }
+}

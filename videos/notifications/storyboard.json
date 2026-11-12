@@ -1,0 +1,244 @@
+{
+  "title": "Orchard Core Notifications",
+  "output": "notifications",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Notifications",
+      "subtitle": "Keep users informed in the admin, by email and by SMS",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Notifications tell users that something happened on the site. This video shows how they reach the notification center, how a workflow sends them, and how each user chooses to receive them by email or by SMS."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How notifications work",
+      "subtitle": "The center, the methods and the senders",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Every notification is stored for the user it is meant for. Users read their notifications in the admin, from the bell in the top bar and from the notification center."
+            },
+            {
+              "id": "why-2",
+              "text": "A notification can also be sent by email or by SMS, through notification methods. Each user decides which of the methods they receive."
+            },
+            {
+              "id": "why-3",
+              "text": "Workflows send notifications without any code, and a module can send them for the events it handles. Each user sees only their own notifications."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Notifications, Email Notifications and SMS Notifications",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Three features in the Notifications category provide notifications. Let's open Tools, Features, and search for notifications."
+            },
+            {
+              "id": "enable-2",
+              "text": "Notifications provides the notification center. Email Notifications and SMS Notifications are the two methods, and they depend on the Email and SMS features."
+            },
+            {
+              "id": "enable-3",
+              "text": "Let's select the three features and enable them. Once they are enabled, a bell appears in the top bar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Send a notification with a workflow",
+      "subtitle": "Notify users when something happens",
+      "clips": [
+        {
+          "id": "03-workflow",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "workflow-1",
+              "text": "With the Workflows feature enabled, a workflow can send notifications. Let's open Design, Workflows, and the workflow named Notify the editors when a page is published."
+            },
+            {
+              "id": "workflow-2",
+              "text": "It starts with the Content Published event, limited to pages. When a page is published, the workflow continues to the Notify Specific Users task."
+            },
+            {
+              "id": "workflow-3",
+              "text": "Double-click the task to open its settings. User names takes a comma-separated list of the users to notify, and Subject is the title of the notification."
+            },
+            {
+              "id": "workflow-4",
+              "text": "Summary is a short description, and Text Body and HTML Body hold the message. URL and Type are optional. Most fields accept Liquid, a template language."
+            },
+            {
+              "id": "workflow-5",
+              "text": "The toolbox lists the tasks you can add. Searching for notifications finds two: Notify Specific Users, and Notify Content Owner, which notifies the owner of the content item."
+            },
+            {
+              "id": "workflow-6",
+              "text": "To run the workflow, let's publish a draft page from Content, Content Items. The Content Published event starts the workflow, and the users are notified."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The notification bell",
+      "subtitle": "Unread notifications in the top bar",
+      "clips": [
+        {
+          "id": "04-bell",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "bell-1",
+              "text": "The bell in the top bar counts the notifications you have not read, in a badge. Users need the Manage notifications permission to see it."
+            },
+            {
+              "id": "bell-2",
+              "text": "Open the bell to see the unread notifications. Each one shows its subject, its summary, and when it arrived."
+            },
+            {
+              "id": "bell-3",
+              "text": "At the bottom of the menu, Notification Center opens the full list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The notification center",
+      "subtitle": "Read, search and manage your notifications",
+      "clips": [
+        {
+          "id": "05-center",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "center-1",
+              "text": "The notification center lists all your notifications, the most recent first. Unread ones are highlighted, and their subjects are bold."
+            },
+            {
+              "id": "center-2",
+              "text": "Each row shows the subject, the summary, and when the notification arrived. Mark as read marks one notification as read."
+            },
+            {
+              "id": "center-3",
+              "text": "The search box finds text in the summary and the text body. Show filters the list to Read or Unread notifications, and Sort changes the order."
+            },
+            {
+              "id": "center-4",
+              "text": "Actions, View opens a notification on its own page, with its text, and marks it as read. Mark as unread and Delete are at the bottom."
+            },
+            {
+              "id": "center-5",
+              "text": "To work on several notifications, select their check boxes. Actions then offers Mark as read, Mark as unread, and Remove for all of them."
+            },
+            {
+              "id": "center-6",
+              "text": "Mark All as Read, next to the search box, marks every notification as read after you confirm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Notification preferences",
+      "subtitle": "Choose how each user receives notifications",
+      "clips": [
+        {
+          "id": "06-preferences",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "pref-1",
+              "text": "Each user chooses how they receive notifications on their own profile. Let's open the user menu, and then Profile."
+            },
+            {
+              "id": "pref-2",
+              "text": "Notification Methods lists Email Notifications and SMS Notifications. A checked method sends a copy of every notification to the user."
+            },
+            {
+              "id": "pref-3",
+              "text": "Let's clear SMS Notifications and select Save. The user keeps receiving notifications by email, and the notification center always receives them."
+            },
+            {
+              "id": "pref-4",
+              "text": "Email Notifications sends to the Email field of the user, and SMS Notifications to the Phone Number field. When a field is empty, that method fails for the user, and the notification stays in the notification center."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Email and SMS delivery",
+      "subtitle": "What each method sends and needs",
+      "clips": [
+        {
+          "id": "07-delivery",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "deliver-1",
+              "text": "Email Notifications sends through the Email service, so a provider must be configured under Settings, Communication, Email. The email carries the Text Body, or the HTML Body when Use HTML Body when possible is checked and an HTML Body is set."
+            },
+            {
+              "id": "deliver-2",
+              "text": "SMS Notifications sends through the SMS service, so choose the Default SMS provider under Settings, Communication, SMS. The text message carries only the Text Body. Separate videos cover each service."
+            },
+            {
+              "id": "deliver-3",
+              "text": "The notification always stays in the notification center. A notification task of a workflow ends with Done when an email or SMS was sent, with Failed when none was, and with Failed: no user found when it finds no user to notify."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Notifications",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Notifications reach users in the notification center, and by email and SMS as each user chooses. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
