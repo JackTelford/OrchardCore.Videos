@@ -1,6 +1,6 @@
 # Taxonomies: Filter the Content Items List by Term
 
-**YouTube:** not published yet · **Length:** 3:26 · **Feature:** [OrchardCore.Taxonomies.ContentsAdminList](https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/#taxonomies-contents-list-filters)
+**YouTube:** not published yet · **Length:** 3:25 · **Feature:** [OrchardCore.Taxonomies.ContentsAdminList](https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/#taxonomies-contents-list-filters)
 
 The video shows how the Taxonomies Contents List Filters feature turns the terms of a taxonomy into filters for the
 Content Items list. It enables the feature in Tools, Features, chooses the taxonomies to filter by in Settings,

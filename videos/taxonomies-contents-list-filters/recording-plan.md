@@ -1,6 +1,6 @@
 # Recording plan: taxonomies-contents-list-filters
 
-The video: "Taxonomies: Filter the Content Items List by Term" (audience: admin, 3:26 of narration). It shows how the
+The video: "Taxonomies: Filter the Content Items List by Term" (audience: admin, 3:25 of narration). It shows how the
 feature Taxonomies Contents List Filters is enabled, how the taxonomies to filter by are chosen, and how the Content
 Items list is filtered by a term.
 
