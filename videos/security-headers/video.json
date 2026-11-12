@@ -1,0 +1,49 @@
+{
+  "title": "Security Headers: Content Security Policy and More | Orchard Core",
+  "description": "Every response your site sends to a browser carries headers. Some of them are security instructions: what a page may load, which browser features it may use, and what a link reveals about the page.\n\nThe Orchard Core Security module sets these headers from the admin, under Settings, Security, Security Headers. This video shows the Content Security Policy, Permissions Policy and Referrer Policy tabs, and what the site sends when you change nothing.\n\nIn this video:\n• How security headers work, and the four headers of the Security module\n• Opening the Security Headers settings\n• Content Security Policy: sources, Frame Ancestors and Object Source\n• Permissions Policy: None, Any and Self\n• Referrer Policy: choosing how much a link reveals\n• Good to know: the permissions and the settings made by a developer",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "WebSecurity"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "security headers",
+    "Content Security Policy",
+    "Permissions Policy",
+    "Referrer Policy",
+    "HTTP headers"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Site Security"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Security/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Security"
+  }
+}
