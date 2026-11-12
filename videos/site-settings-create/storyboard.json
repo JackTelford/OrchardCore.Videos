@@ -168,7 +168,7 @@
             },
             {
               "id": "try-4",
-              "text": "Let's select Save. The controller saves the section, adds the message Site settings updated successfully, and redirects to the same group. The box stays ticked, because the editor reads the saved section."
+              "text": "Let's select Save. The controller saves the site settings, adds the message Site settings updated successfully, and redirects to the same group. The box stays ticked, because the editor reads the saved section."
             }
           ]
         }
