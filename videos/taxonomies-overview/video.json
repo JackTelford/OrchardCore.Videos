@@ -1,0 +1,48 @@
+{
+  "title": "Taxonomies: Categorize Your Content | Orchard Core",
+  "description": "Almost every site groups its content: posts by topic, products by type. When editors type categories by hand, one topic ends up under several names, and visitors can't browse by topic.\n\nThe Taxonomies module manages categories and tags as taxonomies of terms, organized as a hierarchy. A Taxonomy Field attaches the terms to your content, and the site can list the content of each term.\n\nIn this video:\n• Why taxonomies\n• Two features\n• A taxonomy and its terms\n• Categorize content\n• Taxonomies on the site\n• More to explore",
+  "hashtags": [
+    "OrchardCore",
+    "Taxonomies",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Taxonomies",
+    "Categories",
+    "Tags",
+    "Content management",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Taxonomies"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Taxonomies/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Taxonomies"
+  }
+}

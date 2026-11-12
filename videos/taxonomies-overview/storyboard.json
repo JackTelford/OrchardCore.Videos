@@ -1,0 +1,203 @@
+{
+  "title": "Taxonomies: Categorize Your Content",
+  "output": "taxonomies-overview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Taxonomies: Categorize Your Content",
+      "subtitle": "Categories and tags for the content of your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Posts about travel, products in a catalog: almost every site groups its content. The Taxonomies module gives you managed categories and tags, linked to your content. This video covers how they are organized, chosen in the editor, and shown on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why taxonomies",
+      "subtitle": "Managed categories and tags",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Without a shared list, every editor types categories by hand. One writes Travel, another Travels, a third Trips. Visitors can't follow a topic across the site, and one topic ends up under several names."
+            },
+            {
+              "id": "why-2",
+              "text": "A taxonomy is a managed vocabulary. It holds terms, like Travel or Food, and the terms are organized as a hierarchy, with child terms under a parent term."
+            },
+            {
+              "id": "why-3",
+              "text": "A Taxonomy Field attaches terms to your content items. Editors pick terms from the list instead of typing them, and the site can show every item that belongs to a term."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Two features",
+      "subtitle": "Taxonomies and Taxonomies Contents List Filters",
+      "short": "features",
+      "clips": [
+        {
+          "id": "02-feature",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "feature-1",
+              "text": "The Taxonomies module has two features. Let's open Tools, then Features, and type taxonomies in the Search box to filter the list."
+            },
+            {
+              "id": "feature-2",
+              "text": "Taxonomies is the core feature, in the Content Management category. It provides the Taxonomy content type, the terms, and the Taxonomy Field. A site set up with the Blog recipe has it enabled; otherwise, you enable it here."
+            },
+            {
+              "id": "feature-3",
+              "text": "Taxonomies Contents List Filters is optional. It adds filters by term to the Content Items list, and it depends on Taxonomies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "A taxonomy and its terms",
+      "subtitle": "A content item that holds a hierarchy",
+      "short": "taxonomy",
+      "clips": [
+        {
+          "id": "03-taxonomy",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "taxonomy-1",
+              "text": "A taxonomy is a content item of the Taxonomy type, so it is listed under Content, Content Items. Filtered by that type, the list shows the two taxonomies of this site, Categories and Tags."
+            },
+            {
+              "id": "taxonomy-2",
+              "text": "Let's edit Categories. Term Content Type sets the content type of the terms, here Category. Each term is a content item of that type."
+            },
+            {
+              "id": "taxonomy-3",
+              "text": "Below it is the hierarchy of terms. Travel is a term, and Food is a term with two child terms, Recipes and Restaurants. Each row has Edit, Add, and Delete buttons."
+            },
+            {
+              "id": "taxonomy-4",
+              "text": "Add Category creates a term at the top level. The Add button of a row creates a child term under it. The terms are stored inside the taxonomy, so you publish the taxonomy to publish its terms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Categorize content",
+      "subtitle": "The Taxonomy Field in an editor",
+      "short": "categorize",
+      "clips": [
+        {
+          "id": "04-categorize",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "categorize-1",
+              "text": "Content is categorized with fields. Let's edit a Blog Post. Below the body, it has two fields that use taxonomies: Tags and Category."
+            },
+            {
+              "id": "categorize-2",
+              "text": "Category accepts one term, and only a term without children. Travel is selected. Food is a parent, so it is disabled, while Recipes and Restaurants can be chosen."
+            },
+            {
+              "id": "categorize-3",
+              "text": "Tags accepts several terms. Clicking the box lists the existing tags, and you select the ones you want. If you type a name that does not exist, pressing Enter creates a tag."
+            },
+            {
+              "id": "categorize-4",
+              "text": "When the post is published, the terms you selected are saved with it. Because editors choose from the list, every post uses the same names."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Taxonomies on the site",
+      "subtitle": "Badges and term pages",
+      "short": "site",
+      "clips": [
+        {
+          "id": "05-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "On the site, the theme shows the category and the tags of each post as badges. Each badge is a link to a term page."
+            },
+            {
+              "id": "site-2",
+              "text": "The Travel page lists the content categorized with Travel, newest first. Here it shows the two posts about travel."
+            },
+            {
+              "id": "site-3",
+              "text": "Term pages are available when a taxonomy has Route contained items checked in its editor, and the theme decides how they look. A separate video covers term pages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "More to explore",
+      "subtitle": "Settings, filters and permissions",
+      "clips": [
+        {
+          "id": "06-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "You add a Taxonomy Field to a content part under Design, Content Definition. Its settings choose the taxonomy, and include Required, Unique, and Leaves only. The Tags editor has an Open setting for creating tags while editing."
+            },
+            {
+              "id": "more-2",
+              "text": "With Taxonomies Contents List Filters enabled, Settings, Taxonomy Filters chooses the taxonomies that filter the Content Items list."
+            },
+            {
+              "id": "more-3",
+              "text": "The Manage taxonomies permission controls who can add, edit, and delete terms. The Administrator role has it by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Taxonomies: Categorize Your Content",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's Taxonomies: managed categories and tags for your content, with terms organized as a hierarchy. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
