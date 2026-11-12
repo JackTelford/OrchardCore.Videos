@@ -1,0 +1,217 @@
+{
+  "title": "The Orchard Core Queries module",
+  "output": "queries-overview",
+  "spoken": {
+    "Execute Api - ": "Execute A.P.I., ",
+    "IQuerySource": "I Query Source",
+    "AddQuerySource": "Add Query Source",
+    "ExecuteQueryAsync": "Execute Query Async",
+    "IQueryHandler": "I Query Handler",
+    "DisplayDriver": "Display Driver",
+    "RecentBlogPosts": "Recent Blog Posts",
+    "PublishedBlogPosts": "Published Blog Posts"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Queries module",
+      "subtitle": "Save a search or a database query once, and reuse it by name",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site asks the same questions again and again: the posts of a blog, a search, a count from the database. The Queries module saves each one under a name. You create a query, run it, deploy it, and add a source of your own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why saved queries",
+      "subtitle": "One question, one name",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Without saved queries, the same SQL or search text is copied into templates, scripts and controllers. When the question changes, every copy has to be found and edited."
+            },
+            {
+              "id": "why-2",
+              "text": "The Queries module keeps each question in one place, under a name. A query has a Name, a Source, an optional Schema, and a flag that says whether it returns content items. The source decides how the query runs."
+            },
+            {
+              "id": "why-3",
+              "text": "Queries Core Services holds the query manager, the recipe step and the Liquid filter, and is enabled by the features that depend on it. Queries adds the screens, permissions and API. SQL Queries, Lucene and Elasticsearch each add a source."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Queries screen",
+      "subtitle": "Search, Queries, All Queries",
+      "short": "screen",
+      "clips": [
+        {
+          "id": "02-screen",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "screen-1",
+              "text": "Let's open Search, Queries, All Queries in the admin menu. A site created with the Blog recipe has one saved query, RecentBlogPosts, which the Blog theme runs by name."
+            },
+            {
+              "id": "screen-2",
+              "text": "Each row shows the name and a badge for the source. SQL Queries adds a Run button to its queries, and every query has Edit and Delete buttons."
+            },
+            {
+              "id": "screen-3",
+              "text": "Add Query opens Available Query Types. Each source feature adds a card to this dialog. On this site, SQL is the only one, because SQL Queries is the only source feature enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a query",
+      "subtitle": "A name, a source and the query itself",
+      "short": "create",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "To create a query, choose Add Query, then Add on the card of its source. The page names the source in its title, and the form starts with the fields every query shares."
+            },
+            {
+              "id": "create-2",
+              "text": "Name is the technical name every caller uses. It takes letters and digits, starts with a letter, and must be unique. Let's call this query PublishedBlogPosts."
+            },
+            {
+              "id": "create-3",
+              "text": "Schema is optional. It tells the GraphQL API what the query returns. The rest of the form comes from the source: for SQL, Return Documents loads the content items whose document identifiers the query selects, and Query holds the SQL."
+            },
+            {
+              "id": "create-4",
+              "text": "Let's check Return Documents, and enter a query that selects the document identifiers of the published blog posts."
+            },
+            {
+              "id": "create-5",
+              "text": "Save adds the query to the list, and a message confirms it. Its row has the same source badge and buttons as RecentBlogPosts."
+            },
+            {
+              "id": "create-6",
+              "text": "As the list grows, the search box filters it by name. Let's search for Published, which leaves only PublishedBlogPosts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Run a query",
+      "subtitle": "By name, with the right permission",
+      "short": "run",
+      "clips": [
+        {
+          "id": "04-run",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "A saved query runs by its name. Liquid reads it from the Queries property and applies the query filter, while Razor, scripts and the API call the same query manager. A separate video covers templates and the API."
+            },
+            {
+              "id": "run-2",
+              "text": "The API checks a permission for each query: Execute Api - All queries, or one named for the query, such as Execute Api - RecentBlogPosts. Manage queries includes both. A caller without the permission gets Not Found."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Recipes and deployment",
+      "subtitle": "Move queries between sites",
+      "short": "recipes",
+      "clips": [
+        {
+          "id": "05-recipes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "The Queries recipe step saves queries when a recipe runs. Each entry gives a Source and a Name, plus the properties of its source. A query with the same Name is updated."
+            },
+            {
+              "id": "deploy-1",
+              "text": "In a deployment plan, the All Queries step exports every query as a Queries step. The Queried Content Items step exports the content items one query returns, and refuses a query that does not return content items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add a query source",
+      "subtitle": "A source, a driver and a card",
+      "short": "source",
+      "clips": [
+        {
+          "id": "06-source",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "To add a source of your own, implement IQuerySource. Its Name identifies the source, and ExecuteQueryAsync takes a Query and parameters, and returns the results. Values specific to the source, such as the SQL text, are read from metadata stored on the query."
+            },
+            {
+              "id": "source-2",
+              "text": "Register the source with AddQuerySource and its name. The query manager finds a source by that name, so a query can be created and run only when its Source is a registered name."
+            },
+            {
+              "id": "source-3",
+              "text": "A DisplayDriver for Query builds the source's part of the form, such as Return Documents and Query for SQL. It returns nothing unless the query's Source is its own, and on update it stores the source's values on the query with Put."
+            },
+            {
+              "id": "source-4",
+              "text": "A Link view named after the source draws its card in the Add Query dialog. SQL, Lucene and Elasticsearch each have one, and its Add link opens the create page for that source."
+            },
+            {
+              "id": "source-5",
+              "text": "A source reads its own properties from recipe data in an IQueryHandler. The SQL source checks the query's Source, then copies the Template when a recipe initializes or updates a query."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Queries module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the Queries module: a named query, kept in one place, run from templates, scripts and the API, moved with recipes and deployments, and extended with your own source. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
