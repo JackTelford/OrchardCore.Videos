@@ -6305,9 +6305,9 @@
       "src/docs/reference/modules/Lucene/README.md",
       "src/docs/reference/modules/Elasticsearch/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.6,
+    "words": 989,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
