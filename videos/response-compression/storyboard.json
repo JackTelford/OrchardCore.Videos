@@ -12,7 +12,9 @@
     "BREACH": "Breach",
     "gzip": "gee zip",
     "Zstandard": "Zee standard",
-    "Nginx": "Engine X"
+    "Nginx": "Engine X",
+    "Accept-Encoding br": "Accept-Encoding B.R.",
+    "Content-Encoding br": "Content-Encoding B.R."
   },
   "chapters": [
     {
@@ -26,7 +28,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "Pages, stylesheets, scripts and JSON responses are text, and text compresses well. The Response Compression module makes an Orchard Core tenant compress its responses. You will see how to enable it, what it registers, and when to use it."
+              "text": "Pages, stylesheets, scripts and JSON responses are text, and text compresses well. The Response Compression module makes a tenant, one site of an Orchard Core application, compress its responses. You will see how to enable it, what it registers, and when to use it."
             }
           ]
         }
@@ -181,7 +183,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "The Response Compression module adds ASP.NET Core response compression to a tenant, with one feature and nothing to configure. Weigh the HTTPS risk first. Thanks for watching."
+              "text": "The Response Compression module adds ASP.NET Core response compression to a tenant with one feature, so weigh the HTTPS risk before you enable it. Thanks for watching."
             }
           ]
         }

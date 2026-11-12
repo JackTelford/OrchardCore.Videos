@@ -1,6 +1,6 @@
 # Response Compression: Smaller Responses With Gzip and Brotli
 
-**YouTube:** not published yet · **Length:** 3:37 · **Feature:** [`OrchardCore.ResponseCompression`](https://docs.orchardcore.net/en/latest/reference/modules/ResponseCompression/)
+**YouTube:** not published yet · **Length:** 3:39 · **Feature:** [`OrchardCore.ResponseCompression`](https://docs.orchardcore.net/en/latest/reference/modules/ResponseCompression/)
 
 The Response Compression module adds the ASP.NET Core response compression middleware to a tenant. The video explains
 how a client and a server agree on a compressed response, enables the feature from Tools, Features and from a recipe,

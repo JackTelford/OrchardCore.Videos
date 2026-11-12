@@ -77,7 +77,7 @@ The voice's reading of these was not tested; check them with `scripts/pronounce.
 - `gzip` (the `spoken` entry says "gee zip"), `Nginx` ("Engine X"), `BREACH` ("Breach"), `wwwroot` ("web root"),
   `Zstandard` ("Zee standard"), and the identifiers `ConfigureServices`, `AddResponseCompression`, `UseResponseCompression`,
   `EnableForHttps`, `UseStaticFiles` and `UseOrchardCore`.
-- `Brotli` has no `spoken` entry. `br` (in `check-1`) is read as it is written. `WebAssembly` (in `code-3`) has none either.
+- `Brotli` has no `spoken` entry. `br` (in `check-1`) is spelled out through the `spoken` entries "Accept-Encoding br" and "Content-Encoding br" (both read "B.R."); confirm the voice says "B R" and that the entries match every occurrence. `WebAssembly` (in `code-3`) has none either.
 
 ## 6. The description on the Features page
 
