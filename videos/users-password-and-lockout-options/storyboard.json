@@ -1,0 +1,205 @@
+{
+  "title": "Password and Lockout Options: Configure ASP.NET Core Identity",
+  "output": "users-password-and-lockout-options",
+  "spoken": {
+    "IdentityOptions": "Identity Options",
+    "ConfigureServices": "Configure Services",
+    "IShellConfiguration": "I Shell Configuration",
+    "RequiredUniqueChars": "Required Unique Chars",
+    "RequiredLength": "Required Length",
+    "MaxFailedAccessAttempts": "Max Failed Access Attempts",
+    "DefaultLockoutTimeSpan": "Default Lockout Time Span",
+    "AllowedForNewUsers": "Allowed For New Users",
+    "Program.cs": "Program dot C.S.",
+    "appsettings.json": "app settings dot JSON",
+    "OrchardCore": "Orchard Core"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Password and Lockout Options",
+      "subtitle": "Configure ASP.NET Core Identity in Orchard Core",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core checks passwords and locks accounts with the options of ASP.NET Core Identity. In this video, you set the password requirements and the lockout rules in code and in configuration, and then see them at work on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Where the rules come from",
+      "subtitle": "The options of ASP.NET Core Identity",
+      "clips": [
+        {
+          "id": "01-options",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "options-1",
+              "text": "The Users module is built on ASP.NET Core Identity, whose IdentityOptions class holds the Password options and the Lockout options. Orchard Core does not set either of them, so the defaults of ASP.NET Core Identity apply until you configure them."
+            },
+            {
+              "id": "options-2",
+              "text": "By default, a password needs at least six characters, with a digit, a lowercase letter, an uppercase letter and a non-alphanumeric character. Five failed attempts are allowed before an account is locked out for five minutes."
+            },
+            {
+              "id": "options-3",
+              "text": "The rules apply wherever a password is created, changed or reset. The Setup screen describes them, the Add User form can generate a matching password, and the sign-in form counts failed attempts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Password requirements",
+      "subtitle": "The Password options",
+      "clips": [
+        {
+          "id": "02-password",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "In a module, a Startup class overrides ConfigureServices. It calls Configure for IdentityOptions, and sets the Password options, one line for each rule. These values are an example: choose values that meet your security requirements."
+            },
+            {
+              "id": "code-2",
+              "text": "Four Require options turn a character rule on or off: digit, lowercase, uppercase and non-alphanumeric. RequiredUniqueChars sets how many different characters a password needs, and RequiredLength sets its minimum length."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Lockout",
+      "subtitle": "The Lockout options",
+      "clips": [
+        {
+          "id": "03-lockout",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "lockout-1",
+              "text": "The Lockout options work the same way. MaxFailedAccessAttempts is the number of failed attempts allowed before an account is locked out, and DefaultLockoutTimeSpan is how long the lockout lasts."
+            },
+            {
+              "id": "lockout-2",
+              "text": "AllowedForNewUsers decides whether a newly created user can be locked out at all. The choice is saved on each user when the account is created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Where to set the options",
+      "subtitle": "A module, the web project, or configuration",
+      "clips": [
+        {
+          "id": "04-where",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "Without a module of your own, set the same options in Program.cs, through the ConfigureServices method of the Orchard Core builder. It runs for each tenant."
+            },
+            {
+              "id": "where-2",
+              "text": "To change the values without building again, read them from configuration. Ask for IShellConfiguration in the Startup constructor, and bind its IdentityOptions section to the options."
+            },
+            {
+              "id": "where-3",
+              "text": "The values then live in the OrchardCore section of appsettings.json, and environment variables can set them as well. Each tenant reads its own configuration, so a tenant can have rules of its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Password rules at work",
+      "subtitle": "The Add User form",
+      "clips": [
+        {
+          "id": "05-rules",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "Let's try the rules in the admin. Under Access Control, Users, Add User opens the form. We enter a user name, an email address, and a short password with no uppercase letter."
+            },
+            {
+              "id": "rules-2",
+              "text": "Save refuses the password, and the page lists each rule it breaks: the minimum length and the uppercase letter. The digit and the non-alphanumeric character are not required, so they are not listed."
+            },
+            {
+              "id": "rules-3",
+              "text": "The Generate password button fills both password fields with a password that follows the configured rules. Let's use it, and save the user."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Lockout at work",
+      "subtitle": "Failed sign-ins and Unlock",
+      "clips": [
+        {
+          "id": "06-signin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "lock-1",
+              "text": "Let's sign in as that user with the wrong password. Each failed attempt is counted, and the page answers Invalid login attempt."
+            },
+            {
+              "id": "lock-2",
+              "text": "The same answer comes back for each wrong password. Once the failed attempts pass the limit, the page changes its answer to The account is locked out, and the lockout lasts for the configured time."
+            }
+          ]
+        },
+        {
+          "id": "06-unlock",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "unlock-1",
+              "text": "Signed in as an administrator, the Users list shows the locked user with a Locked badge. The Actions menu of its row offers Unlock."
+            },
+            {
+              "id": "unlock-2",
+              "text": "Unlock asks for a confirmation, resets the failed attempt count and clears the lockout. The user can sign in again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Password and Lockout Options",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "ASP.NET Core Identity decides what a valid password is and when an account is locked. Set its options in code or in configuration, and the Users module follows them. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

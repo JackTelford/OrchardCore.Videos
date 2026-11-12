@@ -1,0 +1,54 @@
+{
+  "title": "Password and Lockout Options: Configure ASP.NET Core Identity | Orchard Core",
+  "description": "Orchard Core checks passwords and locks accounts after failed sign-ins with the options of ASP.NET Core Identity. It does not set the password or lockout options itself, so the defaults of ASP.NET Core Identity apply until you configure them.\n\nThis video sets the Password and Lockout options of IdentityOptions in the Startup class of a module, in the Program.cs of the web project, and from configuration. It then shows the rules at work on the Add User form, on the sign-in page, and in the Users list.\n\nIn this video:\n• Where the password and lockout rules come from, and their defaults\n• Password requirements: the Password options\n• Lockout: the Lockout options\n• Where to set the options: a module, Program.cs, or configuration\n• Password rules at work: the Add User form\n• Lockout at work: failed sign-ins and Unlock",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AspNetCore"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    "ASP.NET Core Identity",
+    ".NET",
+    "CMS",
+    "IdentityOptions",
+    "Password requirements",
+    "Account lockout",
+    "Users"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Users"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: password requirements",
+      "url": "https://docs.orchardcore.net/en/latest/guides/password-configuration/"
+    },
+    {
+      "label": "Documentation: lockout",
+      "url": "https://docs.orchardcore.net/en/latest/guides/lockout-configuration/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/password-configuration/README.md",
+    "src/docs/guides/lockout-configuration/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/password-configuration"
+  }
+}
