@@ -63,7 +63,7 @@ the first take. "Checked" says what was read; "Confirm" says what to look at.
 7. **Term queries on `Published`.** The Lucene snippet compares `Content.ContentItem.Published` with the string `"true"`
    and the Elasticsearch snippet with the boolean `true`; both are the snippets of `TheBlogTheme/Recipes/Snippets`.
    Confirm that each returns the five blog posts on its own source (`Found 5` on Lucene).
-8. **The results table.** Lucene shows every stored field, so the table is wide; confirm that the first columns and the
+8. **The results table.** The recipe **Blog - Lucene Search** creates the index `Search` with `StoreSourceData` false (`blog.lucene.search.recipe.json`), so the columns are the fields flagged Store in the content type settings plus `ContentItemId` and `ContentItemVersionId` (`LuceneIndexManager.cs:264-265`); confirm which columns appear. Lucene shows every stored field, so the table can be wide; confirm that the first columns and the
    `Save Query` button are readable at 1536x864 without scrolling, or highlight the line above the table.
 9. **The height of the query editor page.** The **Schema** editor on the create page has a minimum height of 300 px
    (`OrchardCore.Queries/Views/Query.Fields.Edit.cshtml:17`), and **Index**, **Return Content Items** and **Query** follow
