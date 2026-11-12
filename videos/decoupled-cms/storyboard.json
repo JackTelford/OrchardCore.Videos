@@ -1,0 +1,340 @@
+{
+  "title": "Decoupled CMS with Razor Pages",
+  "output": "decoupled-cms",
+  "spoken": {
+    "Program.cs": "Program dot C.S.",
+    "BlogPost.cshtml": "Blog Post dot C.S.H.T.M.L.",
+    "OrchardCore.Application.Cms.Core.Targets": "Orchard Core dot Application dot C.M.S. dot Core dot Targets",
+    "dotnet new webapp": "dot net new web app",
+    "AddOrchardCms": "Add Orchard C.M.S.",
+    "UseStaticFiles": "Use Static Files",
+    "UseOrchardCore": "Use Orchard Core",
+    "AddRazorPages": "Add Razor Pages",
+    "UseRouting": "Use Routing",
+    "UseAuthorization": "Use Authorization",
+    "MapRazorPages": "Map Razor Pages",
+    "IOrchardHelper": "I Orchard Helper",
+    "GetContentItemByIdAsync": "Get Content Item By Id Async",
+    "GetContentItemByHandleAsync": "Get Content Item By Handle Async",
+    "MarkdownToHtmlAsync": "Markdown To HTML Async",
+    "ConsoleLog": "Console Log",
+    "ContentPreviewFeature": "Content Preview Feature",
+    "MarkdownBodyPart": "Markdown Body Part",
+    "MarkdownBody": "Markdown Body",
+    "DisplayText": "Display Text",
+    "BlogPost": "Blog Post",
+    "TheAdmin": "The Admin",
+    "App_Data": "App Data"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Decoupled CMS with Razor Pages",
+      "subtitle": "Author content in Orchard Core, and render it with your own pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "In a decoupled site, Orchard Core manages the content, and your own Razor Pages render it. In this video, you add Orchard Core to a Razor Pages project, model a blog post, load it in a page, and preview your edits."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What decoupled means",
+      "subtitle": "One web application, two responsibilities",
+      "clips": [
+        {
+          "id": "01-decoupled",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Decoupled is a development model where the front end and the administration run in the same web application, and only the administration is driven by the CMS. Orchard Core authors the content, and your code decides how it looks."
+            },
+            {
+              "id": "why-2",
+              "text": "You write ASP.NET Razor Pages or controllers, and load content items from Orchard Core. This video uses Razor Pages, and much of it applies to an existing ASP.NET Core application. A separate video covers a headless front end."
+            },
+            {
+              "id": "why-3",
+              "text": "Three terms matter: a content type defines the properties of your content, like a class. A content part is a building block you add to a type. A content item is a versioned document based on a type, like an instance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add Orchard Core to a project",
+      "subtitle": "A package and two lines of startup code",
+      "clips": [
+        {
+          "id": "02-project",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Create a project with the dotnet new webapp command, and add the OrchardCore.Application.Cms.Core.Targets package. It holds the minimum for a decoupled site: the administration theme TheAdmin, the Blank site and Headless site recipes, and no front-end theme."
+            },
+            {
+              "id": "add-2",
+              "text": "The bare minimum Program.cs calls AddOrchardCms on the services. Then it calls UseStaticFiles and UseOrchardCore on the application, and runs it."
+            },
+            {
+              "id": "add-3",
+              "text": "Remove the lines the template added for Razor Pages and routing: AddRazorPages, UseRouting, UseAuthorization and MapRazorPages, with its error handling and HTTPS lines. Orchard Core sets up Razor Pages and routing itself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Set up the site",
+      "subtitle": "The Blank site recipe",
+      "clips": [
+        {
+          "id": "03-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "Start the application, and the Setup screen asks a few questions. Enter a name for the site, which is used as the default title of your pages."
+            },
+            {
+              "id": "setup-2",
+              "text": "In the Recipe list, choose Blank site. It enables the content management features and sets no front-end theme, which suits a decoupled site."
+            },
+            {
+              "id": "setup-3",
+              "text": "Pick a Default Time Zone, which sets how dates and times are displayed and edited. The database type is Sqlite, which needs no connection string. Then enter a user name, an email and a password for the Super User."
+            },
+            {
+              "id": "setup-4",
+              "text": "Click Finish Setup. After a few seconds, the site displays the home page of the template. By default, the data of the site is stored in the App_Data folder of the project."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Model a blog post",
+      "subtitle": "A content type with a title and a body",
+      "clips": [
+        {
+          "id": "04-type",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "In the administration, open Design, then Content Definition, then Content Types. This is where you define the content types of the site."
+            },
+            {
+              "id": "type-2",
+              "text": "Click Create new type. Enter Blog Post as the Display Name, and the Technical Name fills in as BlogPost. Then click Create."
+            },
+            {
+              "id": "type-3",
+              "text": "Content parts are the building blocks of a type. Select Title and MarkdownBody, then click Add Selected Parts."
+            },
+            {
+              "id": "type-4",
+              "text": "The type lists its parts. Title provides a title for the content item, and MarkdownBody provides a Markdown formatted body."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Create a blog post",
+      "subtitle": "Edit content in the administration",
+      "clips": [
+        {
+          "id": "05-post",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "post-1",
+              "text": "Open Content, then Content Items, and click New Blog Post. The editor shows the Title and MarkdownBody fields."
+            },
+            {
+              "id": "post-2",
+              "text": "Enter a title and some Markdown, and click Publish. A notification confirms it, and the Content Items list shows your blog post."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Render it in a Razor Page",
+      "subtitle": "Load a content item by its identifier",
+      "clips": [
+        {
+          "id": "06-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "render-1",
+              "text": "Add BlogPost.cshtml to the Pages folder, with a route that takes an identifier. Inject IOrchardHelper, and call GetContentItemByIdAsync. It returns the published version of the content item, or null when there is none."
+            },
+            {
+              "id": "render-2",
+              "text": "The identifier of a content item stays the same across its versions. Copy it from the address of the edit page, after ContentItems. The DisplayText property holds the title."
+            },
+            {
+              "id": "render-3",
+              "text": "The properties that each type defines are in Content, a dynamic document. ConsoleLog writes the content item to the browser console, and writes null in a production environment. MarkdownBodyPart holds the Markdown property."
+            },
+            {
+              "id": "render-4",
+              "text": "Read the Markdown from the Content property, and convert it to HTML with MarkdownToHtmlAsync. The conversion sanitizes the HTML by default."
+            }
+          ]
+        },
+        {
+          "id": "06-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "render-5",
+              "text": "Open the page with the identifier of your blog post. It shows the title, and the body rendered from Markdown."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Friendly addresses with Alias",
+      "subtitle": "Load a content item by a readable text",
+      "clips": [
+        {
+          "id": "07-alias-part",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "alias-1",
+              "text": "An identifier is not friendly in an address. The Alias part lets a content item have a readable text instead. On the Blog Post type, click Add Parts, select Alias, and click Add Selected Parts."
+            },
+            {
+              "id": "alias-2",
+              "text": "Edit the blog post. The Alias field is there: type an alias, such as pruning, and click Publish."
+            }
+          ]
+        },
+        {
+          "id": "07-alias-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "alias-3",
+              "text": "In the page, take a slug in the route, and call GetContentItemByHandleAsync with a handle made of alias, a colon, and the slug."
+            }
+          ]
+        },
+        {
+          "id": "07-alias-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "alias-4",
+              "text": "Open the page with the alias, and the same blog post appears at a readable address."
+            }
+          ]
+        },
+        {
+          "id": "07-alias-pattern",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "alias-5",
+              "text": "The Alias part can also generate the alias. Edit the part on the type: its Pattern is a Liquid template, and by default it applies the slugify filter to the display text."
+            },
+            {
+              "id": "alias-6",
+              "text": "Edit the blog post, clear the Alias field, and click Publish. The field says to leave it empty to re-generate it, and the alias becomes the slug of the title."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Preview while you edit",
+      "subtitle": "Render the edit with your own page",
+      "clips": [
+        {
+          "id": "08-preview",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "preview-1",
+              "text": "Editors click Preview to see the content item as they edit it. Without more setup, Orchard Core renders a generic page, not your Razor Page."
+            },
+            {
+              "id": "preview-2",
+              "text": "To use your page, add the Preview part to the type, and edit it. Its Pattern is a Liquid template that produces the address of your page: the blog post route, followed by the alias of the item. Then click Save."
+            },
+            {
+              "id": "preview-3",
+              "text": "Click Preview again, and the window renders your Razor Page. Change the title in the editor, and the preview updates a moment later, because your page loads the edited item in place of the saved one."
+            }
+          ]
+        },
+        {
+          "id": "08-preview-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "preview-4",
+              "text": "A page can also tell when it renders a preview. Orchard Core marks the request with ContentPreviewFeature, and its Previewing property is true, so the page can show hints for editors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Summary",
+      "subtitle": "From a Razor Pages project to a decoupled site",
+      "clips": [
+        {
+          "id": "09-summary",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sum-1",
+              "text": "You added Orchard Core to a Razor Pages project, set it up with the Blank site recipe, and modeled a blog post. Your pages load content items by identifier or by alias, and the Preview part points the preview at your own page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Decoupled CMS with Razor Pages",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Orchard Core stores and edits the content, and your Razor Pages decide how it appears. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
