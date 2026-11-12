@@ -14,7 +14,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "A pipeline that creates a file has done half of its job. The file still has to reach someone. In this video, you add four destinations to a pipeline: a download link, an email, an FTP server, and an SFTP server."
+              "text": "A pipeline that creates a file has done half of its job. The file has to reach someone. In this video, you add four destinations to a pipeline: a download link, an email, an FTP server, and an SFTP server."
             }
           ]
         }
@@ -235,7 +235,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Destinations turn the files of a pipeline into deliveries: a secure link, an email, or an upload to a file server. Add them after Create a file, publish the pipeline, and read the result in the run. Thanks for watching."
+              "text": "Add a destination after Create a file, and a pipeline delivers its files as a secure link, an email, or an upload to a file server. Thanks for watching."
             }
           ]
         }
