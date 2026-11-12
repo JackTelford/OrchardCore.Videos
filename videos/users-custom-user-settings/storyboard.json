@@ -1,0 +1,223 @@
+{
+  "title": "Custom User Settings",
+  "output": "users-custom-user-settings",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Custom User Settings",
+      "subtitle": "Add your own fields to user profiles",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Users have a user name, an email address, and roles. Custom user settings add fields of your own, such as a nickname, as tabs on the Edit User page. In this video, we create a section, fill it in, grant access, and export its values."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What custom user settings are",
+      "subtitle": "Sections, stereotypes and tabs",
+      "clips": [
+        {
+          "id": "01-what",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "A site often needs more information about a user than the built-in details, such as a nickname or a newsletter choice. Custom user settings define those fields in the admin, using content types."
+            },
+            {
+              "id": "what-2",
+              "text": "Each group of fields is a section. A section is a content type marked with the stereotype Custom User Settings. Every section becomes a tab on the Edit User page, named after the content type."
+            },
+            {
+              "id": "what-3",
+              "text": "The tasks are to enable the feature, create a section, fill it in for a user, and share it, by granting a permission to a role and exporting the values."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Custom User Settings in the Features list",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Custom User Settings is a feature of the Users module. Open Tools, Features, and search for Custom User Settings. Users and Contents are its dependencies."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable. A message confirms that the feature Custom User Settings was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a section",
+      "subtitle": "A content type with fields and a stereotype",
+      "clips": [
+        {
+          "id": "03-section",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "section-1",
+              "text": "A section is a content type. Create a dedicated type for each section, because marking a type that already has content items breaks them. Open Design, Content Definition, Content Types, and select Create new type."
+            },
+            {
+              "id": "section-2",
+              "text": "Enter User Profile as the Display Name. The Technical Name fills in from it. Select Create."
+            },
+            {
+              "id": "section-3",
+              "text": "The next page offers parts to add to the type. This section only needs fields, so select Cancel."
+            },
+            {
+              "id": "section-4",
+              "text": "Fields hold the values. Select Add Field, enter Nickname as the Display Name, choose the Field Type Text Field, and select Save."
+            },
+            {
+              "id": "section-5",
+              "text": "Add a second field the same way. Name it Newsletter, and choose the Field Type Boolean Field. Both fields are listed under Fields."
+            },
+            {
+              "id": "section-6",
+              "text": "A section is not content that editors create, list, or publish. So clear Creatable, Listable, Draftable, Versionable, and Securable, and select Save."
+            },
+            {
+              "id": "section-7",
+              "text": "Select Edit on User Profile again. Once the stereotype is saved, the editor hides Creatable, Listable, Draftable and Versionable and leaves their values alone, so they were cleared first. Enter Custom User Settings without spaces in Stereotype, and select Save."
+            },
+            {
+              "id": "section-8",
+              "text": "The list shows the stereotype as a badge on User Profile. The type is a section, and it adds a tab to the Edit User page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Fill in a user's section",
+      "subtitle": "A tab on the Edit User page",
+      "clips": [
+        {
+          "id": "04-user",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "user-1",
+              "text": "Open Access Control, Users, and select Edit for the user jamie. Beside the tab with the account fields, a tab named User Profile appears."
+            },
+            {
+              "id": "user-2",
+              "text": "Select the User Profile tab. It shows the fields of the section: a Nickname text box and a Newsletter check box."
+            },
+            {
+              "id": "user-3",
+              "text": "Enter Jamie as the nickname, check Newsletter, and select Save. A message confirms that the user was updated."
+            },
+            {
+              "id": "user-4",
+              "text": "Select Edit for the same user again. The tab shows the saved nickname and the checked Newsletter box."
+            },
+            {
+              "id": "user-5",
+              "text": "Add User opens the Create User page, which shows the same tab, so a section can be filled in while an account is created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Control who can edit a section",
+      "subtitle": "One permission for each section",
+      "clips": [
+        {
+          "id": "05-permissions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "Each section has its own permission. Open Access Control, Roles, and select Edit for a role, such as Editor."
+            },
+            {
+              "id": "perm-2",
+              "text": "In Search permissions, enter Custom User. The permission is named Manage Own Custom User Settings, followed by the display name of the type, User Profile."
+            },
+            {
+              "id": "perm-3",
+              "text": "Check Allow, and select Save. People in this role see the User Profile tab when they edit a user. Editing a user is a separate permission."
+            },
+            {
+              "id": "perm-4",
+              "text": "The Administrator role has every permission. A role with Manage security settings and all users also has the permission of every section."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Export the values",
+      "subtitle": "A deployment step for custom user settings",
+      "clips": [
+        {
+          "id": "06-deploy",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "deploy-1",
+              "text": "To move the values to another site, add a step to a deployment plan. Open Tools, Deployments, Plans, and select Manage Steps for the plan Team profiles."
+            },
+            {
+              "id": "deploy-2",
+              "text": "Select Add Step, and find the Custom User Settings card. It says that the step exports all or specified custom user settings. Choose Add."
+            },
+            {
+              "id": "deploy-3",
+              "text": "The step includes all custom user settings by default. Clearing Include all custom user settings lets you choose sections one by one. Select Create."
+            },
+            {
+              "id": "deploy-4",
+              "text": "The plan lists the step with the badge All. On the other site, an import fills in the sections of the users that have the same user ID, and skips the others."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Custom User Settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Custom user settings turn content types into tabs on the Edit User page. The documentation page covers the details, including how developers read the values in templates. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

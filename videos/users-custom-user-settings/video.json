@@ -1,0 +1,48 @@
+{
+  "title": "Custom User Settings: Add Your Own Fields to User Profiles | Orchard Core",
+  "description": "A user account holds a user name, an email address and roles, but a site often needs more information about its users: a nickname, a department, a newsletter choice.\n\nThe Custom User Settings feature lets you define those fields in the admin. Each group of fields is a section: a content type with the Custom User Settings stereotype, shown as a tab on the Edit User page. A permission controls who can edit each section, and a deployment step exports the values.\n\nIn this video:\n• What custom user settings are\n• Enable the feature\n• Create a section with fields and a stereotype\n• Fill in a user's section\n• Control who can edit a section\n• Export the values with a deployment plan",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Users",
+    "User profile",
+    "Custom User Settings",
+    "Content types",
+    "Permissions"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Users"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/CustomUserSettings/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Users/CustomUserSettings/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users.CustomUserSettings"
+  }
+}
