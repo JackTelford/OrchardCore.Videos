@@ -1,0 +1,218 @@
+{
+  "title": "Orchard Core Reset Password",
+  "output": "users-reset-password",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Reset Password",
+      "subtitle": "Let users recover their accounts by email",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "People forget passwords. The Users Reset Password feature lets them recover an account by email, without asking an administrator. In this video, you turn the feature on, allow it in the settings, and follow a user from the login page to a new password."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How password recovery works",
+      "subtitle": "The steps a user follows, and what the site needs",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "Without this feature, a user who forgets a password has to ask an administrator. With it, the login page offers a link. The site emails a reset link, and the link opens a form for choosing a password."
+            },
+            {
+              "id": "how-2",
+              "text": "The site needs three things. The first is the Users Reset Password feature, which depends on the Users and Email features. The second is an email provider, such as SMTP Email Provider, and the third is a setting that allows the reset."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Prepare the site",
+      "subtitle": "Enable the feature and check the email settings",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features, and search for reset password. The Users Reset Password feature is in the Security category, and its row lists the features it depends on, Users and Email."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable. A message confirms that the feature was enabled. Enabling it adds the Reset Password settings page, but visitors see nothing different until you allow it there."
+            }
+          ]
+        },
+        {
+          "id": "02-email",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "email-1",
+              "text": "The reset email goes through the default email provider. Under Settings, Communication, Email, the Default provider is Simple Mail Transfer Protocol (SMTP)."
+            },
+            {
+              "id": "email-2",
+              "text": "The SMTP settings hold the Sender email address, the Host name, and the Port number. Here, they point to a local test mail server that keeps every message instead of delivering it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Allow password reset",
+      "subtitle": "One setting turns it on for visitors",
+      "clips": [
+        {
+          "id": "03-allow",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "allow-1",
+              "text": "Open Settings, Security, Reset Password. The page has two options, and both are unchecked at first."
+            },
+            {
+              "id": "allow-2",
+              "text": "Allow the users to reset their password turns the feature on for visitors. Until you select it, the login page shows no reset link, and the reset forms are not found. Let's select it."
+            },
+            {
+              "id": "allow-3",
+              "text": "Use site theme for password reset page makes the reset pages use the theme of the site instead of the admin theme. It requires an active site theme, so let's leave it unchecked and select Save. A message confirms that the settings were saved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Ask for a reset link",
+      "subtitle": "The login page and the Forgot password? form",
+      "clips": [
+        {
+          "id": "04-request",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "request-1",
+              "text": "A visitor who is signed out opens the login page. Because the setting is on, a Forgot your password? link appears under the Log in button. Let's select it."
+            },
+            {
+              "id": "request-2",
+              "text": "The Forgot password? page asks for a Username or email address. Let's type the email address of Jamie Chen, a user of this site."
+            },
+            {
+              "id": "request-3",
+              "text": "Select Submit. The Forgot Password Confirmation page asks the user to check their email. It looks the same for an address with no account, so it never reveals who is registered."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The reset email",
+      "subtitle": "What the user receives",
+      "clips": [
+        {
+          "id": "05-mail",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "mail-1",
+              "text": "The message arrives in the inbox of the test mail server. Its subject is Reset your password, and it is addressed to Jamie."
+            },
+            {
+              "id": "mail-2",
+              "text": "The body says whom the reset was requested for, and offers a Reset Password link. It asks the reader to ignore the message if they did not request the reset, and says that the link expires in 15 minutes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Choose a new password",
+      "subtitle": "From the email link to a signed-in user",
+      "clips": [
+        {
+          "id": "06-reset",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "reset-1",
+              "text": "The link opens the Reset password page. It asks again for a Username or email address, then for a New password and a New password confirmation."
+            },
+            {
+              "id": "reset-2",
+              "text": "Let's type Jamie's email address, and a password that follows the password rules of the site, in both password fields."
+            },
+            {
+              "id": "reset-3",
+              "text": "Select Reset password. The Reset Password page confirms that the password has been reset, and offers a Click here to log in link."
+            },
+            {
+              "id": "reset-4",
+              "text": "Let's follow that link and log in with Jamie's email address and the password chosen in the form. The login succeeds, and the home page of the site opens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Good to know",
+      "subtitle": "Limits, delivery problems and verified addresses",
+      "clips": [
+        {
+          "id": "07-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "note-1",
+              "text": "A user receives at most one reset email per minute. If the email provider reports that sending failed, the user sees the confirmation page all the same, so check the email settings with Tools, Testing, Email Test."
+            },
+            {
+              "id": "note-2",
+              "text": "When Users Registration requires verified email addresses, users who have not verified theirs get no reset email. With the Rate Limits feature, the two forms accept 20 submissions per minute from one IP address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Reset Password",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "With the Users Reset Password feature, a user recovers an account from the login page, and an administrator does not have to step in. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
