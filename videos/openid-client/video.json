@@ -1,0 +1,49 @@
+{
+  "title": "OpenID Connect Client: Sign In With Another Identity Provider | Orchard Core",
+  "description": "Organizations often keep their people's accounts in one identity provider. Asking those people to create another account for your site means one more password to manage.\n\nThe OpenID Connect Client Integration feature of Orchard Core sends people to the identity provider to sign in, and links each person to a local account on your site.\n\nIn this video:\n• How sign-in with an identity provider works\n• Enabling the OpenID Connect Client Integration feature\n• Connecting the provider in Settings, OpenID Connect, Authentication Client\n• Choosing what first-time users are asked to enter\n• Signing in with the provider\n• Finding the linked account in Access Control, Users",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "OpenIDConnect"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "OpenID Connect",
+    "OIDC",
+    "identity provider",
+    "single sign-on",
+    "authentication"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "OpenID Connect"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenId/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/OpenId/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenId.Client"
+  }
+}

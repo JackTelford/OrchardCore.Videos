@@ -1,0 +1,227 @@
+{
+  "title": "OpenID Connect Client: Sign In With Another Identity Provider",
+  "output": "openid-client",
+  "spoken": {
+    "Store tokens?": "Store tokens"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "OpenID Connect Client",
+      "subtitle": "Sign in to your site with an account from another identity provider",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Many organizations keep their people's accounts in one identity provider. The OpenID Connect Client Integration feature lets those people sign in to your Orchard Core site with such an account. In this video, we connect a provider and follow a first sign-in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How it works",
+      "subtitle": "Your site, the identity provider, and the local account",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "An identity provider is a server that knows your users and signs them in. With the OpenID Connect Client Integration feature, your site sends people to that provider and trusts its answer. Orchard Core can also be the provider; a separate video covers that."
+            },
+            {
+              "id": "how-2",
+              "text": "The provider gives you an authority, which is its address, a client id that identifies your site, and a client secret. It also needs to know the address on your site where it sends people back."
+            },
+            {
+              "id": "how-3",
+              "text": "On the login page, a button for the provider sits beside the usual form. The person signs in at the provider, which sends them back, and the site signs them in to a local account."
+            },
+            {
+              "id": "how-4",
+              "text": "When the person comes back, a linked account signs in directly. A matching email address asks for the local password, to link the two. Anything else creates an account, unless external registration is disabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for OpenID Connect. The OpenID Connect Client Integration feature allows people to authenticate through an external identity provider."
+            },
+            {
+              "id": "enable-2",
+              "text": "We click Enable. The feature depends on OpenID Connect Core Services and External Authentication, which turn on with it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Connect the provider",
+      "subtitle": "Settings, OpenID Connect, Authentication Client",
+      "clips": [
+        {
+          "id": "03-connect",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "connect-1",
+              "text": "The settings are under Settings, OpenID Connect, Authentication Client. Display Name is the text of the button on the login page. Let's enter Example Identity."
+            },
+            {
+              "id": "connect-2",
+              "text": "Authority is the address of the provider, and ClientId is the identifier it assigned to your site. Display Name, Authority, and ClientId are all required."
+            },
+            {
+              "id": "connect-3",
+              "text": "CallbackPath is the path on your site where the provider sends people back after they sign in. We enter the path the field suggests, which the provider has registered for this site."
+            },
+            {
+              "id": "connect-4",
+              "text": "Scopes lists what the site asks the provider to share, beyond openid and profile. We add email, so the provider sends each person's email address."
+            },
+            {
+              "id": "connect-5",
+              "text": "SignedOut CallbackPath, SignedOut Redirect Uri, and Store tokens? are optional. The first two control where people go after signing out, and Store tokens? keeps the provider's tokens. We leave them as they are."
+            },
+            {
+              "id": "connect-6",
+              "text": "Next comes the flow. The checkboxes under Code Authentication Flow, Hybrid Authentication Flow, and Implicit Authentication Flow are a single choice, so checking one clears the others. We check Use 'code' response type."
+            },
+            {
+              "id": "connect-7",
+              "text": "The flows that use a code show the Client Secret field. We enter the secret that the provider gave us. Response Mode stays as it is."
+            },
+            {
+              "id": "connect-8",
+              "text": "We click Save. The warning at the top says that the website might restart when settings are saved. A message confirms that the site settings were updated successfully, and the Client Secret field shows that its value is securely stored."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Registration options",
+      "subtitle": "What first-time users are asked to enter",
+      "clips": [
+        {
+          "id": "04-registration",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "reg-1",
+              "text": "Settings, Security, Registration has External Authentication options. They apply when someone signs in with a provider and has no local account."
+            },
+            {
+              "id": "reg-2",
+              "text": "Disable new external registration lets only people with a local account sign in. Do not ask username, Do not ask email address, and Do not create local password let the site skip those questions."
+            },
+            {
+              "id": "reg-3",
+              "text": "Let's check Do not ask email address and Do not create local password, and click Save. Because the provider sends the email address, first-time users only choose a username."
+            }
+          ]
+        },
+        {
+          "id": "04-login",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "Settings, Security, User Login has two more options. Use external provider for login sends people straight to the provider when only one is defined. Disable local password login removes the password form, so keep an administrator with a linked account."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Sign in with the provider",
+      "subtitle": "From the login page and back",
+      "clips": [
+        {
+          "id": "05-signin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signin-1",
+              "text": "A visitor who is signed out sees the usual login form, and a section called Use another service to log in. Its button carries the Display Name we entered, Example Identity."
+            },
+            {
+              "id": "signin-2",
+              "text": "We click Example Identity. The browser leaves the site and opens the sign-in page of the provider. In this recording, a second Orchard Core site plays the provider."
+            },
+            {
+              "id": "signin-3",
+              "text": "We sign in as Jamie Chen at the provider. The provider checks the credentials, and sends the browser back to the callback path of our site."
+            },
+            {
+              "id": "signin-4",
+              "text": "The site finds no local account for this person, so it shows a page called Create a new account. It asks only for a username, and fills in a suggestion that we replace with our own."
+            },
+            {
+              "id": "signin-5",
+              "text": "We click Register. The site creates the account, links it to the provider, signs the person in, and opens the home page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The linked account",
+      "subtitle": "Access Control, Users",
+      "clips": [
+        {
+          "id": "06-account",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "account-1",
+              "text": "Back in the admin, Access Control, Users lists the account, with the username and the email address that the provider sent."
+            },
+            {
+              "id": "account-2",
+              "text": "The next time this person chooses Example Identity, the site finds the linked account and signs them in, without the registration page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "OpenID Connect Client",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The OpenID Connect Client Integration feature hands the sign-in to an identity provider, and keeps a local account for each person. The documentation describes the settings. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
