@@ -1,0 +1,209 @@
+{
+  "title": "Tenant Feature Profiles: Limit the Features of Each Tenant",
+  "output": "tenants-feature-profiles",
+  "spoken": {
+    "OrchardCore.": "Orchard Core dot "
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Tenant Feature Profiles",
+      "subtitle": "Limit the features each tenant is offered",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "By default, every tenant is offered the same features. Tenant feature profiles let the Default tenant decide which features a tenant is offered. In this video, we create a profile, assign it to a tenant, and check the result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why feature profiles",
+      "subtitle": "Not every tenant needs every feature",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Without a profile, the Features page of every tenant lists the same features, apart from those reserved for the Default tenant. The administrator of a tenant can enable these features, including ones you would rather not offer."
+            },
+            {
+              "id": "why-2",
+              "text": "A feature profile is a named list of rules, created on the Default tenant. When you assign a profile to a tenant, its rules decide which features that tenant is offered."
+            },
+            {
+              "id": "why-3",
+              "text": "Several tenants can share one profile, and a tenant without a profile is not restricted. Only the Default tenant manages profiles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "How rules work",
+      "subtitle": "Exclude, Include and the order of rules",
+      "clips": [
+        {
+          "id": "02-rules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "Each rule has a Rule, which is Exclude or Include, and an Expression. The Expression is matched against feature IDs, and it can use wildcards, such as an asterisk."
+            },
+            {
+              "id": "rules-2",
+              "text": "Rules apply in the order listed, and the last rule that matches a feature decides. Here, the Include rule brings the SMTP Email Provider back after the Exclude rule removed every Email provider. A feature that no rule matches stays available."
+            },
+            {
+              "id": "rules-3",
+              "text": "A feature is also unavailable when a feature it depends on is excluded. Excluding Workflows therefore removes HTTP Workflows Activities, Timer Workflows Activities, and Session Workflows Activities too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable the feature",
+      "subtitle": "Tenant Feature Profiles on the Default tenant",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Feature profiles belong to the Default tenant, so we start there. Under Tools, Features, let's search for Tenant Feature Profiles."
+            },
+            {
+              "id": "enable-2",
+              "text": "Each row shows the name of a feature and, beside it, the feature ID. The rules of a profile refer to these IDs."
+            },
+            {
+              "id": "enable-3",
+              "text": "Select Enable. A notice confirms it, and Multi-Tenancy gets a Feature Profiles entry. The Administrator role has the Manage tenant feature profiles permission by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create a feature profile",
+      "subtitle": "A name and a list of rules",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Open Multi-Tenancy, then Feature Profiles. The list is empty, because no profile exists. Select Add Feature Profile to start a new one."
+            },
+            {
+              "id": "create-2",
+              "text": "Name is how the profile appears in the list, on the Tenants page, and in the Feature profile field of a tenant. We call it Basic sites."
+            },
+            {
+              "id": "create-3",
+              "text": "Rules is an editor for the list of rules. The hint below it shows an example, an Exclude rule for OrchardCore.Flows."
+            },
+            {
+              "id": "create-4",
+              "text": "We add three rules. The first excludes the Workflows feature. The second uses an asterisk to exclude every Email provider, and the third includes the SMTP Email Provider again."
+            },
+            {
+              "id": "create-5",
+              "text": "Select Save. The profile appears in the list, with Edit and Delete buttons. As the list grows, the Search box finds profiles by name."
+            },
+            {
+              "id": "create-6",
+              "text": "To change a profile later, select Edit. The form is the same, with the current rules, and Cancel returns to the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Assign a profile to a tenant",
+      "subtitle": "Choose it when you edit the tenant",
+      "clips": [
+        {
+          "id": "05-assign",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "assign-1",
+              "text": "The Tenants page lists every tenant, and a separate video covers creating them. Let's select Edit on Bluebird, a tenant without a profile."
+            },
+            {
+              "id": "assign-2",
+              "text": "The Feature profile field appears when at least one profile exists, and the Create Tenant page offers it too. Select Basic sites, then Save."
+            },
+            {
+              "id": "assign-3",
+              "text": "Back on the Tenants page, a badge with the profile name marks the row of Bluebird. Maplewood has no profile badge, because no profile applies to it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Check the result",
+      "subtitle": "What the Features page of a tenant offers",
+      "clips": [
+        {
+          "id": "06-effect",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "effect-1",
+              "text": "Let's compare the Features pages. On the Default tenant, a search for OrchardCore.Workflows lists Workflows and the features that depend on it."
+            },
+            {
+              "id": "effect-2",
+              "text": "Next, the Features button on the Tenants page opens the Features page of Bluebird. The same search finds nothing, so this tenant cannot enable any of them."
+            },
+            {
+              "id": "effect-3",
+              "text": "Searching for OrchardCore.Email lists Email and SMTP Email Provider, but not Azure Communication Services Email. The wildcard rule excluded it, and the Include rule restored SMTP."
+            },
+            {
+              "id": "effect-4",
+              "text": "Maplewood has no profile, so its Features page still lists Workflows. A profile only affects the tenants it is assigned to."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Tenant Feature Profiles",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A feature profile limits what a tenant is offered. Create it on the Default tenant, assign it to a tenant, and the Features page of that tenant follows its rules. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
