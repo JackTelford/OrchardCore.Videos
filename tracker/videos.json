@@ -3065,9 +3065,9 @@
       "src/docs/reference/modules/Elasticsearch/README.md",
       "src/docs/reference/modules/Queries/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.8,
+    "words": 720,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

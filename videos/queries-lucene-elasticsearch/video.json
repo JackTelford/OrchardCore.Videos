@@ -1,0 +1,60 @@
+{
+  "title": "Lucene and Elasticsearch Queries: Search From a Saved Query | Orchard Core",
+  "description": "An index answers search questions written as JSON, and every template, script or client that asks the same question needs its own copy of that JSON.\n\nThe Queries module saves the question under a name, as a Lucene or Elasticsearch query with an index, a Liquid template and parameters. This video runs a query, gives it a parameter, saves it, and compares the two sources.\n\nIn this video:\n• Why a saved query\n• Run a Lucene query\n• The query as a Liquid template, with parameters and defaults\n• Save the query\n• Documents or content items: what Return Content Items changes\n• Elasticsearch: the connection and the differences from Lucene\n• Create queries from a recipe",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Lucene",
+    "Elasticsearch"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Lucene",
+    "Elasticsearch",
+    "Queries",
+    "Search",
+    "Liquid"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Queries"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Lucene",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lucene/"
+    },
+    {
+      "label": "Documentation: Elasticsearch",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Elasticsearch/"
+    },
+    {
+      "label": "Documentation: Queries",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Queries/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Lucene/README.md",
+    "src/docs/reference/modules/Elasticsearch/README.md",
+    "src/docs/reference/modules/Queries/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Lucene"
+  }
+}
