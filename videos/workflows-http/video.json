@@ -1,0 +1,53 @@
+{
+  "title": "HTTP Workflows: Handle Requests and Call Web APIs | Orchard Core",
+  "description": "Services outside a site, such as a payment provider or a stock system, need a way to start a workflow, and a workflow needs a way to call them and to answer the caller.\n\nThe HTTP Workflows Activities feature gives a workflow a URL that starts it, activities that reply to the caller or redirect it, an HTTP Request task that calls a web API and branches on the status code, and a Signal event that waits for a link.\n\nIn this video:\n• The HTTP activities and where to find them in the designer\n• Receive a request: the URL, the antiforgery token and the token life span\n• Read and answer the request in a script\n• Call a web API and handle its status codes\n• Run the workflow and read the response\n• Wait for a signal with a link\n• Filters, redirects and moving a workflow to another site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "HTTP",
+    "Webhook",
+    "Web API",
+    "Automation"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Scripting",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Scripting/"
+    },
+    {
+      "label": "Documentation: Workflows",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Scripting/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows.Http"
+  }
+}
