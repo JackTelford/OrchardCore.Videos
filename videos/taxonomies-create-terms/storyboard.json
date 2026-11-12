@@ -1,0 +1,215 @@
+{
+  "title": "Create a Taxonomy and Organize Its Terms",
+  "output": "taxonomies-create-terms",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Create a Taxonomy and Organize Its Terms",
+      "subtitle": "Add, edit, delete and arrange the terms of a taxonomy",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "In Orchard Core, a taxonomy is a managed list of terms that you use to categorize content. In this video, you create a taxonomy, add terms to it, edit and delete them, arrange them in a hierarchy, and publish the result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a taxonomy holds",
+      "subtitle": "A taxonomy, its terms and their content type",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A taxonomy is a content item that holds a list of terms, such as Topics. A term can contain other terms, which gives the list a hierarchy. Every term is a content item of one content type that you choose."
+            },
+            {
+              "id": "why-2",
+              "text": "The taxonomy that you build in this video is called Topics. It has two terms at the top level, Gardening and Cooking, and each of them holds terms of its own."
+            },
+            {
+              "id": "why-3",
+              "text": "The terms are stored inside the taxonomy, and are not listed as content items of their own. Adding, editing, and deleting terms changes a draft of the taxonomy. The published taxonomy changes only when you publish it."
+            },
+            {
+              "id": "why-4",
+              "text": "Before you start, enable the Taxonomies feature in Tools, Features. Adding, editing, and deleting terms needs the Manage taxonomies permission, which administrators have."
+            },
+            {
+              "id": "why-5",
+              "text": "The terms need a content type. This site has one named Topic, which has only a title. A separate video shows how to create a content type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create a taxonomy",
+      "subtitle": "A taxonomy is a content item",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Content, Content Items lists the content of your site, and its New button creates content items. Select New, and then Taxonomy. A taxonomy is a content item, so you create it like any other."
+            },
+            {
+              "id": "create-2",
+              "text": "The editor has a title, an alias, and a permalink. Let's type Topics as the title. The alias and the permalink are generated from it."
+            },
+            {
+              "id": "create-3",
+              "text": "Term Content Type sets the content type of the terms, and it is required. The list leaves out special-purpose content types that have a stereotype, such as widgets. Let's select Topic."
+            },
+            {
+              "id": "create-4",
+              "text": "Select Publish. The taxonomy is saved, and Topics appears in the list as a Taxonomy. A taxonomy has to be saved before you can add terms to it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add terms",
+      "subtitle": "At the top level and inside other terms",
+      "clips": [
+        {
+          "id": "03-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Open Topics from the list. Since the taxonomy is saved, its editor shows an Add Topic button, named after the term content type."
+            },
+            {
+              "id": "add-2",
+              "text": "Select Add Topic. The editor of a Topic asks for a title, so type Cooking and select Publish. That adds the term to a draft of the taxonomy, not to the published taxonomy."
+            },
+            {
+              "id": "add-3",
+              "text": "The term appears in the list, with an Edit, an Add, and a Delete button. Add a second term at the top level in the same way: Gardening."
+            },
+            {
+              "id": "add-4",
+              "text": "To put a term inside another term, select the Add button on its row. Let's add Baking to Cooking. The term is indented below its parent."
+            },
+            {
+              "id": "add-5",
+              "text": "Add Grilling and Roasting to Cooking in the same way. Each term is placed after the terms that its parent already holds, so the list follows the order in which you add the terms."
+            },
+            {
+              "id": "add-6",
+              "text": "Select the Add button on the Gardening row to add Vegetables. Then select Add Topic to add Herbs at the top level, even though it belongs with Gardening. A later chapter moves it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Edit and delete terms",
+      "subtitle": "Rename a term, remove a term",
+      "clips": [
+        {
+          "id": "04-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "In the Topics editor, select Edit on a row to change a term. Let's rename Grilling to Barbecue, and select Publish. The term keeps its place in the hierarchy."
+            },
+            {
+              "id": "edit-2",
+              "text": "To remove a term, select Delete on its row. Let's delete Roasting. A dialog asks you to confirm."
+            },
+            {
+              "id": "edit-3",
+              "text": "Select Ok. A message says Taxonomy item deleted successfully. Deleting a term also deletes the terms inside it, so check the children of a term before you delete it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Organize the hierarchy",
+      "subtitle": "Reorder and nest terms by dragging",
+      "clips": [
+        {
+          "id": "05-organize",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "org-1",
+              "text": "In the Topics editor, drag a term by its row to change the order. Let's drag Gardening above Cooking. The terms inside Gardening move with it."
+            },
+            {
+              "id": "org-2",
+              "text": "Dragging a term to the right moves it a level deeper, and dragging it to the left moves it a level up. Let's drag Herbs below Vegetables, and a little to the right, to place it inside Gardening."
+            },
+            {
+              "id": "org-3",
+              "text": "The order is stored when you save the taxonomy. Until then, the page warns you before you leave it. Select Save Draft to keep the order in the draft."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Publish the taxonomy",
+      "subtitle": "Drafts and the published taxonomy",
+      "clips": [
+        {
+          "id": "06-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "pub-1",
+              "text": "Every change to the terms is kept in a draft. In the Content Items list, Topics shows a Published badge and a Draft badge, since it has both versions."
+            },
+            {
+              "id": "pub-2",
+              "text": "Open Topics. The terms are in the order that you saved, but the published taxonomy does not hold these changes."
+            },
+            {
+              "id": "pub-3",
+              "text": "Select Publish. The message says Your Taxonomy has been published, and the list shows Topics with only the Published badge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Create a Taxonomy and Organize Its Terms",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's how a taxonomy works: it is a content item whose terms you add, edit, delete, arrange in a hierarchy, and publish. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

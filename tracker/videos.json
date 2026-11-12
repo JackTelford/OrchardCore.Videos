@@ -1212,9 +1212,9 @@
     "docs": [
       "src/docs/reference/modules/Taxonomies/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.0,
+    "words": 757,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
