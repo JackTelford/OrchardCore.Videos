@@ -1,0 +1,176 @@
+{
+  "title": "Orchard Core Features and Dependencies",
+  "output": "features-dependencies",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Features and Dependencies",
+      "subtitle": "Features that enable and disable other features",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some Orchard Core features need other features to work. In this video, you see how the Features page shows these dependencies, what happens to related features when you enable or disable one, and why a few features have no working switch."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Features need features",
+      "subtitle": "Dependencies and dependents",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A feature can build on other features. Users Registration, for example, lets visitors sign up and confirm their email address, so it needs the Email feature. The features that it needs are its dependencies."
+            },
+            {
+              "id": "why-2",
+              "text": "Orchard Core keeps both sides consistent. When you enable a feature, its dependencies are enabled with it. When you disable a feature, the features that depend on it are disabled with it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Dependencies on the Features page",
+      "subtitle": "Badges, tooltips and indirect dependencies",
+      "clips": [
+        {
+          "id": "02-read",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "read-1",
+              "text": "The Features page is under Tools, Features, and lists the features of the site, grouped by category. Let's search for Users Registration. The search narrows the list as you type, and matches the name, the identifier and the description of a feature."
+            },
+            {
+              "id": "read-2",
+              "text": "The row shows the name of the feature, its identifier, its description, and whether it is enabled. The badges beside the name are its dependencies: Email and Users."
+            },
+            {
+              "id": "read-3",
+              "text": "Point at a badge, and a tooltip shows the description of that dependency. The Email badge, for example, describes the infrastructure for configuring email settings."
+            },
+            {
+              "id": "read-4",
+              "text": "The button with three dots, Show indirect dependencies, adds the features that the dependencies need in turn: here, Roles Core Services and Settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable a feature",
+      "subtitle": "Its dependencies are enabled with it",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's search for email. Email is disabled on this site, and so is Users Registration, which needs it."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable on Users Registration. Enabling does not ask for confirmation. A message confirms that the feature was enabled, and it names only the feature you chose."
+            },
+            {
+              "id": "enable-3",
+              "text": "Search for email again. Email is enabled too, although you did not select it. Dependencies that were already enabled, such as Users, stay as they are."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Disable a feature",
+      "subtitle": "Its dependents are disabled with it",
+      "clips": [
+        {
+          "id": "04-disable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "disable-1",
+              "text": "Let's go the other way. Search for email again, and select Disable on Email, the dependency."
+            },
+            {
+              "id": "disable-2",
+              "text": "A dialog asks you to confirm. It lists the dependent features that are disabled with Email: here, Users Registration. A feature without enabled dependents only asks whether you are sure."
+            },
+            {
+              "id": "disable-3",
+              "text": "Select Yes. The message names Email, but a search for registration shows that Users Registration is disabled as well."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Features you do not switch by hand",
+      "subtitle": "On demand and always enabled",
+      "clips": [
+        {
+          "id": "05-demand",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "demand-1",
+              "text": "Some features are on demand: they are turned on only when other features need them. The list hides them by default. Open the Visibility filter, and clear Hide on demand."
+            },
+            {
+              "id": "demand-2",
+              "text": "Search for Roles Core Services. Features such as Users need it, so it is enabled for them. Its Disable button is inactive, and the tooltip says the feature is enabled automatically, based on dependency."
+            },
+            {
+              "id": "demand-3",
+              "text": "Some features are always enabled. Clear Hide always enabled, and search for the Features feature, the one behind this page. Its tooltip says that it is always enabled and cannot be manually disabled."
+            }
+          ]
+        },
+        {
+          "id": "05-sum",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sum-1",
+              "text": "To sum up, an on demand feature is enabled while another feature needs it, and disabled when none does. An always enabled feature stays on. Neither has a working switch."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Features and Dependencies",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's how dependencies work on the Features page: enabling a feature enables what it needs, and disabling a feature disables what needs it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
