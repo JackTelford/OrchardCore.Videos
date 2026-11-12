@@ -1,0 +1,221 @@
+{
+  "title": "Orchard Core Content Parts",
+  "output": "content-parts-reusable",
+  "spoken": {
+    "PostalAddress": "Postal Address"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Content Parts",
+      "subtitle": "Define a group of fields once, and attach it as often as you need",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A content part is a group of fields that you define once and attach to content types. In this video, you create a Postal Address part and attach it twice to a Customer type, once for billing and once for shipping."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a content part is",
+      "subtitle": "A group of fields that you define once",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A content type is made of parts. A part adds something to a type: the Title part adds a title, and a part that you create yourself adds the fields that you choose."
+            },
+            {
+              "id": "idea-2",
+              "text": "You define a part once, and any content type can attach it, as long as the part is Attachable. A part marked Reusable can also be attached several times to the same type, each time under its own name."
+            },
+            {
+              "id": "idea-3",
+              "text": "A postal address is a typical example: a street, a city and a postal code. A customer needs one address for billing and one for shipping. Both can come from the same part, and each keeps its own values."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create a part",
+      "subtitle": "It starts with a name",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "In the admin menu, open Design, Content Definition, Content Parts. This page lists the parts that you can configure. Select Create new part."
+            },
+            {
+              "id": "create-2",
+              "text": "A part starts with a name, which cannot contain spaces or special characters. We type PostalAddress, with the two words joined, and select Create."
+            },
+            {
+              "id": "create-3",
+              "text": "A message confirms that the content part has been created, and the editor of the part opens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Set up the part",
+      "subtitle": "Display name, description, Attachable and Reusable",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "The Technical Name is fixed once the part exists. The Display Name is what screens show, so we enter Postal Address. The Description appears next to the part when you attach it to a type."
+            },
+            {
+              "id": "settings-2",
+              "text": "Attachable lets you attach the part to content types. A part that you create starts out attachable, so the box is checked."
+            },
+            {
+              "id": "settings-3",
+              "text": "Reusable lets you attach the part more than once to the same type. We check Reusable, and select Save."
+            },
+            {
+              "id": "settings-4",
+              "text": "A message confirms that the settings of the part are saved, and the page title shows the display name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add fields",
+      "subtitle": "What the part holds",
+      "clips": [
+        {
+          "id": "04-fields",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "fields-1",
+              "text": "The part has no fields. The Fields section lists them, and Add Field opens the form to create one."
+            },
+            {
+              "id": "fields-2",
+              "text": "We enter Street as the Display Name, and the Technical Name follows. We choose the Text Field type, and select Save."
+            },
+            {
+              "id": "fields-3",
+              "text": "The page returns to the part, with Street listed next to its type. We add City in the same way, as a Text Field."
+            },
+            {
+              "id": "fields-4",
+              "text": "Last, we add Postal Code. The part holds three fields, and every type that attaches the part gets all three."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Attach the part twice",
+      "subtitle": "Two named parts on the Customer type",
+      "clips": [
+        {
+          "id": "05-attach",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "attach-1",
+              "text": "Next, we attach the part to a type. On the Content Types page, Customer is a content type that already exists, with a Title part. We select Edit on Customer."
+            },
+            {
+              "id": "attach-2",
+              "text": "The Parts section lists what the type is made of. Add Parts attaches an attachable part under its own name. Add Named Part attaches a reusable part under a name that you choose."
+            },
+            {
+              "id": "attach-3",
+              "text": "Let's select Add Named Part. The page lists the parts that are both attachable and reusable, and we choose Postal Address."
+            },
+            {
+              "id": "attach-4",
+              "text": "We enter Billing Address as the Display Name, and the Technical Name follows. We add a description, and select Save."
+            },
+            {
+              "id": "attach-5",
+              "text": "Billing Address is listed among the parts of the type. We add the Postal Address part once more, this time as Shipping Address, with a description of its own."
+            },
+            {
+              "id": "attach-6",
+              "text": "The type has two named parts that share one definition. A field added to the Postal Address part later appears in both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Fill in a customer",
+      "subtitle": "Each name keeps its own values",
+      "clips": [
+        {
+          "id": "06-content",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "On the Content Types page, Create New Customer opens the editor for a customer."
+            },
+            {
+              "id": "content-2",
+              "text": "Besides the Title, the editor has a group named Billing Address and another named Shipping Address. Each group shows its description, and the three fields of the Postal Address part."
+            },
+            {
+              "id": "content-3",
+              "text": "We enter a title, then the street, city and postal code of the billing address."
+            },
+            {
+              "id": "content-4",
+              "text": "The shipping address gets different values. Each name is a part of its own on the type, so the two groups keep their values separately."
+            },
+            {
+              "id": "content-5",
+              "text": "We select Publish. A message confirms that the customer has been published, and both addresses are saved with the content item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Content Parts",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A content part groups fields that you define once, and Add Named Part attaches a reusable part to a type as many times as you need. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
