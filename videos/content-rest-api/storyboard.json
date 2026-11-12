@@ -235,7 +235,7 @@
             },
             {
               "id": "status-2",
-              "text": "A 404 means no published item has that ID. A failed validation answers 400 with an errors object that lists the messages by member name."
+              "text": "A 404 means no published item has that ID. When validation fails, the 400 response carries an errors object that lists the messages by member name."
             },
             {
               "id": "status-3",

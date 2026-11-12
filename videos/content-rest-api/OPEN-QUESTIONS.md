@@ -122,3 +122,4 @@ The narration claims only what the code shows; these points are the ones the cod
     `ContentItemId` ("Content Item I.D."), `ContentType`, `DisplayText`, `GraphQL` ("Graph Q.L.") and the verbs `GET`,
     `POST`, `DELETE`, written in capitals in the narration and said as words. Also listen to "OpenID Connect" and
     "JSON". If an entry sounds wrong, change it in `storyboard.json` `spoken` only.
+    Also listen to how the voice reads the status codes (200, 400, 401, 403, 404); if it says them badly, add `spoken` entries such as "four oh four".
