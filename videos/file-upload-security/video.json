@@ -1,0 +1,60 @@
+{
+  "title": "File Upload Security: Antivirus Scanning and Temporary Files | Orchard Core",
+  "description": "A file that a user uploads is untrusted input, so it needs checking before it is stored.\n\nAn upload that calls FileCreationService reaches its handlers, and a handler such as the ClamAV Antivirus Scanner can reject the file before it is stored. Files that Orchard Core writes for a short time get their paths from ITempDirectoryProvider, in one tenant-scoped location that you configure.\n\nIn this video:\n• How the upload pipeline checks a file before it is stored\n• What the ClamAV Antivirus Scanner decides, and how to configure it\n• Enabling the scanner, then uploading a clean file, a test file and a file while the scanner is stopped\n• Running the pipeline and writing a handler in your own module\n• Where temporary files go, and how to move them",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "File upload",
+    "Antivirus",
+    "ClamAV",
+    "Security",
+    "Media",
+    "Temporary files"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Antivirus",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Antivirus/"
+    },
+    {
+      "label": "Documentation: File Upload Security",
+      "url": "https://docs.orchardcore.net/en/latest/reference/core/file-upload-security/"
+    },
+    {
+      "label": "Documentation: Temporary File Storage",
+      "url": "https://docs.orchardcore.net/en/latest/reference/core/temporary-file-storage/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Antivirus/README.md",
+    "src/docs/reference/core/file-upload-security.md",
+    "src/docs/reference/core/temporary-file-storage.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Antivirus.ClamAV"
+  }
+}
