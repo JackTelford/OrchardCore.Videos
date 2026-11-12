@@ -2,7 +2,7 @@
 
 How to record this video without deciding anything. Read it from the top. `storyboard.json` holds the narration; this
 file holds everything else. File references (`file:line`) are in the Orchard Core source at commit `92db4a83`
-(`src/OrchardCore.Modules/...` unless a path says otherwise). In this file a selector stands for
+(`src/OrchardCore.Modules/...` unless a path says otherwise; `OrchardCore.ContentManagement.GraphQL/...` is in `src/OrchardCore/`). In this file a selector stands for
 `scene.Page.Locator(...)`.
 
 The video has two recordings (`02-enable`, `03-query`) and five slide clips (`01-why`, `04-schema`, `05-http`,
@@ -283,8 +283,9 @@ Each slide step is drawn by `slides.py`. One line each:
 - `why-2`: a query (`blogPost` with `displayText` and `subtitle`) beside a response of the same shape, and a card
   "One request".
 - `why-3`: four check cards: one endpoint, built from your content, no code for a content type, permission checks.
-- `schema-1`: four cards: content type is a query field, a part with fields or a GraphQL type is an object, a part
-  named like its type is collapsed, settings can change it.
+- `schema-1`: four cards: content type is a query field, a part with fields or a GraphQL type is an object (the example
+  is `ListPart`, which becomes `list` with `contentItems` inside), a part named like its type is collapsed (so is
+  Autoroute), settings can change it.
 - `schema-2`: a query with the arguments `where`, `orderBy`, `first`, `skip` and `status`, the `contentItem` query,
   and three cards naming the arguments.
 - `schema-3`: three cards: change a content type, send the next request, reload GraphiQL.

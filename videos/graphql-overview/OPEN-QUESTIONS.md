@@ -19,8 +19,9 @@ Checked by reading the code, not by running it:
 - `subtitle` sits directly on `blogPost`, as a string, because the part named like its content type is collapsed
   (`Options/GraphQLContentOptions.cs:101`) and a text field is exposed as its text
   (`OrchardCore.ContentFields/GraphQL/Fields/ContentFieldsProvider.cs`).
-- `autoroute` (named on the `schema-1` slide, not recorded) follows the same rule for `AutoroutePart`. The
-  documentation writes `autoroutePart`: see the documentation issues in the result of this task.
+- `AutoroutePart` is collapsed by default (`OrchardCore.Autoroute/Startup.cs:92-98`), so its `path` field sits directly
+  on the content type, not under an `autoroute` field; the documentation does not say either way. A person can confirm
+  `path` in the Explorer under `blogPost`.
 - `displayText` is a field of every content type (`Queries/Types/ContentItemType.cs`); the Title part has no GraphQL
   type of its own.
 - Query A returns the posts newest first (`Queries/ContentItemsFieldType.cs:472`), and `list.contentItems` returns

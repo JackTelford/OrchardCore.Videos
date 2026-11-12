@@ -24,8 +24,8 @@ MODULE = [
 
 SCHEMA = [
     ("1", "A content type is a query field", "BlogPost becomes blogPost. Types with a stereotype, like Widget, are left out."),
-    ("2", "A part with fields or a GraphQL type is an object", "AutoroutePart becomes autoroute, with a path field inside it."),
-    ("3", "A part named like its type is collapsed", "BlogPost puts subtitle directly on blogPost."),
+    ("2", "A part with fields or a GraphQL type is an object", "ListPart becomes list, with a contentItems field inside it."),
+    ("3", "A part named like its type is collapsed", "BlogPost puts subtitle directly on blogPost. Autoroute is collapsed too."),
     ("4", "Settings can change it", "The content type editor can hide a type or a part, or collapse a part."),
 ]
 

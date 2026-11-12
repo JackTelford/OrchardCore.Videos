@@ -127,7 +127,7 @@
           "steps": [
             {
               "id": "schema-1",
-              "text": "A content type becomes a query field, unless its settings give it a stereotype, such as Widget. A part with fields or a GraphQL type becomes an object. A part named like its type, such as BlogPost, puts its fields directly on the type."
+              "text": "A content type becomes a query field, unless its settings give it a stereotype, such as Widget. A part with fields or a GraphQL type becomes an object, unless it is collapsed. A part named like its type, such as BlogPost, is collapsed."
             },
             {
               "id": "schema-2",
