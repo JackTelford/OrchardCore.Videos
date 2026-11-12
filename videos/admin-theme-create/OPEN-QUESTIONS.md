@@ -121,9 +121,9 @@ The keys `ocat ` (with a trailing space) and `ocat-` avoid changing words such a
 **Read:** the commands follow `docs/getting-started/theme.md` (the folder is named after the theme, then `dotnet new octheme`,
 `dotnet sln add` and `dotnet add ... reference`), with the theme name `MyAdminTheme` and the layout of the guide
 `guides/create-admin-theme` (`MySite` and the theme side by side). The documentation page runs `dotnet sln add` inside the
-theme folder and references `../OrchardCore.Themes/MyTheme.OrchardCore.csproj`, a path without the project folder that
-`dotnet new octheme` creates; the slide runs both commands from the folder that holds the solution and gives the path with
-the folder. This is reported as a documentation issue.
+theme folder and references `../OrchardCore.Themes/MyTheme.OrchardCore.csproj`, a path without the folder of the theme (`dotnet new octheme` creates the files in the current folder, which the
+documentation names after the theme); the slide runs both commands from the folder that holds the solution and gives the path
+with the folder. This is reported as a documentation issue.
 
 **Not run:** the commands. The Orchard Core source has no solution file at its root in the copy that was read, so a solution
 name could not be checked.
