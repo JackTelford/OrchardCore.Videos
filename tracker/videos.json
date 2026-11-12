@@ -6019,9 +6019,9 @@
     "docs": [
       "src/docs/reference/modules/Diagnostics/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.0,
+    "words": 599,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
