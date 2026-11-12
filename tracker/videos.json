@@ -3338,9 +3338,9 @@
       "src/docs/reference/modules/Users/README.md",
       "src/docs/reference/modules/Users/TicketStore.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 4.5,
-    "words": 0,
+    "words": 677,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
