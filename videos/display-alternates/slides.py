@@ -132,7 +132,7 @@ def slide(step_id, chapter_title, label):
         image = slide_base(chapter_title, label, "From a shape to a template")
         bullets(image, [
             ("1", "A page is made of shapes", "The layout, content items, fields and menus are shapes."),
-            ("2", "Each shape has a type", "A content item on its own page has the type Content, unless its content type has a stereotype."),
+            ("2", "Each shape has a type", "A content item on its own page usually has the type Content."),
             ("3", "A template renders the type", "The template named Content shows those items."),
         ])
         return image

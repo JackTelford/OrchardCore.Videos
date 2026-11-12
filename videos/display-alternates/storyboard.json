@@ -25,7 +25,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "Orchard Core renders content items with shared templates. Shape alternates give one content type, or a single content item, a template of its own. In this video, we name those templates, add them to a theme, and check which one Orchard Core picks."
+              "text": "Orchard Core renders content items with shared templates. Shape alternates give one content type, or a single content item, a template of its own. In this video, let's name those templates, add them to a theme, and check which one Orchard Core picks."
             }
           ]
         }
@@ -42,7 +42,7 @@
           "steps": [
             {
               "id": "choose-1",
-              "text": "Orchard Core builds a page from shapes. Each shape has a type, and a template renders that type. A content item on its own page has the type Content, unless its content type has a stereotype, so one Content template renders those items."
+              "text": "Orchard Core builds a page from shapes. Each shape has a type, and a template renders that type. A content item on its own page usually has the type Content, so one Content template renders all of those items."
             },
             {
               "id": "choose-2",
@@ -50,7 +50,7 @@
             },
             {
               "id": "choose-3",
-              "text": "A template is named after the shape it renders. In a file name, a hyphen stands for a double underscore, and a dot after the last hyphen adds a display type. So Content-Event.Summary.liquid renders the Summary display of an Event."
+              "text": "A template is named after its shape. In a file name, a hyphen stands for a double underscore, and a dot after the last hyphen adds a display type, a named way to show an item. So Content-Event.Summary.liquid renders the Summary display of an Event."
             },
             {
               "id": "choose-4",
@@ -71,7 +71,7 @@
           "steps": [
             {
               "id": "names-1",
-              "text": "For a content item, Orchard Core adds an alternate for its content type. A template named Content-Event applies to every Event shown on its own page, and Content-Event.Summary applies to events shown in the Summary display type, which lists commonly use."
+              "text": "For a content item, Orchard Core adds an alternate for its content type. A template named Content-Event applies to every Event shown on its own page, and Content-Event.Summary applies to events shown in the Summary display type, which lists often use."
             },
             {
               "id": "names-2",
@@ -240,7 +240,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Alternates let a theme change the display of one content type, or one content item, without touching a module. Name the template after the alternate, and check the result with the shape debug information. Thanks for watching."
+              "text": "Alternates let a theme change the display of one content type, or one content item, without touching a module. Thanks for watching."
             }
           ]
         }

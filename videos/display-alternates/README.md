@@ -1,6 +1,6 @@
 # Shape Alternates: Customize the Display of One Type or One Item
 
-**YouTube:** not published yet · **Length:** 5:28 · **Feature:** [`topic:DisplayManagement`](https://docs.orchardcore.net/en/latest/reference/modules/DisplayManagement/)
+**YouTube:** not published yet · **Length:** 5:22 · **Feature:** [`topic:DisplayManagement`](https://docs.orchardcore.net/en/latest/reference/modules/DisplayManagement/)
 
 A video for developers of themes and modules. It explains how Orchard Core chooses the template of a shape, what an
 alternate is, and which alternates a content item receives: its content type, its path and its alias. It adds two
