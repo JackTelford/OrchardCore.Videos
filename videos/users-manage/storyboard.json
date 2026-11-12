@@ -1,0 +1,210 @@
+{
+  "title": "Users: Create, Edit, Disable and Delete Accounts",
+  "output": "users-manage",
+  "spoken": {
+    "morgan.ellis": "morgan dot ellis",
+    "example.com": "example dot com"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Users: Create, Edit, Disable and Delete Accounts",
+      "subtitle": "Manage the accounts of the people who sign in to your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Everyone who signs in to an Orchard Core site does so with a user account. In this video, you create users, edit them and give them roles, change passwords, disable and delete accounts, and find users in a long list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How users work",
+      "subtitle": "Accounts, roles and permissions",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A user account holds a user name, an email address, and a password. A role groups permissions, and a user can have several roles. Together, the roles decide what that user can do on the site."
+            },
+            {
+              "id": "how-2",
+              "text": "An administrator creates accounts on the Users page. Visitors can sign themselves up when the Users Registration feature is enabled, and the External Authentication feature can register a user who signs in through an external identity provider. Separate videos cover those two."
+            },
+            {
+              "id": "how-3",
+              "text": "Permissions decide who can manage users, among them List all users, Edit any user, Delete any user, and Assign any role to users. The Administrator role has all permissions. You grant them to other roles on the Roles page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Users list",
+      "subtitle": "Where every account is listed",
+      "clips": [
+        {
+          "id": "02-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Open Access Control, then Users. The list shows every account with its user name, its email address, and the roles it has. Each user is one row."
+            },
+            {
+              "id": "list-2",
+              "text": "Each row has an Edit button, a View button, and an Actions menu. A badge marks an account that is Disabled. Your own row has no View button."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a user",
+      "subtitle": "Name, email, password and roles",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Select Add User. The Create User page asks for a User name and an Email, both required, and an optional Phone Number. Let's enter morgan.ellis and an example.com address."
+            },
+            {
+              "id": "create-2",
+              "text": "Creating an account requires a password. Type one in Password and Password confirmation, or select Generate password, which fills both fields with a password that follows the site's password rules. Copy password puts it on the clipboard."
+            },
+            {
+              "id": "create-3",
+              "text": "Roles lists the roles you can assign. Tick Author, then select Save. The Users list opens with a confirmation message and a row for the user you created."
+            },
+            {
+              "id": "create-4",
+              "text": "The row has an Unconfirmed badge. An administrator created the account, so nobody has confirmed its email address. A site can require confirmed addresses before users sign in, a choice that belongs to registration."
+            },
+            {
+              "id": "create-5",
+              "text": "Open the Actions menu on the row and select Confirm email. In the dialog, select Ok, and the badge disappears. Confirm email marks the address as confirmed without sending a message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Edit a user",
+      "subtitle": "Update details and roles",
+      "clips": [
+        {
+          "id": "04-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "Select Edit on the row of the user you created. The Edit User page shows User name and Email as read-only, unless Settings, Security, User Login allows changing them. Phone Number can be edited."
+            },
+            {
+              "id": "edit-2",
+              "text": "Type the phone number with its country code. Roles can change too: Author stays ticked, and Contributor is added. Select Save, and the list shows both role badges."
+            },
+            {
+              "id": "edit-3",
+              "text": "View opens a read-only page for the user. User Info lists the user name, the email address, the phone number, and the status, and Roles lists the roles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The Actions menu",
+      "subtitle": "Change passwords, disable and delete",
+      "clips": [
+        {
+          "id": "05-actions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "actions-1",
+              "text": "The Actions menu on a row holds the actions that change an account: Change password, Disable or Enable, and Delete. Confirm email appears too, while an address is unconfirmed."
+            },
+            {
+              "id": "actions-2",
+              "text": "Change password asks for a New password and its confirmation, and Submit saves it. For another user, no current password is needed. On your own account, the page also asks for your Current password."
+            },
+            {
+              "id": "actions-3",
+              "text": "Disable asks for confirmation. A disabled user stays in the list with a Disabled badge and keeps their roles, but cannot sign in. Orchard Core refuses to disable the only enabled administrator."
+            },
+            {
+              "id": "actions-4",
+              "text": "For a disabled user, the same menu offers Enable. Select it and confirm, and the account can sign in again."
+            },
+            {
+              "id": "actions-5",
+              "text": "Delete removes the account from the site: select Delete, and confirm in the dialog. Your own row offers no Delete. To keep an account but block it, disable it instead."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Find users and act on many",
+      "subtitle": "Search, filters and bulk actions",
+      "clips": [
+        {
+          "id": "06-find",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "To find a user, type part of a user name in Search, and select the magnifying glass. Typing sam leaves only the users whose name contains it."
+            },
+            {
+              "id": "find-2",
+              "text": "The filter button beside the box offers Only enabled users, Only disabled users, and Filter syntax. Filter syntax opens Available Filters, which lists the filters you can type: Name, Email, Status, Role, and Sort."
+            },
+            {
+              "id": "find-3",
+              "text": "Above the rows, three pickers narrow the list without typing: Role, Show for enabled or disabled users, and Sort, by Name or Email. With Author and Disabled Users chosen, one account remains."
+            },
+            {
+              "id": "find-4",
+              "text": "Tick two or more rows to act on several users. The Actions menu then offers Confirm email, Enable, Disable, and Delete: let's choose Disable and confirm. Your own account is skipped by Enable, Disable, and Delete."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Users: Create, Edit, Disable and Delete Accounts",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You manage accounts under Access Control, Users: create them, edit their roles, change passwords, disable or delete them, and find them with search and filters. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
