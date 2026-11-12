@@ -95,7 +95,7 @@
             },
             {
               "id": "add-5",
-              "text": "Below, the editor list offers Standard, with two number boxes, and Leaflet editor, which adds a map. We choose Leaflet editor and select Save."
+              "text": "Further down the settings page, the editor list offers Standard, with two number boxes, and Leaflet editor, which adds a map. We choose Leaflet editor and select Save."
             },
             {
               "id": "add-6",
@@ -170,7 +170,7 @@
           "steps": [
             {
               "id": "after-1",
-              "text": "The location is stored with the content item. When its content type belongs to a Lucene index and the field's setting Include this element in the index is checked, the location is indexed, so developers can search by area or by distance."
+              "text": "The location is stored with the content item and shown on the site as text. When the content type belongs to a Lucene index and the field's setting Include this element in the index is checked, developers can search by area or by distance."
             }
           ]
         }

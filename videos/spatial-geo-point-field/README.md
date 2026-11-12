@@ -1,6 +1,6 @@
 # Geo Point Field: Add Locations to Content Items
 
-**YouTube:** not published yet · **Length:** 3:45 · **Feature:** [OrchardCore.Spatial](https://docs.orchardcore.net/en/latest/reference/modules/Spatial/)
+**YouTube:** not published yet · **Length:** 3:48 · **Feature:** [OrchardCore.Spatial](https://docs.orchardcore.net/en/latest/reference/modules/Spatial/)
 
 This video shows how to give a content item a place on the map with the Geo Point field of the Spatial feature. It
 explains what the field stores, enables the feature, adds the field to the Page content type with its Required and
