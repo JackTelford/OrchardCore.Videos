@@ -1,0 +1,52 @@
+{
+  "title": "Secure Media: Control Who Sees Each Media Folder | Orchard Core",
+  "description": "By default, anyone who has the address of a file in the Orchard Core Media Library can open it. That suits the pictures of a public blog, but not a contract or a price list meant for a few people.\n\nThe Secure Media feature adds view permissions for the root folder and for each folder directly under it. You give them to roles, and anyone without the permission gets 404 Not Found.\n\nIn this video:\n• Why files in the Media Library need permissions\n• Enable Secure Media and see its effect on a public site\n• The view permissions it adds\n• Open the root folder to visitors with the Anonymous role\n• Allow a role to view one folder\n• The Media Library and attached files",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Media Library",
+    "Secure Media",
+    "Permissions",
+    "Roles"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Permissions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Documentation: Secure Media",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/#secure-media"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Security/Permissions.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media.Security"
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "title": "Secure Media: Control Who Sees Each Media Folder",
+  "output": "media-secure-media",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Secure Media",
+      "subtitle": "Control who can see each media folder",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Files in the Media Library are open to anyone who knows their address. The Secure Media feature adds permissions for media folders. In this video, you enable it, open the root folder to visitors, and give a role access to one folder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why Secure Media",
+      "subtitle": "Files are public until you restrict them",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Without Secure Media, every file in the Media Library is served to anyone who has its address. That suits the pictures of a public blog. It does not suit a contract, or a price list meant for a few people."
+            },
+            {
+              "id": "why-2",
+              "text": "Secure Media adds view permissions to the media folders, so each role can be allowed to view all folders, the root folder, or chosen folders. Anyone without the permission gets 404 Not Found, as if the file did not exist."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable Secure Media",
+      "subtitle": "The effect on a public site",
+      "clips": [
+        {
+          "id": "02-visitor-before",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "before-1",
+              "text": "Here is the blog as a visitor sees it, without signing in. The picture behind the title is a file from the root folder of the Media Library."
+            }
+          ]
+        },
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Secure Media is a feature, so it is enabled under Tools, Features. Let's search for Secure Media."
+            },
+            {
+              "id": "enable-2",
+              "text": "Its description reads: Adds permissions to restrict access to media folders. Let's click Enable."
+            },
+            {
+              "id": "enable-3",
+              "text": "A message confirms that the feature was enabled. A warning asks you to review the role permissions, and links to the Roles page."
+            },
+            {
+              "id": "enable-4",
+              "text": "Access changes as soon as the feature is enabled. Administrators can view every file, signed-in users can view their own media, and everyone else needs a permission to view files."
+            }
+          ]
+        },
+        {
+          "id": "02-visitor-after",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "after-1",
+              "text": "Back on the blog as a visitor, the picture behind the title is gone. The request for the file is answered with 404 Not Found."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The view permissions",
+      "subtitle": "What each one allows",
+      "clips": [
+        {
+          "id": "03-permissions",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "Secure Media adds these view permissions: View media content in all folders, View media content in the root folder, View others media content, and View own media content."
+            },
+            {
+              "id": "perm-2",
+              "text": "It also adds one permission for each folder directly under the root, such as View media content in folder 'press'. A folder permission covers that folder and the folders inside it. A folder you create in the root folder gets its permission."
+            },
+            {
+              "id": "perm-3",
+              "text": "A folder permission also lets a role view the files stored directly in the root folder. Manage All Media Folders includes every view permission, and opening the Media Library requires Manage Media."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Open the root folder",
+      "subtitle": "Permissions for the Anonymous role",
+      "clips": [
+        {
+          "id": "04-anonymous",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "anon-1",
+              "text": "The blog's pictures sit in the root folder, so visitors need that permission. Visitors who are not signed in belong to the Anonymous role. Let's open it from Access Control, Roles."
+            },
+            {
+              "id": "anon-2",
+              "text": "Search the permissions for media content, then tick Allow for View media content in the root folder."
+            },
+            {
+              "id": "anon-3",
+              "text": "Save the role. Permissions of the Anonymous role also apply to signed-in users, so the root folder is open to everyone."
+            }
+          ]
+        },
+        {
+          "id": "04-visitor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "visitor-1",
+              "text": "As a visitor, the picture behind the title is back. Folders other than the root stay closed, because the Anonymous role has no permission for them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Allow a role to view a folder",
+      "subtitle": "Folder permissions for the Editor role",
+      "clips": [
+        {
+          "id": "05-editor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "editor-1",
+              "text": "On this site, editors prepare press material, so the Editor role should view the press folder. Let's open it from the list of roles."
+            },
+            {
+              "id": "editor-2",
+              "text": "Searching the permissions for media content lists one permission for each folder: View media content in folder 'contracts', and View media content in folder 'press'."
+            },
+            {
+              "id": "editor-3",
+              "text": "Tick Allow for View media content in folder 'press'. The contracts folder stays unticked, so editors cannot view it."
+            },
+            {
+              "id": "editor-4",
+              "text": "Save the role. Editors can view the press folder and the folders inside it, and administrators keep access to every folder."
+            },
+            {
+              "id": "editor-5",
+              "text": "Open the role again. The Effective column shows what the role ends up with: granted, implied by another permission, or given by the Anonymous or Authenticated role. The press folder is ticked, and the contracts folder is not."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Good to know",
+      "subtitle": "The Media Library and attached files",
+      "clips": [
+        {
+          "id": "06-know",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "know-1",
+              "text": "In the Media Library, a user sees only the folders that user may view, so a restricted folder is not listed."
+            },
+            {
+              "id": "know-2",
+              "text": "Files attached to a content item with the Attached editor of a Media Field follow who may view that content item, so they need no folder permission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Secure Media",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Secure Media lets role permissions decide who can view each media folder, and answers everyone else with 404 Not Found. Review the permissions of your roles when you enable it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
