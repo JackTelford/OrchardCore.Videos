@@ -1,0 +1,70 @@
+{
+  "title": "Run in a Web Farm: Distributed Tenants, Workers and Shared Storage | Orchard Core",
+  "description": "Running Orchard Core on several servers behind a load balancer means that what each server keeps for itself, such as the settings of the tenants, the state of the tenants in memory and local Lucene indexes, can differ from one server to the next.\n\nShared tenant settings in Azure Blob Storage, the Distributed Tenants feature with a Redis cache, and the Indexing Worker keep the servers in step.\n\nIn this video:\n• What a web farm changes\n• Shared tenant settings with Azure Shells Configuration\n• Distributed Tenants and the Redis cache\n• How the instances keep the tenants in sync\n• Index workers for Lucene and Elasticsearch\n• A web farm checklist",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "WebFarm"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Web farm",
+    "Multi-tenancy",
+    "Redis",
+    "Azure Blob Storage",
+    "Lucene",
+    "Elasticsearch"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Hosting and Production"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Tenants",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Documentation: Shells",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Shells/"
+    },
+    {
+      "label": "Documentation: Indexing",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Indexing/"
+    },
+    {
+      "label": "Documentation: Lucene",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lucene/"
+    },
+    {
+      "label": "Documentation: Elasticsearch",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Elasticsearch/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md",
+    "src/docs/reference/modules/Shells/README.md",
+    "src/docs/reference/modules/Indexing/README.md",
+    "src/docs/reference/modules/Lucene/README.md",
+    "src/docs/reference/modules/Elasticsearch/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Tenants.Distributed"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "title": "Run Orchard Core in a Web Farm",
+  "output": "web-farm",
+  "spoken": {
+    "tenants.json": "tenants dot Jason",
+    "appsettings.json": "app settings dot Jason",
+    "lucene.status.json": "lucene dot status dot Jason",
+    "OrchardCore.Shells.Azure": "Orchard Core dot Shells dot Azure",
+    "App_Data": "App Data",
+    "MigrateFromFiles": "Migrate From Files",
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Run Orchard Core in a Web Farm",
+      "subtitle": "Distributed tenants, workers and shared storage",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A web farm runs one site on several servers behind a load balancer. This video covers what Orchard Core keeps on each server, and how shared tenant settings, Distributed Tenants and the index workers keep the servers in step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a web farm changes",
+      "subtitle": "State that stays on one server",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Every server of a farm runs its own copy of the application against one shared database. What an instance keeps for itself, in memory or on its disk, can differ from what the other instances know."
+            },
+            {
+              "id": "why-2",
+              "text": "By default, the settings of the tenants are files in the App_Data folder of each server, and each server builds its own copy of every tenant in memory. A tenant change made on one server never reaches the others."
+            },
+            {
+              "id": "why-3",
+              "text": "Search indexes and background tasks work the same way. A Lucene index and its position in the task log are files on the disk of one server, and a scheduled task runs on every server, each following its own copy of the schedule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Shared tenant settings",
+      "subtitle": "Azure Blob Storage instead of App_Data",
+      "clips": [
+        {
+          "id": "02-shared",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shared-1",
+              "text": "To share the tenant settings, store them outside the servers. The Azure Shells Configuration provider keeps tenants.json, and an appsettings.json file for each tenant, in an Azure Blob Storage container that every server reads and writes."
+            },
+            {
+              "id": "shared-2",
+              "text": "The provider is in the OrchardCore.Shells.Azure package. Call Add Azure Shells Configuration on the Orchard Core builder, and set the connection string and the container name in the OrchardCore, Shells, Azure section."
+            },
+            {
+              "id": "shared-3",
+              "text": "Create the container first, since Orchard Core does not create it, and keep it private: it holds the settings of every tenant. The MigrateFromFiles setting copies the App_Data files the container lacks. A Database Shells Configuration provider stores them in a database."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Distributed Tenants",
+      "subtitle": "A distributed cache for the farm",
+      "clips": [
+        {
+          "id": "03-redis",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "redis-1",
+              "text": "Distributed Tenants needs a distributed cache that every server shares. Redis Cache provides one, from the connection string in the OrchardCore, Redis section of the configuration. Without a valid string, the Redis features stay inactive."
+            }
+          ]
+        },
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "On the Default tenant, open Tools, Features, and search for Redis Cache. It is in the Distributed category, and it uses the Redis server of the configuration. Enable it."
+            },
+            {
+              "id": "enable-2",
+              "text": "Next, search for Distributed Tenants and enable it. This feature is available on the Default tenant only, and it keeps the state of the tenants in sync between the instances."
+            },
+            {
+              "id": "enable-3",
+              "text": "Both features show as Enabled. Orchard Core releases the Default tenant each time a feature changes, so it is built again, with the cache, on the next request."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Tenants stay in sync",
+      "subtitle": "One change, every instance",
+      "clips": [
+        {
+          "id": "04-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "When an instance reloads, releases, creates or removes a tenant, it stores a changed identifier for that tenant in the distributed cache. A reload follows a change to the settings of a tenant, and a release follows a change to its enabled features."
+            },
+            {
+              "id": "how-2",
+              "text": "Every instance reads these identifiers about once a second. When one has changed, the instance applies the same operation to its own copy of the tenant, reading the settings again from the shared storage."
+            }
+          ]
+        },
+        {
+          "id": "04-sync",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "sync-1",
+              "text": "Here is the first instance, on Multi-Tenancy, Tenants. Only the Default tenant is listed."
+            },
+            {
+              "id": "sync-2",
+              "text": "The second instance is another process of the same site, with its own memory and the same shared storage. Its Tenants page also lists the Default tenant alone."
+            },
+            {
+              "id": "sync-3",
+              "text": "Back on the first instance, choose Add Tenant. Enter the name Northwind and the Url Prefix northwind."
+            },
+            {
+              "id": "sync-4",
+              "text": "Create saves the tenant in the shared container. The list shows it as Uninitialized, and the instance stores a changed identifier in Redis."
+            },
+            {
+              "id": "sync-5",
+              "text": "On the second instance, reload the list. Northwind is there as well, although this instance did not restart: it read the identifier, then loaded the settings of the tenant from the shared container."
+            },
+            {
+              "id": "sync-6",
+              "text": "The Reload button follows the same path, and so does enabling or disabling a feature, which releases the tenant on every instance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Index workers",
+      "subtitle": "Local indexes catch up from the task log",
+      "clips": [
+        {
+          "id": "05-log",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "log-1",
+              "text": "Content changes need the same care. Each time a content item is created, updated, published or removed, Orchard Core records an indexing task in the database, which every instance shares."
+            },
+            {
+              "id": "log-2",
+              "text": "Each index remembers the last task it processed. An Elasticsearch index keeps that position in its own metadata, on the Elasticsearch server. A Lucene index keeps it in lucene.status.json, in the tenant folder on the disk of the server."
+            },
+            {
+              "id": "log-3",
+              "text": "The instance that handles an edit updates its indexes right after the request. Another instance with its own Lucene index learns of the change by reading the task log, and the Indexing Worker does that."
+            }
+          ]
+        },
+        {
+          "id": "05-worker",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "worker-1",
+              "text": "The Indexing Worker feature registers a background task named Indexes Content Updater. It runs every minute on each instance, reads the tasks recorded after the position of each index, and indexes the content items they name."
+            },
+            {
+              "id": "worker-2",
+              "text": "The task is atomic, with a lock timeout and a lock expiration. With a distributed lock feature such as Redis Lock, only one instance at a time runs it. Without one, those settings are ignored."
+            }
+          ]
+        },
+        {
+          "id": "05-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "On the Features page, search for Worker. Indexing Worker is in the Indexing category. Lucene Worker and Elasticsearch Worker, in the Search category, register no task of their own."
+            },
+            {
+              "id": "features-2",
+              "text": "Enable Indexing Worker. Because Distributed Tenants is enabled, the other instances release their Default tenant as well, and build it again with the same features."
+            }
+          ]
+        },
+        {
+          "id": "05-task",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "task-1",
+              "text": "On the second instance, Tools, Background Tasks lists Indexes Content Updater, although the feature was enabled on the first instance."
+            },
+            {
+              "id": "task-2",
+              "text": "Its details page shows the Schedule, a cron expression for every minute, and Atomic, with the lock timeout and the lock expiration of the task."
+            },
+            {
+              "id": "task-3",
+              "text": "The execution state on these pages is kept in memory by the server that rendered them, so behind a load balancer they need session affinity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "A web farm checklist",
+      "subtitle": "What every instance shares",
+      "clips": [
+        {
+          "id": "06-checklist",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "A farm needs a shared database, shared tenant settings, a distributed cache with Distributed Tenants, and the Indexing Worker for local Lucene indexes. The data protection keys must be shared as well, and a separate video covers them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Run Orchard Core in a Web Farm",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how Orchard Core runs in a web farm: shared tenant settings, a distributed cache that keeps the tenants in step, and a worker that keeps local indexes up to date. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
