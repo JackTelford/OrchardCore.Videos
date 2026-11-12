@@ -1,0 +1,48 @@
+{
+  "title": "Tenants: Edit, Disable, Reload and Remove | Orchard Core",
+  "description": "Once an Orchard Core application hosts several tenants, each one needs looking after: its settings change, a site has to be switched off for a while, and a tenant that is no longer needed has to go.\n\nThe Tenants list of the Default tenant offers these actions in the row of a tenant: Edit, Disable, Enable, Reload and Remove. This video shows what each one does, which states of a tenant allow it, and how to change several tenants at once.\n\nIn this video:\n• The Tenants list: search, filter and the actions of a row\n• The states of a tenant: Uninitialized, Running, Disabled and Initializing\n• Edit a tenant: category, description, Url Prefix and Hostname\n• Disable and enable a tenant\n• Reload a tenant\n• Disable several tenants at once\n• Remove a tenant",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MultiTenancy"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Multi-Tenancy",
+    "Tenants",
+    "Disable tenant",
+    "Remove tenant",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Multi-Tenancy"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Tenants"
+  }
+}

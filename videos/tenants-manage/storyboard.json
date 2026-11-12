@@ -1,0 +1,244 @@
+{
+  "title": "Tenants: Edit, Disable, Reload and Remove",
+  "output": "tenants-manage",
+  "spoken": {
+    "Url Prefix": "U.R.L. Prefix"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Tenants: Edit, Disable, Reload and Remove",
+      "subtitle": "Manage the tenants of your application",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Once tenants exist, you manage them from one list. In this video, you edit, disable, enable, reload and remove tenants, and change several at once."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The Tenants list",
+      "subtitle": "Find a tenant and see what it allows",
+      "clips": [
+        {
+          "id": "01-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Tenants are managed from the Default tenant, by a user with the Manage tenants permission. Open Multi-Tenancy, then Tenants. Each row shows the name of a tenant, with badges for its state and, when they are set, its database provider and recipe."
+            },
+            {
+              "id": "list-2",
+              "text": "At the end of each row are the actions the tenant allows. A running tenant offers Edit, View, Disable and Reload, plus Features when the Features module is enabled. The Default tenant offers fewer: it has no Disable button, because it cannot be disabled."
+            },
+            {
+              "id": "list-3",
+              "text": "The search box finds tenants by name, host or prefix. Let's search for harbor, and the list narrows to that tenant."
+            },
+            {
+              "id": "list-4",
+              "text": "The State filter shows only running, disabled or uninitialized tenants. Let's choose Uninitialized: Pilot is the tenant that has not been set up."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Tenant states",
+      "subtitle": "What each state means for a tenant",
+      "clips": [
+        {
+          "id": "02-states",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "states-1",
+              "text": "Every tenant has a state, shown as a badge in its row. Running means the tenant serves its site. Uninitialized means it exists, but nobody has set it up."
+            },
+            {
+              "id": "states-2",
+              "text": "Disabled means the tenant is switched off, with its settings and data kept. Initializing appears while a tenant is being set up."
+            },
+            {
+              "id": "states-3",
+              "text": "The actions of a row follow its state. Disable and View belong to running tenants, Enable to disabled ones, Setup to tenants that are not set up, and Remove to disabled or not set up tenants."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Edit a tenant",
+      "subtitle": "Change the settings of a tenant",
+      "clips": [
+        {
+          "id": "03-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "To change a tenant, select Edit in its row. Let's edit Acme. The Edit Tenant page shows its name, which is read-only, then Category, Url Prefix, Description and Hostname."
+            },
+            {
+              "id": "edit-2",
+              "text": "The Url Prefix and the Hostname decide which requests reach the tenant, so change them with care. Several domains can be separated by commas."
+            },
+            {
+              "id": "edit-3",
+              "text": "Category and Description help you tell tenants apart. Let's type the category Customers, and the description Acme Bakery storefront."
+            },
+            {
+              "id": "edit-4",
+              "text": "Select Save. The tenant is reloaded with the settings you saved, and the row of Acme shows the category and the description."
+            },
+            {
+              "id": "edit-5",
+              "text": "While a tenant is not set up, its Edit page also offers the recipe and database settings that Setup uses. Here is Pilot. A tenant that is set up no longer shows them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Disable and enable a tenant",
+      "subtitle": "Switch a tenant off and on again",
+      "clips": [
+        {
+          "id": "04-disable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "disable-1",
+              "text": "To switch a tenant off, select Disable in its row. Let's disable Harbor. A dialog asks you to confirm."
+            },
+            {
+              "id": "disable-2",
+              "text": "Select Ok. The state of Harbor changes to Disabled. The tenant stops serving its site, while its settings and data stay as they are."
+            },
+            {
+              "id": "disable-3",
+              "text": "Its row offers Enable instead of View and Disable. Remove also appears, because this site allows removal, and only a disabled or not set up tenant can be removed."
+            },
+            {
+              "id": "disable-4",
+              "text": "Select Enable to switch Harbor on again. No dialog appears. The state returns to Running, and the tenant serves its site again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Reload a tenant",
+      "subtitle": "Start one tenant again",
+      "clips": [
+        {
+          "id": "05-reload",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "reload-1",
+              "text": "Reload makes one tenant start again, while the application keeps running. Its settings are read again, and the next request builds the tenant with them."
+            },
+            {
+              "id": "reload-2",
+              "text": "Let's reload Harbor. Select Reload in its row. No dialog and no message appear: the list opens again."
+            },
+            {
+              "id": "reload-3",
+              "text": "Use Reload after you change settings outside the admin screens. Saving the Edit Tenant page already reloads the tenant, so it needs no extra step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Several tenants at once",
+      "subtitle": "Bulk actions on the Tenants list",
+      "clips": [
+        {
+          "id": "06-bulk",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "bulk-1",
+              "text": "To change several tenants at once, tick their checkboxes. Let's select Juniper and Maple. With two or more selected, the toolbar shows how many, and an Actions menu appears."
+            },
+            {
+              "id": "bulk-2",
+              "text": "The Actions menu offers Disable and Enable. Choose Disable, and confirm the Bulk Action dialog with Ok. Both tenants change to Disabled."
+            },
+            {
+              "id": "bulk-3",
+              "text": "Disable applies to running tenants and Enable to disabled tenants. Any other selected tenant is skipped with a warning, and the Default tenant is never disabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Remove a tenant",
+      "subtitle": "Delete a tenant for good",
+      "clips": [
+        {
+          "id": "07-rules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "Removing a tenant is off by default. Whoever runs the application allows it in the configuration, and the documentation of the Tenants module explains how."
+            },
+            {
+              "id": "rules-2",
+              "text": "Even then, only a tenant that is disabled or not set up can be removed. Removing it deletes its settings, its files and its database content for good. The Default tenant cannot be removed."
+            }
+          ]
+        },
+        {
+          "id": "07-remove",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "remove-1",
+              "text": "Maple is disabled, so its row offers Remove. Select it, and a dialog titled Remove asks you to confirm."
+            },
+            {
+              "id": "remove-2",
+              "text": "Select Ok. A message says that the tenant Maple was removed, and points to the log file for more information. The row of Maple is gone from the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Tenants: Edit, Disable, Reload and Remove",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You can edit, disable, enable, reload and remove tenants from one list. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
