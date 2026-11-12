@@ -4,9 +4,9 @@
 
 How a module adds a step to the recipes of Orchard Core. The video covers the step handler and
 `NamedRecipeStepHandler`, reading a step with `ToObject` or as a JSON node, registering the handler with
-`AddRecipeExecutionStep`, using the step in a recipe, and reporting problems in the `Errors` list. Every code panel is
-code from the Orchard Core source, or an example from its documentation, trimmed. The title, description, tags and chapters YouTube shows are in
-`video.json`.
+`AddRecipeExecutionStep`, using the step in a recipe, and reporting problems in the `Errors` list. The code panels are
+code from the Orchard Core source, or examples from its documentation, trimmed; only the heads of the recipe files on
+the slides are written for them. The title, description, tags and chapters YouTube shows are in `video.json`.
 
 ## Recording it again
 
