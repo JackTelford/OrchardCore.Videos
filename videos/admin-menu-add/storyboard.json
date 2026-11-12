@@ -1,0 +1,223 @@
+{
+  "title": "Add Admin Menu Entries to Your Module",
+  "output": "admin-menu-add",
+  "spoken": {
+    "OrchardCore.Admin": "Orchard Core dot Admin",
+    "INavigationProvider": "I Navigation Provider",
+    "AdminNavigationProvider": "Admin Navigation Provider",
+    "AddNavigationProvider": "Add Navigation Provider",
+    "BuildNavigationAsync": "Build Navigation Async",
+    "BuildAsync": "Build Async",
+    "PrefixPosition": "Prefix Position",
+    "IStringLocalizer": "I String Localizer",
+    "AdminMenu": "Admin Menu",
+    "DemoNav": "Demo Nav",
+    "ChildOne": "Child One",
+    "ChildTwo": "Child Two",
+    "MyModule": "My Module"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Add Admin Menu Entries to Your Module",
+      "subtitle": "Put the pages of your module in the admin menu",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The admin menu on the left is built from entries that modules provide. In this video, you add your own: a top-level item with two children, each opening a page of your module. Then you enable the module and use the menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What you will build",
+      "subtitle": "A root item with two children",
+      "clips": [
+        {
+          "id": "01-build",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "The goal is a top-level item, My Root View, with two items under it, Child One and Child Two. Each child opens its own page, made of a controller action and a view."
+            },
+            {
+              "id": "build-2",
+              "text": "The module references the OrchardCore.Admin package, and the site references the module. A separate video covers creating a module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Pages to open",
+      "subtitle": "A controller and two views",
+      "clips": [
+        {
+          "id": "02-pages",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pages-1",
+              "text": "Start with the pages. The controller carries the Admin attribute, which gives its pages the admin theme and requires the Access admin panel permission."
+            },
+            {
+              "id": "pages-2",
+              "text": "The ChildOne and ChildTwo actions each return their view. Orchard Core maps them to admin addresses made of the admin prefix, the module, the controller, and the action."
+            },
+            {
+              "id": "pages-3",
+              "text": "The two views are files in the DemoNav folder, inside the Views folder of the module. Each holds a single paragraph, View One or View Two, so the page shows which item opened it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The navigation provider",
+      "subtitle": "Describe the menu items in code",
+      "clips": [
+        {
+          "id": "03-provider",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "provider-1",
+              "text": "The menu entries come from a class that implements INavigationProvider. By convention it is called AdminMenu and sits at the root of the module. It takes an IStringLocalizer, so the captions can be translated."
+            },
+            {
+              "id": "provider-2",
+              "text": "BuildNavigationAsync receives the name of the menu being built, and a builder. The admin menu is named admin, so for any other menu the method returns without adding anything."
+            },
+            {
+              "id": "provider-3",
+              "text": "The builder holds the menu, and every provider adds its items to it. Add takes a caption, a position, and a function that describes the item. Adding inside another Add creates a child."
+            },
+            {
+              "id": "provider-4",
+              "text": "Action gives an item its page: the action name, the controller name, and route values, where area is the module. My Root View has no page of its own, so selecting it opens its children."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Position and order",
+      "subtitle": "Where an item appears in the menu",
+      "clips": [
+        {
+          "id": "04-position",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "position-1",
+              "text": "The second argument of Add is the position, and items on the same level are sorted by it. Numbers sort by value. The anchors before and after sit at the two ends of the numbers."
+            },
+            {
+              "id": "position-2",
+              "text": "PrefixPosition builds a text position from the caption, so sibling items sort by their translated captions, compared character by character without regard to case. A text position sorts after every number, even after the anchor named after."
+            },
+            {
+              "id": "position-3",
+              "text": "The positions start and end go before and after everything. The Tools and Settings items use end, so My Root View appears above them. A top-level item that must keep a fixed place takes a number instead."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Register and run",
+      "subtitle": "Startup, then the admin",
+      "clips": [
+        {
+          "id": "05-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "A provider takes part only when it is registered. In the Startup class of the module, AddNavigationProvider adds it as a service, and Orchard Core calls it each time it builds a menu."
+            }
+          ]
+        },
+        {
+          "id": "05-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "admin-1",
+              "text": "In the admin, open Tools, then Features, which lists the features of the installed modules."
+            },
+            {
+              "id": "admin-2",
+              "text": "Search for MyModule, and select Enable. A message confirms that the feature MyModule was enabled."
+            },
+            {
+              "id": "admin-3",
+              "text": "My Root View is in the admin menu, above Tools and Settings. It has no page of its own: selecting it opens Child One and Child Two."
+            },
+            {
+              "id": "admin-4",
+              "text": "Select Child One. The page opens in the admin theme with the paragraph View One, and the menu keeps Child One selected."
+            },
+            {
+              "id": "admin-5",
+              "text": "Select Child Two, and the second view opens the same way, with the paragraph View Two."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Beyond the example",
+      "subtitle": "The base class, existing menus and permissions",
+      "clips": [
+        {
+          "id": "06-beyond",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "beyond-1",
+              "text": "Most of the modules of Orchard Core extend AdminNavigationProvider instead. It checks the menu name for you, so you override BuildAsync and add your items there."
+            },
+            {
+              "id": "beyond-2",
+              "text": "Items with the same caption are merged. This provider, from the Background Tasks module, adds an item under Tools, so the Tools item that already exists gains a child. Your own provider can add to any existing item this way."
+            },
+            {
+              "id": "beyond-3",
+              "text": "Permission hides an item, and its children, from users who lack that permission. It does not protect the page, so the action checks the permission as well. A separate video covers permissions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Add Admin Menu Entries to Your Module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how a module adds to the admin menu: pages to open, a navigation provider that describes the items, and its registration in Startup. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

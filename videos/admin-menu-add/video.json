@@ -1,0 +1,47 @@
+{
+  "title": "Add Admin Menu Entries to Your Module | Orchard Core",
+  "description": "The admin menu of an Orchard Core site is built from the entries that modules provide, and a module that has pages of its own needs a way to put them there.\n\nA class that implements INavigationProvider describes the menu items, a position decides where they appear, and AddNavigationProvider registers the class in the Startup of the module. The video builds a top-level item with two children, each opening its own page, and shows them in the admin.\n\nIn this video:\n• What you will build: a root item with two children\n• Pages to open: a controller with the Admin attribute, and two views\n• The navigation provider: BuildNavigationAsync, Add and Action\n• Position and order: numbers, PrefixPosition, start and end\n• Register and run: AddNavigationProvider, then Tools, Features in the admin\n• Beyond the example: AdminNavigationProvider, existing menus and permissions",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Admin menu",
+    "Navigation",
+    "INavigationProvider",
+    "Module development"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/add-admin-menu/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/add-admin-menu/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/add-admin-menu"
+  }
+}
