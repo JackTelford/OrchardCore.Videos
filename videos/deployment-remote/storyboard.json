@@ -1,0 +1,228 @@
+{
+  "title": "Orchard Core Remote Deployment",
+  "output": "deployment-remote",
+  "spoken": {
+    "Api Key": "A.P.I. Key",
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Remote Deployment",
+      "subtitle": "Send a deployment plan straight to another site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A deployment plan can send its package straight to another Orchard Core site, which imports it on arrival. The Remote Deployment module makes that possible. In this video, you connect two sites and send a plan from one to the other."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How remote deployment works",
+      "subtitle": "Two sites and a shared key",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "Remote deployment involves two sites. The source site holds the deployment plan, and the destination site receives the package and imports it. You create a remote client on the destination, and a remote instance on the source."
+            },
+            {
+              "id": "how-2",
+              "text": "When you execute a plan, the source builds a package and posts it to the destination, with a client name and an Api Key. If both match its remote client, the destination imports the package at once, without asking you."
+            },
+            {
+              "id": "how-3",
+              "text": "Before you start, check three things. Deployment and Remote Deployment are enabled on both sites, under Tools, Features. The source can reach the destination, over HTTPS on a real site, and the destination has the features that the plan's steps need."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create a remote client",
+      "subtitle": "On the destination site",
+      "clips": [
+        {
+          "id": "02-client",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "client-1",
+              "text": "Let's start on the destination, a site called Staging Site. Under Tools, Deployments, we open Remote Clients. The list is empty, because this site trusts no source."
+            },
+            {
+              "id": "client-2",
+              "text": "A remote client is the destination's record of a source site that may send it packages. We select Add Remote Client."
+            },
+            {
+              "id": "client-3",
+              "text": "The Client Name identifies the source site. We enter Main Site. The source must send this name exactly as it is written here."
+            },
+            {
+              "id": "client-4",
+              "text": "The Api Key is the shared secret, and the field hides what you type. Use a long, random value, and keep a copy, because the source needs the same key."
+            },
+            {
+              "id": "client-5",
+              "text": "We select Create. A notification confirms the remote client, and the list shows its name, with Edit and Delete buttons."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a remote instance",
+      "subtitle": "On the source site",
+      "clips": [
+        {
+          "id": "03-url",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "url-1",
+              "text": "The source needs the address of the destination's import endpoint, which has three parts. They are the address of the destination site, the prefix of its tenant, if the tenant has one, and the path of the endpoint."
+            }
+          ]
+        },
+        {
+          "id": "03-instance",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "inst-1",
+              "text": "Back on the source site, called Orchard Core, we open Tools, Deployments, Remote Instances, and select Add Remote Instance."
+            },
+            {
+              "id": "inst-2",
+              "text": "A remote instance is the source's record of a destination. Its Name appears in the list of targets when you execute a plan, so choose one people recognize. We enter Staging."
+            },
+            {
+              "id": "inst-3",
+              "text": "For the Url, we enter the endpoint, built the way the slide shows. The destination is a tenant of this same installation, a separate site, so the address is local and the prefix is staging. A real destination uses an HTTPS address."
+            },
+            {
+              "id": "inst-4",
+              "text": "The Client Name and the Api Key are the ones we created on the destination, and they must match exactly."
+            },
+            {
+              "id": "inst-5",
+              "text": "We select Create, and a notification confirms the remote instance. The list shows Staging, with its Url under the name, and never shows the Api Key."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Execute a plan",
+      "subtitle": "Send it to the remote instance",
+      "clips": [
+        {
+          "id": "04-send",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "send-1",
+              "text": "Under Tools, Deployments, Plans, we select Manage Steps for a plan called Publish Pages. Its one step, Content, exports the published content items of the type Page. A separate video shows how to build plans."
+            },
+            {
+              "id": "send-2",
+              "text": "We select Execute. Available Targets lists File Download, which saves the package on your computer, and one card for each remote instance. The Staging card sends the deployment plan to that instance."
+            },
+            {
+              "id": "send-3",
+              "text": "The Select button of the Staging card starts the deployment. The source builds the package and posts it to the destination, which imports it at once. Nothing asks for confirmation."
+            },
+            {
+              "id": "send-4",
+              "text": "We select it. A notification reads Deployment executed successfully, which means that the destination answered with the status 200. Whether the import itself worked, you check on the destination."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Check the destination",
+      "subtitle": "Confirm that the content arrived",
+      "clips": [
+        {
+          "id": "05-check",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "Let's go back to Staging Site and open Content, Content Items. The two content items from the plan are listed, each with the type Page."
+            },
+            {
+              "id": "check-2",
+              "text": "The destination answers 200 even if importing the content of the package fails, so a quick look at its content is how you confirm a deployment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Security and troubleshooting",
+      "subtitle": "Keep the connection safe",
+      "clips": [
+        {
+          "id": "06-secure",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sec-1",
+              "text": "A remote deployment changes the destination without asking for confirmation. Use HTTPS, because the client name and Api Key travel with the package. Use a different Api Key for each pair of source and destination."
+            },
+            {
+              "id": "sec-2",
+              "text": "Change keys regularly, and after any suspected leak, by editing the remote client and the remote instance. Delete remote clients and instances you no longer use. Treat exported packages as sensitive, since they can hold content and configuration."
+            },
+            {
+              "id": "sec-3",
+              "text": "The permissions Manage remote instances and Manage remote clients control the two lists. The Plans list needs Manage deployment plans and Export Data, and executing a plan needs Export Data. Administrators have all of these by default."
+            },
+            {
+              "id": "fix-1",
+              "text": "If the destination answers with an error, a notification shows its status code. Check the Url, including any tenant prefix, and that the client name and Api Key match on both sites. A reverse proxy in front of it must allow large uploads."
+            },
+            {
+              "id": "fix-2",
+              "text": "If the source reports success but the content is missing, check that the destination has the features that the plan's steps need. The destination's log records import errors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Remote Deployment",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Remote deployment needs a remote client on the destination, a remote instance on the source, and a plan to execute. Check the result on the destination. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
