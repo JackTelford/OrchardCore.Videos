@@ -1,0 +1,60 @@
+{
+  "title": "Data in Orchard Core: Databases, YesSql and Documents | Orchard Core",
+  "description": "Orchard Core keeps its content items, users, settings and workflows in a relational database, and every site chooses and configures that database.\n\nThis video explains how YesSql stores documents and indexes, how a session saves and queries them, how a tenant selects its database provider on the Setup screen, which options control SQLite, YesSql and the table names, and how to run your own SQL against the tenant's database.\n\nIn this video:\n• Documents and indexes: how YesSql stores your data\n• The session: saving and querying documents\n• Choosing a database: providers and the Setup screen\n• SQLite: the database file and connection pooling\n• YesSql options: page size, isolation level and telemetry\n• Table names: presets for the tables of a tenant\n• Running SQL: connections, quoted names and transactions",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "YesSql"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "YesSql",
+    "database",
+    "SQLite",
+    "SQL Server",
+    "PostgreSQL",
+    "MySQL"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Hosting and Production"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Data",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Data/"
+    },
+    {
+      "label": "Documentation: Data topic",
+      "url": "https://docs.orchardcore.net/en/latest/topics/data/"
+    },
+    {
+      "label": "Documentation: How YesSql works",
+      "url": "https://docs.orchardcore.net/en/latest/topics/data/yessql/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Data/README.md",
+    "src/docs/topics/data/README.md",
+    "src/docs/topics/data/yessql.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:Data"
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "title": "Data in Orchard Core: Databases, YesSql and Documents",
+  "output": "data-and-yessql",
+  "spoken": {
+    "YesSqlOptions": "Yes Sequel Options",
+    "YesSql": "Yes Sequel",
+    "ISession": "I Session",
+    "IContentManager": "I Content Manager",
+    "IDbConnectionAccessor": "I D.B. Connection Accessor",
+    "IStore": "I Store",
+    "SaveChangesAsync": "Save Changes Async",
+    "SaveAsync": "Save Async",
+    "ContentItemIndex": "Content Item Index",
+    "OrchardCore.db": "Orchard Core dot D.B.",
+    "DatabaseName": "Database Name",
+    "UseConnectionPooling": "Use Connection Pooling",
+    "CommandsPageSize": "Commands Page Size",
+    "QueryGatingEnabled": "Query Gating Enabled",
+    "IsolationLevel": "Isolation Level",
+    "ReadCommitted": "Read Committed",
+    "ConcurrentIndexCreationEnabled": "Concurrent Index Creation Enabled",
+    "IncludeQueryTextInTelemetry": "Include Query Text In Telemetry",
+    "TableOptions": "Table Options",
+    "DefaultDocumentTable": "Default Document Table",
+    "DefaultTableNameSeparator": "Default Table Name Separator",
+    "DefaultIdentityColumnSize": "Default Identity Column Size"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Data in Orchard Core",
+      "subtitle": "Databases, YesSql and documents",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core keeps its content, users, settings and workflows in a relational database, through YesSql. In this video you see how documents and indexes work, how a site chooses its database, which options tune YesSql, and how to run your own SQL."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Documents and indexes",
+      "subtitle": "How YesSql stores your data",
+      "clips": [
+        {
+          "id": "01-documents",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "docs-1",
+              "text": "Orchard Core doesn't use Entity Framework. It stores its content items, users, settings and workflows with YesSql, a document database interface over a relational database."
+            },
+            {
+              "id": "docs-2",
+              "text": "When you save an object, YesSql serializes it to JSON and stores it as a row in a document table. The default table is named Document, and its columns are Id, Type, Content and Version."
+            },
+            {
+              "id": "docs-3",
+              "text": "Because the content is JSON, there is no schema to migrate when your objects change. Adding a field or a part to a content type leaves the tables as they are."
+            },
+            {
+              "id": "index-1",
+              "text": "SQL can't efficiently query inside the JSON, and that is what indexes are for. An index is a plain C# class that holds the properties you want to query on."
+            },
+            {
+              "id": "index-2",
+              "text": "YesSql stores index data in regular SQL tables, and recomputes the rows in the same transaction whenever a document is created, updated or deleted."
+            },
+            {
+              "id": "index-3",
+              "text": "In a map index, each row maps to one document. ContentItemIndex maps every content item version to its content type, whether it is published, its owner and more. A reduce index aggregates a group of documents, like a SQL GROUP BY."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The session",
+      "subtitle": "Saving and querying documents",
+      "clips": [
+        {
+          "id": "02-session",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "session-1",
+              "text": "You read and write documents through ISession, a scoped unit of work. SaveAsync and Delete are buffered in memory. SaveChangesAsync flushes the changes to the database and commits the transaction."
+            },
+            {
+              "id": "session-2",
+              "text": "Orchard Core commits the session of a tenant's shell scope, the scope of one site, when that scope ends, normally at the end of a request. An exception leaving the scope cancels the changes. A session from any other scope isn't committed for you."
+            },
+            {
+              "id": "session-3",
+              "text": "To read documents, filter on an index. This query asks for the published content items of one content type. YesSql runs the filter as SQL on the index table, then loads and deserializes the matching documents."
+            },
+            {
+              "id": "session-4",
+              "text": "For content items, prefer IContentManager, which handles loading, versions and handlers. Use the session to query your own indexes, which a separate video shows how to write."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choosing a database",
+      "subtitle": "Providers and the Setup screen",
+      "clips": [
+        {
+          "id": "03-providers",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "providers-1",
+              "text": "Each tenant, one site of the application, uses one of four database providers. SQLite is the default and needs no connection string. SQL Server, MySQL and PostgreSQL need a connection string, and accept a table prefix and a schema."
+            },
+            {
+              "id": "providers-2",
+              "text": "For SQL Server, MySQL and PostgreSQL, create the database before setup, and give the account permission to create and modify tables. Orchard Core validates the connection, then creates its tables. It doesn't create the database itself."
+            }
+          ]
+        },
+        {
+          "id": "03-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "The Setup screen asks What type of database to use? Sqlite is selected, and it needs no connection string, so none is asked for."
+            },
+            {
+              "id": "setup-2",
+              "text": "Let's choose Sql Server. Three fields appear: Table Prefix, Connection String and Table Schema. A hint under Connection String shows a sample for that provider."
+            },
+            {
+              "id": "setup-3",
+              "text": "The table prefix lets several sites share one database. Leave Table Schema blank to use the default on the server. The connection string is masked, and the eye button shows it."
+            }
+          ]
+        },
+        {
+          "id": "03-tenant",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tenant-1",
+              "text": "The provider, connection string, table prefix and schema are tenant settings. Enter them on the Setup screen, or set them in the tenant's configuration. When the provider and connection string are set, the Setup screen doesn't ask for them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "SQLite",
+      "subtitle": "The database file and connection pooling",
+      "clips": [
+        {
+          "id": "04-sqlite",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sqlite-1",
+              "text": "SQLite stores each tenant's database as a file in the tenant's folder. The DatabaseName setting chooses the file name, and Setup uses OrchardCore.db when none is given."
+            },
+            {
+              "id": "sqlite-2",
+              "text": "The SQLite provider pools connections by default, and a pooled connection can keep the file open, which may interfere with copying it for a backup. Set UseConnectionPooling to false to release the file. Turning pooling off can reduce performance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "YesSql options",
+      "subtitle": "Tune the document store",
+      "clips": [
+        {
+          "id": "05-options",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "options-1",
+              "text": "Orchard Core binds the YesSql section of the configuration to YesSqlOptions. Any tenant configuration source works. In a tenant's own settings file, leave out the outer OrchardCore section."
+            },
+            {
+              "id": "options-2",
+              "text": "CommandsPageSize, 500 by default, caps the commands in one page, and QueryGatingEnabled makes identical concurrent queries run once. IsolationLevel sets the default transaction isolation level, ReadCommitted by default."
+            },
+            {
+              "id": "options-3",
+              "text": "ConcurrentIndexCreationEnabled, true by default, lets a data migration add an index to an existing table without blocking writes. That works online on SQL Server editions that support it, and on MySQL. PostgreSQL blocks writes."
+            },
+            {
+              "id": "options-4",
+              "text": "IncludeQueryTextInTelemetry, off by default, adds the SQL text to the telemetry spans of database commands. Raw SQL fragments are included as they are, so the text can expose data to whoever receives the telemetry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Table names",
+      "subtitle": "Presets for the tables of a tenant",
+      "clips": [
+        {
+          "id": "06-tables",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tables-1",
+              "text": "TableOptions defines presets that Orchard Core copies into a tenant's settings during setup. DefaultDocumentTable names the document table, and DefaultTableNameSeparator joins a table prefix or collection name to a table name."
+            },
+            {
+              "id": "tables-2",
+              "text": "The separator is one or more underscores, or NULL for none. DefaultIdentityColumnSize is Int64 by default, or Int32. Configure the presets before you set up a tenant: changing them later doesn't rename tables or alter identity columns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Running SQL",
+      "subtitle": "Connections, quoted names and transactions",
+      "clips": [
+        {
+          "id": "07-sql",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sql-1",
+              "text": "For tables of your own, create them in a data migration. At runtime, IDbConnectionAccessor creates a connection for the current tenant, and IStore gives you the SQL dialect, the schema and the table prefix."
+            },
+            {
+              "id": "sql-2",
+              "text": "Database providers quote identifiers differently, so build the table name from the store configuration, and quote it with the dialect. The table prefix already includes the separator, and passing the schema keeps the query working for tenants that use one."
+            },
+            {
+              "id": "sql-3",
+              "text": "Table names can't be SQL parameters, so compose them only from trusted configuration, and pass data values as parameters. For related writes, begin a transaction, pass it to every command, and roll back and rethrow on failure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Data in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how Orchard Core stores data: documents and indexes in a relational database, a provider that each tenant chooses, and options that tune YesSql. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

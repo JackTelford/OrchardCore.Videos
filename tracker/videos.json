@@ -6241,9 +6241,9 @@
       "src/docs/topics/data/README.md",
       "src/docs/topics/data/yessql.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.4,
+    "words": 956,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
