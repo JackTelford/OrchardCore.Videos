@@ -1,0 +1,53 @@
+{
+  "title": "Meta Pixel: Track Conversions From Meta Ads | Orchard Core",
+  "description": "If you advertise on Meta, your site has to report the visits and actions that follow an ad, or you cannot measure what the ad achieved.\n\nThe Meta Pixel feature of Orchard Core adds the Meta Pixel to the pages of your site from one settings page. Its optional Conversions API settings let workflows send events to Meta from the server.\n\nIn this video:\n• How the pixel in the browser and the Conversions API on the server report to Meta\n• Enabling the Meta Pixel feature in Tools, Features\n• Adding your Pixel Identifier in Settings, Integrations, Meta Pixel\n• What the pixel does on the pages of your site\n• The Conversions API Access Token and the Test Event Code\n• Sending events from a workflow with the Meta Conversions API Event task",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MetaPixel"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Meta Pixel",
+    "Meta Ads",
+    "Conversions API",
+    "Conversion tracking",
+    "Workflows"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "SEO and Analytics"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Facebook/"
+    },
+    {
+      "label": "Permissions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Security/Permissions.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Facebook.Pixel"
+  }
+}

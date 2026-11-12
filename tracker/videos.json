@@ -2057,9 +2057,9 @@
     "docs": [
       "src/docs/reference/modules/Security/Permissions.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.8,
+    "words": 570,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
