@@ -1,0 +1,49 @@
+{
+  "title": "Response Compression: Smaller Responses With Gzip and Brotli | Orchard Core",
+  "description": "Pages, stylesheets, scripts and JSON responses are text, and text compresses well, but a tenant sends it uncompressed until something compresses it.\n\nThe Response Compression module adds the ASP.NET Core response compression middleware to a tenant. You enable one feature, and the tenant compresses the responses that clients accept compressed.\n\nIn this video:\n• How compression works: Accept-Encoding and Content-Encoding\n• Enable the feature in Tools, Features\n• Enable it in a recipe with the Feature step\n• Inside the module: services, middleware and order\n• Check the result with a request that accepts one format\n• When to use it: a proxy first, and the HTTPS risk",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Performance"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Response Compression",
+    "Gzip",
+    "Brotli",
+    "HTTP compression",
+    "Performance"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Performance and Background Work"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ResponseCompression/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ResponseCompression/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ResponseCompression"
+  }
+}
