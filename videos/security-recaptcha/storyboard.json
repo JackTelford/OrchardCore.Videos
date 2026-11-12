@@ -1,7 +1,9 @@
 {
   "title": "reCAPTCHA in Orchard Core",
   "output": "security-recaptcha",
-  "spoken": {},
+  "spoken": {
+    "Http": "H.T.T.P."
+  },
   "chapters": [
     {
       "id": "00",
@@ -197,11 +199,11 @@
           "steps": [
             {
               "id": "workflow-1",
-              "text": "A Form widget submits to the address in its Action field. That address can belong to a workflow, which decides what happens to the submission. The workflow starts with an HTTP Request event, from the HTTP Workflows Activities feature."
+              "text": "A Form widget submits to the address in its Action field. That address can belong to a workflow, which decides what happens to the submission. The workflow starts with an Http Request event, from the HTTP Workflows Activities feature."
             },
             {
               "id": "workflow-2",
-              "text": "Add the Validate ReCaptcha task to the workflow. It has three outcomes: Done, Valid, and Invalid. Connect Valid to the steps that handle the form, and Invalid to an HTTP Redirect back to the page."
+              "text": "Add the Validate ReCaptcha task to the workflow. It has three outcomes: Done, Valid, and Invalid. Connect Valid to the steps that handle the form, and Invalid to an Http Redirect task back to the page."
             }
           ]
         }

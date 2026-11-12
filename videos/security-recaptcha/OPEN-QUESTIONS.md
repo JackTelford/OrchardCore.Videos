@@ -97,7 +97,7 @@ should be sent to the Log in page.
 ## 9. Pronunciation
 
 The narration writes the product as "reCAPTCHA" and the feature and menu labels as the code spells them ("ReCaptcha",
-"ReCaptcha Users", "reCaptcha"). The `spoken` map of the storyboard is empty. Listen to a sample of these three spellings with
+"ReCaptcha Users", "reCaptcha"). The `spoken` map of the storyboard is empty. The narration writes "Http Request event" and "Http Redirect task", as the activities are labeled ("Http Request Event", "Http Redirect Task": `OrchardCore.Workflows/Http/Activities/HttpRequestEvent.cs:30`, `HttpRedirectTask.cs:32`); the `spoken` map reads "Http" as letters. Listen to a sample of these spellings, and of that one, with
 `scripts/pronounce.py` before narrating, and add a `spoken` entry only if the voice mispronounces one.
 
 ## 10. Behavior the video leaves out on purpose

@@ -24,13 +24,13 @@ FEATURES = [
 
 FORM_FLOW = [
     ("1", "Form widget", "Its Action field holds the address of the workflow."),
-    ("2", "HTTP Request event", "The workflow starts when the form is submitted."),
-    ("3", "Validate ReCaptcha task", "It checks the answer of the visitor."),
+    ("2", "Http Request Event", "The workflow starts when the form is submitted."),
+    ("3", "Validate ReCaptcha Task", "It checks the answer of the visitor."),
 ]
 
 OUTCOMES = [
     ("check", "Valid", "Connect it to the steps that handle the form."),
-    ("check", "Invalid", "Connect it to an HTTP Redirect back to the page."),
+    ("check", "Invalid", "Connect it to an Http Redirect Task back to the page."),
     ("check", "Done", "Returned together with Valid or Invalid."),
 ]
 
