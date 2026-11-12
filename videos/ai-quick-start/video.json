@@ -1,0 +1,51 @@
+{
+  "title": "AI Quick Start: Build Orchard Core Sites With a Coding Agent | Orchard Core",
+  "description": "An AI assistant can scaffold Orchard Core modules, write recipes, generate content type migrations and explain how a feature works, but only when its answers reflect how Orchard Core actually works.\n\nThe Orchard Core MCP server gives an assistant tool-based access to the Orchard Core documentation, and AI Skills add repeatable workflows. This video connects GitHub Copilot, Claude, Cursor and other clients to the server at https://ai.orchardcore.net/mcp, then shows what to ask for.\n\nIn this video:\n• Why an assistant needs the Orchard Core documentation\n• What the Orchard Core MCP server is, and its address\n• Connect GitHub Copilot: the CLI, github.com and Visual Studio Code\n• Connect Claude Code and Claude Desktop\n• Connect Cursor and other clients\n• AI Skills, a community project\n• What to ask for, and how to give the assistant context\n• Next steps in the documentation",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MCP"
+  ],
+  "tags": [
+    "Orchard Core",
+    "AI",
+    "MCP",
+    "Model Context Protocol",
+    "AI Skills",
+    "GitHub Copilot",
+    "Claude Code",
+    "Cursor",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/ai-quick-start/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/getting-started/ai-quick-start.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:getting-started/ai-quick-start"
+  }
+}

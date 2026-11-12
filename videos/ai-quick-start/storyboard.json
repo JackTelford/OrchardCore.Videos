@@ -1,0 +1,252 @@
+{
+  "title": "AI Quick Start",
+  "output": "ai-quick-start",
+  "spoken": {
+    "MCP": "M.C.P.",
+    "/mcp add": "slash M.C.P. add",
+    "claude mcp add": "Claude M.C.P. add",
+    "mcpServers": "M.C.P. Servers",
+    "npm": "N.P.M.",
+    "CLI": "C.L.I.",
+    "ai.orchardcore.net/mcp": "A.I. dot orchardcore dot net slash M.C.P.",
+    ".mcp.json": "dot M.C.P. dot JSON",
+    "AutoroutePart": "Autoroute Part",
+    "MarkdownBodyPart": "Markdown Body Part"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "AI Quick Start",
+      "subtitle": "Build Orchard Core sites with a coding agent",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "An AI assistant can work alongside you on an Orchard Core site. In this video, we'll connect one to the Orchard Core MCP server, add AI Skills, and see what to ask it to build."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why connect an assistant",
+      "subtitle": "Answers grounded in the documentation",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Orchard Core is a large, modular framework. Instead of searching the documentation by hand, you can ask an AI assistant to scaffold modules, write recipes, generate content type migrations, and explain how a feature works."
+            },
+            {
+              "id": "why-2",
+              "text": "The key to accurate answers is the official Orchard Core MCP server. It gives the assistant tool-based access to the Orchard Core documentation, so responses reflect how Orchard Core actually works rather than guesses."
+            },
+            {
+              "id": "why-3",
+              "text": "AI Skills add a second layer: repeatable, Orchard Core specific workflows that guide the assistant through common tasks. We'll connect the server first, then add the skills."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Orchard Core MCP server",
+      "subtitle": "One address for every client",
+      "clips": [
+        {
+          "id": "02-server",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "mcp-1",
+              "text": "Model Context Protocol, or MCP, is an open standard that lets AI assistants call external tools and data sources. The Orchard Core MCP server offers tools that search the Orchard Core documentation, so its answers use the correct APIs, module names, and conventions."
+            },
+            {
+              "id": "mcp-2",
+              "text": "The server is hosted at ai.orchardcore.net/mcp, and you point any MCP-capable client at this address. The assistant then gains access to the Orchard Core tools automatically."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "GitHub Copilot",
+      "subtitle": "Copilot CLI, github.com and Visual Studio Code",
+      "clips": [
+        {
+          "id": "03-copilot",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "copilot-1",
+              "text": "GitHub Copilot CLI brings a Copilot coding agent to your terminal. Install it with npm, which requires Node.js, then start it by running copilot."
+            },
+            {
+              "id": "copilot-2",
+              "text": "Inside Copilot, run the /mcp add command. When prompted, name the server orchardcore, choose the HTTP server type, and enter its URL. Or add the server to the Copilot CLI configuration file, where an asterisk in the tools key allows every tool."
+            },
+            {
+              "id": "copilot-3",
+              "text": "On github.com, open your repository's Settings, choose Copilot, then MCP servers, and add the same entry under MCP configuration. GitHub requires the tools key there. The Copilot cloud agent and code review can then call the Orchard Core tools."
+            },
+            {
+              "id": "copilot-4",
+              "text": "In Visual Studio Code, create a .mcp.json file at the root of your workspace and add the same entry. Its top-level key is mcpServers, as in the Copilot CLI configuration file."
+            },
+            {
+              "id": "copilot-5",
+              "text": "Then open the Chat view, select Open Customizations in the title bar, and check the Tools tab: the tools of the orchardcore server are listed there."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Claude Code and Claude Desktop",
+      "subtitle": "A command, or a connector",
+      "clips": [
+        {
+          "id": "04-claude",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "claude-1",
+              "text": "Claude Code is a terminal-based AI coding assistant. If running claude reports that the command is not recognized or not found, install it with npm, which requires Node.js, then verify the installation by asking for its version."
+            },
+            {
+              "id": "claude-2",
+              "text": "One command registers the server: claude mcp add, with the transport set to HTTP, the name orchardcore, and the server address. Start a session and ask Orchard Core questions: the assistant calls the server's tools when it needs Orchard Core knowledge."
+            },
+            {
+              "id": "claude-3",
+              "text": "In Claude Desktop, remote servers are added as connectors. Open Settings, choose Connectors, select Add, then Add custom connector, and enter the server address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Cursor and other clients",
+      "subtitle": "The same address wherever MCP is supported",
+      "clips": [
+        {
+          "id": "05-clients",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cursor-1",
+              "text": "Cursor reads an MCP configuration file from your project, or a global one from your home directory. Here, the entry holds only the address of the server."
+            },
+            {
+              "id": "other-1",
+              "text": "Any client that supports remote HTTP servers can connect. Look for an MCP, Model Context Protocol, or Tools or Connectors setting, and register an HTTP server with the Orchard Core address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "AI Skills",
+      "subtitle": "Repeatable Orchard Core workflows",
+      "clips": [
+        {
+          "id": "06-skills",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "skills-1",
+              "text": "Beyond the MCP server, AI Skills teach an assistant repeatable, Orchard Core specific workflows. The documentation links a community project that provides a curated set of skills and plugins for building Orchard Core solutions."
+            },
+            {
+              "id": "skills-2",
+              "text": "That project is maintained by the community, and it is not an official part of Orchard Core. You install it as a plugin for Claude Code or the GitHub Copilot CLI, following the instructions in its repository."
+            },
+            {
+              "id": "skills-3",
+              "text": "Use both together. The MCP server keeps the assistant grounded in accurate documentation, while the skills guide it through common Orchard Core tasks step by step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "What to ask for",
+      "subtitle": "Natural language, with context",
+      "clips": [
+        {
+          "id": "07-ask",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ask-1",
+              "text": "Once connected, ask in natural language. Ask for a module with a Product content type and a price field, or for a recipe that creates a blog content type, a menu, and a home page."
+            },
+            {
+              "id": "ask-2",
+              "text": "For content modeling, ask for a data migration that adds an AutoroutePart and a MarkdownBodyPart to your Article type. Because the assistant can consult the documentation through the server, its suggestions stay aligned with the framework's conventions."
+            },
+            {
+              "id": "ask-3",
+              "text": "Ask it to explain how display drivers and shapes work, and how to customize the rendering of a part. Or ask how to handle a content event, to send a notification when an item is published."
+            },
+            {
+              "id": "ask-4",
+              "text": "Give the assistant context about your project: the modules you have enabled, the content types you use, and your target Orchard Core version. Its answers and generated code then fit your solution."
+            },
+            {
+              "id": "ask-5",
+              "text": "The MCP server provides the Orchard Core knowledge, but you remain responsible for the result. Review generated code and recipes before you run them in your application."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Next steps",
+      "subtitle": "Where to continue in the documentation",
+      "clips": [
+        {
+          "id": "08-next",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "next-1",
+              "text": "To build the application itself, continue with Create a CMS Web application, Recipes and Starter Themes, and Code Generation Templates in the documentation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "AI Quick Start",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Connect the Orchard Core MCP server, add AI Skills, give the assistant the context of your project, and review what it writes. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
