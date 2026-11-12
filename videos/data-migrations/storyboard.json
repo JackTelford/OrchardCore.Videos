@@ -50,7 +50,7 @@
           "steps": [
             {
               "id": "why-1",
-              "text": "A module needs data before it works: a content type, a table for an index, or starter content. Every tenant has its own data, and tenants enable a module's features at different times."
+              "text": "A module needs data before it works: a content type, a table for an index, or starter content. Every tenant, a separate site inside one Orchard Core application, has its own data, and tenants enable a module's features at different times."
             },
             {
               "id": "why-2",
@@ -246,7 +246,7 @@
             },
             {
               "id": "rules-3",
-              "text": "If a step throws an exception, Orchard Core logs the error, and the tenant still starts. When a table or content type you expect is missing, read the log."
+              "text": "If a step throws an exception, Orchard Core logs the error, and the tenant starts anyway. When a table or content type you expect is missing, read the log."
             }
           ]
         }
