@@ -2,6 +2,7 @@
   "title": "A Blazor Front End for Orchard Core",
   "output": "blazor-cms",
   "spoken": {
+    "MarkdownPage": "Markdown Page",
     "OrchardCore.ContentManagement": "Orchard Core dot Content Management",
     "IContentHandleManager": "I Content Handle Manager",
     "IContentManager": "I Content Manager",

@@ -313,9 +313,9 @@ def slide(step_id, chapter_title, label):
 
     if step_id == "page-1":
         image = slide_base(chapter_title, label, "The Content page: route and services")
-        draw_code(image, (96, 240, W - 96, 960), "Content.razor", "html", CONTENT_HEAD, types=TYPES, size=25)
+        draw_code(image, (96, 240, W - 96, 935), "Content.razor", "html", CONTENT_HEAD, types=TYPES, size=24)
         notes(image, ["One package reference: OrchardCore.ContentManagement.",
-                      "It brings IContentManager, IContentHandleManager and ISiteService."], 1000)
+                      "It brings IContentManager, IContentHandleManager and ISiteService."], 975)
         return image
 
     if step_id == "page-2":
