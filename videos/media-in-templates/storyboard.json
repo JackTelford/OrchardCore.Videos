@@ -29,6 +29,8 @@
     "asp-append-version": "A.S.P. append version",
     "bgcolor": "B.G. color",
     "WebP": "web P",
+    "CDN": "C.D.N.",
+    "PNG": "P.N.G.",
     "src": "source",
     "href": "H ref",
     "img": "image"
@@ -128,7 +130,7 @@
             },
             {
               "id": "profile-3",
-              "text": "A template refers to a profile by its name alone. The Liquid filters, the Razor helpers, and the tag helpers each accept that name, and the next slides show how."
+              "text": "A template refers to a profile by its name alone. The Liquid filters, the Razor helpers, and the tag helpers each accept that name, and the slides that follow show how."
             }
           ]
         },

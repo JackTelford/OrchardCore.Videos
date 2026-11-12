@@ -75,7 +75,7 @@ the video, not taken from the documentation, to avoid an index error on a field 
 `bgColor` and `bgcolor` (B.G. color), `appendVersion`, `asset-src` (asset source), `asset-href` (asset H ref), the
 `img-` attributes (image width, image height, image resize mode, image quality, image format, image B.G. color, image
 profile, image anchor), `asp-append-version` (A.S.P. append version), `OrchardCore.Media` and
-`OrchardCore.Media.Core.Processing` (Orchard Core dot Media, and so on), `WebP` (web P), and the bare words `src`
+`OrchardCore.Media.Core.Processing` (Orchard Core dot Media, and so on), `WebP` (web P), `CDN` (C.D.N.), `PNG` (P.N.G.), and the bare words `src`
 (source), `href` (H ref) and `img` (image, last, for the plain "img element"). The replacement is a plain text replacement in the order of the file, so a longer key comes
 before a key it contains (`img-bgcolor` before `bgcolor`). The narration writes "I Image Processing Engine" directly.
 
