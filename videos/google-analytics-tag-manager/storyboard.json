@@ -1,0 +1,215 @@
+{
+  "title": "Google Analytics and Tag Manager",
+  "output": "google-analytics-tag-manager",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Google Analytics and Tag Manager",
+      "subtitle": "Measure the visitors of your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Google Analytics and Google Tag Manager help you measure the visitors of your site. Orchard Core connects to each of them with a single ID. In this video, we enable the two features, save the IDs, and see where the scripts load."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two Google features",
+      "subtitle": "What each one adds to your site",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Orchard Core has two Google features for measuring visitors on public pages. Google Analytics takes the tracking ID of your Google Analytics account. Google Tag Manager takes the container ID of your Google Tag Manager account."
+            },
+            {
+              "id": "why-2",
+              "text": "Each feature adds its Google script to the head of every public page. With Tag Manager, you choose the tags in your Google account, and the site only needs the container ID."
+            },
+            {
+              "id": "why-3",
+              "text": "You can enable either feature or both. Each has its own settings page, and nothing is added to your pages until an ID is saved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Neither feature is enabled until you turn it on. Open Tools, then Features. The page lists the features of the site by category, so search for Google."
+            },
+            {
+              "id": "enable-2",
+              "text": "The Google category lists Google Analytics, Google Authentication, and Google Tag Manager. Google Authentication lets users sign in with their Google Account, and a separate video covers it."
+            },
+            {
+              "id": "enable-3",
+              "text": "Let's select Google Analytics and Google Tag Manager. Each row also has its own Enable button."
+            },
+            {
+              "id": "enable-4",
+              "text": "Then open Bulk Actions, and choose Enable to turn on both features together."
+            },
+            {
+              "id": "enable-5",
+              "text": "A message confirms that both features are enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Google Analytics",
+      "subtitle": "Save your tracking ID",
+      "clips": [
+        {
+          "id": "03-analytics",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "analytics-1",
+              "text": "Open Settings, then Integrations, and select Google Analytics. The page is titled Google Analytics Settings, with a See documentation link above the title."
+            },
+            {
+              "id": "analytics-2",
+              "text": "It has one field, Tracking ID, and the field is required. The hint says it is the tracking ID defined in your Google Analytics account."
+            },
+            {
+              "id": "analytics-3",
+              "text": "Let's enter a sample ID, in place of the one from your own account."
+            },
+            {
+              "id": "analytics-4",
+              "text": "Select Save. The message reads Site settings updated successfully."
+            },
+            {
+              "id": "analytics-5",
+              "text": "Once the ID is saved, every public page of the site loads the Google Analytics script."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Google Tag Manager",
+      "subtitle": "Save your container ID",
+      "clips": [
+        {
+          "id": "04-tagmanager",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tagmanager-1",
+              "text": "Google Tag Manager works the same way. Open Settings, then Integrations, and select Google Tag Manager."
+            },
+            {
+              "id": "tagmanager-2",
+              "text": "The required field is Container ID, the container ID defined in your Google Tag Manager account. Let's enter a sample ID."
+            },
+            {
+              "id": "tagmanager-3",
+              "text": "Select Save. The same message confirms that the site settings were updated."
+            },
+            {
+              "id": "tagmanager-4",
+              "text": "Once the container ID is saved, public pages load the Tag Manager script as well. Each feature keeps its own ID, so you can change one without the other."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "On the public site",
+      "subtitle": "Visitors load the scripts",
+      "clips": [
+        {
+          "id": "05-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "Let's visit the home page as a visitor would. The page looks the same, because the scripts load from Google in the background."
+            },
+            {
+              "id": "site-2",
+              "text": "Every public page includes them, such as the About page. They are added each time a page is built, so the content you edit never holds them."
+            },
+            {
+              "id": "site-3",
+              "text": "Pages of the admin do not include them. This is the settings page we used, so your own work in the admin is not measured."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "When a script is left out",
+      "subtitle": "Admin pages, consent and missing IDs",
+      "clips": [
+        {
+          "id": "06-limits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "limits-1",
+              "text": "Four cases leave a script out of a page. A page of the admin never has it, and neither does a response that is not a full page."
+            },
+            {
+              "id": "limits-2",
+              "text": "A feature adds nothing until an ID is saved. And when the consent of the visitor does not allow tracking, both scripts are left out."
+            },
+            {
+              "id": "limits-3",
+              "text": "To stop a script, disable its feature in Tools, Features. The ID field cannot be saved empty."
+            },
+            {
+              "id": "limits-4",
+              "text": "The Administrator role has the permissions Manage Google Analytics settings and Manage Google Tag Manager settings by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Google Analytics and Tag Manager",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's Google Analytics and Google Tag Manager in Orchard Core. Enable a feature, save its ID, and your public pages load the Google script. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

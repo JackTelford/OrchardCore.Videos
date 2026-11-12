@@ -1,0 +1,49 @@
+{
+  "title": "Google Analytics and Tag Manager: Measure Your Visitors | Orchard Core",
+  "description": "Measuring the visitors of a site means loading a Google script on its public pages. Orchard Core has two features for it: Google Analytics, which takes a tracking ID, and Google Tag Manager, which takes a container ID.\n\nEach feature adds its Google script to the head of the public pages of your site once you save its ID in the site settings. Pages of the admin are left out.\n\nIn this video:\n• What the two Google features add to your site\n• Enabling the features in Tools, Features\n• Saving the tracking ID in Settings, Integrations, Google Analytics\n• Saving the container ID in Settings, Integrations, Google Tag Manager\n• Seeing the scripts load on public pages, and not in the admin\n• When a script is left out, and how to stop one",
+  "hashtags": [
+    "OrchardCore",
+    "GoogleAnalytics",
+    "GoogleTagManager"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Google Analytics",
+    "Google Tag Manager",
+    "Web analytics",
+    "Tracking ID",
+    "Container ID",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "SEO and Analytics"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Google/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Google/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Google.Analytics"
+  }
+}
