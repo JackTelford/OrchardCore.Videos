@@ -1,6 +1,6 @@
 # OpenID Connect Applications and Scopes
 
-**YouTube:** not published yet · **Length:** 5:38 · **Feature:** [OrchardCore.OpenId.Management](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/)
+**YouTube:** not published yet · **Length:** 5:40 · **Feature:** [OrchardCore.OpenId.Management](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/)
 
 An administrator's tour of the Applications and Scopes pages that the OpenID Connect Management UI feature adds under
 Access Control, OpenID Connect. The video registers a confidential application for a service and a public application

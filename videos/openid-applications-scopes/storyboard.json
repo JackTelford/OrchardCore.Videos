@@ -96,7 +96,7 @@
           "steps": [
             {
               "id": "web-1",
-              "text": "Let's register a web application. We enter Storefront Web as the display name, and choose Public client. The Client Secret field disappears, because public applications don't use a client secret, and Allow Client Credentials Flow is disabled."
+              "text": "Let's select New application again to register a web application. We enter Storefront Web as the display name, and choose Public client. The Client Secret field disappears, because public applications don't use a client secret, and Allow Client Credentials Flow is disabled."
             },
             {
               "id": "web-2",
