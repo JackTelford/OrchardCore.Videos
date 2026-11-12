@@ -209,7 +209,7 @@
           "steps": [
             {
               "id": "seo-1",
-              "text": "Let's see the SEO migration run. On the Features page, search for SEO, and select Enable. The site restarts, and the migrations of the enabled features run as it starts again."
+              "text": "Let's see the SEO migration run. On the Features page, search for SEO, and select Enable. Orchard Core reloads the tenant, and the migrations of the enabled features run as it starts again."
             },
             {
               "id": "seo-2",
@@ -242,7 +242,7 @@
             },
             {
               "id": "cs-2",
-              "text": "A part handler receives the typed part. Anywhere else, GetOrCreate returns it from a content item. The admin can still change definitions, so a property can be null, and your code should check it before use."
+              "text": "A part handler receives the typed part. Anywhere else, GetOrCreate returns it from a content item. Editors can change definitions in the admin, so a property can be null, and your code should check it before use."
             }
           ]
         }

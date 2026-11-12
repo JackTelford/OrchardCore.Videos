@@ -303,7 +303,7 @@ def slide(step_id, chapter_title, label):
         return image
 
     if step_id in ("version-1", "version-2"):
-        image = slide_base(chapter_title, label, "Versions" if step_id == "version-1" else "A new method for each change")
+        image = slide_base(chapter_title, label, "Versions" if step_id == "version-1" else "One method for each change")
         draw_code(image, (96, 240, W - 96, 960), "Migrations.cs", "csharp", VERSIONS, types=TYPES, size=24,
                   highlight={1, 10, 13, 17} if step_id == "version-1" else {8, 13, 14, 15, 16, 17, 18})
         return image

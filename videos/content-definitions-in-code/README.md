@@ -1,6 +1,6 @@
 # Content Definitions in Code: Migrations and Recipes
 
-**YouTube:** not published yet · **Length:** 6:06 · **Feature:** `OrchardCore.ContentTypes` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/))
+**YouTube:** not published yet · **Length:** 6:07 · **Feature:** `OrchardCore.ContentTypes` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/))
 
 A video for developers about defining content types, parts and fields in code. It reads the migration and the recipe
 of the SEO module as a worked example: the manifest, the registration of a migration, `AlterTypeDefinitionAsync` and
