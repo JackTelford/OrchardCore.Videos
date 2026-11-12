@@ -205,7 +205,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A named class with GenerateArguments, an anonymous object passed to Arguments.From, and a typed shape each move work from runtime to build time. The Source Generators page of the documentation covers each of them. Thanks for watching."
+              "text": "A named class with GenerateArguments, an anonymous object passed to Arguments.From, and a typed shape each move work from runtime to build time. The Source Generators page of the documentation covers the first two and the analyzers. Thanks for watching."
             }
           ]
         }
