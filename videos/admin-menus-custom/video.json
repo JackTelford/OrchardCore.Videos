@@ -1,0 +1,46 @@
+{
+  "title": "Admin Menus: Add Your Own Links to the Admin Navigation | Orchard Core",
+  "description": "The admin menu offers many pages, and your team opens only a few of them every day.\n\nThe Admin Menu module lets you build menus of your own: links to the pages your team needs, placeholders that group them, and nodes that list your content types and blogs. You choose which roles see each menu.\n\nIn this video:\n• Menus and nodes: two ideas and four kinds of node\n• The Admin Menus page: where your menus live\n• Create a menu\n• Add a link with the Link Admin Node\n• Group links with the Placeholder Admin Node\n• Links that list content: Content Types and Lists\n• Control who sees a menu: permissions, roles and switches\n• Reuse your menus on other sites",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Admin Menu",
+    "Admin menus",
+    "Admin navigation",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AdminMenu/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/AdminMenu/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AdminMenu"
+  }
+}
