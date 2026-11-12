@@ -132,7 +132,7 @@
             },
             {
               "id": "sql-5",
-              "text": "To get content items instead of rows, select the Document Id column, which every field table has. Create opens a new query with this text, where you check Return Documents."
+              "text": "To get content items instead of rows, select the Document Id column, which every field table has and which identifies the stored document. Create opens the query form with this text, where you check Return Documents."
             }
           ]
         }

@@ -1,6 +1,6 @@
 # Content Fields Indexing: Query Fields With SQL
 
-**YouTube:** not published yet · **Length:** 4:40 · **Feature:** `OrchardCore.ContentFields.Indexing.SQL` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/SQLIndexing/)), and `OrchardCore.ContentFields.Indexing.SQL.UserPicker` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/ContentFields/))
+**YouTube:** not published yet · **Length:** 4:43 · **Feature:** `OrchardCore.ContentFields.Indexing.SQL` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/SQLIndexing/)), and `OrchardCore.ContentFields.Indexing.SQL.UserPicker` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/ContentFields/))
 
 The video is for module and theme developers. It explains why the values of content fields have no columns to filter
 on, enables the two Content Fields Indexing features, and walks through the tables they create: the columns every
