@@ -1,0 +1,201 @@
+{
+  "title": "Content Fields Indexing: Query Fields With SQL",
+  "output": "sql-indexing-content-fields",
+  "spoken": {
+    "Content Item Id": "Content Item I.D.",
+    "Version Id": "Version I.D.",
+    "User Id": "User I.D.",
+    "Document Id": "Document I.D.",
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Fields Indexing",
+      "subtitle": "Query the values of content fields with SQL",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The values of your content fields are stored inside each content item, not in database columns of their own. The Content Fields Indexing features copy them into database tables. In this video, you enable the features, read the tables, and query them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why index content fields",
+      "subtitle": "Field values have no columns",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Orchard Core stores each version of a content item as a document, with the values of its fields inside it. The Content Item Index table has the type, the dates, the owner, and the display text, but no column for a field value."
+            },
+            {
+              "id": "why-2",
+              "text": "The Content Fields Indexing features add tables for the Text, Numeric, Date, Link, Content Picker, and other fields. Saving a content item writes a row for each field value, so you can filter on a field with SQL, with code, and in GraphQL."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Two features, two sets of tables",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "On Tools, Features, let's search for Content Fields Indexing. Two features match, in the Content Management category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Content Fields Indexing (SQL) depends on Content Fields. Enable it to create the tables for the Text, Numeric, Boolean, Date, and other fields."
+            },
+            {
+              "id": "enable-3",
+              "text": "Content Fields Indexing (SQL) - User Picker is a separate feature that depends on Users. Enable it to index the users that a User Picker field selects."
+            },
+            {
+              "id": "enable-4",
+              "text": "Both features are enabled. Content items are indexed as they are saved, so the tables fill as you create and publish content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The tables",
+      "subtitle": "One table for each indexed field type",
+      "clips": [
+        {
+          "id": "03-tables",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tables-1",
+              "text": "Every field table shares the same columns. Content Item Id and Content Item Version Id identify the item and its version, and Content Type, Content Part, and Content Field identify the field. Published and Latest flag the version."
+            },
+            {
+              "id": "tables-2",
+              "text": "Each indexed field type has its own table, with columns for its value. Text Field Index has Text and Big Text, Numeric Field Index has Numeric, and Date Time Field Index has Date Time. User Picker Field Index has Selected User Id."
+            },
+            {
+              "id": "tables-3",
+              "text": "A Multi Text, Content Picker, or User Picker field writes one row for each value it holds. Text, Url, and Value keep at most 766 characters. Big Text, Big Url, and Big Value keep the whole value."
+            },
+            {
+              "id": "tables-4",
+              "text": "Only the published version and the newest version of a content item have rows. Filter on Published to read the live content, and on Latest to read the newest version."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Query a field table",
+      "subtitle": "Run SQL Query on the tables",
+      "clips": [
+        {
+          "id": "04-sql",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "sql-1",
+              "text": "Under Search, Queries, Run SQL Query, the Template field takes a SQL query. Table names are the index class names, and the page adds the table prefix of the site. This query reads the Venue field of the Event type."
+            },
+            {
+              "id": "sql-2",
+              "text": "Let's run it with Query. Final SQL Query shows the statement that the database runs, and the result lists one row for each published event."
+            },
+            {
+              "id": "sql-3",
+              "text": "Each row has the columns of the table. The content type, part, and field names say where the value comes from, and the Text column holds the value of the field."
+            },
+            {
+              "id": "sql-4",
+              "text": "Let's query the Topics field. A Multi Text field writes one row for each value, so an event with two topics has two rows, with the same Document Id and one topic in Big Value."
+            },
+            {
+              "id": "sql-5",
+              "text": "To get content items instead of rows, select the Document Id column, which every field table has and which identifies the stored document. Create opens the query form with this text, where you check Return Documents."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Query from code",
+      "subtitle": "The index classes with ISession",
+      "clips": [
+        {
+          "id": "05-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "In C#, inject I Session and call Query with a content item and an index class. This query returns the published events with a Capacity below a limit. The index classes are in the Content Fields Indexing SQL namespace."
+            },
+            {
+              "id": "code-2",
+              "text": "A Razor view can inject I Session and run the same kind of query. In Liquid, save a SQL query on the table, leave Return Documents unchecked to get the rows, and call the query by name with the query filter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Filter in GraphQL",
+      "subtitle": "Where filters on field values",
+      "clips": [
+        {
+          "id": "06-graphql",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "graphql-1",
+              "text": "With the GraphQL feature and Content Fields Indexing (SQL) both enabled, the where argument of a content type gets filters for its Boolean, Date, Date Time, Numeric, Text, and Time fields. Suffixes such as greater than and contains refine them."
+            },
+            {
+              "id": "graphql-2",
+              "text": "This query returns the products whose Amount field, in the Price part, is greater than ten. A separate video covers GraphQL filters in detail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Fields Indexing",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is Content Fields Indexing: a table for each indexed field type, filled as content items are saved, and ready to query with SQL, with code, and in GraphQL. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
