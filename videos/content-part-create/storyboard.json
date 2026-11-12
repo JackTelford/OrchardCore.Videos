@@ -260,7 +260,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A part is a class, a display driver, its templates, and a registration with a definition. With those pieces, your own part appears in the admin and on your site, like the Title part. Thanks for watching."
+              "text": "A part is a class, a display driver, its templates, and a registration with a definition, and together they put your own part in the admin and on your site, as the Title part does. Thanks for watching."
             }
           ]
         }

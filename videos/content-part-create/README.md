@@ -1,6 +1,6 @@
 # Write a Content Part With a Display Driver
 
-**YouTube:** not published yet · **Length:** 6:28 · **Feature:** `topic:ContentParts` ([Content Parts](https://docs.orchardcore.net/en/latest/reference/modules/ContentParts/))
+**YouTube:** not published yet · **Length:** 6:29 · **Feature:** `topic:ContentParts` ([Content Parts](https://docs.orchardcore.net/en/latest/reference/modules/ContentParts/))
 
 The video goes through the pieces of a content part in the code of the Title part of Orchard Core: the class, its view model
 and its definition, the display driver with its `Display`, `Edit` and `UpdateAsync` methods, the templates of each shape, and
