@@ -1,0 +1,253 @@
+{
+  "title": "Dynamic Cache: Cache Parts of a Page",
+  "output": "dynamic-cache",
+  "spoken": {
+    "cache_expires_sliding": "cache expires sliding",
+    "cache_expires_on": "cache expires on",
+    "cache_dependency": "cache dependency",
+    "cache_fixed_duration": "cache fixed duration",
+    "cache_sliding_duration": "cache sliding duration",
+    "cache_context": "cache context",
+    "cache_tag": "cache tag",
+    "cache_id": "cache id",
+    "expires_after": "expires after",
+    "expires_sliding": "expires sliding",
+    "vary_by": "vary by",
+    "user.roles": "user dot roles",
+    "dynamic-cache": "dynamic cache",
+    "cache-id": "cache id",
+    "cache-dependency": "cache dependency",
+    "vary-by": "vary by",
+    "expires-on": "expires on",
+    "expires-after": "expires after",
+    "expires-sliding": "expires sliding",
+    "ICacheContextProvider": "I Cache Context Provider",
+    "IDistributedCache": "I Distributed Cache",
+    "IDynamicCache": "I Dynamic Cache",
+    "ITagCache": "I Tag Cache",
+    "RemoveTagAsync": "Remove Tag Async"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Dynamic Cache",
+      "subtitle": "Cache parts of a page, not the whole page",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Most pages mix content that rarely changes with content that depends on the visitor. The Dynamic Cache module stores sections of markup, each with its own rules. You turn it on, cache blocks and shapes, and remove entries when content changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why cache sections",
+      "subtitle": "A page is a tree of shapes",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A page cache stores the whole response, so one personal detail forces you to skip it or to vary the entire page. Dynamic Cache works on sections of markup instead, and each section has its own cache policy."
+            },
+            {
+              "id": "why-2",
+              "text": "Sections can nest. In this layout, section A1 varies by role and section B1 varies by query string. Each section is stored on its own."
+            },
+            {
+              "id": "why-3",
+              "text": "On the first request, every shape is evaluated and the cacheable sections are stored through the IDynamicCache service. Later requests read the markup from the cache, and those shapes are not processed again. Entries stay in memory by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Turn caching on",
+      "subtitle": "The feature and the Cache Mode setting",
+      "clips": [
+        {
+          "id": "02-mode",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "mode-1",
+              "text": "The feature is called Dynamic Cache, and it is listed in the Performance category under Tools, Features. The Blog recipe enables it, so on this site it is already on."
+            },
+            {
+              "id": "mode-2",
+              "text": "Cache Mode lists four options. From environment enables caching in Production only, Enabled turns it on, and Enabled with cache debug mode also writes comments around each cached section. Disabled turns it off."
+            },
+            {
+              "id": "mode-3",
+              "text": "The default is From environment, so a site running in Development stores nothing. Let's choose Enabled and save. Saving reloads the tenant, and the mode applies from then on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Cache a block of markup",
+      "subtitle": "The Liquid cache block",
+      "clips": [
+        {
+          "id": "03-block",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "block-1",
+              "text": "The Liquid cache block wraps any markup. Its first argument is the cache id, the only required one. The first request stores everything between the cache and end cache tags, and later requests read it back."
+            },
+            {
+              "id": "block-2",
+              "text": "vary_by takes contexts that split the entry: user, user.roles, query, route and features, where query and features also accept a name. dependencies takes tags that invalidate the entry. expires_after and expires_sliding take time spans."
+            },
+            {
+              "id": "block-3",
+              "text": "Any other value you give vary_by is used as it is, so a content item id gives each content item its own entry. With no expiration, a Liquid block uses a sliding window of one minute."
+            },
+            {
+              "id": "block-4",
+              "text": "With cache debug mode enabled, each cached block is wrapped in comments in the page source. They list its cache id, what it varies by, its dependencies and its expiration, which helps when an entry misbehaves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "See it work",
+      "subtitle": "A cached block on a page",
+      "clips": [
+        {
+          "id": "04-watch",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "watch-1",
+              "text": "This About page renders through a Liquid template. The first line shows the time of the request. The second line sits in a cache block that depends on this content item and expires after five minutes."
+            },
+            {
+              "id": "watch-2",
+              "text": "Let's reload the page. The request time changes, but the cached time stays the same, because the block is read from the cache."
+            },
+            {
+              "id": "watch-3",
+              "text": "Next, we open Content Items, edit the About page, and click Publish. Publishing removes the entries that depend on this content item."
+            },
+            {
+              "id": "watch-4",
+              "text": "Back on the About page, both times have changed. The block was rendered again, stored again, and serves the next requests."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Cache a shape",
+      "subtitle": "Attributes, tag helpers and drivers",
+      "clips": [
+        {
+          "id": "05-shape",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shape-1",
+              "text": "The Blog Theme caches its main menu with attributes on the shape. cache_id names the entry, cache_fixed_duration sets five minutes, cache_tag adds a dependency, and cache_context varies it by the roles of the user. Razor tags use the same attributes with dashes."
+            },
+            {
+              "id": "shape-2",
+              "text": "For a block of Razor markup, use the dynamic-cache tag helper. It takes a cache-id, vary-by, dependencies, and expires-on, expires-after or expires-sliding. Without an expiration, it uses a sliding window of thirty seconds."
+            },
+            {
+              "id": "shape-3",
+              "text": "In a display driver, call Cache on the shape result with a cache id and a callback. The Notifications module adds the user context, tags and an expiration. Without the callback, Cache has no effect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Invalidate entries",
+      "subtitle": "Tags, nesting and resources",
+      "clips": [
+        {
+          "id": "06-invalidate",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "inval-1",
+              "text": "Dependencies are tags. When a content item is published, unpublished or removed, the Contents module removes its content item id tag. The Alias module does the same for an alias, and the Autoroute module for a slug."
+            },
+            {
+              "id": "inval-2",
+              "text": "Your own code calls RemoveTagAsync on ITagCache with any tag. Every entry stored with that tag is removed, and its section is rendered again on the next request."
+            },
+            {
+              "id": "inval-3",
+              "text": "Nested Liquid blocks share what they learn. When a nested block renders, its dependencies are added to the block around it, and the shorter expiration wins. A nested block read from the cache adds nothing."
+            },
+            {
+              "id": "inval-4",
+              "text": "When the dependencies are not known in advance, such as the items a query returns, call cache_dependency inside the block, or the cache-dependency tag in Razor. Here, each item adds its own content item id to the recent blog posts entry."
+            },
+            {
+              "id": "inval-5",
+              "text": "A cache hit does not run the shape, so scripts and styles registered while it renders are skipped. The Notifications module keeps its resources in a separate shape for this reason."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Contexts and storage",
+      "subtitle": "Extend and configure it",
+      "clips": [
+        {
+          "id": "07-extend",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ext-1",
+              "text": "To add a context, implement ICacheContextProvider. It receives the contexts a section asked for and adds entries to a list, as the route provider does with the request path. The built-in providers are scoped services, and you register yours the same way."
+            },
+            {
+              "id": "ext-2",
+              "text": "Entries live in IDynamicCache, which is based on IDistributedCache: memory by default, or a store such as Redis. If a read or write fails, the cache is skipped for the failover retry latency, thirty seconds by default. A separate video covers Redis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Dynamic Cache",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Dynamic Cache stores sections of markup, varies them by context, and removes them by tag or by time. The documentation is at docs.orchardcore.net. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
