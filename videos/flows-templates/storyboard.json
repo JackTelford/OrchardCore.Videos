@@ -1,0 +1,236 @@
+{
+  "title": "Flow and Bag Parts: Templates and Alternates for Their Widgets",
+  "output": "flows-templates",
+  "spoken": {
+    "Widget-Paragraph.Summary.liquid": "Widget dash Paragraph dot Summary dot liquid",
+    "Widget-Paragraph.liquid": "Widget dash Paragraph dot liquid",
+    "LandingPage-BagPart.liquid": "Landing Page dash Bag Part dot liquid",
+    "LandingPage-Services.liquid": "Landing Page dash Services dot liquid",
+    "FlowPart.cshtml": "Flow Part dot C.S.H.T.M.L.",
+    "FlowPart_Empty": "Flow Part underscore Empty",
+    "BagPart_Empty": "Bag Part underscore Empty",
+    "Model.ContentItem.Content.Services.ContentItems": "Model dot Content Item dot Content dot Services dot Content Items",
+    "Model.Classes": "Model dot Classes",
+    "shape_build_display": "shape underscore build underscore display",
+    "shape_render": "shape underscore render",
+    "console_log": "console underscore log",
+    "widget-paragraph": "widget dash paragraph",
+    "widget-size-100": "widget dash size dash 100",
+    "LandingPage": "Landing Page",
+    "HtmlBodyPart": "Html Body Part",
+    "FlowPart": "Flow Part",
+    "BagPart": "Bag Part"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Templates for Flow and Bag Parts",
+      "subtitle": "How the widgets of a Flow or a Bag are rendered",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Flow Part and the Bag Part display content items inside another content item. This video shows how they render: the shapes they produce, the templates and alternates that change their markup, and the templates of the widgets inside them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The Flow Part template",
+      "subtitle": "How each widget is built",
+      "clips": [
+        {
+          "id": "01-flow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "flow-1",
+              "text": "The Flow Part renders a shape named FlowPart. Its template loops through the widgets. It skips any item whose type is not a widget, and, for a securable type, any widget that the current user is not allowed to view."
+            },
+            {
+              "id": "flow-2",
+              "text": "Each remaining widget is built with the display type of the item that holds the Flow, such as Detail. Its shape is Widget, and one of its alternates, a more specific name that a template can target, is named after the widget's content type."
+            },
+            {
+              "id": "flow-3",
+              "text": "When a widget has Flow metadata, the template adds CSS classes to its shape for the type, the alignment and the size, such as widget-paragraph and widget-size-100."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "A template for one widget type",
+      "subtitle": "File names, display types and classes",
+      "clips": [
+        {
+          "id": "02-widget",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "widget-1",
+              "text": "To change how Paragraph widgets render, add Widget-Paragraph.liquid to the Views folder of your theme. This is the template of The Blog Theme: an article element whose class attribute is Model.Classes, around the rendered paragraph."
+            },
+            {
+              "id": "widget-2",
+              "text": "In a file name, a dash stands for two underscores in the shape type. A dot before the extension adds a display type, so Widget-Paragraph.Summary.liquid is the Summary version of the same template."
+            },
+            {
+              "id": "widget-3",
+              "text": "A widget can have these alignment and size classes. Print Model.Classes in your own template to keep them, as The Blog Theme does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The Bag Part template",
+      "subtitle": "Display type and item templates",
+      "clips": [
+        {
+          "id": "03-bag",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "bag-1",
+              "text": "The Bag Part renders a shape named BagPart. Its template builds each contained item with the Display Type of the part settings, and with Summary when that setting has no value."
+            }
+          ]
+        },
+        {
+          "id": "03-display",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "display-1",
+              "text": "This is the editor of the Landing Page content type. A Bag Part can be named, so one type can hold several, and Landing Page has named Bag Parts such as Services."
+            },
+            {
+              "id": "display-2",
+              "text": "Edit the Services part to see its settings. Display Type has the placeholder Summary, and its hint says that Summary is the default for rendering the contained items."
+            }
+          ]
+        },
+        {
+          "id": "03-items",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "items-1",
+              "text": "The shape of each item depends on its content type. A Paragraph widget has the Widget stereotype, so its shape is Widget, and with Summary its template is Widget-Paragraph.Summary.liquid. A Service item has no stereotype, so its shape is Content."
+            },
+            {
+              "id": "items-2",
+              "text": "Widget-Paragraph.liquid targets the Detail display type, so it does not apply to a Bag Part that renders Summary. Name the template for the display type that the Bag Part uses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Templates for the part",
+      "subtitle": "Alternates, locations and empty parts",
+      "clips": [
+        {
+          "id": "04-part",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "The part shapes have alternates too. LandingPage-BagPart.liquid targets the Bag Parts of the type LandingPage, and LandingPage-Services.liquid only the one named Services. Flow Parts work the same way."
+            },
+            {
+              "id": "part-2",
+              "text": "By default, a Flow Part displays only in the Detail display type, while a Bag Part displays in both Detail and Summary. The display driver of each part declares these locations."
+            },
+            {
+              "id": "part-3",
+              "text": "An empty Flow or Bag renders as FlowPart_Empty or BagPart_Empty, and the Flows module ships empty templates for them. A rule in a placement file can set the shape to FlowPart to use the full template."
+            },
+            {
+              "id": "part-4",
+              "text": "If you replace FlowPart.cshtml, your template takes over the checks and the classes of the original. The Default Theme does this, with a copy whose section also has the row class."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Reading the items directly",
+      "subtitle": "A template without the part shape",
+      "clips": [
+        {
+          "id": "05-direct",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "direct-1",
+              "text": "A content template can skip the part shape and read a named Bag Part directly. In Liquid, Model.ContentItem.Content.Services.ContentItems lists the items of the Bag Part named Services."
+            },
+            {
+              "id": "direct-2",
+              "text": "The landing page template of the Agency recipe does this. It calls shape_build_display for each service, renders only its HtmlBodyPart with shape_render, and writes the surrounding markup itself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Finding the template in use",
+      "subtitle": "Shape debug information",
+      "clips": [
+        {
+          "id": "06-debug",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "debug-1",
+              "text": "To see which template renders a shape, open Settings, Debugging. The page has the option Write shape debug information."
+            },
+            {
+              "id": "debug-2",
+              "text": "Check the option, and save. The site then wraps the rendered shapes in HTML comments, and keeps doing so until you clear the option."
+            }
+          ]
+        },
+        {
+          "id": "06-source",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "In the page source, each comment names the shape type and the template that rendered it. Outside the Production environment, the console_log filter also prints a shape, with its alternates, to the browser console."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Templates for Flow and Bag Parts",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A template named after the part, the content type or the widget, with the display type added, changes how a Flow or a Bag renders. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
