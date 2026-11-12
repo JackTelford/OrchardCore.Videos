@@ -89,7 +89,7 @@
             },
             {
               "id": "field-2",
-              "text": "Let's select Add Field, name the new field Documents, choose the Media Field type, and select Save & Configure."
+              "text": "Let's select Add Field, name the field Documents, choose the Media Field type, and select Save & Configure."
             },
             {
               "id": "field-3",
@@ -97,7 +97,7 @@
             },
             {
               "id": "field-4",
-              "text": "The same page has Allow media text, which lets editors type a description for each file. On a new field it is selected, and the descriptions are indexed as MediaText. Let's leave it as it is and save the settings."
+              "text": "The same page has Allow media text, which lets editors type a description for each file. The box is selected when the field is added, and the descriptions are indexed as MediaText. Let's leave it as it is and save the settings."
             }
           ]
         }
@@ -114,15 +114,15 @@
           "steps": [
             {
               "id": "publish-1",
-              "text": "Let's create an article. Open Content, Content Items, then the New menu, choose Article, and enter the title Autumn Garden Guide."
+              "text": "Let's open Content, Content Items, select the New menu, choose Article, and enter the title Autumn Garden Guide."
             },
             {
               "id": "publish-2",
-              "text": "The Documents field has an Add media button, which opens Select Media. Let's pick the garden planting guide PDF from the library, and choose OK."
+              "text": "The Documents field has an Add media button, which opens Select Media. Let's pick the garden planting guide PDF from the library, a file that mentions a persimmon tree, and choose OK."
             },
             {
               "id": "publish-3",
-              "text": "Then select Publish. The article's own text never mentions the word persimmon, but the PDF does."
+              "text": "Let's select Publish. The article's own text never mentions the word persimmon, but the PDF does."
             }
           ]
         }
@@ -143,7 +143,7 @@
             },
             {
               "id": "index-2",
-              "text": "Let's confirm with Yes. The list reloads with a success message, and select Edit on the Articles index to open it."
+              "text": "Let's confirm with Yes. The list reloads with a success message. Then select Edit on the Articles index to open it."
             },
             {
               "id": "index-3",
