@@ -2713,9 +2713,9 @@
       "src/docs/reference/modules/Indexing/README.md",
       "src/docs/topics/search/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.7,
+    "words": 706,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

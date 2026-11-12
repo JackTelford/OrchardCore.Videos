@@ -1,0 +1,59 @@
+{
+  "title": "Search: Add Site Search to Your Site | Orchard Core",
+  "description": "Visitors expect to find a page by typing a few words, but a site has no search until it has an index to look words up in and a page to search from.\n\nOrchard Core builds site search from a search provider such as Lucene, an index of your content, the Search feature, and a permission that lets visitors query the index. This video sets all of them up on a Blog site, adds a search box with the Search Form widget, and tries the result as a visitor who is not signed in.\n\nIn this video:\n• How site search works: indexes, providers and the search page\n• Enabling the Lucene and Search features\n• Creating an index of Blog Post and Article content\n• Choosing the default index in the Site Search settings\n• Letting visitors query the index with the Anonymous role\n• Adding a search box with the Search Form widget\n• Searching as a visitor\n• Keeping an index in step with Synchronize, Reset and Rebuild",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Search"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Search",
+    "Site search",
+    "Full-text search",
+    "Lucene",
+    "Indexing"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Search documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Search/"
+    },
+    {
+      "label": "Indexing documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Indexing/"
+    },
+    {
+      "label": "Search topic",
+      "url": "https://docs.orchardcore.net/en/latest/topics/search/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Search/README.md",
+    "src/docs/reference/modules/Indexing/README.md",
+    "src/docs/topics/search/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Search"
+  }
+}
