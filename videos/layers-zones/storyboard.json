@@ -1,0 +1,260 @@
+{
+  "title": "Orchard Core Layers",
+  "output": "layers-zones",
+  "spoken": {
+    "Url": "U.R.L.",
+    "/blog/": "slash blog slash"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Layers",
+      "subtitle": "Show widgets on the right pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Not every widget belongs on every page. Layers decide which pages show which widgets. In this video, you'll see how zones, layers and widgets fit together, and how to create a layer with a rule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Zones, widgets and layers",
+      "subtitle": "How a page gets its widgets",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "The theme lays out every page in named areas called zones, such as Content and Footer. A widget is a block of content, such as a paragraph or an image. It sits in one zone, and it belongs to one layer."
+            },
+            {
+              "id": "idea-2",
+              "text": "The layer decides when the widget shows. When a visitor opens a page of the site, Orchard Core checks the rule of each layer that holds widgets. The widgets of the layers that pass appear in their zones."
+            },
+            {
+              "id": "idea-3",
+              "text": "A rule is a list of conditions that must all be true. A group holds other conditions: an All group needs every one, and an Any group needs only one. A rule with no conditions is never true, so its layer shows no widgets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Widgets and Layers",
+      "subtitle": "The page that manages them",
+      "clips": [
+        {
+          "id": "02-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "Let's open Design, Widgets. The page is called Widgets and Layers. The zones are listed on the left, each in its own card, and the layers are listed on the right."
+            },
+            {
+              "id": "page-2",
+              "text": "The Content zone is empty, and the Footer zone holds one widget. A badge beside its title shows the layer it belongs to, which is Always."
+            },
+            {
+              "id": "page-3",
+              "text": "This site has two layers, Always and Homepage. A layer can have a description under its name, and here the descriptions tell you when the widgets of each layer are displayed."
+            },
+            {
+              "id": "page-4",
+              "text": "Select the checkbox next to Always, and the widgets of that layer are highlighted in the zones. Clear it, and the highlight goes away."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Zones",
+      "subtitle": "Where widgets can go",
+      "clips": [
+        {
+          "id": "03-zones",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "zones-1",
+              "text": "The zones in the list come from a setting. Let's open Settings, Zones. Available zones for Layers holds the zone names, separated by commas."
+            },
+            {
+              "id": "zones-2",
+              "text": "The theme has to render each zone, because zones do not render on their own. This theme renders one called Header, near the top of every page, so let's add it to the list."
+            },
+            {
+              "id": "zones-3",
+              "text": "Select Save. A message reads: Site settings updated successfully. The list of zones is stored with those settings."
+            },
+            {
+              "id": "zones-4",
+              "text": "Back on Widgets and Layers, a Header card joins Content and Footer in the list. Each zone card has its own Add Widget button, so widgets can be placed in Header too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create a layer",
+      "subtitle": "A name and a rule",
+      "clips": [
+        {
+          "id": "04-layer",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "layer-1",
+              "text": "To add a layer, select Add in the Layers column. The Create Layer page asks for a name and a description."
+            },
+            {
+              "id": "layer-2",
+              "text": "Let's name the layer Posts, and describe it as the pages that show a blog post. A widget refers to its layer by name, so the name can't be changed later. Select Create."
+            },
+            {
+              "id": "layer-3",
+              "text": "The Edit Layer page opens with a warning: No conditions found. Please add at least one condition. Until you do, the layer never passes, and its widgets stay hidden."
+            },
+            {
+              "id": "layer-4",
+              "text": "Under Rules, select Add. The Available Rules window lists the kinds of condition, and a separate video covers them. Let's use the Filter box to find the Url condition, which compares the path of the page address with a value."
+            },
+            {
+              "id": "layer-5",
+              "text": "Set Operation to Starts with, and Value to /blog/, the path that blog post addresses begin with on this site. Then select Create."
+            },
+            {
+              "id": "layer-6",
+              "text": "The Rules list shows the condition: Url, Starts with /blog/. Select Save to return to Widgets and Layers, where Posts is listed with the other layers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add a widget",
+      "subtitle": "Choose a zone and a layer",
+      "clips": [
+        {
+          "id": "05-widget",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "widget-1",
+              "text": "In the Content zone, open Add Widget. The menu lists the widget types of the site. Let's choose Paragraph."
+            },
+            {
+              "id": "widget-2",
+              "text": "Let's enter Follow the blog as the title. Render title shows the title with the widget on the site, and we leave it unchecked."
+            },
+            {
+              "id": "widget-3",
+              "text": "Under The layer, select Posts. The layer controls the visibility of this widget. Then write the paragraph in the Content field."
+            },
+            {
+              "id": "widget-4",
+              "text": "Select Publish. A widget shows on the site only once it is published. You return to Widgets and Layers, where the Content zone lists the widget with a Posts badge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "See the result",
+      "subtitle": "The widget follows its layer",
+      "clips": [
+        {
+          "id": "06-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "Let's open a blog post on the site. Its address starts with /blog/, so the rule of Posts passes, and the paragraph appears in the Content zone."
+            },
+            {
+              "id": "site-2",
+              "text": "On the About page, the address does not match, so the rule fails and the paragraph is hidden. The footer widget belongs to Always, so it appears at the bottom of the page."
+            },
+            {
+              "id": "site-3",
+              "text": "The homepage does not start with /blog/ either, so the paragraph stays hidden there too. The rule of a layer is checked again on every page that a visitor opens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Move a widget",
+      "subtitle": "Order and zones",
+      "clips": [
+        {
+          "id": "07-move",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "move-1",
+              "text": "Back on Widgets and Layers, drag a widget by its row to change its order in a zone, or to move it into another zone. Let's drag the paragraph into Footer."
+            },
+            {
+              "id": "move-2",
+              "text": "The position is saved at once, and a message offers Undo. Select Undo to put the widget back in the Content zone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Edit and delete a layer",
+      "subtitle": "Names, descriptions and a safeguard",
+      "clips": [
+        {
+          "id": "08-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "In the Layers column, Edit reopens a layer, to change its description or its conditions. The name is read-only."
+            },
+            {
+              "id": "manage-2",
+              "text": "Delete asks you to confirm. A layer that holds widgets is not deleted. A message asks you to remove its widgets first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Layers",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Zones say where a widget can appear, and layers say on which pages it does. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

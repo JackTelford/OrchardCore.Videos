@@ -1,0 +1,47 @@
+{
+  "title": "Layers: Show Widgets on the Right Pages | Orchard Core",
+  "description": "A widget is a block of content that a theme can show in a named zone of a page. Showing every widget on every page does not suit a site with different kinds of pages.\n\nLayers solve this. A layer holds a rule made of conditions, and its widgets appear only on the pages where the rule is true. This video creates a layer for the blog posts of a site, places a widget in a zone, and checks the result on the site.\n\nIn this video:\n• How zones, widgets and layers fit together\n• The Widgets and Layers page\n• Listing the zones that widgets can use\n• Creating a layer with a Url condition\n• Adding a Paragraph widget to a zone\n• Checking the widget on the site\n• Moving a widget to another position or zone\n• Editing and deleting a layer",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Layers",
+    "Widgets",
+    "Zones",
+    "Rules"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Layers and Widgets"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Layers/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Layers/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Layers"
+  }
+}
