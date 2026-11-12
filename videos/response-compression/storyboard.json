@@ -1,0 +1,193 @@
+{
+  "title": "The Orchard Core Response Compression module",
+  "output": "response-compression",
+  "spoken": {
+    "ConfigureServices": "Configure Services",
+    "AddResponseCompression": "Add Response Compression",
+    "UseResponseCompression": "Use Response Compression",
+    "EnableForHttps": "Enable For HTTPS",
+    "UseStaticFiles": "Use Static Files",
+    "UseOrchardCore": "Use Orchard Core",
+    "wwwroot": "web root",
+    "BREACH": "Breach",
+    "gzip": "gee zip",
+    "Zstandard": "Zee standard",
+    "Nginx": "Engine X",
+    "Accept-Encoding br": "Accept-Encoding B.R.",
+    "Content-Encoding br": "Content-Encoding B.R."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Response Compression module",
+      "subtitle": "Smaller responses with gzip and Brotli",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Pages, stylesheets, scripts and JSON responses are text, and text compresses well. The Response Compression module makes a tenant, one site of an Orchard Core application, compress its responses. You will see how to enable it, what it registers, and when to use it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How compression works",
+      "subtitle": "Accept-Encoding and Content-Encoding",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A client lists the formats it can unpack in the Accept-Encoding request header. When the server compresses a response, it names the format in the Content-Encoding response header, and the client unpacks the body."
+            },
+            {
+              "id": "how-2",
+              "text": "Text such as HTML, CSS, JavaScript, JSON and XML benefits from compression. Files that are already compressed, such as PNG images, gain little, and compressing them again costs the server processing time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "In the admin menu, open Tools, then Features. The page lists features by category. Let's search for Response Compression, which is in the Infrastructure category."
+            },
+            {
+              "id": "enable-2",
+              "text": "The row shows the name of the feature, its identifier, and a Disabled badge. Select Enable."
+            },
+            {
+              "id": "enable-3",
+              "text": "The page confirms that the feature Response Compression was enabled. The tenant is rebuilt on its next request, and its pipeline then includes the compression middleware."
+            },
+            {
+              "id": "enable-4",
+              "text": "The row shows an Enabled badge and a Disable button. The feature belongs to this tenant, so each tenant that needs compression has the feature enabled separately."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable it in a recipe",
+      "subtitle": "The Feature step",
+      "clips": [
+        {
+          "id": "03-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A setup or deployment recipe enables the feature with the Feature step. List the identifier under enable, and the recipe turns the feature on when it runs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Inside the module",
+      "subtitle": "Services, middleware and order",
+      "clips": [
+        {
+          "id": "04-inside",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "The module registers its work in one Startup class. In ConfigureServices, it calls AddResponseCompression and sets EnableForHttps to true. It lists no providers, so the defaults of ASP.NET Core apply, which include Zstandard, Brotli and gzip."
+            },
+            {
+              "id": "code-2",
+              "text": "Configure calls UseResponseCompression. The Order is minus five, below the default of zero, so the middleware sits early in the tenant pipeline, ahead of the middleware of modules that keep the default order."
+            },
+            {
+              "id": "code-3",
+              "text": "The middleware compresses a response when the request's Accept-Encoding names a supported format, and the response's content type is on its list. By default, the list includes HTML, CSS, JavaScript, JSON, XML, plain text and WebAssembly."
+            },
+            {
+              "id": "code-4",
+              "text": "In the default web project, UseStaticFiles runs before UseOrchardCore. Files it serves from the project's wwwroot folder never reach the tenant pipeline, so this feature does not compress them. Files of modules and themes are served inside the pipeline, so it can compress them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Check the result",
+      "subtitle": "Look for Content-Encoding",
+      "clips": [
+        {
+          "id": "05-check",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "To check the result, send a request that accepts one format, and print the response headers. Accept-Encoding gzip returns Content-Encoding gzip, and Accept-Encoding br, the name of Brotli in the header, returns Content-Encoding br."
+            },
+            {
+              "id": "check-2",
+              "text": "A request without an Accept-Encoding header gets an uncompressed response. When a client lists several formats without weights, the middleware prefers Zstandard, then Brotli, then gzip. A web server in front of the application can compress too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "When to use it",
+      "subtitle": "A proxy first, and the HTTPS risk",
+      "clips": [
+        {
+          "id": "06-when",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "when-1",
+              "text": "Compression is usually more efficient in a reverse proxy or web server, such as IIS, Nginx or a CDN. Use the module when no such layer compresses, for example when the application is exposed directly."
+            },
+            {
+              "id": "when-2",
+              "text": "The module sets EnableForHttps to true, so HTTPS responses are compressed too. Compressing dynamically generated, secured responses can expose an application to attacks such as BREACH. Enable the feature only if you accept that risk."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Response Compression module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Response Compression module adds ASP.NET Core response compression to a tenant with one feature, so weigh the HTTPS risk before you enable it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
