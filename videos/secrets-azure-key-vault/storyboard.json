@@ -88,7 +88,7 @@
           "steps": [
             {
               "id": "config-1",
-              "text": "In the Orchard Core configuration, AzureClient names the service key, and must match it exactly. A missing name, a key with no registered client, or the reserved key of the feature makes the store fail with an explicit error."
+              "text": "In the Orchard Core configuration, AzureClient names the service key, and must match it exactly. A missing name, a key with no registered client, or the service key that the feature reserves for itself makes the store fail with an explicit error."
             },
             {
               "id": "config-2",

@@ -1,6 +1,6 @@
 # Secrets in Azure Key Vault
 
-**YouTube:** not published yet · **Length:** 4:28 · **Feature:** [OrchardCore.Secrets.AzureKeyVault](https://docs.orchardcore.net/en/latest/reference/modules/Secrets/)
+**YouTube:** not published yet · **Length:** 4:29 · **Feature:** [OrchardCore.Secrets.AzureKeyVault](https://docs.orchardcore.net/en/latest/reference/modules/Secrets/)
 
 A video for module and host developers. It shows the second secret store of the Secrets module, the one that keeps each
 secret as an entry in an Azure Key Vault: the host registers the Azure client, the configuration selects it, and the
