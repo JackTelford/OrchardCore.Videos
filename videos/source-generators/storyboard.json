@@ -96,7 +96,7 @@
           "steps": [
             {
               "id": "anon-1",
-              "text": "An anonymous object has no name to mark, so another generator handles it, using an interceptor. This method from the navigation code passes an anonymous object to Arguments.From, and the generator finds that call at build time."
+              "text": "An anonymous object has no name to mark, so another generator uses an interceptor, a generated method that replaces a call. This method from the navigation code passes one to Arguments.From, and the generator finds that call at build time."
             },
             {
               "id": "anon-2",

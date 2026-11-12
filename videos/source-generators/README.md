@@ -1,6 +1,6 @@
 # Source Generators: Less Boilerplate in Your Modules
 
-**YouTube:** not published yet · **Length:** 4:49 · **Feature:** `OrchardCore.SourceGenerators` ([Source Generators](https://docs.orchardcore.net/en/latest/topics/source-generators/))
+**YouTube:** not published yet · **Length:** 4:50 · **Feature:** `OrchardCore.SourceGenerators` ([Source Generators](https://docs.orchardcore.net/en/latest/topics/source-generators/))
 
 A video for module authors about the generators and analyzers of the `OrchardCore.SourceGenerators` project. It covers
 argument classes marked with `GenerateArguments`, anonymous objects passed to `Arguments.From`, typed shapes created with
