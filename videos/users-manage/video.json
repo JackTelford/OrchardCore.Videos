@@ -1,0 +1,58 @@
+{
+  "title": "Users: Create, Edit, Disable and Delete Accounts | Orchard Core",
+  "description": "Every person who signs in to an Orchard Core site needs a user account, and someone has to create, update and remove those accounts as people join and leave.\n\nThe Users page, under Access Control, lists every account. From there you create users, edit their details and roles, change passwords, disable or delete accounts, and find users with search, filters and bulk actions.\n\nIn this video:\n• How user accounts, roles and permissions fit together\n• The Users list\n• Creating a user\n• Editing a user\n• The Actions menu: change a password, disable, enable and delete\n• Searching, filtering and acting on many users",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Users",
+    "User management",
+    "Roles",
+    "Permissions"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Users"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Users module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/"
+    },
+    {
+      "label": "Documentation: Users",
+      "url": "https://docs.orchardcore.net/en/latest/topics/security/users/"
+    },
+    {
+      "label": "Documentation: Users authentication ticket store",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/TicketStore/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Users/README.md",
+    "src/docs/reference/modules/Users/TicketStore.md",
+    "src/docs/topics/security/users.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users"
+  }
+}
