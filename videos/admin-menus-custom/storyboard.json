@@ -1,0 +1,239 @@
+{
+  "title": "Orchard Core Admin Menus",
+  "output": "admin-menus-custom",
+  "spoken": {
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Admin Menus",
+      "subtitle": "Add your own links to the admin navigation",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The admin menu lists the pages of the admin, but your team uses only a few of them every day. The Admin Menu module lets you add your own links, grouped the way you work. Let's build a menu, and decide who sees it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Menus and nodes",
+      "subtitle": "Two ideas and four kinds of node",
+      "clips": [
+        {
+          "id": "01-ideas",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ideas-1",
+              "text": "An admin menu is a named set of items, and each item is an admin node, which can hold other nodes. Orchard Core adds the enabled menus to its own admin menu. They change the admin only, never the site your visitors see."
+            },
+            {
+              "id": "ideas-2",
+              "text": "Four kinds of node are available: a link opens a page, and a placeholder groups other nodes. Content Types adds a link for each content type you choose, and Lists adds a link for each item that holds a list, such as each blog."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Admin Menus page",
+      "subtitle": "Where your menus live",
+      "clips": [
+        {
+          "id": "02-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Admin menus live under Tools, Admin Menus. The Blog recipe turns the Admin Menu feature on. On a site where it is off, enable the feature first, under Tools, Features."
+            },
+            {
+              "id": "list-2",
+              "text": "The Blog recipe also creates a menu named Admin menus. Each row shows whether a menu is enabled, and offers Edit Nodes, Edit and Delete. The Actions button disables or enables the menu."
+            },
+            {
+              "id": "list-3",
+              "text": "Edit Nodes shows the tree of a menu. Blog and Main Menu are links, and Content is a placeholder with nodes inside it. The admin menu on the left shows these entries."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a menu",
+      "subtitle": "A named set of nodes",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "On the list, Add Admin Menu asks for a name only. Let's call the menu Editor Shortcuts, and select Create."
+            },
+            {
+              "id": "create-2",
+              "text": "The menu is listed as Enabled, with no nodes. A menu appears in the admin menu only when it is enabled and holds at least one node."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add a link",
+      "subtitle": "The Link Admin Node",
+      "clips": [
+        {
+          "id": "04-link",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "link-1",
+              "text": "Edit Nodes opens the tree, which is empty. Add Node lists the kinds of node you can add. The Link Admin Node adds a link with a text and a Url, so let's add it."
+            },
+            {
+              "id": "link-2",
+              "text": "Link Text is the label in the admin menu, and Link Url is where it goes. An address without a leading slash is relative to the root of the admin site, so Media opens the media library."
+            },
+            {
+              "id": "link-3",
+              "text": "Target decides where the link opens, for example in a separate tab. A full web address, such as one for another site, is used as it is."
+            },
+            {
+              "id": "link-4",
+              "text": "Pick opens the list of icons. Type a word to search it, then select an icon. The icon shows beside the link text in the admin menu."
+            },
+            {
+              "id": "link-5",
+              "text": "Create adds the node to the tree, and Media Library appears in the admin menu on the left. Select it, and the media library opens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Group links",
+      "subtitle": "The Placeholder Admin Node",
+      "clips": [
+        {
+          "id": "05-group",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "group-1",
+              "text": "Add Node also offers the Placeholder Admin Node: a menu item that holds other nodes. It has no address of its own, only a Link Text, an icon and permissions."
+            },
+            {
+              "id": "group-2",
+              "text": "Let's name it Editorial, pick an icon, and select Create. The placeholder is added to the tree after Media Library."
+            },
+            {
+              "id": "group-3",
+              "text": "Nesting is done by dragging. Drag Media Library onto Editorial, and it moves inside. The tree shows it below its parent."
+            },
+            {
+              "id": "group-4",
+              "text": "In the admin menu, Editorial is a group with Media Library inside. A placeholder shows only when it holds at least one item that has an address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Links that list content",
+      "subtitle": "Content Types and Lists",
+      "clips": [
+        {
+          "id": "06-dynamic",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "dynamic-1",
+              "text": "Content Types adds a link for each content type you select. Tick Blog Post and Page, or choose Show All Content Types to add every type. Then select Create."
+            },
+            {
+              "id": "dynamic-2",
+              "text": "Lists adds a link for each content item of a type that holds a list. Choose the Blog content type, and clear Add parent menu item, so that the links to the blogs are not grouped under a parent entry. Then select Create."
+            },
+            {
+              "id": "dynamic-3",
+              "text": "Drag both nodes onto Editorial, as before. Its group lists Media Library, Blog Post, Page and each blog. A blog added later gets its link without any change to the menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Control who sees a menu",
+      "subtitle": "Permissions, roles and switches",
+      "clips": [
+        {
+          "id": "07-access",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "access-1",
+              "text": "A node can require permissions. In the Permissions field of Media Library, choose Manage Media, then select Save. Only users who have that permission see the item."
+            },
+            {
+              "id": "access-2",
+              "text": "Each menu also has its own permission, named View Admin Menu followed by the menu name. Search for it on a role's edit page and allow it, and that role sees the menu items its permissions allow. The Administrator role has every permission."
+            },
+            {
+              "id": "access-3",
+              "text": "To hide a whole menu, open Actions on the list and choose Disable. Its nodes leave the admin menu until you choose Enable. A node has the same choice, beside its Delete button."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Reuse your menus",
+      "subtitle": "Deployment plans and recipes",
+      "clips": [
+        {
+          "id": "08-reuse",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "reuse-1",
+              "text": "To use your menus on another site, add the Admin Menus step to a deployment plan. It exports every admin menu. A recipe can also create menus when a site is set up, as the Blog recipe does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Admin Menus",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Admin menus put the pages your team uses in one place, grouped your way, and shown to the right roles. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
