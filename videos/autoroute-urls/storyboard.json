@@ -1,0 +1,200 @@
+{
+  "title": "Autoroute: Friendly URLs for Your Content Items",
+  "output": "autoroute-urls",
+  "spoken": {
+    "Add & Configure": "Add and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Autoroute module",
+      "subtitle": "Friendly URLs for your content items",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A web address should be short and readable. The Autoroute module gives a content item a permalink, generated from a pattern that usually uses the title. In this video, you attach Autoroute to a content type, choose its options, and manage permalinks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why Autoroute",
+      "subtitle": "A readable address for every content item",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Without Autoroute, Orchard Core displays a content item at an address that ends with the identifier of the item, a long string of letters and digits. Visitors can't read it, remember it, or guess it."
+            },
+            {
+              "id": "why-2",
+              "text": "A content type, such as Event, is made of parts, and Autoroute is a part that you attach to it. Each saved item then receives a permalink, built from a pattern. By default, the pattern turns the title into lowercase words joined by dashes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add Autoroute to a content type",
+      "subtitle": "Find the feature, then attach the part",
+      "clips": [
+        {
+          "id": "02-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "The Autoroute part comes from a feature, listed under Tools, Features. Search for Autoroute: it's enabled here, because the Blog recipe that set up this site turns it on. On another site, you select Enable."
+            },
+            {
+              "id": "add-2",
+              "text": "Open Design, Content Definition, Content Types. Choose Edit on Event, a type that has a Title part and no Autoroute part."
+            },
+            {
+              "id": "add-3",
+              "text": "The Parts list shows what the type contains. Choose Add Parts to see the parts that you can attach to it."
+            },
+            {
+              "id": "add-4",
+              "text": "Autoroute is on the list, described as providing a custom URL for your content item. Choose Add & Configure on its row. Orchard Core attaches the part to the Event type, and opens its settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose the Autoroute settings",
+      "subtitle": "What each content type decides",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "This page holds the Autoroute settings of the Event type. The Pattern field contains the template that builds each permalink, and its default uses the title. A separate video covers writing your own patterns."
+            },
+            {
+              "id": "settings-2",
+              "text": "Let's turn on Allow custom path. It lets editors type their own permalink. When it stays off, the Permalink field can't be edited, and every permalink is generated."
+            },
+            {
+              "id": "settings-3",
+              "text": "Let's turn on Allow path updates. It adds a Refresh the path option to the editor, for when the title of an item changes."
+            },
+            {
+              "id": "settings-4",
+              "text": "Let's turn on Show homepage options. It adds Set as homepage to the editor, for users who have the permission to set the homepage. A separate video covers the homepage."
+            },
+            {
+              "id": "settings-5",
+              "text": "Let's turn on Allow disabled. It adds a Disabled option to the editor, which turns Autoroute off for a single item."
+            },
+            {
+              "id": "settings-6",
+              "text": "Container Settings, further down, are for items that contain other items and for the items they contain, such as a taxonomy and its terms. Let's leave them as they are, and save the settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create a content item",
+      "subtitle": "The permalink comes from the title",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Under Content, Content Items, the New button lists the content types that you can create. Choose Event."
+            },
+            {
+              "id": "create-2",
+              "text": "Enter the title, Spring Planting Workshop. The Permalink field stays empty, and its hint says to leave it empty to generate the permalink. The options that these settings add are on the form too: Disabled, Set as homepage, and Refresh the path."
+            },
+            {
+              "id": "create-3",
+              "text": "Select Publish. Autoroute generates the permalink from the title, in lowercase, with dashes between the words, and adds a dash and a number if another item already uses it. The event appears in the list."
+            },
+            {
+              "id": "create-4",
+              "text": "Choose Edit to open the item again. The Permalink field shows the generated permalink, and a link beside it opens the published page."
+            },
+            {
+              "id": "create-5",
+              "text": "Follow the link. The page is displayed at an address that ends with the permalink, and no identifier appears in it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Change a permalink",
+      "subtitle": "Keep it, refresh it, or write your own",
+      "clips": [
+        {
+          "id": "05-change",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "change-1",
+              "text": "In Content Items, let's open the event again, and change its title to Spring Planting Day. The Permalink field holds the permalink built from the first title."
+            },
+            {
+              "id": "change-2",
+              "text": "Publish, and open the item again. The Permalink field holds the first permalink, unchanged. Autoroute generates a permalink only when the field is empty, so the addresses that visitors already use keep working."
+            },
+            {
+              "id": "change-3",
+              "text": "To follow the title, turn on Refresh the path. Its hint warns that the previous URL won't be accessible anymore. Then publish the item."
+            },
+            {
+              "id": "change-4",
+              "text": "Open the item once more. The Permalink field holds the permalink generated from the title Spring Planting Day."
+            },
+            {
+              "id": "change-5",
+              "text": "You can also type your own permalink. Orchard Core refuses one that another item already uses, and one that contains a space, and it explains why."
+            },
+            {
+              "id": "change-6",
+              "text": "Replace the space with a dash, and publish. Orchard Core accepts the permalink. Then open the item: the Permalink field holds exactly what you typed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Autoroute module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Autoroute module: readable, unique permalinks for your content items, with options that each content type decides. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

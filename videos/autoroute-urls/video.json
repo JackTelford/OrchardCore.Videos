@@ -1,0 +1,48 @@
+{
+  "title": "Autoroute: Friendly URLs for Your Content Items | Orchard Core",
+  "description": "Without Autoroute, Orchard Core displays a content item at an address that ends with the identifier of the item, a long string of letters and digits that visitors can't read, remember, or guess.\n\nThe Autoroute module gives a content item a permalink, generated from a pattern that usually uses the title. You attach the Autoroute part to a content type, choose what its editors can do, and keep, refresh, or write the permalink of each item.\n\nIn this video:\n• Why Autoroute\n• Add Autoroute to a content type\n• Choose the Autoroute settings\n• Create a content item\n• Change a permalink",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Autoroute"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Autoroute",
+    "permalink",
+    "friendly URLs",
+    "content types"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Routing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Autoroute/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Autoroute/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Autoroute"
+  }
+}
