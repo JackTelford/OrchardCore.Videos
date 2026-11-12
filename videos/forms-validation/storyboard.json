@@ -1,0 +1,179 @@
+{
+  "title": "Forms: Validate What Visitors Type",
+  "output": "forms-validation",
+  "spoken": {
+    "HTTP": "H.T.T.P."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Forms: Validate What Visitors Type",
+      "subtitle": "Messages on the form, rules in a workflow",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Visitors leave fields empty, and a form that accepts them collects nothing useful. In this video, you'll see how the Forms module validates what visitors type: the messages the form displays, and the workflow that finds the missing values."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How validation works",
+      "subtitle": "Rules in a workflow, messages on the form",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Validation in the Forms module has two parts. A workflow checks the submitted values and records an error for each one that fails. The form then displays the errors it receives."
+            },
+            {
+              "id": "why-2",
+              "text": "A form can display errors in three ways. The Validation Summary widget lists them together, the Validation option of an input shows a message under that input, and the Validation widget shows the message of any field you name."
+            },
+            {
+              "id": "why-3",
+              "text": "Visitors also need a way back. The form saves the page it is on, and after a failed check the workflow sends the visitor to that page, where the error messages are displayed again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Show errors on the form",
+      "subtitle": "A summary and a message under each field",
+      "clips": [
+        {
+          "id": "02-messages",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "messages-1",
+              "text": "Let's start with the form. This Contact Form page holds a Form widget. Its Save Form Location option is checked, so the form stores the page it sits on, ready for the workflow to send the visitor back."
+            },
+            {
+              "id": "messages-2",
+              "text": "Each Input, Text Area and Select widget has a Validation option. Let's open the Name input and set it to Standard, so the widget shows its error message after the field."
+            },
+            {
+              "id": "messages-3",
+              "text": "Set the Email input and the Message text area to Standard as well. The other choice, None, shows no message for that field."
+            },
+            {
+              "id": "messages-4",
+              "text": "Next, the Validation Summary widget. Insert one above the Name input. It lists every error together, because Show Model Only Error stays unchecked."
+            },
+            {
+              "id": "messages-5",
+              "text": "Click Publish. The form is ready to display errors, but nothing decides which values are wrong. That is the job of the workflow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Check the values in a workflow",
+      "subtitle": "Validate Form Field, Validate Form and the way back",
+      "clips": [
+        {
+          "id": "03-rules",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "Under Design, Workflows, open Contact Form Validation. It starts with an HTTP Request event set to POST, and the Action of the Form widget holds its URL, so the form submits to this workflow."
+            },
+            {
+              "id": "rules-2",
+              "text": "Click the Done outcome and add Bind Form Model State. It keeps every submitted field, so the form can show again what the visitor typed after an error."
+            },
+            {
+              "id": "rules-3",
+              "text": "Add Validate Form Field after it. Field Name is the HTML Name of the input to check, here Name, and Error Message is the text to display. The activity records an error when that field is empty or holds only spaces."
+            },
+            {
+              "id": "rules-4",
+              "text": "The activity has three outcomes: Done, Valid and Invalid. Done always follows, so here it leads to the next check, and the fields are checked one after the other."
+            },
+            {
+              "id": "rules-5",
+              "text": "Add the checks for Email and Message in the same way, each from the Done outcome of the one before. Each has its own Field Name and Error Message, which the editor saves when you leave the field."
+            },
+            {
+              "id": "rules-6",
+              "text": "After the last check, add Validate Form. It looks for any recorded error: with none it follows Valid, otherwise it follows Invalid."
+            },
+            {
+              "id": "rules-7",
+              "text": "From Invalid, add HTTP Redirect To Form Location. It sends the visitor back to the page the form saved, and the error messages go with them. Its Form Location Key stays empty, since this workflow handles one form."
+            },
+            {
+              "id": "rules-8",
+              "text": "From Valid, add HTTP Redirect and set its Location to the thank-you page of the site, so a visitor whose values pass lands there."
+            },
+            {
+              "id": "rules-9",
+              "text": "Fit to content shows the whole workflow. Click Publish: a draft never runs, so the form starts the published workflow only."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Try the form",
+      "subtitle": "Empty, partly filled and complete",
+      "clips": [
+        {
+          "id": "04-try",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "try-1",
+              "text": "On the Contact Form page, let's submit the form with nothing typed. The page reloads, and the summary above the Name field lists one message for each field that failed."
+            },
+            {
+              "id": "try-2",
+              "text": "Each message also appears under its own field, because each input uses the Standard Validation option."
+            },
+            {
+              "id": "try-3",
+              "text": "Let's type a name and submit again. The name is still in its field, because Bind Form Model State kept it, and only Email and Message report errors."
+            },
+            {
+              "id": "try-4",
+              "text": "Fill in the email address and the message, and submit. Every check passes, the workflow follows Valid, and the visitor arrives on the thank-you page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Forms: Validate What Visitors Type",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Validation in the Forms module is a workflow that records errors and a form that displays them. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
