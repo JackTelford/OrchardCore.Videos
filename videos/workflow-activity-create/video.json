@@ -1,0 +1,48 @@
+{
+  "title": "Write a Workflow Activity | Orchard Core",
+  "description": "A workflow is made of activities, and a module can add its own. Writing one takes more than a class: the workflow designer also needs an editor, three views and a registration.\n\nThis video reads the Notify Task activity of the Workflows module, part by part, in the order you write one: the class with its services, settings, outcomes and work, then the display driver, the view model and the Thumbnail, Design and Edit views, then the registration. It finds each view in the workflow designer, and shows how an event activity differs and how code triggers it.\n\nIn this video:\n• What an activity, a task, an event and an outcome are\n• The activity class: names, services, settings and work\n• The display driver, the view model and the three views\n• Settings with expressions\n• Registering the activity in your module\n• Where each view appears in the workflow designer\n• Event activities and how code triggers them",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Workflow activity",
+    "Module development",
+    "C#"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows"
+  }
+}
