@@ -252,7 +252,7 @@ def slide(step_id, chapter_title, label):
         image = slide_base(chapter_title, label, "Where the model state comes from")
         bottom = panel(image, 96, 240, W - 96, "ModelBinderAccessorFilter.cs", FILTER, 22)
         panel(image, 96, bottom + 24, W - 96, "LocalModelBinderAccessor.cs", ACCESSOR, 22)
-        ImageDraw.Draw(image).text((96, 1025), "NullModelUpdater: an empty ModelState, which is always valid.", font=font(30), fill=MUTED, anchor="lm")
+        ImageDraw.Draw(image).text((96, 1042), "NullModelUpdater: an empty ModelState, which is always valid.", font=font(30), fill=MUTED, anchor="lm")
         return image
 
     if step_id == "commit-4":

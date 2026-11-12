@@ -127,7 +127,7 @@
             },
             {
               "id": "fork-3",
-              "text": "A Join in WaitAll mode, the default, continues with the outcome Joined once every inbound branch has arrived. WaitAny continues as soon as any inbound branch has arrived, and drops the waiting activities upstream."
+              "text": "A Join in WaitAll mode, the default, continues with the outcome Joined once every inbound branch has arrived. WaitAny continues when any inbound branch has arrived, and drops the waiting activities upstream."
             }
           ]
         },
@@ -184,7 +184,7 @@
             },
             {
               "id": "where-2",
-              "text": "Connect Invalid to the activities that handle a failed validation. The admin content editor cancels the session when its model state is invalid. The task only skips its own commit, so the scope still commits when it ends."
+              "text": "Connect Invalid to the activities that handle a failed validation. The admin content editor cancels the session when its model state is invalid. The task only skips its own commit, and the scope commits when it ends."
             }
           ]
         }
@@ -201,7 +201,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "The Session Workflows Activities feature adds one task, Commit Transaction. It commits the session in the middle of a run, and works with Fork and Join like any other activity. Thanks for watching."
+              "text": "The Session Workflows Activities feature adds the Commit Transaction task, which commits the session in the middle of a run, and it works with Fork and Join like any other activity. Thanks for watching."
             }
           ]
         }
