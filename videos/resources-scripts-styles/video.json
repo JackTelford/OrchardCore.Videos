@@ -1,0 +1,49 @@
+{
+  "title": "Resources: Declare and Include Scripts and Stylesheets | Orchard Core",
+  "description": "A page is assembled from many views, and each one can need a script or a stylesheet. Without coordination, a library loads twice, a script runs before the library it needs, and every view decides where its tags go.\n\nEach request has its own resource manager. You declare a resource once, with a name, a version and its dependencies, include it by name from a Razor or Liquid view or from code, and the layout renders it once, in dependency order.\n\nIn this video:\n• Why the Resources module\n• Declare a resource in a manifest\n• Include a resource by name, with a version, dependencies and a location\n• Render the resources in the layout\n• Declare resources in a view, and write script and style blocks\n• Register link and meta tags\n• Configure cache busting, the CDN and the debug mode\n• Include resources from code with IResourceManager",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Resources module",
+    "scripts",
+    "stylesheets",
+    "Razor",
+    "Liquid",
+    "theme development"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Themes"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Resources/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Resources/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Resources"
+  }
+}

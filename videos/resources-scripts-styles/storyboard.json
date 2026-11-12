@@ -1,0 +1,250 @@
+{
+  "title": "Resources: Declare and Include Scripts and Stylesheets",
+  "output": "resources-scripts-styles",
+  "spoken": {
+    "OrchardCore.ResourceManagement.Abstractions": "Orchard Core dot Resource Management dot Abstractions",
+    "IResourceManager": "I Resource Manager",
+    "IConfigureOptions": "I Configure Options",
+    "SetUrl": "Set U.R.L.",
+    "SetCdn": "Set C.D.N.",
+    "base url": "base U.R.L.",
+    "scriptblock": "script block",
+    "styleblock": "style block"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Resources: Declare and Include Scripts and Stylesheets",
+      "subtitle": "Declare, include and render the scripts and stylesheets of a site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every page of an Orchard Core site needs scripts and stylesheets. The Resources module declares them, includes them by name, and renders them in the right place. In this video, we'll declare, include, and render resources, and configure how they are served."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why the Resources module",
+      "subtitle": "The problem it solves",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A page is assembled from many views, and each one can need a script or a stylesheet. Without coordination, a library loads twice, a script runs before the library it needs, and every view chooses where its tags go."
+            },
+            {
+              "id": "why-2",
+              "text": "Each request has its own resource manager. You declare a resource once, include it by name from any view or from code, and the layout renders it once, in dependency order."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Declare a resource",
+      "subtitle": "A manifest in your module or theme",
+      "clips": [
+        {
+          "id": "02-declare",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "declare-1",
+              "text": "A resource has a name, a type, script or stylesheet, and optionally a version. The Resources module declares libraries such as jQuery, Bootstrap, and Font Awesome. Your module or theme declares its own, in a resource manifest."
+            },
+            {
+              "id": "declare-2",
+              "text": "DefineScript and DefineStyle start a definition. SetUrl takes the minified file and then the debug file, written with a tilde. SetVersion, SetDependencies, and SetCdn complete it."
+            },
+            {
+              "id": "declare-3",
+              "text": "A class that implements IConfigureOptions of ResourceManagementOptions adds the manifest to ResourceManifests. Register that class with AddResourceConfiguration, in the Startup class of your module or theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Include a resource",
+      "subtitle": "By name, from a Razor or Liquid view",
+      "clips": [
+        {
+          "id": "03-include",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "include-1",
+              "text": "To include a resource, ask for it by name. Liquid has the script and style tags, and Razor has the script and style tag helpers."
+            },
+            {
+              "id": "include-2",
+              "text": "Add a version to choose among the declared versions. A major number, such as five, takes the highest match, and without a version the highest declared one is used. An unknown name or version raises an error when the resources are rendered."
+            },
+            {
+              "id": "include-3",
+              "text": "Dependencies come with the resource: the Bootstrap script, for example, renders Popper first. To require more, add depends on to the tag, naming the resources it needs."
+            },
+            {
+              "id": "include-4",
+              "text": "The at option chooses where a resource renders. Head and Foot hand it to the layout, and Inline renders it where the tag is. Without at, a script renders in place, and a stylesheet goes to the head."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Render the resources",
+      "subtitle": "Where the layout puts them",
+      "clips": [
+        {
+          "id": "04-render",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "render-1",
+              "text": "The layout renders what the views collected. In the head, resources of type Meta, HeadLink, Stylesheet, and HeadScript, or Header for all four. Before the end of the body, FootScript, or Footer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Declare resources in a view",
+      "subtitle": "Inline declarations and custom blocks",
+      "clips": [
+        {
+          "id": "05-view",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "A tag with only a source includes that file, without declaring a name. Add a name, and it declares a resource that others can depend on. A declared script is required only when you set at, while a declared stylesheet is required at once."
+            },
+            {
+              "id": "view-2",
+              "text": "For code that lives in the view, use scriptblock and styleblock in Liquid, or script and style with at in Razor. By default, a script block goes to the foot, and a style block follows the stylesheets."
+            },
+            {
+              "id": "view-3",
+              "text": "Give a block a name, and it renders once, however many views ask. It can also depend on other resources, so a block that needs jQuery is written after it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Links and meta tags",
+      "subtitle": "Link and meta elements of the head",
+      "clips": [
+        {
+          "id": "06-links",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "links-1",
+              "text": "The link tag registers a link element, such as an icon. HeadLink renders it in the head, with the tilde in its source resolved."
+            },
+            {
+              "id": "links-2",
+              "text": "The meta tag registers a meta element with a name and content. Two tags with the same name are combined, joined by a separator, a comma and a space by default. Meta renders them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Resource settings",
+      "subtitle": "Cache busting, CDN and debug mode",
+      "clips": [
+        {
+          "id": "07-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "The resource settings are in the admin. Open Settings, then General."
+            },
+            {
+              "id": "settings-2",
+              "text": "On the Resources tab, Settings for scripts and stylesheets holds the options."
+            },
+            {
+              "id": "settings-3",
+              "text": "Use resources cache busting appends a version hash to the address of local scripts and stylesheets. The hash changes with the file, so browsers fetch an edited file again. It is on by default."
+            },
+            {
+              "id": "settings-4",
+              "text": "Use framework CDN (Content Delivery Network) serves registered resources that have a CDN address, such as jQuery, from it instead of the local file. It is off by default, so a site works without an internet connection."
+            },
+            {
+              "id": "settings-5",
+              "text": "Site CDN (Content Delivery Network) base url adds a prefix, such as the address of your own CDN, to the address of local scripts and stylesheets. It is ignored when empty, or when debug mode is on."
+            },
+            {
+              "id": "settings-6",
+              "text": "Resource Debug Mode chooses between debuggable and minified files. By default, it follows the environment: debuggable files everywhere except in Production. The other two options force one or the other."
+            },
+            {
+              "id": "settings-7",
+              "text": "Saving these settings reloads the tenant, so the next request uses the saved values."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Include from code",
+      "subtitle": "The IResourceManager API",
+      "clips": [
+        {
+          "id": "08-api",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "api-1",
+              "text": "From code, inject IResourceManager. RegisterResource takes a type and a name, and returns settings you can chain, such as UseVersion and AtFoot."
+            },
+            {
+              "id": "api-2",
+              "text": "RegisterHeadScript and RegisterFootScript add custom scripts, RegisterMeta adds a meta tag, and AppendMeta adds to an existing one. The interface is in the OrchardCore.ResourceManagement.Abstractions package."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Resources: Declare and Include Scripts and Stylesheets",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Resources module: declare a resource once, include it by name, and let the layout render it once, in order, where you decide. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
