@@ -6813,9 +6813,9 @@
       "src/docs/reference/modules/Menu/README.md",
       "src/docs/reference/modules/Autoroute/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 7.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 7.0,
+    "words": 1048,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

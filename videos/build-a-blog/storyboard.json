@@ -1,0 +1,255 @@
+{
+  "title": "Build a Blog: Posts, Categories, Tags and a Menu",
+  "output": "build-a-blog",
+  "spoken": {
+    "Html": "H.T.M.L.",
+    "Url": "U.R.L.",
+    "main-menu": "main menu"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Build a Blog: Posts, Categories, Tags and a Menu",
+      "subtitle": "Posts, categories, tags and a menu with The Blog Theme",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A blog is a list of posts that visitors can browse by category and by tag, with a menu to find their way around. In this video, you build one with The Blog Theme: a category, a post with tags, and a menu item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a blog fits together",
+      "subtitle": "The Blog recipe and its parts",
+      "clips": [
+        {
+          "id": "01-pieces",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pieces-1",
+              "text": "The Blog recipe sets up a site for a blog. It creates the content types, a blog with a first post, the Categories and Tags taxonomies, and a Main Menu, and it activates The Blog Theme."
+            },
+            {
+              "id": "pieces-2",
+              "text": "The Blog is a list. It contains Blog Posts, shown with the most recent first, and it is the home page of the site. Each post has a title, a subtitle, a banner image, and a body."
+            },
+            {
+              "id": "pieces-3",
+              "text": "A taxonomy is a set of terms that you attach to content. A post can have one category, chosen from the Categories taxonomy, and any number of tags, taken from the Tags taxonomy. Both appear as badges on the post."
+            },
+            {
+              "id": "pieces-4",
+              "text": "You add a category, write a post, see where its tags are kept, and add an item to the Main Menu. Along the way, you meet the permalink: the address that each page gets on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "A tour of the blog",
+      "subtitle": "The site and the admin",
+      "clips": [
+        {
+          "id": "02-tour",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tour-1",
+              "text": "This is the home page of the site, and it is the Blog. The banner shows its title and description. Below come the posts, each with a subtitle, an author, a date, and badges for its category and tags."
+            },
+            {
+              "id": "tour-2",
+              "text": "At the top right, the Main Menu holds two items, Home and About. The name of the site stands on the left."
+            },
+            {
+              "id": "tour-3",
+              "text": "Opening a post shows its banner image, title, subtitle, and body. Under the text, the category and each tag link to a page that lists the posts they share."
+            },
+            {
+              "id": "tour-4",
+              "text": "In the admin, the Blog item of the menu opens the Blog and the list of its posts. Create Blog Post adds a post to this blog, and Edit Blog changes the blog itself."
+            },
+            {
+              "id": "tour-5",
+              "text": "Edit Blog shows how the blog is addressed. Its Permalink is blog, and a note says that this content item is the current homepage, which is why the site opens on the blog."
+            },
+            {
+              "id": "tour-6",
+              "text": "The footer at the bottom of every page is a widget. In the admin, Design, Widgets opens Widgets and Layers: the Footer zone holds it, and its badge names the layer, Always."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add a category",
+      "subtitle": "A term of the Categories taxonomy",
+      "clips": [
+        {
+          "id": "03-category",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "category-1",
+              "text": "Categories are the terms of a taxonomy. In the admin menu, Content, Taxonomy lists the taxonomies of the site. Let's edit Categories."
+            },
+            {
+              "id": "category-2",
+              "text": "The editor lists the terms of the taxonomy: here, Travel. Add Category creates a category at the top level, and the Add button of a term creates a subcategory inside it."
+            },
+            {
+              "id": "category-3",
+              "text": "Let's add Photography. The title is the name of the category. The Permalink is the end of the address of its page, so let's type photography."
+            },
+            {
+              "id": "category-4",
+              "text": "The Icon field is required. It opens a picker, and the icon appears next to the name of the category on the site. On this page, Publish adds the category to a draft of the taxonomy."
+            },
+            {
+              "id": "category-5",
+              "text": "A draft is not visible to visitors, so the taxonomy needs a Publish of its own. After that, the category is part of the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Write a post",
+      "subtitle": "Title, image, body, category and tags",
+      "clips": [
+        {
+          "id": "04-post",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "post-1",
+              "text": "From the Blog, Create Blog Post opens the editor of a post. Let's type the title and leave the Permalink empty: the address is built from the blog and the title, unless you type your own."
+            },
+            {
+              "id": "post-2",
+              "text": "The body is written in Markdown, which is plain text with simple marks for formatting. Let's write a sentence."
+            },
+            {
+              "id": "post-3",
+              "text": "The Subtitle shows under the title. For the Banner Image, Add media opens the media library: select an image and click OK."
+            },
+            {
+              "id": "post-4",
+              "text": "Tags searches as you type. Type to search the tags that exist, and select one. Let's select Exploration."
+            },
+            {
+              "id": "post-5",
+              "text": "When no tag matches, the field offers Press enter to create a tag. Let's type Lisbon and press Enter: the tag is created in the Tags taxonomy and selected for this post."
+            },
+            {
+              "id": "post-6",
+              "text": "Category lists the categories of the taxonomy, and a post can have one. Only a category without subcategories can be chosen. Let's choose Photography."
+            },
+            {
+              "id": "post-7",
+              "text": "Publish saves the post and returns to the Blog, with a message that the post is published. The list shows the post at the top. Save Draft would keep it hidden from visitors."
+            },
+            {
+              "id": "post-8",
+              "text": "On the site, the post comes first on the home page, with badges for Photography, Exploration and Lisbon. Opening it shows the banner, the subtitle and the text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Tags",
+      "subtitle": "Terms created while you write",
+      "clips": [
+        {
+          "id": "05-tags",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tags-1",
+              "text": "Each tag links to a page of its own. Lisbon lists the posts that have this tag, which is the post we wrote."
+            },
+            {
+              "id": "tags-2",
+              "text": "Tags are the terms of the Tags taxonomy. In the admin, Content, Taxonomy lists it, and its editor holds Lisbon next to the other tags. A tag created from a post is published at once."
+            },
+            {
+              "id": "tags-3",
+              "text": "Add Tag creates a tag here as well. The tag field of a post creates tags only for users who have the Manage taxonomies permission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add a menu item",
+      "subtitle": "Edit the Main Menu",
+      "clips": [
+        {
+          "id": "06-menu",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "menu-1",
+              "text": "Main Menu in the admin menu opens the editor of the menu. Its Alias field holds main-menu: The Blog Theme finds the menu by this alias, so keep it unchanged."
+            },
+            {
+              "id": "menu-2",
+              "text": "Below, the editor lists the items, Home and About. Add Menu Item opens a dialog named Available Menu Items."
+            },
+            {
+              "id": "menu-3",
+              "text": "It offers three types. A Link Menu Item links to a custom address, a Content Menu Item links to a content item, and an Html Menu Item uses HTML for the text of the link."
+            },
+            {
+              "id": "menu-4",
+              "text": "Let's add a Link Menu Item. The Name is the text visitors see, and the Url is where it leads. Photography leads to the page of the category."
+            },
+            {
+              "id": "menu-5",
+              "text": "Publish adds the item to a draft of the menu, and the editor lists it after Home and About. As with a taxonomy, visitors see the change only after the menu itself is published."
+            },
+            {
+              "id": "menu-6",
+              "text": "Let's publish the menu. Dragging an item changes its order, and the Add button of an item adds an item inside it, which the theme shows as a drop-down."
+            },
+            {
+              "id": "menu-7",
+              "text": "On the site, the menu shows Photography after About. Clicking it opens the page of the category, which lists the post we wrote."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Build a Blog: Posts, Categories, Tags and a Menu",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A blog needs a few parts: a Blog with its posts, categories and tags to organize them, a Main Menu to move around, and a permalink for every page. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

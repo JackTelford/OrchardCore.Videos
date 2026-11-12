@@ -1,0 +1,81 @@
+{
+  "title": "Build a Blog: Posts, Categories, Tags and a Menu | Orchard Core",
+  "description": "A blog is more than a list of posts: readers browse by category and by tag, and they need a menu to find their way around.\n\nThe Blog recipe and The Blog Theme set up a blog in Orchard Core. This video shows how the parts fit together, and how to add a category, write a post with its tags, and add an item to the Main Menu from the admin.\n\nIn this video:\n• How a blog fits together: the Blog, its posts, two taxonomies and a menu\n• A tour of the blog on the site and in the admin\n• Add a category\n• Write a post\n• Tags, the terms created from a post\n• Add a menu item",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Blog"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Blog",
+    "Blog theme",
+    "Taxonomies",
+    "Categories",
+    "Tags",
+    "Menu",
+    "Lists",
+    "Permalink"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Build a Site"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Starter recipes and themes",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/starter-recipes/"
+    },
+    {
+      "label": "Documentation: Lists",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lists/"
+    },
+    {
+      "label": "Documentation: Taxonomies",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/"
+    },
+    {
+      "label": "Documentation: Menu",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Menu/"
+    },
+    {
+      "label": "Documentation: Autoroute",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Autoroute/"
+    },
+    {
+      "label": "Documentation: Widgets",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Widgets/"
+    },
+    {
+      "label": "Documentation: Resources",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Resources/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Resources/README.md",
+    "src/docs/reference/modules/Widgets/README.md",
+    "src/docs/reference/modules/Lists/README.md",
+    "src/docs/reference/modules/Taxonomies/README.md",
+    "src/docs/reference/modules/Menu/README.md",
+    "src/docs/reference/modules/Autoroute/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "TheBlogTheme"
+  }
+}
