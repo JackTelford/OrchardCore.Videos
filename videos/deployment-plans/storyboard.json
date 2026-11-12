@@ -1,0 +1,248 @@
+{
+  "title": "Orchard Core deployment plans",
+  "output": "deployment-plans",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core deployment plans",
+      "subtitle": "Choose what a package holds",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A deployment plan is a saved list of steps that decides what a package holds. In this video, you create a plan, add and order its steps, and execute it to download the package."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a plan is",
+      "subtitle": "A named list of steps",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "plan-1",
+              "text": "A deployment plan is a named, ordered list of steps. Most steps add one kind of data to the package, such as content, content definitions, or a file."
+            },
+            {
+              "id": "plan-2",
+              "text": "The steps you can add come from the enabled features. When you execute a plan, its steps run from top to bottom and build one package. If a step's feature is disabled, the plan keeps the step and marks it unavailable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create a plan",
+      "subtitle": "A name is all it needs",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Let's open Tools, Deployments, Plans. The page lists the plans of this site, and Add Deployment Plan opens the form that creates one."
+            },
+            {
+              "id": "create-2",
+              "text": "A plan needs only a name, and the name must be unique. We type Spring Launch and select Create."
+            },
+            {
+              "id": "create-3",
+              "text": "Orchard Core opens the plan. Execute and Add Step are at the top, and a message says that the plan has no steps."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add steps",
+      "subtitle": "Choose what to export",
+      "clips": [
+        {
+          "id": "03-steps",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Let's select Add Step. Available Steps lists every step you can add, and Filter narrows the cards by their text. The categories on the left group the steps by area."
+            },
+            {
+              "id": "add-2",
+              "text": "Let's open Security. It holds steps such as All Roles and All Users, which export every role or every user, with nothing to choose."
+            },
+            {
+              "id": "add-3",
+              "text": "Back under All, we type content in Filter and add Content, which exports the items of the content types you choose."
+            },
+            {
+              "id": "add-4",
+              "text": "We check Blog Post. The step exports only the published items of the types you check. Export As Setup recipe stays unchecked, because it loses references to content items, and we select Create."
+            },
+            {
+              "id": "add-5",
+              "text": "Let's add Update Content Definitions. It exports the definition of a content type, so the site that imports the package receives the Blog Post type as well."
+            },
+            {
+              "id": "add-6",
+              "text": "The first checkbox, Include all content types and parts definitions, exports every definition. We check Blog Post only and select Create. The plan lists each step with a summary of its choices."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Order the steps",
+      "subtitle": "Steps run from top to bottom",
+      "clips": [
+        {
+          "id": "04-order",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "order-1",
+              "text": "A note under Update Content Definitions says that definitions belong before any content step. Let's drag its handle, at the left, above Content."
+            },
+            {
+              "id": "order-2",
+              "text": "The order is saved when you drop the step. When the plan is executed, the steps run in this order, so the definitions come first."
+            },
+            {
+              "id": "order-3",
+              "text": "Edit reopens a step with its current choices. Let's select Edit on Content, check Page as well, and select Save. The step keeps Blog Post and adds Page."
+            },
+            {
+              "id": "order-4",
+              "text": "Delete, on a row or in the editor, removes a step from the plan after you confirm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "General-purpose steps",
+      "subtitle": "Files and recipe details",
+      "clips": [
+        {
+          "id": "05-general",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "general-1",
+              "text": "Let's select Add Step and the Deployment category. It holds the four steps of the Deployment module: Custom File, Deployment Plans, JSON Recipe, and Recipe File."
+            },
+            {
+              "id": "general-2",
+              "text": "Custom File adds a file to the package. Deployment Plans exports the definitions of plans, so another site can recreate them. JSON Recipe adds a recipe step that you write yourself."
+            },
+            {
+              "id": "general-3",
+              "text": "We add Custom File. File Name is the path of the file in the package, and it must be relative. File Content is its text, so we type a short note and select Create."
+            },
+            {
+              "id": "general-4",
+              "text": "Recipe File sets the name, description, author, and other details of the recipe in the package. File Download reads the first Recipe File step of a plan, so we add one and name the recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Execute a plan",
+      "subtitle": "Download the package",
+      "clips": [
+        {
+          "id": "06-execute",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Let's select Execute. Available Targets lists where the package can go. File Download downloads it to your computer, and features such as Remote Deployment add targets of their own."
+            },
+            {
+              "id": "run-2",
+              "text": "The Select button on File Download runs the plan. Orchard Core runs its steps from top to bottom, and the browser downloads a zip file named after the plan. If the export fails, an error message appears and nothing downloads."
+            },
+            {
+              "id": "run-3",
+              "text": "Cancel closes Available Targets and leaves the plan as it was. Execute it again whenever you need a package, and the Content step exports the items that are published at that time."
+            }
+          ]
+        },
+        {
+          "id": "06-package",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "package-1",
+              "text": "The zip holds a recipe, which a site runs when it imports the package, and the files of your Custom File steps. Steps such as Content add their data to the recipe, in the plan's order. A separate video covers importing a package."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Manage plans",
+      "subtitle": "Search, rename, and permissions",
+      "clips": [
+        {
+          "id": "07-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "Back on Plans, the search box filters plans by name. Each plan has three buttons: Manage Steps opens the plan, Edit renames it, and Delete removes it."
+            },
+            {
+              "id": "manage-2",
+              "text": "Let's select Edit on this plan. We type another name and select Save, and the list returns with a confirmation."
+            }
+          ]
+        },
+        {
+          "id": "07-access",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "access-1",
+              "text": "Two permissions control plans. Manage deployment plans lets you create, edit, and delete plans and their steps, and Export Data lets you execute a plan. Administrators have both, and the Plans page needs both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core deployment plans",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A deployment plan lets you choose what a package holds, and in what order. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
