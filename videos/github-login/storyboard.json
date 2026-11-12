@@ -1,0 +1,193 @@
+{
+  "title": "GitHub Sign-In",
+  "output": "github-login",
+  "spoken": {
+    "/signin-github": "slash sign in dash GitHub"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "GitHub Sign-In",
+      "subtitle": "Let people sign in to your site with their GitHub account",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "People who have a GitHub account can use it to sign in to your Orchard Core site. In this video, you register an app on GitHub, enter its details in the admin, and see the result on the login page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How GitHub sign-in works",
+      "subtitle": "What GitHub and your site each do",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A visitor chooses GitHub on the login page, and the browser goes to GitHub. The person signs in there, and GitHub sends the browser back to your site."
+            },
+            {
+              "id": "how-2",
+              "text": "To connect the two, your site needs a Client ID, a client secret, and a callback path. The first two belong to an app that you register on GitHub. The callback path is where GitHub returns the person."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Register the app on GitHub",
+      "subtitle": "The app that provides the Client ID and the client secret",
+      "clips": [
+        {
+          "id": "02-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "On GitHub, open the Developer applications settings and create an OAuth app. In the app's details, set the Authorization Callback URL to the address of your site followed by /signin-github."
+            },
+            {
+              "id": "register-2",
+              "text": "The app has a Client ID and a client secret. Keep both at hand, because you enter them in Orchard Core next."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable GitHub Authentication",
+      "subtitle": "Turn the feature on",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Features is under Tools in the admin menu. Let's search it for GitHub. The GitHub Authentication feature authenticates users with their GitHub account."
+            },
+            {
+              "id": "enable-2",
+              "text": "The row lists External Authentication as a dependency, so that feature is enabled with it. Let's select Enable."
+            },
+            {
+              "id": "enable-3",
+              "text": "The row shows the Enabled status, and the Enable button is replaced by a Disable button. GitHub Authentication is ready to configure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Enter the app's details",
+      "subtitle": "Client ID, client secret and callback path",
+      "clips": [
+        {
+          "id": "04-configure",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "config-1",
+              "text": "Let's open Settings, Security, Authentication, GitHub. A notice at the top warns that the website might restart when you save these settings."
+            },
+            {
+              "id": "config-2",
+              "text": "Client ID is required. Let's enter the Client ID of the GitHub app; this one is made up for the recording."
+            },
+            {
+              "id": "config-3",
+              "text": "Client secret hides what you type, and the site keeps the value protected. Let's enter the secret of the app, also made up."
+            },
+            {
+              "id": "config-4",
+              "text": "CallbackPath is the path where GitHub returns the person to your site. Leave it empty to use /signin-github, the path you gave GitHub."
+            },
+            {
+              "id": "config-5",
+              "text": "The Store tokens check box keeps the external authentication tokens for reuse. Leave it cleared unless you need them."
+            },
+            {
+              "id": "config-6",
+              "text": "Let's select Save. The site confirms that the settings were updated, and the Client secret field says the value is securely stored."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The login page",
+      "subtitle": "Where visitors choose GitHub",
+      "clips": [
+        {
+          "id": "05-login",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "A signed-out visitor opens the login page. Next to the Log in form, a section titled Use another service to log in offers GitHub."
+            },
+            {
+              "id": "login-2",
+              "text": "The GitHub button appears only when a Client ID and a client secret are saved. Selecting it sends the browser to GitHub. This video stops there, because the next screens belong to a real GitHub app."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "When GitHub returns the person",
+      "subtitle": "Sign-in, linking and registration",
+      "clips": [
+        {
+          "id": "06-return",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "return-1",
+              "text": "When GitHub sends the person back, the site looks for a user linked to that GitHub account and signs the user in. If the email address from GitHub belongs to a local user, the site asks for that user's password to link the accounts."
+            },
+            {
+              "id": "return-2",
+              "text": "A person with no account fills in a registration form, is registered at once when the settings ask for nothing, or is told that new registrations are disabled. The external authentication settings of the Users module control this, and a separate video covers them."
+            },
+            {
+              "id": "return-3",
+              "text": "A signed-in user can also link GitHub to the existing account, from External Logins in the user menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "GitHub Sign-In",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "GitHub Authentication adds a GitHub button to the login page once the Client ID and client secret are saved. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

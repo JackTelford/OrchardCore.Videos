@@ -4282,9 +4282,9 @@
     "docs": [
       "src/docs/reference/modules/GitHub/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.6,
+    "words": 539,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
