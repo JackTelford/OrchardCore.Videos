@@ -1,0 +1,49 @@
+{
+  "title": "Static Files per Tenant: Serve Each Tenant's Own Files | Orchard Core",
+  "description": "A tenant that needs its own robots.txt, favicon or logo has no place for it in the shared wwwroot folder of the application.\n\nThe Static File Provider feature gives each tenant a wwwroot folder of its own, in its site folder, and serves the files under the tenant's domain and URL prefix. The video enables the feature, serves a different robots.txt for each of two tenants, and reads the code behind it.\n\nIn this video:\n• Why a file provider per tenant\n• Enable the feature in the admin, or in a recipe\n• Add files to the wwwroot folder of a tenant\n• Request the files of two tenants\n• How the provider is registered and serves the files\n• Which file is served first, the SEO module and tenant removal",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MultiTenancy"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "multi-tenancy",
+    "tenants",
+    "static files",
+    "file provider",
+    "robots.txt"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Multi-Tenancy"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Tenants.FileProvider"
+  }
+}
