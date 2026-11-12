@@ -1,0 +1,226 @@
+{
+  "title": "The Orchard Core SEO module",
+  "output": "seo-meta",
+  "spoken": {
+    "Add & Configure": "Add and Configure",
+    "SeoMeta": "SEO Meta"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core SEO module",
+      "subtitle": "Titles, descriptions and social sharing cards",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Search engines and social networks read a few values from every page: its title, a description, and a preview picture. The SEO module lets you set defaults for the whole site and values for each page. Let's see how."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two places for the values",
+      "subtitle": "Site defaults and page values",
+      "clips": [
+        {
+          "id": "01-places",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "The SEO module keeps these values in two places. Social Meta Settings holds defaults for the whole site, and they apply to every page that shows a content item, whatever its content type."
+            },
+            {
+              "id": "why-2",
+              "text": "The SeoMeta part holds the values of a single page. You attach it to a content type, such as Article, and its fields appear in an SEO tab of the editor. A value set on the page wins over the site default."
+            },
+            {
+              "id": "why-3",
+              "text": "Open Graph and Twitter Card are two formats that describe how a shared link is presented. The module has a panel for each, and both can start from the same title, description and picture."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the module",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "The SEO module is a feature, so let's start in Tools, Features, and search for SEO."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable on the SEO feature. Orchard Core also enables any feature that SEO depends on, and a notification confirms that SEO was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Site-wide defaults",
+      "subtitle": "Social Meta Settings",
+      "clips": [
+        {
+          "id": "03-defaults",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "defaults-1",
+              "text": "Open Settings, then Social Meta Settings. These fields hold the defaults that a page uses when it has no value of its own."
+            },
+            {
+              "id": "defaults-2",
+              "text": "Default Meta Description is the summary for pages without a Meta Description. Let's type one sentence about the site."
+            },
+            {
+              "id": "defaults-3",
+              "text": "The same page also has defaults for Open Graph and Twitter, such as Open Graph Type, Default Open Graph Description, Twitter Card and Default Twitter Description. Let's leave them empty."
+            },
+            {
+              "id": "defaults-4",
+              "text": "The Social card holds the pictures. Default social image is the picture for shared links, unless Open graph image or Twitter Image sets a more specific one. Select Add media, choose a picture, and select OK."
+            },
+            {
+              "id": "defaults-5",
+              "text": "Select Media text and describe the picture. The module uses this text as the alternative text of the image. Select Save, and the message Site settings updated successfully confirms the save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add the part to a content type",
+      "subtitle": "The SeoMeta part",
+      "clips": [
+        {
+          "id": "04-part",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "Page values come from the SeoMeta part. Let's open Design, Content Definition, Content Types, and edit the Article type."
+            },
+            {
+              "id": "part-2",
+              "text": "Select Add Parts. SeoMeta is in the list, with its description. Select Add & Configure on its row to attach the part and open its settings."
+            },
+            {
+              "id": "part-3",
+              "text": "Five checkboxes, each starting with Display, decide which panels the editor shows: Keywords, Custom Meta Tags, Open Graph, Twitter and Google Schema. All five start unchecked."
+            },
+            {
+              "id": "part-4",
+              "text": "Let's check Display Open Graph and Display Twitter, and leave the others off. Select Save, and a notification confirms the part settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Edit a page",
+      "subtitle": "The SEO tab",
+      "clips": [
+        {
+          "id": "05-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "Let's open Content, Content Items, and edit the About article. The editor has a second tab named SEO. Select it."
+            },
+            {
+              "id": "page-2",
+              "text": "Render is checked by default. When you clear it, the SEO module writes no values for this page at all."
+            },
+            {
+              "id": "page-3",
+              "text": "Page Title overrides the title that the browser shows for the page. Its hint recommends keeping it under 70 characters. Let's type a short title."
+            },
+            {
+              "id": "page-4",
+              "text": "Meta Description is a short summary of the page. Let's type one sentence."
+            },
+            {
+              "id": "page-5",
+              "text": "Canonical overrides the address that identifies the page. It stays empty, so the module uses the page's own address. Meta Robots, the robots meta tag of this page, stays empty too, and a separate video covers the robots file of the whole site."
+            },
+            {
+              "id": "page-6",
+              "text": "In the Social card, Default social image sets one picture for both Open Graph and Twitter. Select Add media, choose a picture, and select OK."
+            },
+            {
+              "id": "page-7",
+              "text": "Select Media text and describe the picture. This text becomes the alternative text of the image for this page."
+            },
+            {
+              "id": "page-8",
+              "text": "The Open Graph and Twitter cards have their own title and description fields. Here they stay empty, so they use the Page Title and the Meta Description."
+            },
+            {
+              "id": "page-9",
+              "text": "Select Publish. The content of the page stays as it is. The module adds these values behind the page, for browsers, search engines and social networks to read."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Where each value comes from",
+      "subtitle": "Defaults and fallbacks",
+      "clips": [
+        {
+          "id": "06-sources",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sources-1",
+              "text": "Each value has an order. The Page Title replaces the whole browser title, without the site name. Meta Description comes from the page, then from Default Meta Description, and Canonical from the page, then from the address of the page."
+            },
+            {
+              "id": "sources-2",
+              "text": "For sharing, a title comes from its own field, the Page Title, then the content item's title. A description comes from its own field, the page's Meta Description, then Default Open Graph Description or Default Twitter Description in Social Meta Settings."
+            },
+            {
+              "id": "sources-3",
+              "text": "Pictures follow four steps: the specific picture of the page, the Default social image of the page, the specific picture in Social Meta Settings, and its Default social image. The media text, which becomes the alternative text, follows the same order."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core SEO module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Set the defaults once in Social Meta Settings, and add the SeoMeta part to the content types whose pages need values of their own. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

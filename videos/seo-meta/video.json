@@ -1,0 +1,49 @@
+{
+  "title": "SEO Meta: Titles, Descriptions and Social Sharing Cards | Orchard Core",
+  "description": "Search engines and social networks read a few values from every page: its title, a description, the address that identifies it, and the pictures that go with a shared link. Orchard Core can set these values for the whole site and for each page.\n\nThe SEO module keeps them in two places: Social Meta Settings holds defaults for the whole site, and the SeoMeta part holds the values of a single page. This video enables the module, sets the site-wide defaults, attaches the part to a content type, and fills in the SEO tab of a page.\n\nIn this video:\n• Two places for the values\n• Enable the module\n• Site-wide defaults in Social Meta Settings\n• Add the SeoMeta part to a content type\n• Edit the SEO tab of a page\n• Where each value comes from",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "SEO"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "SEO",
+    "Meta Description",
+    "Open Graph",
+    "Twitter Card",
+    "Social Meta Settings"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "SEO and Analytics"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Seo/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Seo/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Seo"
+  }
+}
