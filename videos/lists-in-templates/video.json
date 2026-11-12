@@ -1,0 +1,59 @@
+{
+  "title": "Lists in Templates: Liquid Filters for Containers and Their Items | Orchard Core",
+  "description": "A template that shows a blog needs the posts of the blog, their number, and, on a post, the blog that holds it. A list stores these relationships in the content items themselves, and a template has to read them back.\n\nThe Lists module gives Liquid templates three filters for this: container returns the list that holds an item, and list_items and list_count read the published items of a list. The ListPart shape renders one page of a list, and the Orchard helper offers the same queries in Razor.\n\nIn this video:\n• How a list is stored: ContainedPart and three filters\n• The ListPart template: rendering the items of a list\n• The container filter: from an item to its list\n• Items and counts: list_items and list_count\n• A template that uses all three on a blog post page\n• The same queries in a Razor view",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Lists",
+    "ListPart",
+    "Liquid",
+    "Liquid templates",
+    "Orchard Core templates",
+    "list_items",
+    "list_count"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Lists"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lists/"
+    },
+    {
+      "label": "Liquid documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Liquid/"
+    },
+    {
+      "label": "Templates documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Templates/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Lists/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Lists"
+  }
+}
