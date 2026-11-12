@@ -1,0 +1,215 @@
+{
+  "title": "Security headers in Orchard Core",
+  "output": "security-headers",
+  "spoken": {
+    "X-Content-Type-Options": "X Content Type Options",
+    "X-Frame-Options": "X Frame Options",
+    "nosniff": "no sniff"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Security headers in Orchard Core",
+      "subtitle": "Content Security Policy, Permissions Policy and Referrer Policy",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every page your site sends to a browser comes with headers, and some are security instructions. The Security module lets you set three of them from the admin. In this video, you set the Content Security Policy, the Permissions Policy and the Referrer Policy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How security headers work",
+      "subtitle": "The four headers of the Security module",
+      "clips": [
+        {
+          "id": "01-headers",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "When a visitor opens a page, your site answers with the page and a set of headers. Security headers are instructions in that answer, and the browser follows them while it shows the page."
+            },
+            {
+              "id": "why-2",
+              "text": "Content Security Policy limits where a page may load scripts, styles, images and other resources from. X-Content-Type-Options makes the browser trust the file type that a response declares, instead of guessing it."
+            },
+            {
+              "id": "why-3",
+              "text": "Permissions Policy limits which browser features a page may use, such as the camera or the location. Referrer Policy limits what a link reveals about the page that contains it."
+            },
+            {
+              "id": "why-4",
+              "text": "With the default settings, the site always sends X-Content-Type-Options as nosniff, and Referrer Policy as No referrer. Content Security Policy and Permissions Policy are sent only after you give them a value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Open the settings",
+      "subtitle": "Find the Security module and its settings",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "The headers come from the Security module. Let's open Tools, Features, and search for Security."
+            },
+            {
+              "id": "open-2",
+              "text": "The Security feature is listed as Enabled, because the Blog recipe turns it on. If your site shows Disabled, select Enable beside it."
+            },
+            {
+              "id": "open-3",
+              "text": "The settings are under Settings, Security, Security Headers. A warning on the page says the site might restart when you save. Three tabs hold the settings: Content Security Policy, Permissions Policy and Referrer Policy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Content Security Policy",
+      "subtitle": "Control where a page can load resources from",
+      "clips": [
+        {
+          "id": "03-csp",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "csp-1",
+              "text": "The first tab is Content Security Policy. Each row is one rule. Most rows name a kind of resource, and the box beside it lists the places the browser may load that kind of resource from."
+            },
+            {
+              "id": "csp-2",
+              "text": "Default Source is the fallback: the browser uses it for each kind of resource, such as scripts or images, whose own row is empty. Script Source, Style Source, Image Source and Font Source each cover one kind."
+            },
+            {
+              "id": "csp-3",
+              "text": "A source is a web address, or the word self in single quotes, which stands for your own site. Separate several sources with spaces, and use none in single quotes to allow nothing."
+            },
+            {
+              "id": "csp-4",
+              "text": "Let's type none in single quotes in Object Source, which controls plugins, and self in single quotes in Frame Ancestors. Frame Ancestors lists the sites that may show your pages in a frame, and it makes the X-Frame-Options header unnecessary."
+            },
+            {
+              "id": "csp-5",
+              "text": "Above the table are two checkboxes. Enable Sandbox applies the restrictions of a sandboxed frame to the page, and Upgrade Insecure Requests asks the browser to load insecure addresses over HTTPS."
+            },
+            {
+              "id": "csp-6",
+              "text": "Whatever a policy does not allow, the browser does not load. Test your site after every change, because a policy that is too strict can block scripts, styles or images that your pages need."
+            },
+            {
+              "id": "csp-7",
+              "text": "Select Save, and a message confirms that the site settings are updated. The site might restart, as the warning on the page says."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Permissions Policy",
+      "subtitle": "Choose which browser features a page can use",
+      "clips": [
+        {
+          "id": "04-permissions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "The Permissions Policy tab lists browser features, such as Geolocation, Camera and Microphone. Each row sets which sites may use that feature."
+            },
+            {
+              "id": "perm-2",
+              "text": "Each row offers None, Any and Self. None, the default, leaves the feature out of the header. Any allows every site, and Self allows your own site, with a box for more addresses."
+            },
+            {
+              "id": "perm-3",
+              "text": "Let's allow Geolocation for your own site and for one partner site. Choose Self in the Geolocation row, and type the partner address in the box that opens."
+            },
+            {
+              "id": "perm-4",
+              "text": "Select Save. The Permissions Policy header is sent from then on, and it lists only the features you did not leave at None."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Referrer Policy",
+      "subtitle": "Control what a link reveals about your page",
+      "clips": [
+        {
+          "id": "05-referrer",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "ref-1",
+              "text": "The Referrer Policy tab has one list. It controls how much information the browser includes when a visitor follows a link away from one of your pages."
+            },
+            {
+              "id": "ref-2",
+              "text": "The list starts at No referrer, which sends nothing. Same origin sends the address of your page to pages of your own site, and nothing to other sites. Let's choose Same origin."
+            },
+            {
+              "id": "ref-3",
+              "text": "Select Save. One Save stores the changes of all three tabs, so you can edit several tabs and save once."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Good to know",
+      "subtitle": "Permissions and settings set by a developer",
+      "clips": [
+        {
+          "id": "06-know",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "know-1",
+              "text": "The Security Headers item appears in the menu only for users who have the permission named Manage Security Headers Settings. Opening the page also takes the Manage settings permission. The Administrator role has both by default."
+            },
+            {
+              "id": "know-2",
+              "text": "A developer can also set these headers in the configuration of the site, when the site is set up to read them. Those values then take precedence over what you save here, and the page displays a message to say so."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Security headers in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Security headers tell the browser how to treat your pages. Set them under Settings, Security, Security Headers, and test your site after every change. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
