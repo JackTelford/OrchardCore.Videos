@@ -1,0 +1,60 @@
+{
+  "title": "Roles and Permissions: Control Who Can Do What | Orchard Core",
+  "description": "Not everyone who uses a site should be able to do everything. Orchard Core decides who can view, edit, publish, and manage what with roles and permissions.\n\nA permission is one thing a person may do, a role is a named set of permissions, and a user receives the permissions of every role they have. This video walks through the Roles page, creates a role, chooses its permissions, and gives the role to a user.\n\nIn this video:\n• Roles, permissions, and the Administrator, Anonymous, and Authenticated system roles\n• The Roles page under Access Control\n• Create a role with a name and a description\n• Choose permissions: Allow, Effective, and Security Critical\n• Give a role to a user\n• Delete a role\n• The four points to remember",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "roles",
+    "permissions",
+    "user roles",
+    "access control",
+    "administrator",
+    "security"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Roles and Permissions"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Roles",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Roles/"
+    },
+    {
+      "label": "Documentation: Permissions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Documentation: Roles and Permissions",
+      "url": "https://docs.orchardcore.net/en/latest/topics/security/roles/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Roles/README.md",
+    "src/docs/reference/modules/Security/Permissions.md",
+    "src/docs/topics/security/roles.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Roles"
+  }
+}
