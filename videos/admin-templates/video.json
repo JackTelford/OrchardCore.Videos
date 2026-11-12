@@ -1,0 +1,61 @@
+{
+  "title": "Admin Templates: Customize Admin Screens With Liquid | Orchard Core",
+  "description": "The screens of the Orchard Core admin are drawn by shapes, and changing one normally means overriding its view in a custom admin theme, then changing code and deploying the site.\n\nThe Admin Templates feature lets you write a Liquid template in the admin, named after the shape it replaces. It is stored in the database, applies to admin pages only, and can be exported and imported with recipes and deployment plans.\n\nIn this video:\n• Why Admin Templates exist, and how they differ from Templates\n• How a template is named after a shape, and which admin shapes the documentation overrides\n• Enabling the Admin Templates feature\n• Creating a template that replaces the Visit Site link\n• Editing and deleting a template\n• The AdminTemplates recipe step and the All Admin Templates deployment step\n• What Save checks, the two permissions, and keeping the feature away from a tenant",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Admin Templates",
+    "Liquid",
+    "Shapes",
+    "Templates"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Notifications",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Notifications/"
+    },
+    {
+      "label": "Documentation: Tenants",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Documentation: Templates",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Templates/"
+    },
+    {
+      "label": "Documentation: Admin",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Admin/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Notifications/README.md",
+    "src/docs/reference/modules/Tenants/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AdminTemplates"
+  }
+}

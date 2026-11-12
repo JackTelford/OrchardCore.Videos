@@ -2337,9 +2337,9 @@
       "src/docs/reference/modules/Notifications/README.md",
       "src/docs/reference/modules/Tenants/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.7,
+    "words": 706,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

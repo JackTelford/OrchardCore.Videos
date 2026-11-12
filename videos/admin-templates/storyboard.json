@@ -1,0 +1,225 @@
+{
+  "title": "Orchard Core Admin Templates",
+  "output": "admin-templates",
+  "spoken": {
+    "AdminBranding": "Admin Branding",
+    "VisitSiteNavbarItem": "Visit Site Navbar Item",
+    "NotifyMessages": "Notify Messages",
+    "AdminTemplates": "Admin Templates"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Admin Templates",
+      "subtitle": "Customize admin screens with Liquid",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Admin Templates lets you change how parts of the Orchard Core admin are drawn, using Liquid templates that you write in the admin itself. In this video, we enable the feature, replace the Visit Site link, and see how templates travel with a recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why Admin Templates",
+      "subtitle": "Change the admin from the admin",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "The admin is drawn by shapes. To change one, you normally override its view in a custom admin theme, which means changing code and deploying the site."
+            },
+            {
+              "id": "why-2",
+              "text": "The Admin Templates feature moves that change into the admin. You write a Liquid template, name it after a shape, and Orchard Core stores it in the database and uses it on admin pages."
+            },
+            {
+              "id": "why-3",
+              "text": "Admin Templates apply only to the admin, and the Templates feature does the same for the front end. A template wins over a view file of the same name, and deleting it brings the view file back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Name a shape",
+      "subtitle": "Which shapes you can override",
+      "clips": [
+        {
+          "id": "02-shapes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shapes-1",
+              "text": "A template is named after a shape. The name is the shape type or an alternate, where double underscores take the place of the dash in a view file name. In Liquid, the shape is Model."
+            },
+            {
+              "id": "shapes-2",
+              "text": "The documentation overrides these admin shapes with Admin Templates. AdminBranding draws the logo and site name, VisitSiteNavbarItem the Visit Site link, Message one notification, and NotifyMessages the container of the notifications."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable Admin Templates",
+      "subtitle": "A feature of the Templates module",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Admin Templates is a feature of the Templates module, so it has to be enabled first. Open Tools, Features, and search for admin templates."
+            },
+            {
+              "id": "enable-2",
+              "text": "The feature is listed under Development, with Templates as its dependency. Select Enable. A notification confirms it, and any feature it depends on is enabled with it."
+            },
+            {
+              "id": "enable-3",
+              "text": "The Design menu has an Admin Templates entry beside Templates. Open it. The list is empty, and says there are no templates for the moment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create a template",
+      "subtitle": "Replace the Visit Site link",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Select Add Template. The form asks for a Name, a Description, and the Content. Unlike the form of the Templates feature, it has no Preview button."
+            },
+            {
+              "id": "create-2",
+              "text": "The name is the shape type. Enter VisitSiteNavbarItem, the shape of the Visit Site link in the top bar, and a short description."
+            },
+            {
+              "id": "create-3",
+              "text": "Content is an editor for Liquid. We enter the template: the absolute URL filter builds the link, and the t filter translates the label."
+            },
+            {
+              "id": "create-4",
+              "text": "It draws the same link as the original, with the words Visit Site added beside the icon. A template replaces the whole shape, so it has to draw everything the shape shows."
+            },
+            {
+              "id": "create-5",
+              "text": "Select Save. A notification confirms that the template has been created, and the list shows it with its description, an Edit button, and a Delete button."
+            },
+            {
+              "id": "create-6",
+              "text": "Look at the top bar: the Visit Site link shows its icon and its text. The template applies to every page of the admin, such as Content Items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Edit and delete",
+      "subtitle": "Change it, or bring back the original",
+      "clips": [
+        {
+          "id": "05-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "Edit opens the same form with the saved name and Liquid. Change the text beside the icon, and select Save. The top bar shows the change."
+            },
+            {
+              "id": "manage-2",
+              "text": "Delete asks for confirmation. Confirm it, and a notification says the template was deleted. The list is empty again."
+            },
+            {
+              "id": "manage-3",
+              "text": "The original view was never touched, so the top bar shows the icon alone again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Ship with recipes",
+      "subtitle": "Recipes and deployment plans",
+      "clips": [
+        {
+          "id": "06-ship",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ship-1",
+              "text": "A recipe creates admin templates with the AdminTemplates step. Each property is a template name, holding its Description and its Content, and the content can point to a file of the recipe."
+            },
+            {
+              "id": "ship-2",
+              "text": "In a deployment plan, the All Admin Templates step exports every admin template. With Export templates as files, each one is written to a Liquid file, and the plan's AdminTemplates step points to it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Before you rely on it",
+      "subtitle": "Save, permissions and tenants",
+      "clips": [
+        {
+          "id": "07-good",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "good-1",
+              "text": "Save checks that the name and the content are filled in, and that no other template has the same name. If the Liquid cannot be parsed, the shape shows the parser's error text instead of your markup, so test each template on a page."
+            },
+            {
+              "id": "good-2",
+              "text": "Two permissions apply: Manage admin templates, granted to Administrator by default, and Manage Liquid templates, granted to Administrator and Editor. Both are security critical, and a user needs both."
+            },
+            {
+              "id": "good-3",
+              "text": "A multi-tenant host can keep the feature away from a tenant. A feature profile with an Exclude rule for the Admin Templates feature removes it from the features available to tenants that use the profile."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Admin Templates",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Admin Templates keeps changes to the admin inside the admin: Liquid templates named after shapes, stored in the database, and moved between sites with recipes. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
