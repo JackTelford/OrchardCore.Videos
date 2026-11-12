@@ -1,6 +1,6 @@
 # Mini Profiler: Find What Makes a Page Slow
 
-**YouTube:** not published yet · **Length:** 4:21 · **Feature:** [`OrchardCore.MiniProfiler`](https://docs.orchardcore.net/en/latest/reference/modules/MiniProfiler/)
+**YouTube:** not published yet · **Length:** 4:24 · **Feature:** [`OrchardCore.MiniProfiler`](https://docs.orchardcore.net/en/latest/reference/modules/MiniProfiler/)
 
 A developer video about the Mini Profiler module. It shows what the module records (requests, MVC filters and views,
 shapes and YesSql commands), how to enable it and choose who sees its widget, and how to read a profile: the timing tree,

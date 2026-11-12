@@ -54,8 +54,8 @@ with `scripts/pronounce.py` before narrating:
 
 - "Add Orchard C.M.S." for `AddOrchardCms`;
 - "Mini Profiler dot Current" for `MiniProfiler.Current`;
-- `YesSql` and `SQL` are left as written: confirm that the voice says "Yes sequel" (or "Yes S.Q.L.") and "sequel" (or
-  "S.Q.L.") consistently, and that `MVC` is said as three letters. If not, add an entry to `spoken`.
+- "Yes S.Q.L." for `YesSql` and "M.V.C." for `MVC`: confirm the voice says them cleanly. `SQL` and `HTML` are left as
+  written: confirm the voice says "sequel" (or "S.Q.L.") consistently and "H.T.M.L.". If not, add an entry to `spoken`.
 
 ## 6. Fonts of TheBlogTheme
 

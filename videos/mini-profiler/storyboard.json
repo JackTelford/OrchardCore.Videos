@@ -3,6 +3,8 @@
   "output": "mini-profiler",
   "spoken": {
     "MiniProfilerOptions": "Mini Profiler Options",
+    "YesSql": "Yes S.Q.L.",
+    "MVC": "M.V.C.",
     "MiniProfiler.Current": "Mini Profiler dot Current",
     "MiniProfiler": "Mini Profiler",
     "ConfigureServices": "Configure Services",
@@ -175,7 +177,7 @@
             },
             {
               "id": "conf-2",
-              "text": "Three controls are separate. The widget permissions decide whether the widget is added to a page, ResultsAuthorize protects the result endpoints and is not set by the module, and ShouldProfile decides whether a request is recorded at all."
+              "text": "Three controls are separate. The widget permissions decide whether the widget is added to a page. ResultsAuthorize protects the result endpoints and is not set by the module, so set it where untrusted users can reach the site. ShouldProfile decides whether a request is recorded."
             }
           ]
         }
