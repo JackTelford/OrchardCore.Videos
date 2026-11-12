@@ -1,0 +1,219 @@
+{
+  "title": "Lists: Ordering, Paging and Contained Types",
+  "output": "lists-ordering-paging",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Lists: Ordering, Paging and Contained Types",
+      "subtitle": "Control what a list holds and how it is shown",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A list is a content item that holds other content items, like a blog and its posts. In this video, you choose the types a list accepts, how many items each page shows, and the order of the items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a list is configured",
+      "subtitle": "Settings of the List part",
+      "clips": [
+        {
+          "id": "01-settings",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "A list is a content item with the List part, such as a Blog. Its items are content items of the types you choose, such as Blog Posts. The settings sit on the content type, so every list of that type shares them."
+            },
+            {
+              "id": "settings-2",
+              "text": "Contained Content Types chooses which content types the list accepts. Page Size sets how many items appear on each page, and it is 10 until you change it."
+            },
+            {
+              "id": "settings-3",
+              "text": "Enable Ordering lets you arrange the items by dragging them. Two display options, Show full pager and Show container's header, change what appears around the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Open the List settings",
+      "subtitle": "Under Design, Content Definition",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "The List settings live under Design, Content Definition, Content Types. Each content type has an Edit button; let's edit the Blog type."
+            },
+            {
+              "id": "open-2",
+              "text": "In the Parts list, the List part has an Edit button of its own. Select it to open the part's settings."
+            },
+            {
+              "id": "open-3",
+              "text": "The List part has these settings: Page Size, Enable Ordering, Contained Content Types, Show container's header, and Show full pager. The next chapters change them one at a time."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Contained content types",
+      "subtitle": "Choose what a list accepts",
+      "clips": [
+        {
+          "id": "03-types",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "This is the admin page of a blog. Because the list accepts a single content type, Blog Post, one Create Blog Post button adds an item."
+            },
+            {
+              "id": "types-2",
+              "text": "Contained Content Types shows every content type of the site as a checkbox. Let's check Article as well, and save. Saving with no type checked shows an error."
+            },
+            {
+              "id": "types-3",
+              "text": "Back on the blog's page, a New menu replaces the single button. It lists both accepted types, Article and Blog Post."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Page Size",
+      "subtitle": "How many items appear on a page",
+      "clips": [
+        {
+          "id": "04-size",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "size-1",
+              "text": "Page Size sets how many items appear on a page. At the default of 10, all eight posts of this blog fit on one page, newest first."
+            },
+            {
+              "id": "size-2",
+              "text": "Let's set it to 3. Open the List settings, enter the number in the Page Size field, and save the settings."
+            },
+            {
+              "id": "size-3",
+              "text": "On the blog's admin page, the list shows three posts, with an arrow below it that opens the next page."
+            },
+            {
+              "id": "size-4",
+              "text": "The same setting applies on the site. Visitors see three posts at a time, and the Older Posts link opens the next page."
+            },
+            {
+              "id": "size-5",
+              "text": "The second page adds a Newer Posts link to go back, next to Older Posts, which continues toward the oldest posts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Manual ordering",
+      "subtitle": "Arrange the items by dragging",
+      "clips": [
+        {
+          "id": "05-ordering",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "order-1",
+              "text": "Without ordering, a list shows its newest items first. Enable Ordering lets you choose the order yourself, by dragging."
+            },
+            {
+              "id": "order-2",
+              "text": "Check Enable Ordering and save. Turning it on numbers the existing items from newest to oldest, so the list looks the same until you drag an item."
+            },
+            {
+              "id": "order-3",
+              "text": "On the blog's admin page, every row has a drag handle at its start."
+            },
+            {
+              "id": "order-4",
+              "text": "Open the second page with the arrow below the list. Let's drag its third post to the top of that page. The order is saved as soon as you drop it."
+            },
+            {
+              "id": "order-5",
+              "text": "Open the blog on the site, and select Older Posts. The second page follows the same order: the post you moved comes first."
+            },
+            {
+              "id": "order-6",
+              "text": "Items you create later are added at the end of the list. A post you create appears on the last page."
+            },
+            {
+              "id": "order-7",
+              "text": "Searching or filtering the list hides the handles. Search for garden, and the matching rows have no handles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Display options",
+      "subtitle": "Full pager and container's header",
+      "clips": [
+        {
+          "id": "06-display",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "display-1",
+              "text": "Show full pager adds numbered pages to the pager. Its hint notes that it needs an additional database query to count the items. Check it, and save."
+            },
+            {
+              "id": "display-2",
+              "text": "The admin page then shows a number for every page, with arrows on either side for the first, previous, next and last page. Select a number to jump to that page."
+            },
+            {
+              "id": "display-3",
+              "text": "Show container's header adds a card with the title of the list above its items. Back in the settings, check it, and save."
+            },
+            {
+              "id": "display-4",
+              "text": "The card appears on the list's admin page, and on the editor page of each post in the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Lists: Ordering, Paging and Contained Types",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's how a list decides what it accepts, how many items a page shows, and in which order. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
