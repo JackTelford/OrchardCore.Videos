@@ -1,0 +1,226 @@
+{
+  "title": "Build a Contact Form From Widgets",
+  "output": "forms-contact-form",
+  "spoken": {
+    "EncType": "Encode Type",
+    "contact-us": "contact us",
+    "name@example.com": "name at example dot com"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Build a Contact Form From Widgets",
+      "subtitle": "A form on a page, made with the Forms module",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Visitors often need a way to write to you. The Forms module builds a contact form from widgets, on any page that holds widgets. In this video, let's enable it, build a form with fields and a button, and publish it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a form is built",
+      "subtitle": "A Form widget that holds field widgets",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "The Forms module provides widgets for building a form. The Form widget is the form itself, and the field widgets go inside it. The Form widget sits on a page that can hold widgets, such as the Page type of the Blog recipe."
+            },
+            {
+              "id": "idea-2",
+              "text": "Input is a single-line field, and its type can be text, email, phone, number, date, and more. Text Area takes longer text, and Select offers a list of choices. Button sends the form when its type is Submit."
+            },
+            {
+              "id": "idea-3",
+              "text": "Every field widget has an HTML Name, the name its value is sent under. Input, Text Area, and Select also have a label setting, which is None until you change it, so a field shows no label."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the form",
+      "subtitle": "Enable Forms, add a page, and add a Form widget",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "The Forms feature is listed under Tools, Features. Let's search for Forms, and select Enable."
+            },
+            {
+              "id": "create-2",
+              "text": "A notification confirms it. Forms relies on the Widgets and Flows features, which the Blog recipe enables."
+            },
+            {
+              "id": "create-3",
+              "text": "The form goes on a page. Under Content, Content Items, the New button lists the types you can create. Let's choose Page."
+            },
+            {
+              "id": "create-4",
+              "text": "A page has a title and a permalink. Let's enter Contact Us as the title, and leave the permalink empty, so it is generated from the title."
+            },
+            {
+              "id": "create-5",
+              "text": "Below the permalink is the list of widgets. The plus button, Add Widget, lists the widget types. Let's choose Form."
+            },
+            {
+              "id": "create-6",
+              "text": "The form's title identifies it in the editor, and the page does not show it to visitors. Let's enter Contact."
+            },
+            {
+              "id": "create-7",
+              "text": "Action is the address the form submits to. Method is POST or GET, and EncType sets how the data is encoded. Let's leave Action empty and keep the defaults of the other two."
+            },
+            {
+              "id": "create-8",
+              "text": "Both checkboxes are selected. Anti Forgery Token adds a hidden token to the form, and Save Form Location stores the address of the page, so a workflow can send the visitor back."
+            },
+            {
+              "id": "create-9",
+              "text": "Let's select Save Draft. A notification confirms that the Page draft was saved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Text fields",
+      "subtitle": "Input widgets for a name and an email address",
+      "clips": [
+        {
+          "id": "03-text",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "text-1",
+              "text": "The page is open again, with its Form widget. Fields go inside the form, so the Form widget has a plus button of its own, Add Widget. Let's add an Input."
+            },
+            {
+              "id": "text-2",
+              "text": "HTML Name is required. It is the name the browser sends the value under, written with letters, digits, hyphens, underscores, periods, or square brackets. Let's enter Name."
+            },
+            {
+              "id": "text-3",
+              "text": "ID is optional. It sets the ID of the field on the page, and when it is empty, the ID is generated from the HTML Name."
+            },
+            {
+              "id": "text-4",
+              "text": "Label option is None by default. Standard shows the label text before the field, and Screen Readers hides it visually but keeps it for screen readers. Let's choose Standard, and enter Name as the Label Text."
+            },
+            {
+              "id": "text-5",
+              "text": "Type is Text. Placeholder Text is what the empty field shows, and Default Value is what the field holds before the visitor types. Let's enter Your full name as the Placeholder Text."
+            },
+            {
+              "id": "text-6",
+              "text": "A second Input holds the email address. Let's add it with the HTML Name Email, the Label option Standard, the Label Text Email address, the Type Email, and the Placeholder Text name@example.com."
+            },
+            {
+              "id": "text-7",
+              "text": "Let's select Save Draft to keep the two fields."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choice, message, and button",
+      "subtitle": "Select, Text Area, and Button widgets",
+      "clips": [
+        {
+          "id": "04-rest",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "rest-1",
+              "text": "The page opens again with both inputs. Add Widget, inside the form, lists Select, for a list of choices. Its HTML Name is Topic, its Label option is Standard, and its Label Text is What is this about."
+            },
+            {
+              "id": "rest-2",
+              "text": "The Editor setting decides how the choices appear: as a Dropdown, as Checkbox options, or as Radio options. Let's keep Dropdown."
+            },
+            {
+              "id": "rest-3",
+              "text": "Each option has a text, which visitors read, and a value, which the form sends. Let's add three options: General question, Support request, and Sales. The Default? column picks the option that starts selected, and let's leave it empty."
+            },
+            {
+              "id": "rest-4",
+              "text": "A Text Area holds a longer message. Like the other fields, it has the HTML Name Message, the Label option Standard, and the Placeholder Text How can we help. Rows sets its height in lines, so let's use six."
+            },
+            {
+              "id": "rest-5",
+              "text": "Last, a Button. Like the fields, it needs an HTML Name, so let's enter Send. Text is what visitors read on it, so let's enter Send message, and Type is Submit, which sends the form."
+            },
+            {
+              "id": "rest-6",
+              "text": "Let's select Publish. A notification confirms that the Page was published."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The form on the site",
+      "subtitle": "Labels, placeholders, and the button",
+      "clips": [
+        {
+          "id": "05-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "The permalink was generated from the title: contact-us. Let's open the page, where the form shows its widgets in the order they were added."
+            },
+            {
+              "id": "site-2",
+              "text": "Each label comes from its label text, and each empty field shows its placeholder. The Topic field is a dropdown list with the three options."
+            },
+            {
+              "id": "site-3",
+              "text": "Let's fill the form in with sample values: a name, an email address, a topic, and a message."
+            },
+            {
+              "id": "site-4",
+              "text": "The Send message button submits the form to the address in the Action field, which is empty here. Pointing it at something that receives the submission is a separate task from building the form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Build a Contact Form From Widgets",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A page, a Form widget, and field widgets make a contact form. Separate videos cover validating what visitors type, and processing each submission with a workflow. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
