@@ -1,0 +1,258 @@
+{
+  "title": "Liquid: Objects, Filters and Tags in Orchard Core",
+  "output": "liquid-basics",
+  "spoken": {
+    "sanitize_html": "sanitize HTML",
+    "absolute_url": "absolute URL",
+    "display_text": "display text",
+    "display_url": "display URL",
+    "has_permission": "has permission",
+    "is_in_role": "is in role",
+    "user_email": "user email",
+    "antiforgerytoken": "anti-forgery token",
+    "appsettings": "app settings",
+    "CreatedUtc": "Created U.T.C.",
+    "href": "H ref",
+    " utc": " U.T.C.",
+    ".liquid": "dot liquid",
+    "DisplayText": "Display Text",
+    "ContentItem": "Content Item",
+    "ContentType": "Content Type",
+    "SiteName": "Site Name",
+    "PageSize": "Page Size",
+    "BlogPost": "Blog Post",
+    "TrackingConsent": "Tracking Consent",
+    "HttpContext": "HTTP Context",
+    "AllowParentheses": "Allow Parentheses",
+    "AllowLiquidTag": "Allow Liquid Tag",
+    "AllowTrailingQuestionMark": "Allow Trailing Question Mark",
+    "Autoroute": "Auto route"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Liquid in Orchard Core",
+      "subtitle": "Objects, filters and tags in your templates",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Liquid is a template language of Orchard Core. Themes, content and settings use it to print values, change them and make decisions. In this video, you learn the syntax, the objects, the filters and the tags, and the options of the parser."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Where Liquid runs",
+      "subtitle": "Templates, content and settings",
+      "clips": [
+        {
+          "id": "01-where",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "Themes and modules keep Liquid templates in files with the .liquid extension, in a Views folder. The Blog theme has a layout template for the whole page, and templates for some of its content types, such as the blog post."
+            },
+            {
+              "id": "where-2",
+              "text": "The Templates module lets you write the same kind of template in the admin. The Liquid part and the Liquid field keep Liquid in content, and the Autoroute part builds URLs from a Liquid pattern, as the Blog recipe does for articles."
+            },
+            {
+              "id": "where-3",
+              "text": "Editing a Liquid part or a Liquid field needs the Manage Liquid templates permission, which is marked as security-critical. Writing a template in the admin also needs Manage templates. The Administrator and Editor roles have both by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The syntax",
+      "subtitle": "Output, filters and tags",
+      "clips": [
+        {
+          "id": "02-syntax",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "syntax-1",
+              "text": "Two curly braces print a value, such as the title of a content item. A pipe sends the value through a filter, which can take arguments. A tag opens with a curly brace and a percent sign, and controls what the template renders."
+            },
+            {
+              "id": "syntax-2",
+              "text": "A dot reads a property of an object. In this blog post template, the title is a property of the content item, and the subtitle is read through the part and the field that hold it."
+            },
+            {
+              "id": "syntax-3",
+              "text": "A template encodes what it prints as HTML by default. To write markup as it is, add the raw filter. To clean the markup first, run the sanitize_html filter before raw."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "On the page",
+      "subtitle": "One blog post, expression by expression",
+      "clips": [
+        {
+          "id": "03-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "Let's open a blog post on the site. The Blog theme draws this page with its Liquid templates, so the values on it come from expressions. The chapters after this one explain the objects, filters and tags that those expressions use."
+            },
+            {
+              "id": "page-2",
+              "text": "In the navigation bar, the name of the site is the SiteName property of the Site object. The link around it goes to the home page, through the href filter."
+            },
+            {
+              "id": "page-3",
+              "text": "The large title is the DisplayText of the content item. The line under it is the Subtitle field of the blog post."
+            },
+            {
+              "id": "page-4",
+              "text": "Under the subtitle, Posted by is a text that the t filter looks up in the translations of the current culture. The name after it is the Author of the content item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Objects",
+      "subtitle": "What a template can read",
+      "clips": [
+        {
+          "id": "04-objects",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "objects-1",
+              "text": "The Model object is the shape being displayed, the view model of the template. On a content page, its ContentItem property is the content item, with properties such as DisplayText, ContentType, CreatedUtc and Author."
+            },
+            {
+              "id": "objects-2",
+              "text": "The Content property of a content item holds its parts and fields as a document. The fields that you add to a content type sit under a part named after the type, so the subtitle is BlogPost, then Subtitle, then Text."
+            },
+            {
+              "id": "objects-3",
+              "text": "The Liquid Core Services feature, which is always enabled, provides Culture, Request, Environment, HttpContext and TrackingConsent. Culture has the name and direction of the current culture, and Request has the path, the query string and the headers."
+            },
+            {
+              "id": "objects-4",
+              "text": "Other features add objects. Settings adds Site, with SiteName and PageSize, and Contents adds Content, which loads content items by identifier or handle. Users adds User, whose Identity holds the name of the signed-in user, when the Liquid feature is enabled as well."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Filters",
+      "subtitle": "Change a value",
+      "clips": [
+        {
+          "id": "05-filters",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "filters-1",
+              "text": "A filter changes the value on its left, and filters chain from left to right. This pattern from the Blog recipe takes the title of a content item and turns it into a segment of a URL."
+            },
+            {
+              "id": "filters-2",
+              "text": "Standard Liquid filters, such as date, upcase and default, are available everywhere. The Liquid module adds filters of its own, such as t, slugify, href, absolute_url, local, utc and json."
+            },
+            {
+              "id": "filters-3",
+              "text": "The t filter translates a text with the current culture, and its arguments fill the numbered placeholders. The href filter turns a virtual path into a URL for the tenant, and absolute_url adds the scheme and the host."
+            },
+            {
+              "id": "filters-4",
+              "text": "Dates in content items are stored in UTC. The local filter converts one to the local time zone: the time zone of the site, or the one of a signed-in user when User Time Zone is enabled. The utc filter converts it back."
+            },
+            {
+              "id": "filters-5",
+              "text": "Other features add the filters for what they own. Contents adds display_text and display_url. Users adds has_permission, is_in_role and user_email, which work on the User object."
+            },
+            {
+              "id": "filters-6",
+              "text": "A filter exists only while its feature is enabled. The shortcode filter needs Shortcodes, and markdownify needs Markdown. A separate video covers writing a filter of your own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Tags",
+      "subtitle": "Logic and helpers",
+      "clips": [
+        {
+          "id": "06-tags",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tags-1",
+              "text": "Standard Liquid tags handle the logic. The blog post template assigns the first image path to a variable, tests whether it is nil, and chooses which header to render. The for tag repeats a block for each item."
+            },
+            {
+              "id": "tags-2",
+              "text": "Liquid Core Services adds tags of its own. The form tag calls the ASP.NET Core form tag helper, and the antiforgerytoken tag writes the hidden field that a form needs. The helper and block tags call a tag helper by its name."
+            },
+            {
+              "id": "tags-3",
+              "text": "The cache tag keeps the output of its block when Dynamic Cache is enabled. The Resources module adds script, style, link, meta and resources. A separate video covers the tags for layouts, shapes and zones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Parser options",
+      "subtitle": "Liquid Core Services",
+      "clips": [
+        {
+          "id": "07-parser",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "parser-1",
+              "text": "The parser belongs to Liquid Core Services, a feature that is always enabled. Three options of the parser are read from the Liquid section of the configuration, and all three are off by default."
+            },
+            {
+              "id": "parser-2",
+              "text": "In the appsettings file, under OrchardCore and Liquid, set an option to true. AllowParentheses allows parentheses in templates, AllowLiquidTag turns on the liquid tag, and AllowTrailingQuestionMark lets a name end with a question mark."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Liquid in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Liquid reads values from objects, changes them with filters and controls the output with tags, and each enabled feature adds its own. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

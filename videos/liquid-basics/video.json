@@ -1,0 +1,48 @@
+{
+  "title": "Liquid: Objects, Filters and Tags in Orchard Core | Orchard Core",
+  "description": "Themes, templates, content and settings in Orchard Core can use Liquid. What a template can read, how it changes a value and what it can run all depend on the objects, the filters and the tags that the enabled features register.\n\nThis video reads the Liquid templates of the Blog theme, shows the blog post page they draw, and goes through the objects, the filters, the tags and the parser options, with the feature that provides each one.\n\nIn this video:\n• Where Liquid runs: theme files, templates written in the admin, content and settings, and the Manage Liquid templates and Manage templates permissions\n• The syntax: output, filters, tags, properties and HTML encoding\n• On the page: a blog post, expression by expression\n• Objects: Model, the content item, Culture, Request, Environment, HttpContext, TrackingConsent, Site, User and Content\n• Filters: standard Liquid, the Liquid module, Contents, Users and other features\n• Tags: standard tags, form, helper, block, the Resources tags, antiforgerytoken and cache\n• Parser options: AllowParentheses, AllowLiquidTag and AllowTrailingQuestionMark",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Liquid",
+    "Liquid templates",
+    "Templates",
+    "Themes"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Liquid/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Liquid/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Liquid"
+  }
+}
