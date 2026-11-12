@@ -1,0 +1,49 @@
+{
+  "title": "Deployment: Move Configuration and Content Between Sites | Orchard Core",
+  "description": "A site is often built in one place and run in another. Repeating every change by hand takes time, and a forgotten setting makes the two sites differ.\n\nThe Deployment module collects what to move in a deployment plan, runs the plan to produce a package, and imports the package on another Orchard Core site. This video follows one setting from a source site to a staging site.\n\nIn this video:\n• Why deployment: the work you repeat by hand\n• Find the module: the Features page and the Tools menu\n• Build and run a plan: steps, targets, and the package download\n• Import the package: Package Import on the staging site\n• Permissions: who can plan, export, and import",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Deployment"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Deployment",
+    "Deployment plans",
+    "Import",
+    "Export",
+    "Recipes",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Deployment"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Deployment/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Deployment/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Deployment"
+  }
+}
