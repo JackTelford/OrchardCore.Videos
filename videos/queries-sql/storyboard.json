@@ -1,0 +1,236 @@
+{
+  "title": "SQL Queries: Query Content Items With SQL",
+  "output": "queries-sql",
+  "spoken": {
+    "PublishedBlogPosts": "Published Blog Posts",
+    "RecentBlogPosts": "Recent Blog Posts",
+    "ReturnContentItems": "Return Content Items",
+    "ContentItemIndex": "Content Item Index",
+    "DocumentId": "Document I.D.",
+    "ContentType": "Content Type",
+    "CreatedUtc": "Created U.T.C.",
+    "DisplayText": "Display Text",
+    "BlogPost": "Blog Post",
+    "contenttype": "content type",
+    "Sql": "SQL"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "SQL Queries",
+      "subtitle": "Read the index tables of your site with SQL",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A SQL query reads the index tables of your site with a SELECT statement. In this video, you run a statement, add parameters, save it as a named query, and define it in a recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why SQL queries",
+      "subtitle": "The index tables you can read",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Orchard Core stores content items as documents, and writes their searchable values to index tables. ContentItemIndex has one row for each version of a content item, with its type, title, dates, owner, author, and whether it is published."
+            },
+            {
+              "id": "why-2",
+              "text": "A SQL query is one SELECT statement over those tables. It filters rows with a where clause, sorts them with order by, pages them with limit and offset, and returns the columns you choose."
+            },
+            {
+              "id": "why-3",
+              "text": "A query returns one of two results. Without Return Documents, each row comes back as an object with the columns you selected. With it, the DocumentId of each row identifies a content item, and Orchard Core loads and returns those items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Run SQL Query",
+      "subtitle": "Try a statement before you save it",
+      "clips": [
+        {
+          "id": "02-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "In the admin menu, open Search, Queries, Run SQL Query. The SQL Queries feature provides this page. The Blog recipe enables it; on another site, enable it under Tools, Features."
+            },
+            {
+              "id": "run-2",
+              "text": "The Template field holds the statement. A hint below it offers a link to query all content items. Click it, and the Template fills with a SELECT over ContentItemIndex, which runs at once."
+            },
+            {
+              "id": "run-3",
+              "text": "Further down, Final SQL Query shows the statement as the database receives it: names are quoted, any table prefix of the site is applied, and the SQL is converted to the dialect of that database."
+            },
+            {
+              "id": "run-4",
+              "text": "The rows appear below as JSON, one object per row, with the time the query took. Each object holds every column of ContentItemIndex, such as DocumentId, ContentType, Published, and CreatedUtc."
+            },
+            {
+              "id": "run-5",
+              "text": "Let's narrow it: select DocumentId, DisplayText, and CreatedUtc, keep the published blog posts, sort by CreatedUtc, newest first, and click Query. The page accepts standard SQL, and Orchard Core converts it for the database in use."
+            },
+            {
+              "id": "run-6",
+              "text": "Only SELECT statements run. A DELETE statement is refused with a message under the Template, and nothing changes. A syntax mistake is reported the same way, with its line and column."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Parameters and Liquid",
+      "subtitle": "Values and conditions in a template",
+      "clips": [
+        {
+          "id": "03-params",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "param-1",
+              "text": "A parameter keeps a value out of the SQL text. It is an at sign and a name, with an optional colon and default value. Here, contenttype defaults to BlogPost."
+            },
+            {
+              "id": "param-2",
+              "text": "Run it, and with no value supplied, the default applies: the blog posts come back. In Parameters, a JSON object sets contenttype to Article, and the About article comes back. Names are case-sensitive."
+            },
+            {
+              "id": "param-3",
+              "text": "The template is Liquid, rendered before the SQL is parsed, with the parameters as variables. This condition adds a limit only when a limit above zero is supplied. With limit set to 2, two rows come back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Paging and functions",
+      "subtitle": "What the SQL parser converts",
+      "clips": [
+        {
+          "id": "04-convert",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "convert-1",
+              "text": "The parser also converts paging and functions. Limit and offset become the form each database expects, order by random becomes the random order of that database, and date helpers such as year, month, and day are converted too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Save a query",
+      "subtitle": "Give a statement a name",
+      "clips": [
+        {
+          "id": "05-save",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "save-1",
+              "text": "When the statement returns what you want, run it and click Create, below Final SQL Query. The form for a SQL query opens with the statement already in the Query field."
+            },
+            {
+              "id": "save-2",
+              "text": "Name is the technical name of the query. It takes the letters A to Z and digits, starts with a letter, and must be unique. Let's call this one PublishedBlogPosts."
+            },
+            {
+              "id": "save-3",
+              "text": "Check Return Documents, because this statement selects DocumentId. As the hint says, the result has to be a list of document identifiers. Orchard Core reads the DocumentId column and returns the content items they identify."
+            },
+            {
+              "id": "save-4",
+              "text": "SQL queries are Liquid templates, so the form warns you. Never insert user input with a Liquid output expression, which allows SQL injection. Use a SQL parameter, and the caller passes the value."
+            },
+            {
+              "id": "save-5",
+              "text": "Schema describes the result for the GraphQL API. With no schema, the query is not exposed there. Click Save."
+            },
+            {
+              "id": "save-6",
+              "text": "The query appears in the list with a SQL query badge. Run opens Run SQL Query and runs its statement, Edit changes it, and Delete removes it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Queries in recipes",
+      "subtitle": "Create a SQL query with a recipe step",
+      "clips": [
+        {
+          "id": "06-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe creates a SQL query with the Queries step. Source is Sql, Template holds the statement as a JSON string, and ReturnContentItems matches the Return Documents check box. The Blog recipe defines RecentBlogPosts this way."
+            },
+            {
+              "id": "recipe-2",
+              "text": "When the name already exists, the step updates that query. An entry without a name or without a source is reported as an error and skipped. When the name is free, a source that no enabled feature provides is reported the same way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Who can run SQL",
+      "subtitle": "The Manage SQL Queries permission",
+      "clips": [
+        {
+          "id": "07-access",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "access-1",
+              "text": "Run SQL Query requires the Manage SQL Queries permission. The role editor marks it Security Critical, and the default permissions of the Administrator and Editor roles include it. Manage queries is a separate permission for creating, editing, and deleting saved queries."
+            },
+            {
+              "id": "access-2",
+              "text": "The statement reads the tables of the site directly, so content permissions do not apply to its rows. Someone with Manage queries can also save a SQL query and run it through the API. Give both only to people who may see all the data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "SQL Queries",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's SQL queries: a SELECT statement over the index tables, tried on Run SQL Query, saved by name, and defined in recipes. A separate video shows how to run a saved query from templates and the API. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

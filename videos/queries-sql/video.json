@@ -1,0 +1,53 @@
+{
+  "title": "SQL Queries: Query Content Items With SQL | Orchard Core",
+  "description": "Content items are stored as documents, and their searchable values are written to index tables. Reading a filtered, sorted list of them, or a few columns, means querying those tables.\n\nThe SQL Queries feature of the Queries module runs a SELECT statement over those tables. You try it on the Run SQL Query page, pass parameters, use a Liquid condition to shape the statement, and save it as a named query that returns rows or content items.\n\nIn this video:\n• The ContentItemIndex table and the two kinds of result\n• Running a statement on Run SQL Query, and reading the final SQL\n• Parameters, defaults and a Liquid condition\n• What the SQL parser converts: paging, random order and date functions\n• Saving a statement as a query with Return Documents\n• Creating a SQL query with a recipe step\n• The Manage SQL Queries permission",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "SQL"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "SQL",
+    "SQL queries",
+    "Queries",
+    "ContentItemIndex"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Queries"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Queries",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Queries/"
+    },
+    {
+      "label": "Documentation: SQL Indexing",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/SQLIndexing/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Queries/README.md",
+    "src/docs/reference/modules/SQLIndexing/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Queries.Sql"
+  }
+}
