@@ -1,0 +1,49 @@
+{
+  "title": "Dynamic Cache: Cache Parts of a Page | Orchard Core",
+  "description": "A page mixes content that rarely changes with content that depends on the visitor, and a cache of the whole page applies one policy to all of it.\n\nThe Dynamic Cache module of Orchard Core stores sections of markup, each with its own cache id, contexts, dependencies and expiration. Liquid blocks, shapes, Razor tag helpers and display drivers can all be cached, and entries are removed by tag or by time.\n\nIn this video:\n• Why cache sections of markup instead of whole pages\n• Turn caching on with the Cache Mode setting\n• Cache a block of markup with the Liquid cache block\n• See a cached block on a page, and remove its entry by publishing\n• Cache a shape with attributes, the Razor dynamic-cache tag helper and a display driver\n• Invalidate entries with tags, nested sections and dependencies\n• Add a cache context, and configure the storage and the failover",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Caching"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Dynamic Cache",
+    "Caching",
+    "Liquid",
+    "Razor",
+    "Performance"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Performance and Background Work"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DynamicCache/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DynamicCache/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DynamicCache"
+  }
+}
