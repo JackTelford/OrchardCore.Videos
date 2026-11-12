@@ -67,11 +67,11 @@
           "steps": [
             {
               "id": "content-1",
-              "text": "Four helpers load one content item from what you know of it: its id, alias, slug or handle. A handle combines a prefix, such as alias, slug or contentitemid, with a value. Each helper returns the published version, or null when nothing matches."
+              "text": "Four helpers load one content item from what you know of it: its id, alias, slug or handle. A handle combines a prefix, such as alias, slug or contentitemid, with a value. Each helper returns null when nothing matches."
             },
             {
               "id": "content-2",
-              "text": "These helpers return the published version by default. The alias and slug helpers take a Boolean flag, while the handle, id and ids helpers take Version Options, which can ask for the most recent version, draft or published."
+              "text": "These helpers return the published version by default. The alias and slug helpers take a Boolean flag for the most recent version. The handle and id helpers take Version Options, which can ask for the most recent version, draft or published."
             },
             {
               "id": "content-3",
@@ -162,7 +162,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Those are the Orchard helper and the tag helpers of a theme. The documentation lists many of the methods with their module, and the pages of the modules that add tag helpers describe them. Thanks for watching."
+              "text": "Those are the Orchard helper and the tag helpers of a theme, and the documentation pages of their modules list the rest. Thanks for watching."
             }
           ]
         }

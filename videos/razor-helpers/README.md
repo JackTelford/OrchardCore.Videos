@@ -1,6 +1,6 @@
 # Razor Helpers and Tag Helpers for Orchard Core Themes
 
-**YouTube:** not published yet · **Length:** 5:22 · **Feature:** `topic:Razor` ([Razor helpers](https://docs.orchardcore.net/en/latest/reference/modules/Razor/))
+**YouTube:** not published yet · **Length:** 5:16 · **Feature:** `topic:Razor` ([Razor helpers](https://docs.orchardcore.net/en/latest/reference/modules/Razor/))
 
 The video is for theme and module authors who write Razor views. It shows the Orchard property of a view and the injected `IOrchardHelper`, the helpers that load and display content items, the helpers for culture, URLs, text and data, and the tag helpers that render shapes, menus, resources and media, or add content to the zones of a layout. The code on the slides comes from the Orchard Core source and from the documentation. The title, description, tags and chapters YouTube shows are in `video.json`.
 
