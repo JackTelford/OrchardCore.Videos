@@ -16,7 +16,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "A content item needs a name you can recognize. The Title part gives a content type a title that an editor types, or that the site builds from other fields. We add the part, try its behaviors, and generate titles from a pattern."
+              "text": "A content item needs a name you can recognize. The Title part gives a content type a title that an editor types, or that the site builds from other fields. Let's add the part, try its behaviors, and generate titles from a pattern."
             }
           ]
         }
@@ -58,7 +58,7 @@
           "steps": [
             {
               "id": "attach-1",
-              "text": "Under Design, Content Definition, Content Types, you find every content type of the site. Let's click Edit on Product."
+              "text": "Under Design, Content Definition, Content Types, you find every content type of the site. Product has two Text fields, Brand and Name. Let's click Edit on Product."
             },
             {
               "id": "attach-2",
@@ -120,7 +120,7 @@
           "steps": [
             {
               "id": "gen-1",
-              "text": "To generate titles, let's edit Product again and then edit the Title part. We choose Title is generated and input is disabled as the Behavior option."
+              "text": "To generate titles, let's edit Product again and then edit the Title part. Let's choose Title is generated and input is disabled as the Behavior option."
             },
             {
               "id": "gen-2",
@@ -132,7 +132,7 @@
             },
             {
               "id": "gen-4",
-              "text": "On the Content Types page, Create New Product opens the editor with the Title field disabled, and a hint says The title will be auto-generated using the pattern. We fill in Brightwater as the Brand and Trail Backpack as the Name, and publish."
+              "text": "On the Content Types page, Create New Product opens the editor with the Title field disabled, and a hint says The title will be auto-generated using the pattern. Let's fill in Brightwater as the Brand and Trail Backpack as the Name, and publish."
             },
             {
               "id": "gen-5",
@@ -165,7 +165,7 @@
             },
             {
               "id": "hidden-2",
-              "text": "Back on the Content Types page, Create New Product shows no Title field at all. We fill in Brightwater as the Brand and Water Bottle as the Name, and publish."
+              "text": "Back on the Content Types page, Create New Product shows no Title field at all. Let's fill in Brightwater as the Brand and Water Bottle as the Name, and publish."
             },
             {
               "id": "hidden-3",
@@ -186,7 +186,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "The Title part names your content items. Editors can type the title, the part can require it, or a pattern can generate it, with the field disabled or hidden. Thanks for watching."
+              "text": "The Title part names your content items: editors type the title, or a pattern generates it, with the field disabled or hidden. Thanks for watching."
             }
           ]
         }
