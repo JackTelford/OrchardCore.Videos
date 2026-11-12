@@ -1,0 +1,266 @@
+{
+  "title": "The Orchard Core Content API",
+  "output": "content-rest-api",
+  "spoken": {
+    "api/content": "API slash content",
+    "application/json": "application slash JSON",
+    "ContentItemId": "Content Item I.D.",
+    "ContentType": "Content Type",
+    "DisplayText": "Display Text",
+    "GraphQL": "Graph Q.L.",
+    "GET": "get",
+    "POST": "post",
+    "DELETE": "delete"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Content API",
+      "subtitle": "Read and write content items over HTTP",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Contents module exposes content items over HTTP. A client application reads, creates, updates and deletes items as JSON, with an access token. In this video, you authorize a client, call each endpoint, and check the result in the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The Content API",
+      "subtitle": "Three endpoints for single content items",
+      "clips": [
+        {
+          "id": "01-overview",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "api-1",
+              "text": "The Content API is part of the Contents module. It works on one content item at a time: you read an item by its ID, save the JSON of an item, or delete an item by its ID."
+            },
+            {
+              "id": "api-2",
+              "text": "To list or search items, use the GraphQL API instead. The Content API has no list endpoint, and each call handles a single item."
+            },
+            {
+              "id": "api-3",
+              "text": "An item is a JSON object. ContentItemId and ContentType identify it, each part of the type adds a property, and names are case sensitive. The server sets the status flags and the dates, whatever the body says."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Authentication",
+      "subtitle": "Access tokens from OpenID Connect",
+      "clips": [
+        {
+          "id": "02-token",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "auth-1",
+              "text": "The endpoints accept bearer tokens. To issue them from the site itself, enable the OpenID Connect Authorization Server and OpenID Connect Token Validation features. Then, in Settings, OpenID Connect, Authorization Server, check Allow Client Credentials Flow."
+            },
+            {
+              "id": "auth-2",
+              "text": "Then add an application of the type Confidential client that allows the client credentials flow. Select the role under Client Credentials Roles: the permissions of that role decide what the token can do."
+            },
+            {
+              "id": "auth-3",
+              "text": "The application sends its client ID and secret to the token endpoint, and receives an access token. Each call to the Content API then carries that token in an Authorization header."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Permissions",
+      "subtitle": "What a token is allowed to do",
+      "clips": [
+        {
+          "id": "03-role",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "The token carries the roles of the application. In Access Control, Roles, open the role and look for the permission Access content via the api. Without it, every call is refused."
+            },
+            {
+              "id": "perm-2",
+              "text": "The permissions on the item apply too. Publish or unpublish content for others implies Edit content for others, so the Effective column shows both. Delete content for others is separate, and allows deletion."
+            }
+          ]
+        },
+        {
+          "id": "03-matrix",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "perm-3",
+              "text": "Every call needs Access content via the api. Reading adds View all content, and creating adds Edit content for others and Publish or unpublish content for others. Updating adds Edit content for others, and deleting adds Delete content for others."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create an item",
+      "subtitle": "POST to api/content",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "To create an item, post its JSON to api/content with the access token and a Content-Type header of application/json. ContentType names the type, and each part of the type has a property of its own."
+            },
+            {
+              "id": "create-2",
+              "text": "The server generates the ContentItemId and publishes the item. When the body has no DisplayText, the server takes it from the title. The response is the stored item as JSON, with the status 200."
+            },
+            {
+              "id": "create-3",
+              "text": "Set the draft parameter to true, and the item is created without being published. The site does not serve it until someone publishes it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Read an item",
+      "subtitle": "GET with the ID of the item",
+      "clips": [
+        {
+          "id": "05-read",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "read-1",
+              "text": "A GET request with the ID of an item returns its JSON. Only the published version is returned, so an item that is only a draft answers 404 Not Found."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Update an item",
+      "subtitle": "POST with the ID of an existing item",
+      "clips": [
+        {
+          "id": "06-update",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "update-1",
+              "text": "To update an item, post a body whose ContentItemId is the ID of an existing item. The body is merged into the stored item, and an array in the body replaces the stored array."
+            },
+            {
+              "id": "update-2",
+              "text": "Unless the draft parameter is true, the item is published with the changes. For a versionable type, draft set to true keeps the published version live and saves the changes as a draft."
+            },
+            {
+              "id": "update-3",
+              "text": "The response is the version the call saved. With draft set to true, that is the draft, and its Published property is false."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Check the result",
+      "subtitle": "The same items in the admin",
+      "clips": [
+        {
+          "id": "07-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "admin-1",
+              "text": "The API and the admin manage the same content items. In Content, Content Items, the article created as a draft shows the Draft status."
+            },
+            {
+              "id": "admin-2",
+              "text": "The article updated with the draft parameter shows both Published and Draft: the published version stays live beside its draft."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Delete an item",
+      "subtitle": "DELETE with the ID of the item",
+      "clips": [
+        {
+          "id": "08-delete",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "delete-1",
+              "text": "A DELETE request with the ID of an item removes it and returns its JSON. The item is no longer published, and Content Items stops listing it."
+            },
+            {
+              "id": "delete-2",
+              "text": "Delete looks the item up by its published version. An item that is only a draft answers 404 Not Found, like an ID that does not exist."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Status codes",
+      "subtitle": "What each response means",
+      "clips": [
+        {
+          "id": "09-status",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "status-1",
+              "text": "A call that works answers 200 with the item as JSON. A 400 means the body is missing, the ContentType is unknown, or the content fails validation. A 401 means no valid token, and a 403 means a missing permission."
+            },
+            {
+              "id": "status-2",
+              "text": "A 404 means no published item has that ID. When validation fails, the 400 response carries an errors object that lists the messages by member name."
+            },
+            {
+              "id": "status-3",
+              "text": "A 401 response has a problem details body with the title Authentication required, and a 403 response has the title Access forbidden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Content API",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Content API reads, creates, updates and deletes single content items over HTTP, with an access token and the permissions of its role. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
