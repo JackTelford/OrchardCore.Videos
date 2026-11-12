@@ -2654,9 +2654,9 @@
     "docs": [
       "src/docs/reference/modules/Rules/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.6,
+    "words": 839,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

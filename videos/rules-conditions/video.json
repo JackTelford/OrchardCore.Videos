@@ -1,0 +1,48 @@
+{
+  "title": "Rules: Conditions That Decide When a Layer Shows | Orchard Core",
+  "description": "Widgets in a layer should appear on some pages of a site and stay hidden on others. The rule of the layer decides which: a list of conditions that must all be true.\n\nThe Rules module provides the conditions, and the Layers module shows the rule editor on the edit page of each layer. This video builds one rule from an Any group with a Homepage condition and a Url condition, checks it on three pages of the site, and adds a condition about the visitor.\n\nIn this video:\n• How a rule decides when a layer shows its widgets\n• The conditions a rule can hold, and the operations that compare text\n• Opening the rule of a layer, and adding a group\n• Adding a Homepage condition and a Url condition to the group\n• Checking the result on the site\n• Adding a condition about the visitor\n• Editing, reordering, limits and permissions",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Rules",
+    "Layers",
+    "Widgets",
+    "Conditions",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Layers and Widgets"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Rules/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Rules/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Rules"
+  }
+}
