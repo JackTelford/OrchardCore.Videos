@@ -1,6 +1,6 @@
 # GraphiQL: Explore and Test GraphQL Queries
 
-**YouTube:** not published yet · **Length:** 4:35 · **Feature:** `OrchardCore.Apis.GraphQL` ([GraphQL documentation](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/))
+**YouTube:** not published yet · **Length:** 4:36 · **Feature:** `OrchardCore.Apis.GraphQL` ([GraphQL documentation](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/))
 
 The video is for developers. It shows GraphiQL, the page of the GraphQL module under Tools, GraphiQL: the layout of the
 screen, a query built by clicking fields in the Explorer, the schema read in Docs, a query with variables, the address that

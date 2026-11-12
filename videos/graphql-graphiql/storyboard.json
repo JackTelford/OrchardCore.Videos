@@ -8,7 +8,8 @@
     "orderBy": "order by",
     "blogPost": "blog post",
     "displayText": "display text",
-    "OAuth": "O Auth"
+    "OAuth": "O Auth",
+    "HTTP": "H.T.T.P."
   },
   "chapters": [
     {
@@ -174,7 +175,7 @@
           "steps": [
             {
               "id": "errors-1",
-              "text": "Ask for a field that does not exist, such as title on blogPost. The editor underlines it, and the query is not sent until you run it."
+              "text": "Ask for a field that does not exist, such as title on blogPost. The editor underlines it before you run anything, because it checks the query against the schema it loaded."
             },
             {
               "id": "errors-2",
