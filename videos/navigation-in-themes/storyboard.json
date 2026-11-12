@@ -162,7 +162,7 @@
             },
             {
               "id": "trailsite-3",
-              "text": "With it cleared, the same screen shows only the heading, because the tag helper still renders the title."
+              "text": "With it cleared, the same screen shows only the heading, because the tag helper always renders the title."
             }
           ]
         },
@@ -203,7 +203,7 @@
           "steps": [
             {
               "id": "blogpager-1",
-              "text": "On the home page of the blog, the theme draws the slim pager from that template. The first page offers Older Posts, and the second page offers Newer Posts."
+              "text": "On the home page of the blog, The Blog Theme draws the slim pager with the shape pager tag. The first page offers Older Posts, and the second page offers Newer Posts."
             }
           ]
         },

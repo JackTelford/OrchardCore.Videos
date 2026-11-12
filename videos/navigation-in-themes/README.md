@@ -1,6 +1,6 @@
 # Navigation in Themes: Render Menus, Breadcrumbs and Pagers
 
-**YouTube:** not published yet · **Length:** 5:35 · **Feature:** `OrchardCore.Navigation` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Navigation/)) and `OrchardCore.Menu` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Menu/))
+**YouTube:** not published yet · **Length:** 5:36 · **Feature:** `OrchardCore.Navigation` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Navigation/)) and `OrchardCore.Menu` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Menu/))
 
 A video for theme and module authors. It explains that menus, breadcrumb trails and pagers are shapes drawn by templates,
 renders a menu by its alias, declares a breadcrumb trail with the tag helper, and creates a pager in a controller. It
