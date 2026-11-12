@@ -1,0 +1,220 @@
+{
+  "title": "Content Items: Create, Edit and Publish",
+  "output": "contents-create-edit-publish",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Items: Create, Edit and Publish",
+      "subtitle": "Create content, publish it, and keep it up to date",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Pages, articles, and blogs on an Orchard Core site are content items. In this video, you create a content item, publish it, change it, and take it off your site, all from the admin UI."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a content item is",
+      "subtitle": "Content items and content types",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A content item is one piece of content on your site, such as an article, a page, or a blog. Each one follows a content type, which defines what that kind of content contains."
+            },
+            {
+              "id": "idea-2",
+              "text": "A content type is made of parts and fields, such as a title, a permalink, a body, and a subtitle. Its settings, Creatable, Listable, and Draftable, decide whether you can create items of that type, list them, and save drafts."
+            },
+            {
+              "id": "idea-3",
+              "text": "A content item moves through a life cycle. A draft is saved, but visitors cannot see it. Publishing makes it visible on your site, unpublishing hides it again, and deleting removes it."
+            },
+            {
+              "id": "idea-4",
+              "text": "What you see depends on your role's permissions. Edit content for others shows Edit and Save Draft, Publish or unpublish content for others shows Publish and Unpublish, and Delete content for others shows Delete."
+            },
+            {
+              "id": "idea-5",
+              "text": "Each of these also has an own content permission, such as Edit own content, which applies to the items you own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Find your content",
+      "subtitle": "The Content Items page",
+      "short": "list",
+      "clips": [
+        {
+          "id": "02-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "In the admin menu, open Content, then Content Items. The page is titled Manage Content. It lists the items of every listable content type, starting with the ones you changed last."
+            },
+            {
+              "id": "list-2",
+              "text": "Each row shows the title, the content type, the status, and how long ago the item changed. Edit opens the editor, and View opens the published page on your site."
+            },
+            {
+              "id": "list-3",
+              "text": "As the list grows, the Search box and the Filters menu narrow it down. A separate video covers searching and filtering."
+            },
+            {
+              "id": "list-4",
+              "text": "To add content, click New and choose a content type. The menu only offers the types that the site lets you create, and that your permissions allow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a content item",
+      "subtitle": "Fill in the editor and publish",
+      "short": "create",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "On the list, click New, then Article. The page is titled New Article, and the editor shows what the Article content type is made of."
+            },
+            {
+              "id": "create-2",
+              "text": "Enter the title Spring Garden Checklist. The Permalink is the address of the page. Leave it empty, and Orchard Core generates it from the title when you save the item."
+            },
+            {
+              "id": "create-3",
+              "text": "Write the body in the rich text editor, then add a subtitle. Banner Image is optional, so let's leave it empty."
+            },
+            {
+              "id": "create-4",
+              "text": "At the bottom of the page, Save Draft stores the item as a draft that visitors cannot see. Publish makes it visible on your site."
+            },
+            {
+              "id": "create-5",
+              "text": "The arrow beside each button opens one more choice, \"and continue\". Choosing it saves or publishes the item and keeps you in the editor, instead of returning to the list."
+            },
+            {
+              "id": "create-6",
+              "text": "Let's click Publish. A message confirms that the Article has been published, and the list shows the item with the status Published."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "View it on your site",
+      "subtitle": "The published page",
+      "short": "view",
+      "clips": [
+        {
+          "id": "04-view",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "To see the result, use the View button on the row of Spring Garden Checklist. It opens the page on your site in another browser tab."
+            },
+            {
+              "id": "view-2",
+              "text": "This is what visitors see: the title, the subtitle, and the body. The address comes from the permalink that Orchard Core generated from the title."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Edit and publish changes",
+      "subtitle": "Change an item and publish it",
+      "short": "edit",
+      "clips": [
+        {
+          "id": "05-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "Back on the list, Edit opens the editor again. Let's add a sentence to the body of the article."
+            },
+            {
+              "id": "edit-2",
+              "text": "Click Publish. A message confirms that the Article has been published. Save Draft would keep the change off your site until you publish it, and a separate video covers drafts and versions."
+            },
+            {
+              "id": "edit-3",
+              "text": "Click View, and the page on your site shows the sentence you added."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Unpublish and delete",
+      "subtitle": "Take content off your site",
+      "short": "unpublish-delete",
+      "clips": [
+        {
+          "id": "06-remove",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "remove-1",
+              "text": "To take an item off your site, open the Actions menu of its row on the list. It offers Unpublish, Delete, and Clone, which saves a copy of the item as a draft. Choose Unpublish, then confirm with Yes."
+            },
+            {
+              "id": "remove-2",
+              "text": "The item stays in the list with the status Draft, and visitors can no longer open its page. Publish Draft in the Actions menu, or Publish in the editor, puts it back on your site."
+            },
+            {
+              "id": "remove-3",
+              "text": "To delete an item, click Edit, then Delete at the bottom of the editor. A dialog asks you to confirm."
+            },
+            {
+              "id": "remove-4",
+              "text": "Click Ok, and the item disappears from the list. Delete is also in the Actions menu of a row, and deleting a published item removes it from your site as well."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Items: Create, Edit and Publish",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the life of a content item: you create it, publish it, change it, and take it off your site. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
