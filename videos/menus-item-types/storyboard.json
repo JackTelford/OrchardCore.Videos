@@ -1,0 +1,237 @@
+{
+  "title": "Menu items",
+  "output": "menus-item-types",
+  "spoken": {
+    "Url": "U.R.L.",
+    "Html": "H.T.M.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Menu items",
+      "subtitle": "Links, content items, HTML and permissions",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A menu is a list of menu items, and the Menu module provides three types of them. In this video, we add a link, a content item, and an HTML item to a menu, and choose who sees an item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Three types of menu item",
+      "subtitle": "And who sees them",
+      "clips": [
+        {
+          "id": "01-types",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "A Link Menu Item links to an address you type. A Content Menu Item links to a content item you pick. An Html Menu Item links to an address, and shows HTML as the text of the link."
+            },
+            {
+              "id": "types-2",
+              "text": "Link and Html items have a Permissions field. People who do not have the permissions you choose do not see the item."
+            },
+            {
+              "id": "types-3",
+              "text": "A Content Menu Item has the option Check content permissions instead. It hides the item from people who may not view the content item it points to."
+            },
+            {
+              "id": "types-4",
+              "text": "The HTML of an Html Menu Item is cleaned when the menu is displayed, to prevent custom scripts. The Sanitize Html setting controls this, and it is on by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add a menu item",
+      "subtitle": "From the menu editor",
+      "clips": [
+        {
+          "id": "02-dialog",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "dialog-1",
+              "text": "Under Content, Menus, open the Main Menu. A separate video covers creating menus and arranging their items. Here, the Add Menu Item button adds an item to this one."
+            },
+            {
+              "id": "dialog-2",
+              "text": "The Available Menu Items window lists the three types: Link Menu Item, Content Menu Item and Html Menu Item. Each one has its own Add button."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Link Menu Item",
+      "subtitle": "A name and an address",
+      "clips": [
+        {
+          "id": "03-link",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "link-1",
+              "text": "Let's add a Link Menu Item. It has a Name, which is the text of the link, and a Url that says where it leads. We name it Editor Guide, and link it to the documentation."
+            },
+            {
+              "id": "link-2",
+              "text": "Target says where the link opens. It suggests values, and one of them opens the linked document in another window or tab, so the site stays open."
+            },
+            {
+              "id": "link-3",
+              "text": "Publish adds the item to the menu. The menu editor lists it with its name and its address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Content Menu Item",
+      "subtitle": "A link to a content item",
+      "clips": [
+        {
+          "id": "04-content",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "Add Menu Item opens the same window. This time we choose Content Menu Item, which links to a content item of the site."
+            },
+            {
+              "id": "content-2",
+              "text": "Name is the text of the link, so we type Hours. In Selected Content Item, we type to search, and pick the Opening Hours article."
+            },
+            {
+              "id": "content-3",
+              "text": "No address is typed here. The link is built from the content item itself, so it leads to the address of that item."
+            },
+            {
+              "id": "content-4",
+              "text": "Check content permissions stays off for a public page. Turn it on for restricted content, and cache the menu, as its hint advises. Then Publish adds the item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Html Menu Item",
+      "subtitle": "HTML as the text of the link",
+      "clips": [
+        {
+          "id": "05-html",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "html-1",
+              "text": "The third type, the Html Menu Item, has the same Name, Url and Target fields as a link, and one more field for the HTML."
+            },
+            {
+              "id": "html-2",
+              "text": "Let's name it Contact us, and link it to an email address, so that selecting it opens the email program of the visitor."
+            },
+            {
+              "id": "html-3",
+              "text": "The Html field replaces the name as the text of the link, and sits inside the link. Let's make the first word italic."
+            },
+            {
+              "id": "html-4",
+              "text": "The HTML is cleaned when the menu is displayed, because Sanitize Html is on by default. Publish adds the item to the menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Who sees an item",
+      "subtitle": "Permissions",
+      "clips": [
+        {
+          "id": "06-permissions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "To restrict an item, choose Edit on its row. Let's restrict Editor Guide, because it is meant for the people who work in the admin."
+            },
+            {
+              "id": "perm-2",
+              "text": "In Permissions, we type to search, and select Access admin panel. Only people who have this permission see the item. When you choose several, a person needs all of them."
+            },
+            {
+              "id": "perm-3",
+              "text": "A restricted item hides the items under it as well. Publish adds the change to the menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Publish and check",
+      "subtitle": "Administrator and visitor",
+      "clips": [
+        {
+          "id": "07-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "publish-1",
+              "text": "Each change is saved in a draft of the menu, so the site keeps showing the published menu until the menu itself is published."
+            },
+            {
+              "id": "publish-2",
+              "text": "Let's publish the Main Menu with the Publish button. A message confirms that your Menu has been published, and the editor stays on the menu."
+            },
+            {
+              "id": "publish-3",
+              "text": "On the site, signed in as the administrator, the menu lists Home, About, Editor Guide, Hours and Contact us, with the first word in italics."
+            }
+          ]
+        },
+        {
+          "id": "07-visitor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "visitor-1",
+              "text": "A visitor who is not signed in gets the same menu without Editor Guide. The other items have no permissions, so everyone sees them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Menu items",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how Link, Content and Html menu items work, and how permissions decide who sees them. A separate video covers how themes render menus. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
