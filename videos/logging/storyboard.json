@@ -1,0 +1,213 @@
+{
+  "title": "Logging: Configure NLog and Serilog",
+  "output": "logging",
+  "spoken": {
+    "OrchardCore.Logging.NLog": "Orchard Core dot Logging dot N Log",
+    "OrchardCore.Logging.Serilog": "Orchard Core dot Logging dot Serilog",
+    "UseSerilogTenantNameLogging": "Use Serilog Tenant Name Logging",
+    "UseSerilogWeb": "Use Serilog Web",
+    "UseSerilog": "Use Serilog",
+    "UseNLogHost": "Use N Log Host",
+    "UseOrchardCore": "Use Orchard Core",
+    "Enrich.FromLogContext": "Enrich dot From Log Context",
+    "FromLogContext": "From Log Context",
+    "Microsoft.Hosting.Lifetime": "Microsoft dot Hosting dot Lifetime",
+    "orchard-tenant-name": "orchard tenant name",
+    "ORCHARD_APP_DATA": "ORCHARD APP DATA",
+    "appsettings.json": "app settings dot JSON",
+    "Program.cs": "Program dot C.S.",
+    "NLog.config": "N Log dot config",
+    "TenantName": "Tenant Name",
+    "configDir": "config dir",
+    "App_Data": "App Data",
+    "YesSql": "Yes Sequel",
+    "NLog": "N Log",
+    "dotnet": "dot net",
+    "occms": "O.C. C.M.S."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Logging in Orchard Core",
+      "subtitle": "Configure NLog and Serilog",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every Orchard Core site writes logs, and one application can serve many tenants. In this video, you configure the two logging libraries that put the name of the tenant in the log output: NLog and Serilog."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Logs and tenants",
+      "subtitle": "Why the tenant name matters",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "One Orchard Core deployment can host several tenants, each an isolated site with its own content, theme and users. By default they write to the same log files, so a line is more useful when it says which tenant wrote it."
+            },
+            {
+              "id": "why-2",
+              "text": "Orchard Core has two logging packages, one for NLog and one for Serilog. You reference one of them from your web project. They are libraries, not modules, so the admin has nothing to enable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Choose a logger",
+      "subtitle": "NLog, Serilog or none",
+      "clips": [
+        {
+          "id": "02-choose",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "choose-1",
+              "text": "The Orchard Core CMS project template configures one for you. With dotnet new occms, the logger option takes nlog, serilog or none, and NLog is the default, as in the CMS web project of the Orchard Core repository."
+            },
+            {
+              "id": "choose-2",
+              "text": "For NLog, the template adds the package, one call in Program.cs, an NLog.config file, and a Logging section in appsettings.json. For Serilog, it adds the package, two calls in Program.cs, and a Serilog section. For none, it adds nothing."
+            },
+            {
+              "id": "choose-3",
+              "text": "Without the template, add the package with dotnet add package. Then copy the calls and the configuration that the template generates for your logger."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "NLog",
+      "subtitle": "One call and one configuration file",
+      "clips": [
+        {
+          "id": "03-nlog",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "nlog-1",
+              "text": "In Program.cs, UseNLogHost turns NLog on for the host. It also registers a layout renderer named orchard-tenant-name, which prints the name of the tenant."
+            },
+            {
+              "id": "nlog-2",
+              "text": "UseNLogHost also sets an NLog variable named configDir. Its value is the folder in the ORCHARD_APP_DATA environment variable. Without the variable, it is the App_Data folder under the content root."
+            },
+            {
+              "id": "nlog-3",
+              "text": "In NLog.config, the file target writes to the logs folder under configDir, in a file named orchard-log with the date. The console target writes to the console."
+            },
+            {
+              "id": "nlog-4",
+              "text": "Each line holds the date and time, the tenant name, the trace identifier, the event id, the logger name, the level, and the message. An exception adds its stack trace."
+            },
+            {
+              "id": "nlog-5",
+              "text": "The orchard-tenant-name renderer reads the tenant of the current request. Without a request, it uses the tenant of the current scope, and otherwise it prints None."
+            },
+            {
+              "id": "nlog-6",
+              "text": "Three rules choose where events go: YesSql events go to the file, hosting lifetime events go to the file and the console, and every event at the default level or above goes to the file."
+            },
+            {
+              "id": "nlog-7",
+              "text": "Each rule reads its minimum level from the Logging section of appsettings.json: Default is Warning, and YesSql and Microsoft.Hosting.Lifetime are Information. Lower Default to write more events. The development settings of the Orchard Core web project use Debug."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Serilog",
+      "subtitle": "Two calls and a configuration section",
+      "clips": [
+        {
+          "id": "04-serilog",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "serilog-1",
+              "text": "Reference the Serilog package, then call UseSerilog on the host builder in Program.cs. It reads the settings of the logger from the configuration, and Enrich.FromLogContext adds the properties that a middleware pushes."
+            },
+            {
+              "id": "serilog-2",
+              "text": "The second call goes in the callback of UseOrchardCore: UseSerilogTenantNameLogging. The middleware it adds runs after the one that resolves the tenant, so it can read the name of the tenant."
+            },
+            {
+              "id": "serilog-3",
+              "text": "The middleware takes the tenant name from the request or the current scope, or uses None, and pushes it as the TenantName property. NLog needs no middleware, because its renderer looks up the tenant as each line is rendered."
+            },
+            {
+              "id": "serilog-4",
+              "text": "The library also has UseSerilogWeb. It makes the same UseSerilog call, so one line can replace the first call. The call that adds the tenant middleware stays in UseOrchardCore."
+            },
+            {
+              "id": "serilog-5",
+              "text": "The Serilog section of appsettings.json sets a minimum level, with overrides for individual loggers, and the sinks to write to. The template configures two sinks: Console and File."
+            },
+            {
+              "id": "serilog-6",
+              "text": "The console sink prints the TenantName property in its output template. Each sink has its own restricted to minimum level, and the console's is Information. To write more events, lower the minimum level and the level of the sink."
+            },
+            {
+              "id": "serilog-7",
+              "text": "The file sink writes to the logs folder under App_Data, starts a file for each day, and is restricted to Warning. A comment in the template shows how to follow ORCHARD_APP_DATA, as NLog does: replace App_Data in the path with ORCHARD_APP_DATA between percent signs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Comparing the two",
+      "subtitle": "What differs and what does not",
+      "clips": [
+        {
+          "id": "05-compare",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "compare-1",
+              "text": "NLog is configured by NLog.config and the Logging section, and it finds the tenant with a layout renderer. Serilog is configured by the Serilog section, and it finds the tenant with a middleware."
+            },
+            {
+              "id": "compare-2",
+              "text": "With either library, the template's log files include the tenant name, and by default the files go to the logs folder of App_Data. To export logs to a collector, a separate video covers OpenTelemetry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Logging in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is logging in Orchard Core: NLog or Serilog, chosen with the project template, each putting the name of the tenant in the log output. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
