@@ -8,7 +8,8 @@
     "?culture=fr": "question mark culture equals F.R.",
     "fr.zip": "F.R. dot zip",
     "fr-CA": "F.R. dash C.A.",
-    "such as fr.": "such as F.R.",
+    "such as fr,": "such as F.R.,",
+    "CMS": "C.M.S.",
     "named fr,": "named F.R.,",
     "the fr files": "the F.R. files",
     "App_Data": "App Data",
@@ -51,7 +52,7 @@
             },
             {
               "id": "po-2",
-              "text": "The name of the file, or of the folder that holds it, is the culture, such as fr. Orchard Core loads the files of the culture of the request, and shows the original text for every text that has no translation."
+              "text": "The name of the file, or of its folder, is the culture: a language such as fr, or a language and region such as fr-CA. Orchard Core loads the files of the culture of the request, and shows the original text without a translation."
             }
           ]
         }
@@ -161,7 +162,7 @@
           "steps": [
             {
               "id": "where-1",
-              "text": "Orchard Core searches several places for a file named after the culture: the Localization folder of each module and theme, the Localization folder of the site, and the Localization folder of each tenant, under App_Data, Sites."
+              "text": "Orchard Core searches several places for a file named after the culture: the Localization folder of each module and theme, of the site, and of each tenant, a separate site in the application, under App_Data, Sites."
             },
             {
               "id": "where-2",
@@ -223,7 +224,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "PO files are plain text, named after a culture, and read from a few folders. Install the community files, add your own entries for the texts they do not cover, and restart the application. Thanks for watching."
+              "text": "PO files are plain text named after a culture, so you install the community files, add your own entries for the texts they do not cover, and restart the application. Thanks for watching."
             }
           ]
         }

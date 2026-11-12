@@ -83,10 +83,10 @@ service can confirm.
 
 ## Pronunciation (to confirm with `scripts/pronounce.py`; the slides and captions keep the written form)
 
-The `spoken` map of `storyboard.json` asks for these spellings: `PO` as "P.O.", `fr.zip` as "F.R. dot zip", `fr-CA` as
+The `spoken` map of `storyboard.json` asks for these spellings: `PO` as "P.O.", `CMS` as "C.M.S.", `fr.zip` as "F.R. dot zip", `fr-CA` as
 "F.R. dash C.A.", `?culture=fr` as "question mark culture equals F.R.", `Localization/fr.po` as "Localization slash F.R.
 dot P.O.", `msgctxt` as "message context", `msgid` as "message I.D.", `msgstr` as "message string", `App_Data` as "App Data",
 `MyNamespace.MyService` as "My Namespace dot My Service", and `OrchardCore.Features.Views.Admin.Features` as "Orchard
-Core dot Features dot Views dot Admin dot Features". The fr in "such as fr.", "named fr," and "the fr files" is spoken
+Core dot Features dot Views dot Admin dot Features". The fr in "such as fr,", "named fr," and "the fr files" is spoken
 "F.R." through phrase entries, since a plain `fr` entry would also change "from" and "French". Also check how the voice
 says "Crowdin", which has no entry.
