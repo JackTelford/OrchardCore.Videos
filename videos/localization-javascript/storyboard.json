@@ -169,7 +169,7 @@
             },
             {
               "id": "template-1",
-              "text": "Translators work from a template. Add the OrchardCore.Localization.Build package to your project, and run its UpdateLocalizationCatalog target. It reads the string localizer calls in C#, not your script files."
+              "text": "Translators work from a template. Add the OrchardCore.Localization.Build package to your project, and run its UpdateLocalizationCatalog target. It reads the string localizer calls in C# and Razor code, not your script files."
             }
           ]
         }

@@ -1,12 +1,12 @@
 # JavaScript Localization: Translate Strings in Scripts
 
-**YouTube:** not published yet · **Length:** 3:30 · **Feature:** `OrchardCore.Localization` ([JavaScript Localization](https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/))
+**YouTube:** not published yet · **Length:** 3:31 · **Feature:** `OrchardCore.Localization` ([JavaScript Localization](https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/))
 
 A script that draws part of a page can't call the string localizer of C# code, but its labels and messages belong in the same PO files. The video, for module and theme authors, follows the CORS module of Orchard Core: a localizer that implements `IJSLocalizer` returns a dictionary for a group name, a Razor view writes it into the page with `Orchard.GetJSLocalizations`, and the script reads it with `setTranslations` and `getTranslations`. It then translates the strings with a PO file, shows the CORS settings page in French, and ends with requesting several groups and extracting a template for translators. The title, description, tags and chapters YouTube shows are in `video.json`.
 
 ## Recording it again
 
-The video was recorded on a **fresh site** with fake data only, so it needs no mask script. Only one clip, `05-admin`, is a recording; the other chapters are slides drawn by `slides.py`. `recording-plan.md` holds the exact steps, the French `fr.po` file, and the checks for private data.
+The video is recorded on a **fresh site** with fake data only, so it needs no mask script. Only one clip, `05-admin`, is a recording; the other chapters are slides drawn by `slides.py`. `recording-plan.md` holds the exact steps, the French `fr.po` file, and the checks for private data.
 
 1. Build `src/OrchardCore.Cms.Web` of OrchardCore and run it with `ORCHARD_APP_DATA` pointing at an empty folder outside both repositories, on `http://localhost:5010`, provisioned by Auto Setup (the Blog recipe, site name **Orchard Core**, time zone `America/Los_Angeles`, user `admin`, email `admin@example.com`). Stop the site after its first start.
 2. Create the tenant's `Localization/fr.po` file in that folder from `recording-plan.md`, then start the site again. The file must be there before the site serves a French page.
