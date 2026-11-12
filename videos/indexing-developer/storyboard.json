@@ -1,0 +1,223 @@
+{
+  "title": "Indexing in code",
+  "output": "indexing-developer",
+  "spoken": {
+    "BlogPost.Subtitle": "Blog Post dot Subtitle"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Indexing in code",
+      "subtitle": "Index your own data and fields",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Indexing module turns content items and other records into documents for a search index. In this video, you write a part handler, a field handler, and a source for records that are not content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How indexing works",
+      "subtitle": "Profiles, tasks and handlers",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "An index profile has a provider, such as Lucene, and a type. The type names the source that feeds the index. The built-in type is Content, and each built-in provider registers it."
+            },
+            {
+              "id": "how-2",
+              "text": "When a content item is created, updated, published or removed, the Indexing module records a task for it, an update or a deletion. At the end of the request, it builds the document and sends it to each content index."
+            },
+            {
+              "id": "how-3",
+              "text": "The Indexing Worker feature adds a background task, Indexes Content Updater. Every minute, it reads the task log from the last position of each index. The request and the worker build the document with the same I Document Index Handler services."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Index a part",
+      "subtitle": "A handler for your own part",
+      "clips": [
+        {
+          "id": "02-part",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "To index a part, derive from Content Part Index Handler and name the part type. Build Index Async receives the part and a context. This is the handler of the Html Body part."
+            },
+            {
+              "id": "part-2",
+              "text": "The context lists the keys to index a value under: the part name, and the content type name followed by the part name. The handler sets the value once for each key."
+            },
+            {
+              "id": "part-3",
+              "text": "The options come from the settings of the provider. For Lucene, the Keyword and Stored settings become the Keyword and Store flags. A handler can ignore them, as the Alias part handler does."
+            },
+            {
+              "id": "part-4",
+              "text": "Register the handler as an I Content Part Index Handler. The Content Item Index Coordinator skips a part that is not included in the settings of the provider, unless the part is named after the content type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Index a field",
+      "subtitle": "A handler for your own field",
+      "clips": [
+        {
+          "id": "03-field",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "field-1",
+              "text": "A field handler follows the same pattern. Derive from Content Field Index Handler and name the field type. This is the handler of the Text field, and it sets the text under each key."
+            },
+            {
+              "id": "field-2",
+              "text": "The context also gives you the field definition and its settings. The Numeric field handler reads the scale, and indexes an integer when the scale is zero, and a number otherwise."
+            },
+            {
+              "id": "field-3",
+              "text": "Register it as an I Content Field Index Handler. A field is indexed only when its own settings include it, and its part is included or is named after the content type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose what is indexed",
+      "subtitle": "Settings, Reset and Rebuild",
+      "clips": [
+        {
+          "id": "04-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Whether an element is indexed is a setting. Under Design, Content Definition, Content Types, edit the Blog Post type, and then edit its Subtitle field."
+            },
+            {
+              "id": "settings-2",
+              "text": "The Subtitle settings page has a Lucene Index settings section. Include this element in the index lets the Text field handler add the field to the document."
+            },
+            {
+              "id": "settings-3",
+              "text": "Keyword indexes the value as a single token, and Stored lets you read the original value from the index. Elasticsearch and Azure AI Search offer neither. Save the field."
+            }
+          ]
+        },
+        {
+          "id": "04-reset",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "reset-1",
+              "text": "Documents are built when a record changes or a task is processed, so existing documents change only when they are built again. In the Actions menu of the index, choose Reset, and confirm with Yes."
+            },
+            {
+              "id": "reset-2",
+              "text": "Reset keeps the index and writes the documents again. Rebuild deletes the index first. Query Index then lists the stored fields, including a column named BlogPost.Subtitle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Index any record",
+      "subtitle": "One interface for every document",
+      "clips": [
+        {
+          "id": "05-record",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "record-1",
+              "text": "To add values for any record, implement I Document Index Handler. The Content Item Index Coordinator, which calls the part and field handlers, is one of them."
+            },
+            {
+              "id": "record-2",
+              "text": "Every handler receives every record that is indexed, so check the type of the record first, and return when it is not yours. Then call Set with a name, a value, and the options."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "A source of your own",
+      "subtitle": "Tasks, a service and a profile handler",
+      "clips": [
+        {
+          "id": "06-source",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "A source is a provider name and a type. For a built-in provider, call its helper, such as Add Lucene Indexing Source, with your type, a display name, and a description. They appear when you choose Add index."
+            },
+            {
+              "id": "source-2",
+              "text": "For a provider of your own, call Add Indexing Source with three services. The index manager creates, rebuilds, and deletes indexes; the document index manager writes documents and keeps the last task id; the name provider builds the full index name."
+            },
+            {
+              "id": "source-3",
+              "text": "Record changes with Create Task Async on I Indexing Task Manager, giving a record id, a category, and Update or Delete. The category is the type of your source. Tasks are saved at the end of the request."
+            },
+            {
+              "id": "source-4",
+              "text": "Derive from Named Indexing Service, and pass the category as its name. Get Build Document Index Async returns the context for a task, or null to skip it. The base class never deletes documents, not even for Delete tasks; use the document index manager."
+            },
+            {
+              "id": "source-5",
+              "text": "Call Process Records For All Indexes Async from a background task, as the Indexing Worker does. An I Index Profile Handler can process the records when an index of your type is synchronized, and set the last task id to zero when one is reset."
+            },
+            {
+              "id": "source-6",
+              "text": "Register the three classes in your startup. The indexing service is a scoped service, the profile handler is added with Add Index Profile Handler, and the background task is registered as an I Background Task singleton."
+            },
+            {
+              "id": "source-7",
+              "text": "Check what your provider reads from the index profile. Lucene reads the name of the key field from the mappings of its profile, and only the content profile handler sets them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Indexing in code",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how indexing extends in code: handlers for parts, fields, and records, and a source for your own data. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

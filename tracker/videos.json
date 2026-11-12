@@ -2981,9 +2981,9 @@
     "docs": [
       "src/docs/reference/modules/Indexing/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.9,
+    "words": 879,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
