@@ -32,7 +32,8 @@
     "siteCultures": "site cultures",
     "blogPost": "blog post",
     "GraphiQL": "Graphical",
-    "YesSql": "Yes Sequel"
+    "YesSql": "Yes Sequel",
+    "C#": "C sharp"
   },
   "chapters": [
     {
@@ -104,7 +105,7 @@
             },
             {
               "id": "part-4",
-              "text": "The match is made by name: the part on the content type must be named like the part class. Its fields then sit under the part name without Part, in camel case. Autoroute collapses its part, so path sits directly on the content type."
+              "text": "The match is by name: the part on the content type must be named like the part class. Its fields then sit under the part name without Part, in camel case. Autoroute marks its part as collapsed, which puts path directly on the content type."
             }
           ]
         }

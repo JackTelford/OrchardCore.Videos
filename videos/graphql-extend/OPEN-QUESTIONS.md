@@ -93,5 +93,5 @@ The `spoken` map of `storyboard.json` was written without hearing the voice. Che
 
 ## 6. Length
 
-The narration is 920 words, 6:08 at 150 words per minute. The identifiers spoken as
+The narration is 921 words, 6:08 at 150 words per minute. The identifiers spoken as
 several words (see 5) make the voice slower than the count.
