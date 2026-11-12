@@ -103,7 +103,7 @@
             },
             {
               "id": "edit-5",
-              "text": "While a tenant is not set up, its Edit page also offers the recipe and database settings that Setup uses. Here is Pilot. A tenant that is set up no longer shows them."
+              "text": "While a tenant is not set up, its Edit page also offers the recipe and database settings that Setup uses. Here is Pilot. A tenant that is set up does not show them."
             }
           ]
         }
