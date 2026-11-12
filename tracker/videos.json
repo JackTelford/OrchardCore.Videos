@@ -2471,9 +2471,9 @@
       "src/docs/topics/display/README.md",
       "src/docs/topics/display/shapes.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.5,
+    "words": 975,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

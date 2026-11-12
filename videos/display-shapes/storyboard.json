@@ -1,0 +1,285 @@
+{
+  "title": "Shapes: How Orchard Core Renders a Page",
+  "output": "display-shapes",
+  "spoken": {
+    "IShapeBindingResolver": "I Shape Binding Resolver",
+    "IShapeAttributeProvider": "I Shape Attribute Provider",
+    "IShapeFactory": "I Shape Factory",
+    "IDisplayHelper": "I Display Helper",
+    "IDisplayResult": "I Display Result",
+    "IHtmlDisplay": "I H.T.M.L. Display",
+    "ILayoutAccessor": "I Layout Accessor",
+    "IShape": "I Shape",
+    "ShapeExecuteAsync": "Shape Execute Async",
+    "AddShapeAttributes": "Add Shape Attributes",
+    "DisplayAsync": "Display Async",
+    "CreateAsync": "Create Async",
+    "ShapeResult": "Shape Result",
+    "DisplayType": "Display Type",
+    "Content-BlogPost.Summary": "Content hyphen Blog Post dot Summary",
+    "DateTime": "Date Time",
+    "TimeSpan": "Time Span",
+    "shape_add_properties": "shape add properties",
+    "shape_new": "shape new",
+    "shape_render": "shape render"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Shapes: How Orchard Core Renders a Page",
+      "subtitle": "The objects every page is built from",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every page of an Orchard Core site is built from shapes. A shape holds the data to display and the metadata that says how to display it. In this video, you create a shape, follow how it renders, and find the template behind it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a shape is",
+      "subtitle": "Data, metadata and a binding",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "A shape has properties, which hold the data a template reads, and metadata, which names its type and says how to display it. It also has items, its ordered child shapes, so shapes form a tree and each one renders on its own."
+            },
+            {
+              "id": "what-2",
+              "text": "Layouts, content items, fields and menus are all shapes. A binding, the template or code that turns a shape into HTML, comes from a module, and a theme or your application can replace it for one content type, display type or shape."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "A page made of shapes",
+      "subtitle": "Menu, header and posts of a blog",
+      "clips": [
+        {
+          "id": "02-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "This is the home page of a blog, and everything on it is a shape. The links in the navigation bar are a Menu shape, and a template of the theme renders them."
+            },
+            {
+              "id": "page-2",
+              "text": "The large header comes from the template of the Blog content type. It adds the header to the Header zone, a named area of the layout, and the layout renders that zone under the navigation."
+            },
+            {
+              "id": "page-3",
+              "text": "Each post in the list is a content item shape that uses the display type Summary. The theme draws it with a template named Content-BlogPost.Summary, which applies to blog posts only."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create and render a shape",
+      "subtitle": "Razor, Liquid and C#",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "In a Razor template, New creates a shape and DisplayAsync renders it. This code creates a shape of type Car, with a Brand and a Color, then renders it."
+            },
+            {
+              "id": "create-2",
+              "text": "Orchard Core looks for a binding named Car. A binding can be a Razor template in the Views folder, also named Car, which reads the properties of the shape from Model."
+            },
+            {
+              "id": "create-3",
+              "text": "Liquid has the same three operations. The shape_new filter creates the shape, the shape_add_properties tag sets its properties, and the shape_render filter renders it."
+            },
+            {
+              "id": "create-4",
+              "text": "From a service, inject IShapeFactory and IDisplayHelper. Create the shape by its type name, set its properties, and render it with ShapeExecuteAsync."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The shape contract",
+      "subtitle": "IShape, properties and metadata",
+      "clips": [
+        {
+          "id": "04-contract",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "contract-1",
+              "text": "Every shape implements IShape. The default Shape class is dynamic: assigning a member it does not have stores the value in the Properties dictionary, and reading that member returns the same value."
+            },
+            {
+              "id": "contract-2",
+              "text": "The Metadata describes how to render a shape: Type is the logical name used to find a binding, and DisplayType is the context, such as Detail, Summary or Edit. Alternates select another binding, wrappers render around the output, and a separate video covers alternates."
+            },
+            {
+              "id": "contract-3",
+              "text": "The shape type does not depend on the .NET type. CreateAsync with a model class creates a proxy that derives from your class and implements IShape. The class must not be sealed, and needs a parameterless constructor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "How a shape renders",
+      "subtitle": "The pipeline, bindings and the shape table",
+      "clips": [
+        {
+          "id": "05-render",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "render-1",
+              "text": "Rendering a shape calls IDisplayHelper, which delegates to IHtmlDisplay. Displaying handlers run first. Then Orchard Core resolves a binding, executes it, renders each wrapper around the result, and runs the Displayed handlers."
+            },
+            {
+              "id": "render-2",
+              "text": "In code, a binding is a delegate that returns the HTML of a shape. It can come from a Razor template, a Liquid template, a method marked with the Shape attribute, or an IShapeBindingResolver."
+            },
+            {
+              "id": "render-3",
+              "text": "The shape table lists the bindings of the current tenant and the active theme. The application overrides the theme and its base themes, which override the modules. Without a binding, rendering throws an exception that names the shape type and the theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Templates and code bindings",
+      "subtitle": "File names, and methods that render shapes",
+      "clips": [
+        {
+          "id": "06-names",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "name-1",
+              "text": "Template files live in Views and its Items, Parts, Fields and Elements folders; the last three add a prefix. A hyphen becomes a double underscore, a dot becomes a single underscore, and a dot after the last hyphen marks a display type."
+            },
+            {
+              "id": "code-1",
+              "text": "When a method suits better than a file, implement IShapeAttributeProvider and mark a method with the Shape attribute. The method returns the HTML, and AddShapeAttributes registers the class. Core shapes such as DateTime and TimeSpan are written this way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Layouts and zones",
+      "subtitle": "Where shapes sit on a page",
+      "clips": [
+        {
+          "id": "07-zones",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "zone-1",
+              "text": "Layout is a shape that holds zones: named containers such as Header, Content and Footer. Each zone is a shape of type Zone and renders its items in order. The active theme decides which zones it uses."
+            },
+            {
+              "id": "zone-2",
+              "text": "In code, ILayoutAccessor returns the Layout shape of the request. Reading a zone that does not exist returns an empty placeholder, and adding the first item creates the zone. Items are ordered by position, so 2 comes before 10."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Shapes from display drivers",
+      "subtitle": "Initialize and Location",
+      "clips": [
+        {
+          "id": "08-drivers",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "driver-1",
+              "text": "Display drivers are the classes that build the shapes of content items, parts and fields. A driver returns an IDisplayResult, and a ShapeResult resolves placement first, then creates, configures and places one shape, so a hidden shape is never created."
+            },
+            {
+              "id": "driver-2",
+              "text": "Initialize creates a strongly typed shape. The string is its shape type, the model class is the base of its .NET type, and Location sets the default zone and position for each display type. Placement can override these locations, and a separate video covers it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Find the template of a shape",
+      "subtitle": "Write shape debug information",
+      "clips": [
+        {
+          "id": "09-debug",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "debug-1",
+              "text": "To see which template rendered a fragment, open Settings, Debugging in the admin. Check Write shape debug information, and save. The setting belongs to the site, and it is off by default."
+            },
+            {
+              "id": "debug-2",
+              "text": "The content of the page looks the same. In its page source, each shape rendered by a binding is wrapped in two HTML comments, and every visitor receives them."
+            }
+          ]
+        },
+        {
+          "id": "09-source",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "debug-3",
+              "text": "The start comment gives the shape type and the bindings that rendered it. Each binding shows its name, its source, such as the path of a template, and the engine, which is razor, liquid or code. The end comment repeats the shape type."
+            },
+            {
+              "id": "debug-4",
+              "text": "When your template is not the one used, the comments show which binding won. Then check that the template sits in one of the Views folders, that its file name matches the binding name, and that a later alternate does not outrank it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Shapes: How Orchard Core Renders a Page",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A shape carries data and metadata: the shape factory or a display driver creates it, placement puts it in a zone, and rendering resolves its most specific binding. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
