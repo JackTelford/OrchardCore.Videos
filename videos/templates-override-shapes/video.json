@@ -1,0 +1,49 @@
+{
+  "title": "Templates: Override Shapes From the Admin With Liquid | Orchard Core",
+  "description": "The pages of an Orchard Core site are built from shapes, and the view files of a theme decide how each shape renders. Changing one of them means changing the theme itself.\n\nThe Templates module stores Liquid templates in the database of the site, under the name of a shape or one of its alternates. A template is written in the admin, and for each alternate Orchard Core tries a template before a view file with the same name.\n\nIn this video:\n• Shapes, alternates and templates: how a template finds the shape it replaces\n• Create a template that overrides how a blog post is listed\n• Names and properties: what to override, and what the Liquid can use\n• Find the shape behind a fragment with shape debug information\n• Shortcuts in Content Types that open the right template\n• Manage templates: search, rename and delete\n• Move templates between sites with recipes and deployment plans",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Liquid",
+    "Templates",
+    "Shapes",
+    "Alternates",
+    "Theming"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Templates/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Templates/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Templates"
+  }
+}
