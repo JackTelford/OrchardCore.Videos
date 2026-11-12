@@ -1,0 +1,47 @@
+{
+  "title": "Shortcodes: Embed Images and Links in Your Text | Orchard Core",
+  "description": "Some of what a page shows depends on the site, such as a picture from the media library or the address of a file.\n\nA shortcode is a small tag in square brackets that you type into the text. The site replaces it when it displays the page. This video uses the image and asset_url shortcodes in the editor of an article, from picking a file to the published page.\n\nIn this video:\n• What a shortcode is\n• Insert an image from the media library\n• Options of the image shortcode: size and alternative text\n• Choose a shortcode from the list of available shortcodes\n• Where shortcodes work",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Shortcodes"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Shortcodes",
+    "Media library",
+    "Content editing",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Shortcodes/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Shortcodes/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Shortcodes"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "title": "Orchard Core shortcodes",
+  "output": "shortcodes-built-in",
+  "spoken": {
+    "asset_url": "asset underscore U.R.L.",
+    "home-bg.jpg": "home dash B.G. dot J.P.G.",
+    "post-bg.jpg": "post dash B.G. dot J.P.G."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core shortcodes",
+      "subtitle": "Embed images and links in your text",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A shortcode is a small tag in square brackets that you type into the text of a page. The site replaces it with a picture or an address. In this video, you insert an image, set its options, and pick shortcodes from a list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a shortcode is",
+      "subtitle": "A tag that the site replaces",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Some of what a page shows depends on the site, such as a picture from the media library. You type a shortcode in the text, and the site replaces it with the result when it displays the page. The editor keeps the shortcode itself."
+            },
+            {
+              "id": "why-2",
+              "text": "A shortcode starts with a name in square brackets. Options can follow the name, and some shortcodes take content between an opening tag and a closing tag. For an image, that content is the name of a file."
+            },
+            {
+              "id": "why-3",
+              "text": "With the Shortcodes feature enabled, the Media module adds the image shortcode, which shows a picture, and the asset_url shortcode, which gives the address of a file. The locale shortcode shows its content for a matching language, and needs the Localization module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Insert an image",
+      "subtitle": "Pick a file from the media library",
+      "clips": [
+        {
+          "id": "02-image",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "image-1",
+              "text": "The Article list shows each article with an Edit button. Let's open one. Its body is a text editor, and the toolbar has buttons named Insert Shortcode and Insert Media."
+            },
+            {
+              "id": "image-2",
+              "text": "Let's add a picture after the line that introduces the photo. Insert Media opens the media library in a dialog, with its files listed. Each file you select adds its own shortcode."
+            },
+            {
+              "id": "image-3",
+              "text": "We select home-bg.jpg and confirm. The dialog closes, and the text holds the image shortcode: the name in square brackets, the file name, and a closing tag."
+            },
+            {
+              "id": "image-4",
+              "text": "Publish saves the change. On the published page, the site has replaced the shortcode with the picture from the media library."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Options of the image",
+      "subtitle": "Size and alternative text",
+      "clips": [
+        {
+          "id": "03-which",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "which-1",
+              "text": "Options go after the name. The image shortcode takes alt, for alternative text, and class, for a style class. Width and height ask for a resized copy in the sizes the site accepts, and mode, format and quality shape that copy."
+            }
+          ]
+        },
+        {
+          "id": "03-options",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "options-1",
+              "text": "Let's ask for a copy that is 480 pixels wide. Inside the opening tag, after the name, we type the width option with the value 480."
+            },
+            {
+              "id": "options-2",
+              "text": "Next comes the alt option. Its text describes the picture for visitors who can't see it, so we type a short description."
+            },
+            {
+              "id": "options-3",
+              "text": "After publishing, the page shows a smaller picture. The site served a copy resized to the width we asked for."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose a shortcode from a list",
+      "subtitle": "Available shortcodes and asset_url",
+      "clips": [
+        {
+          "id": "04-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Insert Shortcode opens Available Shortcodes. Each shortcode is a card, with a hint and a note on how to write it. The categories on the left narrow the list."
+            },
+            {
+              "id": "list-2",
+              "text": "The Filter box matches the start of a name, so typing asset leaves the asset_url card. Add puts that shortcode into the text."
+            },
+            {
+              "id": "list-3",
+              "text": "Its two tags have a space between them. We replace the space with the file name post-bg.jpg, so the shortcode points at a file in the media library."
+            },
+            {
+              "id": "list-4",
+              "text": "The asset_url shortcode gives only an address, with no picture. After publishing, the page shows the address of the file on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Where shortcodes work",
+      "subtitle": "Editors and fields",
+      "clips": [
+        {
+          "id": "05-where",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "Shortcodes work in the HTML body and the Markdown body of a content item, and in HTML fields and Markdown fields. The Markdown editor with a toolbar has buttons named Insert Shortcode and Insert Image."
+            },
+            {
+              "id": "where-2",
+              "text": "You can also type a shortcode by hand, since the buttons only save typing. In the editor, a shortcode stays plain text, and the displayed page shows the result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core shortcodes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Shortcodes let your text carry a picture or an address that the site fills in. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
