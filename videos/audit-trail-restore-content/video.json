@@ -1,0 +1,48 @@
+{
+  "title": "Audit Trail: Compare and Restore Content Versions | Orchard Core",
+  "description": "A content item is edited by mistake, or deleted by accident, and you need the earlier text back.\n\nThe Audit Trail module keeps a copy of a content item with each recorded event. You open that copy, compare it with the previous one, and restore an earlier version, or a deleted item, as a draft.\n\nIn this video:\n• How the Audit Trail keeps versions, and what limits them\n• Choosing the content types to record\n• Finding the history of a content item\n• Viewing an earlier version\n• Comparing two versions\n• Restoring an earlier version\n• Restoring a deleted item",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AuditTrail"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Audit Trail",
+    "Content versions",
+    "Restore content",
+    "Content management"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Audit Trail"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AuditTrail/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/AuditTrail/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AuditTrail"
+  }
+}

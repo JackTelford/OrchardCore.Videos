@@ -1,0 +1,216 @@
+{
+  "title": "Content versions in the Audit Trail",
+  "output": "audit-trail-restore-content",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content versions in the Audit Trail",
+      "subtitle": "View, compare and restore earlier versions of your content",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Audit Trail keeps a copy of a content item each time it changes, for the content types you choose. In this video, you open an earlier version, compare it with the one before it, and restore an earlier version and a deleted item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How versions are kept",
+      "subtitle": "Events, copies and limits",
+      "clips": [
+        {
+          "id": "01-versions",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "versions-1",
+              "text": "The Audit Trail records an event each time a content item is created, saved, published, unpublished, removed, cloned or restored. Each event keeps a full copy of the item as it was, with the user and the time."
+            },
+            {
+              "id": "versions-2",
+              "text": "From a copy, you can view the item as it was and compare it with the previous recorded copy. Where a Restore button appears, you can restore it as a draft, so the published page stays the same until you publish it."
+            },
+            {
+              "id": "versions-3",
+              "text": "Only the content types you choose in the settings are recorded. Events are removed after the retention period, which is ten days by default, unless you disable the trimming task. A Restore button appears on Published events and on Removed events."
+            },
+            {
+              "id": "versions-4",
+              "text": "Opening the Audit Trail needs the View audit trail permission. Viewing a version needs permission to edit the item, and restoring a version needs permission to publish it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Choose what to record",
+      "subtitle": "The content types of the Audit Trail",
+      "clips": [
+        {
+          "id": "02-record",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "record-1",
+              "text": "Open Settings, Audit Trail, and select the Content tab. Under Allowed content types, you choose which content types the Audit Trail records. Until you choose at least one, no content events are recorded."
+            },
+            {
+              "id": "record-2",
+              "text": "Select Article, and click Save. Changes to articles are recorded from this point on. Changes made earlier are not in the log."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Find the history of an item",
+      "subtitle": "The events of one content item",
+      "clips": [
+        {
+          "id": "03-history",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "history-1",
+              "text": "In Content, Content Items, each item has an Actions menu. For the article Harvest Festival Cancelled, open Actions and choose Audit Trail."
+            },
+            {
+              "id": "history-2",
+              "text": "The list shows the events of this one item, newest first. Each line gives the event, its category, when it happened, who triggered it, and the version it concerns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "View an earlier version",
+      "subtitle": "The item as it was",
+      "clips": [
+        {
+          "id": "04-view",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "Find the line of an earlier Published event, and click View."
+            },
+            {
+              "id": "view-2",
+              "text": "The article opens in a read-only editor, filled with the values it had in that version. The page title names the content type, the title and the version number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Compare two versions",
+      "subtitle": "What changed, line by line",
+      "clips": [
+        {
+          "id": "05-compare",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "compare-1",
+              "text": "Back in the list, click Details on the newest Published line. The page shows who triggered the event and when, then the type, display text and version of the content item."
+            },
+            {
+              "id": "compare-2",
+              "text": "Select the Diff tab. The left side holds the previous recorded copy, and the right side holds this one. Changed lines are shaded red on the left and green on the right."
+            },
+            {
+              "id": "compare-3",
+              "text": "Choose Unified to read both copies in one column. Some lines, such as the modified time, differ in every version, so look for the fields you edited: here, the title and the subtitle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Restore an earlier version",
+      "subtitle": "Bring it back as a draft",
+      "clips": [
+        {
+          "id": "06-restore",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "restore-1",
+              "text": "To undo the change, go back to the list and click Restore on the line of the earlier Published version you want. The line of the newest version has no Restore button."
+            },
+            {
+              "id": "restore-2",
+              "text": "A dialog titled Restore to Version asks you to confirm the version number. Click Yes."
+            },
+            {
+              "id": "restore-3",
+              "text": "The Audit Trail reports that the article has been restored, and a Restored event heads the list. The published page is unchanged, because the restored version is a draft."
+            },
+            {
+              "id": "restore-4",
+              "text": "In Content Items, the article shows both a Published and a Draft status. Open Actions and choose Publish Draft to make the restored version the published one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Restore a deleted item",
+      "subtitle": "History outlives the item",
+      "clips": [
+        {
+          "id": "07-deleted",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "deleted-1",
+              "text": "Suppose the article Summer Parking Notice is deleted by mistake. In Content Items, open Actions, choose Delete, and click Ok to confirm. The article disappears from the list."
+            },
+            {
+              "id": "deleted-2",
+              "text": "Its history remains. Open Tools, Audit Trail: the deletion is recorded as a Removed event, and the event still holds a copy of the article."
+            },
+            {
+              "id": "deleted-3",
+              "text": "Click Restore on the Removed line. The dialog is titled Restore content item. Click Yes."
+            },
+            {
+              "id": "deleted-4",
+              "text": "The article returns to Content Items with the Draft status only, because a restore creates a draft and a deleted item has no published version left. Choose Publish Draft to put it back on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content versions in the Audit Trail",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Audit Trail for content: you can view and compare recorded versions, and restore a published version or a deleted item as a draft. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
