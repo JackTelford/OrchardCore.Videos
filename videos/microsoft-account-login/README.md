@@ -1,6 +1,6 @@
 # Microsoft Account: Sign In With Personal Microsoft Accounts
 
-**YouTube:** not published yet · **Length:** 3:34 · **Feature:** `OrchardCore.Microsoft.Authentication.MicrosoftAccount` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Microsoft.Authentication/))
+**YouTube:** not published yet · **Length:** 3:35 · **Feature:** `OrchardCore.Microsoft.Authentication.MicrosoftAccount` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Microsoft.Authentication/))
 
 The video shows how to let visitors sign in with their Microsoft account. It explains what you create at Microsoft,
 enables the Microsoft Account Authentication feature, enters AppId, Secret Key, CallbackPath and Store tokens, and finds

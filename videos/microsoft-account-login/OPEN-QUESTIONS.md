@@ -35,7 +35,7 @@ documentation states; nothing below is claimed in it.
 ## To confirm with the voice
 
 8. **Pronunciation.** No `spoken` entry was added. Check with `scripts/pronounce.py` how the voice says `AppId`,
-   `CallbackPath`, `/signin-microsoft` (narration of `how-2`) and `sign-in`, and add a
+   `CallbackPath` and `sign-in`, and add a
    `spoken` entry for any that is misread. A person must confirm each new spelling.
 
 ## To confirm at Microsoft (not verifiable from the Orchard Core source)

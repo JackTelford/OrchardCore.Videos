@@ -35,7 +35,7 @@
             },
             {
               "id": "how-2",
-              "text": "You create an app for your site in the Microsoft developer portal, which gives you an Application ID and lets you create a secret key. The app also needs to use your site's callback path, where visitors return. The default is /signin-microsoft."
+              "text": "You create an app for your site in the Microsoft developer portal, which gives you an Application ID and lets you create a secret key. The app also needs to use your site's callback path, where visitors return. The settings page shows the default."
             },
             {
               "id": "how-3",
