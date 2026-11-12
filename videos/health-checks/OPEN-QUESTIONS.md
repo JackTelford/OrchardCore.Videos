@@ -50,7 +50,7 @@ Also listen for how the voice says "Redis" and "Twilio" (no entry yet).
   here. If it draws an error page, `fail-2` needs another way to show the result (for example the detailed response
   first), and the narration of `fail-2` and `detail-1` changes with it.
 - **The error pages of the Diagnostics feature.** The Blog recipe enables `OrchardCore.Diagnostics`, whose
-  `DiagnosticsStartupFilter.cs:24` calls `UseStatusCodePagesWithReExecute("/Error/{0}")`. The ASP.NET Core middleware
+  `DiagnosticsStartupFilter.cs:29` calls `UseStatusCodePagesWithReExecute("/Error/{0}")`. The ASP.NET Core middleware
   behind it leaves a response alone when it has started or has a content type, and the health check writes
   `text/plain` (or `application/json`) and a body, so the `503` of `fail-2` should show the word `Unhealthy` and not
   an Orchard error page. This is the behavior of ASP.NET Core, not of the Orchard Core source; confirm it on the

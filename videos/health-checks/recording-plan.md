@@ -63,7 +63,7 @@ the `App_Data` folder and of `state.json`, taken while the site is stopped):
   `scene.HighlightAsync(scene.Page.Locator("[data-filter-value^='Health Checks OrchardCore.HealthChecks ']").First)`,
   then `scene.ClearHighlightsAsync()`. Every row carries `data-filter-value` set to its name, id and description
   separated by spaces (`Drivers/FeatureEntryDisplayDriver.cs:20`), so this selector finds the row *Health Checks* only.
-- Click **Enable** with `scene.ClickAndWaitForNavigationAsync`. The button posts and the page redirects to the
+- Click **Enable** with `scene.ClickAndWaitForNavigationAsync`. It is a link that the page sends as a POST (`data-url-af`), and the page redirects to the
   Features page. Enabling a feature recycles the tenant, so the redirect can take a few seconds: if the step then runs
   longer than its narration, type faster or cut the wait with `scene.OffCameraAsync`, as `SKILL.md` describes.
 - Wait until the text *The feature Health Checks was enabled.* is visible.
@@ -119,7 +119,7 @@ the `App_Data` folder and of `state.json`, taken while the site is stopped):
 - Source: an unhealthy compact response is `503` (docs, "Compact response"; ASP.NET Core default mapping, used because
   `OrchardCore.HealthChecks/Startup.cs:54` passes no options); the check reports *Unhealthy*
   `OrchardCore.Redis/HealthChecks/RedisHealthCheck.cs:23`. The Blog recipe enables `OrchardCore.Diagnostics`, whose
-  `DiagnosticsStartupFilter.cs:24` re-executes error status codes to `/Error/{0}`; ASP.NET Core skips that for a
+  `DiagnosticsStartupFilter.cs:29` re-executes error status codes to `/Error/{0}`; ASP.NET Core skips that for a
   response that has a content type or has started, and the health check writes `text/plain` and a body, so the page
   must show the word, not Orchard's error page (see `OPEN-QUESTIONS.md`).
 
