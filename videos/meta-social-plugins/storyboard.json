@@ -110,7 +110,7 @@
             },
             {
               "id": "add-3",
-              "text": "The editor asks for a Title. Render title shows that title above the widget, and we leave it off. The layer decides where the widget appears: let's select Always, so it shows on every page."
+              "text": "The editor asks for a Title. Render title shows that title above the widget, and you leave it off. The layer decides where the widget appears: let's select Always, so it shows on every page."
             },
             {
               "id": "add-4",
