@@ -28,9 +28,10 @@ NEEDS = [
 
 # Good to know.
 NOTES = [
-    ("1", "Default provider", "Choose it on the Providers tab. Clearing Enable Azure Provider turns it off."),
-    ("2", "When delivery fails", "A general error message, never the connection string. Details go to the log."),
-    ("3", "Secrets", "With the Secrets feature enabled, Connection String can reference a secret."),
+    ("1", "Default provider", "Choose it on the Providers tab when more than one is enabled."),
+    ("2", "Turning it off", "Clear Enable Azure Provider and save. The default setting is cleared too."),
+    ("3", "When delivery fails", "A general error message, never the connection string. Details go to the log."),
+    ("4", "Secrets", "With the Secrets feature enabled, Connection String can reference a secret."),
 ]
 
 
@@ -58,5 +59,9 @@ def slide(step_id, chapter_title, label):
     if step_id == "notes-3":
         image = slide_base(chapter_title, label, "Good to know")
         bullets(image, NOTES, active={2})
+        return image
+    if step_id == "notes-4":
+        image = slide_base(chapter_title, label, "Good to know")
+        bullets(image, NOTES, active={3})
         return image
     raise SystemExit(f"No slide for {step_id}")

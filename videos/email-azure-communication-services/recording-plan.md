@@ -41,6 +41,19 @@ never clicked).
 | `Subject` (test page) | `Test message` |
 | `Body` (test page) | `Hello from the test page.` |
 
+## Commands
+
+Run once, outside the capture, from the repository root (`<repo>`; `<bin>` is the folder the build writes to):
+
+```bash
+cd .agents/skills/orchardcore-video-producer/scripts/recorder
+dotnet build -c Release -p:VideoScenes=<repo>/videos/email-azure-communication-services/recorder
+export VIDEO_ROOT=<repo>/videos/email-azure-communication-services VIDEO_BASE_URL=http://localhost:5010 VIDEO_USER_NAME=admin VIDEO_PASSWORD=<password>
+<bin>/Recorder setup
+```
+
+Then `scripts/narrate.py videos/email-azure-communication-services` and the recording of the clips, in the order below.
+
 ## Order of the clips, and what each one changes
 
 The clips depend on each other and are recorded in the order they play: `02-enable`, `03-configure`, `04-test`.
@@ -226,9 +239,10 @@ The opening card `intro` and the closing card `outro` are drawn from the storybo
 - `fit-2` (slide): the heading "Two providers" and three cards: Azure Communication Services, Default Azure Communication Services, and when the
   default one is listed.
 - `fit-3` (slide): the heading "What you need" and three cards: an Azure resource, a sender email address, a connection string.
-- `notes-1` (slide): the heading "Good to know" and three cards, the first one bright: the default provider.
-- `notes-2` (slide): the same slide with the second card bright: when delivery fails.
-- `notes-3` (slide): the same slide with the third card bright: the Secrets feature.
+- `notes-1` (slide): the heading "Good to know" and four cards, the first one bright: the default provider.
+- `notes-2` (slide): the same slide with the second card bright: turning the provider off.
+- `notes-3` (slide): the same slide with the third card bright: when delivery fails.
+- `notes-4` (slide): the same slide with the fourth card bright: the Secrets feature.
 
 ## Checks for private data
 

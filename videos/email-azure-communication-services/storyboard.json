@@ -150,14 +150,18 @@
           "steps": [
             {
               "id": "notes-1",
-              "text": "If more than one provider is enabled, choose the default on the Providers tab. Clearing Enable Azure Provider and saving turns the provider off, and clears the default setting if this provider was the default."
+              "text": "If more than one provider is enabled, choose the default on the Providers tab. The Email module sends the messages of your site through that provider."
             },
             {
               "id": "notes-2",
-              "text": "When the call to Azure fails, the Email Test page shows a general error message that never includes the connection string. The details are written to the log of the site."
+              "text": "Clearing Enable Azure Provider and saving turns the provider off. If this provider was the default, the default setting is cleared too."
             },
             {
               "id": "notes-3",
+              "text": "When the call to Azure fails, the Email Test page shows a general error message that never includes the connection string. The details are written to the log of the site."
+            },
+            {
+              "id": "notes-4",
               "text": "When the Secrets feature is enabled, the Connection String field can also reference a secret, instead of keeping the value in the settings."
             }
           ]
