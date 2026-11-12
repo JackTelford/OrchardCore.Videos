@@ -6,7 +6,7 @@ Everything visual comes from brand.py, so the slides look like those of every ot
 from brand import bullets, slide_base
 
 HOW = [
-    ("1", "Select the button", "The login page shows a button named after your organization."),
+    ("1", "Select the button", "The login page shows a button with the text of the Display Name."),
     ("2", "Sign in at Microsoft", "The person enters their credentials on the Microsoft page."),
     ("3", "Return to your site", "Microsoft sends the browser back to the callback path of your site."),
     ("4", "Match the person", "Your site finds, links or registers the user for that account."),
@@ -41,7 +41,7 @@ OPTIONS = [
 ROLES = [
     ("1", "Groups in Entra ID", "A security group for each Orchard Core role."),
     ("2", "The groups claim", "Added under Token configuration in the app registration."),
-    ("3", "A User Login option", "A script turns the groups into Orchard Core roles."),
+    ("3", "A User Login option", "A script can map the groups to Orchard Core roles."),
 ]
 
 

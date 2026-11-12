@@ -1,6 +1,6 @@
 # Microsoft Entra ID: Sign In With Work Accounts
 
-**YouTube:** not published yet · **Length:** 5:33 · **Feature:** [OrchardCore.Microsoft.Authentication.AzureAD](https://docs.orchardcore.net/en/latest/reference/modules/Microsoft.Authentication/)
+**YouTube:** not published yet · **Length:** 5:35 · **Feature:** [OrchardCore.Microsoft.Authentication.AzureAD](https://docs.orchardcore.net/en/latest/reference/modules/Microsoft.Authentication/)
 
 This video shows how people sign in to an Orchard Core site with their Microsoft Entra ID account. It explains how the
 sign-in works, what the app registration in the Azure portal provides, and who a tenant ID allows to sign in. It then
@@ -11,7 +11,7 @@ groups. The title, description, tags and chapters YouTube shows are in the video
 
 ## Recording it again
 
-The video was recorded on a **fresh site** with fake data only, so it needs no mask script. The sign-in itself is not
+The video is recorded on a **fresh site** with fake data only, so it needs no mask script. The sign-in itself is not
 recorded: the chapters about the Azure portal are slides, and the clip of the login page stops before the button is
 selected. The exact commands, selectors and labels are in recording-plan.md, and what a person must still confirm on a
 running site is in OPEN-QUESTIONS.md.

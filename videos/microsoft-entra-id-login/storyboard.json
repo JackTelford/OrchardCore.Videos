@@ -226,7 +226,7 @@
             },
             {
               "id": "roles-2",
-              "text": "In Orchard Core, the User Login option Use a script to set user roles, user claims and user properties based on external provider claims turns those groups into roles. The guide on docs.orchardcore.net has the script."
+              "text": "In Orchard Core, the User Login option Use a script to set user roles, user claims and user properties based on external provider claims runs a script that can map those groups to roles. The guide on docs.orchardcore.net has the script."
             }
           ]
         }
