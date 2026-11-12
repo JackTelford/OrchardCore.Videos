@@ -130,7 +130,7 @@
             },
             {
               "id": "build-6",
-              "text": "A file still has to go somewhere. Click the output port of Create a file, and choose Save to the media library. Its settings name a folder, and whether to replace a file with the same name."
+              "text": "A file has to go somewhere. Click the output port of Create a file, and choose Save to the media library. Its settings name a folder, and whether to replace a file with the same name."
             }
           ]
         }
@@ -168,7 +168,7 @@
             },
             {
               "id": "run-6",
-              "text": "On the Pipelines page, the pipeline shows its version and the status of its last run. Its Actions menu can run it again, open its Run history, or delete it, among other things."
+              "text": "On the Pipelines page, the pipeline shows its version and the status of its last run. Its Actions menu can run it again, open its Run history, or delete it."
             }
           ]
         }
