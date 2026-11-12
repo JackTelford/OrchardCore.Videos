@@ -1,0 +1,273 @@
+{
+  "title": "Data Migrations in Orchard Core",
+  "output": "data-migrations",
+  "spoken": {
+    "UpdateFrom1Async": "Update From One Async",
+    "IContentDefinitionManager": "I Content Definition Manager",
+    "AlterTypeDefinitionAsync": "Alter Type Definition Async",
+    "CreateMapIndexTableAsync": "Create Map Index Table Async",
+    "AlterIndexTableAsync": "Alter Index Table Async",
+    "IRecipeMigrator": "I Recipe Migrator",
+    "ISession": "I Session",
+    "AddDataMigration": "Add Data Migration",
+    "ConfigureServices": "Configure Services",
+    "CreateAsync": "Create Async",
+    "ExecuteAsync": "Execute Async",
+    "SchemaBuilder": "Schema Builder",
+    "DataMigration": "Data Migration",
+    "ProductIndex": "Product Index",
+    "TitlePart": "Title Part",
+    "WithPart": "With Part",
+    "UpdateFrom": "Update From",
+    "Task<int>": "Task of int"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Data Migrations in Orchard Core",
+      "subtitle": "Create and update your module's data, one numbered step at a time",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A module needs data in place before it can work: content types, database tables, starter content. A data migration creates that data and updates it as the module changes. In this video, you write a migration, register it, and watch Orchard Core run one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why data migrations",
+      "subtitle": "The problem they solve",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A module needs data before it works: a content type, a table for an index, or starter content. Every tenant, a separate site inside one Orchard Core application, has its own data, and tenants enable a module's features at different times."
+            },
+            {
+              "id": "why-2",
+              "text": "A data migration is a class of numbered steps. Each tenant records the version it has reached. When the tenant starts, Orchard Core runs the steps that are missing, in order."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The migration class",
+      "subtitle": "Create and UpdateFrom steps",
+      "clips": [
+        {
+          "id": "02-class",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "class-1",
+              "text": "Your migration class inherits from DataMigration. Its first step is a method named CreateAsync, which returns a number. Orchard Core stores that number as the version the migration reached."
+            },
+            {
+              "id": "class-2",
+              "text": "Every later step is named UpdateFrom, followed by the version it starts from. UpdateFrom1Async runs when the stored version is 1, and returns the version it leaves behind."
+            },
+            {
+              "id": "class-3",
+              "text": "Only public methods named Create, CreateAsync, or UpdateFrom plus a number, with or without Async, are steps. They return int or Task<int>, except CreateAsync, which must return Task<int>. Orchard Core ignores any other method."
+            },
+            {
+              "id": "class-4",
+              "text": "A tenant with no stored version runs CreateAsync, then the updates that continue from the number it returns. A tenant whose stored version is 1 runs UpdateFrom1Async and the steps after it. A step that already ran never runs again for that tenant."
+            },
+            {
+              "id": "class-5",
+              "text": "CreateAsync can return a higher number than 1. The Forms module's CreateAsync builds the final content types and returns 5, so a tenant with no stored version skips its four updates. Tenants with an earlier version run the ones they miss."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Register the migration",
+      "subtitle": "Tie it to a feature",
+      "clips": [
+        {
+          "id": "03-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "reg-1",
+              "text": "A migration does nothing until a Startup class registers it. In ConfigureServices, call AddDataMigration with your migration class."
+            },
+            {
+              "id": "reg-2",
+              "text": "A migration belongs to the feature of the Startup class that registers it, and runs only on tenants that enable that feature. The Feature attribute on a Startup class names the feature it belongs to. Register each migration class once."
+            },
+            {
+              "id": "reg-3",
+              "text": "Orchard Core creates the migration through dependency injection, so its constructor can ask for any service of the tenant. The Menu module's migration takes IRecipeMigrator and ISession."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "See a migration run",
+      "subtitle": "Enable a feature, and its migration runs",
+      "clips": [
+        {
+          "id": "04-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Let's see a migration run. Under Design, Content Definition, Content Types, searching for Form finds nothing, because the Forms feature isn't enabled on this site."
+            },
+            {
+              "id": "run-2",
+              "text": "Under Tools, Features, let's search for Forms and select Enable. This is the feature whose migration we saw earlier."
+            },
+            {
+              "id": "run-3",
+              "text": "Enabling a feature recycles the tenant. As the tenant starts, Orchard Core runs the feature's migration, and a notification reports that the feature was enabled."
+            },
+            {
+              "id": "run-4",
+              "text": "Back under Content Types, searching for Form finds the Form type that the migration created. The version it reached, 5, is stored for this tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Change content definitions",
+      "subtitle": "Types, options and parts",
+      "clips": [
+        {
+          "id": "05-content",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cd-1",
+              "text": "Many migrations change content definitions. Inject IContentDefinitionManager, and call AlterTypeDefinitionAsync with a type name to create the type, or to change it when it exists. WithPart attaches a part, such as TitlePart."
+            },
+            {
+              "id": "cd-2",
+              "text": "Inside the lambda, set the type's options. Creatable, Listable, Draftable, Versionable and Securable match checkboxes of the same names on a content type's editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Create index tables",
+      "subtitle": "Database tables for your own indexes",
+      "clips": [
+        {
+          "id": "06-index",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idx-1",
+              "text": "The base class gives you a SchemaBuilder. CreateMapIndexTableAsync creates the table for an index class, here ProductIndex, with the columns you list. Give every string column a length, so the migration works on every database."
+            },
+            {
+              "id": "idx-2",
+              "text": "AlterIndexTableAsync changes a table that exists. Here it creates a database index on the Category column, which makes fetches by Category faster. A separate video covers writing the index class itself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Run a recipe",
+      "subtitle": "Let a recipe do the work",
+      "clips": [
+        {
+          "id": "07-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rec-1",
+              "text": "A migration can also run a recipe. Inject IRecipeMigrator, and call ExecuteAsync with the recipe's file name and the migration itself."
+            },
+            {
+              "id": "rec-2",
+              "text": "Orchard Core reads the file from the Migrations folder in your module's folder. Use a recipe when the change is data, such as content types, workflows and settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Update existing content",
+      "subtitle": "Query and save documents with a session",
+      "clips": [
+        {
+          "id": "08-content-update",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "upd-1",
+              "text": "A step can also change data that already exists. The Menu module's migration queries the content items of one type, changes each one, saves it, and returns the next number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Rules to keep",
+      "subtitle": "What to remember when you change a migration",
+      "clips": [
+        {
+          "id": "09-rules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "Once a migration has run on a tenant, keep its numbers and its earlier steps as they are. A step that ran never runs again, so add another UpdateFrom step for each change. Renumbering can disrupt the migrations of other tenants."
+            },
+            {
+              "id": "rules-2",
+              "text": "Each tenant stores one record that lists every migration class by its full name, with its version. If you rename the class or change its namespace, Orchard Core finds no version for it, and runs CreateAsync again."
+            },
+            {
+              "id": "rules-3",
+              "text": "If a step throws an exception, Orchard Core logs the error, and the tenant starts anyway. When a table or content type you expect is missing, read the log."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Data Migrations in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's how a data migration works: numbered steps in a class, registered by a Startup class, and run by Orchard Core as each tenant starts. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

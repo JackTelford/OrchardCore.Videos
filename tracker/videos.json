@@ -6385,9 +6385,9 @@
     "docs": [
       "src/docs/reference/modules/Migrations/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.4,
+    "words": 809,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
