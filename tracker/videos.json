@@ -1817,9 +1817,9 @@
       "src/docs/reference/modules/HomeRoute/README.md",
       "src/docs/reference/modules/Autoroute/README.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 3.5,
-    "words": 0,
+    "words": 531,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
