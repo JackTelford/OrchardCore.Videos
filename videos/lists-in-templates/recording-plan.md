@@ -164,7 +164,7 @@ the text above.
 1. Open `http://localhost:5010/blog/a-week-in-the-highlands` while signed out or signed in. After the content of the
    post, the page shows the heading **More in Blog** (a link), the line **3 published posts**, and a list of three
    links: Notes from the harbour, A week in the highlands, Market day in the old town (in the order the page gives
-   them). It does not show Packing list for the coast.
+   them: the order of creation, because all four posts have the same `Order` and the query then sorts by index id). It does not show Packing list for the coast.
 2. If the page shows an error instead, or a different count, stop and read `OPEN-QUESTIONS.md`.
 3. Stop the site and copy its `App_Data` folder and `state.json` aside as the "seeded" snapshot.
 
@@ -186,24 +186,24 @@ the text above.
 
 - `01-stored`, step `store-1`: the one-line `ListPart` class and the `ContainedPart` class with `ListContentItemId`,
   `ListContentType` and `Order`.
-- `01-stored`, step `store-2`: three cards, `container`, `list_items` and `list_count`, each with what it takes and returns.
+- `01-stored`, step `store-2`: three numbered entries, `container`, `list_items` and `list_count`, each with one line saying what it returns.
 - `02-part`, step `part-1`: the `ListPartViewModel` class (the other members stand for `// ...`), with `ContentItems`
   and `Pager` bright, and two notes about them.
 - `02-part`, step `part-2`: the template `Blog-ListPart.liquid` as the documentation and `TheBlogTheme/Views` have it,
-  with the four lines that assign the texts of the pager links shown as `<!-- ... -->`, and cards for the Blog content
-  type, the loop over `Model.ContentItems` and the pager `Model.Pager`.
+  with the four lines that assign the texts of the pager links shown as `<!-- ... -->`, and three note cards on the right
+  for the Blog content type, the loop over `Model.ContentItems` and the pager `Model.Pager`.
 - `03-container`, step `container-1`: `Model.ContentItem | container | display_text` with its output, and the
   Autoroute pattern of the Blog Post type from the Blog recipe.
-- `03-container`, step `container-2`: three cards, the cases in which `container` returns the item itself or raises an
+- `03-container`, step `container-2`: three numbered entries, the cases in which `container` returns the item itself or raises an
   exception (the message `"A Content Item was expected"`, as `ContainerFilter.cs:20` has it).
 - `04-items`, step `items-1`: `list_items` and `list_count` applied to a content item and to a content item id string.
-- `04-items`, step `items-2`: four cards, published items only, the whole list, `list_items` sorts by Order, a content
+- `04-items`, step `items-2`: four entries with a check mark, published items only, the whole list, `list_items` sorts by Order, a content
   item or its id.
 - `05-template`, step `template-1`: the block of the post template, after a first line `<!-- ... the header and the
   content of the post ... -->` that stands for the rest of the template, with the `container` lines and the heading and
   the count bright.
 - `05-template`, step `template-2`: the same block, with the `list_items` lines and the loop bright.
-- `05-template`, step `template-3`: two cards, the file `Content-BlogPost.liquid` in a theme and the admin template
+- `05-template`, step `template-3`: two numbered entries, the file `Content-BlogPost.liquid` in a theme and the admin template
   `Content__BlogPost`, which takes priority over the file and so holds the complete template.
 - `06-razor`, step `razor-1`: a Razor view calling `QueryListItemsAsync` and `QueryListItemsCountAsync`, with those
   lines bright, and two notes.
@@ -221,8 +221,8 @@ admin menu as the site shows it.
   When the narration ends, the list of templates is on screen with the row `Content__BlogPost` ringed. Labels:
   **Design**, **Templates** (`OrchardCore.Templates/AdminMenu.cs:19-20`); the template name is the one created in 2.3.
 - `site-2`: `scene.ClearHighlightsAsync()`, then `scene.NavigateAsync("/blog/a-week-in-the-highlands")`. Wait until
-  the heading `h3` with the text *More in* is attached, then `scene.ScrollAsync(0, 700)` (adjust so the heading and the
-  count are both in view), then ring the heading (`scene.Page.Locator("h3", new() { HasText = "More in" })`) and the
+  the heading `h3` with the text *More in* is attached, then `scene.ScrollAsync(0, 700)`; if the heading `h3` and the paragraph are not both inside the viewport after the
+  scroll, scroll further in steps of 100 pixels until they are, then ring the heading (`scene.Page.Locator("h3", new() { HasText = "More in" })`) and the
   paragraph with the text *published posts*. When the narration ends, the heading **More in Blog** and the line
   **3 published posts** are ringed. The text comes from the template of 2.3.
 - `site-3`: `scene.ClearHighlightsAsync()`, then ring the list that follows the count
