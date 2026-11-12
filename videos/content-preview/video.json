@@ -1,0 +1,48 @@
+{
+  "title": "Content Preview: See Your Changes Before You Publish | Orchard Core",
+  "description": "Editing content in a form does not show the page it produces.\n\nThe Content Preview feature opens a separate window that follows the editor while you type, and the Preview Draft button in the content items list opens the saved draft. Neither one saves or publishes anything.\n\nIn this video:\n• Two ways to preview: Preview and Preview Draft\n• Enable Content Preview in Tools, Features\n• Preview while you edit, in a separate window\n• Preview a saved draft from the content items list\n• Permissions, limits, and the Preview part",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Content Preview",
+    "Live preview",
+    "Preview Draft",
+    "Content Management",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentPreview/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentPreview/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentPreview"
+  }
+}

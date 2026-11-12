@@ -1,0 +1,174 @@
+{
+  "title": "Content Preview: See Your Changes Before You Publish",
+  "output": "content-preview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Preview",
+      "subtitle": "See your changes before you publish",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Before you publish a page, you can see how it will look. Content Preview shows your changes in a separate window while you type, and Preview Draft shows saved drafts before they go live. In this video, we'll use both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two ways to preview",
+      "subtitle": "Preview and Preview Draft",
+      "clips": [
+        {
+          "id": "01-ways",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ways-1",
+              "text": "A content editor shows form fields, not the finished page. Content Preview renders the item as a page, so you can check a change before you publish it."
+            },
+            {
+              "id": "ways-2",
+              "text": "There are two ways to preview. Preview, in the editor, shows the values you are typing, even before you save. Preview Draft, in the content items list, shows the draft you saved, and it works without the Content Preview feature."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable Content Preview",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Content Preview is a feature you enable. Open Tools, Features, and search for Content Preview. It is listed under Content Management."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable, and a message confirms that the feature was enabled. Some setup recipes, such as Blog, enable it for you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Preview while you edit",
+      "subtitle": "A separate window that follows the editor",
+      "clips": [
+        {
+          "id": "03-live",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "live-1",
+              "text": "Select Edit on an article in Content, Content Items. The action bar at the bottom of the editor has a Preview button."
+            },
+            {
+              "id": "live-2",
+              "text": "Select Preview. A separate window opens and shows the article with the values that are in the form, without saving anything."
+            },
+            {
+              "id": "live-3",
+              "text": "Go back to the editor and change the Title and the Subtitle. A moment after you stop typing, the editor sends the form to the site, and the preview window shows the result."
+            },
+            {
+              "id": "live-4",
+              "text": "In the preview window, the page shows the changed Title and Subtitle. The editor has to stay open for the preview to keep updating."
+            },
+            {
+              "id": "live-5",
+              "text": "Select Cancel to leave without saving. The content items list shows the original title, because live preview saves nothing."
+            },
+            {
+              "id": "live-6",
+              "text": "In the preview window, a Preview Disconnected message appears, because you left the editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Preview a saved draft",
+      "subtitle": "From the content items list",
+      "clips": [
+        {
+          "id": "04-draft",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "draft-1",
+              "text": "An article with a saved draft shows a Draft badge beside Published in the content items list, with a Preview Draft button. Items without a draft have no such button."
+            },
+            {
+              "id": "draft-2",
+              "text": "Select Preview Draft. A second tab opens with the saved draft of the article, displayed as a page of your site."
+            },
+            {
+              "id": "draft-3",
+              "text": "Back in the list, select View. It opens the published page, which shows the earlier Subtitle, because the draft is not live until you publish it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Good to know",
+      "subtitle": "Permissions, limits and the Preview part",
+      "clips": [
+        {
+          "id": "05-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "who-1",
+              "text": "Previewing needs the Preview content permission. Roles that can Edit content for others, or Publish or unpublish content for others, include it. Assign it to other roles under Access Control, Roles."
+            },
+            {
+              "id": "limits-1",
+              "text": "The editor and the preview window have to stay in the same browser, on the same site address. A preview link identifies temporary content that may be unpublished, so do not share it."
+            },
+            {
+              "id": "part-1",
+              "text": "If the preview does not look like the page on your site, add the Preview part to the content type. Edit the type under Design, Content Definition, Content Types, select Add Parts, and choose Preview."
+            },
+            {
+              "id": "part-2",
+              "text": "The Preview part has a Pattern setting. It holds an expression that returns the path of the page that displays the item, and the Preview button then loads that page from your site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Preview",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Preview checks your changes while you edit, and Preview Draft checks the version you saved, both before anything goes live. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
