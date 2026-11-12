@@ -1,0 +1,48 @@
+{
+  "title": "GitHub Sign-In: Let Developers Sign In With GitHub | Orchard Core",
+  "description": "A site that asks people to create one more account adds a step before they can sign in. People who already have a GitHub account can use it instead.\n\nThe GitHub Authentication feature of Orchard Core adds a GitHub button to the login page. You register an app on GitHub, enter its Client ID and client secret in the admin, and visitors sign in with the account they have.\n\nIn this video:\n• How sign-in with GitHub works\n• Registering the app on GitHub\n• Enabling GitHub Authentication\n• Entering the Client ID, the client secret and the callback path\n• The GitHub button on the login page\n• What happens when GitHub returns the person",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "GitHub"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "GitHub",
+    "OAuth",
+    "Authentication",
+    "Sign in"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "External Authentication"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/GitHub/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/GitHub/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.GitHub.Authentication"
+  }
+}
