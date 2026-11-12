@@ -1001,9 +1001,9 @@
     "docs": [
       "src/docs/reference/modules/CustomSettings/README.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 4.5,
-    "words": 0,
+    "words": 674,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

@@ -1,0 +1,49 @@
+{
+  "title": "Custom Settings: Turn a Content Type Into Site Settings | Orchard Core",
+  "description": "Some values belong to the whole site, such as an announcement or a contact address. They do not fit in a page, and an editor needs a form to change them.\n\nThe Custom Settings feature turns a content type into a section of the Settings menu. The fields of the type become the form, the values are saved with the site settings, and each section has a permission of its own.\n\nIn this video:\n• What Custom Settings are\n• Enabling the feature\n• Creating the content type, its fields and its stereotype\n• Editing the settings\n• Controlling who can edit a section\n• Moving settings to another site with a deployment plan",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Custom Settings",
+    "Site Settings",
+    "Content Types",
+    "Stereotype",
+    "Permissions",
+    "Deployment",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Parts"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/CustomSettings/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/CustomSettings/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.CustomSettings"
+  }
+}
