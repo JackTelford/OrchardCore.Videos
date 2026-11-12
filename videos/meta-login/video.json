@@ -1,0 +1,49 @@
+{
+  "title": "Meta Login: Let Users Sign In With Facebook | Orchard Core",
+  "description": "Visitors often prefer to sign in with an account they already have, instead of choosing another password for your site.\n\nThe Meta Login feature of Orchard Core adds a Facebook button to the login page. You enable the feature, save the application ID and the secret key of a Meta app, and Meta handles the sign-in.\n\nIn this video:\n• What you need from Meta, and how the sign-in works\n• Enabling the Meta Login feature\n• The Meta app settings: application identifier and secret key\n• The Meta login settings: callback path and tokens\n• The Facebook button on the login page\n• What the site does when Meta returns the visitor",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Authentication"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Meta Login",
+    "Facebook Login",
+    "Authentication",
+    "External Authentication",
+    "Single sign-on"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "External Authentication"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Facebook/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Facebook/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Facebook.Login"
+  }
+}
