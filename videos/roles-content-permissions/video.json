@@ -1,0 +1,59 @@
+{
+  "title": "Content Permissions: By Content Type and by Owner | Orchard Core",
+  "description": "A role that may edit every article is rarely what a site needs. Writers should work on their own articles, and editors on everyone's, and each content type may need its own rules.\n\nOrchard Core grants content permissions at two levels, for all content or for one securable content type, and each permission comes in a form for items a user owns and a form for items that belong to others. This video marks a type as Securable, grants a Writer role its permissions, and shows what a writer can and cannot edit.\n\nIn this video:\n• How content permissions work: two levels, and the owner of each item\n• Make a content type securable\n• Grant permissions to a role, and read the Allow and Effective columns\n• Why the Editor role has permissions for every content type\n• See it as a writer: your own items, and other people's\n• What to remember when you widen a role",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "permissions",
+    "roles",
+    "content permissions",
+    "access control",
+    "content types"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Roles and Permissions"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Roles documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Roles/"
+    },
+    {
+      "label": "Permissions reference",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Contents/README.md",
+    "src/docs/reference/modules/Roles/README.md",
+    "src/docs/reference/modules/Security/Permissions.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Contents"
+  }
+}

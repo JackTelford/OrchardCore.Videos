@@ -1,0 +1,226 @@
+{
+  "title": "Content Permissions: By Content Type and by Owner",
+  "output": "roles-content-permissions",
+  "spoken": {
+    "Save & Configure": "Save and Configure",
+    "Article Content Type - Article": "Article Content Type, Article"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Permissions",
+      "subtitle": "By content type and by owner",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Who can create, edit, publish, or delete a content item? Orchard Core answers with permissions. In this video, you allow a role to work with one content type, and you see how ownership changes what a user can do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How content permissions work",
+      "subtitle": "Two levels, and the owner of each item",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "concepts-1",
+              "text": "Content permissions come in two levels. The Contents permissions apply to every content type. The permissions of one content type apply to that type only, and exist only when the type is marked Securable."
+            },
+            {
+              "id": "concepts-2",
+              "text": "For a securable type, you can allow viewing, previewing, editing, cloning, publishing, deleting, and listing its items. A separate permission covers editing the owner of an item."
+            },
+            {
+              "id": "concepts-3",
+              "text": "Most actions come in two forms: one for items you own, and one for items that belong to others. Edit Article covers your own articles, and Edit Article for others covers everyone else's. The owner is the user who created the item."
+            },
+            {
+              "id": "concepts-4",
+              "text": "A higher permission includes the lower ones. The Contents permission Edit content for others includes Edit Article for others. Publish includes edit, and edit for others includes view, preview, and clone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Make a type securable",
+      "subtitle": "Turn on permissions for Article",
+      "clips": [
+        {
+          "id": "02-securable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "securable-1",
+              "text": "Permissions for a single type appear only when the type is Securable. The Content Types page is under Design, Content Definition. Let's find Article."
+            },
+            {
+              "id": "securable-2",
+              "text": "We open Article. Among its settings, Securable determines whether the type can have custom permissions. It is not checked for Article, so let's check it."
+            },
+            {
+              "id": "securable-3",
+              "text": "We save the type. Types you create with Create new type are securable from the start."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Grant permissions to a role",
+      "subtitle": "A Writer role for the Article type",
+      "clips": [
+        {
+          "id": "03-role",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "role-1",
+              "text": "Permissions are granted to roles. Under Access Control, Roles, let's choose Add Role to create a role for the people who write articles."
+            },
+            {
+              "id": "role-2",
+              "text": "We name the role Writer, add a description, and choose Save & Configure. The role's permissions page opens."
+            },
+            {
+              "id": "role-3",
+              "text": "Every permission has two checkboxes. Allow is a permission you grant explicitly. Effective is what the role gets in the end, including permissions that a higher one implies."
+            },
+            {
+              "id": "role-4",
+              "text": "Users need Access admin panel to use the admin at all. We search for admin panel, and allow it."
+            },
+            {
+              "id": "role-5",
+              "text": "Next, we search for Article. Its permissions have their own group, Article Content Type - Article, and every label names the type."
+            },
+            {
+              "id": "role-6",
+              "text": "We allow Publish or unpublish Article, which applies to articles the user owns, and List Article content items, so the role can open the list. The for others versions stay off."
+            },
+            {
+              "id": "role-7",
+              "text": "We open the menu beside Save and choose the entry labeled and continue, which saves and stays on the role. The Effective column shows more than we allowed: Edit Article is ticked, because publishing implies editing."
+            },
+            {
+              "id": "role-8",
+              "text": "Hovering over an Effective checkbox explains it. Edit Article is implied by Publish or unpublish Article. View Article by others comes from the Anonymous and Authenticated roles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Permissions for all content",
+      "subtitle": "Why the Editor role has them",
+      "clips": [
+        {
+          "id": "04-editor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "editor-1",
+              "text": "Many roles hold Contents permissions. Let's open the Editor role, and search for Article."
+            },
+            {
+              "id": "editor-2",
+              "text": "In the Article group, nothing is allowed explicitly, but the Effective column is ticked almost everywhere. The Editor role gets those permissions from the Contents group."
+            },
+            {
+              "id": "editor-3",
+              "text": "Searching for content for others shows the Contents permissions. Editor is allowed Edit content for others, and that permission applies to every content type, including Article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "See it as a writer",
+      "subtitle": "Your own items, and other people's",
+      "clips": [
+        {
+          "id": "05-writer",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "writer-1",
+              "text": "This is the list of articles as Jamie sees it, a user who was given the Writer role. The New Article button is there because creating an article needs Edit Article, which publishing implies. The list also holds articles by the admin user."
+            },
+            {
+              "id": "writer-2",
+              "text": "Jamie chooses New Article, enters a title, and publishes. The Publish button is there because the role allows publishing articles Jamie owns."
+            },
+            {
+              "id": "writer-3",
+              "text": "Back in the list, Team Offsite Notes has a linked title and an Edit button. Jamie owns this article, so the Edit Article permission, implied by publishing, applies."
+            },
+            {
+              "id": "writer-4",
+              "text": "About and Press Kit belong to the admin user. Their titles are plain text and there is no Edit button, because the role does not have Edit Article for others."
+            },
+            {
+              "id": "writer-5",
+              "text": "Jamie can see the articles of the admin user as well, because the Anonymous and Authenticated roles hold View all content. Seeing an article and editing it are separate permissions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "What to remember",
+      "subtitle": "Widening a role, and the defaults",
+      "clips": [
+        {
+          "id": "06-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "To let the role edit every article, allow Edit Article for others. To cover every content type, allow the Contents permission Edit content for others instead."
+            },
+            {
+              "id": "recap-2",
+              "text": "Permissions only add access. A user gets everything that any of their roles allows, plus what Anonymous and Authenticated hold. No role removes access that another role grants."
+            },
+            {
+              "id": "recap-3",
+              "text": "Anonymous holds View all content by default, so every visitor can read the published items of every type. Taking that permission away affects every type. A separate video covers building a members-only area."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Permissions",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's content permissions: grant them for all content or for one securable type, for items a user owns or for items that belong to others. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
