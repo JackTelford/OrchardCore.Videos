@@ -1,0 +1,53 @@
+{
+  "title": "OpenTelemetry: Traces, Metrics and Logs for Each Tenant | Orchard Core",
+  "description": "An Orchard Core application can serve many tenants from one process, so ordinary traces, metrics and logs do not say which tenant, or which instance of a web farm, produced them.\n\nThe OrchardCore.OpenTelemetry package collects the traces, metrics and logs of the application, tags them with the name of their tenant and with resource attributes that identify the instance, and exports them over OTLP to any compatible backend.\n\nIn this video:\n• What OpenTelemetry collects, and why it is configured for the whole application\n• Enabling it in the host, and pointing it at an OTLP endpoint\n• Trying it with two tenants and the Aspire dashboard\n• Reading the traces of each tenant, including recipes and shapes\n• Reading the metrics by tenant and by runtime\n• Reading the structured logs with the tenant name\n• Configuring the options, other sources and meters, and hosted backends\n• Adding the Orchard Core instrumentation to an existing setup, and emitting telemetry from a module",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "OpenTelemetry",
+    "Observability"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "OpenTelemetry",
+    "OTLP",
+    "Observability",
+    "Distributed tracing",
+    "Metrics",
+    "Logging",
+    "Aspire dashboard",
+    "Multi-tenant"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Diagnostics and Logging"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenTelemetry/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/OpenTelemetry/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenTelemetry"
+  }
+}
