@@ -1,6 +1,6 @@
 # Build a Blog: Posts, Categories, Tags and a Menu
 
-**YouTube:** not published yet · **Length:** 6:54 · **Feature:** [TheBlogTheme](https://docs.orchardcore.net/en/latest/getting-started/starter-recipes/)
+**YouTube:** not published yet · **Length:** 6:59 · **Feature:** [TheBlogTheme](https://docs.orchardcore.net/en/latest/getting-started/starter-recipes/)
 
 This video builds a blog from the Blog recipe and The Blog Theme. It shows how the Blog, its posts, the Categories and
 Tags taxonomies, and the Main Menu fit together, then adds a category, writes a post with a banner image, a category and

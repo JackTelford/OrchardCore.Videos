@@ -43,7 +43,7 @@
             },
             {
               "id": "pieces-3",
-              "text": "A post can have one category, chosen from the Categories taxonomy, and any number of tags, taken from the Tags taxonomy. Both appear as badges on the post."
+              "text": "A taxonomy is a set of terms that you attach to content. A post can have one category, chosen from the Categories taxonomy, and any number of tags, taken from the Tags taxonomy. Both appear as badges on the post."
             },
             {
               "id": "pieces-4",
