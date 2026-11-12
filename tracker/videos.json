@@ -975,9 +975,9 @@
     "docs": [
       "src/docs/reference/modules/Alias/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.3,
+    "words": 645,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
