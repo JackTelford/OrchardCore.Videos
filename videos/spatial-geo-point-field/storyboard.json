@@ -1,0 +1,197 @@
+{
+  "title": "Geo Point Field: Add Locations to Content Items",
+  "output": "spatial-geo-point-field",
+  "spoken": {
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Geo Point Field: Add Locations to Content Items",
+      "subtitle": "Give a content item a place on the map",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some content belongs on a map, such as a shop, an office, or a venue. The Geo Point field stores that location on a content item. In this video, you enable the Spatial feature, add the field, and set a location."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What the field stores",
+      "subtitle": "A location as two numbers",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A shop, an office, or a venue has a place. A Geo Point field keeps that place on the content item itself, as numbers that an editor can type or pick on a map."
+            },
+            {
+              "id": "idea-2",
+              "text": "The field stores two numbers: a latitude and a longitude. The Latitude box takes values from minus 90 to 90, and the Longitude box from minus 180 to 180. Both can stay empty unless the field is required."
+            },
+            {
+              "id": "idea-3",
+              "text": "The editor comes in two forms. Standard shows the two boxes, and Leaflet editor adds a map, where a click fills in the boxes. The map background comes from OpenStreetMap, so the browser needs internet access."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable Spatial",
+      "subtitle": "The feature behind the field",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for Spatial. Its row lists the features it depends on directly: Content Types and Lucene."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's select Enable. A message confirms that the feature Spatial was enabled. Lucene is enabled with it, because Spatial depends on it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add the field",
+      "subtitle": "To a content type",
+      "clips": [
+        {
+          "id": "03-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Let's open Design, Content Definition, Content Types. We add the field to the Page content type, so we select Edit on its row."
+            },
+            {
+              "id": "add-2",
+              "text": "Under Fields, we select Add Field. We type Location as the Display Name, and the Technical Name follows from it. Then we choose Geo Point Field as the Field Type."
+            },
+            {
+              "id": "add-3",
+              "text": "We select Save & Configure. The field's settings include Required, which makes both coordinates mandatory, and Hint, which shows help text under the Latitude and Longitude boxes."
+            },
+            {
+              "id": "add-4",
+              "text": "Each box is labeled only Latitude or Longitude, so a hint tells editors which location the field holds. Let's check Required and write a hint."
+            },
+            {
+              "id": "add-5",
+              "text": "Below, the editor list offers Standard, with two number boxes, and Leaflet editor, which adds a map. We choose Leaflet editor and select Save."
+            },
+            {
+              "id": "add-6",
+              "text": "Back on the Page content type, the Location field is listed as a Geo Point Field, with a Leaflet badge for its editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Set a location",
+      "subtitle": "Click the map or type the numbers",
+      "clips": [
+        {
+          "id": "04-enter",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enter-1",
+              "text": "Let's open Content, Content Items, select New, and choose Page. We type Find Us as the title."
+            },
+            {
+              "id": "enter-2",
+              "text": "We scroll down below the page content. The field shows a Latitude box, a Longitude box, and a map, with the hint under each box."
+            },
+            {
+              "id": "enter-3",
+              "text": "Clicking the map chooses a place. The boxes fill in with six decimal places, and a marker with a popup shows the point."
+            },
+            {
+              "id": "enter-4",
+              "text": "To be exact, we type the values ourselves, and the marker follows what we type. Let's enter the coordinates of our shop."
+            },
+            {
+              "id": "enter-5",
+              "text": "We select Publish. A message confirms that your Page has been published, and the list shows it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Check the result",
+      "subtitle": "In the editor and on the site",
+      "clips": [
+        {
+          "id": "05-check",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "We select Edit on the Find Us row. Because the field has values, the map opens centered on the saved location, with a marker."
+            },
+            {
+              "id": "check-2",
+              "text": "Back in the list, we select View. The site shows the location as text: the latitude, a comma, and the longitude, each with six decimal places."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "After you save",
+      "subtitle": "Where the location goes",
+      "clips": [
+        {
+          "id": "06-after",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "after-1",
+              "text": "The location is stored with the content item. When its content type belongs to a Lucene index and the field's setting Include this element in the index is checked, the location is indexed, so developers can search by area or by distance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Geo Point Field: Add Locations to Content Items",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Geo Point field keeps a location with a content item, entered as two numbers or by clicking a map. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
