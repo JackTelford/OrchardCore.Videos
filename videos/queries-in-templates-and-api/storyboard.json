@@ -1,0 +1,227 @@
+{
+  "title": "Queries in Liquid, Razor and the API",
+  "output": "queries-in-templates-and-api",
+  "spoken": {
+    "Execute Api - ": "Execute Api, ",
+    "ContentQueryAsync": "Content Query Async",
+    "QueryAsync": "Query Async",
+    "DisplayAsync": "Display Async",
+    "IOrchardHelper": "I Orchard Helper",
+    "RecentBlogPosts": "Recent Blog Posts"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Queries in Liquid, Razor and the API",
+      "subtitle": "Run a saved query by its name",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A saved query has a name, and the name is all a caller needs. In this video, you run the same query from a Liquid template, from a Razor view, and through the web API, with its parameters and its permission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "A query with a name",
+      "subtitle": "The query the Blog recipe saves",
+      "clips": [
+        {
+          "id": "01-queries",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "queries-1",
+              "text": "Let's open Search, Queries, All Queries in the admin menu. It lists the saved queries, and the Blog recipe saves one, named RecentBlogPosts. That name is what a template, a view, or an API caller uses to run it."
+            },
+            {
+              "id": "queries-2",
+              "text": "Open the query. Its SQL selects the document ids of blog posts, most recent first, and ends with a parameter named limit, whose default is three. Return Documents is checked, so the query returns the posts themselves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Queries in Liquid",
+      "subtitle": "The Queries property and the query filter",
+      "clips": [
+        {
+          "id": "02-liquid",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "liquid-1",
+              "text": "In Liquid, the Queries property returns a saved query by name, and the query filter runs it. The result is a list of items. The Blog theme loops over them in its template for a blog post."
+            }
+          ]
+        },
+        {
+          "id": "02-post",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "post-1",
+              "text": "On the front end, a blog post page lists the titles of the three most recent posts below the post. That is the loop at work, with the default limit of three."
+            }
+          ]
+        },
+        {
+          "id": "02-params",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "liquid-2",
+              "text": "Named arguments of the filter are the parameters of the query. Here, limit is five instead of the default three. Parameter names are case-sensitive."
+            },
+            {
+              "id": "liquid-3",
+              "text": "A query that returns content items gives you content items, so you can use their properties and filters, such as the display text filter. A query that returns rows gives items whose properties are the columns of the row."
+            },
+            {
+              "id": "liquid-4",
+              "text": "If no query has that name, the property is nil, and so is the result of the filter. Once the Queries feature is enabled, the Queries property is available in every Liquid template of the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Queries in Razor",
+      "subtitle": "ContentQueryAsync and QueryAsync",
+      "clips": [
+        {
+          "id": "03-razor",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "razor-1",
+              "text": "In a Razor view, the Orchard helper provides ContentQueryAsync. Give it the name of a query and it returns content items. DisplayAsync renders each one, here with the Summary display type."
+            },
+            {
+              "id": "razor-2",
+              "text": "A second overload takes a dictionary of parameters, the same values you pass to the Liquid filter. Here, limit is five."
+            },
+            {
+              "id": "razor-3",
+              "text": "ContentQueryAsync keeps only the results that have a content item ID and skips the others. QueryAsync returns the items as they come, which suits queries that return rows, and it returns null when no query has the name."
+            },
+            {
+              "id": "razor-4",
+              "text": "Views that use the Orchard Core Razor base class have the Orchard property. In any other view, inject IOrchardHelper: the query methods are extension methods of it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Queries through the web API",
+      "subtitle": "Address, permission and sign-in",
+      "clips": [
+        {
+          "id": "04-request",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "api-1",
+              "text": "The address of the Queries API ends with the name of the query, and it accepts GET and POST. Parameters are a JSON object, sent in the parameters value of the query string, or as the body of a POST."
+            },
+            {
+              "id": "api-2",
+              "text": "Parameters from a caller reach the database as SQL parameters, so they are safe to take from a request. Output expressions in the query text are not, which is why the SQL editor warns about them."
+            },
+            {
+              "id": "api-3",
+              "text": "A caller needs a permission: Execute Api - All queries for every query, or one permission per query, such as Execute Api - RecentBlogPosts. Manage queries includes both. Without the permission, the endpoint answers Not Found."
+            },
+            {
+              "id": "api-4",
+              "text": "The query endpoint reads a bearer token, not the sign-in cookie of the admin. A request without a token is anonymous, so the permissions of the Anonymous role apply. A separate video covers getting a token."
+            }
+          ]
+        },
+        {
+          "id": "04-grant",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "grant-1",
+              "text": "To let anonymous callers run this query, let's edit the Anonymous role on the Roles page, under Access Control."
+            },
+            {
+              "id": "grant-2",
+              "text": "Search the permissions for RecentBlogPosts, allow Execute Api - RecentBlogPosts, and save. Requests with no token can then run this one query."
+            }
+          ]
+        },
+        {
+          "id": "04-call",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "call-1",
+              "text": "A GET request to the RecentBlogPosts address, with no token, returns JSON. The items property holds the three most recent blog posts."
+            },
+            {
+              "id": "call-2",
+              "text": "With the parameters value set to a JSON object that sets limit to two, the same address returns two posts. The query text is unchanged."
+            }
+          ]
+        },
+        {
+          "id": "04-result",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "api-5",
+              "text": "A SQL query returns an object holding its items. Lucene and Elasticsearch queries also return a count. The items are content items when the query returns them, and rows otherwise."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Choosing a way",
+      "subtitle": "One saved query, three callers",
+      "clips": [
+        {
+          "id": "05-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "Use Liquid in theme templates, Razor in views and code that needs content items, and the web API for other applications. All three run the same saved query by name, so one definition serves all three."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Queries in Liquid, Razor and the API",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A saved query is defined once and run by its name, from a template, a view, or a request. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
