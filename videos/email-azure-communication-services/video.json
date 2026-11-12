@@ -1,0 +1,49 @@
+{
+  "title": "Azure Communication Services Email | Orchard Core",
+  "description": "A site that sends email needs a provider that delivers the messages, and a safe place to enter the credentials of that provider.\n\nThe Azure Communication Services Email module adds a provider that sends the email of your site through an Azure Communication Services resource. You enable the feature, enter a sender address and a connection string in the email settings, and check the result on the Email Test page.\n\nIn this video:\n• How the providers work, and what you need\n• Enable the feature\n• Configure the provider\n• Test the provider\n• Good to know: the default provider, failures, and secrets",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Azure"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Azure Communication Services",
+    "Azure",
+    "Email",
+    "Email provider",
+    "Email settings"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Email, SMS and Notifications"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Email.Azure/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Email.Azure/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Email.Azure"
+  }
+}
