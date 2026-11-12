@@ -1598,9 +1598,9 @@
     "docs": [
       "src/docs/reference/modules/Media.Azure/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.6,
+    "words": 844,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
