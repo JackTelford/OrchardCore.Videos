@@ -1,0 +1,192 @@
+{
+  "title": "Orchard Core Recipes",
+  "output": "recipes-overview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Recipes",
+      "subtitle": "Set up and update sites from a file",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Setting up a site by hand takes many clicks, and a second site takes them all again. A recipe does that work from a single file. This video shows what a recipe is, where recipes run, how to run one, and who is allowed to."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a recipe is",
+      "subtitle": "A file that lists the steps to run",
+      "clips": [
+        {
+          "id": "01-what",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "A recipe is a file that lists steps, and Orchard Core runs them in the order they are listed. A step can enable features, set the themes, create roles, define content types, or add content."
+            },
+            {
+              "id": "what-2",
+              "text": "Because a recipe is a file, you can keep it, share it, and run it on another site. The same steps run each time, so sites that use the same recipe start from the same configuration."
+            },
+            {
+              "id": "what-3",
+              "text": "A recipe can carry a display name, a description, and tags. These are what you see when you choose a recipe, so you can tell what it does before you run it."
+            },
+            {
+              "id": "what-4",
+              "text": "Recipes run in several places. The Setup screen runs the recipe you choose when it creates a site. Tools, Recipes runs the recipes that modules and themes provide, and Tools, Deployments imports a recipe that you supply."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Choose a recipe at setup",
+      "subtitle": "The Recipe list of the Setup screen",
+      "short": "setup",
+      "clips": [
+        {
+          "id": "02-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "The Setup screen of a site that is not installed asks for a Recipe, next to the name of the site. The recipe decides which features, themes, and content the site starts with."
+            },
+            {
+              "id": "setup-2",
+              "text": "Let's open the list. Each entry shows the name of a recipe and a description, for example Blank site, Blog, and Headless site."
+            },
+            {
+              "id": "setup-3",
+              "text": "Select Blog, and the button shows your choice. When you finish the setup, Orchard Core runs that recipe while it creates the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The Recipes page",
+      "subtitle": "Find the recipes your site provides",
+      "short": "browse",
+      "clips": [
+        {
+          "id": "03-browse",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "browse-1",
+              "text": "On a site that is installed, open Tools, Recipes. The page lists the recipes of the modules and themes available to your site. The search box narrows the list as you type, so let's search for Lucene."
+            },
+            {
+              "id": "browse-2",
+              "text": "Recipes are listed in groups, each under a heading such as The Blog Theme. Each row shows the name of a recipe and its description, with its tags as badges, and a Run button at the end."
+            },
+            {
+              "id": "browse-3",
+              "text": "The search matches the names of recipes and of groups. A search for blog lists recipes such as Blog - Lucene Search, but not the Blog recipe of the Setup screen, because setup recipes are not listed on this page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Run a recipe",
+      "subtitle": "Confirm it, then check the result",
+      "short": "run",
+      "clips": [
+        {
+          "id": "04-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "On the Recipes page, let's run the Admin Dashboard Widget Sample recipe. Its description says that it provides a sample Admin Dashboard Widget, and the Admin Dashboard feature is enabled on this site."
+            },
+            {
+              "id": "run-2",
+              "text": "Select Run. Orchard Core asks you to confirm, because a recipe changes your site: Are you sure you want to run the recipe?"
+            },
+            {
+              "id": "run-3",
+              "text": "Select Yes. The page reloads with a message that the recipe has been run successfully. Orchard Core also reloads the site once the recipe has run."
+            },
+            {
+              "id": "run-4",
+              "text": "Open the Dashboard, the home page of the admin. It shows a widget named Orchard Core, with links to the Orchard Core site, documentation, repository, and chat."
+            }
+          ]
+        },
+        {
+          "id": "04-care",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "care-1",
+              "text": "If a step fails, the recipe stops at that step. The page shows an error that names the recipe, and the steps before the failing one have already run."
+            },
+            {
+              "id": "care-2",
+              "text": "A recipe runs all of its steps each time. Running the Admin Dashboard Widget Sample a second time adds a second widget, so run a recipe again only when you want its steps repeated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Who can run recipes",
+      "subtitle": "The Manage Recipes permission",
+      "short": "permission",
+      "clips": [
+        {
+          "id": "05-permission",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "who-1",
+              "text": "A recipe can enable features, create roles, and change settings, so the Recipes page has its own permission. Let's open Access Control, Roles, and edit the Editor role."
+            },
+            {
+              "id": "who-2",
+              "text": "In Search permissions, type recipes. The Recipes group holds Manage Recipes, marked Security Critical, because the permission could let a user raise their other permissions."
+            },
+            {
+              "id": "who-3",
+              "text": "The Editor role does not have this permission, and by default only the Administrator role does. Give it to another role with extreme care, and only to people you trust to run every recipe on the Recipes page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Recipes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's how recipes work: a file of steps that sets up a site, or changes an existing one. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Recipes: Set Up and Update Sites From a File | Orchard Core",
+  "description": "Setting up a site by hand takes many clicks, and configuring a second site the same way takes them all again.\n\nA recipe is a file that lists the steps to run: enabling features, setting themes, creating roles, defining content types, and adding content. Orchard Core runs a recipe when you choose it on the Setup screen, when you run it from Tools, Recipes, and when you import it.\n\nIn this video:\n• What a recipe is\n• Choosing a recipe on the Setup screen\n• Finding recipes on the Recipes page\n• Running a recipe and checking the result\n• Who can run recipes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Recipes",
+    "Setup",
+    "Site configuration"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Recipes"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Recipes/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Recipes/README.md",
+    "src/docs/reference/modules/UrlRewriting/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Recipes"
+  }
+}
