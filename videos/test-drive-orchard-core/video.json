@@ -1,0 +1,51 @@
+{
+  "title": "Test Drive Orchard Core: Run It From Source | Orchard Core",
+  "description": "Before you build an application with Orchard Core, you can see what it does. There are several ways to try it, from a hosted demo to the full source code, and the choice is not obvious.\n\nThis video compares the ways to test drive Orchard Core, then runs the source code on your machine: you clone the repository, start the OrchardCore.Cms.Web project, go through the Setup screen, and sign in to the admin.\n\nIn this video:\n• Four ways to test drive: Try Orchard Core, DotNest, Docker and the source code\n• Run it from source: install the .NET SDK, clone the repository and start the site\n• Set up the site with the Setup screen\n• Look around the home page and the admin\n• What you ran: Program.cs, Auto Setup and the layout of the repository\n• Where the site keeps its data, and how to start over",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Getting started",
+    "Test drive",
+    "dotnet run",
+    "Docker"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/test-drive-orchard-core/"
+    },
+    {
+      "label": "Contributing code",
+      "url": "https://docs.orchardcore.net/en/latest/contributing/contributing-code/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/getting-started/test-drive-orchard-core.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:getting-started/test-drive-orchard-core"
+  }
+}

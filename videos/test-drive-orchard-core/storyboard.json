@@ -1,0 +1,221 @@
+{
+  "title": "Test Drive Orchard Core",
+  "output": "test-drive-orchard-core",
+  "spoken": {
+    "OrchardCore.Application.Cms.Targets": "Orchard Core dot Application dot C.M.S. dot Targets",
+    "OrchardCore.Cms.Web": "Orchard Core dot C.M.S. dot Web",
+    "OrchardCore.Modules": "Orchard Core dot Modules",
+    "OrchardCore.Themes": "Orchard Core dot Themes",
+    "OrchardCMS/OrchardCore": "Orchard C.M.S. slash Orchard Core",
+    "App_Data/Sites/Default": "App Data, Sites, Default",
+    "ORCHARD_APP_DATA": "Orchard App Data",
+    "App_Data": "App Data",
+    "AddOrchardCms": "Add Orchard C.M.S.",
+    "AddSetupFeatures": "Add Setup Features",
+    "UseOrchardCore": "Use Orchard Core",
+    "Program.cs": "Program dot C.S.",
+    "OrchardCore.db": "Orchard Core dot D.B.",
+    "dotnet": "dot net",
+    "8080": "eighty eighty",
+    "Ctrl+F5": "Control F5",
+    "/Admin": "slash Admin",
+    "src": "S.R.C.",
+    "Sqlite": "S.Q.L. light",
+    "NuGet": "New Get",
+    "DotNest": "Dot Nest"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Test Drive Orchard Core",
+      "subtitle": "Run Orchard Core from its source code",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "You can test drive Orchard Core before you build anything of your own. This video compares the ways to try it, then runs the source code on your machine, sets up a site, and signs in to the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Four ways to test drive",
+      "subtitle": "From a hosted demo to the source code",
+      "clips": [
+        {
+          "id": "01-ways",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ways-1",
+              "text": "Try Orchard Core creates a demo site for you to explore. The documentation suggests the Agency recipe, which is a company website, or the Blog recipe. The site is deleted automatically the next Sunday."
+            },
+            {
+              "id": "ways-2",
+              "text": "DotNest is a hosting service for Orchard Core. After you sign up, you create cloud-hosted sites. Unlike a Try Orchard Core site, these sites are not deleted periodically, so they can be used in production."
+            },
+            {
+              "id": "ways-3",
+              "text": "With Docker, one command runs the Orchard Core image in a container. The dash p option publishes port 80 of the container on port 8080 of your computer, so you open localhost on port 8080. A separate video covers Docker in more detail."
+            },
+            {
+              "id": "ways-4",
+              "text": "Running the source code uses the repository that contributors work in, so you can read, debug and change any module. Let's run it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Run it from source",
+      "subtitle": "Clone the repository and start the site",
+      "clips": [
+        {
+          "id": "02-source",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "Install the .NET SDK. Then clone the OrchardCMS/OrchardCore repository from GitHub, and check out the main branch."
+            },
+            {
+              "id": "source-2",
+              "text": "In the src folder, go to OrchardCore.Cms.Web, the web application, and enter dotnet run. The command restores the NuGet packages, builds the projects, and starts the site."
+            },
+            {
+              "id": "source-3",
+              "text": "The console reports the addresses the site listens on. Open localhost on port 5000 in your browser. In Visual Studio, open the solution, set OrchardCore.Cms.Web as the startup project, and press Ctrl+F5."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Set up the site",
+      "subtitle": "The Setup screen on the first request",
+      "clips": [
+        {
+          "id": "03-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "Because nothing is set up, the first request shows the Setup screen. It asks a few questions to configure your site."
+            },
+            {
+              "id": "setup-2",
+              "text": "Let's name the site Test Drive. A recipe sets up a site with pre-configured features and settings. The Recipe list starts on Software as a Service; let's choose Blog, which provides a functional blog with CMS features."
+            },
+            {
+              "id": "setup-3",
+              "text": "The Default Time Zone starts as the time zone of your computer. The database is Sqlite, which keeps the site in a file, so no database server is needed. Let's keep both."
+            },
+            {
+              "id": "setup-4",
+              "text": "Under Super User, the account that has all the rights, let's enter a user name, an email, and the password twice. The password must meet the Password requirements that the screen lists."
+            },
+            {
+              "id": "setup-5",
+              "text": "Let's select Finish Setup. It runs the recipe, which takes a moment. When it ends, the browser opens the home page of the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Look around",
+      "subtitle": "The home page and the admin",
+      "clips": [
+        {
+          "id": "04-explore",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "explore-1",
+              "text": "This is the home page of the Blog recipe. The navigation bar shows the site name and the menu, and below the heading is a blog post."
+            },
+            {
+              "id": "explore-2",
+              "text": "The admin is at /Admin. Because you are not signed in, the site shows the login page. For a test drive, let's sign in with the super user from Setup, although the Setup screen advises using it only for setup and disaster recovery."
+            },
+            {
+              "id": "explore-3",
+              "text": "After the login, the admin opens on a page that says Welcome to Orchard Core. Its four cards are Create content, Customize theme, Manage users, and Learn more."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What you ran",
+      "subtitle": "The host project and the repository",
+      "clips": [
+        {
+          "id": "05-host",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "host-1",
+              "text": "The site you ran is an ASP.NET Core application. In Program.cs, AddOrchardCms registers Orchard Core, and UseOrchardCore adds it to the request pipeline."
+            },
+            {
+              "id": "host-2",
+              "text": "AddSetupFeatures makes Auto Setup available. Auto Setup installs a site on the first request from settings in the configuration. Without those settings, it does nothing, and the Setup screen appears."
+            },
+            {
+              "id": "host-3",
+              "text": "The project references OrchardCore.Application.Cms.Targets, which brings in the modules that provide the features, and the themes. Under src, they live in OrchardCore.Modules and OrchardCore.Themes, and the documentation is in docs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Where the site keeps its data",
+      "subtitle": "App_Data, and how to start over",
+      "clips": [
+        {
+          "id": "06-data",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "data-1",
+              "text": "The site keeps its settings and its Sqlite database in the App_Data folder of OrchardCore.Cms.Web. The database is the OrchardCore.db file in App_Data/Sites/Default, where Default is the name of the tenant, the site you set up."
+            },
+            {
+              "id": "data-2",
+              "text": "To start over, stop the site, delete the App_Data folder, and run it again: the Setup screen returns. The ORCHARD_APP_DATA environment variable points the site to another folder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Test Drive Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Orchard Core runs from its source code on your machine, with a site you set up yourself. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
