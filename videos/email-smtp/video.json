@@ -1,0 +1,57 @@
+{
+  "title": "Email: Configure SMTP and Send a Test Email | Orchard Core",
+  "description": "A site that cannot send email cannot confirm accounts, reset passwords, or deliver notifications. Orchard Core sends email through a provider, and the Email feature holds the settings that choose it.\n\nThis video enables the SMTP Email Provider, connects the site to an SMTP server, and sends a test email from the Email Test page. A local test mail server catches the message, so you can see what the site sent.\n\nIn this video:\n• Where a site sends email, and the Email and SMTP Email Provider features\n• Enabling the provider under Tools, Features\n• Configuring the SMTP provider under Settings, Communication, Email\n• Sending a test email under Tools, Testing, Email Test\n• Checking the message in a local test mail server\n• What to check when a test fails",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS",
+    "Email",
+    "SMTP"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Email",
+    "SMTP",
+    "SMTP Email Provider",
+    "Email Test",
+    "mail server",
+    "smtp4dev"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Email, SMS and Notifications"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Email",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Email/"
+    },
+    {
+      "label": "Documentation: SMTP Email Provider",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Email.Smtp/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Email/README.md",
+    "src/docs/reference/modules/Email.Smtp/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Email"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "title": "Email: Configure SMTP and Send a Test Email",
+  "output": "email-smtp",
+  "spoken": {
+    "SSL/TLS": "S.S.L. slash T.L.S.",
+    "STARTTLS": "Start T.L.S.",
+    "2525": "twenty five twenty five",
+    "noreply@example.com": "no reply at example dot com",
+    "jamie.chen@example.com": "jamie dot chen at example dot com",
+    "Cc, Bcc, and Reply To": "C.C., B.C.C., and Reply To"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Email: Configure SMTP and Send a Test Email",
+      "subtitle": "Connect your site to a mail server and check that it works",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core sends email for account confirmations, password resets, notifications, and workflows. Let's enable the SMTP provider, connect the site to a mail server, and send a test email to check that it works."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Email in Orchard Core",
+      "subtitle": "The features and the plan",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Several parts of an Orchard Core site send email. Users confirm their address and reset their password by email, notifications can reach an inbox, and a workflow can send a message with its Email Task activity."
+            },
+            {
+              "id": "parts-1",
+              "text": "The Email feature holds the settings, the Default provider, and the Email Test page. A provider does the sending: the SMTP Email Provider sends through an SMTP server, and Azure Communication Services Email, covered in a separate video, is another."
+            },
+            {
+              "id": "parts-2",
+              "text": "The Email settings and the Email Test page need the Manage Email Settings permission. The Administrator role has it, so the admin user can open both."
+            },
+            {
+              "id": "plan-1",
+              "text": "Let's enable the SMTP provider, configure it, and send a test email. A local test mail server shows the message arriving, so nothing reaches a real inbox."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the provider",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Features are managed under Tools, Features. Let's open the Tools menu, choose Features, and search for SMTP."
+            },
+            {
+              "id": "enable-2",
+              "text": "SMTP Email Provider is in the Communication category. It lists Email as a dependency, so enabling the provider also enables the Email feature."
+            },
+            {
+              "id": "enable-3",
+              "text": "Let's select Enable. A message confirms that the SMTP Email Provider feature was enabled."
+            },
+            {
+              "id": "enable-4",
+              "text": "Searching for email lists the Email feature and the SMTP Email Provider, and both are enabled. Email adds the settings page and the Email Test page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Configure SMTP",
+      "subtitle": "Settings, Communication, Email",
+      "clips": [
+        {
+          "id": "03-configure",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "config-1",
+              "text": "The settings are under Settings, Communication, Email. The Providers tab opens first, with a warning that no email provider is enabled."
+            },
+            {
+              "id": "config-2",
+              "text": "The SMTP tab holds the settings of the SMTP provider. Let's check Enable SMTP Provider, and its fields appear."
+            },
+            {
+              "id": "config-3",
+              "text": "Sender email address is required. It is the sender of every message, unless a message sets its own sender. Let's enter noreply@example.com."
+            },
+            {
+              "id": "config-4",
+              "text": "Delivery method is Network, which sends each message to a mail server. The other choice, Specified pickup directory, saves each message as a file, which helps while developing and testing."
+            },
+            {
+              "id": "config-5",
+              "text": "Under Network delivery options, Host name is the address of the SMTP server, and Port number is the port it listens on. The test server is on localhost, at port 2525."
+            },
+            {
+              "id": "config-6",
+              "text": "Encryption method to use offers None, SSL/TLS, and STARTTLS. The test server accepts plain connections, so let's choose None. Auto Select Encryption method would choose it from the port instead."
+            },
+            {
+              "id": "config-7",
+              "text": "Require credentials adds the Use Windows authentication option, and the User name and Password fields, for servers that ask for a sign-in. The test server does not, so let's leave it unchecked."
+            },
+            {
+              "id": "config-8",
+              "text": "Let's select Save. The page reloads on the Providers tab, with a confirmation message, and Default provider shows Simple Mail Transfer Protocol (SMTP)."
+            },
+            {
+              "id": "config-9",
+              "text": "Orchard Core selected it for us, because no default provider was set. With several providers, this list chooses which one sends messages by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Send a test email",
+      "subtitle": "Tools, Testing, Email Test",
+      "clips": [
+        {
+          "id": "04-test",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "test-1",
+              "text": "The Email Test page is under Tools, Testing, Email Test. Provider is already set to the default provider."
+            },
+            {
+              "id": "test-2",
+              "text": "In To, let's enter the recipient, jamie.chen@example.com. Sender is optional: when it is empty, the message uses the sender email address of the SMTP settings."
+            },
+            {
+              "id": "test-3",
+              "text": "Cc, Bcc, and Reply To are optional as well. Subject and Body are required, so let's write a short message."
+            },
+            {
+              "id": "test-4",
+              "text": "Let's select Send. The page confirms the result with a message: Message sent successfully."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Check the message",
+      "subtitle": "In the test mail server",
+      "clips": [
+        {
+          "id": "05-inbox",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "inbox-1",
+              "text": "Let's switch to the inbox of the test mail server. It lists the message the site sent, with the sender, the recipient, and the subject."
+            },
+            {
+              "id": "inbox-2",
+              "text": "Let's open the message. The sender is the address from the SMTP settings, and the subject and the text are the ones from the Email Test page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "When a test fails",
+      "subtitle": "Read the error, then check the settings",
+      "clips": [
+        {
+          "id": "06-fail",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "fail-1",
+              "text": "When a message cannot be sent, the Email Test page lists the error. Check the host name, the port number, the encryption method, the credentials, and the email addresses, then send the test again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Email: Configure SMTP and Send a Test Email",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Enable the SMTP Email Provider, configure your mail server, and check it with the Email Test page. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
