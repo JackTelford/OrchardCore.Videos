@@ -1,0 +1,67 @@
+{
+  "title": "Build a Headless Site: Content in Orchard Core, Front End Anywhere | Orchard Core",
+  "description": "A site can keep its content in Orchard Core and leave the pages to another application: a web app, a static site or a mobile app. That front end needs an API to read the content, permission to call it, and a way for the browser to accept the answer.\n\nThis video builds that on a Blog site. It enables GraphQL, explores the API in GraphiQL, shows how a saved query becomes a GraphQL field, grants the Anonymous role the permissions to run it, and adds a CORS policy so a page on its own address can read the posts.\n\nIn this video:\n• How a headless site works\n• Enable the GraphQL and CORS Configuration features\n• Explore the API in GraphiQL\n• How a saved query becomes a GraphQL field\n• Grant the Anonymous role the permissions to call it\n• Call the endpoint from a page on its own address\n• Add a CORS policy so the browser accepts the answer\n• Recipes, limits and sign-in for a production site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "GraphQL",
+    "HeadlessCMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Headless CMS",
+    "GraphQL",
+    "GraphiQL",
+    "CORS",
+    "Cross-Origin Resource Sharing",
+    "API",
+    "Saved queries"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Build a Site"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: GraphQL",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/"
+    },
+    {
+      "label": "Documentation: GraphQL types and filters",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL.Abstractions/"
+    },
+    {
+      "label": "Documentation: Queries",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Queries/"
+    },
+    {
+      "label": "Documentation: CORS",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Cors/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Apis.GraphQL/README.md",
+    "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md",
+    "src/docs/reference/modules/Queries/README.md",
+    "src/docs/reference/modules/Cors/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Apis.GraphQL"
+  }
+}

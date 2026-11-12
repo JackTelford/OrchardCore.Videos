@@ -7031,9 +7031,9 @@
       "src/docs/reference/modules/Queries/README.md",
       "src/docs/reference/modules/Cors/README.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 7.5,
-    "words": 0,
+    "words": 1126,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
