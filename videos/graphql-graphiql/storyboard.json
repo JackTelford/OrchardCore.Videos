@@ -1,0 +1,231 @@
+{
+  "title": "GraphiQL in Orchard Core",
+  "output": "graphql-graphiql",
+  "spoken": {
+    "GraphiQL": "Graphical",
+    "Ctrl-": "Control ",
+    "createdUtc": "created U.T.C.",
+    "orderBy": "order by",
+    "blogPost": "blog post",
+    "displayText": "display text",
+    "OAuth": "O Auth",
+    "HTTP": "H.T.T.P."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "GraphiQL in Orchard Core",
+      "subtitle": "Explore and test GraphQL queries in the admin",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "GraphiQL is the in-browser editor of the GraphQL module. You write a query, run it against your site, and read the result. In this video, we'll build and run queries, and see how the page talks to the endpoint your clients call."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What GraphiQL is",
+      "subtitle": "A GraphQL client inside the admin",
+      "clips": [
+        {
+          "id": "01-what",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "GraphiQL is a page of the admin, and it is part of the GraphQL feature. It sends your queries to the same endpoint that your applications call, and it runs them as the user who is signed in."
+            },
+            {
+              "id": "idea-2",
+              "text": "Each run is one request. GraphiQL posts a JSON body with the query, and optionally variables and an operation name. The response is JSON too, and it holds data, errors, or both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Open GraphiQL",
+      "subtitle": "The Tools menu and the layout of the screen",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "In the admin menu, open Tools, then GraphiQL. The item is there when the GraphQL feature is enabled and your user has the Execute GraphQL permission."
+            },
+            {
+              "id": "open-2",
+              "text": "The screen has three areas. The Explorer on the left lists what you can query, the editor in the middle holds the query, and the result appears on the right."
+            },
+            {
+              "id": "open-3",
+              "text": "The editor starts with comments. Lines that begin with a hash are ignored, and they list the shortcuts: Ctrl-Enter runs the query, and Ctrl-Space opens autocomplete."
+            },
+            {
+              "id": "open-4",
+              "text": "Above the editor, the play button runs the query, and Prettify formats it. History lists the queries you ran before, and the Explorer button shows or hides the panel on the left."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Build and run a query",
+      "subtitle": "Click fields in the Explorer",
+      "clips": [
+        {
+          "id": "03-build",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "Let's build a query without typing. In the Explorer, click blogPost. Your content types are fields here, such as blog and blogPost, and the query appears in the editor."
+            },
+            {
+              "id": "build-2",
+              "text": "Tick displayText and createdUtc so that both are in the query. Then tick path, which comes from the Autoroute part of the blog post and is listed with the other fields of the content item."
+            },
+            {
+              "id": "build-3",
+              "text": "Press the play button. The result appears on the right as JSON, with one entry under blogPost for each published blog post of the site, the newest first."
+            },
+            {
+              "id": "build-4",
+              "text": "Untick createdUtc, and it leaves the query. The Explorer and the editor share the same query, so a change in one shows in the other."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Browse the schema",
+      "subtitle": "The Docs button and the Documentation Explorer",
+      "clips": [
+        {
+          "id": "04-docs",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "docs-1",
+              "text": "To read the schema itself, hide the Explorer to make room, and click Docs. The Documentation Explorer opens with the root types of the schema. Click Query to list its fields."
+            },
+            {
+              "id": "docs-2",
+              "text": "Search for blogPost, and open the field. Its description reads Represents a Blog Post, built from the display name of the content type."
+            },
+            {
+              "id": "docs-3",
+              "text": "Below it, the arguments are listed, each with a description: first, orderBy, skip, status, and where. A separate video covers filtering and paging with them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Variables and the address",
+      "subtitle": "Run one query with different values",
+      "clips": [
+        {
+          "id": "05-address",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "vars-1",
+              "text": "GraphiQL keeps the query, the variables, and the operation name in the address of the page. Bookmark the address, or send it to a colleague, and the same query opens in the editor."
+            }
+          ]
+        },
+        {
+          "id": "05-variables",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "vars-2",
+              "text": "Here the page is opened from such an address, so the query arrives on one line, and Prettify formats it. The query declares a variable named first, and the Query Variables pane gives it the value 2."
+            },
+            {
+              "id": "vars-3",
+              "text": "Run it, and two blog posts come back. Change the value to 1 in the pane and run it again, and one comes back. The text of the query does not change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "When a query fails",
+      "subtitle": "Errors in the editor and in the response",
+      "clips": [
+        {
+          "id": "06-errors",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "errors-1",
+              "text": "Ask for a field that does not exist, such as title on blogPost. The editor underlines it before you run anything, because it checks the query against the schema it loaded."
+            },
+            {
+              "id": "errors-2",
+              "text": "Run it anyway, and the response has an errors list instead of data. GraphiQL shows the body of the response whatever the HTTP status is."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "The same request from code",
+      "subtitle": "What your own client sends",
+      "clips": [
+        {
+          "id": "07-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "Behind the play button is a fetch call. It posts the query as JSON to the endpoint of the site, and includes the credentials of your session, so the signed-in user runs the query."
+            },
+            {
+              "id": "code-2",
+              "text": "Your own client sends the same body to the same path. It authenticates with a cookie or an OAuth access token, and the user needs the Execute GraphQL permission."
+            },
+            {
+              "id": "code-3",
+              "text": "The HTTP status tells the outcome. A query without errors returns 200, a failed query returns 400, and a query that needs a permission the caller lacks returns 401."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "GraphiQL in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's GraphiQL: the Explorer builds queries, Docs describes the schema, and the address keeps your work. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
