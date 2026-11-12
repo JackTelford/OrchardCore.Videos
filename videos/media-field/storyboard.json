@@ -1,0 +1,236 @@
+{
+  "title": "The Orchard Core Media Field",
+  "output": "media-field",
+  "spoken": {
+    ".pdf": "dot P.D.F.",
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Media Field",
+      "subtitle": "Attach images and files to your content",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Most pages need more than text. A Media Field attaches images and other files to a content item, from the media library or by upload. This video shows how to add the field, choose files, and pick one of its three editors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a Media Field stores",
+      "subtitle": "Files, descriptions and focal points",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A Media Field stores the location of each file, not the file itself. Usually the file lives in the media library, so one image can appear on many pages. Each file can carry a description, the media text, and a focal point, the anchor."
+            },
+            {
+              "id": "idea-2",
+              "text": "The field has three editors. Standard opens the media library in a dialog, where you pick files, and Gallery shows the same files as cards or as a list. Attached uploads files that belong to the content item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add a Media Field",
+      "subtitle": "On the Page content type",
+      "clips": [
+        {
+          "id": "02-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Fields belong to content types. Under Design, Content Definition, Content Types, you find every type of the site."
+            },
+            {
+              "id": "add-2",
+              "text": "Open the Page type with its Edit button. The Fields section lists the fields of the type, and Add Field adds one."
+            },
+            {
+              "id": "add-3",
+              "text": "Enter Photos as the Display Name, and the Technical Name fills in by itself. Choose Media Field as the Field Type, then Save & Configure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The settings of the field",
+      "subtitle": "Required, Multiple, text, anchors and types",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "The settings decide how the field behaves. Required forces editors to choose at least one file, and Multiple lets them choose several. The Hint is a line of help shown above the field, so let's type one."
+            },
+            {
+              "id": "settings-2",
+              "text": "Allow media text lets editors describe each file, and it is on by default. Allow anchors lets them mark a focal point on an image. It is off by default, so let's turn it on."
+            },
+            {
+              "id": "settings-3",
+              "text": "By default the field accepts every type of file that the media library accepts. Clear Allow all default media types to choose the types yourself, such as image types, and the dialog then lists only those files."
+            },
+            {
+              "id": "settings-4",
+              "text": "Further down, the question What type of editor should be used? offers Standard, Gallery and Attached. Let's keep Standard, and choose Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Attach media to a page",
+      "subtitle": "Choose files, describe them and set a focal point",
+      "clips": [
+        {
+          "id": "04-attach",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "attach-1",
+              "text": "To use the field, create a Page. Under Content, Content Items, the New menu lists the types you can create. Choose Page."
+            },
+            {
+              "id": "attach-2",
+              "text": "Enter a Title. The Photos field shows its Hint, and No Files, because nothing is attached. Add media opens the Select Media dialog."
+            },
+            {
+              "id": "attach-3",
+              "text": "The dialog is the media library itself. Open a folder, search, or upload files, then tick the files you want. Only image files are listed, because the field allows image types."
+            },
+            {
+              "id": "attach-4",
+              "text": "The footer counts the selected files. OK adds them to the field, and each file appears as a thumbnail with its name."
+            },
+            {
+              "id": "attach-5",
+              "text": "Click a thumbnail to select it. The toolbar then shows Remove, Media text, and Anchor. Media text opens a box where you describe the image for visitors who cannot see it."
+            },
+            {
+              "id": "attach-6",
+              "text": "In the Enter media text box, type a description of the image, such as Spring orchard, and choose OK."
+            },
+            {
+              "id": "attach-7",
+              "text": "Anchor opens a box with the image. Click the point that must stay in view when a template crops the picture, then choose OK. Reset Anchor returns the point to the center."
+            },
+            {
+              "id": "attach-8",
+              "text": "Choose Publish. A message confirms that the Page has been published."
+            },
+            {
+              "id": "attach-9",
+              "text": "Let's open the page on the site. It shows the images, and the media text of an image becomes its alternative text, which screen readers read aloud."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The Gallery editor",
+      "subtitle": "Cards, a list and drag to reorder",
+      "clips": [
+        {
+          "id": "05-gallery",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "gallery-1",
+              "text": "The editor is a setting of the field, so you can change it later. In the settings of Photos, choose Gallery from the list of editors, and Save. The chosen files stay in place, because both editors keep a list of media library files."
+            },
+            {
+              "id": "gallery-2",
+              "text": "Let's edit the Page again. The Gallery editor shows each file as a card, with buttons for its media text, anchor, download and removal. The Add media card at the end opens the same Select Media dialog."
+            },
+            {
+              "id": "gallery-3",
+              "text": "The toolbar switches between cards and a list. Drag a card onto another to change the order of the files, and Publish keeps that order."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The Attached editor",
+      "subtitle": "Upload files that belong to the page",
+      "clips": [
+        {
+          "id": "06-attached",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "attached-1",
+              "text": "The Attached editor suits a file that belongs to one page. Let's add a second Media Field to the Page type, named Visitor Guide, with Save & Configure."
+            },
+            {
+              "id": "attached-2",
+              "text": "The guide is one PDF, so in the settings clear Multiple. Clear Allow all default media types, tick .pdf in the list of types, and choose Attached as the editor. Then choose Save."
+            },
+            {
+              "id": "attached-3",
+              "text": "When you edit the Page, Visitor Guide has an Add media button that uploads a file from your computer, instead of opening the Select Media dialog. The uploaded file appears in the field."
+            },
+            {
+              "id": "attached-4",
+              "text": "When the page is saved, here with Publish, the uploaded file moves from a temporary location into a folder that belongs to the page."
+            },
+            {
+              "id": "attached-5",
+              "text": "On the site, a file that is not an image appears as a link. The link text is the media text, or the path of the file when there is none."
+            }
+          ]
+        },
+        {
+          "id": "06-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "attached-6",
+              "text": "Deleting the page deletes the files in its folder. Using the Attached editor requires the Manage Attached Media Fields Folder permission, which administrators have."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Media Field",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the Media Field: files from the library or uploaded to the page, each with its own description, in the editor that fits how your team works. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
