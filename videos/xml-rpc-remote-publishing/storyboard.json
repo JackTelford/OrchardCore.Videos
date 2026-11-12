@@ -1,0 +1,199 @@
+{
+  "title": "XML-RPC and Remote Publishing",
+  "output": "xml-rpc-remote-publishing",
+  "spoken": {
+    "/xmlrpc/metaweblog": "slash X.M.L. R.P.C. slash Meta Weblog",
+    "/xmlrpc": "slash X.M.L. R.P.C.",
+    "XML-RPC": "X.M.L. R.P.C.",
+    "IMetaWeblogDriver": "I Meta Weblog Driver",
+    "MetaWeblogDriver": "Meta Weblog Driver",
+    "IXmlRpcHandler": "I X.M.L. R.P.C. Handler",
+    "ProcessAsync": "Process Async",
+    "BuildPost": "Build Post",
+    "EditPost": "Edit Post",
+    "supportsFileUpload": "supports File Upload",
+    "supportsSlug": "supports Slug",
+    "MetaWeblog": "Meta Weblog",
+    "BlogPost": "Blog Post",
+    "RSD": "R.S.D.",
+    "Html": "H.T.M.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "XML-RPC and Remote Publishing",
+      "subtitle": "Publish to Orchard Core from a desktop blogging client",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A desktop blogging client, such as Open Live Writer, can publish posts to an Orchard Core site. The XML-RPC module makes that possible. This video covers enabling it, how a client finds your blog, and how you extend it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two features, one endpoint",
+      "subtitle": "What XML-RPC and Remote Publishing do",
+      "clips": [
+        {
+          "id": "01-features",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "The module provides two features. XML-RPC accepts a POST request at /xmlrpc, hands the method call to the registered handlers, and writes their response as XML. Remote Publishing adds the MetaWeblog API on top of it."
+            },
+            {
+              "id": "features-2",
+              "text": "The Lists module answers the calls. To a client, a blog is a content item whose type has a List part, and its posts are the items that the list contains."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enabling the features",
+      "subtitle": "Remote Publishing and its dependency",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Under Tools, Features, search for Open Live Writer. Both features of the module match, in the Infrastructure category. Remote Publishing shows XML-RPC as its dependency."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's enable Remote Publishing, and Orchard Core enables XML-RPC with it. The Lists and Media modules take part in the calls, and the Blog recipe enables both, with the Title, Markdown and Autoroute features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "How a client finds your blog",
+      "subtitle": "The manifest and the RSD document",
+      "clips": [
+        {
+          "id": "03-discover",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "discover-1",
+              "text": "Two links in the head of a blog's page point a client to its details. The first, the Windows Live Writer manifest, is served at /xmlrpc/metaweblog."
+            },
+            {
+              "id": "discover-2",
+              "text": "The manifest tells a client what the site supports. The supportsFileUpload element is Yes because the Media module declares it, and supportsSlug is Yes because the Autoroute module does."
+            },
+            {
+              "id": "discover-3",
+              "text": "The second link is the RSD document of the blog. It names MetaWeblog as the preferred API, gives the blog's identifier, and points to /xmlrpc, where the client sends its calls."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "What a client can do",
+      "subtitle": "Calls, members and permissions",
+      "clips": [
+        {
+          "id": "04-calls",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "calls-1",
+              "text": "The Lists module handles seven methods. They find the blogs a user can edit, read recent posts or a single post, create, edit and delete posts, and upload media files."
+            },
+            {
+              "id": "calls-2",
+              "text": "A call is an XML document. This one creates a post. It carries the method name, then the parameters in order: the blog identifier, the user name, the password, a struct with the post, and the publish flag."
+            },
+            {
+              "id": "calls-3",
+              "text": "Each module reads and writes the members it knows. The Title module sets the display text of the item from the title. The Markdown and Html modules map the description, and Autoroute maps the slug, which is the path of the item."
+            },
+            {
+              "id": "calls-4",
+              "text": "Every call carries a user name and a password. The user also needs permissions: Edit content for others to list, read and save drafts, Publish or unpublish content for others to publish, Delete content for others to delete, and media permissions to upload files."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "A post from a client",
+      "subtitle": "Published and draft posts",
+      "clips": [
+        {
+          "id": "05-post",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "post-1",
+              "text": "In Content Items, here is a post that a client sent. The Lists module creates it with the first content type that the blog contains, BlogPost, and publishes it, because the call asks for that."
+            },
+            {
+              "id": "post-2",
+              "text": "A call that does not ask to publish saves a draft, and so does a creation date in the future. Another call can edit the draft and publish it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Extending the API",
+      "subtitle": "Drivers and handlers",
+      "clips": [
+        {
+          "id": "06-extend",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "extend-1",
+              "text": "To map your own part, derive a driver from MetaWeblogDriver. BuildPost copies the part into the struct that goes to the client, and EditPost applies the struct that comes from the client."
+            },
+            {
+              "id": "extend-2",
+              "text": "A driver can also declare capabilities for the manifest: the Autoroute driver sets supportsSlug. Register the driver as an IMetaWeblogDriver, in a startup that requires the Remote Publishing feature."
+            },
+            {
+              "id": "extend-3",
+              "text": "To answer other methods, register an IXmlRpcHandler. ProcessAsync receives the method call and sets the response. An exception becomes a fault that carries its message, and a call that nothing answers returns status 500."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "XML-RPC and Remote Publishing",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the XML-RPC module: desktop clients publish to the blogs of your site, and drivers decide how each part maps. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
