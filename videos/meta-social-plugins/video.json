@@ -1,0 +1,57 @@
+{
+  "title": "Meta Social Plugins: Like, Share and Comments Widgets | Orchard Core",
+  "description": "Meta's social plugins, such as the Like button, the Share button and the comments box, need a script and a piece of markup on every page that shows them.\n\nThe Meta Social Plugins Widgets feature of Orchard Core provides widgets for several of them. You register your Meta app once, then place the widgets in a zone of your theme and choose the layer that decides where they show.\n\nIn this video:\n• What the feature adds: seven widgets for social plugins\n• Enabling Meta Social Plugins Widgets\n• Registering your Meta app in Settings, Integrations, Meta App\n• Adding the Facebook Like, Facebook Share and Facebook Comments widgets to the Footer zone\n• Checking the widgets on the site\n• Who can edit the widgets: the Manage Liquid templates permission",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Meta",
+    "Facebook",
+    "social plugins",
+    "Like button",
+    "Share button",
+    "comments",
+    "widgets",
+    "layers"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Layers and Widgets"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Meta module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Facebook/"
+    },
+    {
+      "label": "Guide: Integrate Facebook Social Plugins",
+      "url": "https://docs.orchardcore.net/en/latest/guides/integrate-facebook-plugins/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Facebook/README.md",
+    "src/docs/guides/integrate-facebook-plugins/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Facebook.Widgets"
+  }
+}
