@@ -1,6 +1,6 @@
 # Sitemap Indexes and the Sitemaps Cache
 
-**YouTube:** not published yet · **Length:** 4:00 · **Feature:** `OrchardCore.Sitemaps` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Sitemaps/))
+**YouTube:** not published yet · **Length:** 3:58 · **Feature:** `OrchardCore.Sitemaps` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Sitemaps/))
 
 A sitemap index groups several sitemaps under one address. The video creates an index from two sitemaps, opens it in the
 browser, and shows how the robots file names it, once the Robots settings are saved with the sitemaps included. It then

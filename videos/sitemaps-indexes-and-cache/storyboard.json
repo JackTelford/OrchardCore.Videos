@@ -3,7 +3,8 @@
   "output": "sitemaps-indexes-and-cache",
   "spoken": {
     ".xml": " dot X.M.L.",
-    "robots.txt": "robots dot T.X.T."
+    "robots.txt": "robots dot T.X.T.",
+    "SEO": "S.E.O."
   },
   "chapters": [
     {
@@ -96,7 +97,7 @@
             },
             {
               "id": "view-3",
-              "text": "With the SEO feature enabled, Settings, Search, Search Engine Optimization, Robots has a checkbox, Include all sitemaps. Keep it checked and saved, and, with a Base url set, your sitemaps are added to the robots.txt file."
+              "text": "With the SEO feature enabled, Settings, Search, Search Engine Optimization, Robots has a checkbox, Include all sitemaps. Keep it checked and save the page. With a Base url set, your sitemaps are then added to the robots.txt file."
             },
             {
               "id": "view-4",
@@ -142,7 +143,7 @@
             },
             {
               "id": "cache-2",
-              "text": "Publishing a blog post changed the identifier of the Posts sitemap, so one of its two files is no longer used. Only a purge, or the cleanup feature, deletes it."
+              "text": "Publishing a blog post changes the identifier of the Posts sitemap, so one of its two files is no longer used. Only a purge, or the cleanup feature, deletes it."
             },
             {
               "id": "cache-3",
@@ -188,7 +189,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A sitemap index gives search engines one address for all your sitemaps, and the Sitemaps Cache keeps them ready to serve. Purge it by hand, or let the cleanup remove the files no sitemap uses. Thanks for watching."
+              "text": "A sitemap index gives search engines one address for all your sitemaps, and the Sitemaps Cache holds their files until you purge them or the cleanup removes them. Thanks for watching."
             }
           ]
         }

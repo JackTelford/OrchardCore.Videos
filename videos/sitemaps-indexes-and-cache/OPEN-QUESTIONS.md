@@ -59,9 +59,10 @@ confirms each item while recording; none of them is stated as a fact in the narr
 
 ## Pronunciation to confirm (`scripts/pronounce.py`)
 
-The storyboard's `spoken` map has two entries a person must hear before narrating:
+The storyboard's `spoken` map has three entries a person must hear before narrating:
 
 - `.xml` is spoken " dot X.M.L." (steps `create-3`, which also holds `sitemap.xml`);
 - `robots.txt` is spoken "robots dot T.X.T." (step `view-3`).
+- `SEO` is spoken "S.E.O." (step `view-3`).
 
 Also listen to "Skip and Take", "Sitemaps Cleanup" and "Base url" ("base U.R.L." may sound better).
