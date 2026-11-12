@@ -839,9 +839,9 @@
       "src/docs/reference/modules/ContentFields/README.md",
       "src/docs/reference/modules/Markdown/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.0,
+    "words": 751,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

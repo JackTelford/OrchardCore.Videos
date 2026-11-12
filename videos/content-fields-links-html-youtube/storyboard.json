@@ -1,0 +1,268 @@
+{
+  "title": "Content Fields: Links, Rich Text, Markdown and YouTube Videos",
+  "output": "content-fields-links-html-youtube",
+  "spoken": {
+    "Html": "H.T.M.L.",
+    "Wysiwyg": "wizzywig"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Links, Rich Text, Markdown and YouTube",
+      "subtitle": "Four fields for addresses, formatted text and video",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A content type can hold more than text and numbers. In this video we'll add a Link Field, an Html Field, a Markdown Field, and a Youtube Field to a content type, fill them in, and see the result on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Four fields for richer content",
+      "subtitle": "What each field stores",
+      "clips": [
+        {
+          "id": "01-fields",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "fields-1",
+              "text": "Text, numbers and dates don't cover everything. A workshop page needs a sign-up link, a formatted schedule, a list of things to bring, and a teaser video."
+            },
+            {
+              "id": "fields-2",
+              "text": "A Link Field stores an address, the text of the link, and where the link opens. An Html Field stores formatted text, such as a schedule."
+            },
+            {
+              "id": "fields-3",
+              "text": "A Markdown Field stores text written in Markdown, such as a list. A Youtube Field stores the address of a video, and shows it in a player."
+            },
+            {
+              "id": "fields-4",
+              "text": "The Link Field, the Html Field, and the Youtube Field come with the Content Fields module. The Markdown Field comes with the Markdown module. You enable both under Tools, Features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Link Field",
+      "subtitle": "An address, link text and a target",
+      "clips": [
+        {
+          "id": "02-link",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "link-1",
+              "text": "Content types are under Design, Content Definition, Content Types. Select Edit on the Workshop type, which already has a Title. Its Fields section is empty, so select Add Field."
+            },
+            {
+              "id": "link-2",
+              "text": "Enter Registration Link as the Display Name, and the Technical Name follows from it. Under Field Type, choose Link Field."
+            },
+            {
+              "id": "link-3",
+              "text": "Select Save & Configure. The field is added, and its settings open."
+            },
+            {
+              "id": "link-4",
+              "text": "Required makes the address mandatory. The Text drop-down decides what the link says. Choose Text is required, so every link has words that people can read."
+            },
+            {
+              "id": "link-5",
+              "text": "Default value of the Target fills the Target box in each new item. Enter the value that opens the link in a new window or tab, and then select Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Html Field",
+      "subtitle": "Formatted text with the Wysiwyg editor",
+      "clips": [
+        {
+          "id": "03-html",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "html-1",
+              "text": "Select Add Field again. Enter Schedule as the Display Name, choose Html Field, and select Save & Configure."
+            },
+            {
+              "id": "html-2",
+              "text": "Hint is help text that appears under the field in the editor. Sanitize Html is on by default, and it removes unsafe markup when the content is displayed."
+            },
+            {
+              "id": "html-3",
+              "text": "The Standard editor is for people who write HTML markup. The Wysiwyg editor shows formatted text with a toolbar. Choose Wysiwyg editor from the drop-down, and select Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Markdown Field",
+      "subtitle": "Plain text that becomes formatted text",
+      "clips": [
+        {
+          "id": "04-markdown",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "markdown-1",
+              "text": "Add one more field. Enter What to Bring as the Display Name, choose Markdown Field, and select Save & Configure."
+            },
+            {
+              "id": "markdown-2",
+              "text": "A Markdown Field has the same two settings, Hint and Sanitize Html. The Standard editor is a plain text box, and the Wysiwyg editor option adds a toolbar. We keep Standard and select Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Youtube Field",
+      "subtitle": "A video address becomes an embedded player",
+      "clips": [
+        {
+          "id": "05-youtube",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "youtube-1",
+              "text": "The last field is the video. Enter Teaser Video as the Display Name, choose Youtube Field, and select Save & Configure."
+            },
+            {
+              "id": "youtube-2",
+              "text": "Placeholder shows sample text in the empty box, and Hint adds help text. Width and Height set the size of the video box. Select Save."
+            },
+            {
+              "id": "youtube-3",
+              "text": "The Workshop type lists all four fields, each with its field type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Fill in a Workshop",
+      "subtitle": "One value for each field",
+      "clips": [
+        {
+          "id": "06-fill",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "fill-1",
+              "text": "In the Content Types list, select Create New Workshop. The editor shows the Title and our four fields."
+            },
+            {
+              "id": "fill-2",
+              "text": "Enter Pottery Basics as the Title. For the Registration Link, enter the address and the link text. The Target is already filled in from the field settings."
+            },
+            {
+              "id": "fill-3",
+              "text": "The Schedule is a rich text editor. Type the days and times, and use the toolbar to format them."
+            },
+            {
+              "id": "fill-4",
+              "text": "What to Bring takes Markdown. A line that starts with number signs becomes a heading, and lines that start with hyphens become a list."
+            },
+            {
+              "id": "fill-5",
+              "text": "For the Teaser Video, enter the address of a video page. The field builds the embedded address itself when the item is saved."
+            },
+            {
+              "id": "fill-6",
+              "text": "Publish saves the Workshop and makes it live on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "On the site",
+      "subtitle": "How each field is displayed",
+      "clips": [
+        {
+          "id": "07-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "Back in the Content Types list, select List Items on the Workshop row. In the row of Pottery Basics, View opens the published Workshop on the site."
+            },
+            {
+              "id": "site-2",
+              "text": "The Registration Link is an ordinary link with the words we typed. Because of the Target, it opens in a new window or tab."
+            },
+            {
+              "id": "site-3",
+              "text": "The Schedule keeps the formatting that we applied in the toolbar."
+            },
+            {
+              "id": "site-4",
+              "text": "What to Bring shows the Markdown as a heading and a list."
+            },
+            {
+              "id": "site-5",
+              "text": "The Teaser Video appears in an embedded player, at the width and height from the field settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Safe by default",
+      "subtitle": "How Html and Markdown are displayed",
+      "clips": [
+        {
+          "id": "08-safe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "safe-1",
+              "text": "The Html Field and the Markdown Field have a Sanitize Html setting, which is on by default. When the content is displayed, unsafe markup, such as script tags, is removed. What you typed stays stored as written."
+            },
+            {
+              "id": "safe-2",
+              "text": "By default, HTML that you type inside Markdown is shown as text, not as markup. And the Link Field rejects an address that isn't valid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Thanks for watching",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Link Field, the Html Field, the Markdown Field, and the Youtube Field bring addresses, formatted text, and video into your content. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
