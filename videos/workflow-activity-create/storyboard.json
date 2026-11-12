@@ -39,7 +39,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "Every step of a workflow is an activity, and your module can add its own. We read the Notify Task activity of the Workflows module part by part: its class, its editor, its views and its registration. Then we find them in the workflow designer."
+              "text": "Every step of a workflow is an activity, and your module can add its own. Let's read the Notify Task activity of the Workflows module part by part: its class, its editor, its views and its registration. Then let's find them in the workflow designer."
             }
           ]
         }
