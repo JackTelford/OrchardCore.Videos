@@ -1,0 +1,56 @@
+{
+  "title": "Forms and Workflows: Process Each Submission | Orchard Core",
+  "description": "A form collects what visitors type, but nothing happens to a submission until something processes it.\n\nThe Form widget posts to a workflow. An HTTP request event starts the workflow, validation tasks check the fields and keep the errors in the model state, and redirects send the visitor to a thank-you page or back to the form with its errors and typed values.\n\nIn this video:\n• From a form to a workflow: how a submission travels\n• Start the workflow with an HTTP request event\n• Validate the fields, one at a time\n• Handle a valid submission: read the values, send an email, redirect\n• Connect the form: point the Action at the workflow\n• Try it: errors come back, valid posts go through\n• Behind the redirect: how errors reach the form again",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Forms",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Forms",
+    "Workflows",
+    "Form widget",
+    "HTTP Request",
+    "Form validation",
+    "Liquid"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Forms"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Forms documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Forms/"
+    },
+    {
+      "label": "Workflows documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Forms/README.md",
+    "src/docs/reference/modules/Workflows/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Forms"
+  }
+}

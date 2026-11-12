@@ -1,0 +1,242 @@
+{
+  "title": "Forms and Workflows: Process Each Submission",
+  "output": "forms-workflows",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Forms and Workflows",
+      "subtitle": "Process each submission with a workflow",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A form collects a submission, and something has to process it. Here, a Form widget posts to a workflow that validates the fields, sends an email, and returns the visitor to the form with errors, or to a thank-you page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "From a form to a workflow",
+      "subtitle": "How a submission travels",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A form has two independent parts: building it, and processing what it posts. The Form widget builds the HTML. Its Action field holds the URL of a workflow that processes the post."
+            },
+            {
+              "id": "how-2",
+              "text": "The widget renders a form element with your Action and Method. It adds an antiforgery token, and a hidden field with the path of the page, so the workflow can send the visitor back. Both are settings, on by default."
+            },
+            {
+              "id": "how-3",
+              "text": "A post to that URL reaches the HTTP workflow controller. It decrypts the token to find the workflow and its start activity, checks the antiforgery token when the event asks for it, and starts the workflow."
+            },
+            {
+              "id": "how-4",
+              "text": "When the workflow ends, the controller answers. It keeps a response an activity wrote, or else redirects to the saved form location. With neither, it returns Accepted with an empty body, so end a form workflow with a redirect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Start the workflow",
+      "subtitle": "Start it with an HTTP request",
+      "clips": [
+        {
+          "id": "02-start",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "start-1",
+              "text": "Open Design, Workflows, and select Create Workflow. A workflow only needs a name, so enter Contact Form Workflow, and select Create and open the designer."
+            },
+            {
+              "id": "start-2",
+              "text": "An empty workflow offers the events that can start it. Choose Http Request Event. The first event you add becomes the start activity, and its settings open at the bottom of the canvas."
+            },
+            {
+              "id": "start-3",
+              "text": "Set HTTP Method to POST, because a form posts. The URL is already filled in when the settings open. It carries a protected token, so anyone who has the URL can start this workflow."
+            },
+            {
+              "id": "start-4",
+              "text": "Validate Antiforgery Token is checked by default, and the Form widget sends the token, so leave it checked. Form Location Key stays empty, since this workflow handles one form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Validate the fields",
+      "subtitle": "Model state, one field at a time",
+      "clips": [
+        {
+          "id": "03-validate",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "validate-1",
+              "text": "Click the Done outcome of the event, and search for Bind Model State Task. It copies every posted field into the model state, so the form shows the visitor's values again after an error."
+            },
+            {
+              "id": "validate-2",
+              "text": "Add Validate Form Field Task. Field Name must match the HTML Name of the input, so enter Name, and set Error Message to Name is required. A value that is empty or only white space fails."
+            },
+            {
+              "id": "validate-3",
+              "text": "From its Done outcome, add a second one with Field Name Email and Error Message Email is required. A failed field adds an error to the model state. The task always follows Done, so the next check runs whether the field was valid or not."
+            },
+            {
+              "id": "validate-4",
+              "text": "After the last check, add Validate Form Task. It has no settings. It reads the model state, and follows Valid when no field has an error, and Invalid otherwise."
+            },
+            {
+              "id": "validate-5",
+              "text": "From Invalid, add Http Redirect To Form Location Task. It makes the path saved from the hidden field the place to return to, and the controller redirects there when the workflow ends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Handle a valid submission",
+      "subtitle": "Read the values, send an email, redirect",
+      "clips": [
+        {
+          "id": "04-values",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "values-1",
+              "text": "Behind Valid, the workflow reads what was posted. In Liquid, the Form collection of the Request object holds the fields, and in JavaScript, the request form function returns one. Both read the current request."
+            }
+          ]
+        },
+        {
+          "id": "04-valid",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "valid-1",
+              "text": "From Valid, add Email Task. Enter the Recipients, and use Liquid in the Subject to include the visitor's name. The bodies take Liquid too, and the HTML body encodes values, so markup arrives as text."
+            },
+            {
+              "id": "valid-2",
+              "text": "From Done, add Http Redirect Task, and set Location to the thank-you page. It writes the redirect itself. The email's Failed outcome has no transition here, but a real workflow should handle it, or the visitor gets an empty answer."
+            },
+            {
+              "id": "valid-3",
+              "text": "The designer saves a draft as you work, but only the published workflow handles requests. Select Publish to make the draft the published version."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Connect the form",
+      "subtitle": "Point the Action at the workflow",
+      "clips": [
+        {
+          "id": "05-connect",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "connect-1",
+              "text": "In Content Items, edit the Contact page. Its Form widget has an Action field, and that field takes the URL of the workflow."
+            },
+            {
+              "id": "connect-2",
+              "text": "Paste the URL into Action. Method stays POST, and Anti Forgery Token and Save Form Location stay checked, so the post carries both."
+            },
+            {
+              "id": "connect-3",
+              "text": "Publish the page. After that, every post of this form starts the workflow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Try it",
+      "subtitle": "Errors come back, valid posts go through",
+      "clips": [
+        {
+          "id": "06-try",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "try-1",
+              "text": "On the page, type only a message, and select Submit. The workflow sends the visitor back to the form. The validation summary lists both errors, and the message stays in its field."
+            },
+            {
+              "id": "try-2",
+              "text": "Enter a name and an email address, and submit again. The workflow sends the email, and redirects to the thank-you page."
+            },
+            {
+              "id": "try-3",
+              "text": "In Workflows, select Instances. The newest instance shows the path it followed, and its Journal lists each activity that ran, with its status and outcomes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Behind the redirect",
+      "subtitle": "How errors reach the form again",
+      "clips": [
+        {
+          "id": "07-state",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "state-1",
+              "text": "A redirect would lose the errors, so the Forms module carries them. After every controller action, a filter checks the model state. If the model state isn't valid and the action redirects, the filter stores it in temp data, errors and values together."
+            },
+            {
+              "id": "state-2",
+              "text": "On the next request, a second filter reads the temp data. If the action returns a view or a page, it merges the stored state into the model state, so the form shows the errors and typed values. Otherwise it discards them."
+            },
+            {
+              "id": "state-3",
+              "text": "The filters run for every action of a controller derived from Controller, so a form can also post to an action of your own. Add errors to the model state, and redirect to the page. The Form widget only needs an Action."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Forms and Workflows",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how a form hands its submission to a workflow: an HTTP request event, validation tasks, and a redirect that carries the errors back. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
