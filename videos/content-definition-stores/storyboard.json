@@ -1,0 +1,173 @@
+{
+  "title": "Content Definition Stores",
+  "output": "content-definition-stores",
+  "spoken": {
+    "ContentDefinitions.zip": "Content Definitions dot zip",
+    "ContentDefinition.json": "Content Definition dot JSON",
+    "App_Data": "App Data"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Definition Stores",
+      "subtitle": "Keep content types in the database or in a file",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A tenant records its content types, parts, and fields in a content definition. The database keeps it by default, and the File Content Definition feature keeps it in a file. Let's see how the store is chosen, and how to move back to the database."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Where definitions are kept",
+      "subtitle": "A record, and the store that holds it",
+      "clips": [
+        {
+          "id": "01-store",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "store-1",
+              "text": "A content definition is one document, a Content Definition Record. It holds the type records and the part records of the tenant, and each part record holds the records of its fields."
+            },
+            {
+              "id": "store-2",
+              "text": "The content definition manager never touches storage itself. It goes through an I Content Definition Store, which loads the record for updating, gets a cached copy for reading, and saves the record."
+            },
+            {
+              "id": "store-3",
+              "text": "The default implementation is the database store. It asks a Document Manager for the record, which reads it from the database and keeps a cached copy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The File Content Definition feature",
+      "subtitle": "Replace the store of a tenant",
+      "clips": [
+        {
+          "id": "02-file",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "file-1",
+              "text": "You enable File Content Definition in Tools, Features. The Contents module declares the feature in its manifest, and gives it a startup class that runs only while the feature is enabled."
+            },
+            {
+              "id": "file-2",
+              "text": "The database store is added only if no store is registered. The feature's startup calls Add File Content Definition Store, which removes the registered store and adds the file store in its place."
+            },
+            {
+              "id": "file-3",
+              "text": "The file store has the same three methods, but its Document Manager uses the file document store. The record names its file, so each tenant gets a ContentDefinition.json file in its folder, under App_Data, Sites."
+            },
+            {
+              "id": "file-4",
+              "text": "The file holds the same record as indented JSON. The admin, migrations, and recipes all change definitions through the manager, so each change is written to the file after the commit."
+            },
+            {
+              "id": "file-5",
+              "text": "Without a file, the store returns an empty record, and enabling the feature copies nothing from the database. To start from those definitions, export them with a deployment plan first, and import the package once the feature is enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Move the definitions to the database",
+      "subtitle": "Export, switch the store, import",
+      "clips": [
+        {
+          "id": "03-export",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "export-1",
+              "text": "The documentation suggests the file for development, and the database for production. To move, first export the definitions. In Tools, Deployments, Plans, choose Add Deployment Plan, name it Content Definitions, and select Create."
+            },
+            {
+              "id": "export-2",
+              "text": "On the plan, choose Add Step, and add Update Content Definitions. In the step form, check Include all content types and parts definitions, and select Create."
+            },
+            {
+              "id": "export-3",
+              "text": "Choose Execute, and select File Download. The step reads the definitions from the active store, so it exports the file's content, and the browser downloads ContentDefinitions.zip."
+            }
+          ]
+        },
+        {
+          "id": "03-switch",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "switch-1",
+              "text": "Next, in Tools, Features, find File Content Definition. Select Disable, and confirm with Yes. The tenant restarts with the database store, and the feature shows as disabled."
+            },
+            {
+              "id": "switch-2",
+              "text": "Open Design, Content Definition, Content Types, and search for Event, a type created while the file was in use. There is no result: the database never received it."
+            }
+          ]
+        },
+        {
+          "id": "03-import",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "import-1",
+              "text": "Open Tools, Deployments, Package Import, select ContentDefinitions.zip, and select Import. The package's Content Definition recipe step saves each type and part through the active store, which is the database again."
+            },
+            {
+              "id": "import-2",
+              "text": "The page reports that the deployment package was imported. Back in Content Types, searching for Event finds the type. The definitions are in the database, and the site no longer reads the file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Keep it out of other tenants",
+      "subtitle": "Exclude the feature with a profile",
+      "clips": [
+        {
+          "id": "04-profile",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "profile-1",
+              "text": "On the Default tenant, with Tenant Feature Profiles enabled, a feature profile can keep the file store out of other tenants. Its rules exclude features by id, and a tenant given the profile cannot enable them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Definition Stores",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's content definition stores: the database by default, a ContentDefinition.json file for each tenant with the File Content Definition feature, and a deployment plan to move definitions between them. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

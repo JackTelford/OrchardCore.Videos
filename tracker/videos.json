@@ -785,9 +785,9 @@
       "src/docs/reference/modules/Tenants/README.md",
       "src/docs/guides/content-definitions/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.8,
+    "words": 575,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
