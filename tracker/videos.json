@@ -3861,9 +3861,9 @@
     "docs": [
       "src/docs/reference/modules/ReCaptcha/README.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 4.5,
-    "words": 0,
+    "words": 675,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

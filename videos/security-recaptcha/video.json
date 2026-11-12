@@ -1,0 +1,50 @@
+{
+  "title": "reCAPTCHA: Keep Bots Out of Sign-In, Registration and Forms | Orchard Core",
+  "description": "Bots guess passwords on sign-in pages, request reset emails on password pages, and send spam through contact forms.\n\nThe ReCaptcha and ReCaptcha Users features of Orchard Core add a reCAPTCHA checkbox to the Log in, registration and password pages, and a Re Captcha widget to the forms you build. You save your Site Key and Secret Key once, in the admin settings.\n\nIn this video:\n• Why reCAPTCHA and how the check works\n• Turn on the ReCaptcha and ReCaptcha Users features\n• Save your Site Key and Secret Key\n• The checkbox on the Log in page\n• The registration and password pages\n• Protect a form with the Re Captcha widget\n• Check the answer with the Validate ReCaptcha workflow task",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "reCAPTCHA"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "reCAPTCHA",
+    "captcha",
+    "bots",
+    "security",
+    "forms",
+    "workflows"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Site Security"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ReCaptcha/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ReCaptcha/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ReCaptcha"
+  }
+}

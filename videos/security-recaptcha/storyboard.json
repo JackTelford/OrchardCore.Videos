@@ -1,0 +1,228 @@
+{
+  "title": "reCAPTCHA in Orchard Core",
+  "output": "security-recaptcha",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "reCAPTCHA in Orchard Core",
+      "subtitle": "A checkbox on sign-in, password, registration and form pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Bots fill in sign-in pages, registration pages and contact forms all day. In this video, you set up reCAPTCHA in Orchard Core. We cover the features, the keys, the sign-in, registration and password pages, and forms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why reCAPTCHA",
+      "subtitle": "The problem and the check",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Bots are programs that send requests on their own. They guess passwords on sign-in pages, request reset emails on password pages, and send spam through contact forms."
+            },
+            {
+              "id": "why-2",
+              "text": "reCAPTCHA adds a checkbox that a visitor ticks. Your site sends the answer to Google, together with your secret key, and Google confirms or rejects it."
+            },
+            {
+              "id": "why-3",
+              "text": "In Orchard Core, two features provide it. ReCaptcha holds your keys, a widget for the Forms feature, and a task for the Workflows feature. ReCaptcha Users adds the checkbox to the pages where visitors log in, register, or reset a password."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Turn on the features",
+      "subtitle": "ReCaptcha and ReCaptcha Users",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Features are managed under Tools, Features. Let's search the list for recaptcha."
+            },
+            {
+              "id": "features-2",
+              "text": "ReCaptcha holds your keys. It also adds a widget when the Forms feature is on, and a workflow task when the Workflows feature is on. Let's enable it."
+            },
+            {
+              "id": "features-3",
+              "text": "ReCaptcha Users depends on ReCaptcha and on Users. It adds the checkbox to the Log in page, and to the registration and password pages when those features are on. Let's enable it as well."
+            },
+            {
+              "id": "features-4",
+              "text": "Both features show as enabled. Registration and password reset come from two other features, Users Registration and Users Reset Password, which are on for this site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Save your keys",
+      "subtitle": "Site Key and Secret Key",
+      "clips": [
+        {
+          "id": "03-keys",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "keys-1",
+              "text": "Open Settings, Security, reCaptcha. The page has two fields, Site Key and Secret Key, and a hint with a link to the Google service where you get both."
+            },
+            {
+              "id": "keys-2",
+              "text": "This recording uses the test keys that Google publishes. A live site needs keys of its own. Let's type the Site Key, then the Secret Key."
+            },
+            {
+              "id": "keys-3",
+              "text": "The Secret Key field shows what you type, so enter it where nobody is watching. Click Save, and the page confirms that the site settings were updated."
+            },
+            {
+              "id": "keys-4",
+              "text": "Until both keys are saved, no checkbox appears and no check runs. Once they are saved, every page that uses reCAPTCHA shows the checkbox."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The Log in page",
+      "subtitle": "The checkbox on sign-in",
+      "clips": [
+        {
+          "id": "04-signin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signin-1",
+              "text": "Open the Log in page. Under the sign-in fields, the reCAPTCHA checkbox appears. Administrators sign in on this page too."
+            },
+            {
+              "id": "signin-2",
+              "text": "Let's try without ticking the box. We type the user name and the password, and click Log in."
+            },
+            {
+              "id": "signin-3",
+              "text": "The Log in page loads again, with the password field empty. The site refuses the sign-in, because the box was not ticked."
+            },
+            {
+              "id": "signin-4",
+              "text": "Type the password again, tick the checkbox, and click Log in. With a confirmed answer, the sign-in goes through and the site opens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Registration and password pages",
+      "subtitle": "The same checkbox on more pages",
+      "clips": [
+        {
+          "id": "05-pages",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "pages-1",
+              "text": "The Register a new account page shows the checkbox under its fields, because the ReCaptcha Users feature is on."
+            },
+            {
+              "id": "pages-2",
+              "text": "The Forgot password page appears once password reset is allowed in Settings, Security, Reset Password. Let's enter an email address and click Submit without ticking the box."
+            },
+            {
+              "id": "pages-3",
+              "text": "The page lists the error, Failed to validate ReCaptcha. Tick the box and submit again, and the Forgot Password Confirmation page appears."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Protect a form",
+      "subtitle": "The Re Captcha widget",
+      "clips": [
+        {
+          "id": "06-form",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "form-1",
+              "text": "Forms are built from widgets. This Contact page has a Form widget with a Name input and a Button."
+            },
+            {
+              "id": "form-2",
+              "text": "To protect it, add the Re Captcha widget inside the Form widget, directly before the Button."
+            },
+            {
+              "id": "form-3",
+              "text": "The widget reports whether the ReCaptcha settings are configured. Here it says they are, and it links to them."
+            },
+            {
+              "id": "form-4",
+              "text": "Click Publish and open the page. The form shows the checkbox above the Button. The widget only displays the checkbox: the workflow that receives the form checks the answer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Check the answer",
+      "subtitle": "The Validate ReCaptcha task",
+      "clips": [
+        {
+          "id": "07-workflow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "workflow-1",
+              "text": "A Form widget submits to the address in its Action field. That address can belong to a workflow, which decides what happens to the submission. The workflow starts with an HTTP Request event, from the HTTP Workflows Activities feature."
+            },
+            {
+              "id": "workflow-2",
+              "text": "Add the Validate ReCaptcha task to the workflow. It has three outcomes: Done, Valid, and Invalid. Connect Valid to the steps that handle the form, and Invalid to an HTTP Redirect back to the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "reCAPTCHA in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Two features and a pair of keys put the reCAPTCHA checkbox on your Log in, registration, and password pages. A workflow checks the answer for the forms you build. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
