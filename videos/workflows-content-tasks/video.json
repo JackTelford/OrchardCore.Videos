@@ -1,0 +1,53 @@
+{
+  "title": "Workflows: Create, Update and Publish Content Automatically | Orchard Core",
+  "description": "A workflow can react when content changes, but the content tasks need to know which content item to work on, and what to put in it.\n\nThe Contents module adds content events and tasks to the Workflows module. This video builds a workflow that starts when an article is published, creates an announcement as a draft with Liquid and JSON, updates its body, and publishes it, and shows how each task chooses its content item.\n\nIn this video:\n• Content events and tasks, and the inputs of an event\n• Starting a workflow from a content event\n• Create Content Task: Content Properties with Liquid and JSON\n• Update Content Task: the Content Item ID expression and the merge\n• Publish Content Task: which content item it publishes\n• Running the workflow by publishing an article\n• The guards against infinite loops, and the Failed outcome\n• A workflow as a recipe step",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Content tasks",
+    "Content events",
+    "Liquid",
+    "Automation"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Workflows documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Contents documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md",
+    "src/docs/reference/modules/Contents/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows"
+  }
+}

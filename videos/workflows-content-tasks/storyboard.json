@@ -1,0 +1,270 @@
+{
+  "title": "Workflows: Create, Update and Publish Content Automatically",
+  "output": "workflows-content-tasks",
+  "spoken": {
+    "WorkflowType": "Workflow Type",
+    "Noop": "no-op"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Tasks in Workflows",
+      "subtitle": "Create, update and publish content automatically",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A workflow can react when content changes, and change content in return. In this video, we'll build one that creates an announcement when an article is published, fills in its body, and publishes it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Content events and tasks",
+      "subtitle": "What starts a workflow, and what it can do",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "concepts-1",
+              "text": "With the Workflows feature enabled, the Contents module adds activities for content. Events start a workflow when a content item is created, updated, saved as a draft, published, unpublished, deleted or versioned."
+            },
+            {
+              "id": "concepts-2",
+              "text": "A content handler raises each event with two inputs: the Content Item, and a Content Event that names the event, the content type and the ids. The workflow is correlated with the id of the content item."
+            },
+            {
+              "id": "concepts-3",
+              "text": "Tasks create, retrieve, update, publish, unpublish and delete content items. Each ends with outcomes you connect to the next activity, such as Done, Failed, Published or Noop."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Start from a content event",
+      "subtitle": "A workflow that reacts to publishing",
+      "clips": [
+        {
+          "id": "02-event",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "event-1",
+              "text": "In Design, Workflows, choose Create Workflow. A workflow only needs a name, so call it Announce published articles, and select Create and open the designer."
+            },
+            {
+              "id": "event-2",
+              "text": "An empty workflow offers the events that usually start one. Choose Content Published Event. It becomes the start activity, and its settings open at the bottom of the canvas."
+            },
+            {
+              "id": "event-3",
+              "text": "In Content Types, search for Article and select it. With nothing selected, the event starts the workflow for content of any type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create Content",
+      "subtitle": "A draft built from the published article",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Point at the Done outcome and click the plus that appears, search for Create Content, and choose Create Content Task. It is added after the event, and its settings open."
+            },
+            {
+              "id": "create-2",
+              "text": "Content Type lists the content types of the site. Choose Announcement. Publish stays unchecked, so the task saves a draft instead of publishing the item."
+            },
+            {
+              "id": "create-3",
+              "text": "Content Properties takes JSON for the parts and fields of the item. Liquid reads the workflow, so the title of the announcement follows the title of the article."
+            }
+          ]
+        },
+        {
+          "id": "03-properties",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "properties-1",
+              "text": "The task renders Content Properties as Liquid first. Liquid output is encoded, so a quotation mark in a title does not break the JSON. The JSON is then merged into an empty item."
+            },
+            {
+              "id": "properties-2",
+              "text": "If the item is valid, the task creates it and takes Done. If it is not, the task takes Failed, and the validation result becomes the last result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Update Content",
+      "subtitle": "Merge more JSON into the draft",
+      "clips": [
+        {
+          "id": "04-update",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "update-1",
+              "text": "Point at the Done outcome, click the plus that appears, and choose Update Content Task. Content Item ID takes a JavaScript expression that returns the id of the item to update."
+            },
+            {
+              "id": "update-2",
+              "text": "Type an expression that returns the id of the item the Create Content Task made. The Available data tab lists expressions like it for every earlier activity."
+            },
+            {
+              "id": "update-3",
+              "text": "Content Properties merges more JSON into the draft. Here it sets the body, and Liquid reads the content type and the title of the article. Publish stays unchecked."
+            }
+          ]
+        },
+        {
+          "id": "04-merge",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "merge-1",
+              "text": "Update Content Task loads the draft of that item, merges the JSON into it, validates it, and saves the draft. Objects are merged, and arrays are replaced."
+            },
+            {
+              "id": "merge-2",
+              "text": "There is no fallback: without a Content Item ID, the task throws, and by default the instance faults. Check Publish to publish the update, instead of saving a draft."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Publish Content",
+      "subtitle": "Pick the item to publish",
+      "clips": [
+        {
+          "id": "05-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "publish-1",
+              "text": "Add a Publish Content Task after Done. Its Expression returns the content item to publish, or the id of the item."
+            },
+            {
+              "id": "publish-2",
+              "text": "Enter an expression for the property named Content Item, which the Create Content Task and the Update Content Task set to the announcement."
+            }
+          ]
+        },
+        {
+          "id": "05-lookup",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "lookup-1",
+              "text": "With an empty Expression, the task looks for an input named Content Item, then a property of that name. A content event sets the input to the item that started the workflow, so the expression selects the announcement."
+            },
+            {
+              "id": "lookup-2",
+              "text": "Publish Content Task takes Published after publishing a draft, and Noop when the item has no draft. Unpublish Content Task and Delete Content Task find their item the same way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Run the workflow",
+      "subtitle": "Publish an article, get an announcement",
+      "clips": [
+        {
+          "id": "06-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Click Publish to publish the workflow. The designer saves a draft as you work, and a draft does not run: new instances start on the published version."
+            },
+            {
+              "id": "run-2",
+              "text": "Let's publish an article. Create one, enter a title, and click Publish."
+            },
+            {
+              "id": "run-3",
+              "text": "In Content Items, the Announcement is listed as published. Open it: its title and its body were built from the article by the workflow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Loops and failures",
+      "subtitle": "What a task refuses to do",
+      "clips": [
+        {
+          "id": "07-limits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "limits-1",
+              "text": "Tasks guard against infinite loops. A task that would raise again the event that started the workflow, for the same content type, throws, and by default the instance faults. That is why the announcement is not an Article."
+            },
+            {
+              "id": "limits-2",
+              "text": "Invalid content is not an exception: Create Content Task and Update Content Task take Failed, which you can connect to another activity. Publish Content Task takes Noop when there is no draft."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Workflows in recipes",
+      "subtitle": "Ship the workflow with a module",
+      "clips": [
+        {
+          "id": "08-export",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "export-1",
+              "text": "Export downloads the published workflow in a package whose recipe has a WorkflowType step. Each activity is a record with its type and properties, and a transition names the outcome that leads to the next activity."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Tasks in Workflows",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how a workflow creates, updates and publishes content: a content event, expressions that point at the item, and Liquid and JSON for its values. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
