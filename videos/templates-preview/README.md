@@ -1,6 +1,6 @@
 # Templates: Preview a Template on Any Page Before You Save It
 
-**YouTube:** not published yet · **Length:** 4:11 · **Feature:** [`OrchardCore.Templates`](https://docs.orchardcore.net/en/latest/reference/modules/Templates/)
+**YouTube:** not published yet · **Length:** 4:12 · **Feature:** [`OrchardCore.Templates`](https://docs.orchardcore.net/en/latest/reference/modules/Templates/)
 
 The Templates module has a Preview button in the editor of a template. This video shows it on the `Content__BlogPost`
 template of a Blog site: how to open the preview, how to follow a link to preview the template on another page, and

@@ -1,5 +1,5 @@
 {
-  "title": "Preview a Template on a Real Page",
+  "title": "Preview a Template on Any Page",
   "output": "templates-preview",
   "spoken": {
     "Content__BlogPost": "Content double underscore Blog Post",
@@ -11,7 +11,7 @@
   "chapters": [
     {
       "id": "00",
-      "title": "Preview a Template on a Real Page",
+      "title": "Preview a Template on Any Page",
       "subtitle": "Try your Liquid on your site before you save it",
       "clips": [
         {
@@ -149,7 +149,7 @@
             },
             {
               "id": "limits-2",
-              "text": "The preview renders the home page when it is a content item, or any published content item that has an Autoroute address. For any other address, it shows Preview Error with a status code, such as 404."
+              "text": "The preview renders the home page when it is a content item, or any published content item that has an address from the Autoroute module. For any other address, it shows Preview Error with a status code, such as 404."
             },
             {
               "id": "limits-3",
@@ -165,7 +165,7 @@
     },
     {
       "id": "99",
-      "title": "Preview a Template on a Real Page",
+      "title": "Preview a Template on Any Page",
       "subtitle": "docs.orchardcore.net",
       "clips": [
         {
