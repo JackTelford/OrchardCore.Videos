@@ -1,0 +1,251 @@
+{
+  "title": "Rules: Conditions That Decide When a Layer Shows",
+  "output": "rules-conditions",
+  "spoken": {
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Rules module",
+      "subtitle": "Conditions that decide when a layer shows",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A widget in a layer appears on a page only when the rule of that layer is true. This video shows the conditions a rule can hold, how to combine them, and how to check the result on your site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a rule decides",
+      "subtitle": "A list of conditions on every layer",
+      "clips": [
+        {
+          "id": "01-rule",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rule-1",
+              "text": "Each widget on the Widgets and Layers page belongs to a layer, and each layer has one rule. Each time the site displays a page, it checks the rule of each layer that has widgets. If the rule is true, its published widgets appear."
+            },
+            {
+              "id": "rule-2",
+              "text": "A rule is a list of conditions, and every condition in the list must be true for the rule to be true. A rule without conditions is never true, so a layer without conditions shows nothing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The conditions",
+      "subtitle": "What a rule can test",
+      "clips": [
+        {
+          "id": "02-kinds",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "kinds-1",
+              "text": "Some conditions look at the page. Homepage tests for the home page, Url compares the path of the address, Content type compares the type of content on show, and Culture compares the current culture."
+            },
+            {
+              "id": "kinds-2",
+              "text": "Others look at the visitor. Is authenticated is true for a signed-in user, Is anonymous is true for everyone else, and Role compares the roles of the user with a name you type."
+            },
+            {
+              "id": "kinds-3",
+              "text": "Boolean is fixed to true or false, so a Boolean set to true is true on every page. Javascript runs a script that must return true or false, for cases the other conditions do not cover."
+            },
+            {
+              "id": "kinds-4",
+              "text": "Two conditions are groups that hold other conditions. All is true when every condition inside it is true, and Any is true when at least one of them is true. A group with nothing inside is never true."
+            },
+            {
+              "id": "kinds-5",
+              "text": "Url, Content type, Culture and Role compare with an operation: Equals, Starts with, Ends with, Contains, or the Does not form of each. Comparisons ignore upper and lower case."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Open the rule of a layer",
+      "subtitle": "Design, Widgets",
+      "clips": [
+        {
+          "id": "03-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "Open the Design menu, then Widgets. The Widgets and Layers page shows the zones with their widgets, and the list of layers. Let's edit the Welcome layer, which has one widget and no conditions."
+            },
+            {
+              "id": "open-2",
+              "text": "Select Edit. The Rules section is empty, and the page asks for at least one condition. Until you add one, the rule is never true, so the widget of this layer is hidden on every page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add a group",
+      "subtitle": "One condition that holds others",
+      "clips": [
+        {
+          "id": "04-group",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "group-1",
+              "text": "Select Add above the list of conditions. The Available Rules dialog shows every condition as a card, and the Filter box narrows the list. The layer should show on two different pages, so let's find the Any condition."
+            },
+            {
+              "id": "group-2",
+              "text": "Select Add on the Any condition card. Name the group Home or About, so the rule reads clearly, and select Create. The group joins the rule, and it holds no conditions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add conditions to the group",
+      "subtitle": "Homepage and Url",
+      "clips": [
+        {
+          "id": "05-conditions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cond-1",
+              "text": "Select Add on the group itself, not the one above the list, so the condition you add goes inside the group. Filter for homepage, and select Add on the Homepage condition card."
+            },
+            {
+              "id": "cond-2",
+              "text": "The editor offers Is homepage and Is not homepage. Is homepage is already selected, which is what we need, so select Create."
+            },
+            {
+              "id": "cond-3",
+              "text": "Select Add on the group again, and choose the Url condition card. Its editor asks for an operation and a value."
+            },
+            {
+              "id": "cond-4",
+              "text": "Choose Starts with as the operation, type /about as the value, and select Create. The condition is true for any page whose address path begins with /about."
+            },
+            {
+              "id": "cond-5",
+              "text": "The group lists both conditions, and it needs only one of them to be true."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Check the result on the site",
+      "subtitle": "Three pages, one widget",
+      "clips": [
+        {
+          "id": "06-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "Let's look at the site. Each condition was saved when we selected Create, so the layer needs no other save. On the home page, the Welcome note appears, because the home page meets the Homepage condition."
+            },
+            {
+              "id": "site-2",
+              "text": "Select About in the menu. The note appears here too, because the address of this page starts with /about."
+            },
+            {
+              "id": "site-3",
+              "text": "Open one of the blog posts. Its address matches neither condition, so the group is false, the rule is false, and the note is hidden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Add a condition about the visitor",
+      "subtitle": "Is authenticated",
+      "clips": [
+        {
+          "id": "07-visitor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "visitor-1",
+              "text": "Back in the layer, select Add above the list of conditions. This time, choose the Is authenticated condition card, which is true for signed-in users."
+            },
+            {
+              "id": "visitor-2",
+              "text": "This condition has no settings, so select Create. It is added to the rule itself, beside the group."
+            },
+            {
+              "id": "visitor-3",
+              "text": "Conditions placed directly in the rule must all be true. The group must match and the visitor must be signed in, so anonymous visitors never see the note."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Good to know",
+      "subtitle": "Editing, limits and permissions",
+      "clips": [
+        {
+          "id": "08-know",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "know-1",
+              "text": "Each condition has an Edit button and a Delete button. You can also drag a condition by its row to change its order, or to move it into another group that already holds a condition."
+            },
+            {
+              "id": "know-2",
+              "text": "The Content type condition only knows about content that the page shows in full. It ignores widgets, so it cannot test the content of a widget."
+            },
+            {
+              "id": "know-3",
+              "text": "To change rules, a user needs the Manage layers permission, which administrators have by default."
+            },
+            {
+              "id": "know-4",
+              "text": "The Rules module has no screen of its own. Enabling Layers in Tools, Features enables Rules with it, and the Layers module shows the rule editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Rules module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A rule is a list of conditions that must all be true, and the All and Any groups let you mix them. Build rules on the edit page of a layer, and check them on the site. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
