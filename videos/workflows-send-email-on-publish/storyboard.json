@@ -1,0 +1,272 @@
+{
+  "title": "Workflows: Send an Email When Content Is Published",
+  "output": "workflows-send-email-on-publish",
+  "spoken": {
+    "editors@example.com": "editors at example dot com",
+    "ReplyTo": "Reply To",
+    "Cc": "C.C.",
+    "Bcc": "B.C.C."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Send an Email When Content Is Published",
+      "subtitle": "Notify the editors when an article is published",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A workflow does work for you when something happens on your site. In this video, we build one that emails the editors each time an article is published, using the Workflows, Contents and Email modules."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the workflow works",
+      "subtitle": "An event, a task and the outcome that joins them",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Editors often need to know when an article goes live. Without automation, someone has to notice it, then write and send each message by hand. A workflow can do that for you."
+            },
+            {
+              "id": "idea-2",
+              "text": "A workflow connects activities. An event waits for something to happen, such as content being published, and a task does something, such as sending an email. An outcome says how an activity ended, such as Done, and leads to the next activity."
+            },
+            {
+              "id": "idea-3",
+              "text": "Ours has two activities. Content Published Event starts the workflow, and Email Task sends the message. The Done outcome of the event connects them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "What the site needs",
+      "subtitle": "Features and an email provider",
+      "clips": [
+        {
+          "id": "02-needs",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "needs-1",
+              "text": "The site needs the Workflows and Email features and an email provider, all enabled under Tools, Features. Here, SMTP Email Provider sends the messages. The Contents feature is enabled on this site, and it adds the content events when Workflows is enabled."
+            }
+          ]
+        },
+        {
+          "id": "02-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "The email settings are under Settings, Communication, Email. On the SMTP tab, Enable SMTP Provider is checked, and a Sender email address, a Host name and a Port number are set. A separate video covers this page."
+            },
+            {
+              "id": "setup-2",
+              "text": "The messages go to a test mail server on this computer, so nothing leaves it. Its inbox is empty, and each email the workflow sends appears here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create the workflow",
+      "subtitle": "A name is all it needs",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Open Design, Workflows. The list is empty, so click Create Workflow to start the first workflow."
+            },
+            {
+              "id": "create-2",
+              "text": "The form only needs a Name. The settings under More settings have defaults that you can change later. Let's type \"Notify the editors when an article is published\", and click Create and open the designer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Start with an event",
+      "subtitle": "Content Published Event and its content type",
+      "clips": [
+        {
+          "id": "04-event",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "event-1",
+              "text": "The designer opens with the list of Activities on the left and an empty canvas. A workflow runs when something happens, so the canvas offers the common events under Start with an event."
+            },
+            {
+              "id": "event-2",
+              "text": "Click Content Published Event. It lands on the canvas with a Start badge, because the first event added becomes the start activity. Its settings open below."
+            },
+            {
+              "id": "event-3",
+              "text": "Content Types limits the event to some types of content. With none selected, any type starts the workflow, so let's select Article. The card on the canvas shows the choice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add the email",
+      "subtitle": "Email Task, recipients and message",
+      "clips": [
+        {
+          "id": "05-email",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "email-1",
+              "text": "Click the Done outcome of the event. The menu offers the activities that can come next. Search for email, and choose Email Task."
+            },
+            {
+              "id": "email-2",
+              "text": "The Email Task is added next to the event, connected from Done, and its settings open below. Drag the top edge of the panel up to give the form more room."
+            },
+            {
+              "id": "email-3",
+              "text": "Leave From, Sender and ReplyTo empty, so the email uses the Sender email address of the SMTP settings. In Recipients, type \"editors@example.com\". A comma-separated list reaches several people."
+            },
+            {
+              "id": "email-4",
+              "text": "In Subject, type \"An article was published\". Then set Format to Text, so the email has a single plain text body."
+            },
+            {
+              "id": "email-5",
+              "text": "In Text Body, type a short message. The changes are applied when you leave a field, or when you click Apply, and the button confirms with Saved!"
+            },
+            {
+              "id": "email-6",
+              "text": "Back on the canvas, the Email Task shows its subject and two outcomes. Done follows a sent message, and Failed follows one that could not be sent. Neither is connected, so the workflow ends after the email."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Publish the workflow",
+      "subtitle": "A draft does not run",
+      "clips": [
+        {
+          "id": "06-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "publish-1",
+              "text": "The designer saves every change to a draft, and a draft does not run. When the toolbar says All changes saved, click Publish."
+            },
+            {
+              "id": "publish-2",
+              "text": "A message confirms that the workflow is published, and a badge next to its name shows the version. From here on, publishing an article starts the workflow."
+            },
+            {
+              "id": "publish-3",
+              "text": "Each publish creates a version. When you edit the workflow later, the changes go to a draft, and the published version keeps running until you publish again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Try it",
+      "subtitle": "Publish an article and read the email",
+      "clips": [
+        {
+          "id": "07-try",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "try-1",
+              "text": "Let's publish an article. Under Content, Content Items, open the New menu and choose Article."
+            },
+            {
+              "id": "try-2",
+              "text": "Type a Title. The workflow waits for content to be published, so Save Draft does not start it. Click Publish."
+            },
+            {
+              "id": "try-3",
+              "text": "A message confirms that the article is published. The workflow runs at that moment."
+            },
+            {
+              "id": "try-4",
+              "text": "Back under Design, Workflows, the Instances button lists the runs of every workflow. Ours has the status Finished, so it ran to its end."
+            },
+            {
+              "id": "try-5",
+              "text": "In the test mail server, the email has arrived. It comes from the Sender email address, goes to editors@example.com, and carries our subject and our plain text message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Make it yours",
+      "subtitle": "Other events, types and recipients",
+      "clips": [
+        {
+          "id": "08-next",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "next-1",
+              "text": "To adapt the workflow, select more content types in the event, or none to start it for every type."
+            },
+            {
+              "id": "next-2",
+              "text": "Content Created Event, Content Updated Event and Content Unpublished Event start a workflow in the same way as Content Published Event."
+            },
+            {
+              "id": "next-3",
+              "text": "Under Recipients, the Cc and Bcc fields take lists of addresses in the same way, for copies and blind copies."
+            },
+            {
+              "id": "next-4",
+              "text": "The Subject and Text Body fields can use values from the content item, such as its title. The Available data tab of an activity lists them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Send an Email When Content Is Published",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A workflow joins Content Published Event to Email Task, so the editors get an email each time an article is published. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

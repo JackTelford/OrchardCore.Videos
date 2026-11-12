@@ -1,0 +1,59 @@
+{
+  "title": "Workflows: Send an Email When Content Is Published | Orchard Core",
+  "description": "Editors often need to know when an article goes live, and writing that message by hand takes time and gets skipped.\n\nThe Orchard Core Workflows module sends it for you. A workflow starts with the Content Published Event, then runs an Email Task that mails the editors, and you build it in the workflow designer without writing code.\n\nIn this video:\n• How the workflow works: an event, a task and the outcome that joins them\n• What the site needs: features and an email provider\n• Create the workflow: a name is all it needs\n• Start with an event: Content Published Event and its content type\n• Add the email: Email Task, recipients and message\n• Publish the workflow: a draft does not run\n• Try it: publish an article and read the email\n• Make it yours: other events, types and recipients",
+  "hashtags": [
+    "OrchardCore",
+    "Workflows",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Workflows",
+    "Email",
+    "SMTP",
+    "Content",
+    "Automation",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Workflows documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Contents documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Email documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Email/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md",
+    "src/docs/reference/modules/Contents/README.md",
+    "src/docs/reference/modules/Email/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows"
+  }
+}
