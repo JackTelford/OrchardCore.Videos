@@ -5,7 +5,10 @@
     "The js prefix": "The J.S. prefix",
     "IGlobalMethodProvider": "I Global Method Provider",
     "IScriptingManager": "I Scripting Manager",
-    "uuid": "U.U.I.D."
+    "uuid": "U.U.I.D.",
+    "gzip": "G zip",
+    "base64": "base sixty-four",
+    "html": "H.T.M.L."
   },
   "chapters": [
     {
@@ -36,7 +39,7 @@
           "steps": [
             {
               "id": "run-1",
-              "text": "A script is a string made of a prefix, a colon and the code. The js prefix selects the JavaScript engine, which uses Jint, and the file prefix selects an engine that reads a text file. The Scripting module is always enabled."
+              "text": "A script is a prefix, a colon and the code. The js prefix selects the JavaScript engine, which uses Jint, a JavaScript interpreter for .NET, and the file prefix selects an engine that reads a text file. The Scripting module is always enabled."
             },
             {
               "id": "run-2",
@@ -199,7 +202,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Scripts are strings with a prefix, evaluated by the Scripting module with the methods that modules register. The Scripting page of the documentation lists the methods and the engine options. Thanks for watching."
+              "text": "Scripts are strings with a prefix, evaluated by the Scripting module with the methods that modules register, and the Scripting page of the documentation lists the methods and the engine options. Thanks for watching."
             }
           ]
         }

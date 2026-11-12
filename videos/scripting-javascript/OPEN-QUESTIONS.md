@@ -10,7 +10,8 @@ spelling with `scripts/pronounce.py` before narrating:
 - `uuid` is spoken as "U.U.I.D." (a guess; it could be read as one word).
 - "The js prefix" is spoken as "The J.S. prefix". The step `run-1` is the only one that says "js".
 - `IGlobalMethodProvider` is spoken as "I Global Method Provider" and `IScriptingManager` as "I Scripting Manager".
-- Not in the `"spoken"` map, so check how the voice reads them: "Jint" (steps `run-1`, `limits-1`), "gzip", and the
+- `gzip` is spoken as "G zip", `base64` as "base sixty-four" and `html` as "H.T.M.L." (step `methods-1`); check them too.
+- Not in the `"spoken"` map, so check how the voice reads them: "Jint" (steps `run-1`, `limits-1`), and the
   camel-case names `queryString`, `setVariable`, `setOutcome`, `isAnonymous`, `executeQuery`, `newContentItemAsync`,
   `EnginePoolSize`, `MaxStatements`, `TimeoutInterval` and `LimitMemory`.
 
