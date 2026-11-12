@@ -704,7 +704,7 @@ that shows a key is recorded (`src/docs/reference/modules/AzureAISearch/README.m
    appears (`OrchardCore.Indexing/Controllers/AdminController.cs:257`).
 6. Wait until `curl https://localhost:7443/stats` prints `{"default-blogposts":4}` (the three posts and the post of the
    Blog recipe). The stand-in names the index as the site sends it, which is the full name of the index: the tenant
-   name in lowercase, a hyphen and the "Index Name" (`OrchardCore.AzureAI.Core/Services/AzureAISearchIndexNameProvider.cs:76-81`,
+   name in lowercase, a hyphen and the "Index Name" (`OrchardCore.AzureAI.Core/Services/AzureAISearchIndexNameProvider.cs:23-45`,
    `AzureAISearchIndexNamingHelper.cs` `TryGetSafePrefix`), so `default-blogposts` for the tenant `Default`, not
    `blogposts`. The Indexing Worker runs every minute (`ContentIndexingBackgroundTask.cs`), so wait up to three
    minutes. If the number stays at 0, open the stand-in console: a request that fails there tells why.

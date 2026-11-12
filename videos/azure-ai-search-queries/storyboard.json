@@ -162,7 +162,7 @@
             },
             {
               "id": "run-4",
-              "text": "The API runs a query for a caller whose role holds its Execute Api permission, or one that implies it: Manage queries, or Execute Api for all queries. Here the Anonymous role holds the permission for BlogSearch, so the browser needs no token."
+              "text": "The API runs a query for a caller whose role holds its Execute Api permission, or one that implies it: Manage queries, or Execute Api - All queries. Here the Anonymous role holds the permission for BlogSearch, so the browser needs no token."
             }
           ]
         }

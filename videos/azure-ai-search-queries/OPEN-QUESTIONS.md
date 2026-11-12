@@ -75,7 +75,7 @@ To confirm on the running site:
   "Api Key": `AzureAISearchDefaultSettings.Edit.cshtml:23,33,41,49`, `AzureAISearchDefaultSettingsDisplayDriver.cs:69`)
   before the recording, and do not record that page.
 - The name of the index at the stand-in: the site sends the full name of the index, the tenant name in lowercase, a
-  hyphen and the "Index Name" (`AzureAISearchIndexNameProvider.cs:76-81`), so the stand-in is expected to list
+  hyphen and the "Index Name" (`AzureAISearchIndexNameProvider.cs:23-45`), so the stand-in is expected to list
   `default-blogposts` at `/stats`. This was read in the source, not run: if `/stats` shows another key, the plan's
   wait condition (`{"default-blogposts":4}`) is the only text to change.
 
