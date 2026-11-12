@@ -1,0 +1,56 @@
+{
+  "title": "Navigation in Themes: Render Menus, Breadcrumbs and Pagers | Orchard Core",
+  "description": "A theme decides how an Orchard Core site draws its menus, breadcrumb trails and pagers. The shapes behind them, and the names of their templates, are not obvious from the admin.\n\nThis video renders a menu by its alias, declares a breadcrumb trail with the tag helper, and creates a pager in a controller. It then shows the templates and alternates that draw each of them, so a theme can override them.\n\nIn this video:\n• Navigation shapes: templates and alternates\n• Rendering a menu with the menu tag helper and the shape tag\n• Menu, MenuItem and MenuItemLink templates\n• Breadcrumbs: trails, providers and templates\n• Pagers: page links, slim pagers and page sizes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Theming"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Theme",
+    "Navigation",
+    "Menu",
+    "Breadcrumb",
+    "Pager",
+    "Razor",
+    "Liquid"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Menus and Navigation"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Navigation documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Navigation/"
+    },
+    {
+      "label": "Menu documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Menu/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Navigation/README.md",
+    "src/docs/reference/modules/Menu/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Navigation"
+  }
+}
