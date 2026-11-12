@@ -119,7 +119,7 @@ Starts on `/Admin/Contents/ContentItems`, with the row of **Harvest Festival Can
   *On screen when the narration ends*: the Audit Trail page, the four lines of the article (Published, Published, Published, Created),
   the newest first, each with an event badge, the **Content** category badge, a relative time, the user name `admin`, and a text such
   as "Version N of the Article Harvest Festival Cancelled was published" (the lines of the older versions carry the title that version had,
-  Harvest Festival Schedule); the **View**, **Restore** and **Details** buttons on the lines.
+  Harvest Festival Schedule); the **View** and **Details** buttons on every line, and **Restore** on the two older Published lines only.
   The **Category** drop-down is absent, because the list of one item hides it
   (`src/OrchardCore.Modules/OrchardCore.AuditTrail/Views/AuditTrailAdminListFilters.cshtml:7-10`); the filter row shows **Date**, **Events** and **Sort**
   (`.../Views/AuditTrailAdminListFilters.cshtml:11-15`, filled for a single item by `.../Services/DefaultAuditTrailAdminListQueryService.cs:77-89`).

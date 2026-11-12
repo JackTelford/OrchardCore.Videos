@@ -60,7 +60,7 @@
           "steps": [
             {
               "id": "record-1",
-              "text": "Open Settings, Audit Trail, and select the Content tab. Under Allowed content types, you choose which content types the Audit Trail records. Until you choose at least one, no content events are recorded."
+              "text": "With the Audit Trail feature enabled, open Settings, Audit Trail, and select the Content tab. Under Allowed content types, you choose which content types the Audit Trail records. Until you choose at least one, no content events are recorded."
             },
             {
               "id": "record-2",

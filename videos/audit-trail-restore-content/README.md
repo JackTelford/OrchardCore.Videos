@@ -1,6 +1,6 @@
 # Audit Trail: Compare and Restore Content Versions
 
-**YouTube:** not published yet · **Length:** 4:28 · **Feature:** `OrchardCore.AuditTrail` ([Audit Trail documentation](https://docs.orchardcore.net/en/latest/reference/modules/AuditTrail/))
+**YouTube:** not published yet · **Length:** 4:31 · **Feature:** `OrchardCore.AuditTrail` ([Audit Trail documentation](https://docs.orchardcore.net/en/latest/reference/modules/AuditTrail/))
 
 The Audit Trail keeps a copy of a content item with each recorded event. The video explains what is kept and what limits it,
 shows how to choose the content types to record, and follows one article through its history: finding its events, opening an
