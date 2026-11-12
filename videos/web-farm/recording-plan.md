@@ -243,7 +243,8 @@ Slide steps are drawn by `slides.py`; nothing is recorded for them.
 - `why-1`, `why-2`, `why-3`: four cards, "State that stays on one server": tenant settings, tenant state, Lucene indexes, background tasks. All four bright, then the first two, then the last two.
 - `shared-1`: three cards for the layout of the container: `tenants.json`, the optional `appsettings.json`, and `Sites/Northwind/appsettings.json`.
 - `shared-2`: the host's `Program.cs` with `AddAzureShellsConfiguration`, and the `OrchardCore:Shells:Azure` section of `appsettings.json`.
-- `shared-3`: the `AddDatabaseShellsConfiguration` alternative, and three cards: create the container first, keep it private, `MigrateFromFiles` (a setting of the `OrchardCore:Shells:Azure` section, `BlobShellStorageOptions.MigrateFromFiles`).
+- `shared-3`: three cards: create the container first, keep it private, `MigrateFromFiles` (a setting of the `OrchardCore:Shells:Azure` section, `BlobShellStorageOptions.MigrateFromFiles`).
+- `shared-4`: the `AddDatabaseShellsConfiguration` alternative in `Program.cs`.
 - `redis-1`: the `OrchardCore:Redis:Configuration` setting, and two cards: the same Redis server on every instance, a valid string is required.
 - `how-1`, `how-2`: four cards, "How the instances stay in step"; the first two bright, then the last two.
 - `log-1`, `log-2`, `log-3`: three cards, "Indexing in a web farm": indexing tasks, last task processed, catching up; one bright at a time.

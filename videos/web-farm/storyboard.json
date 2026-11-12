@@ -72,7 +72,11 @@
             },
             {
               "id": "shared-3",
-              "text": "Create the container first, since Orchard Core does not create it, and keep it private: it holds the settings of every tenant. The MigrateFromFiles setting copies the App_Data files the container lacks. A Database Shells Configuration provider stores them in a database."
+              "text": "Create the container first, since Orchard Core does not create it, and keep it private: it holds the settings of every tenant. The MigrateFromFiles setting copies the App_Data files the container lacks."
+            },
+            {
+              "id": "shared-4",
+              "text": "To keep the same settings in a database instead, call Add Database Shells Configuration on the builder."
             }
           ]
         }

@@ -119,12 +119,16 @@ def slide(step_id, chapter_title, label):
 
     if step_id == "shared-3":
         image = slide_base(chapter_title, label, "Before the first start")
-        draw_code(image, (96, 240, 1010, 640), "Program.cs", "csharp", DATABASE_PROGRAM, types=TYPES, size=24)
         note_cards(image, [
             ("Create the container first", "Orchard Core does not create it."),
             ("Keep it private", "It holds the settings of every tenant."),
             ("MigrateFromFiles", "Copies App_Data files the container lacks."),
-        ], (1050, 240, W - 96, 1030))
+        ], (96, 240, W - 96, 1030))
+        return image
+
+    if step_id == "shared-4":
+        image = slide_base(chapter_title, label, "Settings in a database instead")
+        draw_code(image, (96, 240, W - 96, 640), "Program.cs", "csharp", DATABASE_PROGRAM, types=TYPES, size=28)
         return image
 
     if step_id == "redis-1":
