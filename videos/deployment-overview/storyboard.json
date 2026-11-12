@@ -1,0 +1,187 @@
+{
+  "title": "Orchard Core Deployment",
+  "output": "deployment-overview",
+  "spoken": {
+    "PageSize": "Page size"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Deployment",
+      "subtitle": "Move configuration and content between sites",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site is often built in one place and run in another. The Deployment module moves configuration and content between Orchard Core sites. In this video, you build a deployment plan, export a package, and import it on a second site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why deployment",
+      "subtitle": "The work you repeat by hand",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "You shape a site on one copy, with content types, settings, and pages. When that work is ready, a second site needs the same result. Repeating every change by hand takes time, and a forgotten setting makes the two sites differ."
+            },
+            {
+              "id": "why-2",
+              "text": "The Deployment module carries that work in a package. You describe what to include in a deployment plan, run the plan to produce the package, and import the package on the other site."
+            },
+            {
+              "id": "why-3",
+              "text": "A package is a zip file that holds a recipe. A recipe is a list of steps, and the destination site runs them in order when you import the package."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Find the module",
+      "subtitle": "Features and the Tools menu",
+      "clips": [
+        {
+          "id": "02-find",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "Deployment is a feature, listed under Tools, Features. Let's search for Deployment, which shows as Enabled. The Blog recipe enables it, and on a site where it is disabled, an Enable button turns it on."
+            },
+            {
+              "id": "find-2",
+              "text": "The Tools, Deployments menu lists Plans, which builds and runs plans, Package Import, which brings in a package, and JSON Import, which runs a recipe that you enter in an editor. Remote Instances and Remote Clients belong to Remote Deployment, which a separate video covers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Build and run a plan",
+      "subtitle": "Export from the source site",
+      "short": "build-a-plan",
+      "clips": [
+        {
+          "id": "03-plan",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "plan-1",
+              "text": "This is the source site. Under Settings, General, the Page size is 25. A second site, the staging site, uses a different value, so let's move this setting with a deployment plan."
+            },
+            {
+              "id": "plan-2",
+              "text": "The Plans page lists the deployment plans of the site, and this site has none. A plan is a named list of steps, so let's select Add Deployment Plan."
+            },
+            {
+              "id": "plan-3",
+              "text": "A plan needs a name. Let's type Staging Setup and select Create, and the plan opens with no steps in it."
+            },
+            {
+              "id": "plan-4",
+              "text": "Add Step opens the Available Steps list. Categories on the left group the steps, such as Configuration, Content Management, and Deployment, and each card describes its step."
+            },
+            {
+              "id": "plan-5",
+              "text": "Modules that export data add their own steps, so the list depends on the enabled features. Let's choose the Configuration category and select Add on the Site Settings card."
+            },
+            {
+              "id": "plan-6",
+              "text": "The editor lists the site settings, each with a check box. Let's check PageSize and select Create. The plan shows the step, with PageSize as the setting it exports."
+            },
+            {
+              "id": "plan-7",
+              "text": "Execute opens the Available Targets list. The Deployment module provides File Download, and Remote Deployment adds a target for each remote instance. Let's select File Download."
+            },
+            {
+              "id": "plan-8",
+              "text": "The browser downloads a zip file named after the plan. It holds the recipe that the steps of the plan produced, so it is ready to import on another site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Import the package",
+      "subtitle": "On the staging site",
+      "short": "import-a-package",
+      "clips": [
+        {
+          "id": "04-import",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "import-1",
+              "text": "This is the staging site, a second Orchard Core site with the Deployment feature enabled. Under Settings, General, its Page size is 10. Let's import the package here."
+            },
+            {
+              "id": "import-2",
+              "text": "Under Tools, Deployments, let's open Package Import. The Select a file field accepts a zip package or a recipe file, so let's choose the zip file that the plan produced."
+            },
+            {
+              "id": "import-3",
+              "text": "Selecting Import runs the package right away, and the site runs the steps of the recipe in order. The page then shows the message Deployment package imported."
+            },
+            {
+              "id": "import-4",
+              "text": "Back under Settings, General, the Page size is 25, the value that the plan exported from the source site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Permissions",
+      "subtitle": "Who can plan, export, and import",
+      "short": "permissions",
+      "clips": [
+        {
+          "id": "05-permissions",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "The Deployment module defines three permissions: Manage deployment plans covers creating and editing plans and their steps, Export Data covers running a plan, and Import Data covers both import pages. The Plans page needs the first two, and administrators have all three."
+            },
+            {
+              "id": "perm-2",
+              "text": "When you edit a role, Import Data carries a Security Critical badge. A recipe can change settings, features, content definitions, and content, so grant the permission only to roles you trust, and import only packages from sources you trust."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Deployment",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Deployment moves configuration and content between sites: build a plan, export a package, and import it. Separate videos cover plans, imports, and remote deployment in detail. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
