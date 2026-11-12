@@ -1,0 +1,54 @@
+{
+  "title": "Content Parts: Create Reusable Groups of Fields | Orchard Core",
+  "description": "Repeating the same group of fields on every content type takes time, and the copies drift apart. A postal address, with a street, a city and a postal code, is a typical case: a customer needs one for billing and another for shipping.\n\nA content part holds a group of fields that you define once. Any content type can attach it, and a part marked Reusable can be attached several times to the same type, each time under its own name, with its own values.\n\nIn this video:\n• What a content part is, and what Attachable and Reusable mean\n• Creating a part on the Content Parts page\n• Setting the display name, the description, Attachable and Reusable\n• Adding Text Fields to the part\n• Attaching the part twice to a type with Add Named Part\n• Filling in a content item with two groups of the same fields",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "content parts",
+    "content types",
+    "content modeling",
+    "reusable parts",
+    "named parts"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Types"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Content Types",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/"
+    },
+    {
+      "label": "Documentation: Content Parts",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentParts/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentTypes/README.md",
+    "src/docs/reference/modules/ContentParts/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentTypes"
+  }
+}
