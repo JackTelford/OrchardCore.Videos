@@ -1,0 +1,198 @@
+{
+  "title": "The Orchard Core Health Checks module",
+  "output": "health-checks",
+  "spoken": {
+    "/health/live": "slash health slash live",
+    "IHealthCheck": "I Health Check",
+    "CheckHealthAsync": "Check Health Async",
+    "AddHealthChecks": "Add Health Checks",
+    "AddCheck": "Add Check",
+    "RequireFeatures": "Require Features",
+    "ShowDetails": "Show Details",
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Health Checks module",
+      "subtitle": "Let your host know the site is up",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Load balancers, container platforms, and uptime monitors ask whether a site is running. The Health Checks module answers them with an endpoint in each tenant that enables it. In this video, we'll enable it, add checks, read the responses, and see who may call it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why the Health Checks module",
+      "subtitle": "A question every host asks",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Each of these hosts sends a probe request to the site. ASP.NET Core has health checks to answer it, and the Health Checks module exposes them through an endpoint of each tenant."
+            },
+            {
+              "id": "why-2",
+              "text": "The module registers the endpoint and a response writer, but no check of its own. With no check registered, the endpoint reports the tenant as healthy. It has no administration pages and no site settings."
+            },
+            {
+              "id": "why-3",
+              "text": "Only a tenant that enables the feature exposes the endpoint. A probe uses the host and the URL prefix of that tenant, in front of the route, as the three addresses on screen show."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the endpoint",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's enable it. Under Tools, Features, we search for Health Checks and select Enable. A message confirms that the feature was enabled."
+            },
+            {
+              "id": "enable-2",
+              "text": "The endpoint answers at /health/live. Let's open it. The page shows Healthy, because no feature has registered a check."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add checks",
+      "subtitle": "From Orchard Core features and from your own code",
+      "clips": [
+        {
+          "id": "03-checks",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "checks-1",
+              "text": "Features of Orchard Core can contribute checks. Redis Health Check pings the Redis server, and SMS Health Check validates the Twilio credentials. Each is registered only when its feature and Health Checks are both enabled."
+            },
+            {
+              "id": "checks-2",
+              "text": "A check of your own implements IHealthCheck. Its CheckHealthAsync method returns a Healthy, Degraded, or Unhealthy result, with an optional description."
+            },
+            {
+              "id": "checks-3",
+              "text": "A startup class registers it with AddHealthChecks and AddCheck. RequireFeatures loads that class only when Health Checks is enabled. Alternatively, make Health Checks a dependency of your feature, so enabling yours enables the endpoint."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Read the responses",
+      "subtitle": "Compact, detailed, and how to configure them",
+      "clips": [
+        {
+          "id": "04-responses",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "resp-1",
+              "text": "By default the response is compact: the aggregate status as plain text. Healthy and Degraded return 200 OK, and Unhealthy returns 503 Service Unavailable, so a monitor can rely on the status code."
+            },
+            {
+              "id": "resp-2",
+              "text": "With ShowDetails set to true, the response is JSON: the status, the duration, and the name, status, and description of every check. All three statuses return 200 OK, so the monitor reads the Status property."
+            },
+            {
+              "id": "resp-3",
+              "text": "The Url setting is the route, and ShowDetails picks the response. Set them in the Health Checks configuration section or in environment variables, with a tenant name in the key to target one tenant. Reload the tenant or restart the application after a change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "See a check fail",
+      "subtitle": "Redis without a server",
+      "clips": [
+        {
+          "id": "05-compact",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "fail-1",
+              "text": "To see a check report a problem, let's enable the Redis feature without configuring a server. Its Redis Health Check is registered, and it cannot connect."
+            },
+            {
+              "id": "fail-2",
+              "text": "Opening /health/live again shows Unhealthy. The status code is 503 Service Unavailable, which is how a monitor sees the failure."
+            }
+          ]
+        },
+        {
+          "id": "05-detailed",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "detail-1",
+              "text": "With ShowDetails set to true, the same address returns JSON. The Status is Unhealthy, and the Redis Health Check entry describes the failed connection. The HTTP status is 200 OK all the same."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Monitoring and security",
+      "subtitle": "Who may call the endpoint",
+      "clips": [
+        {
+          "id": "06-security",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sec-1",
+              "text": "The endpoint does not require authentication, and detailed descriptions can reveal the names of your dependencies. Restrict the endpoint to trusted monitors with a network policy or a reverse proxy, and enable ShowDetails only after that."
+            },
+            {
+              "id": "sec-2",
+              "text": "One endpoint runs every registered check, and the module does not use tags to separate liveness from readiness. For that, add filtered endpoints in your own code. A Rate Limits endpoint policy can limit repeated probes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Health Checks module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Health Checks module gives each tenant that enables it one endpoint that runs every registered check and reports the result. Enable it, register your checks, and point your monitor at the address. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
