@@ -1,0 +1,52 @@
+{
+  "title": "Permissions: Declare Them and Check Them in Your Module | Orchard Core",
+  "description": "A module that offers an action to some users and not to others needs its own permissions: a name for each right, a way for roles to hold it, and a check in the code that enforces it.\n\nThis video declares a permission with a name and a description, lists it in an IPermissionProvider, shows how the roles editor displays permissions, and checks it with IAuthorizationService in a controller, a view and a menu.\n\nIn this video:\n• What a permission is, and how roles and users hold it\n• Declaring a permission: name, description, translation, security critical, implied by, category\n• Providing permissions with IPermissionProvider, default roles, registration and recipes\n• How the roles editor displays permissions\n• Checking a permission in a controller, a view and a menu item",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Permissions",
+    "Roles",
+    "Authorization",
+    "Module development"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Roles",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Roles/"
+    },
+    {
+      "label": "Documentation: Permissions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Roles/README.md",
+    "src/docs/reference/modules/Security/Permissions.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Roles"
+  }
+}
