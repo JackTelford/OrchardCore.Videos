@@ -1,0 +1,181 @@
+{
+  "title": "Data Pipelines and Workflows",
+  "output": "data-pipelines-workflows",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Data Pipelines and Workflows",
+      "subtitle": "Run a pipeline from a workflow, and react when a run ends",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A data pipeline can run on its own, started by a workflow. In this video, you create a workflow that runs a pipeline when a blog post is published, and a second workflow that reacts when a run fails."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Pipelines and workflows",
+      "subtitle": "How a workflow runs a pipeline",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "concept-1",
+              "text": "In the list of pipelines, the Actions menu starts a pipeline by hand. A workflow can start it when something happens, such as a content item being published, or at set times, and it can react to the result."
+            },
+            {
+              "id": "concept-2",
+              "text": "When the Workflows feature is enabled, the Data Pipelines feature adds two activities, in the Data category. The Run Data Pipeline Task queues a run, and the Data Pipeline Run Completed Event starts a workflow when a run ends."
+            },
+            {
+              "id": "concept-3",
+              "text": "A run executes the published version of the pipeline, in the background, with the access of the user who published it. A pipeline that is disabled, or was never published, does not run."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Run a pipeline from a workflow",
+      "subtitle": "Start it when a blog post is published",
+      "clips": [
+        {
+          "id": "02-build",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "Workflows are under Design, Workflows. Select Create Workflow, and give the workflow a name that says what it does. The other settings have defaults."
+            },
+            {
+              "id": "build-2",
+              "text": "Create and open the designer opens an empty workflow. A workflow runs when something happens, so it starts with an event. Let's choose Content Published Event."
+            },
+            {
+              "id": "build-3",
+              "text": "The Content Types box limits the event to the types you choose. Left empty, it runs for any content type. The Start badge marks the activity that starts the workflow."
+            },
+            {
+              "id": "build-4",
+              "text": "Select the Done outcome to add the next activity. Search for pipeline, and pick Run Data Pipeline Task, from the Data category."
+            },
+            {
+              "id": "build-5",
+              "text": "Data pipeline lists the pipelines of the site. Choose Blog posts export, which saves the blog posts as a CSV file in the media library. The task runs the published version, so publish a pipeline again after you change it."
+            },
+            {
+              "id": "build-6",
+              "text": "Parameters passes values to the run, one name and value per line, for the steps of the pipeline to use. We leave it empty."
+            },
+            {
+              "id": "build-7",
+              "text": "Wait for the run to end is checked, so the workflow halts until the run ends, then follows the Succeeded or Failed outcome. Unchecked, the task continues at once with Queued. Skip when a run is already queued or running adds Skipped."
+            },
+            {
+              "id": "build-8",
+              "text": "The designer saves a draft as you work, and a draft does not run. Publish makes the draft the version that runs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Run it and read the result",
+      "subtitle": "Run History and the details of a run",
+      "clips": [
+        {
+          "id": "03-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Let's publish a blog post. In Content Items, open the post, and select Publish. The Content Published Event starts the workflow, and the workflow queues the run."
+            },
+            {
+              "id": "run-2",
+              "text": "Under Tools, Data Pipelines, Run History, the run is listed with the Succeeded status. Its last badge shows what started it: Workflow."
+            },
+            {
+              "id": "run-3",
+              "text": "Details lists each step with the rows it read and wrote. Under Delivered, the run reports the file it saved to the media library."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "React when a run ends",
+      "subtitle": "A second workflow for the runs that fail",
+      "clips": [
+        {
+          "id": "04-react",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "react-1",
+              "text": "The outcomes of the task cover only the runs that the first workflow starts. To react to any run, including one started by hand, create a second workflow, in the same way, under Design, Workflows."
+            },
+            {
+              "id": "react-2",
+              "text": "In the Activities pane, search for pipeline, and click Data Pipeline Run Completed. This event starts the workflow when a run of a data pipeline ends."
+            },
+            {
+              "id": "react-3",
+              "text": "Data pipeline can be one pipeline, or Any data pipeline. Runs offers Every run, Runs that succeeded, and Runs that failed or were cancelled. Let's choose the failed runs."
+            },
+            {
+              "id": "react-4",
+              "text": "Any activity can follow the event, such as one that sends an email. Let's add a Log Task: set Log Level to Error, and Text to a sentence that says a run failed."
+            },
+            {
+              "id": "react-5",
+              "text": "Publish the workflow so that it reacts when a run ends. Then let's run Blog posts by email, a pipeline that sends the file by email."
+            },
+            {
+              "id": "react-6",
+              "text": "In the list of pipelines, open the Actions menu of Blog posts by email, and run it. The site has no email settings, so the run fails."
+            },
+            {
+              "id": "react-7",
+              "text": "Under Run History, the run is Failed, and its error says why."
+            },
+            {
+              "id": "react-8",
+              "text": "Under Design, Workflows, Instances, both workflows have an instance, and both are Finished. The second one started when the failed run ended."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Data Pipelines and Workflows",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Run Data Pipeline Task starts a run and follows its outcome, and the Data Pipeline Run Completed Event reacts when any run ends. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

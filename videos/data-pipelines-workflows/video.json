@@ -1,0 +1,59 @@
+{
+  "title": "Data Pipelines and Workflows: Run a Pipeline From a Workflow | Orchard Core",
+  "description": "A data pipeline reads, transforms and delivers data, but something has to start it. Starting it by hand does not help when the data must be exported each time content is published, or when a failed run must not go unnoticed.\n\nThe Data Pipelines feature adds two activities to Workflows: the Run Data Pipeline Task, which queues a run of a published pipeline and can wait for it to end, and the Data Pipeline Run Completed Event, which starts a workflow when a run ends.\n\nIn this video:\n• How a workflow runs a pipeline, and what a run uses\n• Run a pipeline from a workflow when a blog post is published\n• Run it, and read the result in Run History\n• React when a run ends, with a second workflow for the runs that fail",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "DataPipelines",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Data Pipelines",
+    "Workflows",
+    "Automation",
+    "ETL"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Data Pipelines"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Data Pipelines",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/"
+    },
+    {
+      "label": "Documentation: Data Sources",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataSources/"
+    },
+    {
+      "label": "Documentation: Workflows",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DataPipelines/README.md",
+    "src/docs/reference/modules/DataSources/README.md",
+    "src/docs/reference/modules/Workflows/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataPipelines"
+  }
+}
