@@ -90,7 +90,7 @@ RELOAD_NOTES = [
 ]
 
 WHERE_READ = [
-    ("1", "Sources registered before the call", "appsettings.json, environment variables, user secrets and others."),
+    ("1", "Sources registered before the call", "On builder.Configuration: appsettings.json, environment variables, user secrets and others."),
     ("2", "The application configuration only", "The settings are not read from the configuration of a tenant."),
     ("3", "Neither a name nor an address", "The call throws an exception that names the missing setting."),
 ]

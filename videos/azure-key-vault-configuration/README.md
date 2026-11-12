@@ -1,6 +1,6 @@
 # Azure Key Vault Configuration: Keep Settings Out of Files
 
-**YouTube:** not published yet · **Length:** 3:52 · **Feature:** `OrchardCore.Configuration.KeyVault` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/KeyVault.Azure/))
+**YouTube:** not published yet · **Length:** 3:51 · **Feature:** `OrchardCore.Configuration.KeyVault` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/KeyVault.Azure/))
 
 The Azure Key Vault configuration provider reads the secrets of a vault into the application configuration, so the
 settings of an Orchard Core site, such as a connection string, can stay out of `appsettings.json` files and environment

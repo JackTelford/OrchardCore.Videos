@@ -72,7 +72,7 @@
             },
             {
               "id": "host-2",
-              "text": "The method also extends the host builder and the web host builder, so it fits the Generic Host that the documentation shows. All three add the vault the same way, and all three accept an optional token credential."
+              "text": "The method also extends the host builder and the web host builder, so it fits the Generic Host that the documentation shows. All three accept an optional token credential."
             }
           ]
         }
@@ -93,7 +93,7 @@
             },
             {
               "id": "config-2",
-              "text": "The call reads these settings from the sources registered before it, such as appsettings.json or environment variables, and not from a tenant. With neither a name nor an address, it throws an exception that names the missing setting."
+              "text": "On the configuration of the builder, the call reads these settings from the sources registered before it, such as appsettings.json or environment variables, and not from a tenant. With neither a name nor an address, it throws an exception that names the missing setting."
             },
             {
               "id": "config-3",

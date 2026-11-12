@@ -108,3 +108,16 @@ The entries are ordered from the longest to the shortest, since `narrate.py` rep
 U.R.I.`, `app settings dot JSON` and `Orchard Core dot Configuration dot Key Vault` are not in the worked example. The
 narration also contains "Generic Host" and the name of the Azure Key Vault service: check that the voice says them
 naturally. No audio was generated.
+
+## 9. Which configuration the host-builder overloads read
+
+- **Checked:** all three overloads call the same private method with a configuration to read `OrchardCore:KeyVault:Azure`
+  from. The `ConfigurationManager` overload passes the manager itself, so it sees the providers already added to
+  `builder.Configuration` (`AzureKeyVaultConfigurationExtension.cs:63`). The `IHostBuilder` and `IWebHostBuilder` overloads pass
+  `context.Configuration` inside `ConfigureAppConfiguration` (`:29`, `:47`), and a source comment says it holds the providers
+  already added.
+- **Left out:** the narration says the settings come from `appsettings.json` or environment variables only for the
+  configuration of the builder. For the Generic Host, what `context.Configuration` holds at that point (the host configuration or
+  the application configuration so far) is behavior of the .NET host, not of this source.
+- **To confirm:** with `Host.CreateDefaultBuilder(args).AddOrchardCoreAzureKeyVault()`, put `KeyVaultName` in `appsettings.json`
+  and see whether it is found; if not, say where to put it for that overload.
