@@ -37,7 +37,7 @@ WHERE = [
 # Launching the site.
 LAUNCH = [
     ("1", "Open the content item", "The one that is to be your home page. It needs a permalink."),
-    ("2", "Check Set as homepage", "The option is under Permalink."),
+    ("2", "Check Set as homepage", "Under Permalink, if the type shows homepage options."),
     ("3", "Publish it", "The item becomes the home page of the site."),
 ]
 

@@ -168,7 +168,7 @@
           "steps": [
             {
               "id": "launch-1",
-              "text": "When the real site is ready, open the content item that is to be your home page. Under its Permalink, check Set as homepage, then publish it. The item needs a permalink for this to work."
+              "text": "When the real site is ready, open the item that is to be your home page. Under its Permalink, check Set as homepage, then publish it. The item needs a permalink, and its content type must have Show homepage options checked in its Autoroute settings."
             }
           ]
         },

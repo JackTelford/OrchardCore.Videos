@@ -60,7 +60,7 @@ narration as a fact beyond what the source shows.
    section, publish. In the source the checkbox appears only if the type's Autoroute settings show the homepage
    option and the user has the permission `SetHomepage` (`AutoroutePart.Edit.cshtml:56`), and a homepage is set at
    publish only if the item's Permalink is not empty (`AutoroutePartHandler.cs:82`). The Coming Soon recipe has no
-   other content type; confirm the steps on a type created in a sibling video of the series (for example a page type
+   other content type; the narration of `launch-1` names the condition (Show homepage options in the type's Autoroute settings, default off, `AutoroutePartSettings.Edit.cshtml:45`); confirm the steps on a type created in a sibling video of the series (for example a page type
    with an Autoroute pattern).
 9. **Cache.** The recipe enables Dynamic Cache. Confirm the front end shows the published message and button label
    right after `edit-5` without a restart.

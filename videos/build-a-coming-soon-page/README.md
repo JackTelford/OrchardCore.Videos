@@ -1,6 +1,6 @@
 # Launch a Coming Soon Page While You Build Your Site
 
-**YouTube:** not published yet · **Length:** 4:01 · **Feature:** TheComingSoonTheme ([Starter Recipes](https://docs.orchardcore.net/en/latest/getting-started/starter-recipes/))
+**YouTube:** not published yet · **Length:** 4:04 · **Feature:** TheComingSoonTheme ([Starter Recipes](https://docs.orchardcore.net/en/latest/getting-started/starter-recipes/))
 
 A site that is still being built can start with a Coming Soon page: a message with a launch date, a field for an
 email address and social icons. The video shows why such a page helps, how to choose the Coming Soon recipe on the

@@ -94,7 +94,8 @@ Clip `06-theme` and the slide clips do not depend on `04-edit`.
   (`OrchardCore.Email.Smtp/Manifest.cs`) is enabled under Tools, Features, and its settings appear on the Email
   settings page (`OrchardCore.Email.Smtp/Drivers/SmtpSettingsDisplayDriver.cs:35,88`).
 - `launch-1`: slide "Make another page the home page", three numbered cards: open the content item (it needs a
-  permalink), check Set as homepage (the option is under Permalink), publish it. A homepage is set at publish only
+  permalink), check Set as homepage (the option is under Permalink, and appears only when the content type's Autoroute settings have
+  "Show homepage options" checked, `AutoroutePart.Edit.cshtml:56`, `AutoroutePartSettings.Edit.cshtml:45`), publish it. A homepage is set at publish only
   when the item's path is not empty (`OrchardCore.Autoroute/Handlers/AutoroutePartHandler.cs:82`). The labels come from
   `OrchardCore.Autoroute/Views/AutoroutePart.Edit.cshtml:30` and `:72`.
 
