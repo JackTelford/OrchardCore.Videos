@@ -1,0 +1,50 @@
+{
+  "title": "OpenID Connect: Orchard Core as an Identity Provider | Orchard Core",
+  "description": "When several applications each keep their own accounts and passwords, people sign in again and again, and access has to be managed in every one of them.\n\nThe OpenID Connect module turns Orchard Core into an identity provider. People sign in with their Orchard Core user accounts, and applications receive tokens that say who they are and what they may do. The module can also check tokens for the API of your site, and let people sign in to your site through another identity provider.\n\nIn this video:\n• Why an identity provider\n• How a sign-in works\n• The features of the OpenID Connect module\n• Enabling the authorization server\n• The admin pages: settings, applications and scopes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "OpenIDConnect"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "OpenID Connect",
+    "OAuth",
+    "Identity provider",
+    "Authorization server",
+    "Authentication",
+    "Tokens"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "OpenID Connect"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenId/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/OpenId/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenId"
+  }
+}
