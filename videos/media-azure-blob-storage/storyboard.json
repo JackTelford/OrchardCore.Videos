@@ -1,0 +1,247 @@
+{
+  "title": "Azure Media Storage: Keep Media in Azure Blob Storage",
+  "output": "media-azure-blob-storage",
+  "spoken": {
+    "IMediaFileStore": "I Media File Store",
+    "IResizedImageCache": "I Resized Image Cache",
+    "App_Data": "App Data",
+    "UseHierarchicalNamespace": "Use Hierarchical Namespace",
+    "ImageCache": "Image Cache",
+    "OrchardCore": "Orchard Core"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Azure Media Storage",
+      "subtitle": "Keep media in Azure Blob Storage",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "By default, Orchard Core keeps uploaded media in the App_Data folder. The Azure Media Storage feature keeps it in an Azure Blob Storage container instead. In this video, you configure the connection, enable the features, and follow an uploaded file to the browser."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why Azure Blob Storage",
+      "subtitle": "Media that does not live on the web server",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Containers and clean deployments can remove the files on the local disk of a web server, and several instances of a site need the same media. Azure Blob Storage keeps the files outside the web server."
+            },
+            {
+              "id": "why-2",
+              "text": "The Azure Media module has two features. Azure Media Storage keeps the media files in a blob container, and Azure Media Image Cache keeps resized copies of images there. A third entry, marked Obsolete, is kept for backwards compatibility."
+            },
+            {
+              "id": "why-3",
+              "text": "The site serves every file. A request reaches Orchard Core, which reads the blob from the container into a local cache folder when no copy exists, and sends it. Asset URLs do not point to the storage account."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Connect a storage account",
+      "subtitle": "Settings in the configuration",
+      "clips": [
+        {
+          "id": "02-configure",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "conf-1",
+              "text": "Azure Media Storage reads the OrchardCore, Media, Azure section of the configuration. Set a connection string and a container name that follows the Azure naming rules. If either is missing, the feature stays inactive and logs an error."
+            },
+            {
+              "id": "conf-2",
+              "text": "Base Path stores the media in a subdirectory of the container. Create Container, true by default, creates the container at startup, without public access, if it does not exist."
+            },
+            {
+              "id": "conf-3",
+              "text": "Keep the connection string out of source control. An environment variable overrides the application's configuration file, and two underscores separate each level of the setting's path."
+            },
+            {
+              "id": "conf-4",
+              "text": "To try this without an Azure account, run the Azurite emulator in a container, using the image that the Azurite documentation names, and use development storage as the connection string."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features, and the options pages",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "In the admin, open Tools, Features, and search for Azure Media. The features of the module are listed under the Hosting category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Enable Azure Media Storage. The Media Cache feature it depends on is enabled with it, and from then on the media store is the container."
+            }
+          ]
+        },
+        {
+          "id": "03-check",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "Settings, Media, Azure Blob Options shows what the feature read. The connection string appears only as Configured, and the container name, base path, and check boxes are read-only, because they come from the configuration."
+            },
+            {
+              "id": "check-2",
+              "text": "Settings, Media, Options confirms the active store. Storage provider reads Azure Blob, Gen1, and Hierarchical namespace and Atomic move show crosses, so the store uses flat-namespace operations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Upload and serve a file",
+      "subtitle": "From the library to the browser",
+      "clips": [
+        {
+          "id": "04-serve",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "serve-1",
+              "text": "Open Media, Library. The root folder is empty, because files that were already in the App_Data folder are not copied to the container."
+            },
+            {
+              "id": "serve-2",
+              "text": "Choose Upload files, and select the picture that the home page uses as its banner. The site writes it to the container as a blob, with a content type taken from the file extension."
+            },
+            {
+              "id": "serve-3",
+              "text": "Open the file. Its address begins with the media path of your site, not with the address of the storage account. When a request finds no local copy, the site copies the blob into a cache folder that Settings, Media, Cache can purge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What the feature registers",
+      "subtitle": "The services behind the settings",
+      "clips": [
+        {
+          "id": "05-services",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "svc-1",
+              "text": "The feature switches the media services to the container only when the connection string and container name are set. It replaces IMediaFileStore with a store over a Blob File Store, and serves files from a cache folder under the web root."
+            },
+            {
+              "id": "svc-2",
+              "text": "When Media TUS Uploads is enabled, a second startup class replaces the temporary store for resumable uploads, so partial uploads are staged in the same container."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Cache resized images",
+      "subtitle": "Azure Media Image Cache",
+      "clips": [
+        {
+          "id": "06-cache-setup",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cache-1",
+              "text": "Azure Media Image Cache has its own ImageCache section inside the Azure section, with its own connection string, container name, and base path, so the resized images can live in another container."
+            },
+            {
+              "id": "cache-2",
+              "text": "It replaces IResizedImageCache with a blob-backed one. Resized images then persist when the local disk of the web server is replaced, and that disk is spared the reads and writes."
+            }
+          ]
+        },
+        {
+          "id": "06-cache",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cache-3",
+              "text": "Enable Azure Media Image Cache in Tools, Features. It depends only on the Media feature, so it can be enabled without Azure Media Storage."
+            },
+            {
+              "id": "cache-4",
+              "text": "Open the home page. Its banner is the uploaded picture, resized by the banner media profile. The first request resizes it and writes the result to the cache container, and later requests read it from there."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Tenants and storage accounts",
+      "subtitle": "Containers, removal, and Gen2",
+      "clips": [
+        {
+          "id": "07-tenants",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tenant-1",
+              "text": "Container Name and Base Path accept Liquid. Use the name of the tenant to give each tenant its own container, or its own folder in a shared container. Only the default Liquid filters and tags are available."
+            },
+            {
+              "id": "tenant-2",
+              "text": "By default, removing a tenant leaves the container alone. Remove Container deletes it, and Remove Files From Base Path deletes only the files under the base path, and only when Remove Container is off. The image cache has Remove Container only."
+            },
+            {
+              "id": "tenant-3",
+              "text": "A Gen2 account has a hierarchical namespace. The store detects it at startup, and then uses real directories and atomic moves. On a flat Gen1 account, a folder exists as a marker file inside it, which listings hide."
+            },
+            {
+              "id": "tenant-4",
+              "text": "Detection needs permissions on the storage account. With a shared access signature scoped to one container, set UseHierarchicalNamespace yourself, to true for Gen2 or false for Gen1. The Media Library warns when the account is Gen2."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Azure Media Storage",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is Azure Media Storage: media files in a blob container, resized images in another, and settings for each tenant. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

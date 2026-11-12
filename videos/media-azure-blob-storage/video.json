@@ -1,0 +1,48 @@
+{
+  "title": "Azure Media Storage: Keep Media in Azure Blob Storage | Orchard Core",
+  "description": "By default, Orchard Core keeps uploaded media on the local disk of the web server, where containers, clean deployments, and several instances of the same site get in the way.\n\nThe Azure Media Storage feature keeps the media files in an Azure Blob Storage container, and the Azure Media Image Cache feature keeps the resized copies of images there too. The site serves every file.\n\nIn this video:\n• Why Azure Blob Storage\n• Connect a storage account: the configuration, environment variables, and the Azurite emulator\n• Enable the feature, and check the options pages\n• Upload and serve a file\n• What the feature registers\n• Cache resized images\n• Tenants and storage accounts: a container per tenant, tenant removal, and Gen2 accounts",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Azure"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Azure",
+    "Azure Blob Storage",
+    "Media",
+    "Azurite"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Azure/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media.Azure/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media.Azure.Storage"
+  }
+}
