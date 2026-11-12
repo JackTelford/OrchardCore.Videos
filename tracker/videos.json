@@ -3119,9 +3119,9 @@
       "src/docs/reference/modules/SQLIndexing/README.md",
       "src/docs/reference/modules/ContentFields/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.7,
+    "words": 701,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

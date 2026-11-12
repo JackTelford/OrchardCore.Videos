@@ -1,0 +1,55 @@
+{
+  "title": "Content Fields Indexing: Query Fields With SQL | Orchard Core",
+  "description": "The values of content fields are stored inside each content item, not in database columns of their own.\n\nThe Content Fields Indexing (SQL) features copy field values into database tables, one for each indexed field type, so you can query them with SQL, with code, and in GraphQL.\n\nIn this video:\n• Why field values need an index\n• Enabling Content Fields Indexing (SQL) and its User Picker feature\n• The tables: shared columns, value columns, rows for each value, and versions\n• Running a SQL query on a field table\n• Querying the tables with ISession, Razor and Liquid\n• Filtering content items in GraphQL",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "SQL",
+    "GraphQL"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Content Fields",
+    "SQL indexing",
+    "SQL queries",
+    "GraphQL",
+    "ISession"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Queries"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: SQL Indexing",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/SQLIndexing/"
+    },
+    {
+      "label": "Documentation: Content Fields",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentFields/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/SQLIndexing/README.md",
+    "src/docs/reference/modules/ContentFields/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentFields.Indexing.SQL"
+  }
+}
