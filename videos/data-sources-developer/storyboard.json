@@ -1,0 +1,224 @@
+{
+  "title": "Orchard Core Data Sources",
+  "output": "data-sources-developer",
+  "spoken": {
+    "IDataAggregateSource": "I Data Aggregate Source",
+    "IDataSource": "I Data Source",
+    "RecordDataSource": "Record Data Source",
+    "RecordDataSet": "Record Data Set",
+    "AddDataSource": "Add Data Source",
+    "AddField": "Add Field",
+    "IsIdentifier": "Is Identifier",
+    "IsKeyFilterable": "Is Key Filterable",
+    "CanReadAsync": "Can Read Async",
+    "LoadAsync": "Load Async",
+    "GetDataSetsAsync": "Get Data Sets Async",
+    "GetSchemaAsync": "Get Schema Async",
+    "ReadAsync": "Read Async",
+    "DataConditions": "Data Conditions",
+    "OnSucceeded": "On Succeeded",
+    "ConsumerId": "Consumer Id"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Data Sources",
+      "subtitle": "Expose your module's data to pipelines",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Data pipelines read their rows from data sources. Your own module can add one, so that its records appear next to the content items and the users of a site. This video builds a data source for a help desk module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a data source is",
+      "subtitle": "Data sets, fields and batches",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "concept-1",
+              "text": "A data source connects one place where data lives, such as the content items of a site, its users, or the records of your module. It has a technical name, a label, and a description."
+            },
+            {
+              "id": "concept-2",
+              "text": "A data source exposes data sets. A data set is one table, such as the content items of one content type. Its fields have a name, a label, and a type: Text, Integer, Decimal, Boolean, Date, or DateTime."
+            },
+            {
+              "id": "concept-3",
+              "text": "Rows are read one batch at a time, 500 by default, so a consumer can read any number of rows without holding them all in memory. And data is read for a user, who sees only the data sets they may read."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "What consumers see",
+      "subtitle": "The data set dialog of the pipeline designer",
+      "clips": [
+        {
+          "id": "02-consume",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "consume-1",
+              "text": "The Data Pipelines designer is one consumer of data sources. Its Add a data source button opens a dialog that lists the data sets of every registered data source, for the current user."
+            },
+            {
+              "id": "consume-2",
+              "text": "Let's choose the Users data source in the list on the left, to see only its cards. Each card is a data set, with its label, its description, and the name of its data source."
+            },
+            {
+              "id": "consume-3",
+              "text": "The Users data source is registered the same way you will register yours. It lists its data sets only to users who may view users. Add puts a Read a data source step on the canvas."
+            },
+            {
+              "id": "consume-4",
+              "text": "The Fields tab shows what the step produces. Each field has its label from the schema, its technical name in brackets, and its type."
+            },
+            {
+              "id": "consume-5",
+              "text": "On the Data tab, Preview reads the first rows through the data source, for the user who previews. Each column header is a field label, with the field type under it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Build a data source",
+      "subtitle": "A record, a data set and its access",
+      "clips": [
+        {
+          "id": "03-build",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "A module that adds a data source depends on the Data Pipelines Core feature. That feature is enabled only as a dependency, so enabling your module enables it too."
+            },
+            {
+              "id": "build-2",
+              "text": "The simplest data source derives from RecordDataSource and declares IDataSource. The static Name, DisplayName, and Description describe it, and each data set is a RecordDataSet over a .NET type, here a ticket."
+            },
+            {
+              "id": "build-3",
+              "text": "In the data set, AddField declares each field in order: its technical name, its label, its type, and a function that reads the value from a record. Saved pipelines store these names, so they must stay stable."
+            },
+            {
+              "id": "build-4",
+              "text": "IsIdentifier marks a field that identifies a record. IsKeyFilterable promises that the data set can read only the records of a list of keys. And References names the data set the values identify, so consumers can suggest a join."
+            },
+            {
+              "id": "build-5",
+              "text": "CanReadAsync tells whether the user of the context may read the data set. The data source lists, describes, and reads only the data sets that pass. A published pipeline reads as the user who published it."
+            },
+            {
+              "id": "build-6",
+              "text": "LoadAsync streams the records in a stable order, one page at a time, so any number of records can be read. The base class reads only the fields and the number of rows the query asks for."
+            },
+            {
+              "id": "build-7",
+              "text": "DataConditions reads the conditions a store can apply while it loads, such as a list of keys or a range of dates. The consumer filters again, so a condition can be ignored, except the keys of an IsKeyFilterable field."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Register it",
+      "subtitle": "One call in a startup",
+      "clips": [
+        {
+          "id": "04-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "Register the data source with AddDataSource, in a startup that requires the Data Pipelines Core feature. A data source is a scoped service, and two data sources can't share a name."
+            },
+            {
+              "id": "register-2",
+              "text": "Once your module is enabled, its data sets appear to the users who may read them, in the dialog you saw and in every other consumer. If the feature that provides it is disabled, a step that reads it reports that it is not available."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Implement IDataSource",
+      "subtitle": "When data doesn't come as records",
+      "clips": [
+        {
+          "id": "05-direct",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "direct-1",
+              "text": "When data doesn't come as records, implement IDataSource yourself. GetDataSetsAsync lists the data sets the user may read, and GetSchemaAsync describes one of them with its fields."
+            },
+            {
+              "id": "direct-2",
+              "text": "GetSchemaAsync is the security boundary. It returns null for a data set that doesn't exist or that the user may not read, and consumers read a data set only after it returns a schema."
+            },
+            {
+              "id": "direct-3",
+              "text": "ReadAsync yields batches. A batch holds the fields and the rows, with one value per field, in order, using the .NET type that matches the field type. It checks the access of the user again, and yields nothing when it fails."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Going further",
+      "subtitle": "Confirming reads and aggregating",
+      "clips": [
+        {
+          "id": "06-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "A data source that reads changes from a queue should remove them only once delivered. A step passes a ConsumerId. OnSucceeded adds an action that runs only if the step read every row and the run succeeds, so a failed run's changes are read again."
+            },
+            {
+              "id": "more-2",
+              "text": "A data source that can group and aggregate in its own store implements IDataAggregateSource, and answers null to any query it can't answer exactly. The documentation of Data Sources also covers file formats and formula functions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Data Sources",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is a data source: a data set that declares its fields and who may read them, and one registration. Every consumer of data sources can then read your module's data, for the users who may read it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
