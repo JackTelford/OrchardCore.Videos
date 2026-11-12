@@ -1,0 +1,49 @@
+{
+  "title": "Docker: Run Orchard Core in a Container | Orchard Core",
+  "description": "Orchard Core includes a Dockerfile in its source repository, but a container needs more than an image: a port to browse, a place for the files of the site, and a database.\n\nThis video builds an image from the Dockerfile, runs a container and opens its Setup screen, shows where the site keeps its data, and uses Docker Compose to start a PostgreSQL database next to the site.\n\nIn this video:\n• What you need, and the two ways to get an image\n• The Dockerfile and the .dockerignore file\n• Building the image, running a container, and pruning intermediate images\n• The first request: the Setup screen of a container\n• The App_Data folder, volumes and environment variables\n• Docker Compose with a PostgreSQL service",
+  "hashtags": [
+    "OrchardCore",
+    "Docker",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Docker",
+    "Dockerfile",
+    "Docker Compose",
+    "containers",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "PostgreSQL"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/topics/docker/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/topics/docker/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:topics/docker"
+  }
+}

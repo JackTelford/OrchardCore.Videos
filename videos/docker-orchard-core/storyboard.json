@@ -1,0 +1,211 @@
+{
+  "title": "Docker: Run Orchard Core in a Container",
+  "output": "docker-orchard-core",
+  "spoken": {
+    ".dockerignore": "dot docker ignore",
+    "App_Data": "App Data",
+    "docker-compose": "docker compose"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Docker: Run Orchard Core in a Container",
+      "subtitle": "Build an image, run a container, and add a database",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Orchard Core source repository includes a Dockerfile. In this video, you build an image from it, run a container and open the site, see where the site keeps its files, and start a database next to it with Docker Compose."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Images and containers",
+      "subtitle": "Two ways to get an image",
+      "clips": [
+        {
+          "id": "01-images",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "need-1",
+              "text": "To follow along, you need Docker. For Windows, the documentation points to containers on the Windows Subsystem for Linux, and for Ubuntu or other Linux systems, to the installation of Docker Engine."
+            },
+            {
+              "id": "idea-1",
+              "text": "Docker runs containers from images. You can pull an image that Orchard Core publishes to Docker Hub, or build your own from the Dockerfile in the source code, the way developers test a pull request on their machine."
+            },
+            {
+              "id": "idea-2",
+              "text": "The published image starts with one command. It names the container and maps a port of your machine to port 80 inside it, where the web application listens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Dockerfile",
+      "subtitle": "Build and runtime in one file",
+      "clips": [
+        {
+          "id": "02-dockerfile",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "dockerfile-1",
+              "text": "The Dockerfile sits at the root of the repository. Its build stage starts from an image with the .NET SDK, copies the source code, and publishes the CMS web application."
+            },
+            {
+              "id": "dockerfile-2",
+              "text": "The runtime stages start from the ASP.NET Core runtime image, for Linux or for Windows, and the target operating system picks one. The last stage copies in only the published application, listens on port 80, and starts it."
+            },
+            {
+              "id": "dockerfile-3",
+              "text": "The .dockerignore file keeps every App_Data folder, and every bin and obj folder, out of the build. The data of a site you ran from source, and its build output, never enter the image."
+            },
+            {
+              "id": "dockerfile-4",
+              "text": "A site built on the NuGet packages of Orchard Core can use the same two files. Copy the Dockerfile and .dockerignore to the root of your solution, then adjust the paths of the build stage to your own folder structure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Build and run",
+      "subtitle": "From the source code to a container",
+      "clips": [
+        {
+          "id": "03-build",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "From the root of the repository, docker build creates the image. The platform option sets the target operating system, which selects the Linux runtime stage, and the tag option names the image oc."
+            },
+            {
+              "id": "build-2",
+              "text": "Then docker run starts a container from that image. Its publish option maps a port of your machine to port 80 in the container."
+            },
+            {
+              "id": "build-3",
+              "text": "The build stage carries a label. After a build, the documentation prunes the leftover intermediate images with a filter on that label."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The first request",
+      "subtitle": "A container with no site shows Setup",
+      "clips": [
+        {
+          "id": "04-first-request",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "first-1",
+              "text": "Browsing to the port that the container maps shows the Setup screen of Orchard Core. The container holds no site, so Orchard Core asks the questions that install one."
+            },
+            {
+              "id": "first-2",
+              "text": "The database type is Sqlite, the default, so nothing else has to run next to the container. Let's name the site, choose the Blog recipe, and select a time zone."
+            },
+            {
+              "id": "first-3",
+              "text": "The super user needs a user name, an email address, and a password, typed twice. Then let's select Finish Setup."
+            },
+            {
+              "id": "first-4",
+              "text": "Orchard Core runs the recipe, creates the site inside the container, and redirects to the home page of the Blog."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Data and settings",
+      "subtitle": "What a container keeps, and how to configure it",
+      "clips": [
+        {
+          "id": "05-data",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "data-1",
+              "text": "The site keeps its files in the App_Data folder, which is app slash App_Data in the container. Among other files, it holds the tenants file and, for each tenant, the Data Protection keys and, with Sqlite, the database."
+            },
+            {
+              "id": "data-2",
+              "text": "A volume mounted on App_Data keeps these files outside the container. A container that mounts the same volume later starts with the same site."
+            },
+            {
+              "id": "data-3",
+              "text": "Settings reach the container as environment variables, with two underscores between the levels of a name. The Auto Setup settings install a site without the Setup screen, and a separate video covers Auto Setup."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Docker Compose",
+      "subtitle": "A database next to the site",
+      "clips": [
+        {
+          "id": "06-compose",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "compose-1",
+              "text": "A compose file describes several containers together. This one has a web service, built from the Dockerfile, and a PostgreSQL service for the database."
+            },
+            {
+              "id": "compose-2",
+              "text": "The web service builds from the Dockerfile in the current folder, maps a port of your machine to port 80, and depends on the database service."
+            },
+            {
+              "id": "compose-3",
+              "text": "The database service sets its user, its database name, and its password. Compose reads the password from an environment variable of your own, so the file holds no secret."
+            },
+            {
+              "id": "compose-4",
+              "text": "Set the password variable, run docker-compose build, and then docker-compose up to start both containers. Open the mapped port in a browser, and the Setup screen appears."
+            },
+            {
+              "id": "compose-5",
+              "text": "On the Setup screen, choose Postgres as the type of database, and enter a connection string. Its server is the name of the database service, and the other values come from that service's settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Docker: Run Orchard Core in a Container",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Dockerfile builds Orchard Core into an image, a container serves it, the App_Data folder holds its state, and Docker Compose adds a database. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
