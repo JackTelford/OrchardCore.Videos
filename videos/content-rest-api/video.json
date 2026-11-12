@@ -1,0 +1,50 @@
+{
+  "title": "Content API: Read and Write Content Items Over HTTP | Orchard Core",
+  "description": "A script, a mobile app or another service often has to create a content item, change one, or read one by its ID, without going through the admin.\n\nThe Contents module answers with three endpoints under api/content. They take and return the JSON of a content item, and they check an access token and the permissions of its role.\n\nIn this video:\n• The three endpoints, and the JSON of a content item\n• Authentication with access tokens from OpenID Connect\n• The permissions each call needs, set on a role\n• Creating an item, published or as a draft\n• Reading an item by its ID\n• Updating an item, published or as a draft\n• Checking the result in the admin\n• Deleting an item\n• The status codes of the responses",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "RESTAPI",
+    "HeadlessCMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Headless CMS",
+    "REST API",
+    "Content API",
+    "OpenID Connect",
+    "JSON"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Headless and APIs"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Contents/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Contents"
+  }
+}
