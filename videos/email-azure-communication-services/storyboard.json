@@ -1,0 +1,185 @@
+{
+  "title": "Azure Communication Services Email",
+  "output": "email-azure-communication-services",
+  "spoken": {
+    "Cc": "C.C.",
+    "Bcc": "B.C.C."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Azure Communication Services Email",
+      "subtitle": "Send the email of your site through Azure",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site sends email for account confirmation, password reset, workflows, and notifications. The Azure Communication Services Email module delivers those messages through Azure. In this video, we enable it, configure its provider, and open the test page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the providers work",
+      "subtitle": "Two providers, and what you need",
+      "clips": [
+        {
+          "id": "01-fit",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "fit-1",
+              "text": "The Email module sends the messages of your site through its default provider. A provider is the service that delivers a message, such as an SMTP server or Azure. Account emails, workflow Email Tasks, and email notifications use the default provider."
+            },
+            {
+              "id": "fit-2",
+              "text": "The Azure Communication Services Email module adds two providers. Azure Communication Services is configured in the admin. Default Azure Communication Services is listed only when the server configuration sets a sender and a connection string, so the admin cannot edit it."
+            },
+            {
+              "id": "fit-3",
+              "text": "To use the first provider, you need an Azure Communication Services resource, a sender email address, and the connection string of that resource."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Turn on Azure Communication Services Email",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for Azure Communication Services Email. The feature is listed in the Communication category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's select Enable. Orchard Core also enables the Email feature it depends on, and a message confirms that the feature was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Configure the provider",
+      "subtitle": "Sender address and connection string",
+      "clips": [
+        {
+          "id": "03-configure",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "configure-1",
+              "text": "Let's open Settings, Communication, Email. The page has two tabs, Providers and Azure Communication Services. The Providers tab warns that no email provider is enabled."
+            },
+            {
+              "id": "configure-2",
+              "text": "On the Azure Communication Services tab, the checkbox Enable Azure Provider turns the provider on. Let's select it, and two fields appear."
+            },
+            {
+              "id": "configure-3",
+              "text": "Sender email address is the address the messages come from. Its hint says the address is used unless the message sets its own sender. Let's type a sender address."
+            },
+            {
+              "id": "configure-4",
+              "text": "Connection String takes the connection string of your Azure Communication Services resource. The field hides what you type. Let's enter a fake value."
+            },
+            {
+              "id": "configure-5",
+              "text": "Both fields are required. Let's select Save, and the page confirms that the site settings were updated."
+            },
+            {
+              "id": "configure-6",
+              "text": "The Connection String field is empty again, and its placeholder says the value is securely stored. Leave it blank to keep the stored value, or type a different value to replace it."
+            },
+            {
+              "id": "configure-7",
+              "text": "On the Providers tab, Default provider lists Azure Communication Services. When no default provider is set, enabling the provider makes it the default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Test the provider",
+      "subtitle": "The Email Test page",
+      "clips": [
+        {
+          "id": "04-test",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "test-1",
+              "text": "Let's open Tools, Testing, Email Test. The Provider list shows the enabled providers, and it starts on the default provider."
+            },
+            {
+              "id": "test-2",
+              "text": "Provider, To, Subject, and Body are required. Let's enter a fake recipient, a subject, and a short body."
+            },
+            {
+              "id": "test-3",
+              "text": "Sender, Cc, Bcc, and Reply To are optional. When Sender is empty, the provider uses the sender email address from its settings."
+            },
+            {
+              "id": "test-4",
+              "text": "With a real resource, Send delivers the message through the selected provider, and the page confirms it with Message sent successfully. The values here are fake, so we leave the message unsent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Good to know",
+      "subtitle": "The default provider, failures, and secrets",
+      "clips": [
+        {
+          "id": "05-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "notes-1",
+              "text": "If more than one provider is enabled, choose the default on the Providers tab. Clearing Enable Azure Provider and saving turns the provider off, and clears the default setting if this provider was the default."
+            },
+            {
+              "id": "notes-2",
+              "text": "When the call to Azure fails, the Email Test page shows a general error message that never includes the connection string. The details are written to the log of the site."
+            },
+            {
+              "id": "notes-3",
+              "text": "When the Secrets feature is enabled, the Connection String field can also reference a secret, instead of keeping the value in the settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Azure Communication Services Email",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Azure Communication Services Email module sends the email of your site through an Azure resource. Enable the feature, enter the sender and the connection string, and check the result on the Email Test page. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
