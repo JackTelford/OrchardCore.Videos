@@ -6674,9 +6674,9 @@
     "docs": [
       "src/docs/reference/modules/Scripting/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.8,
+    "words": 725,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

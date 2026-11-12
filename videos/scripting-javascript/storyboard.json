@@ -1,0 +1,212 @@
+{
+  "title": "Scripting: JavaScript in Workflows and Recipes",
+  "output": "scripting-javascript",
+  "spoken": {
+    "The js prefix": "The J.S. prefix",
+    "IGlobalMethodProvider": "I Global Method Provider",
+    "IScriptingManager": "I Scripting Manager",
+    "uuid": "U.U.I.D.",
+    "gzip": "G zip",
+    "base64": "base sixty-four",
+    "html": "H.T.M.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Scripting: JavaScript in Workflows and Recipes",
+      "subtitle": "How Orchard Core evaluates scripts, and how to extend them",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Recipes, workflows and layer rules can all run JavaScript, and the Scripting module runs it. This video shows where scripts run, which methods they can call, how to add your own, and how to limit what a script can do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a script runs",
+      "subtitle": "Prefixes, engines and where scripts run",
+      "clips": [
+        {
+          "id": "01-prefix",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "A script is a prefix, a colon and the code. The js prefix selects the JavaScript engine, which uses Jint, a JavaScript interpreter for .NET, and the file prefix selects an engine that reads a text file. The Scripting module is always enabled."
+            },
+            {
+              "id": "run-2",
+              "text": "Scripts run wherever Orchard Core takes an expression: in any text value of a recipe, in the Script Task and the expressions of a workflow, in the Javascript condition of a layer rule, and in the external login settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Scripts in a recipe",
+      "subtitle": "Square brackets, variables and recipe methods",
+      "clips": [
+        {
+          "id": "02-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "In a recipe, any text value can be a script between square brackets, with its prefix. Orchard Core replaces it with the result before the step runs. Here uuid generates an identifier, and the file prefix loads a snippet."
+            },
+            {
+              "id": "recipe-2",
+              "text": "Variables declared at the top are computed on first read, then reused. Three methods exist only in a recipe: variables, parameters, which reads a value of the recipe environment such as the admin user id, and configuration, which reads a tenant configuration key."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Scripts in a workflow",
+      "subtitle": "The Script Task and the JavaScript syntax",
+      "clips": [
+        {
+          "id": "03-workflow",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "workflow-1",
+              "text": "In a workflow, the Script Task runs a whole script, and expression fields can use the JavaScript syntax. Let's open a sample workflow that does both: Sample: order total."
+            },
+            {
+              "id": "workflow-2",
+              "text": "The Script Task has Available Outcomes and a Script. This script reads the query string with queryString, stores values with setVariable, and ends with setOutcome, which chooses the outcome the workflow follows."
+            },
+            {
+              "id": "workflow-3",
+              "text": "A Set Variable Task takes its Value from an expression, and the syntax list offers Literal, Liquid and JavaScript. Here it is JavaScript. A separate video covers workflow expressions in depth."
+            },
+            {
+              "id": "workflow-4",
+              "text": "The Available data tab lists what an activity can use. Under Functions are the methods a script can call in a workflow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Methods a script can call",
+      "subtitle": "Registered methods and scoped methods",
+      "clips": [
+        {
+          "id": "04-methods",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "methods-1",
+              "text": "Modules register the methods a script can call. Always available: log, protect, encrypt, decrypt, base64, html, gzip and uuid. Contents adds methods for content items, Layers adds checks such as isAnonymous, and Queries adds executeQuery."
+            },
+            {
+              "id": "methods-2",
+              "text": "Other methods exist for one evaluation only. A workflow gets workflow, input, output, property, variable and setVariable, and a Script Task adds setOutcome. Each of these is a scoped method, passed in when the evaluation starts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add your own method",
+      "subtitle": "A global method provider",
+      "clips": [
+        {
+          "id": "05-provider",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "This is how the uuid method is written. A provider implements IGlobalMethodProvider and returns GlobalMethod objects, where Name is what scripts call and Method is a factory that receives the service provider and returns the delegate to run."
+            },
+            {
+              "id": "add-2",
+              "text": "Register the provider as a singleton in the Startup class of your module. The factory usually runs lazily, the first time a script reads the name, with the services of that evaluation."
+            },
+            {
+              "id": "add-3",
+              "text": "A GlobalMethod can also set AsyncMethod. Scripts then get a second function, with the same name followed by Async, that returns a promise. The Contents module registers newContentItem and newContentItemAsync this way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Evaluate a script from C#",
+      "subtitle": "The scripting manager and scoped methods",
+      "clips": [
+        {
+          "id": "06-evaluate",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "eval-1",
+              "text": "To run a script from your own code, call IScriptingManager. EvaluateAsync takes the directive, picks the engine from its prefix, runs the script with the registered methods, and releases the scope. A string with no known prefix comes back unchanged."
+            },
+            {
+              "id": "eval-2",
+              "text": "To give a script data for one call, pass a scoped method provider. The Users module does this for its external login scripts, because prepared scripts are cached by their text, and data written into the script would add a cache entry for every login."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Limits and errors",
+      "subtitle": "What a script may do, and what happens when it fails",
+      "clips": [
+        {
+          "id": "07-limits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "limits-1",
+              "text": "By default a script has no time, statement or memory limit. If people other than administrators can write scripts, configure the options of Jint with MaxStatements, TimeoutInterval or LimitMemory. One options instance serves every engine of the tenant."
+            },
+            {
+              "id": "limits-2",
+              "text": "In a workflow, a script that throws or returns the wrong type falls back to a default, and the error is logged. A script stopped by a limit faults the workflow, as does any error when Fault the workflow on script errors is checked."
+            },
+            {
+              "id": "limits-3",
+              "text": "The engine guards against unbounded recursion by raising a JavaScript error that a script can catch, not by ending the process. Each tenant also reuses a small pool of engines, sized by EnginePoolSize."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Scripting: JavaScript in Workflows and Recipes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Scripts are strings with a prefix, evaluated by the Scripting module with the methods that modules register, and the Scripting page of the documentation lists the methods and the engine options. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
