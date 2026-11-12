@@ -7,6 +7,7 @@
     "IConfigureOptions": "I Configure Options",
     "SetUrl": "Set U.R.L.",
     "SetCdn": "Set C.D.N.",
+    "CDN": "C.D.N.",
     "base url": "base U.R.L.",
     "scriptblock": "script block",
     "styleblock": "style block"
@@ -65,7 +66,7 @@
             },
             {
               "id": "declare-2",
-              "text": "DefineScript and DefineStyle start a definition. SetUrl takes the minified file and then the debug file, written with a tilde. SetVersion, SetDependencies, and SetCdn complete it."
+              "text": "DefineScript and DefineStyle start a definition. SetUrl takes the minified file and then the debug file, each starting with a tilde for the site's base path. SetVersion, SetDependencies, and SetCdn complete it."
             },
             {
               "id": "declare-3",

@@ -35,7 +35,7 @@ before recording, or when the voice is generated. None of them is stated in the 
 ## For the voice (`narrate.py`)
 
 6. **New spoken spellings.** `storyboard.json` "spoken" adds: `SetUrl` as "Set U.R.L.", `SetCdn` as "Set C.D.N.",
-   `base url` as "base U.R.L.", `IResourceManager` as "I Resource Manager", `IConfigureOptions` as "I Configure Options",
+   `CDN` as "C.D.N.", `base url` as "base U.R.L.", `IResourceManager` as "I Resource Manager", `IConfigureOptions` as "I Configure Options",
    `OrchardCore.ResourceManagement.Abstractions` as "Orchard Core dot Resource Management dot Abstractions", and
    `scriptblock` and `styleblock` as "script block" and "style block". Check each with `scripts/pronounce.py` before the
    voice is generated.
