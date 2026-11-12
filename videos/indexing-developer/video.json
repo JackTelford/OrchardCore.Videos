@@ -1,0 +1,50 @@
+{
+  "title": "Indexing in Code: Index Your Own Data and Fields | Orchard Core",
+  "description": "The values in a search index come from the handlers that add them to each document. Your own parts, fields, and records have no entries of their own until you write the code that adds them.\n\nThis video follows a change from the task log to the index, then writes a part handler, a field handler, and a document index handler, chooses what is indexed in the Lucene index settings, and registers a source for records that are not content items.\n\nIn this video:\n• How indexing works: profiles, tasks, and handlers\n• Index a part with a content part index handler\n• Index a field with a content field index handler\n• Choose what is indexed: settings, Reset, and Rebuild\n• Index any record with a document index handler\n• A source of your own: tasks, an indexing service, and a profile handler",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Indexing"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Indexing",
+    "Search",
+    "Lucene",
+    "Content Part",
+    "Content Field",
+    "C#"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Indexing/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Indexing/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Indexing"
+  }
+}
