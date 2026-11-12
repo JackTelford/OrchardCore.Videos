@@ -1290,9 +1290,9 @@
     "docs": [
       "src/docs/reference/modules/Taxonomies/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.4,
+    "words": 513,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
