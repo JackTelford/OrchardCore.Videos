@@ -4844,9 +4844,9 @@
     "docs": [
       "src/docs/reference/modules/Deployment/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.6,
+    "words": 542,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

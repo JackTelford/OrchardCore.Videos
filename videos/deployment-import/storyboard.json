@@ -1,0 +1,183 @@
+{
+  "title": "Import: Package and JSON Import",
+  "output": "deployment-import",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Import: Package and JSON Import",
+      "subtitle": "Run a recipe from a zip package or from pasted text",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A deployment package carries configuration and content from one Orchard Core site to another. In this video, you import a package from a zip file, import a recipe from JSON text, and see who is allowed to do either."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What an import does",
+      "subtitle": "Recipes, packages and steps",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Every import runs a recipe on the site you are signed in to. A recipe is a list of steps, and each step changes something: the features, the settings, the content types, or the content."
+            },
+            {
+              "id": "idea-2",
+              "text": "A deployment package is a zip file. It holds the recipe, and any other files that the steps need. Deployment plans build packages, and a separate video covers them."
+            },
+            {
+              "id": "idea-3",
+              "text": "The steps run in the order of the recipe, and a step runs only when a feature that handles it is enabled on this site. When the last step has run, the site restarts with the next request."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Package Import",
+      "subtitle": "Run a zip package",
+      "clips": [
+        {
+          "id": "02-package",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "package-1",
+              "text": "Let's start with Content, Content Items. The list shows the content of this site, and it holds no article called Spring Menu."
+            },
+            {
+              "id": "package-2",
+              "text": "Next, open Tools, Deployments, Package Import. The page is titled Import Deployment Package, and it has one field, labeled Select a file."
+            },
+            {
+              "id": "package-3",
+              "text": "The field accepts a zip file, or a recipe file in JSON format. Let's choose a package that adds one article to the site, and the name of the file appears in the field."
+            },
+            {
+              "id": "package-4",
+              "text": "Select Import. The page answers with the message: Deployment package imported. The package is extracted and its recipe runs at once, step by step, in the order of the recipe."
+            },
+            {
+              "id": "package-5",
+              "text": "To check the result, open Content, Content Items again. The article from the package, Spring Menu, is at the top of the list on the page titled Manage Content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "JSON Import",
+      "subtitle": "Paste a recipe and run it",
+      "clips": [
+        {
+          "id": "03-json",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "json-1",
+              "text": "JSON Import takes the recipe as text instead of a file. Open Tools, Deployments, JSON Import. The page has one field, an editor labeled JSON, with line numbers."
+            },
+            {
+              "id": "json-2",
+              "text": "Paste a recipe into the editor. This recipe has one step: it sets the name of the site to Maple Street Bakery."
+            },
+            {
+              "id": "json-3",
+              "text": "Select Import. The page answers with the message: Recipe imported successfully! The recipe has run at once, and the editor is empty again."
+            },
+            {
+              "id": "json-4",
+              "text": "To check the result, open Settings, General. The Site name field shows the name from the recipe, Maple Street Bakery."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Package or JSON",
+      "subtitle": "What travels with the recipe",
+      "clips": [
+        {
+          "id": "04-compare",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "compare-1",
+              "text": "Both pages run the recipe in the same way. A zip file can carry the files that its steps need. A recipe file, and the text you paste in JSON Import, carry the recipe only."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "When an import fails",
+      "subtitle": "The import stops at the failing step",
+      "clips": [
+        {
+          "id": "05-fail",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "fail-1",
+              "text": "If a step fails, the import stops at that step. The steps before it have already run, and the steps after it do not run. Package Import reports: The import failed with the following errors, followed by what the step reported."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Who can import",
+      "subtitle": "The Import Data permission",
+      "clips": [
+        {
+          "id": "06-permissions",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "Importing a recipe can change features, settings, content types, and content. Import Data, the permission that allows it, is marked Security Critical in the permissions of a role, and only administrators have it by default."
+            },
+            {
+              "id": "perm-2",
+              "text": "Package Import and JSON Import appear in the menu only for users who have Import Data. Grant Import Data only to roles you trust, and import only packages and recipes from sources you trust."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Import: Package and JSON Import",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's how you run a recipe on your site: from a zip package with Package Import, or from pasted text with JSON Import. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

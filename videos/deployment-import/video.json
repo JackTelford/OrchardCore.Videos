@@ -1,0 +1,50 @@
+{
+  "title": "Import: Package and JSON Import | Orchard Core",
+  "description": "A configuration or a set of content that you built on one Orchard Core site often has to run on another site. Rebuilding it by hand takes time and invites mistakes.\n\nThe Deployment module imports a recipe into the site you are signed in to, from a zip package or from pasted text, and runs its steps in order. This video imports a package and a recipe, explains what travels with each, and shows who is allowed to import.\n\nIn this video:\n• What an import does: recipes, packages and steps\n• Package Import: run a zip package\n• JSON Import: paste a recipe and run it\n• Package or JSON: what travels with the recipe\n• When an import fails\n• Who can import: the Import Data permission",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Deployment"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Deployment",
+    "Deployment package",
+    "Package Import",
+    "JSON Import",
+    "Recipes",
+    "Import Data"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Deployment"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Deployment/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Deployment/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Deployment"
+  }
+}
