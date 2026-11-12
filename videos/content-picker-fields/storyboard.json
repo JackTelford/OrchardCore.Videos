@@ -1,0 +1,251 @@
+{
+  "title": "Content Picker and User Picker Fields",
+  "output": "content-picker-fields",
+  "spoken": {
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Picker and User Picker Fields",
+      "subtitle": "Relate content items to other items and to users",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A bundle lists products, and each bundle has someone who manages it. The Content Picker and User Picker fields store those links as choices from a list. In this video, you add both fields to a content type and fill them in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Ways to relate content",
+      "subtitle": "Where the pickers fit",
+      "clips": [
+        {
+          "id": "01-relate",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "relate-1",
+              "text": "Orchard Core connects content items in several ways. A Bag Part stores items inside their parent, a List Part keeps them in a container like a blog, and Taxonomies tag them with shared terms."
+            },
+            {
+              "id": "relate-2",
+              "text": "A Content Picker Field is different: the editor chooses items that already exist. The field keeps a reference to each chosen item, not a copy, so one product can appear in many bundles."
+            },
+            {
+              "id": "relate-3",
+              "text": "A product bundle can pick its products. A blog post can pick related posts for further reading. And any content item can pick the user accounts connected to it."
+            },
+            {
+              "id": "relate-4",
+              "text": "The Content Fields module provides three picker fields: the Content Picker Field for content items, the User Picker Field for users, and the Localization Set Content Picker Field for the translations of an item. The last one needs the Content Localization feature."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add a Content Picker field",
+      "subtitle": "Choose which items an editor can pick",
+      "clips": [
+        {
+          "id": "02-add-picker",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Let's relate the Product Bundle content type to the Product content type. Under Design, Content Definition, Content Types, we edit Product Bundle and select Add Field."
+            },
+            {
+              "id": "add-2",
+              "text": "The Display Name is Products. For Field Type, we choose Content Picker Field, and select Save & Configure to open the field's settings."
+            },
+            {
+              "id": "add-3",
+              "text": "Required means an editor must pick at least one item. Allow multiple lets an editor pick several. A bundle holds many products, so we turn on Allow multiple."
+            },
+            {
+              "id": "add-4",
+              "text": "Contained Content Types sets what the picker offers. Display All Content Types offers every type without a stereotype, and Stereotype offers the types that share a stereotype, such as widgets."
+            },
+            {
+              "id": "add-5",
+              "text": "Content Types offers only the types you tick. A bundle picks products, so we tick Product."
+            },
+            {
+              "id": "add-6",
+              "text": "Hint adds a line of help below the field in the content editor. We write one, save the settings, and the type lists Products as a Content Picker Field."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Pick content items",
+      "subtitle": "Search, select and publish",
+      "clips": [
+        {
+          "id": "03-pick",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "pick-1",
+              "text": "In the list of Product Bundle items, let's edit the Weekend Camping Bundle. Its editor shows the Products field, with the hint we wrote."
+            },
+            {
+              "id": "pick-2",
+              "text": "Typing in the field searches the content items of the allowed types. The picker matches the typed text anywhere in a title or content type name. We type pack and select Trail Backpack."
+            },
+            {
+              "id": "pick-3",
+              "text": "Because Allow multiple is on, we add more products the same way: Camp Stove, then Headlamp. All three choices stay in the field."
+            },
+            {
+              "id": "pick-4",
+              "text": "We select Publish, and the bundle is saved together with its three products."
+            },
+            {
+              "id": "pick-5",
+              "text": "We open the bundle's page. The Products field lists each chosen product as a link to that product's own page."
+            },
+            {
+              "id": "pick-6",
+              "text": "Following the Camp Stove link opens that product's page, which is a content item of its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Pick users",
+      "subtitle": "Link content to the people who manage it",
+      "clips": [
+        {
+          "id": "04-user-field",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "user-1",
+              "text": "To record who manages a bundle, we select Add Field on the Product Bundle type again and add a User Picker Field named Bundle Manager. This field type is available when the Users feature is enabled."
+            },
+            {
+              "id": "user-2",
+              "text": "The settings repeat Required and Allow multiple. Under Roles, Display All Users offers every user. We clear it and tick Editor, so the picker offers only users in the Editor role."
+            },
+            {
+              "id": "user-3",
+              "text": "The display mode decides how the field appears on the page. Standard looks up each user when the page is shown, and User Names shows the names saved with the bundle the last time it was saved. We keep Standard and save."
+            }
+          ]
+        },
+        {
+          "id": "04-user-pick",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "user-4",
+              "text": "In the bundle's editor, we type the letters o r. The user names jordan, morgan and taylor all contain them, but only jordan and morgan are editors, so the picker lists those two. We select jordan."
+            },
+            {
+              "id": "user-5",
+              "text": "We publish the bundle and open its page. It shows Bundle Manager, followed by the user name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Pick from a search index",
+      "subtitle": "The Lucene and Elasticsearch editors",
+      "clips": [
+        {
+          "id": "05-index",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "index-1",
+              "text": "By default, the picker searches the database by title. Two optional features add another editor to the field: Lucene Content Picker adds a Lucene editor, and Elasticsearch Content Picker adds an Elasticsearch editor. Each comes with an Index setting."
+            }
+          ]
+        },
+        {
+          "id": "05-lucene-field",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "lucene-1",
+              "text": "With the Lucene Content Picker feature enabled, we open the settings of the Products field and choose Lucene in the drop-down list labeled What type of editor should be used?"
+            },
+            {
+              "id": "lucene-2",
+              "text": "The Index setting lists the Lucene indexes of the site, which you create under Search, Indexes. The index must contain the content types the field offers, so we select Catalog, an index of the Product items, and save."
+            }
+          ]
+        },
+        {
+          "id": "05-lucene-pick",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "lucene-3",
+              "text": "In the bundle's editor, we type rain. The Lucene editor matches the start of a title, so Rain Jacket is listed."
+            },
+            {
+              "id": "lucene-4",
+              "text": "Typing jacket finds nothing, because no title starts with it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Content pickers at a glance",
+      "subtitle": "What each picker stores",
+      "clips": [
+        {
+          "id": "06-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "A Content Picker Field relates an item to other items, and Contained Content Types sets which types it offers. A User Picker Field relates an item to users, and can offer only the users in chosen roles."
+            },
+            {
+              "id": "recap-2",
+              "text": "Both store a reference to each choice, and both allow one choice or several. The Lucene and Elasticsearch editors change where a Content Picker Field searches."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Picker and User Picker Fields",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Content Picker and User Picker fields let editors relate content by choosing from a list. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

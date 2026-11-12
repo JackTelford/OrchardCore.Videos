@@ -1,0 +1,64 @@
+{
+  "title": "Content Picker and User Picker Fields: Relate Content Items | Orchard Core",
+  "description": "Content items rarely stand alone: a bundle lists products, and each bundle has someone who manages it. Typing the same information into every item is repetitive, and a copy goes out of date.\n\nThe Content Picker and User Picker fields store a reference to existing content items or users, chosen from a searchable list, so the items stay independent and linked.\n\nIn this video:\n• Ways to relate content items, and where the pickers fit\n• Add a Content Picker field and choose which content types it offers\n• Pick content items in the editor and see them on the page\n• Add a User Picker field that offers only the users of a role\n• Pick from a Lucene index, and the Elasticsearch editor option\n• Content pickers at a glance",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Content Picker Field",
+    "User Picker Field",
+    "Content Fields",
+    "Content Relationships",
+    "Lucene",
+    "Elasticsearch",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Fields"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Content Fields",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentFields/"
+    },
+    {
+      "label": "Documentation: Content Relationships",
+      "url": "https://docs.orchardcore.net/en/latest/topics/content-relationships/"
+    },
+    {
+      "label": "Documentation: Lucene",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lucene/"
+    },
+    {
+      "label": "Documentation: Elasticsearch",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Elasticsearch/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentFields/README.md",
+    "src/docs/reference/modules/Lucene/README.md",
+    "src/docs/reference/modules/Elasticsearch/README.md",
+    "src/docs/topics/content-relationships/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentFields"
+  }
+}
