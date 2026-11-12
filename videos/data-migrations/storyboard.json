@@ -79,7 +79,7 @@
             },
             {
               "id": "class-3",
-              "text": "Only public methods named Create, CreateAsync, or UpdateFrom plus a number, with or without Async, are steps. They return int or Task<int>. Orchard Core ignores any other method."
+              "text": "Only public methods named Create, CreateAsync, or UpdateFrom plus a number, with or without Async, are steps. They return int or Task<int>, except CreateAsync, which must return Task<int>. Orchard Core ignores any other method."
             },
             {
               "id": "class-4",
