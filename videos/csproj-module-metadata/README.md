@@ -1,6 +1,6 @@
 # Module Metadata in Your Project File
 
-**YouTube:** not published yet · **Length:** 3:41 · **Feature:** `guide:guides/leverage-csproj-meta-info` ([Leveraging your CSPROJ meta information](https://docs.orchardcore.net/en/latest/guides/leverage-csproj-meta-info/))
+**YouTube:** not published yet · **Length:** 3:42 · **Feature:** `guide:guides/leverage-csproj-meta-info` ([Leveraging your CSPROJ meta information](https://docs.orchardcore.net/en/latest/guides/leverage-csproj-meta-info/))
 
 The video shows how a module, its features, or a theme can describe itself to Orchard Core from its project file instead of from `Manifest.cs`. It declares a module with an `OrchardCoreModules` item and its metadata, then features, themes and the `OrchardCoreAttributes` list, and covers the rules the build checks, the `OrchardCoreDebugTargets` property, the properties that order the embedding, and where the values show in the admin. The title, description, tags and chapters YouTube shows are in `video.json`.
 

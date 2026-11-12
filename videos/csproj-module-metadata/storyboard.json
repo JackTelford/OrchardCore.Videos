@@ -42,7 +42,7 @@
     {
       "id": "01",
       "title": "Why the project file",
-      "subtitle": "Values the build already knows",
+      "subtitle": "Values the build knows",
       "clips": [
         {
           "id": "01-why",
@@ -54,7 +54,7 @@
             },
             {
               "id": "why-2",
-              "text": "The build already knows some of those values, such as the project name and the assembly version. The build can write the attributes for you, following the pattern of InternalsVisibleTo: an item in the project file becomes an assembly attribute."
+              "text": "The build knows some of those values, such as the project name and the assembly version. The build can write the attributes for you, following the pattern of InternalsVisibleTo: an item in the project file becomes an assembly attribute."
             }
           ]
         }
@@ -71,7 +71,7 @@
           "steps": [
             {
               "id": "module-1",
-              "text": "Declare a module with an OrchardCoreModules item in an item group. Its Include value is the module identifier, normally the project name."
+              "text": "Declare a module with an OrchardCoreModules item in an item group of a project that references OrchardCore.Module.Targets. Its Include value is the module identifier, normally the project name."
             },
             {
               "id": "module-2",
@@ -104,7 +104,7 @@
             },
             {
               "id": "parts-2",
-              "text": "As soon as a module project declares a feature, the module itself is no longer a feature, unless one of the declared features has its identifier. A feature whose category, priority, or description is empty uses the module's."
+              "text": "When a module project declares a feature, the module itself is not a feature, unless one of the declared features has its identifier. A feature whose category, priority, or description is empty uses the module's."
             },
             {
               "id": "parts-3",

@@ -49,7 +49,7 @@ The four slides show the same code panel, `Acme.Greetings.csproj`, a `PropertyGr
 heading is "The OrchardCoreModules item" on all four.
 
 - `module-1`: the `ItemGroup` lines and the `OrchardCoreModules Include="$(MSBuildProjectName)"` line are bright. Cards:
-  "Include" (the module identifier) and "Usually" (the name of the project).
+  "Include" (the module identifier), "Usually" (the name of the project) and "Project reference" (`OrchardCore.Module.Targets`).
 - `module-2`: the ten lines from `Name` to `Tags` are bright: Name, ModuleType, Category, Priority, Description, Author,
   Version, Website, Dependencies, Tags. Cards: "Name, Category, Description" (show on the Features page) and
   "Dependencies, Tags" (lists, split by a semicolon, a comma, or a space).

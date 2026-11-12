@@ -163,6 +163,7 @@ def slide(step_id, chapter_title, label):
         return module_slide(chapter_title, label, {5, 6, 20}, [
             ("Include", "The module identifier."),
             ("Usually", "The name of the project."),
+            ("Project reference", "OrchardCore.Module.Targets"),
         ])
 
     if step_id == "module-2":
