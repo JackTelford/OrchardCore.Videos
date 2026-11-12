@@ -1,0 +1,48 @@
+{
+  "title": "Forms: Build a Contact Form From Widgets | Orchard Core",
+  "description": "Visitors need a way to write to you, and a form needs a place on a page, fields, and a button.\n\nThe Forms module provides a widget for each part of a form. You put a Form widget on a page, add Input, Select, Text Area, and Button widgets inside it, and publish the page.\n\nIn this video:\n• How a form is built from a Form widget and field widgets\n• Enabling the Forms feature, creating a page, and adding the Form widget\n• Text fields: Input widgets for a name and an email address\n• A Select, a Text Area, and a Button, then publishing the page\n• The form on the site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Forms"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Forms",
+    "Contact form",
+    "Widgets",
+    "Form widget"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Forms"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Forms/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Forms/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Forms"
+  }
+}
