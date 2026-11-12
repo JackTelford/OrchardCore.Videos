@@ -1,0 +1,48 @@
+{
+  "title": "Azure Key Vault Configuration: Keep Settings Out of Files | Orchard Core",
+  "description": "Connection strings, storage keys and other settings often sit in appsettings.json files or environment variables, on every machine that runs the site.\n\nThe Azure Key Vault configuration provider of Orchard Core adds the secrets of an Azure Key Vault to the application configuration, so the settings of a site can live in the vault. You reference a package, call AddOrchardCoreAzureKeyVault in the host, point it at the vault, and name the secrets with hyphens.\n\nIn this video:\n• Settings in a vault: why read configuration from a vault\n• Add the provider: the package and the host\n• Configure the vault: name, address, reload and order\n• Choose the credential: which identity reads the vault\n• Name the secrets: from vault names to configuration keys\n• In short: the steps in the order you do them",
+  "hashtags": [
+    "OrchardCore",
+    "AzureKeyVault",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Azure Key Vault",
+    "Azure",
+    "configuration",
+    "secrets",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Hosting and Production"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/KeyVault.Azure/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/KeyVault.Azure/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Configuration.KeyVault"
+  }
+}
