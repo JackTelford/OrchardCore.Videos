@@ -1,0 +1,50 @@
+{
+  "title": "Site Search Settings: Index, Fields and Results Page | Orchard Core",
+  "description": "A site can have search indexes and still leave open which index its search page queries, what the search box says, and who may use the page.\n\nThe Search module keeps the default index and the placeholder under Settings, Search, Site Search, and role permissions decide who can search. This video sets them, tries the search page, and gives the Anonymous role permission to query an index.\n\nIn this video:\n• How site search fits together\n• Choose the default index\n• Try the search page\n• The results page\n• Set the placeholder\n• Choose another index\n• Who can search",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Search"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Search",
+    "Site Search",
+    "Search settings",
+    "Default index",
+    "Lucene",
+    "Indexing",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Search/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Search/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Search"
+  }
+}
