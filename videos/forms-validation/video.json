@@ -1,0 +1,48 @@
+{
+  "title": "Forms: Validate What Visitors Type | Orchard Core",
+  "description": "A form that accepts empty fields collects nothing useful, and a visitor who makes a mistake needs to see what to fix.\n\nIn the Forms module, a workflow checks the submitted values and records an error for each one that fails. The form displays those errors with a Validation Summary widget and the Validation option of its inputs, and the workflow sends the visitor back to the form with the messages.\n\nIn this video:\n• How validation works: rules in a workflow, messages on the form\n• Show errors on the form: a summary and a message under each field\n• Check the values in a workflow: Validate Form Field, Validate Form and the way back\n• Try the form: empty, partly filled and complete",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Forms"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Forms",
+    "Form validation",
+    "Workflows",
+    "Validation Summary"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Forms"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Forms/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Forms/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Forms"
+  }
+}
