@@ -1,0 +1,172 @@
+{
+  "title": "Robots: Tell Search Engines What to Crawl",
+  "output": "seo-robots",
+  "spoken": {
+    "robots.txt": "robots dot T.X.T."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Robots settings",
+      "subtitle": "Tell search engines what to crawl",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A robots.txt file tells search engine robots which parts of your site they may visit. Orchard Core builds the file from settings. In this video, you'll enable the SEO feature, see the default file, and change it from the Robots settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a robots.txt file does",
+      "subtitle": "The file and the settings behind it",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Search engines send programs, called web robots or crawlers, to visit your pages. A robots.txt file at the root of your site gives those robots directives about which parts of the site they may access."
+            },
+            {
+              "id": "why-2",
+              "text": "Orchard Core can generate this file. The SEO feature provides the Robots settings, which decide what the file contains, so you do not edit a file by hand."
+            },
+            {
+              "id": "why-3",
+              "text": "The Robots settings have three parts: a rule that addresses all robots, a rule that asks robots to stay out of the admin pages, and a text area for rules of your own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the SEO feature",
+      "subtitle": "Where the Robots settings come from",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "The Robots settings belong to the SEO feature. Let's open Tools, Features, and type SEO in the search box."
+            },
+            {
+              "id": "enable-2",
+              "text": "SEO is listed under Content Management. Let's select Enable, and a message confirms that the SEO feature was enabled. The same feature also provides SEO meta features for content items, which a separate video covers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The default robots.txt file",
+      "subtitle": "What the site serves before you change anything",
+      "clips": [
+        {
+          "id": "03-default",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "default-1",
+              "text": "With the feature enabled, the site serves a robots.txt file at its root. Let's open robots.txt in the browser."
+            },
+            {
+              "id": "default-2",
+              "text": "The file holds two lines. The first addresses every robot, and the second asks robots not to visit the admin pages. These are the default values of the Robots settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Change the Robots settings",
+      "subtitle": "Two rules and your own rules",
+      "clips": [
+        {
+          "id": "04-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Let's open Settings, Search, Search Engine Optimization, and then Robots. The page has two checkboxes and a text area."
+            },
+            {
+              "id": "settings-2",
+              "text": "The first checkbox, Add a rule to allow all web robots, adds the line shown in its hint. It is checked by default."
+            },
+            {
+              "id": "settings-3",
+              "text": "The second checkbox, Add a rule to disallow web robots to the admin routes, adds the line in its hint for your admin path. It is checked by default too, and a cleared box leaves its line out of the file."
+            },
+            {
+              "id": "settings-4",
+              "text": "Additional rules is a text area for any other lines you want in the file. Let's type a rule that asks robots to skip a section of the site called drafts."
+            },
+            {
+              "id": "settings-5",
+              "text": "Let's select Save. The message, Site settings updated successfully, confirms the change."
+            },
+            {
+              "id": "settings-6",
+              "text": "Let's open robots.txt again. Your rule appears after the two default lines. The file is public, so anyone can read the rules you add."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Sitemaps and existing files",
+      "subtitle": "Two things that change the file",
+      "clips": [
+        {
+          "id": "05-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sitemaps-1",
+              "text": "When the Sitemaps feature is enabled too, the Robots page also shows a checkbox named Include all sitemaps. A separate video covers creating sitemaps."
+            },
+            {
+              "id": "sitemaps-2",
+              "text": "After you save, and while Include all sitemaps is checked, Sitemap lines list your enabled sitemap indexes and any enabled sitemap that is not inside one. The lines are built from the Base url in the General settings, so fill it in first."
+            },
+            {
+              "id": "file-1",
+              "text": "If the static files of your site already include a robots.txt file, the site serves that file instead of the generated one. The Robots page can then show a warning that the settings below have no effect until the file is removed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Robots settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Robots settings let you decide what search engines are asked to crawl, without editing a file. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
