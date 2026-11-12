@@ -1,0 +1,191 @@
+{
+  "title": "Azure Key Vault Configuration",
+  "output": "azure-key-vault-configuration",
+  "spoken": {
+    "OrchardCore.Configuration.KeyVault": "Orchard Core dot Configuration dot Key Vault",
+    "AddOrchardCoreAzureKeyVault": "Add Orchard Core Azure Key Vault",
+    "DefaultAzureCredential": "Default Azure Credential",
+    "TokenCredential": "Token Credential",
+    "KeyVaultName": "Key Vault Name",
+    "ReloadInterval": "Reload Interval",
+    "VaultURI": "Vault U.R.I.",
+    "appsettings.json": "app settings dot JSON",
+    "Program.cs": "Program dot C.S.",
+    "KeyVault": "Key Vault",
+    "OrchardCore": "Orchard Core"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Azure Key Vault Configuration",
+      "subtitle": "Keep settings out of files",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Connection strings, storage keys and other settings often sit in appsettings.json files or environment variables. The Azure Key Vault configuration provider reads them from a vault instead. In this video, you add it to an Orchard Core host and name your secrets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Settings in a vault",
+      "subtitle": "Why read configuration from a vault",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A database connection string or a storage key is a secret. It is often kept in an appsettings.json file or in an environment variable, on every machine that runs the site."
+            },
+            {
+              "id": "why-2",
+              "text": "The Azure Key Vault configuration provider adds the secrets of a vault to the application configuration. Orchard Core reads them the same way as the values of appsettings.json, so the settings of its modules can live in the vault."
+            },
+            {
+              "id": "why-3",
+              "text": "The provider is a library for the host, not a module: you enable nothing in the admin, and it has no screen. The Secrets module has its own Azure Key Vault store, for secrets created in the admin. That is a separate feature."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add the provider",
+      "subtitle": "The package and the host",
+      "clips": [
+        {
+          "id": "02-host",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "host-1",
+              "text": "Add a reference to the OrchardCore.Configuration.KeyVault package in your web project. Then, in Program.cs, call AddOrchardCoreAzureKeyVault on the configuration of the builder, before the application is built."
+            },
+            {
+              "id": "host-2",
+              "text": "The method also extends the host builder and the web host builder, so it fits the Generic Host that the documentation shows. All three add the vault the same way, and all three accept an optional token credential."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Configure the vault",
+      "subtitle": "Name, address, reload and order",
+      "clips": [
+        {
+          "id": "03-config",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "config-1",
+              "text": "The vault is configured under OrchardCore, KeyVault, Azure. KeyVaultName is the name of the vault, and VaultURI is its full address. When you set both, VaultURI takes precedence."
+            },
+            {
+              "id": "config-2",
+              "text": "The call reads these settings from the sources registered before it, such as appsettings.json or environment variables, and not from a tenant. With neither a name nor an address, it throws an exception that names the missing setting."
+            },
+            {
+              "id": "config-3",
+              "text": "ReloadInterval is the number of seconds to wait between attempts at polling the vault for changes. Leave it empty to disable reloading."
+            },
+            {
+              "id": "config-4",
+              "text": "The provider is added where you call the method, after the sources registered before it. A value in the vault replaces the same key in the project's appsettings.json. How Orchard Core combines the other sources is the subject of a separate video."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose the credential",
+      "subtitle": "Which identity reads the vault",
+      "clips": [
+        {
+          "id": "04-auth",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "auth-1",
+              "text": "Called without an argument, the method creates a DefaultAzureCredential, with interactive credentials included. The documentation describes it as appropriate for most scenarios where the application runs in Azure."
+            },
+            {
+              "id": "auth-2",
+              "text": "To use another credential, pass a TokenCredential to the method. The identity behind it must be allowed to read the secrets of the vault. On a development machine, the documentation describes signing in from Visual Studio or Visual Studio Code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Name the secrets",
+      "subtitle": "From vault names to configuration keys",
+      "clips": [
+        {
+          "id": "05-names",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "names-1",
+              "text": "Azure Key Vault does not allow a colon or an underscore in the name of a secret, so the provider translates the name. Two hyphens become a colon, and three hyphens become an underscore."
+            },
+            {
+              "id": "names-2",
+              "text": "The first name on screen is the documentation's example: its parts, joined by two hyphens, become the path of a configuration key. Three hyphens give an underscore, and a single hyphen stays a hyphen."
+            },
+            {
+              "id": "names-3",
+              "text": "Without a tenant name, the value applies to every tenant, as in the first name. With a tenant name after OrchardCore, as in the second, it applies to that tenant only. This follows the layout of the OrchardCore section of appsettings.json."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "In short",
+      "subtitle": "The steps in the order you do them",
+      "clips": [
+        {
+          "id": "06-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "In short, create the secrets in the vault, with hyphens in their names. Reference the package, call the method in the host, and set KeyVaultName or VaultURI. And let the identity that runs the site read the secrets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Azure Key Vault Configuration",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Azure Key Vault configuration provider keeps your settings out of your files. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
