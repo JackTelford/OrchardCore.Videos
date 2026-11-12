@@ -1,0 +1,255 @@
+{
+  "title": "The Orchard Core Audit Trail module",
+  "output": "audit-trail-overview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Audit Trail module",
+      "subtitle": "See who changed what, and when",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Who changed this page, and when? The Audit Trail module records changes made in the admin, so you can answer that question. In this video, you turn it on, make a change, and read the log it keeps."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why an audit trail",
+      "subtitle": "A record of back-end changes",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "With several people editing a site, questions come up: who published this page, and when did its title change? Without a record, the answer is a guess."
+            },
+            {
+              "id": "why-2",
+              "text": "The Audit Trail module logs back-end changes as events. Each event has a category and a name, the user who caused it, and the time it happened."
+            },
+            {
+              "id": "why-3",
+              "text": "The Contents module adds the Content category, with events such as Created, Saved, Published, Removed, and Restored. The Users Audit Trail feature adds User events, such as Logged in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the module",
+      "subtitle": "Tools, Features",
+      "short": "enable",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's start in Tools, Features. Search for Audit Trail. It is listed in the Security category, with a short description of what it does."
+            },
+            {
+              "id": "enable-2",
+              "text": "Click Enable on the Audit Trail row. A message confirms that the feature Audit Trail was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "With the feature enabled, the admin menu has two Audit Trail entries: one under Tools, for the log, and one under Settings, for its configuration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose what to record",
+      "subtitle": "Events, retention and content types",
+      "short": "settings",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Open Settings, Audit Trail. The Events tab lists every event the module can record, each with a description and an Enabled box. The Content events are enabled by default."
+            },
+            {
+              "id": "settings-2",
+              "text": "The Trimming tab sets the Retention period, which is 10 days unless you change it. A daily task deletes events older than that."
+            },
+            {
+              "id": "settings-3",
+              "text": "On the Content tab, Allowed content types lists your content types. Check Article. Until you check a type, no content events are recorded for it."
+            },
+            {
+              "id": "settings-4",
+              "text": "Click Save. A message confirms that the site settings were updated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Make a change",
+      "subtitle": "Edit and publish an Article",
+      "short": "make-a-change",
+      "clips": [
+        {
+          "id": "04-change",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "change-1",
+              "text": "Let's make a change. Open Content, Content Items, search for Pruning, and click Edit on the Article Pruning workshop, which Jamie Chen created earlier."
+            },
+            {
+              "id": "change-2",
+              "text": "Change the Title to Pruning workshop for beginners, and click Publish."
+            },
+            {
+              "id": "change-3",
+              "text": "A message confirms that the Article was published. The module has recorded an event for this change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Read the log",
+      "subtitle": "Rows, filters and search",
+      "short": "read-the-log",
+      "clips": [
+        {
+          "id": "05-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Open Tools, Audit Trail. Each row is one event, with the newest first. Its badges give the event name, the category, how long ago it happened, and the user who caused it."
+            },
+            {
+              "id": "list-2",
+              "text": "The text next to the badges names the version and the item. The version links to the item as it was then, and the title links to the item's editor."
+            },
+            {
+              "id": "list-3",
+              "text": "At the end of each row, View opens the item as it was at that version, and Details opens the full event. Published events whose version is no longer the latest, and Removed events, also get a Restore button."
+            },
+            {
+              "id": "list-4",
+              "text": "To narrow the list, use the Date and Category lists. The Sort list changes the order of the rows. Date offers ranges such as Last 24 hours and This week."
+            },
+            {
+              "id": "list-5",
+              "text": "Type a user name in the Search box to see one person's events. Searching for jamie keeps only the events that user caused. The Filters button opens a menu with Filter syntax, which lists the other search terms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Event details",
+      "subtitle": "Everything recorded about one event",
+      "short": "event-details",
+      "clips": [
+        {
+          "id": "06-details",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "details-1",
+              "text": "Click Details on the first row. The Audit Trail Event page opens with an Event Info table: the category, the event name, who triggered it, and when."
+            },
+            {
+              "id": "details-2",
+              "text": "Under it, Content Item Info shows the Content Item Id, the content type, the display text, the version, and any comment the editor left."
+            },
+            {
+              "id": "details-3",
+              "text": "A Diff tab on this page compares the item with the way the previous event for that item recorded it. A separate video shows how to compare and restore versions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "History of one item",
+      "subtitle": "The log for a single content item",
+      "short": "item-history",
+      "clips": [
+        {
+          "id": "07-item",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "item-1",
+              "text": "To see the history of one item, open Content, Content Items. In the row of the Article, open Actions, and choose Audit Trail."
+            },
+            {
+              "id": "item-2",
+              "text": "The page lists only the events of that item. The Category list is replaced by an Events list, which filters by event name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Good to know",
+      "subtitle": "Permissions, comments and user events",
+      "clips": [
+        {
+          "id": "08-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "notes-1",
+              "text": "Two permissions belong to the module: View audit trail, to read the log, and Manage audit trail settings, to change what is recorded. Opening Settings, Audit Trail also takes the Manage settings permission. The Administrator role has all of them."
+            },
+            {
+              "id": "notes-2",
+              "text": "The module also provides a content part. Add it to a content type, and editors get a Comment box. The comment is saved with the event, and it appears in the log and in the event's details."
+            },
+            {
+              "id": "notes-3",
+              "text": "The Users Audit Trail feature records user events, such as Logged in. The Events tab also has an Allow client IP address box, and depending on your legislation, an IP address can be personal data. A separate video covers these settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Audit Trail module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Audit Trail keeps a record of who changed what, and when. Enable it, choose the content types to record, and read the log under Tools, Audit Trail. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

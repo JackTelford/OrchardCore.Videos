@@ -1,0 +1,49 @@
+{
+  "title": "Audit Trail: See Who Changed What and When | Orchard Core",
+  "description": "When several people edit a site, it is hard to say who changed a page, when they changed it, and what it said before.\n\nThe Audit Trail module records back-end changes as events, each with a category, an event name, the user who caused it and the time. This video enables the module, chooses what to record, makes a change, and reads the log.\n\nIn this video:\n• Why an audit trail\n• Enable the module\n• Choose what to record\n• Make a change\n• Read the log\n• Event details\n• History of one item\n• Good to know: permissions, comments and user events",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AuditTrail"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Audit Trail",
+    "audit log",
+    "content versions",
+    "Orchard Core admin",
+    "security"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Audit Trail"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AuditTrail/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/AuditTrail/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AuditTrail"
+  }
+}
