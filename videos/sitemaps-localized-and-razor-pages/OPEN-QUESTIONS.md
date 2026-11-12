@@ -55,7 +55,7 @@ file, so `hreflang` is replaced before `href`.
 In `src/OrchardCore.Modules/OrchardCore.ContentLocalization/Sitemaps/LocalizedContentItemsQueryProvider.cs:52-80`, when
 the Sitemap Content Types source uses "Limit Items" and the type has a `LocalizationPart`, the query keeps only the items
 of the default culture (the comment says "Content item is valid if it is for the default culture"), and
-`ReferenceContentItems` (line 116) is that same list. The metadata provider looks for the other localizations among
+`ReferenceContentItems` (line 116) is that list reduced to the items that have a `LocalizationPart` (`Has<LocalizationPart>()`), so it holds no other culture. The metadata provider looks for the other localizations among
 `ReferenceContentItems`, so the alternate links of such a sitemap seem to hold only the default culture. The comment on
 line 68 says that all items are fetched "for reference", which the code does not do. Also, the source builder
 (`src/OrchardCore.Modules/OrchardCore.Contents/Sitemaps/ContentTypesSitemapSourceBuilder.cs`, batch of 500) queries items in
