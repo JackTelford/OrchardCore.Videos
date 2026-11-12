@@ -1,0 +1,57 @@
+{
+  "title": "Workflows and the Database Session: Commit, Fork and Join | Orchard Core",
+  "description": "While a workflow runs, everything its activities save goes through one database session, and the changes are committed together when the request or background task that runs the workflow ends. Some workflows need to commit part of their work before they go on.\n\nThe Session Workflows Activities feature adds the Commit Transaction task, which commits the session in the middle of a run and skips the commit when the model state is invalid. It works with Fork and Join like any other activity.\n\nIn this video:\n• The database session of a workflow run, and when it is committed\n• The Commit Transaction task: the feature, the designer and the code\n• Fork and Join: branches that run one after the other on one session, and a run you can follow in the journal\n• Where to place the commit in a workflow",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Workflow activities",
+    "Commit Transaction",
+    "Fork and Join",
+    "YesSql"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Workflows",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Documentation: Tenants (feature profiles)",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Documentation: How YesSql works",
+      "url": "https://docs.orchardcore.net/en/latest/topics/data/yessql/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows.Session"
+  }
+}
