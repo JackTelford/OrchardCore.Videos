@@ -1,0 +1,199 @@
+{
+  "title": "Sitemap Indexes and the Sitemaps Cache",
+  "output": "sitemaps-indexes-and-cache",
+  "spoken": {
+    ".xml": " dot X.M.L.",
+    "robots.txt": "robots dot T.X.T.",
+    "SEO": "S.E.O."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Sitemap Indexes and the Sitemaps Cache",
+      "subtitle": "One address for several sitemaps, and the cache behind them",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A large site often needs more than one sitemap. In this video, you combine sitemaps in a sitemap index, look at the Sitemaps Cache where Orchard Core stores them, and enable the cleanup that keeps that cache tidy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why a sitemap index",
+      "subtitle": "One address for several sitemaps",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Search engines limit how large one sitemap can be, so a big site spreads its pages over several sitemaps. You can split them by content type, or with the Limit Items option, which has Skip and Take."
+            },
+            {
+              "id": "why-2",
+              "text": "A sitemap index is a sitemap of sitemaps. It lists the address of each sitemap it contains, with a last modified date, so a search engine needs only one address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create a sitemap index",
+      "subtitle": "Name, permalink and contained sitemaps",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Two sitemaps already exist on this site, Posts and Articles. Creating sitemaps is covered in a separate video. Let's combine these two in an index."
+            },
+            {
+              "id": "create-2",
+              "text": "Under Tools, Search Engine Optimization, Sitemap Indexes lists your indexes, and the list is empty. Let's choose Add Sitemap Index."
+            },
+            {
+              "id": "create-3",
+              "text": "Name the index Main. The Permalink is its address, it is required, and it must end in .xml, so we use sitemap.xml. The text before it is the Base url from Settings, General."
+            },
+            {
+              "id": "create-4",
+              "text": "Check Enabled, so the index is served. Under Contained Sitemaps, check Articles and Posts. An index contains sitemaps, never other indexes."
+            },
+            {
+              "id": "create-5",
+              "text": "Save creates the index. The list shows Main as Enabled, with the buttons View, Edit and Delete. Edit lets you change its name, permalink and contained sitemaps later."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "View the index",
+      "subtitle": "And how search engines find it",
+      "clips": [
+        {
+          "id": "03-view",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "View opens the index in another tab. For each contained sitemap, it gives an address and a last modified date, and a search engine follows those addresses."
+            },
+            {
+              "id": "view-2",
+              "text": "Each address leads to one sitemap. Posts lists each published blog post, with its address, last modified date, change frequency and priority."
+            },
+            {
+              "id": "view-3",
+              "text": "With the SEO feature enabled, Settings, Search, Search Engine Optimization, Robots has a checkbox, Include all sitemaps. Keep it checked and save the page. With a Base url set, your sitemaps are then added to the robots.txt file."
+            },
+            {
+              "id": "view-4",
+              "text": "The robots.txt file names an enabled index instead of each sitemap inside it, so crawlers learn about every sitemap in the index from one line."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "How the cache works",
+      "subtitle": "Sitemaps are stored as files",
+      "clips": [
+        {
+          "id": "04-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "Building a sitemap takes work, so Orchard Core builds it the first time someone requests it, and stores it as a file. The file name is the sitemap name followed by an identifier."
+            },
+            {
+              "id": "how-2",
+              "text": "Saving a sitemap, or publishing content that it lists, changes its identifier. The next request builds it again under a different file name, and the old file stays on disk, unused."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The Sitemaps Cache",
+      "subtitle": "See the cached files and purge them",
+      "clips": [
+        {
+          "id": "05-cache",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cache-1",
+              "text": "Under Tools, Search Engine Optimization, Sitemaps Cache lists every cached file by its file name. Here are the index, the Articles sitemap, and two files for Posts."
+            },
+            {
+              "id": "cache-2",
+              "text": "Publishing a blog post changes the identifier of the Posts sitemap, so one of its two files is no longer used. Only a purge, or the cleanup feature, deletes it."
+            },
+            {
+              "id": "cache-3",
+              "text": "Purge on a row deletes that file, after you confirm. Let's purge the Posts file that is no longer used."
+            },
+            {
+              "id": "cache-4",
+              "text": "Purge All deletes every cached file, after you confirm. Nothing is lost: each sitemap is built again the next time it is requested."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Sitemaps Cleanup",
+      "subtitle": "Remove unused files automatically",
+      "clips": [
+        {
+          "id": "06-cleanup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cleanup-1",
+              "text": "Instead of purging by hand, enable the Sitemaps Cleanup feature. Under Tools, Features, search for sitemaps, and choose Enable on Sitemaps Cleanup."
+            },
+            {
+              "id": "cleanup-2",
+              "text": "With the Background Tasks feature enabled, Tools, Background Tasks lists a task named Sitemap Cache Cleaner. By default it runs every five minutes, and deletes cache files that no sitemap or index uses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Sitemap Indexes and the Sitemaps Cache",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A sitemap index gives search engines one address for all your sitemaps, and the Sitemaps Cache holds their files until you purge them or the cleanup removes them. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Sitemap Indexes and the Sitemaps Cache | Orchard Core",
+  "description": "Search engines limit how large one sitemap can be, so a big site needs several sitemaps. Each one then needs to be found, and the files Orchard Core builds for them need to be managed.\n\nA sitemap index groups your sitemaps under a single address. The Sitemaps Cache holds the file built for each sitemap, and the Sitemaps Cleanup feature removes the files that are no longer used.\n\nIn this video:\n• Why a sitemap index\n• Create a sitemap index\n• View the index\n• How the cache works\n• The Sitemaps Cache\n• Sitemaps Cleanup",
+  "hashtags": [
+    "OrchardCore",
+    "SEO"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Sitemaps",
+    "Sitemap Index",
+    "Sitemap cache",
+    "SEO",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "SEO and Analytics"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Sitemaps/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Sitemaps/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Sitemaps"
+  }
+}
