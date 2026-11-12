@@ -1,0 +1,278 @@
+{
+  "title": "OpenTelemetry in Orchard Core",
+  "output": "opentelemetry",
+  "spoken": {
+    "OTEL_EXPORTER_OTLP_ENDPOINT": "O.T.E.L. exporter O.T.L.P. endpoint",
+    "OrchardCore.OpenTelemetry": "Orchard Core dot Open Telemetry",
+    "OrchardCore.DisplayManagement": "Orchard Core dot Display Management",
+    "OrchardCore.Cms.Web": "Orchard Core dot C.M.S. dot Web",
+    "OrchardCore.Abstractions": "Orchard Core dot Abstractions",
+    "OrchardCoreTelemetry": "Orchard Core Telemetry",
+    "orchardcore.tenant.name": "orchard core dot tenant dot name",
+    "orchardcore.tenants": "orchard core dot tenants",
+    "service.instance.id": "service dot instance dot I.D.",
+    "service.name": "service dot name",
+    "http.server.request.duration": "H.T.T.P. server request duration",
+    "System.Runtime": "System dot Runtime",
+    "AddOrchardCoreInstrumentation": "Add Orchard Core Instrumentation",
+    "AddOpenTelemetry": "Add Open Telemetry",
+    "HasOtlpEndpoint": "Has O.T.L.P. Endpoint",
+    "Otlp": "O.T.L.P.",
+    "ServiceInstanceId": "Service Instance I.D.",
+    "ServiceName": "Service Name",
+    "SamplingRatio": "Sampling Ratio",
+    "SlowShapeThreshold": "Slow Shape Threshold",
+    "IncludeTenantName": "Include Tenant Name",
+    "RecordException": "Record Exception",
+    "ActivitySource": "Activity Source",
+    "HttpClient": "H.T.T.P. Client",
+    "ILogger": "I Logger",
+    "OTLP": "O.T.L.P.",
+    "http/protobuf": "H.T.T.P. protobuf",
+    "web-1": "web one",
+    "YesSql": "Yes S.Q.L.",
+    "OrchardCore": "Orchard Core"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "OpenTelemetry in Orchard Core",
+      "subtitle": "Traces, metrics and logs for each tenant",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "OpenTelemetry collects the traces, metrics and logs of an Orchard Core application, and tags them with the tenant that produced them. In this video, you enable it, read its telemetry in the Aspire dashboard, and configure what it collects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What it collects",
+      "subtitle": "Three signals, tagged by tenant",
+      "clips": [
+        {
+          "id": "01-collect",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "collect-1",
+              "text": "OpenTelemetry collects traces, metrics and logs from Orchard Core, ASP.NET Core, HttpClient and the .NET runtime. It exports them over OTLP to any compatible backend, such as the Aspire dashboard, Grafana or Azure Monitor."
+            },
+            {
+              "id": "collect-2",
+              "text": "Spans, log records and HTTP server metrics carry the name of their tenant in the orchardcore.tenant.name attribute. Resource attributes, such as service.instance.id, identify each instance, so tenants and web farm instances can be told apart."
+            },
+            {
+              "id": "collect-3",
+              "text": "Unlike a module feature, it isn't enabled per tenant. Its listeners are global to the process, a request is traced before its tenant is known, a rebuilt tenant would reset its metrics, and the host decides where telemetry goes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enabling it",
+      "subtitle": "One call in the host",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Reference the OrchardCore.OpenTelemetry package, and call AddOpenTelemetry on the Orchard Core builder. Telemetry is collected even when nothing exports it. An optional callback adds other exporters and instrumentations."
+            },
+            {
+              "id": "enable-2",
+              "text": "The OrchardCore.Cms.Web application exports telemetry only when an endpoint is configured, so it checks HasOtlpEndpoint before calling AddOpenTelemetry. Without an endpoint, nothing is collected."
+            },
+            {
+              "id": "enable-3",
+              "text": "You set the endpoint of the OTLP receiver in the Otlp section of the OrchardCore OpenTelemetry configuration, or with the standard OTEL_EXPORTER_OTLP_ENDPOINT value, for example as an environment variable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Trying it",
+      "subtitle": "Two tenants and a dashboard",
+      "clips": [
+        {
+          "id": "03-try",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "try-1",
+              "text": "For this video, the application sends its telemetry to the Aspire dashboard, with web-1 as its service instance ID. It serves two tenants: Default, and Marketing under the marketing URL prefix."
+            }
+          ]
+        },
+        {
+          "id": "03-browse",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "browse-1",
+              "text": "Let's open the Default tenant. Its home page is served at the root of the site, and the request is traced like every other."
+            },
+            {
+              "id": "browse-2",
+              "text": "The Marketing tenant answers under its own prefix. The same application serves both tenants, and each request is tagged with the tenant that handled it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Traces",
+      "subtitle": "Requests, tenants and recipes",
+      "clips": [
+        {
+          "id": "04-traces",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "traces-1",
+              "text": "In the dashboard, the traces list the requests of both tenants, and the work Orchard Core does around them. Their resource is the application, named by its service.name attribute."
+            },
+            {
+              "id": "traces-2",
+              "text": "The spans carry the tenant name, so let's filter the traces on the orchardcore.tenant.name attribute. We choose the value Marketing, and apply the filter, to keep only the requests that the Marketing tenant served."
+            },
+            {
+              "id": "traces-3",
+              "text": "Opening a request shows its spans. The span of the request itself holds the orchardcore.tenant.name attribute, which Orchard Core adds once the request has been processed."
+            },
+            {
+              "id": "traces-4",
+              "text": "Orchard Core adds spans of its own. This trace shows the recipe that set up the tenant, with a span for the recipe and one for each step. Building and activating a tenant, and running a background task, get spans too."
+            },
+            {
+              "id": "traces-5",
+              "text": "A Render shape span appears for a shape slower than the slow shape threshold. Here the threshold is zero, so every shape of the page has a span, with the template or shape method that rendered it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Metrics",
+      "subtitle": "By tenant, and by runtime",
+      "clips": [
+        {
+          "id": "05-metrics",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "metrics-1",
+              "text": "In the metrics, http.server.request.duration records how long requests take. It carries the orchardcore.tenant.name attribute, so the Default and Marketing tenants can be compared."
+            },
+            {
+              "id": "metrics-2",
+              "text": "The OrchardCore meter adds orchardcore.tenants, the number of tenants by state, and the durations of building and activating a tenant. The System.Runtime meter reports the health of the instance."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Logs",
+      "subtitle": "Structured, with the tenant",
+      "clips": [
+        {
+          "id": "06-logs",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "logs-1",
+              "text": "The structured logs show the records written through ILogger, with their attributes and scopes. Records written while a tenant handles a request carry the orchardcore.tenant.name attribute, here with the value Marketing."
+            },
+            {
+              "id": "logs-2",
+              "text": "The log levels of the application's Logging configuration apply to these records. Setting Enabled to false in the Logging options of OpenTelemetry stops the collection of logs only, and leaves traces and metrics running. A separate video covers logging."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Configuring it",
+      "subtitle": "Options, sources, meters and exporters",
+      "clips": [
+        {
+          "id": "07-configure",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "conf-1",
+              "text": "The options are read from the OrchardCore OpenTelemetry section. ServiceName and ServiceInstanceId identify the application and this instance. SamplingRatio keeps a fraction of the traces, SlowShapeThreshold sets when a shape gets a span, and IncludeTenantName tags the HTTP metrics."
+            },
+            {
+              "id": "conf-2",
+              "text": "OpenTelemetry collects only the activity sources and meters it is told about. Add YesSql to the Tracing Sources and Metrics Meters settings to see database commands. A session running many commands reveals an N plus one query pattern."
+            },
+            {
+              "id": "conf-3",
+              "text": "To find slow templates, add the OrchardCore.DisplayManagement source and meter. Every rendered shape then gets a span, nested like the shapes, and a histogram records the rendering duration of each shape type."
+            },
+            {
+              "id": "conf-4",
+              "text": "For a hosted backend such as Grafana Cloud, the protocol is http/protobuf, and the headers carry the credentials. Setting Enabled to false turns all telemetry off."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Extending it",
+      "subtitle": "Existing setups and your own modules",
+      "clips": [
+        {
+          "id": "08-extend",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ext-1",
+              "text": "When the application already configures OpenTelemetry, for example with the service defaults of an Aspire solution, call AddOrchardCoreInstrumentation on the tracing, metrics and logging builders. Add it before the exporters."
+            },
+            {
+              "id": "ext-2",
+              "text": "A module emits its own spans with the OrchardCoreTelemetry ActivitySource, from OrchardCore.Abstractions. RecordException marks a failed operation, and a span started in a tenant scope is tagged with its tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "OpenTelemetry in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "OpenTelemetry tags the traces, metrics and logs of an Orchard Core application with their tenant, and sends them to the backend you choose. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
