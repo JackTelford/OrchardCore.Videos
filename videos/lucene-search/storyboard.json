@@ -1,0 +1,227 @@
+{
+  "title": "Orchard Core Lucene search",
+  "output": "lucene-search",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Lucene search",
+      "subtitle": "Full-text search with no external service",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Lucene module gives your site full-text search with no other service, because the index lives inside the site. In this video, you enable Lucene, create an index, learn what the search looks in, search the site, and see how servers stay in sync."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How Lucene search works",
+      "subtitle": "An index inside your site",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Searching needs an index: a copy of your text, organized so that words are found quickly. Elasticsearch and Azure AI Search keep that index in a separate service. Lucene keeps it inside your site."
+            },
+            {
+              "id": "why-2",
+              "text": "With the Lucene module, an index is a set of files in the folder of your tenant, the name Orchard Core gives to a site, on the server that runs it. When content is published, unpublished or removed, the index is updated."
+            },
+            {
+              "id": "why-3",
+              "text": "The module adds Lucene indexes to the Indexes page, options for how text is analyzed, and settings for what is indexed. The Search feature then uses an index for the search page of your site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable Lucene",
+      "subtitle": "Turn on the feature",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features, and search for Lucene. The Lucene module lists several features in the Search category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Lucene is the feature that provides indexes. Lucene (Obsolete) exists for backwards compatibility and enables Lucene, and Lucene Content Picker adds an editor for content picker fields."
+            },
+            {
+              "id": "enable-3",
+              "text": "Select Enable on Lucene. A message confirms that the feature is enabled. Lucene depends on the Indexing feature, which provides the Indexes page you use next."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a Lucene index",
+      "subtitle": "Content in Lucene",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Open Search, Indexes, and select Add index. The dialog lists the sources, and under Lucene, Content in Lucene indexes the content items of your site. Select Add on it."
+            },
+            {
+              "id": "create-2",
+              "text": "Index Name is the name of the index in Lucene itself, and it can't change after you save. Name is filled in from it. The search page and the Site Search settings refer to the index by Name."
+            },
+            {
+              "id": "create-3",
+              "text": "Choose the content types to index, at least one. Let's select Article, Blog Post, and Page. Culture can limit the index to one culture, and Any culture indexes them all."
+            },
+            {
+              "id": "create-4",
+              "text": "Analyzer decides how text is split into the terms the index stores, and the default analyzer is selected. Store Source Data keeps field values in the index for later retrieval, and stays unchecked."
+            },
+            {
+              "id": "create-5",
+              "text": "Query field names lists the fields a search looks in. The full-text field, which gathers the searchable text of each item, is selected. Leave the other settings as they are."
+            },
+            {
+              "id": "create-6",
+              "text": "Save creates the index and starts filling it in the background. A message confirms it, and the list shows the index with its provider, Lucene, and its type, Content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "What the search looks in",
+      "subtitle": "Full-text content and index settings",
+      "clips": [
+        {
+          "id": "04-fields",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "fields-1",
+              "text": "Under Design, Content Definition, Content Types, select Edit on Article. Its Full-text section decides what the full-text field holds: the display text, the body parts, or a custom full-text."
+            },
+            {
+              "id": "fields-2",
+              "text": "Include display text and Include body parts are selected by default. That is why a search finds the title and the text of an article."
+            },
+            {
+              "id": "fields-3",
+              "text": "Parts and fields have their own Lucene Index settings. On the Title part, Include this element in the index adds the value of that part to the index as a field of its own."
+            },
+            {
+              "id": "fields-4",
+              "text": "Keyword indexes the value as a single token, and Stored lets you retrieve the original value from the index."
+            },
+            {
+              "id": "fields-5",
+              "text": "Only people with the Manage Lucene Indexes permission see these settings."
+            },
+            {
+              "id": "fields-6",
+              "text": "We do not save this change. The full-text field holds the title, and the search reads that field."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Search the site",
+      "subtitle": "Results from the Lucene index",
+      "clips": [
+        {
+          "id": "05-search",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "search-1",
+              "text": "The Search feature, enabled on the Features page like Lucene, adds a search page for each index. Its address is the address of your site, followed by the word search, a slash and the index name."
+            },
+            {
+              "id": "search-2",
+              "text": "On the page of the index we created, let's search for garden. Lucene looks the word up in the full-text field of every item in the index."
+            },
+            {
+              "id": "search-3",
+              "text": "The results are the content items that match, ordered by how well they match, and shown as summaries."
+            },
+            {
+              "id": "search-4",
+              "text": "Visitors who are not signed in can search once the Anonymous role has the Query any index permission, or the permission Query 'search' Index."
+            },
+            {
+              "id": "search-5",
+              "text": "Without an index name in its address, the search page uses the default index chosen in the Site Search settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Several servers",
+      "subtitle": "Keeping each copy up to date",
+      "clips": [
+        {
+          "id": "06-servers",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "servers-1",
+              "text": "A site can run on several servers. Each server keeps its own Lucene files and its own record of how far it has indexed, so each index must learn about changes made on the other servers."
+            },
+            {
+              "id": "servers-2",
+              "text": "Content changes are recorded in the database. A background task named Indexes Content Updater runs every minute and brings the indexes up to date. The Indexing Worker feature provides that task."
+            },
+            {
+              "id": "servers-3",
+              "text": "The Features page also lists Lucene Worker. It adds no task of its own."
+            },
+            {
+              "id": "servers-4",
+              "text": "A site on one server updates its index itself. A site on several servers relies on the task to reach the other servers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Lucene search",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Lucene module: full-text search with an index inside your site, and a search page that reads it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
