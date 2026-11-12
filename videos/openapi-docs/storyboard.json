@@ -1,0 +1,240 @@
+{
+  "title": "The Orchard Core OpenApi module",
+  "output": "openapi-docs",
+  "spoken": {
+    "/swagger/v1/swagger.json": "slash swagger slash v1 slash swagger dot json",
+    "/scalar/v1": "slash scalar slash v1",
+    "/swagger": "slash swagger",
+    "/redoc": "slash redoc",
+    "/api/": "slash api slash",
+    "ViewOpenApiContent": "View Open API Content",
+    "ApiController": "API controller",
+    "EndpointName": "Endpoint Name",
+    "WithName": "With Name",
+    "ProducesResponseType": "Produces Response Type",
+    "Api scheme": "API scheme",
+    "Api category": "API category",
+    "URI": "U.R.I.",
+    "OpenApi": "Open API",
+    "OpenAPI": "Open API",
+    "Bearer/PKCE": "Bearer slash P.K.C.E.",
+    "PKCE": "P.K.C.E.",
+    "NSwag": "N Swag",
+    "C#": "C sharp"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core OpenApi module",
+      "subtitle": "Document your APIs with Swagger UI, ReDoc and Scalar",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every API needs documentation that stays true to the code. The OpenApi module describes the HTTP endpoints of your site, and shows them in Swagger UI, ReDoc, and Scalar. In this video, you enable the explorers, open them, and document your own endpoints."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How it works",
+      "subtitle": "One document, three explorers",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "The OpenApi module builds an OpenAPI document from the endpoints your site exposes: the controllers and minimal API endpoints of the features you have enabled. It serves the document as JSON, so other tools can read it too."
+            },
+            {
+              "id": "why-2",
+              "text": "Three explorers read that document: Swagger UI, ReDoc, and Scalar. Each one is a feature of its own that depends on OpenApi, so you enable only the ones you want."
+            },
+            {
+              "id": "why-3",
+              "text": "Each explorer has its own address on your site: /swagger for Swagger UI, /redoc for ReDoc, and /scalar/v1 for Scalar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Four features in the Api category",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features, and search for OpenApi. Four features appear in the Api category: OpenApi, and one feature for each explorer."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select OpenApi ReDoc UI, OpenApi Scalar UI, and OpenApi Swagger UI, then choose Bulk Actions, Enable. The OpenApi feature they depend on is enabled with them."
+            },
+            {
+              "id": "enable-3",
+              "text": "The page reloads with a confirmation. Search again, and all four features show the Enabled badge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Access and sign-in",
+      "subtitle": "Permissions and bearer tokens",
+      "clips": [
+        {
+          "id": "03-access",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "access-1",
+              "text": "The explorers are protected. A visitor who is not signed in is redirected to the admin, and a signed-in user without the ViewOpenApiContent permission gets a forbidden response. Administrators have the permission by default."
+            },
+            {
+              "id": "access-2",
+              "text": "Endpoints on the Api scheme accept bearer tokens, not cookies. So Swagger UI and Scalar get a token silently, using an authorization code flow with PKCE against the tenant's OpenID Connect server. ReDoc only reads the document, so it needs no token."
+            },
+            {
+              "id": "access-3",
+              "text": "The recipe OpenAPI Documentation, Bearer/PKCE, under Tools, Recipes, sets this up. It enables the OpenID Connect server, management, and token validation features, requires PKCE, and registers a public client with the client ID openapi."
+            },
+            {
+              "id": "access-4",
+              "text": "The redirect URI of the client starts with localhost on port 5001. Replace that origin with the origin of your site, and keep the path exactly as it is."
+            },
+            {
+              "id": "access-5",
+              "text": "The token stays in memory and never reaches web storage. The page attaches it only to same-origin requests whose path contains /api/, so a server listed in the document never receives it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Swagger UI",
+      "subtitle": "Browse the operations and try them out",
+      "clips": [
+        {
+          "id": "04-swagger",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "swagger-1",
+              "text": "At /swagger, Swagger UI lists the operations of the enabled features, grouped by tag. Each one shows its HTTP method and its route."
+            },
+            {
+              "id": "swagger-2",
+              "text": "Select an operation to see its parameters and responses. This one reads a content item by its id."
+            },
+            {
+              "id": "swagger-3",
+              "text": "Select Try it out, enter the id of a content item, and execute the request. The page adds the bearer token itself, and the response shows the content item as JSON."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "ReDoc and Scalar",
+      "subtitle": "The other two explorers",
+      "clips": [
+        {
+          "id": "05-explorers",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "redoc-1",
+              "text": "At /redoc, ReDoc shows the same operations as read-only documentation. It cannot send requests, so it needs no token."
+            },
+            {
+              "id": "scalar-1",
+              "text": "At /scalar/v1, Scalar presents the same operations as an API reference. Like Swagger UI, it sends requests from the page with a token that it acquires silently."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Schema access",
+      "subtitle": "Settings, OpenApi",
+      "clips": [
+        {
+          "id": "06-schema",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "schema-1",
+              "text": "Under Settings, OpenApi, the page lists the three explorers, each with an Enabled or Disabled badge, and the address of each enabled one. You turn the explorers on and off on the Features page."
+            },
+            {
+              "id": "schema-2",
+              "text": "Allow anonymous access to the API schema is off by default. Turn it on, and tools such as NSwag can fetch the JSON schema at /swagger/v1/swagger.json without authentication."
+            },
+            {
+              "id": "schema-3",
+              "text": "Save the settings. Saving restarts the tenant, so the change applies to the next request."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Document your own endpoints",
+      "subtitle": "Controllers and named endpoints",
+      "clips": [
+        {
+          "id": "07-own",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "own-1",
+              "text": "To document your own endpoint, write a controller with the ApiController attribute and a route that contains /api/. Authorize it with the Api scheme, so it accepts bearer tokens. The module discovers it, and every explorer lists it."
+            },
+            {
+              "id": "own-2",
+              "text": "Add the ProducesResponseType attribute to an action for each response it can return. The explorers list those responses with the operation."
+            },
+            {
+              "id": "own-3",
+              "text": "Minimal API endpoints are listed too. Name an endpoint with EndpointName or WithName, and NSwag uses that name for the method of the C# client it generates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core OpenApi module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the OpenApi module: one OpenAPI document of your endpoints, shown in Swagger UI, ReDoc, and Scalar. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

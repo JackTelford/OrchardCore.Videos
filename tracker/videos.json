@@ -5334,9 +5334,9 @@
     "docs": [
       "src/docs/reference/modules/OpenApi/README.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 4.5,
-    "words": 0,
+    "words": 673,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
