@@ -1,0 +1,158 @@
+{
+  "title": "Orchard Core Development Tools",
+  "output": "development-tools",
+  "spoken": {
+    "NuGet.config": "NuGet dot config",
+    "App_Data": "App Data",
+    "OrchardCore.db": "Orchard Core dot D.B",
+    "OrchardCore.Application.Cms.Targets": "Orchard Core Application CMS Targets",
+    "OrchardCorePreview": "Orchard Core Preview",
+    "smtp4dev": "S.M.T.P. for dev",
+    "dotnet": "dot net",
+    "CLI": "C.L.I.",
+    "CI": "C.I."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Development Tools",
+      "subtitle": "Editors, preview packages and local NuGet feeds",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Building with Orchard Core takes an editor, a few utilities, and a source of packages. This video covers the tools the documentation suggests, how to add the preview package feed, and how to build a local NuGet feed from the source code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Editors and utilities",
+      "subtitle": "What to build with, and what to inspect with",
+      "clips": [
+        {
+          "id": "01-tools",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tools-1",
+              "text": "You can build with Orchard Core in any tool that edits source files and builds a .NET application, on any platform .NET supports. The documentation names Visual Studio on Windows, the cross-platform Visual Studio Code, and JetBrains Rider."
+            },
+            {
+              "id": "tools-2",
+              "text": "For Visual Studio, the documentation suggests two optional extras: the Lombiq Orchard Visual Studio Extension, which adds utilities such as an error log watcher and a dependency injector, and code snippets from the Orchard Dojo Library for common module and theme scenarios."
+            },
+            {
+              "id": "tools-3",
+              "text": "DB Browser for SQLite opens the SQLite file of a tenant, found in App_Data, Sites, in a folder named after the tenant. By default, setup names it OrchardCore.db. You can browse the tables, run queries, and display the JSON documents formatted."
+            },
+            {
+              "id": "tools-4",
+              "text": "smtp4dev is an SMTP server that runs locally to test email. Install it with dotnet, enable the SMTP Email Provider feature, and enter a sender email address, host name and port number under Settings, Communication, Email. Its web interface lists the emails it processed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Preview packages",
+      "subtitle": "Try the development code of Orchard Core",
+      "clips": [
+        {
+          "id": "02-preview",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sources-1",
+              "text": "Release packages are published to NuGet, built from the code of a release's version tag. Preview packages are published to Cloudsmith by a daily build, when the main branch has changes. The Preview CI workflow can also be run manually."
+            },
+            {
+              "id": "sources-2",
+              "text": "Preview packages hold the development code: they are not the most stable, and can contain breaking changes. Use them to try a fix for a bug you reported, not in production. They are not kept forever, and nothing guarantees how long one stays available."
+            },
+            {
+              "id": "feed-1",
+              "text": "The preview feed is a NuGet source hosted on Cloudsmith, at the first address on screen. It receives the packages of each successful preview build, and restoring packages from it needs no credentials."
+            },
+            {
+              "id": "vs-1",
+              "text": "In Visual Studio, open Tools, NuGet Package Manager, Package Manager Settings, and select Package Sources. Add a source named OrchardCorePreview with the feed address, then choose Update, and OK."
+            },
+            {
+              "id": "config-1",
+              "text": "A NuGet.config file adds the same source. This one clears the inherited sources, then lists two: nuget.org under the key NuGet, and the preview feed under the key OrchardCorePreview."
+            },
+            {
+              "id": "cli-1",
+              "text": "The .NET CLI adds the source with one command: dotnet nuget add source, followed by the feed address, and the name option with the name you choose, here OrchardCorePreview."
+            },
+            {
+              "id": "use-1",
+              "text": "To install a preview package from Visual Studio, check Include prerelease in Manage NuGet packages, and select the preview source in Package Source. Preview versions carry the preview suffix, so they are prereleases."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "A local NuGet feed",
+      "subtitle": "Use your own copy of the source as packages",
+      "clips": [
+        {
+          "id": "03-local",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "local-1",
+              "text": "To use a fork or a branch of Orchard Core in your own site as packages, create a local NuGet feed from the source code. There are three steps: pack the packages, publish them to a feed, and point your project at it."
+            },
+            {
+              "id": "local-2",
+              "text": "From the root folder of your fork or branch, run dotnet pack in the Release configuration, with an output folder of your choice. Every package of the source code is written to that one folder."
+            },
+            {
+              "id": "local-3",
+              "text": "Next, publish the packages to a feed. The documentation uses a local feed, a folder on a server, and the nuget init command, which takes the output folder first and the feed folder second."
+            },
+            {
+              "id": "local-4",
+              "text": "Then update your NuGet.config file so its package sources point to the feed. This one clears the inherited sources, then lists the local feed, named MyFeed, and nuget.org."
+            },
+            {
+              "id": "local-5",
+              "text": "Each package takes the version of the source you packed. OrchardCore.Application.Cms.Targets bundles the modules and themes as package references, so one reference to it restores them from your feed, at that version."
+            },
+            {
+              "id": "local-6",
+              "text": "Reference that version everywhere. A package reference takes it in its Version attribute, and the CMS web application template takes it in its orchard-version option, so a project created from it references your packages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Development Tools",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Preview packages and local feeds let you build on the development code, or on your own copy of the source. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
