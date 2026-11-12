@@ -1,0 +1,49 @@
+{
+  "title": "XML-RPC: Publish From Desktop Blogging Clients | Orchard Core",
+  "description": "Desktop blogging clients such as Open Live Writer publish posts to a site through a remote publishing API, so the site needs an endpoint that speaks it.\n\nThe Orchard Core XML-RPC module provides that endpoint, and its Remote Publishing feature adds the MetaWeblog API. Posts go into a blog, a content item with a List part, and each module that owns a part decides how it maps to the members of a post.\n\nIn this video:\n• Two features, one endpoint: what XML-RPC and Remote Publishing do\n• Enabling the features: Remote Publishing and its dependency\n• How a client finds your blog: the manifest and the RSD document\n• What a client can do: calls, members and permissions\n• A post from a client: published and draft posts\n• Extending the API: drivers and handlers",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "XMLRPC"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "XML-RPC",
+    "MetaWeblog",
+    "Open Live Writer",
+    "Remote Publishing",
+    "Blogging"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Headless and APIs"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/XmlRpc/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/XmlRpc/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.XmlRpc"
+  }
+}
