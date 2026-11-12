@@ -1,6 +1,6 @@
 # Custom Settings: Turn a Content Type Into Site Settings
 
-**YouTube:** not published yet · **Length:** 4:26 · **Feature:** [`OrchardCore.CustomSettings`](https://docs.orchardcore.net/en/latest/reference/modules/CustomSettings/)
+**YouTube:** not published yet · **Length:** 4:28 · **Feature:** [`OrchardCore.CustomSettings`](https://docs.orchardcore.net/en/latest/reference/modules/CustomSettings/)
 
 An admin video about the Custom Settings feature. It explains what a custom settings section is, then enables the
 feature, creates a content type with two fields, clears its content options and gives it the CustomSettings stereotype,

@@ -76,8 +76,7 @@ recording plan, and run `python tools/validate_content.py custom-settings` again
     (`src/docs/reference/modules/CustomSettings/README.md`: the Liquid `Site.Properties` object and
     `GetCustomSettingsAsync`, which exists in `src/OrchardCore/OrchardCore.Contents.Core/SiteServiceExtensions.cs:14`). The video shows
     no template and no front-end page. Nobody has run a template that reads these values for this video.
-15. **"Marking a type that already has content items breaks those items"** (`idea-4`). It comes from the warning in the
-    same documentation page. The code was not traced to confirm it.
+15. **The warning about existing content types** (`idea-4`). The narration only says that the documentation warns against giving the stereotype to a type that already has content items (`src/docs/reference/modules/CustomSettings/README.md`). The code was traced: nothing in the module changes existing items, so what exactly breaks is not verified. Try it on a throwaway type with one item if the video should say more.
 16. **"No role receives it automatically, but the Administrator role has every permission"** (`perm-1`). The first half
     follows from `GetDefaultStereotypes` returning nothing (`OrchardCore.CustomSettings/Permissions.cs:40-41`). The second
     half is the text the role editor shows for the Administrator role

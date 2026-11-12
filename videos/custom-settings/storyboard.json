@@ -45,7 +45,7 @@
             },
             {
               "id": "idea-4",
-              "text": "Create a separate content type for every section. Marking a type that already has content items with this stereotype breaks those items."
+              "text": "Create a separate content type for every section. Do not give the stereotype to a type that already has content items: the documentation warns against it."
             }
           ]
         }

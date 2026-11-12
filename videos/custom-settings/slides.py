@@ -26,7 +26,7 @@ VALUES = [
 
 CAUTION = [
     ("1", "A content type of its own", "Create a separate type for every section."),
-    ("2", "Not a type with content items", "Marking such a type with the stereotype breaks those items."),
+    ("2", "Not a type with content items", "The documentation warns against marking such a type."),
 ]
 
 
