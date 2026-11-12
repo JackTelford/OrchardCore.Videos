@@ -1,0 +1,53 @@
+{
+  "title": "Admin Culture Picker and the Content-Language Header | Orchard Core",
+  "description": "An editor can prefer to work in a language other than the one the site is published in.\n\nThe Admin Culture Picker adds a drop-down to the admin top bar, so you choose the culture of the admin pages in your browser. The Content Language Header adds a Content-Language header that names the language of the responses of the site.\n\nIn this video:\n• What the Admin Culture Picker and the Content Language Header do\n• Enabling both features on the Features page\n• Adding a second supported culture so the picker appears\n• Choosing the admin culture, and why the front end does not follow it\n• What the Content-Language header carries",
+  "hashtags": [
+    "OrchardCore",
+    "Localization",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Localization",
+    "Admin Culture Picker",
+    "Content Language Header",
+    "Content-Language",
+    "Cultures"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Localization"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/"
+    },
+    {
+      "label": "Documentation: JavaScript Localization",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Localize/javascript-localization.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Localization.AdminCulturePicker"
+  }
+}

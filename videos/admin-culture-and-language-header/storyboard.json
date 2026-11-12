@@ -1,0 +1,184 @@
+{
+  "title": "Admin Culture Picker and the Content-Language Header",
+  "output": "admin-culture-and-language-header",
+  "spoken": {
+    "PO files": "P.O. files"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Admin Culture Picker and the Content-Language Header",
+      "subtitle": "Choose the language of the admin, and name the language of the responses",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site can be published in one language while its editors prefer to work in another. The Localization module has two small features around language: the Admin Culture Picker and the Content Language Header. Let's see what each one does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two features",
+      "subtitle": "What each one does",
+      "clips": [
+        {
+          "id": "01-features",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A culture is a language, with a region when it has one, such as English for the United States. A site lists the cultures it supports in its settings."
+            },
+            {
+              "id": "why-2",
+              "text": "The Admin Culture Picker is a drop-down in the admin top bar. It lists the supported cultures of the site. The admin follows your choice: the labels that have a translation, and the text direction of a language written right to left."
+            },
+            {
+              "id": "why-3",
+              "text": "The Content Language Header has no screen and no settings. When it is enabled, the responses of the site carry a header that names their language."
+            },
+            {
+              "id": "why-4",
+              "text": "The picker needs the Localization feature and at least two supported cultures. Its labels change where the site has translations for the chosen culture, which PO files provide. A separate video covers installing them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Both features are on the Features page, under Tools. They belong to the Internationalization category, and the search box finds them by name. Let's search for Admin Culture Picker."
+            },
+            {
+              "id": "enable-2",
+              "text": "Its row lists Localization as a dependency. Orchard Core enables a dependency together with the feature, so let's click Enable. A message confirms that the feature was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Let's search for Content Language Header, and enable it the same way. Its row lists the same dependency, Localization."
+            },
+            {
+              "id": "enable-4",
+              "text": "Searching for Localization shows that this feature is enabled as well, along with the two features we enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Supported cultures",
+      "subtitle": "A second culture makes the picker appear",
+      "clips": [
+        {
+          "id": "03-cultures",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cultures-1",
+              "text": "Localization adds a Cultures page to the admin menu, under Settings, Localization. The site supports a single culture, so the top bar shows no culture picker."
+            },
+            {
+              "id": "cultures-2",
+              "text": "Let's choose French in the list, click Add culture, and Save. A separate video covers the Cultures page in detail."
+            },
+            {
+              "id": "cultures-3",
+              "text": "A message says the site restarted for the settings to take effect. When the page loads again, the top bar shows a drop-down with the name of the current culture."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose the admin culture",
+      "subtitle": "Admin pages only, one choice per browser",
+      "clips": [
+        {
+          "id": "04-pick",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "pick-1",
+              "text": "Let's open the drop-down. It lists the other supported cultures, each under its own name, and leaves out the current one."
+            },
+            {
+              "id": "pick-2",
+              "text": "Let's choose français. The page reloads, and the menu and the labels that have a French translation appear in French."
+            },
+            {
+              "id": "pick-3",
+              "text": "A label without a French translation stays in English, because the picker changes the culture, not the translations."
+            },
+            {
+              "id": "pick-4",
+              "text": "Let's visit the site with the Visit Site icon. The front end does not follow the choice, because the choice applies to the admin pages only."
+            },
+            {
+              "id": "pick-5",
+              "text": "Let's return to the admin. The pages stay in French, because the choice is stored in a cookie of this browser."
+            },
+            {
+              "id": "pick-6",
+              "text": "To switch back, let's open the drop-down and choose English (United States). The cookie changes no setting of the site, and another browser has its own choice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The Content Language Header",
+      "subtitle": "A header on the responses of the site",
+      "clips": [
+        {
+          "id": "05-header",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "header-1",
+              "text": "The header describes the language intended for the audience. Its value is the culture the site uses to render the response, the same culture that selects the translations."
+            },
+            {
+              "id": "header-2",
+              "text": "A page in English carries the English culture. In the admin, the header follows the picker, so a page shown in français carries the French culture."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Admin Culture Picker and the Content-Language Header",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Admin Culture Picker sets the language of the admin for your browser, and the Content Language Header names the language of the responses of the site. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
