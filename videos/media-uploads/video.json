@@ -1,0 +1,54 @@
+{
+  "title": "Media Uploads: Slugified Names, Resumable Uploads and Live Updates | Orchard Core",
+  "description": "Folder and file names with spaces and symbols end up in web addresses, a large upload that stops has to start again, and a Media Library open in another window shows an out-of-date file list.\n\nThree features of the Orchard Core Media module handle these cases: Media Slugify cleans the names of the folders you create and the files you upload, Media TUS Uploads sends files in parts that you can pause and resume, and Media SignalR keeps every open Media Library up to date.\n\nIn this video:\n• What the three upload features are for\n• Enabling them under Tools, Features\n• Slugified names for folders and files\n• Pausing, resuming and recovering an upload\n• Live updates in a second browser window\n• What to plan for when a site runs on several servers",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MediaLibrary"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Media Library",
+    "Media Slugify",
+    "TUS",
+    "resumable uploads",
+    "SignalR"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Media Slugify documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/"
+    },
+    {
+      "label": "Media Gallery documentation (TUS uploads and SignalR)",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media.Slugify/README.md",
+    "src/docs/reference/modules/Media/MediaGallery.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media.Slugify"
+  }
+}
