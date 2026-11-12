@@ -1,0 +1,168 @@
+{
+  "title": "The Users Authentication Ticket Store",
+  "output": "users-ticket-store",
+  "spoken": {
+    "ITicketStore": "I Ticket Store",
+    "IDistributedCache": "I Distributed Cache",
+    "CacheTicketStore": "Cache Ticket Store",
+    "SessionStore": "Session Store",
+    "StoreAsync": "Store Async",
+    "RetrieveAsync": "Retrieve Async",
+    "RemoveAsync": "Remove Async",
+    "RenewAsync": "Renew Async"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Users Authentication Ticket Store",
+      "subtitle": "Keep sign-in tickets on the server",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core keeps the ticket of a signed-in user in a cookie. The Users Authentication Ticket Store feature keeps it on the server instead. In this video, we'll see why, how to enable it, how its code works, and where the tickets live."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why a ticket store",
+      "subtitle": "Large cookies, and the server-side answer",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "By default, the application cookie holds the whole authentication ticket. With the Roles module enabled, the ticket carries the claims of the user, including one for each role and, unless the user is an administrator, one for each permission of those roles."
+            },
+            {
+              "id": "why-2",
+              "text": "The more roles and permissions a user has, the larger the cookie. The documentation describes requests that fail when the cookie pushes the request headers over the limit."
+            },
+            {
+              "id": "why-3",
+              "text": "With the ticket store, the ticket stays on the server, in a cache. The browser keeps a cookie that holds only a session identifier."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "You enable the ticket store on the Features page, under Tools. Search for ticket, and the Users Authentication Ticket Store appears, in the Security category."
+            },
+            {
+              "id": "enable-2",
+              "text": "The row shows the name, the identifier that recipes use, and the description. The Users badge is its dependency, and its status is Disabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "To turn it on, you select Enable. The feature has no settings page and no permissions of its own."
+            }
+          ]
+        },
+        {
+          "id": "02-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "In a recipe, the Feature step enables a feature by its identifier. List the ticket store there, and any site that runs the recipe has the feature enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "How it works",
+      "subtitle": "A session store backed by the cache",
+      "clips": [
+        {
+          "id": "03-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "The feature has one startup class, tied to its identifier. It registers the configuration of the cookie options, so nothing changes in a tenant until the feature is enabled."
+            },
+            {
+              "id": "how-2",
+              "text": "That configuration sets the SessionStore of the Identity application cookie, and of no other cookie. The store is a CacheTicketStore, an ITicketStore built from the IDistributedCache and the Data Protection provider of the tenant."
+            },
+            {
+              "id": "how-3",
+              "text": "StoreAsync serializes the ticket, protects it with Data Protection, and writes it to the cache under a unique key. The entry expires when the ticket does, and the method returns the key."
+            },
+            {
+              "id": "how-4",
+              "text": "RetrieveAsync reads the entry by its key, unprotects it, and deserializes the ticket. When the entry is missing, it returns no ticket. When the entry can't be unprotected, it logs the error and returns no ticket."
+            },
+            {
+              "id": "how-5",
+              "text": "RemoveAsync deletes the entry. RenewAsync writes the ticket again with its expiration, and logs a failure without throwing. StoreAsync also logs a failure, but throws it again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Where the tickets live",
+      "subtitle": "Memory by default, Redis for several instances",
+      "clips": [
+        {
+          "id": "04-cache",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cache-1",
+              "text": "The store uses whichever IDistributedCache the tenant registers. By default, that is a memory cache, one for each tenant, so the tickets live in memory, and a restart or a reload of the tenant clears them."
+            },
+            {
+              "id": "cache-2",
+              "text": "With several instances, enable Redis Cache and set the Redis configuration, and the tickets go to Redis under the instance prefix and the tenant name. If the configuration is missing or invalid, the tenant keeps the memory cache."
+            },
+            {
+              "id": "cache-3",
+              "text": "Because tickets are protected with Data Protection, instances that share a cache must share their keys too. Distributed Data Protection (Redis) and Distributed Data Protection (Azure Storage) keep the keys in one place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Users Authentication Ticket Store",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Users Authentication Ticket Store: it keeps the ticket on the server, in memory or in Redis, and leaves the browser with a session identifier. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
