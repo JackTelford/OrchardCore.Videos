@@ -1,0 +1,74 @@
+{
+  "title": "Build a Members Area: Registration, Roles and Members-Only Pages | Orchard Core",
+  "description": "Some pages of a site are meant for members only, but every page is public until you change its permissions, and visitors cannot create accounts unless you let them.\n\nIn Orchard Core, the Users Registration feature lets visitors sign up and wait for approval, a role groups the people you approve, and the permissions of a securable content type decide who can open its pages. This video combines the three into a members area.\n\nIn this video:\n• How registration, roles and permissions work together\n• Turning on Users Registration and requiring approval\n• Making a content type securable\n• Creating the Member role and granting it a permission\n• Closing the type to the Anonymous and Authenticated roles\n• Adding a members-only page\n• Signing up as a visitor\n• Approving the account and assigning the role\n• Signing in as a member\n• Signing in with Google, GitHub or Meta",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "members area",
+    "user registration",
+    "roles",
+    "permissions",
+    "content permissions"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Build a Site"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Roles",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Roles/"
+    },
+    {
+      "label": "Documentation: Permissions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Documentation: Contents",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Documentation: Google",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Google/"
+    },
+    {
+      "label": "Documentation: GitHub",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/GitHub/"
+    },
+    {
+      "label": "Documentation: Meta",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Facebook/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Facebook/README.md",
+    "src/docs/reference/modules/GitHub/README.md",
+    "src/docs/reference/modules/Google/README.md",
+    "src/docs/reference/modules/Roles/README.md",
+    "src/docs/reference/modules/Security/Permissions.md",
+    "src/docs/reference/modules/Contents/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users.Registration"
+  }
+}

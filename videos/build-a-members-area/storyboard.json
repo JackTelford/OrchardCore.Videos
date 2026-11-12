@@ -1,0 +1,313 @@
+{
+  "title": "Build a Members Area: Registration, Roles and Members-Only Pages",
+  "output": "build-a-members-area",
+  "spoken": {
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Build a Members Area",
+      "subtitle": "Registration, roles and members-only pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A members area is a part of your site that only approved, signed-in people can open. In this video, you let visitors register, give them a role, and limit a page to that role."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a members area works",
+      "subtitle": "Registration, roles and permissions",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A members area has three parts: registration lets visitors create their own accounts, a role groups the people who share the same access, and permissions decide which content each role can open."
+            },
+            {
+              "id": "idea-2",
+              "text": "Two of the system roles matter here. Anonymous covers visitors who are not signed in, and its permissions also apply to signed-in users. Authenticated covers every signed-in user."
+            },
+            {
+              "id": "idea-3",
+              "text": "Both roles start with the permission View all content, so every page is public. To limit a page, you remove that permission from both roles, and grant the page's type to a role you create, such as Member."
+            },
+            {
+              "id": "idea-4",
+              "text": "The video follows four stages. You enable registration, make a content type securable and create the Member role, close that type to visitors, and then try it with a page and a sign-up."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Let visitors register",
+      "subtitle": "Turn on the registration feature",
+      "clips": [
+        {
+          "id": "02-register",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "Registration is a feature of its own. Open Tools, Features, search for registration, and enable Users Registration. The page reloads with a message that the feature was enabled."
+            },
+            {
+              "id": "register-2",
+              "text": "The feature adds a page under Settings, Security, Registration, with three options. Users must verify their email address makes people confirm it by email, which requires a configured email provider."
+            },
+            {
+              "id": "register-3",
+              "text": "Use site theme for registration page shows the form in your site theme. Users must be approved before they can log in leaves each registered account disabled until an administrator enables it."
+            },
+            {
+              "id": "register-4",
+              "text": "For a members area, approval keeps the decision in your hands. Let's select Users must be approved before they can log in, and click Save. Visitors reach the Register page from a link on the login page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Make the page type securable",
+      "subtitle": "Give a content type its own permissions",
+      "clips": [
+        {
+          "id": "03-type",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "A page is members-only because of its content type. Under Design, Content Definition, Content Types, this site has two page types, Page and Members Page. Let's edit Members Page."
+            },
+            {
+              "id": "type-2",
+              "text": "Securable determines whether a content type can have custom permissions. Page is already securable. Members Page is not, so it has no permissions of its own, and View all content opens its pages for everyone who holds it."
+            },
+            {
+              "id": "type-3",
+              "text": "Let's select Securable, and click Save. The content type gets its own permissions, which the role editor lists in a group of their own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create the Member role",
+      "subtitle": "A role for approved members",
+      "clips": [
+        {
+          "id": "04-role",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "role-1",
+              "text": "Open Access Control, Roles, which lists the roles of the site. The system roles carry a System badge and cannot be deleted. Click Add Role."
+            },
+            {
+              "id": "role-2",
+              "text": "Enter Member as the name, add a description, and click Save & Configure. The role is created, and its permissions open."
+            },
+            {
+              "id": "role-3",
+              "text": "The editor lists every permission as a row. Search for Members Page, and the permissions of the type appear in their own group, with an Allow column and an Effective column."
+            },
+            {
+              "id": "role-4",
+              "text": "Select View Members Page by others in the Allow column, and click Save. Members can open pages of this type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Close the type to visitors",
+      "subtitle": "Remove View all content from Anonymous and Authenticated",
+      "clips": [
+        {
+          "id": "05-lock",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "lock-1",
+              "text": "Anonymous and Authenticated still hold View all content, which opens every page. Edit Anonymous first, and search for view."
+            },
+            {
+              "id": "lock-2",
+              "text": "A type that is not securable has no permission of its own to grant back. Make every type that visitors read securable before you clear View all content. Page is already securable."
+            },
+            {
+              "id": "lock-3",
+              "text": "Clear View all content, select View Page by others so visitors keep the public pages, and click Save."
+            },
+            {
+              "id": "lock-4",
+              "text": "Edit Authenticated next, clear View all content, and click Save. Signed-in users keep reading Page through Anonymous. Members Page opens for the Member role, for administrators, and for roles that hold Edit content for others, such as Editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add a members-only page",
+      "subtitle": "Create a page of the securable type",
+      "clips": [
+        {
+          "id": "06-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "Pages of this type are created like any other content. Open Content, Content Items, click New, and choose Members Page."
+            },
+            {
+              "id": "page-2",
+              "text": "Enter the title Members Lounge, and the permalink members-lounge. Add a line of text for members, so the page has something to show."
+            },
+            {
+              "id": "page-3",
+              "text": "Click Publish. The page has no setting of its own. It is members-only because its type is, and every page of that type follows the same permissions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "A visitor signs up",
+      "subtitle": "Register and wait for approval",
+      "clips": [
+        {
+          "id": "07-signup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signup-1",
+              "text": "A visitor reads the public home page, which anyone can open without signing in, and follows its link to the members lounge."
+            },
+            {
+              "id": "signup-2",
+              "text": "The visitor cannot view the page, so the site asks them to log in. The login page links to Register as a new user."
+            },
+            {
+              "id": "signup-3",
+              "text": "The form asks for a username, an email address, and a password, entered twice. Let's enter the details of a future member, and click Register."
+            },
+            {
+              "id": "signup-4",
+              "text": "Because approval is on, the account is created but cannot be used until it is approved. A page titled User Registration Pending says so."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Approve the sign-up",
+      "subtitle": "Enable the account and assign the role",
+      "clips": [
+        {
+          "id": "08-approve",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "approve-1",
+              "text": "As an administrator, open Access Control, Users. The account is listed with a Disabled badge."
+            },
+            {
+              "id": "approve-2",
+              "text": "Open the account's Actions menu, choose Enable, and confirm with Ok. The list reloads with a message that the account was enabled, and the Disabled badge disappears."
+            },
+            {
+              "id": "approve-3",
+              "text": "Registration does not assign a role, so click Edit, select Member under Roles, and click Save. The account belongs to the Member role."
+            },
+            {
+              "id": "approve-4",
+              "text": "Other sign-ups wait in the same list until you enable them. To stop someone signing in later, choose Disable in the same menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Sign in as a member",
+      "subtitle": "See the members-only page",
+      "clips": [
+        {
+          "id": "09-member",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "member-1",
+              "text": "The member opens the members lounge from the home page, and logs in with the username and password chosen at registration. The login page asks for a username or email address, and a password."
+            },
+            {
+              "id": "member-2",
+              "text": "After logging in, the site returns to the page the member asked for, and the members lounge opens. Visitors who are not signed in are still sent to the login page."
+            },
+            {
+              "id": "member-3",
+              "text": "The public pages stay open to everyone. Only the pages of a type that you secure and restrict ask for a sign-in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Other ways to sign up",
+      "subtitle": "Sign in with Google, GitHub or Meta",
+      "clips": [
+        {
+          "id": "10-external",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "external-1",
+              "text": "Visitors can also sign in with an account they already have. Google Authentication, GitHub Authentication and Meta Login are features of their own, and each adds a page under Settings, Security, Authentication. A separate video covers each provider."
+            },
+            {
+              "id": "external-2",
+              "text": "With Users Registration enabled, accounts created this way follow the same Registration settings, including approval. Once one of these features is enabled, the Registration page gains an External Authentication tab, where Disable new external registration closes sign-ups from providers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Build a Members Area",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A members area combines registration, a role, and a securable content type. Remove View all content from Anonymous and Authenticated, grant the type to the Member role, and approve each sign-up. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
