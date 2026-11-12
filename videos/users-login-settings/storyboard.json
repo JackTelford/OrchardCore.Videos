@@ -1,0 +1,226 @@
+{
+  "title": "User Login Settings",
+  "output": "users-login-settings",
+  "spoken": {
+    "jamie.chen": "Jamie Chen"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "User Login Settings",
+      "subtitle": "Sign-in options and account lockout",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "People sign in to an Orchard Core site on its login page. In this video, you see the User Login settings, from Remember me to the editable user details, and how an account gets locked and unlocked."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What the settings control",
+      "subtitle": "One page for the sign-in options",
+      "clips": [
+        {
+          "id": "01-overview",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "overview-1",
+              "text": "The options for signing in are on the User Login page, under Settings, Security. Its checkboxes change the login page and the details you can edit for a user. Features such as two-factor authentication add a tab of their own."
+            },
+            {
+              "id": "overview-2",
+              "text": "The options fall into four groups: Remember me, the theme of the login page, local password login, and which details of a user can be edited."
+            },
+            {
+              "id": "overview-3",
+              "text": "Account lockout is not one of them. The number of failed attempts and the length of the lock are options of ASP.NET Core Identity, which a developer sets for the site. A separate video covers those options."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The login page and its settings",
+      "subtitle": "Settings, Security, User Login",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "This is the login page. A visitor enters a Username or email address and a Password, optionally ticks Remember me, and chooses Log in."
+            },
+            {
+              "id": "open-2",
+              "text": "The options that shape this page are in the admin. In the menu, let's expand Settings, then Security, and choose User Login."
+            },
+            {
+              "id": "open-3",
+              "text": "The page lists each option as a checkbox. By default, only two are ticked: Allow user to be remembered during login, and Allow user to change their phone number."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Remember me",
+      "subtitle": "Persistent sign-in cookies",
+      "clips": [
+        {
+          "id": "03-remember",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "remember-1",
+              "text": "The option Allow user to be remembered during login shows the Remember me checkbox on the login page. A user who ticks it gets a persistent authentication cookie, which keeps the user signed in across browser sessions."
+            },
+            {
+              "id": "remember-2",
+              "text": "The option Use persistent authentication cookies by default decides whether Remember me starts ticked. Let's tick it, and choose Save."
+            },
+            {
+              "id": "remember-3",
+              "text": "On the login page, Remember me is ticked from the start. Users can clear it before they choose Log in."
+            },
+            {
+              "id": "remember-4",
+              "text": "Let's untick Allow user to be remembered during login, and choose Save. On the login page, the Remember me checkbox is gone."
+            },
+            {
+              "id": "remember-5",
+              "text": "With Remember me gone, the option Use persistent authentication cookies by default decides whether password and external provider sign-ins are persistent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Login page theme",
+      "subtitle": "The admin theme or the site theme",
+      "clips": [
+        {
+          "id": "04-theme",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "theme-1",
+              "text": "By default, the login page uses the admin theme. Let's tick Use site theme for login page, which requires an active site theme, and choose Save."
+            },
+            {
+              "id": "theme-2",
+              "text": "The login form appears inside the layout of the site theme, with the site name in the navigation bar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Local password login",
+      "subtitle": "Passwords or external providers",
+      "clips": [
+        {
+          "id": "05-local",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "local-1",
+              "text": "The option Disable local password login turns off the form for user names and passwords. Its hint asks for at least one administrator with a linked account, one that is linked to an external provider."
+            },
+            {
+              "id": "local-2",
+              "text": "With an external provider configured, the login page shows only the provider buttons under Use another service to log in. Without one, as on this site, the page would show no form at all, so the option stays off."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Editing user details",
+      "subtitle": "User name, email and phone number",
+      "clips": [
+        {
+          "id": "06-details",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "details-1",
+              "text": "Let's edit an existing user, jamie.chen, from Access Control, Users. By default, the User name and Email fields are disabled, and Phone Number can be edited."
+            },
+            {
+              "id": "details-2",
+              "text": "Back on the User Login page, two options make those fields editable: Allow user to change their username, and Allow user to change their email address. Let's tick both, and save."
+            },
+            {
+              "id": "details-3",
+              "text": "In the editor of the same user, User name and Email are enabled. When you create a user, those fields are always editable, so these options only affect existing users."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Account lockout",
+      "subtitle": "Locked accounts and Unlock",
+      "clips": [
+        {
+          "id": "07-lockout",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "lockout-1",
+              "text": "Let's enter a wrong password for the user jamie.chen on the login page. The page answers Invalid login attempt, and the failed attempt is counted."
+            },
+            {
+              "id": "lockout-2",
+              "text": "Every further wrong password counts too. When the limit is reached, the page reports that the account is locked out, and the user cannot sign in until the lock ends or an administrator unlocks it."
+            },
+            {
+              "id": "lockout-3",
+              "text": "In the admin, the Users list under Access Control shows jamie.chen with a Locked badge."
+            },
+            {
+              "id": "lockout-4",
+              "text": "To unlock the account, open its Actions menu and choose Unlock. The dialog titled Unlock user asks for confirmation, so choose Ok."
+            },
+            {
+              "id": "lockout-5",
+              "text": "The message User unlocked successfully appears, the Locked badge is gone, and jamie.chen can sign in again with the right password."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "User Login Settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The User Login page sets Remember me, the theme of the login page, local password login and which details of a user can be edited, and the Users list unlocks a locked account. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
