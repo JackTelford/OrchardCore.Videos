@@ -1,0 +1,49 @@
+{
+  "title": "Scripting: JavaScript in Workflows and Recipes | Orchard Core",
+  "description": "Recipes, workflows and layer rules can run JavaScript, but it is not obvious where scripts are evaluated, which methods they can call, or how to add your own.\n\nThe Scripting module evaluates a script by its prefix and gives it the methods that modules register, plus the methods scoped to a recipe or a workflow. This video shows where scripts run, how to add a method, how to evaluate a script from C#, and how to limit what a script can do.\n\nIn this video:\n• How a script runs: prefixes, engines and where scripts are evaluated\n• Scripts in a recipe: square brackets, variables and recipe methods\n• Scripts in a workflow: the Script Task and the JavaScript syntax\n• Methods a script can call: registered methods and scoped methods\n• Add your own method: a global method provider\n• Evaluate a script from C#: the scripting manager and scoped methods\n• Limits and errors: what a script may do, and what happens when it fails",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "JavaScript"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "JavaScript",
+    "Scripting",
+    "Workflows",
+    "Recipes",
+    "Jint"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Scripting/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Scripting/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Scripting"
+  }
+}
