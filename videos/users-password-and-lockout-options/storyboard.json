@@ -195,7 +195,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "ASP.NET Core Identity decides what a valid password is and when an account is locked. Set its options in code or in configuration, and the Users module follows them. Thanks for watching."
+              "text": "ASP.NET Core Identity decides what a valid password is and when an account is locked, and the Users module follows the options you set in code or in configuration. Thanks for watching."
             }
           ]
         }
