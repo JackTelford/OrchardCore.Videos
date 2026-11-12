@@ -1,0 +1,270 @@
+{
+  "title": "Go to Production: A Checklist for a Live Orchard Core Site",
+  "output": "go-to-production",
+  "spoken": {
+    "ConfigureReverseProxySettings": "Configure Reverse Proxy Settings",
+    "KnownProxies": "Known Proxies",
+    "KnownNetworks": "Known Networks",
+    "ReverseProxy": "Reverse Proxy",
+    "RequireHttpsPermanent": "Require HTTPS Permanent",
+    "RequireHttps": "Require HTTPS",
+    "StrictTransportSecurityMode": "Strict Transport Security Mode",
+    "FromConfiguration": "From Configuration",
+    "HttpsSettings": "HTTPS Settings",
+    "SslPort": "S.S.L. Port",
+    "DataProtectionKeys.xml": "Data Protection Keys dot X.M.L.",
+    "DataProtection-Keys": "Data Protection Keys",
+    "DataProtection": "Data Protection",
+    "ConnectionString": "Connection String",
+    "ContainerName": "Container Name",
+    "BlobName": "Blob Name",
+    "ShellSettings": "Shell Settings",
+    "DatabaseProvider": "Database Provider",
+    "AllowedHosts": "Allowed Hosts",
+    "ASPNETCORE_ENVIRONMENT": "A.S.P. .NET Core environment",
+    "ORCHARD_APP_DATA": "Orchard app data",
+    "App_Data": "App Data",
+    "appsettings.Production.json": "app settings dot Production dot JSON",
+    "appsettings.json": "app settings dot JSON",
+    "Program.cs": "Program dot C.S.",
+    "HSTS": "H.S.T.S.",
+    "CIDR": "C.I.D.R.",
+    "dataprotection": "data protection",
+    "AOF": "A.O.F.",
+    "RDB": "R.D.B."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Go to Production",
+      "subtitle": "A checklist for a live Orchard Core site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Moving an Orchard Core site to production means changing a few things that work on your machine. This video is a checklist: configuration, a reverse proxy, HTTPS, and data protection keys. Each item shows what to set, and where."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Development and production",
+      "subtitle": "What changes on a live site",
+      "clips": [
+        {
+          "id": "01-checklist",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "checklist-1",
+              "text": "On your machine, the site runs in the Development environment and reads its settings from files in the project. In production, the environment is Production, and values such as connection strings come from the host."
+            },
+            {
+              "id": "checklist-2",
+              "text": "Requests may reach the site through a reverse proxy, and visitors expect HTTPS. And when more than one server runs the site, the servers must share the data protection keys. The next chapters take these in order."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Environment and configuration",
+      "subtitle": "Where the values of a live site come from",
+      "clips": [
+        {
+          "id": "02-config",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "config-1",
+              "text": "In Program.cs, the Orchard Core web project registers the exception handler for the Error path whenever the environment is not Development. On the server, set the ASPNETCORE_ENVIRONMENT variable to Production. The same name selects files such as appsettings.Production.json."
+            },
+            {
+              "id": "config-2",
+              "text": "Orchard Core reads its settings from the OrchardCore section of appsettings.json. A production database is a typical example: DatabaseProvider and ConnectionString at the root of that section are the default for every tenant, and environment variables provide them with a double underscore between levels."
+            },
+            {
+              "id": "config-3",
+              "text": "Keep credentials in the environment of the host, not in committed files. The shipped appsettings.json also carries a commented AllowedHosts line, which its comment says to set on public-facing servers. Separate videos cover the configuration sources and Azure Key Vault."
+            },
+            {
+              "id": "config-4",
+              "text": "Set the ORCHARD_APP_DATA variable to move the App_Data folder, using a relative or an absolute path. The folder holds the tenants file and, for each tenant, its settings and data protection keys, plus Lucene indexes and a SQLite database when the site uses them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Reverse proxy",
+      "subtitle": "Forwarded headers and trusted proxies",
+      "clips": [
+        {
+          "id": "03-proxy",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "proxy-1",
+              "text": "Behind a reverse proxy, every request reaches the site from the proxy, not from the visitor. The Reverse Proxy Configuration feature, under Tools, Features, lets you choose which forwarded HTTP headers the site processes."
+            },
+            {
+              "id": "proxy-2",
+              "text": "Its page is under Settings, Reverse Proxy. There is one box for each header: X-Forwarded-For for the client address, X-Forwarded-Proto for the protocol the client used, and X-Forwarded-Host for the host the client asked for."
+            },
+            {
+              "id": "proxy-3",
+              "text": "Under each box, the page shows the value of the current request: the client address, the protocol, and the host. After you deploy, open the page through your proxy to check them. Let's turn on all three headers."
+            },
+            {
+              "id": "proxy-4",
+              "text": "Saving can restart the website, as the warning on the page says, and a message confirms the change. These settings belong to the tenant, so each tenant has its own."
+            }
+          ]
+        },
+        {
+          "id": "03-proxy-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "proxy-5",
+              "text": "The Reverse Proxy Configuration feature is ordered before CORS, the Security module, and authentication. The source gives the reasons: CORS needs the correct host, and the proxy must be configured before authentication and security."
+            },
+            {
+              "id": "proxy-6",
+              "text": "The page has no field for known proxies or networks. Call ConfigureReverseProxySettings in the host, and set KnownProxies and KnownNetworks in the ReverseProxy section, with networks in CIDR notation. Those values override the page."
+            },
+            {
+              "id": "proxy-7",
+              "text": "In production, always list the proxies and networks you trust. The documentation warns that improperly configured settings can expose the site to IP spoofing and header injection."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "HTTPS",
+      "subtitle": "Redirects, HSTS and the SSL port",
+      "clips": [
+        {
+          "id": "04-https",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "https-1",
+              "text": "With the HTTPS feature enabled under Tools, Features, its page appears under Settings, Security, HTTPS. Opened over plain HTTP, the page warns that changing HTTPS-only settings over HTTP has been prevented, and it disables the two check boxes and the SSL Port field."
+            },
+            {
+              "id": "https-2",
+              "text": "Require HTTPS redirects all requests to HTTPS. To change any of these settings, open the page over HTTPS, because the page does not save changes made over HTTP."
+            },
+            {
+              "id": "https-3",
+              "text": "HSTS mode has three options: Disabled, Enabled, and From environment: enabled in Production, disabled otherwise. The red notice warns that browsers may stop connecting over HTTP after receiving the header, if HTTPS later becomes unavailable."
+            },
+            {
+              "id": "https-4",
+              "text": "Require HTTPS Permanent redirects with the permanent status code 308, instead of a temporary redirect. SSL Port is the port to redirect to. Leave it empty, and the middleware tries to determine it."
+            }
+          ]
+        },
+        {
+          "id": "04-https-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "https-5",
+              "text": "A recipe sets the same values with the Settings step. HttpsSettings takes StrictTransportSecurityMode, where FromConfiguration is the option the page labels From environment, plus RequireHttps, RequireHttpsPermanent, and SslPort."
+            },
+            {
+              "id": "https-6",
+              "text": "When HSTS is on, the header has a maximum age of 365 days and covers subdomains. The preload option is not set."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Data protection keys",
+      "subtitle": "One key ring for every server",
+      "clips": [
+        {
+          "id": "05-keys",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "keys-1",
+              "text": "ASP.NET Core Data Protection protects authentication cookies, anti-forgery tokens, and persisted secrets that must be decrypted, such as an SMTP password. By default, each tenant keeps its keys in a DataProtection-Keys folder in its own folder under App_Data."
+            },
+            {
+              "id": "keys-2",
+              "text": "If the keys are lost, existing cookies and tokens stop working, so back up the folder. And when several servers run the site, each server would have its own keys, so they must share one key ring."
+            },
+            {
+              "id": "keys-3",
+              "text": "The Distributed Data Protection (Azure Storage) feature keeps the key ring in an Azure Blob Storage container. Set ConnectionString in the Azure section of DataProtection. The container is named dataprotection by default, and the feature creates it when it does not exist."
+            },
+            {
+              "id": "keys-4",
+              "text": "By default, each tenant's key ring is a blob named DataProtectionKeys.xml, in a folder named for the tenant under Sites. ContainerName and BlobName accept Liquid templates that use ShellSettings, so a tenant can have a container of its own."
+            },
+            {
+              "id": "keys-5",
+              "text": "The Distributed Data Protection (Redis) feature keeps the key ring in Redis, configured in the Redis section. Redis must persist data, with AOF or RDB, because a key ring is not a cache. The site logs a warning if it cannot confirm that."
+            },
+            {
+              "id": "keys-6",
+              "text": "After enabling either feature, check the log. Without a connection string, the Azure feature logs a critical error, and without a valid Redis configuration, the Redis features stay off. The site then keeps using the keys in App_Data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Before you go live",
+      "subtitle": "The checklist",
+      "clips": [
+        {
+          "id": "06-ready",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ready-1",
+              "text": "Before you go live, confirm four things. The environment is Production, with settings from the host, and the forwarded headers and known proxies match your proxy. HTTPS is required, and every server shares the data protection keys."
+            },
+            {
+              "id": "ready-2",
+              "text": "Most items can be scripted. The host supplies the environment variables, the configuration files carry the data protection settings, and the Settings step of a recipe sets the forwarded headers and HTTPS on each tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Go to Production",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the checklist: a Production environment, settings from the host, forwarded headers, HTTPS, and shared data protection keys. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
