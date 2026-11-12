@@ -16,7 +16,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "Bots fill in sign-in pages, registration pages and contact forms all day. In this video, you set up reCAPTCHA in Orchard Core. We cover the features, the keys, the sign-in, registration and password pages, and forms."
+              "text": "Bots fill in sign-in pages, registration pages and contact forms. In this video, you set up reCAPTCHA in Orchard Core. We cover the features, the keys, the sign-in, registration and password pages, and forms."
             }
           ]
         }
