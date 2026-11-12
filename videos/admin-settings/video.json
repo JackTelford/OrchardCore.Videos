@@ -1,0 +1,46 @@
+{
+  "title": "Admin Settings: Tailor the Admin for Your Editors | Orchard Core",
+  "description": "Everyone who signs in to the Orchard Core admin works in the same menu, top bar, and lists. One settings page lets an administrator adjust them for the whole site.\n\nSettings, Admin holds a checkbox or a choice for the admin menu, the quick navigation button, the theme toggler, page titles, the breadcrumb trail, and the layout of lists and their actions. This video goes through each option and shows what it changes.\n\nIn this video:\n• What the settings change: three areas on one page\n• Opening Settings, Admin\n• The admin menu: the Filter box, the \"New\" entry, and how sections open\n• The top bar and page headings: quick navigation, theme toggler, titles, and breadcrumb\n• Lists and actions: layouts for rows and for the actions of each row",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Admin",
+    "Admin settings",
+    "Editors"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Admin/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Admin/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Admin"
+  }
+}
