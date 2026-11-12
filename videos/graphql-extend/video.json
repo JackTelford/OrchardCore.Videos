@@ -1,0 +1,53 @@
+{
+  "title": "Extend GraphQL: Add Your Own Types and Queries | Orchard Core",
+  "description": "The GraphQL schema of Orchard Core is built from the services that modules register, so a content part, a filter or a query of your own is missing from it until you add it.\n\nThis video follows the code that Orchard Core's own modules use: an object type for a content part, an input type and an index for filtering, an ISchemaBuilder for a query of your own, and a GraphQLFilter for the content type queries. Each result is checked in GraphiQL.\n\nIn this video:\n• How the schema is built from registered services\n• Exposing a content part with an object type\n• Checking the part in GraphiQL\n• Filtering by the part with an input type and an index\n• Trying the filter in the where argument\n• Adding a query of your own with an ISchemaBuilder\n• Running the query in GraphiQL\n• Changing the content type queries with a GraphQLFilter\n• Working examples in the Orchard Core source",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "GraphQL"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "GraphQL",
+    "GraphiQL",
+    "API",
+    "C#"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "GraphQL"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: GraphQL",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/"
+    },
+    {
+      "label": "Documentation: GraphQL Abstractions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL.Abstractions/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Apis.GraphQL/README.md",
+    "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Apis.GraphQL"
+  }
+}

@@ -5222,9 +5222,9 @@
       "src/docs/reference/modules/Apis.GraphQL/README.md",
       "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.1,
+    "words": 909,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
