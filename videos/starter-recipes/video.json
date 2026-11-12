@@ -1,0 +1,89 @@
+{
+  "title": "Starter Recipes: Choose How Your Site Starts | Orchard Core",
+  "description": "Every Orchard Core site starts from a recipe, and the Setup screen offers several. The recipe you choose decides which features are enabled, which theme is active, and what content the site starts with.\n\nThis video compares the starter recipes: Blank site, Headless site, Blog, Agency, Coming Soon, and Software as a Service. It shows what each one sets up, which one fits which job, and where to change the result afterward.\n\nIn this video:\n• What a recipe sets up\n• Choose on the Setup screen\n• Blank site and Headless site\n• Blog\n• Agency\n• Coming Soon\n• Software as a Service\n• Which recipe fits",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Setup",
+    "Recipes",
+    "Starter recipes",
+    "Themes",
+    "Blog",
+    "Headless CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Starter Recipes and Themes",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/starter-recipes/"
+    },
+    {
+      "label": "Documentation: Themes",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Themes/"
+    },
+    {
+      "label": "Documentation: Tenants",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Documentation: Widgets",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Widgets/"
+    },
+    {
+      "label": "Documentation: Bag part",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/BagPart/"
+    },
+    {
+      "label": "Documentation: Resources",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Resources/"
+    },
+    {
+      "label": "Documentation: Admin",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Admin/"
+    },
+    {
+      "label": "Documentation: Navigation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Navigation/"
+    },
+    {
+      "label": "Documentation: Notifications",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Notifications/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/getting-started/starter-recipes.md",
+    "src/docs/reference/modules/Resources/README.md",
+    "src/docs/reference/modules/Widgets/README.md",
+    "src/docs/reference/modules/Flow/BagPart.md",
+    "src/docs/reference/modules/Tenants/README.md",
+    "src/docs/reference/modules/Themes/README.md",
+    "src/docs/reference/modules/Admin/README.md",
+    "src/docs/reference/modules/Navigation/README.md",
+    "src/docs/reference/modules/Notifications/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:getting-started/starter-recipes"
+  }
+}

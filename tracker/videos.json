@@ -79,9 +79,9 @@
       "src/docs/reference/modules/Navigation/README.md",
       "src/docs/reference/modules/Notifications/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.5,
+    "words": 827,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
