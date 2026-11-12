@@ -1,0 +1,54 @@
+{
+  "title": "Home Page: Choose What Your Site Shows First | Orchard Core",
+  "description": "A site shows one page when someone visits its address with nothing after it, and an editor often needs to choose which page that is.\n\nThe Home Route feature opens the chosen page at the address of the site. The Autoroute feature adds the Set as homepage checkbox to the editor of a content item, and the Set homepage permission decides who sees the checkbox.\n\nIn this video:\n• How the home page works\n• The Home Route and Autoroute features\n• Allowing a content type to be the home page\n• Setting the home page\n• Changing the home page\n• Who can set it",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Home page",
+    "Home Route",
+    "Autoroute",
+    "Permalink",
+    "Routing"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Routing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Home Route",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/HomeRoute/"
+    },
+    {
+      "label": "Documentation: Autoroute",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Autoroute/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/HomeRoute/README.md",
+    "src/docs/reference/modules/Autoroute/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.HomeRoute"
+  }
+}

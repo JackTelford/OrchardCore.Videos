@@ -1,0 +1,195 @@
+{
+  "title": "Home Page: Choose What Your Site Shows First",
+  "output": "home-route",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Home Page: Choose What Your Site Shows First",
+      "subtitle": "Choose which page your site shows first",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "When someone types the address of your site, the home page is the first thing they see. In this video, you choose which page that is, and you change it whenever you need to."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the home page works",
+      "subtitle": "Two features and a content type",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "The home page is the page a visitor sees at the address of your site, with nothing after it. The Home Route feature sends every visit to that address to the page you chose."
+            },
+            {
+              "id": "idea-2",
+              "text": "The Autoroute feature gives content items their own address, called a permalink. It also adds a Set as homepage checkbox to the editor, so you choose the home page from the content itself."
+            },
+            {
+              "id": "idea-3",
+              "text": "A content type, such as Article, defines what an item contains and is built from parts. A type offers the checkbox when it has the Autoroute part and that part's Show homepage options setting is checked. Your role also needs the Set homepage permission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Two features",
+      "subtitle": "Home Route and Autoroute",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Let's open Tools, Features, and search for Home Route. This feature, in the Infrastructure category, opens the page you chose as the home page whenever someone visits the address of the site."
+            },
+            {
+              "id": "features-2",
+              "text": "Autoroute, in the Navigation category, depends on Home Route. Both are enabled on this site, and Autoroute is the one that adds the checkbox to the editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Allow a content type",
+      "subtitle": "Show homepage options",
+      "clips": [
+        {
+          "id": "03-allow",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "allow-1",
+              "text": "Only some content types offer the checkbox. Let's open Design, Content Definition, Content Types, and edit the Article type."
+            },
+            {
+              "id": "allow-2",
+              "text": "Among its parts, Autoroute has its own Edit button. The settings of this part include Show homepage options."
+            },
+            {
+              "id": "allow-3",
+              "text": "Show homepage options is already checked for Article. Its hint says the checkbox is only visible to users with the appropriate permission. A separate video covers the other settings of this part."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Set the home page",
+      "subtitle": "Check the box and publish",
+      "clips": [
+        {
+          "id": "04-set",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "set-1",
+              "text": "On this site, the home page is the Blog. Let's make an article the home page instead."
+            },
+            {
+              "id": "set-2",
+              "text": "Let's open Content, Content Items, and edit the article called Welcome to Juniper Lane Studio."
+            },
+            {
+              "id": "set-3",
+              "text": "Under the Permalink field, the editor shows the Set as homepage checkbox. Its hint says the change applies once the item is published."
+            },
+            {
+              "id": "set-4",
+              "text": "Let's check Set as homepage, and select Publish. A message confirms that the Article has been published."
+            },
+            {
+              "id": "set-5",
+              "text": "Let's visit the address of the site. The home page is the Welcome article."
+            },
+            {
+              "id": "set-6",
+              "text": "In the editor of the article, a note replaces the checkbox: This content item is the current homepage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Change the home page",
+      "subtitle": "One home page at a time",
+      "clips": [
+        {
+          "id": "05-change",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "change-1",
+              "text": "To choose another page, edit that item the same way. Let's open the Blog, check Set as homepage, and select Publish."
+            },
+            {
+              "id": "change-2",
+              "text": "At the address of the site, the Blog is the home page again. A site has one home page, so the Welcome article no longer holds that role."
+            },
+            {
+              "id": "change-3",
+              "text": "In the editor of the Welcome article, the Set as homepage checkbox is back, ready for the next change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Who can set it",
+      "subtitle": "The Set homepage permission",
+      "clips": [
+        {
+          "id": "06-permission",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "permission-1",
+              "text": "The checkbox also needs the Set homepage permission. The Administrator role has it by default. For another role, open Access Control, Roles, and edit that role."
+            },
+            {
+              "id": "permission-2",
+              "text": "Let's edit the Editor role and search the permissions for homepage. Set homepage is listed under Autoroute, and the Allow checkbox grants it to the role."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Home Page: Choose What Your Site Shows First",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Choosing the home page takes one checkbox: Set as homepage, in the editor of the content item that visitors should see first. Home Route opens that page for every visit to the address of the site. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
