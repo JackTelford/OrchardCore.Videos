@@ -1,0 +1,224 @@
+{
+  "title": "Liquid: Display Content Items, Shapes and Zones",
+  "output": "liquid-display-content",
+  "spoken": {
+    "Model.Content.MarkdownBodyPart": "Model dot Content dot Markdown Body Part",
+    "Model.ContentItem": "Model dot Content Item",
+    "Model.Content": "Model dot Content",
+    "Content-BlogPost.liquid": "Content Blog Post dot liquid",
+    "Content__BlogPost": "Content double underscore Blog Post",
+    "shape_build_display": "shape build display",
+    "shape_remove_item": "shape remove item",
+    "shape_stringify": "shape stringify",
+    "shape_render": "shape render",
+    "shape_new": "shape new",
+    "render_section": "render section",
+    "render_body": "render body",
+    "content_item_id": "content item I.D.",
+    "contentitemid": "content item I.D.",
+    "contentitem": "content item",
+    "DateTime": "Date Time"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Liquid: Display Content Items, Shapes and Zones",
+      "subtitle": "Draw pages from shapes, zones and content items",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core builds a page from shapes, and Liquid templates decide how each shape looks. This video shows how a template draws a content item, how zones place content in the layout, and how to render other content items and shapes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Shapes and zones",
+      "subtitle": "What a Liquid template receives",
+      "clips": [
+        {
+          "id": "01-shapes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shapes-1",
+              "text": "A shape is an object that holds the data and metadata of the thing to display, and a template draws it. The template can come from a module, a theme, or the admin. In a Liquid template, Model is the shape that the template draws."
+            },
+            {
+              "id": "shapes-2",
+              "text": "A content item becomes a Content shape. The default template of the Contents module draws its Header, Meta, Content, and Footer zones. The Content zone of the item holds the shapes that its parts and fields generate."
+            },
+            {
+              "id": "shapes-3",
+              "text": "In Liquid, a name after Model reads a property of the shape, or the child shape with that name. So Model.Content is the Content zone, and Model.Content.MarkdownBodyPart is the shape of one part. The shape_render filter draws a shape as HTML."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Blog page",
+      "subtitle": "Zones on a real page",
+      "clips": [
+        {
+          "id": "02-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "This is the home page of a site made with the Blog recipe. It is one content item, of the type Blog. The Blog Theme draws its layout and its content types with Liquid templates."
+            },
+            {
+              "id": "page-2",
+              "text": "At the top, the banner belongs to the Header zone of the layout. The template of the Blog type fills that zone with a zone tag, and the layout of the theme draws it above the page."
+            },
+            {
+              "id": "page-3",
+              "text": "Under the banner, the Content zone holds the list of posts. A post in the list is the Summary display of its content item: a title, a subtitle, and the author and date."
+            },
+            {
+              "id": "page-4",
+              "text": "At the bottom is the Footer zone. A widget in a layer puts its content there, and the layout of the theme draws that zone in its footer."
+            },
+            {
+              "id": "page-5",
+              "text": "A post has its own template. It fills the Header zone of the layout with the title, the subtitle, and the author and date, and it draws the Markdown body."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "A template for a content item",
+      "subtitle": "Draw the shapes of a content item",
+      "clips": [
+        {
+          "id": "03-content",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "This is the template of the Blog Post type. It writes the title from Model.ContentItem into the Header zone, then draws the Markdown body part with shape_render. The template draws only the shapes that it names."
+            },
+            {
+              "id": "content-2",
+              "text": "The template of the Blog type draws its body part inside the header. Then shape_remove_item removes that shape and the image from the Content zone, and shape_render draws what remains, so nothing appears twice."
+            },
+            {
+              "id": "content-3",
+              "text": "A theme names a template after the shape it draws: Content-BlogPost.liquid draws the Detail display of a Blog Post. In the admin, under Design, Templates, the template is named Content__BlogPost instead, and it takes priority over a theme file of the same name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Zones and layouts",
+      "subtitle": "Place content anywhere in the page",
+      "clips": [
+        {
+          "id": "04-zones",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "zones-1",
+              "text": "The zone tag renders the content between its tags, writes nothing at that place, and adds the result to the zone with the name you give it, in the layout of the page. A position argument orders the content in the zone."
+            },
+            {
+              "id": "zones-2",
+              "text": "The layout draws the zones. The render_section tag writes the zone you name, or nothing when it is empty, and with required set to true an empty zone raises an error. The render_body tag writes the layout's Content zone, which holds the page."
+            },
+            {
+              "id": "zones-3",
+              "text": "The content of the page is drawn first, then the other zones, and the layout last. That is why a template in the Content zone can fill the Header zone, and the layout still draws it."
+            },
+            {
+              "id": "zones-4",
+              "text": "A template can also choose another layout. The layout tag adds the name you give it to the alternates of the Layout shape, the names under which Orchard Core looks for a template. A template with that name then draws the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Other content items",
+      "subtitle": "Load an item and draw it",
+      "clips": [
+        {
+          "id": "05-items",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "items-1",
+              "text": "To draw another content item, build its display shape and render it. The shape_build_display filter takes a display type, and Detail is the default. In The Blog Theme, the list uses Summary for each post."
+            },
+            {
+              "id": "items-2",
+              "text": "The Contents module adds the Content accessor. It loads the published item for a handle: alias, slug for the path of an Autoroute part, or contentitemid for a content item identifier. When nothing matches, it returns nothing, and the render filters write nothing."
+            },
+            {
+              "id": "items-3",
+              "text": "The contentitem tag loads an item by handle and draws it with a display type, in one step. When you have a list of content item identifiers, the content_item_id filter loads them together."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Create and change shapes",
+      "subtitle": "Build shapes inside a template",
+      "clips": [
+        {
+          "id": "06-make",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "make-1",
+              "text": "The shape_new filter creates a shape from its type, and each named argument becomes a property, with its name in Pascal case. Here a DateTime shape gets the creation date of a post, and shape_stringify turns the drawn shape into text."
+            },
+            {
+              "id": "make-2",
+              "text": "The shape tag creates a shape and draws it in one step. The layout of The Blog Theme draws the main menu with it: the alias argument becomes a property of the Menu shape, and with Dynamic Cache enabled the cache arguments cache the result."
+            },
+            {
+              "id": "make-3",
+              "text": "Tags change a shape before you draw it. They set its alternates, wrappers, classes, attributes, type, display type, position, tab, and properties. Each one takes the shape as its first argument."
+            },
+            {
+              "id": "make-4",
+              "text": "Here a post is built in the Summary display type, then given one more alternate. The last alternate added is tried first. If a template exists for it, it draws the post; if not, the earlier alternates are used."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Liquid: Display Content Items, Shapes and Zones",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A Liquid template draws the shapes it receives, places content in zones, and renders other content items. The documentation of the Liquid module lists the filters and tags. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

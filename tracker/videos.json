@@ -2258,9 +2258,9 @@
     "docs": [
       "src/docs/reference/modules/Liquid/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.0,
+    "words": 901,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

@@ -1,0 +1,50 @@
+{
+  "title": "Liquid: Display Content Items, Shapes and Zones | Orchard Core",
+  "description": "A Liquid template does not receive a page. It receives a shape, and it has to read that shape, place content in the zones of the layout, and draw other content items.\n\nThis video shows how Orchard Core builds a page from shapes, and how Liquid draws a content item, fills the zones of a layout, loads and renders other content items, and creates and changes shapes. The examples come from The Blog Theme.\n\nIn this video:\n• Shapes and zones: what a Liquid template receives\n• The Blog page: zones on a real page\n• A template for a content item: draw the shapes of a content item\n• Zones and layouts: place content anywhere in the page\n• Other content items: load an item and draw it\n• Create and change shapes: build shapes inside a template",
+  "hashtags": [
+    "OrchardCore",
+    "Liquid",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Liquid",
+    "Liquid templates",
+    "Shapes",
+    "Zones",
+    "Content items",
+    "Themes",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Liquid/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Liquid/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Liquid"
+  }
+}
