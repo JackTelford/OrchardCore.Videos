@@ -1,0 +1,50 @@
+{
+  "title": "Secrets in Azure Key Vault | Orchard Core",
+  "description": "Some sites need their passwords and API keys in a dedicated vault rather than in the database of the site.\n\nThe Secrets - Azure Key Vault feature of Orchard Core adds a secret store that keeps each secret as an entry in an Azure Key Vault. The host registers the Azure client, the configuration selects it, and the Secrets pages and your code use the same secret names as for the database store.\n\nIn this video:\n• A second secret store behind ISecretStore\n• Register the client in the host\n• Configure the feature\n• Create a secret in the vault\n• Entries in the vault: names, tags, tenants and deletion\n• Use the vault from code\n• Develop locally with an emulator",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AzureKeyVault"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Secrets",
+    "Azure Key Vault",
+    "Azure",
+    "secret store",
+    "managed identity",
+    "security"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Secrets"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Secrets/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Secrets/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Secrets.AzureKeyVault"
+  }
+}
