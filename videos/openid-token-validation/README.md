@@ -1,6 +1,6 @@
 # OpenID Connect Token Validation: Protect Your APIs
 
-**YouTube:** not published yet · **Length:** 4:45 · **Feature:** `OrchardCore.OpenId.Validation` ([OpenID Connect Token Validation](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/#token-validation))
+**YouTube:** not published yet · **Length:** 4:38 · **Feature:** `OrchardCore.OpenId.Validation` ([OpenID Connect Token Validation](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/#token-validation))
 
 A video for developers about the resource-server side of OpenID Connect: how the API authentication scheme hands a
 bearer token to the validation handler, how to choose who issues the tokens (an authorization server tenant or a remote

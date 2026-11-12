@@ -129,8 +129,8 @@ TENANT_NOTES = [
 ]
 
 OUTCOME_NOTES = [
-    ("No valid token", "The caller is challenged: 401 Unauthorized."),
-    ("Valid token, permission missing", "The caller is forbidden: 403 Forbidden."),
+    ("No valid token", "The caller is challenged: asked to authenticate."),
+    ("Valid token, permission missing", "The caller is forbidden."),
     ("Valid token, permission granted", "The action carries on."),
 ]
 

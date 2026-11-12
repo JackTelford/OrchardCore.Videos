@@ -14,7 +14,7 @@ published. None of these is stated in the narration as more than the source supp
 - To confirm: with the feature enabled and the Tenant setting `Default`, call an endpoint that carries
   `[Authorize(AuthenticationSchemes = "Api")]` (for example the Demo module's `api/demo` controller) without a token
   (expect 401), with a valid token of a user that lacks the permission (expect 403), and with one that has it (expect 200).
-  The narration says 401 and 403 only for these two cases.
+  The narration does not state the status codes of these two cases (only the 401 of a missing handler, `flow-2`, is in the source); if the calls confirm 401 and 403, a person may add them.
 
 ## What a valid token gives the endpoint (step `flow-3`)
 

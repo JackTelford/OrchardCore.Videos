@@ -42,7 +42,7 @@
             },
             {
               "id": "flow-3",
-              "text": "Enabling the Token Validation feature points the API scheme at the validation handler. The handler is registered when the settings are valid. A valid token then gives your endpoint a user, built from the claims in the token."
+              "text": "Enabling the Token Validation feature points the API scheme at the validation handler. The handler is registered when the settings are valid. A valid token then authenticates the request."
             }
           ]
         }
@@ -146,7 +146,7 @@
           "steps": [
             {
               "id": "endpoint-1",
-              "text": "Name the API scheme in the Authorize attribute, and the token handler authenticates the request, so the user carries the claims of the token. This class also carries AllowAnonymous, so the action makes the decision."
+              "text": "Name the API scheme in the Authorize attribute, and the token handler authenticates the request. This class also carries AllowAnonymous, so the action makes the decision."
             },
             {
               "id": "endpoint-2",
@@ -154,7 +154,7 @@
             },
             {
               "id": "endpoint-3",
-              "text": "ChallengeOrForbid answers according to who is calling. Without a valid token, the caller is challenged, a 401 response. With a valid token but no permission, the caller is forbidden, a 403 response."
+              "text": "ChallengeOrForbid answers according to who is calling. Without a valid token, the caller is challenged, and the client is asked to authenticate. With a valid token but no permission, the caller is forbidden."
             }
           ]
         }

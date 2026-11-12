@@ -219,8 +219,8 @@ Nothing is recorded.
 
 - `endpoint-1`: slide "Name the API scheme": the trimmed `ContentApiController` of OrchardCore.Demo, lines 1 to 4 bright.
 - `endpoint-2`: slide "Check the permission in the action": the same code, the permission check and `ChallengeOrForbid` bright (the action decides, since the class also carries `AllowAnonymous`).
-- `endpoint-3`: slide "What the caller receives": three note cards: no valid token (401), valid token without the
-  permission (403), valid token with the permission (the action carries on).
+- `endpoint-3`: slide "What the caller receives": three note cards: no valid token (challenged), valid token without the
+  permission (forbidden), valid token with the permission (the action carries on).
 
 ## Chapter 06: Set it from a recipe (`06-recipe`, slides)
 
