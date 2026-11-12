@@ -1,0 +1,49 @@
+{
+  "title": "Decoupled CMS: Razor Pages With Orchard Core Content | Orchard Core",
+  "description": "A website often needs its own front end, with its own routes and markup, while editors still manage the content without touching code.\n\nIn a decoupled site, Orchard Core runs the administration and stores the content, and your Razor Pages load content items and render them. This video builds one from a Razor Pages project: a blog post that editors create, a readable address based on an alias, and a preview that uses your own page.\n\nIn this video:\n• What decoupled means\n• Add Orchard Core to a Razor Pages project\n• Set up the site with the Blank site recipe\n• Model a blog post with a content type\n• Create a blog post in the administration\n• Render it in a Razor Page by its identifier\n• Friendly addresses with the Alias part\n• Preview your edits with your own page\n• Summary",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "RazorPages"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Decoupled CMS",
+    "Razor Pages",
+    "Content Types",
+    "Content Preview",
+    "Alias"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Headless and APIs"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/decoupled-cms/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/decoupled-cms/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/decoupled-cms"
+  }
+}

@@ -5248,9 +5248,9 @@
     "docs": [
       "src/docs/guides/decoupled-cms/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 7,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.5,
+    "words": 976,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
