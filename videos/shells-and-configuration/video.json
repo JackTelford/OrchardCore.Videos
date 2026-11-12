@@ -1,0 +1,56 @@
+{
+  "title": "Shells and Configuration: How Tenants Are Configured | Orchard Core",
+  "description": "Each Orchard Core tenant has settings and a configuration that come from several places: the files in App_Data, the configuration of the host, and environment variables. To prepare tenants, override them and host them on several servers, you need to know where a tenant's files live and which source wins.\n\nThis video shows what a tenant is made of, how the layers of configuration combine, how to prepare a tenant before it exists, and how to read the configuration in your own modules. It also shows how to keep the files in Azure Blob Storage or in a database.\n\nIn this video:\n• What a tenant is made of: settings and configuration\n• The layers of configuration, and which source wins\n• Preparing a tenant before it exists\n• Changing a tenant that exists, in files and environment variables\n• One database for every tenant\n• Reading the configuration in your own modules\n• Shared stores: Azure Blob Storage and the database",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Multi-tenancy",
+    "Configuration",
+    "Azure Blob Storage"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Multi-Tenancy"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Shells Configuration Providers",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Shells/"
+    },
+    {
+      "label": "Documentation: Configuration",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Configuration/"
+    },
+    {
+      "label": "Documentation: Configuration topic",
+      "url": "https://docs.orchardcore.net/en/latest/topics/configuration/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Shells/README.md",
+    "src/docs/reference/modules/Configuration/README.md",
+    "src/docs/topics/configuration/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:Shells"
+  }
+}

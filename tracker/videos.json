@@ -5087,9 +5087,9 @@
       "src/docs/reference/modules/Configuration/README.md",
       "src/docs/topics/configuration/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.2,
+    "words": 923,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
