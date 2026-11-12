@@ -1,0 +1,48 @@
+{
+  "title": "OpenID Connect Server: Flows, Endpoints and Keys | Orchard Core",
+  "description": "Applications that sign users in, or that call your APIs, need an identity provider with the right endpoints, flows and keys. Orchard Core can be that identity provider, and choosing what it offers takes one settings page.\n\nThe OpenID Connect Authorization Server feature adds that page. It lists the endpoints the server exposes, the flows applications can use to get tokens, the requirements that apply to every application, and the certificates and token options.\n\nIn this video:\n• How the server is organized: endpoints, flows, and keys\n• Enabling the OpenID Connect Authorization Server feature\n• Choosing the endpoints that applications call\n• Choosing the flows that applications use to get a token\n• Requirements for every application: Proof Key for Code Exchange and pushed authorization\n• Keys and token options in Advanced Options\n• Saving the settings",
+  "hashtags": [
+    "OrchardCore",
+    "OpenIDConnect",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "OpenID Connect",
+    "OAuth",
+    "Identity Provider",
+    "Authorization Server",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "OpenID Connect"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenId/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/OpenId/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenId.Server"
+  }
+}
