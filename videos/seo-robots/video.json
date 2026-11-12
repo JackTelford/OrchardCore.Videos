@@ -1,0 +1,48 @@
+{
+  "title": "Robots: Tell Search Engines What to Crawl | Orchard Core",
+  "description": "A robots.txt file tells search engine robots which parts of a site they may visit. Without a way to manage it from the admin, you edit that file by hand.\n\nOrchard Core builds the file from the Robots settings of the SEO feature. You keep the default rules, add rules of your own, and check the result at robots.txt.\n\nIn this video:\n• What a robots.txt file does and how Orchard Core generates it\n• Enabling the SEO feature\n• The default robots.txt file\n• Changing the Robots settings and adding your own rules\n• Sitemaps in the file, and a robots.txt file that already exists on the site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "SEO"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "SEO",
+    "robots.txt",
+    "search engine optimization",
+    "web crawlers"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "SEO and Analytics"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Seo/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Seo/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Seo"
+  }
+}

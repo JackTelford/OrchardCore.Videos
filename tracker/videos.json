@@ -1895,9 +1895,9 @@
     "docs": [
       "src/docs/reference/modules/Seo/README.md"
     ],
-    "status": "planned",
+    "status": "content-ready",
     "estimatedMinutes": 3.5,
-    "words": 0,
+    "words": 519,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
