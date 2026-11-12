@@ -1,0 +1,229 @@
+{
+  "title": "Write a Recipe Step",
+  "output": "recipe-step-create",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Write a Recipe Step",
+      "subtitle": "Write a handler, register it, and use it in a recipe",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A recipe changes a site one step at a time. Orchard Core ships steps for features, themes, roles and content, and a module can add its own. This video shows how a step handler is written, registered, and used."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a recipe step is",
+      "subtitle": "Named objects that handlers run",
+      "clips": [
+        {
+          "id": "01-concept",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "concept-1",
+              "text": "A recipe is a JSON file with a list of steps. Each step is an object. Its name says which step it is, and its other properties are the data that step works with."
+            },
+            {
+              "id": "concept-2",
+              "text": "To run a recipe, Orchard Core takes its steps in order. It evaluates the script expressions in a step's values, then hands the step to every step handler. A handler acts only when the step's name is its own."
+            },
+            {
+              "id": "concept-3",
+              "text": "The same handlers run wherever Orchard Core runs a recipe: on the Recipes page under Tools, during setup, in a deployment import, and in a data migration. A step you write works in all of them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The step handler",
+      "subtitle": "One interface, one base class",
+      "clips": [
+        {
+          "id": "02-handler",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "handler-1",
+              "text": "A step handler implements I Recipe Step Handler, which has one method, Execute Async. Orchard Core calls it for every step, passing a context with the step's Name, the Step as a JSON object, and an Errors list."
+            },
+            {
+              "id": "handler-2",
+              "text": "Named Recipe Step Handler does the name check for you. Pass the step's name to its constructor, and it calls Handle Async only for a step with that name. The comparison ignores case."
+            },
+            {
+              "id": "handler-3",
+              "text": "The Themes step is a complete example. It derives from Named Recipe Step Handler, passes Themes as its name, and receives the services it works with through its constructor."
+            },
+            {
+              "id": "handler-4",
+              "text": "Handle Async reads the step into a model with To Object. The properties of the model match the properties of the step, ignoring case. The handler then passes the values to its services."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Read the step",
+      "subtitle": "A model, or the JSON node itself",
+      "clips": [
+        {
+          "id": "03-read",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "read-1",
+              "text": "Orchard Core evaluates script expressions before any handler runs. By the time To Object reads the step, a value written as a JavaScript expression has been replaced by its result, so the handler never sees the expression."
+            },
+            {
+              "id": "read-2",
+              "text": "When the step's data does not fit a fixed class, read the JSON node yourself. The Shortcode Templates step calls Try Get Property Value on the step, then visits each property, whose key is the name of a template."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Register the handler",
+      "subtitle": "One line in the Startup class",
+      "clips": [
+        {
+          "id": "04-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "A handler is not called until it is registered. In the Startup class of your module, call Add Recipe Execution Step with the handler type, as the Themes module does."
+            },
+            {
+              "id": "register-2",
+              "text": "The extension method adds the handler to the services of the tenant as a scoped I Recipe Step Handler. Being scoped, the handler's constructor can ask for any service the tenant provides."
+            },
+            {
+              "id": "register-3",
+              "text": "A Startup class without a Feature attribute belongs to the feature of the module itself, so the step exists only on tenants that enable it. A step that no handler claims is skipped without an error."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Use the step in a recipe",
+      "subtitle": "A recipe file and the Recipes page",
+      "clips": [
+        {
+          "id": "05-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe is a file in the Recipes folder of a module or theme. Its top-level properties name and describe it, and each object in the steps list is a step, spelled with the name its handler expects."
+            },
+            {
+              "id": "recipe-2",
+              "text": "On the Recipes page under Tools, Orchard Core lists the recipes that are not setup recipes and do not carry the hidden tag. Run executes a recipe, and a notification reports the result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Report problems",
+      "subtitle": "Errors, not exceptions",
+      "clips": [
+        {
+          "id": "06-errors",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "errors-1",
+              "text": "To report a problem, add a message to the Errors list of the context. The Recipes step does this when a recipe is not found, with the string localizer it receives, and then continues with the next item."
+            },
+            {
+              "id": "errors-2",
+              "text": "When a step ends with errors, Orchard Core marks it as failed and stops the recipe there. The steps after it do not run."
+            },
+            {
+              "id": "errors-3",
+              "text": "On the Recipes page, the notification says the recipe failed to run due to the following errors, then lists your messages. Write each one for the person who runs the recipe, as a localized string without sensitive data."
+            },
+            {
+              "id": "errors-4",
+              "text": "A thrown exception reaches the notification only as a general message that names the step, and its details go to the log. Add to the Errors list for anything the person who runs the recipe can act on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "More than one step name",
+      "subtitle": "Implement the interface yourself",
+      "clips": [
+        {
+          "id": "07-several",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "several-1",
+              "text": "Named Recipe Step Handler suits a class that handles one step name. To handle several names, implement I Recipe Step Handler directly and compare the names yourself, as the Translations step does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Writing a recipe step",
+      "subtitle": "The parts to remember",
+      "clips": [
+        {
+          "id": "08-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "To write a step, derive from Named Recipe Step Handler with the step's name, read the step with To Object, and report problems in the Errors list. Register the handler with Add Recipe Execution Step."
+            },
+            {
+              "id": "recap-2",
+              "text": "Then spell the step's name in the steps of a recipe. A separate video covers deployment steps, which contribute the recipe steps that handlers like this one import."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Write a Recipe Step",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how a recipe step works: a handler that owns a name, a registration in Startup, and a recipe that uses the name. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
