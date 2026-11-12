@@ -1,0 +1,58 @@
+{
+  "title": "Flow and Bag Parts: Templates and Alternates for Their Widgets | Orchard Core",
+  "description": "A Flow Part or a Bag Part displays content items inside another content item, and the markup of those items comes from templates that you can replace. Knowing which shape each part renders, and which file name targets it, is what makes a change land on the right template.\n\nThis video shows how the Flows module renders its widgets: the shapes of the two parts, the template file names and alternates that target a part, a widget type or a display type, and the settings that show which template is in use.\n\nIn this video:\n• The Flow Part template builds each widget\n• A template for one widget type: file names, display types and classes\n• The Bag Part template, its Display Type and the templates of its items\n• Templates for the part: alternates, locations and empty parts\n• Reading the items of a Bag Part directly\n• Finding the template in use with shape debug information",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Flows",
+    "Flow Part",
+    "Bag Part",
+    "Widgets",
+    "Templates",
+    "Alternates",
+    "Shapes",
+    "Liquid",
+    "Razor"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Flows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/"
+    },
+    {
+      "label": "Bag Part documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/BagPart/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Flow/BagPart.md",
+    "src/docs/reference/modules/Flow/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Flows"
+  }
+}
