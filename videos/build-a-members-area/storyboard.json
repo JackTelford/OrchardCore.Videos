@@ -45,7 +45,7 @@
             },
             {
               "id": "idea-4",
-              "text": "The video follows four stages. You enable registration, make a content type securable and create the Member role, close that type to visitors, and then try it with a page and a sign-up."
+              "text": "The video follows four stages. You enable registration, make a content type securable so it gets its own permissions, create the Member role, close that type to visitors, and try it with a page and a sign-up."
             }
           ]
         }
@@ -145,7 +145,7 @@
           "steps": [
             {
               "id": "lock-1",
-              "text": "Anonymous and Authenticated still hold View all content, which opens every page. Edit Anonymous first, and search for view."
+              "text": "Anonymous and Authenticated both hold View all content, which opens every page. Edit Anonymous first, and search for view."
             },
             {
               "id": "lock-2",
@@ -261,7 +261,7 @@
             },
             {
               "id": "member-2",
-              "text": "After logging in, the site returns to the page the member asked for, and the members lounge opens. Visitors who are not signed in are still sent to the login page."
+              "text": "After logging in, the site returns to the page the member asked for, and the members lounge opens. Visitors who are not signed in are sent to the login page."
             },
             {
               "id": "member-3",

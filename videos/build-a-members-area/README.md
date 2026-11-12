@@ -1,6 +1,6 @@
 # Build a Members Area: Registration, Roles and Members-Only Pages
 
-**YouTube:** not published yet · **Length:** 6:55 · **Feature:** OrchardCore.Users.Registration ([Users module documentation](https://docs.orchardcore.net/en/latest/reference/modules/Users/))
+**YouTube:** not published yet · **Length:** 6:56 · **Feature:** OrchardCore.Users.Registration ([Users module documentation](https://docs.orchardcore.net/en/latest/reference/modules/Users/))
 
 This video builds a members area with the admin screens. Visitors register and wait for approval, an administrator
 gives them the Member role, and the permissions of a securable content type decide who can open its pages. It follows

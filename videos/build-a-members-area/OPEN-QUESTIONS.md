@@ -62,7 +62,7 @@ recording, and tell the author if one does not hold, because the narration says 
 
 14. **The storyboard maps "Save & Configure" to "Save and Configure"** in `spoken`, so the voice does not read the
     ampersand. The skill asks a person to confirm a spelling with `scripts/pronounce.py` before it is used. Listen also
-    to "Securable", "Authenticated" and "Anonymous" (steps `type-2`, `idea-2`, `lock-2`) and add a `spoken` entry if the
+    to "Ok" (step `approve-2`, the label of the confirmation button; add `spoken` "O.K." if the voice says it as a word), "Securable", "Authenticated" and "Anonymous" (steps `type-2`, `idea-2`, `lock-2`) and add a `spoken` entry if the
     voice stumbles.
 
 ## Found while checking the source
