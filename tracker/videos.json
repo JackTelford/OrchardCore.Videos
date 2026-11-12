@@ -3177,9 +3177,9 @@
       "src/docs/reference/modules/Contents/README.md",
       "src/docs/reference/modules/Email/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.6,
+    "words": 838,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
