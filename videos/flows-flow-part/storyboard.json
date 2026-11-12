@@ -1,0 +1,221 @@
+{
+  "title": "The Orchard Core Flow part",
+  "output": "flows-flow-part",
+  "spoken": {
+    "Add & Configure": "Add and Configure",
+    "Raw Html": "Raw H.T.M.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Flow part",
+      "subtitle": "Build pages from widgets",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A landing page often mixes text, quotes, images, and other blocks. The Flow part lets editors build a page from widgets, and arrange them. In this video, we'll look at the part's settings, build a page, see the result, and try the Blocks editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why the Flow part",
+      "subtitle": "A page made of widgets",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A single body field gives an editor one block of text. A landing page needs more: a paragraph here, a quote there, an image beside them. Editors should arrange these blocks without asking a developer."
+            },
+            {
+              "id": "why-2",
+              "text": "The Flow part adds a list of widgets to a content item. A widget is a content item whose type has Widget as its Stereotype setting, so each widget has its own fields. The widgets are saved inside the page itself."
+            },
+            {
+              "id": "why-3",
+              "text": "Every widget in a Flow part has a size, from 25% to 100% of the width, and an alignment. The editor chooses both for each widget, and the theme decides how widgets of different sizes sit next to each other."
+            },
+            {
+              "id": "need-1",
+              "text": "The Flows feature provides the Flow part, and depends on the Widgets feature. You enable features under Tools, Features. The Blog recipe enables both, and the site in this video uses that recipe."
+            },
+            {
+              "id": "need-2",
+              "text": "The recipe also creates widget types such as Paragraph, Blockquote, Image, and Raw Html, and a Page type that has a Flow part. The Container widget has a Flow part of its own, so widgets can hold other widgets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add the Flow part to a type",
+      "subtitle": "Content Definition and part settings",
+      "clips": [
+        {
+          "id": "02-part",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "Parts are added to a content type under Design, Content Definition, Content Types. Let's open the Article type."
+            },
+            {
+              "id": "part-2",
+              "text": "Let's choose Add Parts. It lists the parts that can be attached, and Flow is one of them, with its description."
+            },
+            {
+              "id": "part-3",
+              "text": "Add & Configure attaches the part, and opens its settings. The Page type has the Flow part, so let's open Page, and choose Edit on Flow."
+            },
+            {
+              "id": "sett-1",
+              "text": "Restrict Content Types limits the widget types that editors can add. When no box is checked, every content type with the Widget stereotype is available."
+            },
+            {
+              "id": "sett-2",
+              "text": "Collapse Contained Items folds the widgets when the edit form loads. Editors can expand each widget again."
+            },
+            {
+              "id": "sett-3",
+              "text": "The list under What default alignment should be used sets the alignment of each widget you add. Without a choice, widgets you add are justified."
+            },
+            {
+              "id": "sett-4",
+              "text": "The last setting, What type of editor should be used, offers Standard and Blocks. Let's keep Standard for the page, and look at Blocks at the end."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Build a page",
+      "subtitle": "Add widgets, then size, align, and move them",
+      "clips": [
+        {
+          "id": "03-build",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "Let's build a page. Open Content, Content Items, choose New, and then Page, to open the page editor."
+            },
+            {
+              "id": "build-2",
+              "text": "The editor has a Title, a Permalink, and the Flow part with its description. Let's type the title Hillside Bakery, and leave the Permalink empty, so that it is generated from the title."
+            },
+            {
+              "id": "build-3",
+              "text": "The plus button under Flow lists the widget types that the part allows. Let's choose Paragraph, and write a sentence."
+            },
+            {
+              "id": "build-4",
+              "text": "Let's add a Blockquote the same way, and write a short quote in its text box."
+            },
+            {
+              "id": "build-5",
+              "text": "Hover over a widget's header to see its controls. The size button starts at 100%. Let's set both the Paragraph and the Blockquote to 50%, and they sit side by side."
+            },
+            {
+              "id": "build-6",
+              "text": "The alignment button offers Left, Center, Right, Justify, and Inherit. Let's center the quote."
+            },
+            {
+              "id": "build-7",
+              "text": "The arrow in a widget's header collapses the widget, leaving only the header. Let's collapse the Paragraph, and expand it again."
+            },
+            {
+              "id": "build-8",
+              "text": "To change the order, drag a widget by the handle at the left of its header. Let's drag the quote before the paragraph."
+            },
+            {
+              "id": "build-9",
+              "text": "The plus button in a header inserts a widget above that one. Let's insert a Raw Html widget above the quote."
+            },
+            {
+              "id": "build-10",
+              "text": "The trash button removes a widget, after a confirmation. Let's remove the Raw Html widget, and choose Ok."
+            },
+            {
+              "id": "build-11",
+              "text": "Publish saves the page with all its widgets, and returns to the list of content items, where the page appears."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "See the page",
+      "subtitle": "The Flow part on the site",
+      "clips": [
+        {
+          "id": "04-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "On the site, the quote and the paragraph appear side by side, each taking half of the width, with the quote centered. The theme provides these columns, and the order is the one set in the editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The Blocks editor",
+      "subtitle": "Choose widgets from a dialog",
+      "clips": [
+        {
+          "id": "05-blocks",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "blocks-1",
+              "text": "The Blocks editor replaces the plus menu with a dialog. Let's choose Blocks in the settings of the Flow part, and save."
+            },
+            {
+              "id": "blocks-2",
+              "text": "Let's edit the Hillside Bakery page again. The plus button opens the Select Widget dialog, with a search box and a card for each widget type."
+            },
+            {
+              "id": "blocks-3",
+              "text": "Categories on the left filter the cards, and a thumbnail can illustrate each one. A widget type gets both from the Category and Thumbnail settings of its content type."
+            },
+            {
+              "id": "blocks-4",
+              "text": "Let's search for quote, and choose Add on the Blockquote card. The dialog closes, and the widget is added after the other widgets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Flow part",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Flow part turns a page into a list of widgets that editors add, fill in, size, align, and move. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

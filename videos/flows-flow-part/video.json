@@ -1,0 +1,54 @@
+{
+  "title": "Flow Part: Build Pages From Widgets | Orchard Core",
+  "description": "A landing page often mixes text, quotes, images, and other blocks, but a single body field gives editors one block of text and no way to arrange the rest.\n\nThe Orchard Core Flow part adds a list of widgets to a content item. Editors add widgets, fill them in, choose a size and an alignment for each one, and move them, all from the content editor.\n\nIn this video:\n• Why the Flow part, and what a site needs to use it\n• Add the Flow part to a content type, and its settings\n• Build a page: add widgets, then size, align, and move them\n• See the page on the site\n• The Blocks editor, which picks widgets from a dialog",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Flow part",
+    "Flows",
+    "Widgets",
+    "Content parts",
+    "Page builder"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Flows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Flows documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/"
+    },
+    {
+      "label": "Bag part documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/BagPart/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Flow/BagPart.md",
+    "src/docs/reference/modules/Flow/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Flows"
+  }
+}
