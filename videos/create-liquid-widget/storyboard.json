@@ -1,0 +1,234 @@
+{
+  "title": "Create a Liquid Widget Without Writing a Module",
+  "output": "create-liquid-widget",
+  "spoken": {
+    "Widget-LiquidWidget.liquid": "Widget, dash, Liquid Widget, dot liquid",
+    "Widget-LiquidWidget.cshtml": "Widget, dash, Liquid Widget, dot C.S.H.T.M.L.",
+    "Widget__LiquidWidget": "Widget, two underscores, Liquid Widget",
+    "Widget.cshtml": "Widget dot C.S.H.T.M.L.",
+    "Model.ContentItem": "Model dot Content Item",
+    "Model.Classes": "Model dot Classes",
+    "Model.Content": "Model dot Content",
+    "shape_render": "shape underscore render",
+    "DisplayAsync": "Display Async"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Create a Liquid Widget Without Writing a Module",
+      "subtitle": "A widget built in the admin, with Liquid and a template",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A widget is a piece of content that Orchard Core places in a zone of your pages. A Liquid widget has a body written in Liquid. In this video, you create one in the admin, with no module, and customize the template that renders it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a Liquid widget is",
+      "subtitle": "A content type with the Widget stereotype",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A widget is a content type with the Widget stereotype. Layers place widgets in the zones of a theme, and the Flow part of a page can hold them too. A Liquid widget gets its body from the Liquid part."
+            },
+            {
+              "id": "idea-2",
+              "text": "The Liquid body is stored exactly as typed, and it can hold HTML, CSS, and JavaScript. Editing it requires the Manage Liquid templates permission, which the Administrator and Editor roles have by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the content type",
+      "subtitle": "Content Types and the Liquid part",
+      "clips": [
+        {
+          "id": "02-type",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "Let's open Design, Content Definition, Content Types, and select Create new type."
+            },
+            {
+              "id": "type-2",
+              "text": "Enter Liquid Widget as the Display Name. The Technical Name is filled in from it, and it is the name that templates use for the type. Select Create."
+            },
+            {
+              "id": "type-3",
+              "text": "The Add Parts page lists the parts you can attach. Select Liquid, which provides a Liquid formatted body for your content item, and then select Add Selected Parts."
+            },
+            {
+              "id": "type-4",
+              "text": "The Edit Content Type page lists the parts of the type. The part named after the type holds its fields, and Liquid provides the body. This widget needs no fields."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Make it a widget",
+      "subtitle": "Creatable, Listable and the Widget stereotype",
+      "clips": [
+        {
+          "id": "03-widget",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "widget-1",
+              "text": "A type created here is Creatable and Listable by default, which suits content that editors create and list. A widget is added from a layer or a flow, so clear both boxes."
+            },
+            {
+              "id": "widget-2",
+              "text": "In the Stereotype field, enter Widget, and select Save. The Widgets module offers Widget as a stereotype, and layers and flows list the types that have it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add it to a layer",
+      "subtitle": "Place the widget in a zone and publish it",
+      "clips": [
+        {
+          "id": "04-place",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "place-1",
+              "text": "Let's open Design, Widgets. Each zone has a card, and its Add Widget button lists the widget types. Let's add a Liquid Widget to the Footer zone."
+            },
+            {
+              "id": "place-2",
+              "text": "Enter Opening hours as the Title. Select the Always layer, which shows its widgets on every page of the site. Render title stays cleared."
+            },
+            {
+              "id": "place-3",
+              "text": "In the Body, write Liquid. This paragraph starts with the name of the site, which Liquid fills in. Select Publish, because layers show only published widgets."
+            },
+            {
+              "id": "place-4",
+              "text": "The Widgets and Layers page lists the widget that you published in the Footer zone, tagged with the layer it belongs to."
+            },
+            {
+              "id": "place-5",
+              "text": "Let's open the home page and scroll to the footer. The paragraph appears in the Footer zone, with the name of the site filled in by Liquid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "How a widget is rendered",
+      "subtitle": "Shapes, alternates and the standard template",
+      "clips": [
+        {
+          "id": "05-shape",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shape-1",
+              "text": "A widget renders as a shape named after its stereotype. Orchard Core also looks for a more specific alternate, built from the stereotype, two underscores, and the technical name of the type. The most specific template wins."
+            },
+            {
+              "id": "shape-2",
+              "text": "The standard template, Widget.cshtml, wraps the content in a div that carries the widget classes, and a div with the class widget-body. A template of your own replaces all of that markup."
+            },
+            {
+              "id": "shape-3",
+              "text": "In a layer, the Layers module also wraps the widget in a div with the class widget-container. It prints the title there when Render title is checked, and your template does not replace that wrapper."
+            },
+            {
+              "id": "shape-4",
+              "text": "The template receives the shape as Model. Model.Classes holds the widget classes, Model.ContentItem is the content item, and the shape_render filter renders the Liquid part from Model.Content. The text-center class comes from the Bootstrap styles of the theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Write the template",
+      "subtitle": "Widget__LiquidWidget in Design, Templates",
+      "clips": [
+        {
+          "id": "06-template",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "template-1",
+              "text": "Let's open Design, Templates, and select Add Template. Enter Widget__LiquidWidget as the Name."
+            },
+            {
+              "id": "template-2",
+              "text": "In Content, enter the template from the slide, and select Save. The template is saved with the site, so no module or file is needed."
+            },
+            {
+              "id": "template-3",
+              "text": "Back on the home page, the footer shows Opening hours as a heading. The template prints it above the paragraph from the Liquid part."
+            },
+            {
+              "id": "template-4",
+              "text": "The Edit Content Type page also has an Edit templates button. Its menu lists the detail and summary templates of the type, and the detail entry opens Widget__LiquidWidget, the template you saved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "The same template elsewhere",
+      "subtitle": "Flows and themes",
+      "clips": [
+        {
+          "id": "07-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "The template also renders the widget when a page holds it in a Flow part. There, Model.Classes holds two more classes, for the alignment and the size, which the Flow part adds."
+            },
+            {
+              "id": "more-2",
+              "text": "In a theme, the same override is a file named Widget-LiquidWidget.liquid, or Widget-LiquidWidget.cshtml for Razor. The Razor file renders the part with DisplayAsync."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Create a Liquid Widget Without Writing a Module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A Liquid widget is a content type with the Liquid part and the Widget stereotype, placed from a layer, with an optional template for its markup. All of it is built in the admin. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

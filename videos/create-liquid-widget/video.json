@@ -1,0 +1,56 @@
+{
+  "title": "Create a Liquid Widget Without Writing a Module | Orchard Core",
+  "description": "A footer note, a banner or a snippet of HTML, CSS or JavaScript that an editor maintains does not need a module. A widget is a content type, and the Liquid part gives it a body that is written in Liquid in the admin.\n\nThis video builds one in the admin: a content type with the Liquid part and the Widget stereotype, a placement in a zone through a layer, and a Widget__LiquidWidget template that changes the markup the widget renders.\n\nIn this video:\n• What a Liquid widget is, and who can edit one\n• Create the content type with the Liquid part\n• Make it a widget with the Widget stereotype\n• Add it to a layer and publish it\n• How a widget is rendered: shapes, alternates and the standard template\n• Write the Widget__LiquidWidget template\n• The same template in flows and themes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Liquid",
+    "Widgets",
+    "Templates",
+    "Layers"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/create-liquid-widget/"
+    },
+    {
+      "label": "Templates documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Templates/"
+    },
+    {
+      "label": "Liquid documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Liquid/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/create-liquid-widget/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/create-liquid-widget"
+  }
+}
