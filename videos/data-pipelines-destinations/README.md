@@ -1,6 +1,6 @@
 # Data Pipelines: Deliver Files by Link, Email, FTP and SFTP
 
-**YouTube:** not published yet · **Length:** 5:59 · **Feature:** OrchardCore.DataPipelines ([Data Pipelines](https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/))
+**YouTube:** not published yet · **Length:** 6:02 · **Feature:** OrchardCore.DataPipelines ([Data Pipelines](https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/))
 
 The video adds the four destinations that deliver the files of a pipeline: Share a download link, Send by email, Upload
 to an FTP server and Upload to an SFTP server. It starts from a pipeline that already creates a CSV file, enables the

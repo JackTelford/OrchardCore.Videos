@@ -260,7 +260,8 @@ Starts on the designer. Needs `S4`. Changes the site.
   click `[data-cy="quick-add-UploadToFtp"]`; type `localhost` in **Host**; leave **Port** at `21`; type `demo` in
   **User name** (exact label); type `<ftp-password>` (`VIDEO_FTP_PASSWORD`) in **Password**, Tab; wait for the hint
   `Leave empty to keep the current password.` *Visible at the end:* the FTP panel with **Host** `localhost`, **Port**
-  `21`, **User name** `demo`, and **Password** shown as dots. Source: `UploadToFtpStep.cs:34`,
+  `21`, **User name** `demo`, and an empty **Password** box under its hint (the editor reloads once the password is applied and
+  never shows it again). Source: `UploadToFtpStep.cs:34`,
   `UploadToFtp.Fields.Edit.cshtml:4-62`.
 - `ftp-2`: `SelectAsync` on **Encryption** with `None (plain FTP)`; wait for the warning
   `Plain FTP isn't encrypted: the user name, the password and the files travel in clear text.`, and highlight it.
@@ -285,7 +286,7 @@ Starts on the designer. Needs `S5`. Changes the site.
   `[data-cy="quick-add-UploadToSftp"]`; type `localhost` in **Host**; clear **Port** and type `2222`; type `demo` in
   **User name**; type `<sftp-password>` (`VIDEO_SFTP_PASSWORD`) in **Password**, Tab; wait for the hint under it;
   highlight the **Private key** box (leave it empty). *Visible at the end:* the SFTP panel with **Host**, **Port**
-  `2222`, **User name**, the masked **Password** and the empty **Private key** with the sentence `Authenticate with a
+  `2222`, **User name**, the empty **Password** box under its keep hint (the editor never shows a password again) and the empty **Private key** with the sentence `Authenticate with a
   password, a private key, or both when the server asks for both.` Source: `UploadToSftpStep.cs:35`,
   `UploadToSftp.Fields.Edit.cshtml:4-48`.
 - `sftp-2`: scroll to **Host key fingerprint**; type the value of `VIDEO_SFTP_FINGERPRINT` (`SHA256:` and 43
@@ -346,5 +347,5 @@ Starts on `/Admin`, the Tools group collapsed. Needs `S7`. Changes nothing.
 Before assembling, look at every contact sheet and OCR the video as `SKILL.md` describes. The frames may hold only:
 `admin`, `jamie.chen`, `demo`, `reports@example.com`, `jamie.chen@example.com`, `pipelines@example.com`, `localhost`,
 the blog post of the Blog recipe, and the fingerprint of the throwaway SFTP key. They must not hold: a password (every
-password box shows dots; no browser autofill suggestion), the address bar of a machine, a real mail address, the
+password box is empty or shows dots; no browser autofill suggestion), the address bar of a machine, a real mail address, the
 mailbox at port 8025 (the email carries the link and its token), or the `ORCHARD_APP_DATA` path.

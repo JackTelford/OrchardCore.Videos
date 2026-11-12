@@ -31,11 +31,11 @@
           "steps": [
             {
               "id": "why-1",
-              "text": "A destination is the last step of a pipeline. It receives the files that a Create a file step or a Zip files step produces, and delivers them. One output can feed several destinations, and each one receives every file."
+              "text": "A destination is the last step of a pipeline. The destinations in this video receive the files that a Create a file step or a Zip files step produces, and deliver them. One output can feed several destinations, and each one receives every file."
             },
             {
               "id": "why-2",
-              "text": "Here are four destinations; others save to the media library or send to a web API. Share a download link and Send by email need the Email feature and an email provider. The upload steps need Data Pipelines - FTP and Data Pipelines - SFTP."
+              "text": "These are four; others include saving to the media library and sending to a web API. Share a download link and Send by email need the Email feature and an email provider. The upload steps need Data Pipelines - FTP and Data Pipelines - SFTP."
             }
           ]
         }
@@ -81,7 +81,7 @@
             },
             {
               "id": "link-3",
-              "text": "Recipients are users of the site, by user name or email, separated by commas. Each one gets the link by email. A name that matches no user stops the run."
+              "text": "Recipients are users of the site, by user name or email, separated by commas. Each one with an email address gets the link by email. A name that matches no user stops the run."
             },
             {
               "id": "link-4",
