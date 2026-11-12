@@ -1,6 +1,6 @@
 # Taxonomies in Code: Query Content Items by Term
 
-**YouTube:** not published yet · **Length:** 4:37 · **Feature:** `OrchardCore.Taxonomies` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/))
+**YouTube:** not published yet · **Length:** 4:38 · **Feature:** `OrchardCore.Taxonomies` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/))
 
 A developer video about finding content items by the terms they are filed under. It shows what a `TaxonomyField` stores and the
 `TaxonomyIndex` table, `QueryCategorizedContentItemsAsync` and `ISession` queries on that table, the term ids a Lucene index keeps and a

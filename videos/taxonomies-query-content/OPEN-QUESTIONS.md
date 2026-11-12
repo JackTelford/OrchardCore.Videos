@@ -34,6 +34,8 @@ To confirm on a site:
   (`TheAdmin.ts:118-184`) opens the dialog only for `RemoveUrl` or for `data-unsafe-url`, and the page script (`indexing-admin-index`) only handles the bulk actions
   of selected rows. So `index-3` and `index-4` name no dialog. Confirm on the first take that the click on **Rebuild** reloads the list with the notification; if a dialog
   opens, the plan says to click **Yes**, and the narration of `index-4` ("Choose Rebuild.") stays true. Confirm too that this is the intended behavior of the list.
+- On the **Lucene Query** page the **Parameters** text is deserialized into a dictionary of objects and wrapped with `FluidValue.Create` (`Lucene/Controllers/AdminController.cs`, `QueryIndex`/`Query`). That a JSON string value then renders in `{{ categories }}` as the plain id, and that `{% if categories %}` is false when the key is absent, was not verified in the Liquid options of the site: confirm on the first take that `run-2` returns the two Politics posts.
+- The field keys: the field handler writes `{key}.{field}.Ids` for the type name and for the part name (`ContentFieldIndexHandler.cs:35-44`). On a Blog Post both are `BlogPost`, so `BlogPost.Category.Ids` is the one name the video shows.
 - The template sets `"size": 10`, so the query returns at most ten posts. `query-1` says "up to ten"; the site has four posts, so the page shows "Found 4 result(s)".
 - The result table of the **Lucene Query** page lists every stored field of the hits. Check that the `BlogPost.Category.Ids` column is readable on screen;
   if the table is too wide, the narration of `run-2` ("including the term ids") needs a highlight or a scroll in the plan.
