@@ -110,7 +110,7 @@ No external service is needed. The Email feature stays disabled.
 3. **Publish two of the pipelines as `admin`** (an imported pipeline is a draft, and a run executes with the access of
    the user who published it): in **Tools > Data Pipelines > Pipelines**, choose **Edit** on **Blog posts export**,
    then **Publish** in the toolbar of the designer (if the dialog **Publish the pipeline?** lists warnings, choose
-   **Publish anyway**; the message "The pipeline was published." follows). Do the same for **Subscriber list check**. Leave **Newsletter export** unpublished: its **Draft** badge is on screen in `run-1`.
+   **Publish anyway**; the message "Version 1 was published." follows, or "The pipeline was published." when the result carries no version: `Assets/designer/src/App.vue:472` of the Data Pipelines module). Do the same for **Subscriber list check**. Leave **Newsletter export** unpublished: its **Draft** badge is on screen in `run-1`.
 4. **Seed the history** in this order, waiting for each run to end (its badge in **Tools > Data Pipelines > Run
    History** reads **Succeeded** or **Failed**) before starting the next:
    1. **Blog posts export**: **Actions**, **Run now**, **Run**, twice.
