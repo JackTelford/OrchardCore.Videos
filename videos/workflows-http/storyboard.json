@@ -1,0 +1,252 @@
+{
+  "title": "HTTP Workflows",
+  "output": "workflows-http",
+  "spoken": {
+    "deserializeRequestData": "deserialize request data",
+    "IsSuccessStatusCode": "is success status code",
+    "ReasonPhrase": "reason phrase",
+    "StatusCode": "status code",
+    "queryString": "query string",
+    "requestForm": "request form",
+    "readBody": "read body",
+    "responseWrite": "response write",
+    "setProperty": "set property",
+    "setOutcome": "set outcome",
+    "stockBody": "stock body",
+    "signalUrl": "signal U.R.L.",
+    "signal_url": "signal U.R.L.",
+    "httpContext": "HTTP context"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "HTTP Workflows",
+      "subtitle": "Handle requests and call web APIs",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A workflow can start from a web request, answer it, and call other web services. The HTTP Workflows Activities feature provides the activities for that. In this video, a webhook checks a product in a stock API, and we cover signals, filters and redirects."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The HTTP activities",
+      "subtitle": "How a workflow reaches the web",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "The HTTP Workflows Activities feature connects a workflow to the web. It depends on the Workflows feature. An HTTP Request event starts a workflow when a request reaches its URL, and Filter Incoming HTTP Request starts one when a request reaches a controller action."
+            },
+            {
+              "id": "why-2",
+              "text": "HTTP Response and HTTP Redirect answer the caller of the workflow. The HTTP Request task works the other way: it calls a web API, and the workflow reads the response."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Find the activities",
+      "subtitle": "The HTTP category of the designer",
+      "clips": [
+        {
+          "id": "02-activities",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "acts-1",
+              "text": "Open a workflow in the designer, and search the activities for HTTP. The HTTP category lists six activities. HTTP Request appears twice: once as an event, and once as a task."
+            },
+            {
+              "id": "acts-2",
+              "text": "Select Events to see the three that start a workflow or wait for something: HTTP Request, Filter Incoming HTTP Request, and Signal."
+            },
+            {
+              "id": "acts-3",
+              "text": "Select Tasks for the three that do something: HTTP Redirect, HTTP Request, and HTTP Response."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Receive a request",
+      "subtitle": "The HTTP Request event",
+      "clips": [
+        {
+          "id": "03-receive",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "recv-1",
+              "text": "This workflow checks the stock of a product. An HTTP Request event starts it, a Script reads the request, an HTTP Request task calls a stock API, and an HTTP Response replies to the caller."
+            },
+            {
+              "id": "recv-2",
+              "text": "Open the HTTP Request event. HTTP Method is POST, and the URL is generated for this activity; Regenerate creates a different one. Anyone who calls this URL triggers the workflow, so keep it private."
+            },
+            {
+              "id": "recv-3",
+              "text": "Validate Antiforgery Token is checked by default. Uncheck it when a service calls the URL as a webhook, as here. Token Life Span is a number of days, and zero means the token never expires."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Read and answer the request",
+      "subtitle": "Script functions for an HTTP request",
+      "clips": [
+        {
+          "id": "04-read",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "read-1",
+              "text": "A Script activity reads the request. readBody returns the raw body, and the script parses it as JSON. setProperty keeps the product code for the activities that follow, and setOutcome lets the workflow continue."
+            },
+            {
+              "id": "read-2",
+              "text": "Other functions read other parts of a request. queryString and requestForm return the value of a field by name. deserializeRequestData returns the query string, the posted form or the JSON body as one object, and httpContext returns the context of the request."
+            },
+            {
+              "id": "read-3",
+              "text": "A script can also answer the request: responseWrite writes text to the response. When no activity writes a response, such as HTTP Response, HTTP Redirect or responseWrite, the caller of the HTTP Request event's URL receives 202 Accepted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Call a web API",
+      "subtitle": "The HTTP Request task and its outcomes",
+      "clips": [
+        {
+          "id": "05-call",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "call-1",
+              "text": "Open the HTTP Request task. Its URL, Headers and Body accept Liquid, so the product code goes into the URL. Content Type applies to the body, which is sent only with POST, PUT and PATCH."
+            },
+            {
+              "id": "call-2",
+              "text": "HTTP Response Codes lists the status codes the workflow handles. Each code becomes an outcome, 200 OK and 404 Not Found here. Any other status takes the Unhandled Http Status outcome."
+            },
+            {
+              "id": "call-3",
+              "text": "The Outputs tab stores the response body, the status code or the whole response in a variable. Here, the response body is stored in stockBody. The last result also holds the response, with Body, Headers, StatusCode, ReasonPhrase and IsSuccessStatusCode."
+            },
+            {
+              "id": "call-4",
+              "text": "An HTTP Response activity replies to the caller. It has an HTTP Status Code, a Content Type, Content and Headers. The 200 branch returns the body of the stock API, and the 404 branch returns a message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Run the workflow",
+      "subtitle": "A request, a response and an instance",
+      "clips": [
+        {
+          "id": "06-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Run… in the toolbar sends a request to the published workflow, as a client would. The event is a POST, so the dialog offers a body. Enter a JSON body with a product code."
+            },
+            {
+              "id": "run-2",
+              "text": "Select Run. The response is 200, with the body that the stock API returned. Below it, the dialog shows the instance this request started, and a button to open it."
+            },
+            {
+              "id": "run-3",
+              "text": "Change the product code to one the stock API does not know, and run it again. The API answers 404, the workflow follows the 404 outcome, and the caller receives the message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Wait for a signal",
+      "subtitle": "Links that resume a workflow",
+      "clips": [
+        {
+          "id": "07-signal",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "signal-1",
+              "text": "A Signal event makes a workflow wait. It resumes when someone opens a link made for it. In Liquid, the signal_url filter makes the link, and in a script, signalUrl does."
+            },
+            {
+              "id": "signal-2",
+              "text": "The link has a protected token, valid for seven days. It is a path on the site, so add the site address before sending it. Opening it resumes the workflow that made the link, if it waits on a Signal with the same name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "More HTTP activities",
+      "subtitle": "Filters, redirects and recipes",
+      "clips": [
+        {
+          "id": "08-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "Filter Incoming HTTP Request starts a workflow when a request reaches a controller action. You give it the HTTP Method, Controller, Action and Area to match, and the workflow runs before the action does."
+            },
+            {
+              "id": "more-2",
+              "text": "HTTP Redirect sends the caller to a Location, which accepts Liquid. Check Permanent for a 301 redirect, and leave it unchecked for a 302."
+            },
+            {
+              "id": "more-3",
+              "text": "To move a workflow to another site, export it as a recipe and import it there. The import generates the URL of each HTTP Request event on the site that receives it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "HTTP Workflows",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how a workflow receives a request, calls a web API, and answers the caller. Signals, filters and redirects extend it to links and controller actions. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
