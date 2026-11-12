@@ -68,7 +68,7 @@
             },
             {
               "id": "start-3",
-              "text": "Set HTTP Method to POST, because a form posts. The URL appears as soon as the settings open. It carries a protected token, so anyone who has the URL can start this workflow."
+              "text": "Set HTTP Method to POST, because a form posts. The URL is already filled in when the settings open. It carries a protected token, so anyone who has the URL can start this workflow."
             },
             {
               "id": "start-4",
@@ -97,7 +97,7 @@
             },
             {
               "id": "validate-3",
-              "text": "From its Done outcome, add a second one for Email. A failed field adds an error to the model state. The task always follows Done, so the next check runs whether the field was valid or not."
+              "text": "From its Done outcome, add a second one with Field Name Email and Error Message Email is required. A failed field adds an error to the model state. The task always follows Done, so the next check runs whether the field was valid or not."
             },
             {
               "id": "validate-4",

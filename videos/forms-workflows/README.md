@@ -1,6 +1,6 @@
 # Forms and Workflows: Process Each Submission
 
-**YouTube:** not published yet · **Length:** 6:00 · **Feature:** `OrchardCore.Forms` ([Forms](https://docs.orchardcore.net/en/latest/reference/modules/Forms/))
+**YouTube:** not published yet · **Length:** 6:04 · **Feature:** `OrchardCore.Forms` ([Forms](https://docs.orchardcore.net/en/latest/reference/modules/Forms/))
 
 A developer video about the path a form submission takes: the Form widget posts to the URL of a workflow, an HTTP
 request event starts it, and the validation activities of the Forms module check the fields. The workflow then sends
@@ -11,7 +11,7 @@ The title, description, tags and chapters YouTube shows are in `video.json`.
 
 ## Recording it again
 
-The video was recorded on a **fresh site** with fake data only, so it needs no mask script. `recording-plan.md` holds
+Record the video on a **fresh site** with fake data only; it needs no mask script. `recording-plan.md` holds
 every action, the exact seed data and the label sources, and `OPEN-QUESTIONS.md` lists what the source could not
 settle.
 
