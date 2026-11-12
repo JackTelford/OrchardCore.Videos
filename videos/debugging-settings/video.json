@@ -1,0 +1,51 @@
+{
+  "title": "Debugging Settings: Show Errors While You Build a Site | Orchard Core",
+  "description": "While you build a site, you often need to know which template drew a part of a page, and the page itself does not say.\n\nThe Debugging settings of Orchard Core have one option, Write shape debug information. When it is on, Orchard Core writes an HTML comment before and after each shape it renders, and the comments name the shape type and what drew it.\n\nIn this video:\n• How pages are built from shapes and the templates that draw them\n• Turning on Write shape debug information under Settings, Debugging\n• Reading the comments in the source of a page\n• Turning the option off again\n• The permissions that open the page, and Resource Debug Mode on the General page",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Debugging",
+    "Shapes",
+    "Site settings",
+    "Admin"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Diagnostics and Logging"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Settings/"
+    },
+    {
+      "label": "Documentation: shape debug information",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DisplayManagement/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Settings/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Settings"
+  }
+}
