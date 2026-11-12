@@ -6,7 +6,7 @@ Everything visual comes from brand.py, so the slides look like those of every ot
 from brand import bullets, slide_base
 
 FEATURES = [
-    ("1", "X (Twitter) Integration", "Stores the keys of your X app. Adds a workflow task that posts to X."),
+    ("1", "X (Twitter) Integration", "Stores the keys of your X app. Adds a workflow task that posts to X, with Workflows."),
     ("2", "Sign in with X (Twitter)", "Adds an X (Twitter) button to the login page."),
 ]
 

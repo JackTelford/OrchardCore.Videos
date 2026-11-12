@@ -34,7 +34,7 @@
           "steps": [
             {
               "id": "why-1",
-              "text": "The module has two features. X (Twitter) Integration stores the keys of your X app, and adds a workflow task that posts to X. Sign in with X (Twitter) adds a button to the login page."
+              "text": "The module has two features. X (Twitter) Integration stores the keys of your X app, and, when Workflows is enabled, adds a workflow task that posts to X. Sign in with X (Twitter) adds a button to the login page."
             },
             {
               "id": "why-2",

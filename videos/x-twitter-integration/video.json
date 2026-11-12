@@ -1,6 +1,6 @@
 {
   "title": "X (Twitter): Sign In With X and Post From Workflows | Orchard Core",
-  "description": "Visitors who have an X account can sign in to your site with it, and your site can post to X by itself when content is published. Both need the keys of an X app and a few settings.\n\nThe X (Twitter) module has two features. Sign in with X (Twitter) adds a button to the login page, and X (Twitter) Integration stores the keys of the app and adds a workflow task that posts to X. This video enables them, enters fake keys, and builds a workflow that sends a post when a Blog Post is published.\n\nIn this video:\n• What the module provides\n• Enable the features\n• Enter the keys of your X app\n• Set up Sign in with X\n• The login page\n• The first sign-in\n• Post from a workflow",
+  "description": "Visitors who have an X account can sign in to your site with it, and your site can post to X by itself when content is published. Both need the keys of an X app and a few settings.\n\nThe X (Twitter) module has two features. Sign in with X (Twitter) adds a button to the login page, and X (Twitter) Integration stores the keys of the app and, when Workflows is enabled, adds a workflow task that posts to X. This video enables them, enters fake keys, and builds a workflow that sends a post when a Blog Post is published.\n\nIn this video:\n• What the module provides\n• Enable the features\n• Enter the keys of your X app\n• Set up Sign in with X\n• The login page\n• The first sign-in\n• Post from a workflow",
   "hashtags": [
     "OrchardCore",
     "DotNet",
