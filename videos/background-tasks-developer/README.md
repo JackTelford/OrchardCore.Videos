@@ -1,6 +1,6 @@
 # Write a Background Task: Schedules, Locks and Monitoring
 
-**YouTube:** not published yet · **Length:** 5:58 · **Feature:** `OrchardCore.BackgroundTasks` ([Background Tasks](https://docs.orchardcore.net/en/latest/reference/modules/BackgroundTasks/))
+**YouTube:** not published yet · **Length:** 5:55 · **Feature:** `OrchardCore.BackgroundTasks` ([Background Tasks](https://docs.orchardcore.net/en/latest/reference/modules/BackgroundTasks/))
 
 A video for module authors. It shows how the background service runs the tasks of a tenant, how to write a task with
 `IBackgroundTask` and the `BackgroundTask` attribute, how to register it, and where its title, description and schedule

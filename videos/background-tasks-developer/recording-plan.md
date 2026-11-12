@@ -102,7 +102,7 @@ Labels: **Tools**, **Background Tasks** `AdminMenu.cs:18-19`; title and descript
 ### `admin-2`
 
 The narration says that the Settings card shows the technical name, which is the full name of the class, and the
-schedule, and that Atomic says Yes with the lock values for an atomic task, and No otherwise.
+schedule, the cron expression from the attribute.
 
 Actions:
 
@@ -111,15 +111,14 @@ Actions:
    `/Admin/BackgroundTasks/Details/OrchardCore.Media.Services.ResizedMediaCacheBackgroundTask`.
 2. Let `settings` be the card `.card` that contains `.card-header` with the text **Settings**. `HighlightAsync` on
    `settings.Locator("dt:text-is('Technical name') + dd")`, then `PauseAsync(1500)`, then `ClearHighlightsAsync()`.
-3. `HighlightAsync` on `settings.Locator("dt:text-is('Schedule') + dd")`, then `PauseAsync(1500)`, then `ClearHighlightsAsync()`.
-4. `HighlightAsync` on `settings.Locator("dt:text-is('Atomic') + dd")`, and leave it highlighted.
+3. `HighlightAsync` on `settings.Locator("dt:text-is('Schedule') + dd")`, and leave it highlighted.
 
 Visible when the narration ends: the details page of the task. The **Settings** card on the right shows **Technical
 name** `OrchardCore.Media.Services.ResizedMediaCacheBackgroundTask`, **Enabled** with the badge **Enabled**, **Schedule**
-`0 0 * * *`, **Use tenant pipeline** **No**, and **Atomic** **No** inside the ring. The **Execution** card on the left
+`0 0 * * *` inside the ring, **Use tenant pipeline** **No**, and **Atomic** **No**. The **Execution** card on the left
 shows **Status** **Idle**, **Last run** **Never**, a **Next run** time, **Completed runs** 0 and **Failed runs** 0.
 
-Labels: `Details.cshtml:137` (**Settings**), `:140` (**Technical name**), `:155` (**Schedule**), `:167` (**Atomic**),
+Labels: `Details.cshtml:137` (**Settings**), `:140` (**Technical name**), `:155` (**Schedule**), `:167` (**Atomic**, shown but not narrated),
 `:35` (**Execution**), `:71-75` (**Last run**, **Never**), `:116` (**Completed runs**).
 
 ### `admin-3`

@@ -24,6 +24,7 @@
     "ShellWarmup": "Shell Warmup",
     "BackgroundService": "Background Service",
     "AddSingleton": "Add Singleton",
+    "URLs": "U.R.L.s",
     "OrchardCore": "Orchard Core",
     "BackgroundTask": "Background Task"
   },
@@ -156,7 +157,7 @@
             },
             {
               "id": "admin-2",
-              "text": "Let's open the task. The Settings card shows its technical name, which is the full name of the class, and its schedule. Atomic says Yes with the lock values for an atomic task, and No otherwise."
+              "text": "Let's open the task. The Settings card shows its technical name, which is the full name of the class, and its schedule, the cron expression from the attribute."
             },
             {
               "id": "admin-3",
