@@ -5279,9 +5279,9 @@
       "src/docs/reference/modules/Cors/README.md",
       "src/docs/reference/modules/OpenId/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.9,
+    "words": 885,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
