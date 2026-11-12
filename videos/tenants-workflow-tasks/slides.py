@@ -26,7 +26,7 @@ CHECKS = [
 # What happens when a task takes its Failed outcome.
 FAILED = [
     ("1", "Failed leads nowhere by itself", "A task that can't do its job takes the Failed outcome."),
-    ("2", "No connection, the workflow ends", "The instance still reads Finished."),
+    ("2", "No connection, the workflow ends", "The instance reads Finished."),
     ("3", "Connect Failed to a report", "An activity such as Log or Notify tells you what happened."),
 ]
 

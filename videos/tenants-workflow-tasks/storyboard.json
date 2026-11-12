@@ -202,7 +202,7 @@
           "steps": [
             {
               "id": "wrap-1",
-              "text": "A task that takes Failed leads nowhere unless you connect that outcome. With no connection, the workflow ends there, and the instance still reads Finished. Connect Failed to an activity such as Log or Notify, to report the problem."
+              "text": "A task that takes Failed leads nowhere unless you connect that outcome. With no connection, the workflow ends there, and the instance reads Finished. Connect Failed to an activity such as Log or Notify, to report the problem."
             },
             {
               "id": "wrap-2",
