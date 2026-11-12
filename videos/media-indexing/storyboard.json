@@ -1,0 +1,224 @@
+{
+  "title": "Search Media Files",
+  "output": "media-indexing",
+  "spoken": {
+    "OpenXML": "Open X.M.L.",
+    "FileText": "File Text",
+    "MediaText": "Media Text"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Search Media Files",
+      "subtitle": "Find words inside PDF, Word, PowerPoint and text files",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Documents attached to a content item hold words that people look for. This video shows how the Media Indexing features add the text of PDF, Word, PowerPoint and text files to a search index, so site search finds the content item that carries them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How media indexing works",
+      "subtitle": "What is read, and what must be in place",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A search index holds the text of content items, such as a title and a body. The words inside a file attached to a content item are not part of that text, so searching for them finds nothing."
+            },
+            {
+              "id": "why-2",
+              "text": "Three features read files and hand their text to the index. PDF Media Indexing reads PDF files, Text Media Indexing reads text and Markdown files, and OpenXML Media Indexing reads Word and PowerPoint files."
+            },
+            {
+              "id": "why-3",
+              "text": "Three conditions apply. The file has to be attached through a Media Field, since a file that only sits in the Media Library is not indexed. The field is included in the index, and an index such as Lucene covers the content type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "One feature for each file type",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for media indexing. In the Search category, the list shows PDF Media Indexing, Text Media Indexing, and OpenXML Media Indexing."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's select the three features, open Bulk Actions, and choose Enable. All three depend on Media Indexing, which is enabled together with them."
+            },
+            {
+              "id": "enable-3",
+              "text": "After the page reloads, searching again shows all three features with the Enabled status."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Index a Media Field",
+      "subtitle": "Add a field and include it in the index",
+      "clips": [
+        {
+          "id": "03-field",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "field-1",
+              "text": "Media indexing works field by field. Let's open Design, Content Definition, Content Types, and edit the Article type."
+            },
+            {
+              "id": "field-2",
+              "text": "Let's select Add Field, name the new field Documents, choose the Media Field type, and select Save & Configure."
+            },
+            {
+              "id": "field-3",
+              "text": "On the settings page, the Lucene Index settings section has the checkbox Include this element in the index. Let's select it, and leave Keyword cleared, because it indexes the whole value as a single token."
+            },
+            {
+              "id": "field-4",
+              "text": "The same page has Allow media text, which lets editors type a description for each file. When it is selected, the descriptions are indexed as MediaText. Let's save the settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Attach a document",
+      "subtitle": "Publish an article with a PDF",
+      "clips": [
+        {
+          "id": "04-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "publish-1",
+              "text": "Let's create an article. Open Content, Content Items, then the New menu, choose Article, and enter the title Autumn Garden Guide."
+            },
+            {
+              "id": "publish-2",
+              "text": "The Documents field has an Add media button, which opens Select Media. Let's pick the garden planting guide PDF from the library, and choose OK."
+            },
+            {
+              "id": "publish-3",
+              "text": "Then select Publish. The article's own text never mentions the word persimmon, but the PDF does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Update the index",
+      "subtitle": "Reset the index and choose the fields to query",
+      "clips": [
+        {
+          "id": "05-index",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "index-1",
+              "text": "The index records the names of its fields when it is saved, and Reset saves it. In Search, Indexes, open Actions on the Articles index and choose Reset, which restarts the indexing of all content items."
+            },
+            {
+              "id": "index-2",
+              "text": "Let's confirm with Yes. The list reloads with a success message, and select Edit on the Articles index to open it."
+            },
+            {
+              "id": "index-3",
+              "text": "Under Default Query Settings, Query field names lists the fields of the index. Two belong to the Documents field: one name ends in MediaText, and the other ends in FileText."
+            },
+            {
+              "id": "index-4",
+              "text": "FileText holds the text read from the files, and MediaText holds the descriptions typed by editors. The search covers only the selected names, or every field when none is selected. Let's select both, leave the other fields as they are, and save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Search the site",
+      "subtitle": "Find a word that only the PDF holds",
+      "clips": [
+        {
+          "id": "06-search",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "search-1",
+              "text": "The search page of the site uses the Default search index from Settings, Search, Site Search. Here, that is the Articles index."
+            },
+            {
+              "id": "search-2",
+              "text": "Let's open the search page of the site, type persimmon, and select Search."
+            },
+            {
+              "id": "search-3",
+              "text": "The Autumn Garden Guide article is listed, although the word appears only in the PDF attached to it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Good to know",
+      "subtitle": "Formats and file types",
+      "clips": [
+        {
+          "id": "07-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "notes-1",
+              "text": "Only some formats are read. Word documents in the doc format and Excel workbooks can be attached, but no feature reads them, so they add no file text."
+            },
+            {
+              "id": "notes-2",
+              "text": "Text and Markdown files can be attached only when the site allows those file types in its Media configuration, and the default list does not include them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Search Media Files",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Enable the feature for a file type, include the Media Field in the index, update the index, and the words inside attached files become searchable. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Search Media Files: Index PDF, Office and Text Documents | Orchard Core",
+  "description": "Files attached to a content item, such as a PDF or a Word document, hold words that site search does not see. A search for a word that only a file contains finds nothing.\n\nThe Media Indexing features read the text of PDF, Word, PowerPoint, text and Markdown files and add it to the search index. You enable the features, include a Media Field in the index, update the index, and the content item is found by the words of its files.\n\nIn this video:\n• How media indexing works, and what must be in place\n• Enable the PDF, Text and OpenXML Media Indexing features\n• Include a Media Field in the index\n• Attach a PDF to an article and publish it\n• Reset the index and choose the fields to query\n• Search the site for a word that only the PDF holds\n• Formats and file types to keep in mind",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Search"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Media Indexing",
+    "Search",
+    "Lucene",
+    "PDF"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media.Indexing"
+  }
+}

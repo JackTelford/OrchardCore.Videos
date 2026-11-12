@@ -2903,9 +2903,9 @@
     "docs": [
       "src/docs/reference/modules/Media/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.3,
+    "words": 650,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
