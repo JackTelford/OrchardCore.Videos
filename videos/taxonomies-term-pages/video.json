@@ -1,0 +1,49 @@
+{
+  "title": "Taxonomies: Term Pages That List Their Content | Orchard Core",
+  "description": "A taxonomy sorts content into terms, but visitors also need a way to browse your site by term, such as all the posts of one category or one tag.\n\nA term page gives each term an address of its own and lists the content items that have the term selected in a taxonomy field. Terms get their pages when the taxonomy routes them, and the Page size of the site decides how many items a page holds.\n\nIn this video:\n• What a term page is, and how its address is built\n• Browsing from a post to the page of its category and its tag\n• Routing the terms from the taxonomy, with Route contained items and the Permalink of a term\n• Controlling how many items a term page holds with the Page size\n• The four things a term page needs",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Taxonomies"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Taxonomies",
+    "Taxonomy",
+    "Term pages",
+    "Categories",
+    "Tags"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Taxonomies"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Taxonomies/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Taxonomies"
+  }
+}

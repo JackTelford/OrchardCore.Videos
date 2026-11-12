@@ -1,0 +1,190 @@
+{
+  "title": "Taxonomies: Term Pages",
+  "output": "taxonomies-term-pages",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Taxonomies: Term Pages",
+      "subtitle": "A page for every term, listing its content",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A taxonomy sorts content into terms. A term page gives a term an address of its own, and lists the content that has it. In this video, we browse term pages and see what gives a term its page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a term page is",
+      "subtitle": "One page for each term",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Each term, such as a category of a blog, can have a page of its own. Visitors use these pages to browse your content by category or by tag."
+            },
+            {
+              "id": "idea-2",
+              "text": "The address of a term page is the permalink of the taxonomy, followed by the permalink of the term. For the term Travel in the taxonomy Categories, it is categories, then travel."
+            },
+            {
+              "id": "idea-3",
+              "text": "The page lists the content items that have the term selected in a taxonomy field. An item that has only a child term selected is not listed on the page of the parent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Browse by term",
+      "subtitle": "From a post to its term page",
+      "clips": [
+        {
+          "id": "02-browse",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "browse-1",
+              "text": "Here is the home page of a blog. Under each post, its category and its tags appear as badges, and every badge links to the page of that term."
+            },
+            {
+              "id": "browse-2",
+              "text": "Let's select the Travel badge. The page that opens is the term page of Travel, at the address categories, then travel."
+            },
+            {
+              "id": "browse-3",
+              "text": "The heading is the name of the term. Below it, the posts that have Travel selected appear newest first, each one as its summary, the way it appears on the home page."
+            },
+            {
+              "id": "browse-4",
+              "text": "Tags work the same way. Selecting the Space badge of a post opens the term page of that tag, with the posts that carry it."
+            },
+            {
+              "id": "browse-5",
+              "text": "A taxonomy has a page too, at its own permalink. For the Tags taxonomy, it lists the terms, and each term links to its page. Let's open Earth."
+            },
+            {
+              "id": "browse-6",
+              "text": "The Earth page lists the three posts that have this tag. A post with several tags, such as the oldest one, appears on the page of each tag."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Give terms their pages",
+      "subtitle": "The taxonomy and its terms",
+      "clips": [
+        {
+          "id": "03-routing",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "routing-1",
+              "text": "A term has a page only when its taxonomy is set up to route it. In Content, Content Items, search for Categories and select Edit."
+            },
+            {
+              "id": "routing-2",
+              "text": "The Permalink of the taxonomy is categories. It is the first part of the address of every term page."
+            },
+            {
+              "id": "routing-3",
+              "text": "Route contained items is checked. It gives each term of the taxonomy an address of its own. Without it, the terms have no pages."
+            },
+            {
+              "id": "routing-4",
+              "text": "Scrolling down, each term has an Edit button. Let's open Travel. Its Permalink is travel, the second part of the address of its page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Control the page size",
+      "subtitle": "How many items a page holds",
+      "clips": [
+        {
+          "id": "04-paging",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "paging-1",
+              "text": "Term pages are paged. The number of items on a page is the Page size in Settings, General, which is set to ten here."
+            },
+            {
+              "id": "paging-2",
+              "text": "Let's change the Page size to three, and select Save. A message confirms that the site settings are updated."
+            },
+            {
+              "id": "paging-3",
+              "text": "Back on the Travel term page, the list holds only the three newest posts, and a pager appears under it."
+            },
+            {
+              "id": "paging-4",
+              "text": "Selecting page two shows the three older posts. Every term page is paged the same way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What a term page needs",
+      "subtitle": "Four things to check",
+      "clips": [
+        {
+          "id": "05-needs",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "needs-1",
+              "text": "First, the Autoroute feature is enabled, and the taxonomy has Route contained items checked, so that each of its terms gets an address under the permalink of the taxonomy."
+            },
+            {
+              "id": "needs-2",
+              "text": "Second, the taxonomy is published. A term has a page only once the published taxonomy contains it, so publish the taxonomy after you add terms."
+            },
+            {
+              "id": "needs-3",
+              "text": "Third, the content type of the terms has Manage contained item routes checked, so each term uses its own Permalink. Without it, the address ends with the identifier of the term and its name."
+            },
+            {
+              "id": "needs-4",
+              "text": "Finally, content items need a taxonomy field with the term selected. The term page lists those items, and a separate video covers how to add the field."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Taxonomies: Term Pages",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A term page gives each term an address and a paged list of the content that has it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
