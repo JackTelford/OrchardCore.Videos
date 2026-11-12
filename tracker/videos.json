@@ -2820,9 +2820,9 @@
     "docs": [
       "src/docs/reference/modules/AzureAISearch/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.9,
+    "words": 741,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
