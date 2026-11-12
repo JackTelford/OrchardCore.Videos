@@ -1,0 +1,207 @@
+{
+  "title": "Meta Login",
+  "output": "meta-login",
+  "spoken": {
+    "CallbackPath": "Callback Path",
+    "/signin-facebook": "slash sign in dash facebook",
+    "URI": "U.R.I."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Meta Login",
+      "subtitle": "Let users sign in with Facebook",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Meta Login lets people sign in to your Orchard Core site with their Facebook account. In this video, you see what you need from Meta, the two settings pages in the admin, and the button that appears on the login page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What you need from Meta",
+      "subtitle": "How the sign-in works, and what to prepare",
+      "clips": [
+        {
+          "id": "01-need",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "need-1",
+              "text": "Meta Login hands the sign-in over to Meta. A visitor selects a button on your login page, signs in at Meta, and Meta sends the visitor back to your site, which finishes the sign-in."
+            },
+            {
+              "id": "need-2",
+              "text": "Create an app for your site on the Meta for developers site. Under Basic Settings, the app shows the two values Orchard Core needs: the application ID and the application secret."
+            },
+            {
+              "id": "need-3",
+              "text": "In the same app, enable the Meta Login product for web apps, and set a valid redirect URI. Its path must match the callback path of your site, which is /signin-facebook unless you change it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable Meta Login",
+      "subtitle": "One feature, two dependencies",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for Meta Login. The result sits in the Meta category, and its description reads: Authenticates users from Meta."
+            },
+            {
+              "id": "enable-2",
+              "text": "Meta Login depends on Meta Core Components, which holds the app settings, and on External Authentication, which handles the visitor's return from Meta. Select Enable, and both are enabled with it."
+            },
+            {
+              "id": "enable-3",
+              "text": "A message reads: The feature Meta Login was enabled. The Meta Login row offers Disable instead of Enable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Meta app settings",
+      "subtitle": "Application identifier and secret key",
+      "clips": [
+        {
+          "id": "03-app",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "app-1",
+              "text": "Let's open Settings, Integrations, Meta App. The heading is Meta Integration, and a notice warns that the website might be restarted when you save the settings."
+            },
+            {
+              "id": "app-2",
+              "text": "Application Identifier is required. Enter the application ID from your Meta app. This video uses a made-up value."
+            },
+            {
+              "id": "app-3",
+              "text": "Secret Key takes the application secret. On a site without the Secrets feature, it is a password field, so the value is hidden as you type, and the site stores it in protected form."
+            },
+            {
+              "id": "app-4",
+              "text": "The other fields configure the Meta JavaScript SDK for the front end of your site. Meta Login does not use them, so you can leave their defaults."
+            },
+            {
+              "id": "app-5",
+              "text": "Select Save. A message confirms the update, and the Secret Key field says that its value is securely stored."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Meta login settings",
+      "subtitle": "Callback path and tokens",
+      "clips": [
+        {
+          "id": "04-login",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "Let's open Settings, Security, Authentication, Meta. The heading is Login Settings, and a note at the bottom links to the Meta Integration settings, which must be configured to use the Login Feature."
+            },
+            {
+              "id": "login-2",
+              "text": "CallbackPath is the path where Meta returns the visitor to your site. Leave it empty to use the default, /signin-facebook, and give Meta a redirect URI that matches the path you use."
+            },
+            {
+              "id": "login-3",
+              "text": "Store tokens keeps the external authentication tokens for reuse. Leave it cleared unless something on your site needs them. With both options at their defaults, you do not need to save this page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The login page",
+      "subtitle": "The Facebook button",
+      "clips": [
+        {
+          "id": "05-signin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signin-1",
+              "text": "Let's open the login page of the site. Beside the usual Log in form, a second section appears: Use another service to log in."
+            },
+            {
+              "id": "signin-2",
+              "text": "It holds one button, labeled Facebook rather than Meta. The button appears once the application ID and the secret key are saved and Meta Login is enabled."
+            },
+            {
+              "id": "signin-3",
+              "text": "Selecting the button sends the browser to Meta to sign in. This video stops here, because the application values are made up."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "When Meta returns the visitor",
+      "subtitle": "Sign in, link or register",
+      "clips": [
+        {
+          "id": "06-after",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "after-1",
+              "text": "When Meta sends a visitor back, the site looks for a user already linked to that Meta account. If it finds one, it signs that user in, unless a login check stops it, such as a disabled account."
+            },
+            {
+              "id": "after-2",
+              "text": "If no user is linked, but the email address from Meta matches a local user, the site shows Link your account. The visitor enters the local password, and the two accounts are linked."
+            },
+            {
+              "id": "after-3",
+              "text": "Otherwise the site registers the visitor. A registration page asks for details, unless the three options that begin with Do not are all selected. If Disable new external registration is selected, the visitor sees a message instead."
+            },
+            {
+              "id": "after-4",
+              "text": "A signed-in user can link a Facebook account, or remove a linked one, from External Logins in the user menu. The options shared by every external provider are covered in a separate video."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Meta Login",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "With the feature enabled and the application ID and secret key of a Meta app saved under Meta App, the login page offers Facebook as another way to sign in. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
