@@ -1,0 +1,47 @@
+{
+  "title": "Razor Helpers and Tag Helpers for Orchard Core Themes | Orchard Core",
+  "description": "A theme written in Razor needs more than its views can do on their own: loading content items, building URLs, converting text, and rendering shapes and resources.\n\nThe Orchard helper gives a view extension methods, each module defines the methods of its own features, and tag helpers render shapes, menus and resources as HTML-like elements.\n\nIn this video:\n• The Orchard property of a view, and the injected IOrchardHelper\n• Loading content items by id, alias, slug or handle, and displaying them\n• Helpers for culture, URLs, markup and data\n• Tag helpers for shapes, menus, zones, resources and media",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Razor"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Razor",
+    "Tag Helpers",
+    "Theme",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Display Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Razor/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Razor/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:Razor"
+  }
+}
