@@ -1,0 +1,49 @@
+{
+  "title": "Taxonomies: Create a Taxonomy and Organize Its Terms | Orchard Core",
+  "description": "Grouping content under shared labels helps people find it, and a flat list of labels stops helping as it grows.\n\nA taxonomy in Orchard Core is a content item that holds a list of terms, and a term can contain other terms. You create the taxonomy in the admin, choose the content type of its terms, add, edit, delete and drag the terms into a hierarchy, and publish the result.\n\nIn this video:\n• What a taxonomy holds: terms, their hierarchy and their content type\n• Create a taxonomy from Content Items\n• Add terms at the top level and inside other terms\n• Edit and delete terms\n• Organize the hierarchy by dragging\n• Publish the taxonomy",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Taxonomies"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Taxonomy",
+    "Taxonomies",
+    "Terms",
+    "Categories",
+    "Content Management"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Taxonomies"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Taxonomies/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Taxonomies"
+  }
+}
