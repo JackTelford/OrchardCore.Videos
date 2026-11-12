@@ -91,7 +91,7 @@
             },
             {
               "id": "type-3",
-              "text": "A message confirms the type, and the Add Parts page opens. A section can use parts, but this one needs only fields, so select Cancel."
+              "text": "A message confirms the type, and the Add Parts page opens. A type can have parts, which add ready-made behavior. This one needs only fields, so select Cancel."
             },
             {
               "id": "fields-1",
@@ -190,7 +190,7 @@
           "steps": [
             {
               "id": "deploy-1",
-              "text": "A deployment plan can carry the values to another site. Open Tools, Deployments, Plans, and select Manage Steps for a plan."
+              "text": "A deployment plan can carry the values to another site. Open Tools, Deployments, Plans, and select Manage Steps for an existing plan."
             },
             {
               "id": "deploy-2",
