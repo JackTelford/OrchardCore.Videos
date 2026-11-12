@@ -47,3 +47,5 @@ changes the plan or the narration if the site disagrees.
     `Content:1#Site;10`, `DefaultSiteSettingsDisplayDriver.cs:51`) and is visible without scrolling at 1536 by 864.
 12. **The starting value of the Staging site.** `SiteService.cs` gives a new site a Page size of 10 and the Blog recipe
     does not change it for the site, but the plan sets the value explicitly. Confirm it reads 10 before `04-import`.
+13. **Pronunciation.** Check with `scripts/pronounce.py` how the voice reads **JSON** (in `find-2`, the label JSON Import),
+    **zip**, **Page size** and **Staging Setup**. No `spoken` entry exists for JSON; add one if the voice misreads it.
