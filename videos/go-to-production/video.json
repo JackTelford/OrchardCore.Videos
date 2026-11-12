@@ -1,0 +1,69 @@
+{
+  "title": "Go to Production: A Checklist for a Live Orchard Core Site | Orchard Core",
+  "description": "A site that works on a development machine needs more before it serves visitors: the right environment, settings supplied by the host, the right handling of a reverse proxy, HTTPS, and data protection keys that every server shares.\n\nThis checklist goes through them in the order you meet them. It shows where Orchard Core reads each value, the admin pages of the Reverse Proxy Configuration and HTTPS features, and the configuration and code behind them.\n\nIn this video:\n• Development and production: what changes on a live site\n• Environment and configuration: the environment name, the OrchardCore section, environment variables and App_Data\n• Reverse proxy: forwarded headers, known proxies and known networks\n• HTTPS: Require HTTPS, HSTS and the SSL port\n• Data protection keys: the default key ring, Azure Blob Storage and Redis\n• Before you go live: the checklist",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Hosting"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Production",
+    "Deployment",
+    "Configuration",
+    "Environment variables",
+    "Reverse proxy",
+    "HTTPS",
+    "HSTS",
+    "Data Protection",
+    "Azure Blob Storage",
+    "Redis"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Hosting and Production"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Configuration",
+      "url": "https://docs.orchardcore.net/en/latest/topics/configuration/"
+    },
+    {
+      "label": "Documentation: HTTPS",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Https/"
+    },
+    {
+      "label": "Documentation: Reverse Proxy",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ReverseProxy/"
+    },
+    {
+      "label": "Documentation: Data Protection",
+      "url": "https://docs.orchardcore.net/en/latest/guides/data-protection/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/topics/configuration/README.md",
+    "src/docs/reference/modules/Https/README.md",
+    "src/docs/reference/modules/ReverseProxy/README.md",
+    "src/docs/guides/data-protection/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:topics/configuration"
+  }
+}
