@@ -1,0 +1,48 @@
+{
+  "title": "Remote Deployment: Send a Plan Straight to Another Site | Orchard Core",
+  "description": "Moving content and configuration to another Orchard Core site by hand means downloading a deployment package from one site and importing it into the other.\n\nThe Remote Deployment module sends a deployment plan straight to another site. The destination site keeps a remote client, the source site keeps a remote instance, and a shared client name and Api Key connect them. Executing the plan builds the package, sends it, and the destination imports it at once.\n\nIn this video:\n• How remote deployment works\n• Create a remote client on the destination site\n• Create a remote instance on the source site\n• Execute a plan on the remote instance\n• Check the destination\n• Security and troubleshooting",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Deployment"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Deployment",
+    "Remote Deployment",
+    "Deployment plans",
+    "Multi-tenant"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Deployment"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Deployment.Remote/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Deployment.Remote/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Deployment.Remote"
+  }
+}
