@@ -1,0 +1,57 @@
+{
+  "title": "Two-Factor Authentication: Authenticator App, Email and SMS | Orchard Core",
+  "description": "A password alone can be guessed, reused or stolen, and a stolen password is enough to sign in to a site.\n\nOrchard Core adds a second step to the sign-in: a one-time code from an authenticator app, an email or an SMS. An administrator enables the methods and decides who must use them, and each user sets up their own.\n\nIn this video:\n• How two-factor sign-in works\n• Enabling the methods\n• The site settings: remembered browsers, recovery codes and required roles\n• Setting up an authenticator app and keeping the recovery codes\n• Signing in with a code\n• Email and SMS codes\n• What a user sees when the site requires two-factor authentication\n• Disabling two-factor authentication for a user who lost access",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "two-factor authentication",
+    "2FA",
+    "authenticator app",
+    "email verification code",
+    "SMS verification code",
+    "recovery codes",
+    "security",
+    "users"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Users"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/"
+    },
+    {
+      "label": "Permissions documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Security/Permissions.md",
+    "src/docs/reference/modules/Users/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users.2FA"
+  }
+}
