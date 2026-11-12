@@ -1,6 +1,6 @@
 # Configuration: appsettings, Environment Variables and Tenants
 
-**YouTube:** not published yet · **Length:** 6:07 · **Feature:** `topic:Configuration` ([Configuration](https://docs.orchardcore.net/en/latest/reference/modules/Configuration/))
+**YouTube:** not published yet · **Length:** 6:04 · **Feature:** `topic:Configuration` ([Configuration](https://docs.orchardcore.net/en/latest/reference/modules/Configuration/))
 
 A developer video about how an Orchard Core site and each of its tenants read their settings. It covers the
 `OrchardCore` section and its nested sections, environment variables, the order in which the sources load, the

@@ -64,7 +64,7 @@
             },
             {
               "id": "sections-3",
-              "text": "Section names carry no OrchardCore underscore prefix. Older names such as OrchardCore_Media_Azure are still read, and when a value is set under both names, the current name wins. An array under the current name replaces the older array."
+              "text": "Section names carry no OrchardCore underscore prefix. Deprecated names such as OrchardCore_Media_Azure are read as well, and when a value is set under both names, the current name wins. An array under the current name replaces the deprecated array."
             },
             {
               "id": "sections-4",
@@ -143,7 +143,7 @@
           "steps": [
             {
               "id": "pre-1",
-              "text": "To configure a tenant before it exists, add a section named for the tenant, with a State of Uninitialized. Its URL prefix routes requests to the tenant, and its database provider and recipe are used when it is set up."
+              "text": "To configure a tenant before it exists, add a section named for the tenant under OrchardCore, with a State of Uninitialized. Its URL prefix routes requests to the tenant, and its database provider and recipe are used when it is set up."
             },
             {
               "id": "pre-2",
@@ -157,7 +157,7 @@
           "steps": [
             {
               "id": "list-1",
-              "text": "In the admin, under Multi-Tenancy, Tenants, the list shows MyTenant, although nobody created it there. Its badges come from the configuration: the Sqlite database provider, the SaaS recipe, and the state Uninitialized."
+              "text": "With the Tenants feature enabled, the list under Multi-Tenancy, Tenants shows MyTenant, although nobody created it there. Its badges come from the configuration: the Sqlite database provider, the SaaS recipe, and the state Uninitialized."
             },
             {
               "id": "list-2",
@@ -225,7 +225,7 @@
           "steps": [
             {
               "id": "mod-1",
-              "text": "In your own module, a Startup class receives IShellConfiguration, and binds a section to an options class. The Tenants module binds Tenants, and also accepts the older name OrchardCore_Tenants."
+              "text": "In your own module, a Startup class receives IShellConfiguration, and binds a section to an options class. The Tenants module binds Tenants, and also accepts the deprecated name OrchardCore_Tenants."
             },
             {
               "id": "mod-2",
@@ -250,7 +250,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "That's configuration in Orchard Core: sections under OrchardCore, files and environment variables, and tenant values layered on top. The documentation also covers live tenant options and the shells configuration providers. Thanks for watching."
+              "text": "That's configuration in Orchard Core: sections under OrchardCore, files and environment variables, and tenant values layered on top. Thanks for watching."
             }
           ]
         }

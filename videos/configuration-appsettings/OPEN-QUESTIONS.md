@@ -72,8 +72,7 @@ These are behaviors of ASP.NET Core, Azure or Visual Studio, outside the Orchard
   (`OrchardCore.Settings/ResourceOptionsConfiguration.cs`) copies the site settings into `ResourceOptions` in a
   `PostConfigure`, and whether the host's `PostConfigure` always runs after it depends on the order of the startup
   classes, which was not traced.
-- Live tenant options with `IOptionsMonitor`, and the Azure and Database shells configuration providers: the closing
-  card names them as covered by the documentation.
+- Live tenant options with `IOptionsMonitor`, and the Azure and Database shells configuration providers: the documentation covers them.
 
 ## 6. Settings read for all tenants, and the table prefix patterns
 

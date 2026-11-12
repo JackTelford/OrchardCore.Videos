@@ -48,7 +48,7 @@ SECTION_NOTES = [
 
 NAMES = [
     ("1", "Current names", "Nested by service: Media:Azure, Email:Smtp, Search:Elasticsearch."),
-    ("2", "Deprecated names", "Prefixed and flat: OrchardCore_Media_Azure, OrchardCore_Email_Smtp. Still read."),
+    ("2", "Deprecated names", "Prefixed and flat: OrchardCore_Media_Azure, OrchardCore_Email_Smtp. Read as well."),
     ("3", "Defined under both", "The current name wins, key by key. An array replaces the other array."),
 ]
 
