@@ -1,0 +1,55 @@
+{
+  "title": "Configuration: appsettings, Environment Variables and Tenants | Orchard Core",
+  "description": "An Orchard Core site reads its settings from several places, and each tenant can add settings of its own. Without knowing which source wins, or where a tenant's values live, a setting that has no effect is hard to explain.\n\nOrchard Core extends the ASP.NET Core configuration with IShellConfiguration. Its settings sit under the OrchardCore section, can be set in a file or an environment variable, and can be overridden for one tenant when a module reads them per tenant.\n\nIn this video:\n• Configuration sections: everything sits under OrchardCore\n• Environment variables: the same settings, without a file\n• Which value wins: the sources, in the order they load\n• Tenant configuration: before and after a tenant exists\n• One database for every tenant: shared settings at the root\n• Configuration in your module: read a section, describe it",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Configuration"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Configuration",
+    "appsettings.json",
+    "Environment variables",
+    "Multi-tenancy",
+    "Tenants",
+    "IShellConfiguration"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Hosting and Production"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Configuration",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Configuration/"
+    },
+    {
+      "label": "Documentation: Configuration, key topics",
+      "url": "https://docs.orchardcore.net/en/latest/topics/configuration/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Configuration/README.md",
+    "src/docs/topics/configuration/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:Configuration"
+  }
+}
