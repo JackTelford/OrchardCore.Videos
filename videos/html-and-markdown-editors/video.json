@@ -1,0 +1,53 @@
+{
+  "title": "Html and Markdown: Write the Body of Your Content | Orchard Core",
+  "description": "Most content items need a body of text. Orchard Core gives a content type two ways to hold it: the HtmlBody part, for formatted text and HTML, and the MarkdownBody part, for plain text with simple marks.\n\nYou choose the part and its editor for each content type. The site stores your text without changing it, and by default sanitizes the result before visitors see it.\n\nIn this video:\n• Two kinds of body: what HtmlBody and MarkdownBody store and how they are edited\n• Add a body part: check the features, attach HtmlBody and choose the Wysiwyg editor\n• Write with the Html editor: format text with a toolbar and publish\n• The Standard editor: HTML in a text box\n• Write with the Markdown editor: marks, toolbar, preview and side by side\n• Good to know: choosing a body, Sanitize Html, shortcodes and the Markdown field",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Markdown"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Html",
+    "Markdown",
+    "Wysiwyg editor",
+    "Content editor"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Html",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Html/"
+    },
+    {
+      "label": "Documentation: Markdown",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Markdown/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Html/README.md",
+    "src/docs/reference/modules/Markdown/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Html"
+  }
+}

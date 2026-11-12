@@ -1,0 +1,221 @@
+{
+  "title": "Html and Markdown: Write the Body of Your Content",
+  "output": "html-and-markdown-editors",
+  "spoken": {
+    "HtmlBody": "H.T.M.L. Body",
+    "MarkdownBody": "Markdown Body",
+    "Html": "H.T.M.L.",
+    "Wysiwyg": "Wizzywig",
+    "Trumbowyg": "Trumbo wig"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Html and Markdown Editors",
+      "subtitle": "Write the body of your content",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Most pages need text. The Html and Markdown modules give a content type two ways to hold it, the HtmlBody part and the MarkdownBody part. In this video, we attach a body part, choose its editor, and write with both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two kinds of body",
+      "subtitle": "What each part stores and how it is edited",
+      "clips": [
+        {
+          "id": "01-kinds",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "kinds-1",
+              "text": "A body part holds the main text of a content item. HtmlBody stores HTML, and MarkdownBody stores Markdown, which is plain text with simple marks for headings, lists and emphasis."
+            },
+            {
+              "id": "kinds-2",
+              "text": "Each part comes with its own editors, and you choose one for each content type. HtmlBody offers Standard, Wysiwyg editor, Trumbowyg editor and Monaco editor. MarkdownBody offers Standard and Wysiwyg editor."
+            },
+            {
+              "id": "kinds-3",
+              "text": "The site stores your text without changing it. When a visitor opens the page, the site turns Markdown into HTML, runs the shortcodes, and, unless you turn it off, sanitizes the result to remove unsafe markup."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add a body part",
+      "subtitle": "Attach HtmlBody to a content type",
+      "clips": [
+        {
+          "id": "02-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Both modules are features. Under Tools, Features, we search for them, and the list shows Html and Markdown as enabled. If they are off, you select Enable beside each one."
+            },
+            {
+              "id": "add-2",
+              "text": "A body part belongs to a content type. Let's open Design, Content Definition, Content Types, and edit Announcement, which has a title and Autoroute, but no body."
+            },
+            {
+              "id": "add-3",
+              "text": "Add Parts lists every part you can attach. HtmlBody and MarkdownBody each have a short description. Let's choose Add & Configure beside HtmlBody."
+            },
+            {
+              "id": "add-4",
+              "text": "The part's settings open. The question, What type of editor should be used, sets the editor for this content type. Let's choose Wysiwyg editor, which shows formatted text with a toolbar."
+            },
+            {
+              "id": "add-5",
+              "text": "Sanitize Html is checked by default, so unsafe markup is removed from the page. Let's leave it on and click Save."
+            },
+            {
+              "id": "add-6",
+              "text": "Back on Announcement, the HtmlBody entry carries a badge that names its editor, Wysiwyg. Every announcement uses this editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Write with the Html editor",
+      "subtitle": "Formatted text with a toolbar",
+      "clips": [
+        {
+          "id": "03-html",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "html-1",
+              "text": "Let's create an announcement. Under Content, Content Items, the New button lists the types you can create, and we choose Announcement."
+            },
+            {
+              "id": "html-2",
+              "text": "The editor labeled HtmlBody is the Wysiwyg editor we chose. We enter a title, then type the text of the announcement."
+            },
+            {
+              "id": "html-3",
+              "text": "The toolbar above the text formats it. Let's make a few words bold and add a list. The editor shows formatted text while you write."
+            },
+            {
+              "id": "html-4",
+              "text": "We click Publish, then View on the item in the list. The page shows the formatted text, with the bold words and the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The Standard editor",
+      "subtitle": "HTML in a text box",
+      "clips": [
+        {
+          "id": "04-standard",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "std-1",
+              "text": "Let's edit the Blog item, which uses the Standard editor of HtmlBody. It is a text box with line numbers, and it shows the HTML of the body as stored."
+            },
+            {
+              "id": "std-2",
+              "text": "Nothing is formatted for you here. You type the text and the HTML tags yourself, which suits people who already write HTML."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Write with the Markdown editor",
+      "subtitle": "Plain text with simple marks",
+      "clips": [
+        {
+          "id": "05-markdown",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "md-1",
+              "text": "Help Topic is a content type with a MarkdownBody part that uses the Wysiwyg editor. Let's choose New, Help Topic, and enter a title."
+            },
+            {
+              "id": "md-2",
+              "text": "Markdown is plain text with simple marks. We type a heading, marked with hash signs at the start of the line, and then a sentence."
+            },
+            {
+              "id": "md-3",
+              "text": "The toolbar adds marks for you. Let's select a word and click Bold, then click Generic List and type two items."
+            },
+            {
+              "id": "md-4",
+              "text": "Toggle Preview shows the formatted result in place of the text. Toggle Side by Side shows the text and the result together."
+            },
+            {
+              "id": "md-5",
+              "text": "We click Publish, then View. The page shows a heading, a bold word and a list, while the stored text stays Markdown."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Good to know",
+      "subtitle": "Choosing a body, sanitizing and shortcodes",
+      "clips": [
+        {
+          "id": "06-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "good-1",
+              "text": "Choose what fits your writers. HtmlBody with the Wysiwyg editor gives formatted text, HtmlBody with Standard or Monaco gives HTML source, and MarkdownBody gives plain text with simple marks."
+            },
+            {
+              "id": "good-2",
+              "text": "Sanitize Html is a setting of each body part on each content type. Turn it off only for content you fully trust, because unsafe markup then stays on the page."
+            },
+            {
+              "id": "good-3",
+              "text": "By default, HTML typed into a Markdown body appears as text on the page instead of being rendered. Shortcodes work in both bodies, and the Wysiwyg editors have a button to insert them."
+            },
+            {
+              "id": "good-4",
+              "text": "The Markdown module also provides a Markdown field, with the same Standard and Wysiwyg editors, which you can add to a content type. A separate video covers content fields."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Html and Markdown Editors",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "HtmlBody holds formatted HTML and MarkdownBody holds plain text with simple marks, and you pick the editor for each content type. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
