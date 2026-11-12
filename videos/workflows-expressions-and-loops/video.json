@@ -1,0 +1,53 @@
+{
+  "title": "Workflows in Depth: Expressions, Variables, Branches and Loops | Orchard Core",
+  "description": "A workflow that only runs one activity after another does little. Useful workflows compute values, remember them, choose a path, and repeat steps.\n\nThe Workflows module does this with expressions in three syntaxes (Literal, Liquid and JavaScript), typed variables, outcomes and transitions, and the For Each, For Loop and While Loop activities. The Scripting module runs the JavaScript.\n\nIn this video:\n• Expressions: Literal, Liquid and JavaScript\n• Variables: typed values that every activity can read\n• Branches: outcomes and transitions\n• Loops: For Each, For Loop and While Loop\n• Extending expressions: syntaxes, activities and script functions",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Liquid",
+    "JavaScript",
+    "Scripting"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Scripting documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Scripting/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md",
+    "src/docs/reference/modules/Scripting/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows"
+  }
+}

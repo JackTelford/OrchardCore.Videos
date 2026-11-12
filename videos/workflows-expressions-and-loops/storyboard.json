@@ -1,0 +1,242 @@
+{
+  "title": "Workflows in Depth: Expressions, Variables, Branches and Loops",
+  "output": "workflows-expressions-and-loops",
+  "spoken": {
+    "IWorkflowExpressionProvider": "I Workflow Expression Provider",
+    "IWorkflowExpressionManager": "I Workflow Expression Manager",
+    "AddWorkflowExpressionProvider": "Add Workflow Expression Provider",
+    "Workflow.Variables": "Workflow dot Variables",
+    "setVariable": "set Variable",
+    "setOutcome": "set Outcome",
+    "If/Else": "If Else"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Workflows in Depth",
+      "subtitle": "Expressions, variables, branches and loops",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A workflow becomes useful when it can compute a value, remember it, choose a path, and repeat a step. In this video, we'll look at expressions, variables, branches, and loops in the Workflows module, and at how to extend them in code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Expressions",
+      "subtitle": "Literal, Liquid and JavaScript",
+      "clips": [
+        {
+          "id": "01-syntaxes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "syntaxes-1",
+              "text": "Many settings are expressions, evaluated each time the activity runs. In If/Else, For Each, Set Variable and a few others, you choose each expression's syntax. Literal means the text is the value itself, Liquid is a template, and JavaScript runs in the Scripting module."
+            },
+            {
+              "id": "syntaxes-2",
+              "text": "The activity stores the expression with its syntax. This If/Else condition could be the Literal true, a Liquid comparison on a property, or a JavaScript test on an input. A JavaScript result must already have the type the setting expects."
+            }
+          ]
+        },
+        {
+          "id": "01-designer",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "designer-1",
+              "text": "This workflow counts the coffees in a list. Double-click Each item, a For Each activity, to open its settings. Its Items setting uses the Literal syntax, so the list is plain text."
+            },
+            {
+              "id": "designer-2",
+              "text": "Check the item is an If/Else activity. Its Condition is a JavaScript expression, and the property function reads the item that the loop is on."
+            },
+            {
+              "id": "designer-3",
+              "text": "Write the summary is a Set Variable activity that uses Liquid, and reads the variables as Workflow.Variables. Each expression has its own syntax, so one workflow can mix all three."
+            },
+            {
+              "id": "designer-4",
+              "text": "The Available data tab lists what the expressions of an activity can read: variables, values from earlier activities, global values, and functions. Click one to insert it in the setting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Variables",
+      "subtitle": "Typed values that every activity can read",
+      "clips": [
+        {
+          "id": "02-declare",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "declare-1",
+              "text": "Variables are declared in the Variables tab of the workflow panel. Each has a name, a type, an optional default value, and the Input and Output flags. Here, summary is an Output, so the Run dialog reports it."
+            }
+          ]
+        },
+        {
+          "id": "02-use",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "The types are Text, Number, Yes or no, Date and time, Object, List, Content item, and Any. Setting a variable converts the value to its type. Set Variable faults the workflow when the value does not convert, but a script logs the error by default."
+            },
+            {
+              "id": "access-1",
+              "text": "In JavaScript, the variable function reads a variable, and the setVariable function writes it. In Liquid, Workflow.Variables reads it. The Set Variable activity stores the result of an expression in a variable."
+            },
+            {
+              "id": "access-2",
+              "text": "Some activities produce outputs. On the Outputs tab, Store in binds an output, such as the Result of a Script, to a variable that the activities after it can read."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Branches",
+      "subtitle": "Outcomes and transitions",
+      "clips": [
+        {
+          "id": "03-outcomes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "paths-1",
+              "text": "Each activity has outcomes, and a transition connects an outcome to the next activity. If/Else evaluates its Condition and takes True or False. A Script activity lists its own outcomes in Available Outcomes."
+            },
+            {
+              "id": "paths-2",
+              "text": "The script calls setOutcome with one of those names. Here, the outcome is the value of a state variable, so each state can lead to its own activities."
+            }
+          ]
+        },
+        {
+          "id": "03-canvas",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "canvas-1",
+              "text": "On the canvas, Check the item shows its two outcomes, True and False, and each one has a transition of its own."
+            },
+            {
+              "id": "canvas-2",
+              "text": "By default, an outcome follows only its first transition. The Workflow tab can set Outcomes with several transitions to Follow every transition, which runs every branch in the order added. A separate video covers Fork and Join."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Loops",
+      "subtitle": "For Each, For Loop and While Loop",
+      "clips": [
+        {
+          "id": "04-loops",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "loops-1",
+              "text": "Three activities repeat part of a workflow. For Each goes through a list, For Loop counts from a start value to an end value, and While Loop repeats while its condition is true."
+            },
+            {
+              "id": "loops-2",
+              "text": "Each loop has two outcomes, Iterate and Done. Connect Iterate to the activities to repeat, connect the last of them back to the loop, and connect Done to what follows."
+            },
+            {
+              "id": "loops-3",
+              "text": "Each pass of For Each sets the property named by Looping Variable and the last result, then takes Iterate. When the items run out, it takes Done. For Loop works the same way with a number, and its To value is not included."
+            }
+          ]
+        },
+        {
+          "id": "04-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Here, Iterate leads from Each item to Check the item. Its True outcome leads to Count the coffee, and that activity and the False outcome both lead back to the loop. Done leads to Write the summary."
+            },
+            {
+              "id": "run-2",
+              "text": "Run, in the toolbar, starts the published version. The dialog reports the status of the instance and the output variables, here the summary the workflow wrote."
+            },
+            {
+              "id": "run-3",
+              "text": "Open the instance to see what happened. The path it ran is highlighted, and a badge on the repeated activities shows how many times they ran."
+            },
+            {
+              "id": "run-4",
+              "text": "The Variables tab shows the values this instance has: the number of coffees and the summary text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Extending expressions",
+      "subtitle": "Syntaxes, activities and script functions",
+      "clips": [
+        {
+          "id": "05-extend",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "extend-1",
+              "text": "A module adds a syntax by implementing IWorkflowExpressionProvider, with a name, a display name, and an editor language as static members. AddWorkflowExpressionProvider registers it, and it appears in the syntax select."
+            },
+            {
+              "id": "extend-2",
+              "text": "An activity evaluates its expressions through IWorkflowExpressionManager, which finds the provider for each expression's syntax. If/Else evaluates its Condition this way, and returns True or False."
+            },
+            {
+              "id": "extend-3",
+              "text": "The functions that JavaScript expressions call come from global method providers. Only the Script activity passes setOutcome, as a method scoped to its own evaluation, which is why the other built-in activities do not have it."
+            },
+            {
+              "id": "extend-4",
+              "text": "The JavaScript engine sets no time or statement limit by default, so you can set one on its options. A script that reaches a limit faults the workflow at that activity."
+            },
+            {
+              "id": "extend-5",
+              "text": "Any other script error is logged, and the activity goes on with a default value. To stop there instead, check Fault the workflow on script errors in the workflow's settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Workflows in Depth",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Expressions compute, variables remember, outcomes choose a path, and loops repeat it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
