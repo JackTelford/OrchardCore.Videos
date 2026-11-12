@@ -1,0 +1,210 @@
+{
+  "title": "Azure AI Search Queries",
+  "output": "azure-ai-search-queries",
+  "spoken": {
+    "IQuerySource": "I Query Source",
+    "IQueryResults": "I Query Results",
+    "ISearchService": "I Search Service",
+    "ExecuteQueryAsync": "Execute Query Async",
+    "executeQuery": "execute Query",
+    "AddQuerySource": "Add Query Source",
+    "AzureAIClientFactory": "Azure AI Client Factory",
+    "BlogSearch": "Blog Search",
+    "BlogPostsAI": "Blog Posts AI",
+    "Execute Api": "Execute API"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Azure AI Search Queries",
+      "subtitle": "Search an Azure AI Search index from a saved query",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A saved query gives a search a name, so the API, templates and scripts can run it. Orchard Core provides no saved query source for Azure AI Search. In this video, you write one, and run it against an Azure AI Search index."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Saved queries",
+      "subtitle": "A name, a source and a result",
+      "clips": [
+        {
+          "id": "01-queries",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "queries-1",
+              "text": "In the Queries module, a saved query has a name and a source. The source runs the query and returns the results. Lucene, Elasticsearch and SQL are the sources that Orchard Core provides."
+            },
+            {
+              "id": "queries-2",
+              "text": "A saved query runs by its name. The API does it, and so does the query filter in Liquid, the Orchard helper in Razor, and the executeQuery function in scripts."
+            },
+            {
+              "id": "queries-3",
+              "text": "Azure AI Search registers a search service for the site search page, but no query source. So the Available Query Types dialog cannot offer it, and a saved query cannot target an Azure AI Search index."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The query source",
+      "subtitle": "Run a search from a saved query",
+      "clips": [
+        {
+          "id": "02-source",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "A query source implements IQuerySource: a Name, and ExecuteQueryAsync, which receives the saved query and the parameters of the call, and returns IQueryResults."
+            },
+            {
+              "id": "source-2",
+              "text": "Our source reads the settings that the query saved: an index and a text template. It finds the index profile by name, and returns an empty result when the index is missing or does not belong to Azure AI Search."
+            },
+            {
+              "id": "source-3",
+              "text": "The template renders to the search text. The ISearchService that Azure AI Search registers returns content item ids, and the source loads those items from the database, in the order of the results."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Settings, editor and startup",
+      "subtitle": "Everything else a source needs",
+      "clips": [
+        {
+          "id": "03-module",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "The query saves its settings with Put, in a small class. A query handler fills that class from the data of a recipe step, so queries can also be created without the editor."
+            },
+            {
+              "id": "settings-2",
+              "text": "The editor is a display driver for the query. It lists the Azure AI Search index profiles, checks that an index and a query are entered, and saves them. Two Razor views draw the editor and the card of the Add Query dialog."
+            },
+            {
+              "id": "startup-1",
+              "text": "The startup registers the source with AddQuerySource, under its name, along with the display driver and the handler. The manifest makes the module depend on the Queries, Search and Azure AI Search features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create a saved query",
+      "subtitle": "From the Queries page",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "On the Queries page, Add Query opens the Available Query Types dialog. Azure AI Search is listed there, with the other sources that are enabled. Let's add it."
+            },
+            {
+              "id": "create-2",
+              "text": "The editor opens. The Name is the technical name of the query, and the API and the templates use it. We call this one BlogSearch."
+            },
+            {
+              "id": "create-3",
+              "text": "Index lists the Azure AI Search index profiles of the site. We choose BlogPostsAI, the index of the blog posts."
+            },
+            {
+              "id": "create-4",
+              "text": "The Query field holds a Liquid template that renders the search text. Here, it passes the terms parameter through. Return Content Items stays unchecked, so each result holds only the id and the display text."
+            },
+            {
+              "id": "create-5",
+              "text": "Save creates the query, and it appears in the list under its name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Run the saved query",
+      "subtitle": "Through the API",
+      "clips": [
+        {
+          "id": "05-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "The API runs a saved query by its name. The parameters are a JSON object in the parameters value. Let's search for the word orchard."
+            },
+            {
+              "id": "run-2",
+              "text": "The response holds the blog posts that match, in the order of the search results. Each result is a content item id and a display text."
+            },
+            {
+              "id": "run-3",
+              "text": "Another value gives another search. With the word autumn, only the post about the orchard in autumn matches."
+            },
+            {
+              "id": "run-4",
+              "text": "The API runs a query for a caller whose role holds its Execute Api permission, or one that implies it: Manage queries, or Execute Api for all queries. Here the Anonymous role holds the permission for BlogSearch, so the browser needs no token."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Beyond full text",
+      "subtitle": "Vector and hybrid searches",
+      "clips": [
+        {
+          "id": "06-beyond",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "beyond-1",
+              "text": "The search service runs full-text searches. For vector or hybrid searches, a source can ask the AzureAIClientFactory for a search client, and call the Azure Search SDK directly."
+            },
+            {
+              "id": "beyond-2",
+              "text": "The index profile gives the full name of the index, and the vector query goes in the search options. For hybrid search, replace the star with the full-text query."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Azure AI Search Queries",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A query source turns a name into a search. With one for Azure AI Search, the API, Liquid, Razor and scripts can all search an Azure AI Search index. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
