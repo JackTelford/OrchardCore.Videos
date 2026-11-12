@@ -133,7 +133,7 @@
           "steps": [
             {
               "id": "api-1",
-              "text": "The address of the Queries API ends with the name of the query, and it accepts GET and POST. Parameters are a JSON object, sent in the parameters value of the query string, or as the body of a POST."
+              "text": "The Queries API is at api, queries, followed by the name of the query, and it accepts GET and POST. Parameters are a JSON object, sent in the parameters value of the query string, or as the body of a POST."
             },
             {
               "id": "api-2",

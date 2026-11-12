@@ -1,6 +1,6 @@
 # Queries in Liquid, Razor and the API
 
-**YouTube:** not published yet · **Length:** 4:50 · **Feature:** `OrchardCore.Queries` ([Queries](https://docs.orchardcore.net/en/latest/reference/modules/Queries/))
+**YouTube:** not published yet · **Length:** 4:51 · **Feature:** `OrchardCore.Queries` ([Queries](https://docs.orchardcore.net/en/latest/reference/modules/Queries/))
 
 A saved query has a name, and that name is all a caller needs. The video starts from the `RecentBlogPosts` query that
 the Blog recipe saves, then runs it from a Liquid template with the `Queries` property and the `query` filter, from a
