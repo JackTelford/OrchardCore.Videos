@@ -84,7 +84,7 @@
             },
             {
               "id": "create-7",
-              "text": "Action is the address the form submits to. Method is POST or GET, and EncType sets how the data is encoded. Let's keep the defaults for the last two, and leave Action empty."
+              "text": "Action is the address the form submits to. Method is POST or GET, and EncType sets how the data is encoded. Let's leave Action empty and keep the defaults of the other two."
             },
             {
               "id": "create-8",
@@ -158,7 +158,7 @@
             },
             {
               "id": "rest-3",
-              "text": "Each option has a text, which visitors read, and a value, which the form sends. Let's add three options: General question, Support request, and Sales. The Default? column picks the option that starts selected, and we leave it empty."
+              "text": "Each option has a text, which visitors read, and a value, which the form sends. Let's add three options: General question, Support request, and Sales. The Default? column picks the option that starts selected, and let's leave it empty."
             },
             {
               "id": "rest-4",
