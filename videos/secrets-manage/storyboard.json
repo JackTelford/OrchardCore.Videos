@@ -1,0 +1,289 @@
+{
+  "title": "Secrets: Store Passwords and API Keys Safely",
+  "output": "secrets-manage",
+  "spoken": {
+    "X.509": "X five oh nine",
+    "PEM": "P.E.M."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Secrets: Store Passwords and API Keys Safely",
+      "subtitle": "Keep passwords and API keys encrypted, in one list",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every site depends on sensitive values, such as a mail password or a payment API key. The Secrets module keeps them encrypted, in one list. In this video, you create, review, replace, delete, and use secrets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why keep secrets together",
+      "subtitle": "The problem the Secrets module solves",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Passwords and API keys often end up in configuration files, settings pages, and shared notes. Each copy can leak, and nothing lists the keys a site uses or the ones about to expire."
+            },
+            {
+              "id": "why-2",
+              "text": "The Secrets module gives each value a name and encrypts it before saving. One list shows every secret, its type, where it is kept, and when it expires. Settings then refer to a secret by name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Turn on the Secrets feature",
+      "subtitle": "Enable it and find its pages",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "The Secrets module is a feature that you turn on. Open Tools, Features, and search for Secrets."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable next to Secrets, and a message confirms that the feature was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Its pages are under Tools, Security: Secrets, Migrate Secrets, and Secret Stores. Let's open Secrets."
+            },
+            {
+              "id": "enable-4",
+              "text": "The list is empty. Add Secret creates the first secret."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a text secret",
+      "subtitle": "A password or an API key",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Select Add Secret. A dialog asks for the type of secret: Text Secret, RSA Key, or X.509 Certificate."
+            },
+            {
+              "id": "create-2",
+              "text": "A Text Secret holds a value such as a password, an API key, or a connection string. Let's store the password of the mail account that sends this site's email."
+            },
+            {
+              "id": "create-3",
+              "text": "Select Create under Text Secret, and enter a name. Settings refer to the secret by this name, so it cannot be changed later."
+            },
+            {
+              "id": "create-4",
+              "text": "The Store field shows Database, where the secret is kept. The value is a password field: it is encrypted when saved, and never displayed again."
+            },
+            {
+              "id": "create-5",
+              "text": "Add a description so others know what the secret is for. The expiration date is optional and does not disable the secret: it reminds you to replace the value in time."
+            },
+            {
+              "id": "create-6",
+              "text": "Select Save. A message confirms the creation, and the list shows the secret with badges for its type, store, expiration, and last update."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "RSA keys and certificates",
+      "subtitle": "The other two secret types",
+      "clips": [
+        {
+          "id": "04-types",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "An RSA Key secret holds a key pair that Orchard Core generates for you. Select Add Secret, then Create under RSA Key. Enter a name, choose a key size of 2048, 3072, or 4096 bits, and save."
+            },
+            {
+              "id": "types-2",
+              "text": "Once saved, the private key is never shown, and the key pair cannot be changed. Only the description and expiration date can be edited."
+            },
+            {
+              "id": "types-3",
+              "text": "An X.509 Certificate secret has two sources. Certificate store refers to a certificate installed on the server, by thumbprint. PEM-encoded certificate keeps the certificate text itself, with an optional private key."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Review your secrets",
+      "subtitle": "Search, filter and expiration",
+      "clips": [
+        {
+          "id": "05-review",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "review-1",
+              "text": "The Secrets list shows each name, description, and badges. A warning above the list counts the secrets that have expired or expire within 30 days."
+            },
+            {
+              "id": "review-2",
+              "text": "Secrets that have expired, or expire within 30 days, are highlighted. An expired secret keeps working: the highlight is a reminder to replace its value."
+            },
+            {
+              "id": "review-3",
+              "text": "Type in the search box and press Enter to find secrets by name, description, type, or store."
+            },
+            {
+              "id": "review-4",
+              "text": "The Expiration filter shows expired secrets, secrets that expire within 30 days, or secrets that never expire. The Type filter shows the secrets of one type."
+            },
+            {
+              "id": "review-5",
+              "text": "People who can view secrets also see this warning on the admin home page, with a Review secrets link."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Replace a value",
+      "subtitle": "Edit a secret",
+      "clips": [
+        {
+          "id": "06-update",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "update-1",
+              "text": "To replace a value, such as a renewed key, select Edit next to the secret. The Value field is empty, because stored values are never displayed. Leave it empty to keep the current value."
+            },
+            {
+              "id": "update-2",
+              "text": "Enter the replacement value, and set a later expiration date. Select Save, and this secret is no longer counted in the expiration warning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Delete secrets",
+      "subtitle": "One at a time, or several at once",
+      "clips": [
+        {
+          "id": "07-delete",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "delete-1",
+              "text": "To delete a secret, select Delete next to it and confirm. Features that refer to a deleted secret can no longer read its value, so check where it is used first."
+            },
+            {
+              "id": "delete-2",
+              "text": "To delete several secrets at once, select them, open the Actions menu, and choose Delete. After you confirm, a message reports how many secrets were deleted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Use a secret in settings",
+      "subtitle": "Select a secret instead of typing a value",
+      "clips": [
+        {
+          "id": "08-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Settings pages that need a password or a key let you pick a secret instead of typing the value. Let's open Settings, Communication, Email, and the SMTP tab."
+            },
+            {
+              "id": "settings-2",
+              "text": "Check Enable SMTP Provider, enter a sender email address and a host name, and check Require credentials. The User name and Password fields appear."
+            },
+            {
+              "id": "settings-3",
+              "text": "The Password field asks where the value is kept. User-specified value encrypts the password you type, and keeps it with these settings. Use a secret refers to a secret by name."
+            },
+            {
+              "id": "settings-4",
+              "text": "Choose Use a secret, and pick it from the list. If the secret is missing, New secret opens the secret editor in another tab, and the reload button refreshes the list."
+            },
+            {
+              "id": "settings-5",
+              "text": "Select Save. A message confirms the update, and SMTP reads its password from the secret. Saving with a secret removes any password stored in these settings."
+            },
+            {
+              "id": "settings-6",
+              "text": "The settings of email, SMS, Google, GitHub, Microsoft, Meta, X (Twitter), OpenID Connect clients, and Azure AI Search use this same editor for their credentials."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Access to secrets",
+      "subtitle": "Permissions and related pages",
+      "clips": [
+        {
+          "id": "09-access",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "access-1",
+              "text": "Two permissions control access. View secrets lists secrets without their values, and Manage secrets also adds, edits, moves, and deletes them. Administrators have both; assign them to other roles under Access Control, Roles."
+            },
+            {
+              "id": "access-2",
+              "text": "Two more pages are under Tools, Security. Migrate Secrets moves credentials that settings already hold into secrets, and Secret Stores moves secrets between stores. A separate video covers both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Secrets: Store Passwords and API Keys Safely",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the Secrets module: passwords and API keys kept encrypted, listed in one place, and referenced by name from your settings. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

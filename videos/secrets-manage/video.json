@@ -1,0 +1,50 @@
+{
+  "title": "Secrets: Store Passwords and API Keys Safely | Orchard Core",
+  "description": "Passwords and API keys end up in configuration files, settings pages, and shared notes, where nothing lists them and every copy can leak.\n\nThe Secrets module of Orchard Core keeps each value encrypted under a name, in one list that shows its type, where it is kept, and when it expires. Settings pages select a secret by name instead of holding the value.\n\nIn this video:\n• Why keep secrets together\n• Turn on the Secrets feature\n• Create a text secret\n• RSA keys and certificates\n• Review your secrets\n• Replace a value\n• Delete secrets\n• Use a secret in settings\n• Access to secrets",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Secrets",
+    "API keys",
+    "passwords",
+    "encryption",
+    "security",
+    "SMTP"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Secrets"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Secrets/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Secrets/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Secrets"
+  }
+}
