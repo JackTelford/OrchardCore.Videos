@@ -1,5 +1,5 @@
 {
-  "title": "Customizing encoding settings",
+  "title": "Encoding Settings: Render Non-ASCII Text Without Encoding",
   "output": "encoding-settings",
   "spoken": {
     "HtmlEncoder.Default": "HTML Encoder dot Default",
@@ -9,12 +9,13 @@
     "HtmlEncoder": "HTML Encoder",
     "Latin1Supplement": "Latin 1 Supplement",
     "BasicLatin": "Basic Latin",
-    "Program.cs": "Program dot C.S."
+    "Program.cs": "Program dot C.S.",
+    "ASP.NET": "A.S.P. .NET"
   },
   "chapters": [
     {
       "id": "00",
-      "title": "Customizing encoding settings",
+      "title": "Encoding Settings",
       "subtitle": "Render non-ASCII text without encoding it",
       "clips": [
         {
@@ -122,7 +123,7 @@
     },
     {
       "id": "99",
-      "title": "Customizing encoding settings",
+      "title": "Encoding Settings",
       "subtitle": "docs.orchardcore.net",
       "clips": [
         {

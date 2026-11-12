@@ -1,4 +1,4 @@
-# Recording plan: Customizing encoding settings
+# Recording plan: Encoding Settings
 
 This video has **no recordings**. Every chapter between the opening and closing cards is made of slides, and the
 storyboard has no "clip" step, so nobody opens a browser, runs a site, or signs in. The page source that the video
@@ -80,7 +80,7 @@ Each slide shows what its narration describes. The code of the slides comes from
   UrlEncoder fields and constructor parameters, and the `RegisterHeadScript` call that encodes the tracking ID with
   each of them.
 
-The opening card (`intro`) and the closing card (`outro`) show the title "Customizing encoding settings" and their
+The opening card (`intro`) and the closing card (`outro`) show the title "Encoding Settings" and their
 subtitles. They have no recording either.
 
 ## Checks for private data

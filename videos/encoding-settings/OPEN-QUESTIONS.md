@@ -1,4 +1,4 @@
-# Open questions: Customizing encoding settings
+# Open questions: Encoding Settings
 
 What was checked in the source and in the documentation, and what a person must still confirm. Nothing here is stated
 in the narration as a fact that the sources do not show; the items below are about the illustrations and the voice.
@@ -45,7 +45,7 @@ in the narration as a fact that the sources do not show; the items below are abo
    and `inject-4` are trimmed from the source with `// ...` and are not meant to compile on their own.
 4. **The voice.** The `spoken` map of `storyboard.json` was not run through `pronounce.py`, which writes audio. A person
    must confirm: "HTML Encoder", "HTML Encoder dot Default", "Web Encoder Options", "Text Encoder Settings", "Unicode
-   Ranges dot All", "Latin 1 Supplement", "Basic Latin", "Program dot C.S.", and how the voice reads "Café Münster",
+   Ranges dot All", "Latin 1 Supplement", "Basic Latin", "Program dot C.S.", "A.S.P. .NET" (for ASP.NET), and how the voice reads "Café Münster",
    "ASCII", "Multilingual" and "MetaWeblog".
 
 ## Left out on purpose
