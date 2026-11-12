@@ -1,0 +1,49 @@
+{
+  "title": "Module Metadata in Your Project File | Orchard Core",
+  "description": "A module, a theme, or a feature tells Orchard Core its name, category, description, author, version, and dependencies, usually through attributes in a Manifest.cs file. Many of those values exist in the project file.\n\nThe Orchard Core build targets read MSBuild item lists in the project file and write the same assembly attributes. You declare a module, its features, or a theme once, and the values can come from MSBuild properties.\n\nIn this video:\n• Why describe a module in the project file\n• Declare a module with an OrchardCoreModules item\n• Declare features and themes, and the OrchardCoreAttributes list\n• Remove Manifest.cs, the rules the build checks, and where the values show in the admin",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MSBuild"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "MSBuild",
+    "csproj",
+    "Module",
+    "Theme",
+    "Manifest"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/leverage-csproj-meta-info/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/leverage-csproj-meta-info/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/leverage-csproj-meta-info"
+  }
+}
