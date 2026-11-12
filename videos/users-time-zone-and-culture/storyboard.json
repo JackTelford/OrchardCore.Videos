@@ -60,7 +60,7 @@
             },
             {
               "id": "prepare-3",
-              "text": "Next, we enable User Localization, which adds a culture field. It depends on the Localization feature, listed beside it, which keeps the supported cultures and is already enabled on this site."
+              "text": "Next, we enable User Localization, which adds a culture field. It depends on the Localization feature, listed beside it, which keeps the supported cultures and is enabled on this site."
             },
             {
               "id": "prepare-4",
