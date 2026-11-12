@@ -1,0 +1,231 @@
+{
+  "title": "Secrets in Azure Key Vault",
+  "output": "secrets-azure-key-vault",
+  "spoken": {
+    "Secrets - Azure Key Vault": "Secrets, Azure Key Vault",
+    "SecretClientServiceKey": "Secret Client Service Key",
+    "FromKeyedServices": "From Keyed Services",
+    "SecretClient": "Secret Client",
+    "ISecretStore": "I Secret Store",
+    "AzureKeyVault": "Azure Key Vault",
+    "AzureClient": "Azure Client",
+    "NamePrefix": "Name Prefix",
+    "GetSecretAsync": "Get Secret Async",
+    "SaveSecretAsync": "Save Secret Async"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Secrets in Azure Key Vault",
+      "subtitle": "Keep the secrets of your site in a vault",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core can keep secrets in an Azure Key Vault, as well as in the database. In this video, you register a client in the host, configure the feature, create a secret in the vault, and read it from code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "A second secret store",
+      "subtitle": "The same names, another place",
+      "clips": [
+        {
+          "id": "01-store",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "store-1",
+              "text": "The Secrets feature keeps secrets in the database. The Secrets - Azure Key Vault feature depends on it and adds a second store, which implements ISecretStore, is named AzureKeyVault, and keeps each secret as an entry in your vault."
+            },
+            {
+              "id": "store-2",
+              "text": "Settings and code refer to a secret by name, so they do not depend on where it is kept. Enabling the feature moves nothing: existing secrets stay in the database."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Register the client",
+      "subtitle": "The host owns the Azure connection",
+      "clips": [
+        {
+          "id": "02-client",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "client-1",
+              "text": "The module never builds an Azure client. Your host registers a keyed SecretClient from a configuration section, and the service key can differ from the name of the section."
+            },
+            {
+              "id": "client-2",
+              "text": "That section holds the address of the vault and the credential. Key Vault does not support API keys, so you choose a token credential, such as a managed identity, which needs no secret in the configuration."
+            },
+            {
+              "id": "client-3",
+              "text": "For a client secret, use a secure configuration source, such as an environment variable, and not the settings file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Configure the feature",
+      "subtitle": "Point the store at your client",
+      "clips": [
+        {
+          "id": "03-config",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "config-1",
+              "text": "In the Orchard Core configuration, AzureClient names the service key, and must match it exactly. A missing name, a key with no registered client, or the service key that the feature reserves for itself makes the store fail with an explicit error."
+            },
+            {
+              "id": "config-2",
+              "text": "NamePrefix sets an application namespace, even for a site with one tenant. Use a distinct prefix for each application that shares a vault."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create a secret in the vault",
+      "subtitle": "Enable the feature, then choose the store",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Add the configuration before you enable the feature. Open Tools, Features, search for Key Vault, and select Enable next to Secrets - Azure Key Vault."
+            },
+            {
+              "id": "enable-2",
+              "text": "A message confirms that the feature was enabled. The Secrets pages are under Tools, Security."
+            },
+            {
+              "id": "create-1",
+              "text": "On the Secrets page, select Add Secret, then Create under Text Secret. With two writable stores, the form has a Store list."
+            },
+            {
+              "id": "create-2",
+              "text": "Enter a name and a value, choose AzureKeyVault as the store, and select Save."
+            },
+            {
+              "id": "create-3",
+              "text": "The list shows the secret that you created, with a badge for its store. The database secret shows Database, and the form for a new secret refuses a name that either store already holds."
+            },
+            {
+              "id": "create-4",
+              "text": "Open the vault secret again. Its store is fixed: to keep it in another store, use the Move action, which a separate video covers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Entries in the vault",
+      "subtitle": "Names, tags, tenants and deletion",
+      "clips": [
+        {
+          "id": "05-names",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "names-1",
+              "text": "In the vault, the name of an entry is a readable, lowercase form of your prefix, the tenant name, and the secret name, plus a 24-character hash. Tags keep the exact prefix, tenant, name, and type, and the description if there is one."
+            },
+            {
+              "id": "names-2",
+              "text": "The store lists only the entries that match the configured prefix and tenant. Changing the prefix, or renaming a tenant, changes the namespace, so earlier entries no longer appear."
+            },
+            {
+              "id": "names-3",
+              "text": "A namespace is not an Azure authorization boundary: code with the vault credentials can read every entry. Use separate vaults for tenants that must not see each other's secrets."
+            },
+            {
+              "id": "names-4",
+              "text": "Deleting a secret is a normal Key Vault delete. The module never purges, so the retention rules of the vault decide how long the value stays recoverable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Use the vault from code",
+      "subtitle": "Name the store, or share the client",
+      "clips": [
+        {
+          "id": "06-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "To read from the vault only, pass the store name to GetSecretAsync. A database entry then cannot hide a failed lookup in the vault."
+            },
+            {
+              "id": "code-2",
+              "text": "To save to the vault, pass the store name to SaveSecretAsync. Without a store name, the secret goes to the default store, which is the database."
+            },
+            {
+              "id": "code-3",
+              "text": "Your own services can use the same client: ask for a SecretClient with the FromKeyedServices attribute and the SecretClientServiceKey constant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Develop locally",
+      "subtitle": "An emulator instead of a vault",
+      "clips": [
+        {
+          "id": "07-local",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "local-1",
+              "text": "For local development, the documentation configures the client for an Azure Key Vault emulator: a localhost address, an environment credential, and two flags that its local endpoints require."
+            },
+            {
+              "id": "local-2",
+              "text": "Keep those flags in development configuration: both default to false, and production endpoints should leave them so. An emulator is never for production."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Secrets in Azure Key Vault",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is Azure Key Vault as a secret store: a client that your host registers, a short configuration, and the same secret names in the admin and in code. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
