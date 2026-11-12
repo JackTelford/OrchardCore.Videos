@@ -35,7 +35,7 @@
             },
             {
               "id": "how-2",
-              "text": "Pruning never deletes the published version or the most recent version. It deletes an archived version of a chosen content type only when the version is old enough, and is not among the newest archived versions of its item that you keep."
+              "text": "Pruning never deletes the published version or the most recent version. It deletes an archived version of a chosen content type only when the version is older than the retention period and is not among the newest archived versions you keep for its item."
             },
             {
               "id": "how-3",

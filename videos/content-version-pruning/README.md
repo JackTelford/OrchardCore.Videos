@@ -1,6 +1,6 @@
 # Content Version Pruning: Remove Old Versions Automatically
 
-**YouTube:** not published yet · **Length:** 3:33 · **Feature:** [OrchardCore.Contents.VersionPruning](https://docs.orchardcore.net/en/latest/reference/modules/Contents/#content-version-pruning)
+**YouTube:** not published yet · **Length:** 3:34 · **Feature:** [OrchardCore.Contents.VersionPruning](https://docs.orchardcore.net/en/latest/reference/modules/Contents/#content-version-pruning)
 
 Publishing a change to a versioned content item leaves the previous version in the database. The Content Version Pruning feature deletes the old ones on a schedule. The video explains which versions pruning keeps and which it deletes, enables the Content Version Pruning and Background Tasks features, chooses the retention period, the number of archived versions to keep and the content types to prune, and enables the background task and runs it on demand. The title, description, tags and chapters YouTube shows are kept with the video.
 
