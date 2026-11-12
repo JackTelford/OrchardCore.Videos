@@ -1,6 +1,6 @@
 # OpenID Connect Signing and Encryption Keys as Secrets
 
-**YouTube:** not published yet · **Length:** 3:45 · **Feature:** [OrchardCore.OpenId.Secrets](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/)
+**YouTube:** not published yet · **Length:** 3:47 · **Feature:** [OrchardCore.OpenId.Secrets](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/)
 
 An Orchard Core site that works as an OpenID Connect server uses a signing key and an encryption key for its tokens. This video
 explains why the certificate files the server generates by default stay on one server, enables the OpenID Connect Secrets

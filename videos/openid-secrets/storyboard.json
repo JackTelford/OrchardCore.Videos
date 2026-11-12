@@ -1,7 +1,11 @@
 {
   "title": "OpenID Connect Keys as Secrets",
   "output": "openid-secrets",
-  "spoken": {},
+  "spoken": {
+    "ServerSigningKey": "Server Signing Key",
+    "ServerEncryptionKey": "Server Encryption Key",
+    "X.509": "X five oh nine"
+  },
   "chapters": [
     {
       "id": "00",
@@ -39,7 +43,7 @@
             },
             {
               "id": "why-3",
-              "text": "With the OpenID Connect Secrets feature, the keys are secrets: encrypted, listed on the Secrets page, and kept in a secret store, the database by default. Servers that share the database and the Data Protection keys read the same secrets."
+              "text": "With the OpenID Connect Secrets feature, the keys are secrets: encrypted, listed on the Secrets page, and kept in a secret store, the database by default. Servers that share the database and the Data Protection keys, which decrypt the secrets, read the same ones."
             }
           ]
         }

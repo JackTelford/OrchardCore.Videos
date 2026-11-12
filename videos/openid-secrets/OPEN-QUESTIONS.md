@@ -111,9 +111,9 @@ secrets). Neither was tested with two servers.
 
 ## 7. Pronunciation
 
-No `spoken` entry was added. Before narrating, check with `scripts/pronounce.py` that the voice reads "ServerSigningKey",
-"ServerEncryptionKey", "X.509", "JSON Web Tokens" and "OpenID" well; the names are also typed and shown on screen. A person confirms any
-spelling that is added.
+`storyboard.json` has three `spoken` entries, not yet checked by ear: "ServerSigningKey" read as "Server Signing Key",
+"ServerEncryptionKey" as "Server Encryption Key", and "X.509" as "X five oh nine". Before narrating, check them, and how the voice
+reads "OpenID" and "JSON Web Tokens", with `scripts/pronounce.py`. A person confirms every spelling.
 
 ## 8. For information
 
