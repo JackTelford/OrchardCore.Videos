@@ -1,0 +1,57 @@
+{
+  "title": "Implement Full-Text Search: From Index to Results Page | Orchard Core",
+  "description": "A website search needs an index, a setting that picks it, a permission that lets visitors query it, and a results page.\n\nThis guide builds each part with the Lucene and Search features of Orchard Core. It then changes what is indexed with a Liquid template in the Full-text section of a content type, changes the results page with templates, and scripts the setup as recipe steps.\n\nIn this video:\n• How a content item becomes a search result\n• Enable the Lucene and Search features\n• Create a Lucene index of your content\n• Choose the index of the search page in Site Search\n• Grant the Anonymous role access to the index\n• Try the search page\n• Choose what is indexed with a custom full-text template\n• Rebuild the index\n• Change the results page with templates\n• Script the setup with a recipe",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Lucene"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Full-text search",
+    "Lucene",
+    "Search",
+    "Indexing",
+    "Liquid"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/implement-fulltext-search/"
+    },
+    {
+      "label": "Lucene module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lucene/"
+    },
+    {
+      "label": "Search module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Search/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/implement-fulltext-search/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/implement-fulltext-search"
+  }
+}
