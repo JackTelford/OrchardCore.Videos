@@ -1,0 +1,278 @@
+{
+  "title": "Build a Company Website With the Agency Theme",
+  "output": "build-a-company-website",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Build a Company Website With the Agency Theme",
+      "subtitle": "From the Agency recipe to sections, a menu and a contact form",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A company website needs a few sections, a menu, and a way for visitors to get in touch. In this video, we start from the Agency recipe, edit its sections, add a contact form, and extend its menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The Agency recipe",
+      "subtitle": "A company website that is ready to edit",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "The Agency theme comes with a setup recipe of the same name. On the Setup screen, open Recipe and choose Agency, described as Ready to use company website."
+            },
+            {
+              "id": "why-2",
+              "text": "The recipe creates a landing page. Its Services, Portfolio, About, Team and Clients sections are Bag parts from the Flows module. A Bag part holds content items inside the landing page, and here each one holds items of a single type."
+            },
+            {
+              "id": "why-3",
+              "text": "Services holds services, each with a title, a description and an icon. Portfolio holds projects, About holds milestones, and Team holds team members. Clients holds the logos of clients."
+            },
+            {
+              "id": "why-4",
+              "text": "We make three changes. We edit the sections of the landing page, then enable the Forms module and build a contact form on its own page, and finally add that page to the main menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The starting site",
+      "subtitle": "What the recipe creates",
+      "clips": [
+        {
+          "id": "02-tour",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tour-1",
+              "text": "This is the site as the Agency recipe leaves it. The landing page opens with the site name and a Tell Me More button, and the main menu stays at the top of the page."
+            },
+            {
+              "id": "tour-2",
+              "text": "Scrolling down, the Services, Portfolio and About sections follow one another. Each section shows the content items held by its Bag part."
+            },
+            {
+              "id": "tour-3",
+              "text": "The main menu has entries for Services, Portfolio, About, Team and Contact. Selecting Team, and then Contact, scrolls to those sections of the same page."
+            },
+            {
+              "id": "tour-4",
+              "text": "The headings and the Contact Us section, with its form, come from the template of the landing page. The items inside the sections are content, and the menu is a content item too, so both can be changed from the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Edit the landing page",
+      "subtitle": "Add and change the items of a section",
+      "clips": [
+        {
+          "id": "03-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "In the admin, open Content, Content Items. The list shows the landing page, named after the site, and the Main Menu. Click Edit on the landing page."
+            },
+            {
+              "id": "edit-2",
+              "text": "The editor shows a Title and a Permalink, then one block for each Bag part: Services, Portfolio, About, Team and Clients. The items of a part are cards that you can collapse and expand."
+            },
+            {
+              "id": "edit-3",
+              "text": "To change an existing item, edit the fields of its card. A team member has a Title for the name, an Occupation, a Picture, and fields for social profiles. We change the first Occupation."
+            },
+            {
+              "id": "edit-4",
+              "text": "In Services, the button reads Add Service, because this part holds a single type of item. Clicking it adds a card, and we enter Brand Identity as its Title."
+            },
+            {
+              "id": "edit-5",
+              "text": "Below the Title, the HtmlBody field holds the description, and Icon Class, below that, names a Font Awesome icon. We enter a short description and the palette icon."
+            },
+            {
+              "id": "edit-6",
+              "text": "Every card has a handle to drag it to another position, and a trash button to delete it. We drag Brand Identity to the top of the Services part."
+            },
+            {
+              "id": "edit-7",
+              "text": "Click Publish. A message confirms that the Landing Page has been published, and the Services section of the site shows Brand Identity first. Save Draft would keep the changes unpublished."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add a contact form",
+      "subtitle": "Enable Forms and build the form from widgets",
+      "clips": [
+        {
+          "id": "04-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "A form is built from widgets, and the Forms module provides them. Open Tools, Features, search for Forms, and find its row."
+            },
+            {
+              "id": "enable-2",
+              "text": "Click Enable. A message confirms that the feature Forms was enabled. Forms depends on Flows and Widgets, which the Agency recipe enables."
+            }
+          ]
+        },
+        {
+          "id": "04-form",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "form-1",
+              "text": "Let's create the page for the form. On the Content Items list, open the New menu and choose Page."
+            },
+            {
+              "id": "form-2",
+              "text": "A Page has a Flow part. Like a Bag part, it holds content items inside the page, but by default it accepts every widget type, so one page can mix text, images and forms."
+            },
+            {
+              "id": "form-3",
+              "text": "We enter Start a project as the Title, and leave the Permalink empty, so it is generated from the Title. The plus button titled Add Widget lists the widgets. Choose Form."
+            },
+            {
+              "id": "form-4",
+              "text": "A Form widget has its own Title. The Action field takes the address that receives the submitted data, such as a workflow. We leave it empty here, since handling submissions is a separate topic."
+            },
+            {
+              "id": "form-5",
+              "text": "The Method is POST, and the Anti Forgery Token option is checked, which adds an anti forgery token to the form."
+            },
+            {
+              "id": "form-6",
+              "text": "Inside the Form widget, its own plus button adds the form elements. Choose Input. We enter name as the HTML Name, set the Label option to Standard, and enter Your name as the Label Text."
+            },
+            {
+              "id": "form-7",
+              "text": "The Label option has three choices. None shows no label, Standard shows the Label Text, and Screen Readers hides the label from view but keeps it for assistive technology."
+            },
+            {
+              "id": "form-8",
+              "text": "A second Input collects the email address. Its HTML Name is email, its Type is Email, and its Label Text is Your email, with the Label option set to Standard."
+            },
+            {
+              "id": "form-9",
+              "text": "A Text Area holds the message. Its HTML Name is message, and its Label Text is Project details. A Button widget closes the form, with the HTML Name send, the Text Send and the Type Submit."
+            },
+            {
+              "id": "form-10",
+              "text": "Click Publish. A message confirms that the Page has been published, and the list of content items returns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add the page to the menu",
+      "subtitle": "A menu item for the form page",
+      "clips": [
+        {
+          "id": "05-menu",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "menu-1",
+              "text": "Open Content, Menus, and click Edit on Main Menu. The editor lists the menu items that the recipe created, and each one links to a section of the landing page."
+            },
+            {
+              "id": "menu-2",
+              "text": "Add Menu Item opens the Available Menu Items window. It offers the Link Menu Item for a custom address, the Content Menu Item for a content item, and the Html Menu Item for a link with HTML. Let's choose Content Menu Item."
+            },
+            {
+              "id": "menu-3",
+              "text": "We enter Start a project as the Name. In Selected Content Item, we type to search and select the page we created. The menu item links to that page itself, not to a typed address."
+            },
+            {
+              "id": "menu-4",
+              "text": "Check content permissions, when selected, verifies that the visitor may view the page before the item is shown. Its hint warns that this can affect performance, and advises caching the menu, which the Agency theme does."
+            },
+            {
+              "id": "menu-5",
+              "text": "Click Publish on the menu item to add it to the menu. That saves a draft of the menu, so we click Publish on the menu as well to show the change to visitors. Dragging items in this list reorders them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The finished site",
+      "subtitle": "A menu entry that opens the contact form",
+      "clips": [
+        {
+          "id": "06-finish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "finish-1",
+              "text": "On the site, the main menu ends with Start a project, the item we created. Selecting it opens the page."
+            },
+            {
+              "id": "finish-2",
+              "text": "The page title is the heading, and the form follows it, with a label for each field and the Send button at the end."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "What you built",
+      "subtitle": "Three pieces, each changed on its own",
+      "clips": [
+        {
+          "id": "07-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "The sections you edited are Bag parts, so editing them means editing the items inside. The contact form is a Form widget on a page, and the menu item links to that page. Each piece can be changed on its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Build a Company Website With the Agency Theme",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Agency recipe gives you a company website whose sections, contact form and menu you change from the admin. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
