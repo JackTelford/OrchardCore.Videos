@@ -1,0 +1,48 @@
+{
+  "title": "Site Settings: Name, Time Zone, Page Size and More | Orchard Core",
+  "description": "Where does an Orchard Core site get its name, its time zone, and the number of items its admin lists show? These options live in one place, the General settings, and a change there applies to the whole site.\n\nThis video opens Settings, General, and goes through its Site, Resources, and Cache tabs: the site name, the page title format, the base url, the default time zone, the page size and page size selection, and the settings for scripts, stylesheets, and caches.\n\nIn this video:\n• What the settings are, where to find them, and who can change them\n• Opening Settings, General\n• Site name, page title format, and base url\n• Default time zone\n• Page size and page size selection\n• Resources and caches",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Site settings",
+    "Time zone",
+    "Page size",
+    "Admin"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Settings/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Settings/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Settings"
+  }
+}
