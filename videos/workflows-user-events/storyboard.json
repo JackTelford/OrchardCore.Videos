@@ -5,7 +5,8 @@
     "Loggedin": "Logged in",
     "Loggedout": "Logged out",
     "loggedin": "logged in",
-    "jamie.chen": "jamie dot chen"
+    "jamie.chen": "jamie dot chen",
+    "example.com": "example dot com"
   },
   "chapters": [
     {
@@ -193,7 +194,7 @@
           "steps": [
             {
               "id": "instances-1",
-              "text": "Select Instances. Each run of a workflow is an instance, listed with its workflow and its status. Here, every instance is Finished."
+              "text": "On the Workflows list, select Instances. Each run of a workflow is an instance, listed with its workflow and its status. Here, every instance is Finished."
             },
             {
               "id": "instances-2",
@@ -214,7 +215,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "These events let a workflow react to registrations, role changes and sign-ins. A separate video covers expressions, which let a task use the user that the event is about. Thanks for watching."
+              "text": "The user events of the Users module let a workflow react to registrations, role changes and sign-ins. Thanks for watching."
             }
           ]
         }

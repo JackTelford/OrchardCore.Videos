@@ -8,8 +8,8 @@ before the first take. Nothing here changes the narration unless the check fails
 
 Checked: the written forms are the labels of the code. `User Loggedin Event` and `User Loggedout Event` are written
 that way in the source (`Users/Workflows/Activities/UserLoggedInEvent.cs:17`, `UserLoggedOutEvent.cs:22`).
-To confirm: run `scripts/pronounce.py` on the four entries of `spoken` (`Loggedin` as "Logged in", `Loggedout` as
-"Logged out", `loggedin` as "logged in", `jamie.chen` as "jamie dot chen"), and on "Notify", before narrating. The
+To confirm: run `scripts/pronounce.py` on the five entries of `spoken` (`Loggedin` as "Logged in", `Loggedout` as
+"Logged out", `loggedin` as "logged in", `jamie.chen` as "jamie dot chen", `example.com` as "example dot com"), and on "Notify", before narrating. The
 captions keep the written form.
 
 ## 2. One activity, three labels
