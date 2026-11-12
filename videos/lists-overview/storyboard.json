@@ -1,0 +1,228 @@
+{
+  "title": "The Orchard Core Lists module",
+  "output": "lists-overview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Lists module",
+      "subtitle": "Group content items in a container",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some content belongs together: the posts of a blog, the pages of a help center. The Lists module groups content items in a container item. You'll see what a list is, how to turn a content type into one, and how to fill it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a list is",
+      "subtitle": "A content item that holds other content items",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A list is a content item that holds other content items. A blog holds its posts, and a help center holds its pages. Both the list and its items are ordinary content items, edited in the usual admin pages."
+            },
+            {
+              "id": "idea-2",
+              "text": "A content type becomes a list when it has the List part. Items created from inside the list belong to it. Each item remembers the list it was created in, and it belongs to one list at a time."
+            },
+            {
+              "id": "idea-3",
+              "text": "In the admin, a list gets its own page, with a button to create items inside it. On the site, visitors see its published items. The feature is called Lists, and you enable it in Tools, Features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Blog is a list",
+      "subtitle": "A list in the admin",
+      "short": "blog-list",
+      "clips": [
+        {
+          "id": "02-blog",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "blog-1",
+              "text": "A site set up with the Blog recipe has the Lists feature enabled, and its Blog is a list. Let's open Blog in the admin menu."
+            },
+            {
+              "id": "blog-2",
+              "text": "This is the page of the list. Edit Blog changes the list itself, and Create Blog Post adds a post to it. The posts it holds are listed below."
+            },
+            {
+              "id": "blog-3",
+              "text": "Each post is a content item of its own. It remembers the blog it was created in, and this page shows only the posts of that blog."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a list type",
+      "subtitle": "Add the List part to a content type",
+      "short": "list-type",
+      "clips": [
+        {
+          "id": "03-type",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "To make your own list, start with a content type, which defines a kind of content. Open Design, Content Definition, Content Types, and choose Create new type."
+            },
+            {
+              "id": "type-2",
+              "text": "Name it Help Center. The Technical Name fills in from the Display Name. Create saves the type and opens Add Parts."
+            },
+            {
+              "id": "type-3",
+              "text": "Parts give a type its behavior. Check three of them: Autoroute gives items a web address, List turns the type into a container, and Title gives them a title."
+            },
+            {
+              "id": "type-4",
+              "text": "Add Selected Parts attaches them and opens the type. Each part you added has an Edit button. Let's open the settings of the List part."
+            },
+            {
+              "id": "type-5",
+              "text": "The settings are Page Size, Enable Ordering, Contained Content Types, Show container's header, and Show full pager. A separate video covers ordering and paging."
+            },
+            {
+              "id": "type-6",
+              "text": "A list needs at least one contained type. Contained Content Types lists every content type, so check Page, the type this list holds, and choose Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add items to a list",
+      "subtitle": "Create the list and its pages",
+      "short": "add-items",
+      "clips": [
+        {
+          "id": "04-items",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "items-1",
+              "text": "Next, create the list itself. Under Content, Content Items, the New menu offers Help Center, like any other content type you can create."
+            },
+            {
+              "id": "items-2",
+              "text": "Enter the title Help Center. The permalink is generated for you. Choose Publish: the list is published, and you return to Content Items."
+            },
+            {
+              "id": "items-3",
+              "text": "The Help Center row has a button for its items, List Page Items. It opens the page of the list in the admin."
+            },
+            {
+              "id": "items-4",
+              "text": "The page of the list says that it is empty. Create Page adds the first item, and the editor opens with links back to the list."
+            },
+            {
+              "id": "items-5",
+              "text": "Enter the title Reset your password and choose Publish. You return to the list, and the item is in it."
+            },
+            {
+              "id": "items-6",
+              "text": "Save Draft keeps an item unpublished. Create a second item, Export your data, and save it as a draft. The list shows both."
+            },
+            {
+              "id": "items-7",
+              "text": "Create a third item, Change your email address, and choose Publish. The list shows all three, the most recent first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Find items in a list",
+      "subtitle": "Filter by status and search by title",
+      "short": "find-items",
+      "clips": [
+        {
+          "id": "05-find",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "The page of a list shows its items, the most recent first, drafts included. Each row has an Edit button, and published items also have View."
+            },
+            {
+              "id": "find-2",
+              "text": "The filter menu next to the search box offers Only draft items, Only published items, and Owned by me, which keeps the items you own. Choose Only draft items to see the items that are not published."
+            },
+            {
+              "id": "find-3",
+              "text": "Open the filter menu again and choose Only published items. The draft is hidden, and the two published items remain."
+            },
+            {
+              "id": "find-4",
+              "text": "The search box filters the items by title. Search for password, and only Reset your password remains."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "See the list on the site",
+      "subtitle": "What visitors get",
+      "short": "on-the-site",
+      "clips": [
+        {
+          "id": "06-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "In Content Items, View on the Help Center row opens the list on the site."
+            },
+            {
+              "id": "site-2",
+              "text": "Visitors see the published items as links, the most recent first. The draft is not there until it is published."
+            },
+            {
+              "id": "site-3",
+              "text": "Selecting a title opens the item on a page of its own. Each item of the list has its own address, like any other content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Lists module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A list is a content item that holds others: add the List part to a type, choose the types it contains, and create its items from the list's own page. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
