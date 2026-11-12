@@ -1,0 +1,49 @@
+{
+  "title": "Content Localization: Translate Your Content Items | Orchard Core",
+  "description": "A site in several languages needs the same page in each language, kept together and edited separately.\n\nThe Content Localization module provides the Localization part. Each translation is a content item of its own, linked to the others, with its own content and its own publication status. You create translations from the editor or from the content items list, and find them by culture.\n\nIn this video:\n• How it works\n• Enable the module\n• Add the Localization part\n• Save the original item\n• Translate an item\n• Manage translations\n• On the site\n• Permissions",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Localization"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Content Localization",
+    "localization",
+    "multilingual",
+    "translation",
+    "content items"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Localization"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentLocalization/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentLocalization/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentLocalization"
+  }
+}

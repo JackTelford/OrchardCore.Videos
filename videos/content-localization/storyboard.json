@@ -1,0 +1,253 @@
+{
+  "title": "Orchard Core Content Localization",
+  "output": "content-localization",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Content Localization",
+      "subtitle": "Translate your content items, one culture at a time",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Content Localization lets one page exist in several languages, with each translation stored as a content item of its own. In this video, you add the Localization part to a content type, create translations, manage them, and control who can translate."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How it works",
+      "subtitle": "One content item for each language",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A multilingual site needs the same page in several languages. With the Content Localization module, each language is a separate content item, with its own content and its own publication status."
+            },
+            {
+              "id": "how-2",
+              "text": "The Localization part links the items together. It stores two values: the culture of the item, such as French, and a localization set, an identifier that every translation of the same item shares."
+            },
+            {
+              "id": "how-3",
+              "text": "An item created with the part gets the default culture of the site. Creating a translation copies the item into another supported culture, as a draft. You then translate the copy and publish it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the module",
+      "subtitle": "Turn on the feature and check the cultures",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Content Localization is a feature, so you turn it on first. Open Tools, Features, and search for Content Localization. It appears in the Internationalization category."
+            },
+            {
+              "id": "enable-2",
+              "text": "The module builds on the Localization feature, which is already enabled on this site and holds its list of cultures. Click Enable, and the page confirms that the feature was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Next, open Settings, Localization, Cultures. This page lists the supported cultures by their codes, here for English, French and Spanish, and marks one as the Default culture. A separate video covers it in detail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add the Localization part",
+      "subtitle": "Choose the content types that can be translated",
+      "clips": [
+        {
+          "id": "03-part",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "A translation needs a content type that has the Localization part. Open Design, Content Definition, Content Types, and click Edit on the Article type."
+            },
+            {
+              "id": "part-2",
+              "text": "Click Add Parts. Each part you can attach is listed with its description. Select Localization, then click Add Selected Parts."
+            },
+            {
+              "id": "part-3",
+              "text": "Localization appears in the Parts list of the Article type, with a message confirming the addition. The part has no settings of its own. Items that already exist receive their culture when you save them in the editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Save the original item",
+      "subtitle": "Give an existing item its culture",
+      "clips": [
+        {
+          "id": "04-original",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "original-1",
+              "text": "The Article type already has an item, About, created before the part was added. In the list of Article items, it shows neither a culture badge nor a Localizations button."
+            },
+            {
+              "id": "original-2",
+              "text": "Click Edit, then scroll to the bottom of the editor. A collapsed section shows the Current Culture. Open it, and it asks you to save the item before creating localizations."
+            },
+            {
+              "id": "original-3",
+              "text": "Click Publish. The About article receives the default culture of the site. Back in the list, a globe badge shows the culture, and a Localizations button appears."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Translate an item",
+      "subtitle": "Create a translation from the editor",
+      "clips": [
+        {
+          "id": "05-translate",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "translate-1",
+              "text": "Click Edit on About again and open the Current Culture section. It lists the other supported cultures, French and Spanish, each with a plus icon because no translation exists."
+            },
+            {
+              "id": "translate-2",
+              "text": "Click French (France). The module copies the article into that culture as a draft, then opens the copy in the editor with a message that the localized version was created."
+            },
+            {
+              "id": "translate-3",
+              "text": "The copy keeps the English title and subtitle, ready to translate. Its permalink is empty, because the module clears it so that it is generated again from the translated title."
+            },
+            {
+              "id": "translate-4",
+              "text": "Type the French title and subtitle. At the bottom, the Current Culture section shows French (France) for this item, and links to the English item and to the missing Spanish one."
+            },
+            {
+              "id": "translate-5",
+              "text": "Click Publish. A translation is a content item of its own, so it is published separately from the English article, and its permalink is generated from the French title."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Manage translations",
+      "subtitle": "Create from the list and filter by culture",
+      "clips": [
+        {
+          "id": "06-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "The Localizations button on a list row shows every other culture. French (France) has a pen icon because it exists. Spanish (Spain) has a plus icon, so click it to create that translation."
+            },
+            {
+              "id": "manage-2",
+              "text": "Enter the Spanish title and subtitle, then click Save Draft instead of Publish. The Spanish translation stays unpublished until you publish it."
+            },
+            {
+              "id": "manage-3",
+              "text": "Back in the list, each translation is a row of its own. The globe badge shows the culture, and the Published or Draft badge shows the status of each item."
+            },
+            {
+              "id": "manage-4",
+              "text": "To see one language, open the Culture drop-down and choose a culture. The list shows only the items in that culture, and All cultures removes the filter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "On the site",
+      "subtitle": "One address for each translation",
+      "clips": [
+        {
+          "id": "07-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "On the site, each published translation is served at its own address. Click View on the English article to open it, with its English title and subtitle."
+            },
+            {
+              "id": "site-2",
+              "text": "The French translation opens at a different address, generated from its own title, and shows the French title and subtitle."
+            },
+            {
+              "id": "site-3",
+              "text": "A visitor reaches a translation through its address. Letting visitors switch between languages is the job of the Content Culture Picker feature, which a separate video covers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Permissions",
+      "subtitle": "Who can translate",
+      "clips": [
+        {
+          "id": "08-permissions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "Two permissions control translation. Under Access Control, Roles, click Edit on the Author role, and search for Localize. They appear in the Content Localization group."
+            },
+            {
+              "id": "perm-2",
+              "text": "Localize content for others lets a role translate any item. Localize own content limits translation to items the user created, and the first permission implies the second."
+            },
+            {
+              "id": "perm-3",
+              "text": "By default, the Author and Contributor roles hold only Localize own content, and the Administrator and Editor roles hold both. A user also needs permission to edit content of that type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Localization",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Each translation is a content item of its own, tied to the others by the Localization part. Enable the module, add the part to a content type, and create translations from the editor or the list. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
