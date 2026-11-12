@@ -10,7 +10,7 @@ code, including the rule that its cache imposes. The title, description, tags an
 
 ## Recording it again
 
-The video was recorded on a **fresh site** with fake data only, so it needs no mask script. Only the chapter "The
+The video is recorded on a **fresh site** with fake data only, so it needs no mask script. Only the chapter "The
 Sanitize Html setting" is a recording; the other chapters are slides and cards. The recording needs no seed data, and it
 changes nothing on the site.
 
