@@ -1,0 +1,48 @@
+{
+  "title": "Add Site Settings to Your Module | Orchard Core",
+  "description": "A module often needs options that apply to the whole site, such as a key, a switch or a text. Orchard Core keeps them in the site settings, where each module can add a group of its own.\n\nThis video follows the Debugging group of the Settings module, step by step: the settings class and its view model, the display driver and the view, the registration in the startup class with its permission and menu entry, and the code that reads the values. Your module follows the same steps with its own names.\n\nIn this video:\n• How site settings work: one document, many groups\n• The settings class and its view model\n• The display driver and the view\n• Registering the driver, the permission and the menu entry\n• Trying the group in the admin\n• Reading the settings from code, Liquid and recipes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CSharp"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "site settings",
+    "display driver",
+    "module development",
+    "C#"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Settings/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Settings/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Settings"
+  }
+}
