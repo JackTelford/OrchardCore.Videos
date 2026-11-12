@@ -162,7 +162,7 @@
             },
             {
               "id": "return-2",
-              "text": "A person with no account fills in a registration form, is registered at once when the settings ask for nothing, or is told that new registrations are disabled. The external authentication settings of the Users module control this, and a separate video covers them."
+              "text": "A person with no account fills in a registration form, is registered at once when no information is required, or is told that registration is disabled for the site. The external authentication settings of the Users module control this; a separate video covers them."
             },
             {
               "id": "return-3",
