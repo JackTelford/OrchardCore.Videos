@@ -1,0 +1,61 @@
+{
+  "title": "Shapes: How Orchard Core Renders a Page | Orchard Core",
+  "description": "Every page of an Orchard Core site is built from shapes, but it is not always clear which object, binding or template produced a fragment of markup.\n\nThis video explains the shape: the data and metadata it holds, how you create and render one from Razor, Liquid and C#, how Orchard Core resolves a binding and a template, how layouts, zones and display drivers produce shapes, and how to see which template rendered a fragment.\n\nIn this video:\n• What a shape is\n• A page made of shapes\n• Create and render a shape\n• The shape contract\n• How a shape renders\n• Templates and code bindings\n• Layouts and zones\n• Shapes from display drivers\n• Find the template of a shape",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Razor",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "shapes",
+    "display management",
+    "Razor",
+    "Liquid",
+    "themes",
+    "templates"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Display Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Shapes",
+      "url": "https://docs.orchardcore.net/en/latest/topics/display/shapes/"
+    },
+    {
+      "label": "Documentation: Customize the display",
+      "url": "https://docs.orchardcore.net/en/latest/topics/display/"
+    },
+    {
+      "label": "Documentation: Display Management",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DisplayManagement/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DisplayManagement/README.md",
+    "src/docs/topics/display/README.md",
+    "src/docs/topics/display/shapes.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:DisplayManagement"
+  }
+}
