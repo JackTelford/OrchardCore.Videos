@@ -1,0 +1,48 @@
+{
+  "title": "Lucene Query Syntax: Write Precise Search Queries | Orchard Core",
+  "description": "Plain words in a search box often return long lists of results. The search page of an Orchard Core site reads what is typed as a Lucene query, so operators, phrases, wildcards, fields and ranges narrow the list.\n\nThis video shows how the Lucene search service parses a query, and how to write each kind of query the syntax supports, on the search page of a blog.\n\nIn this video:\n• How a query is read: the parser, the default fields and the analyzer\n• Boolean operators: AND, NOT, plus and minus\n• Phrases and proximity searches\n• Wildcards, fuzzy terms and regular expressions\n• Fields, groups and ranges\n• The same syntax in a query_string query\n• Common mistakes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Lucene"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Lucene",
+    "Lucene query syntax",
+    "Search",
+    "Full-text search"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/lucene-query-syntax/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/lucene-query-syntax/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/lucene-query-syntax"
+  }
+}
