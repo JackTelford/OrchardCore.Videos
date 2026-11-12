@@ -1,0 +1,275 @@
+{
+  "title": "Write an Orchard Core Background Task",
+  "output": "background-tasks-developer",
+  "spoken": {
+    "IBackgroundTaskEventHandler": "I Background Task Event Handler",
+    "ResizedMediaCacheBackgroundTask": "Resized Media Cache Background Task",
+    "IBackgroundTaskMonitor": "I Background Task Monitor",
+    "IBackgroundTask": "I Background Task",
+    "BackgroundTaskEventContext": "Background Task Event Context",
+    "DoWorkAsync": "Do Work Async",
+    "ExecutingAsync": "Executing Async",
+    "ExecutedAsync": "Executed Async",
+    "GetStateAsync": "Get State Async",
+    "RequestRunAsync": "Request Run Async",
+    "AlreadyQueued": "Already Queued",
+    "AlreadyRunning": "Already Running",
+    "NotFound": "Not Found",
+    "LockTimeout": "Lock Timeout",
+    "LockExpiration": "Lock Expiration",
+    "UsePipeline": "Use Pipeline",
+    "PollingTime": "Polling Time",
+    "MinimumIdleTime": "Minimum Idle Time",
+    "MaxRecentRuns": "Max Recent Runs",
+    "ShellWarmup": "Shell Warmup",
+    "BackgroundService": "Background Service",
+    "AddSingleton": "Add Singleton",
+    "OrchardCore": "Orchard Core",
+    "BackgroundTask": "Background Task"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Write an Orchard Core Background Task",
+      "subtitle": "Schedules, locks and monitoring",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some work does not belong in a web request, like cleaning a cache or publishing scheduled content. Orchard Core runs it as a background task. In this video, you write one, schedule it, make it safe on several servers, and read its state from code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How background tasks run",
+      "subtitle": "One service for every tenant",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "One background service runs for the whole application. On every round, about a minute apart by default, it visits each running tenant, that is, each site of the application, and runs the tasks that are due. A tenant's tasks are those its modules registered."
+            },
+            {
+              "id": "how-2",
+              "text": "Each run gets its own service scope from the tenant. The tasks of a tenant run one after another, and the service waits for all of them before its next round, so a task should finish quickly."
+            },
+            {
+              "id": "how-3",
+              "text": "The Background Tasks feature is not needed for any of this. It adds the admin pages, and it stores the settings that someone changes there. Without it, a task uses the values you wrote in code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Write a task",
+      "subtitle": "A class that implements IBackgroundTask",
+      "clips": [
+        {
+          "id": "02-write",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "write-1",
+              "text": "A task is a class that implements IBackgroundTask, which has one method, DoWorkAsync. It receives the service provider of the run, and a cancellation token that is canceled when the application stops."
+            },
+            {
+              "id": "write-2",
+              "text": "Orchard Core registers its tasks as singletons, so a constructor takes services that live at least as long as the tenant, like a logger. Services tied to the run, like the session, are taken from the provider."
+            },
+            {
+              "id": "write-3",
+              "text": "If DoWorkAsync throws, the service logs the error, records the run as failed with its message, and goes on with the next task. This task catches and logs the errors of its cleanup, so they do not fail the run."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Describe the task",
+      "subtitle": "Title, schedule and the BackgroundTask attribute",
+      "clips": [
+        {
+          "id": "03-attribute",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "attr-1",
+              "text": "The BackgroundTask attribute describes the task. Title and Description are what the admin shows. Without a Title, the admin builds one from the name of the class, so ResizedMediaCacheBackgroundTask would show as Resized Media Cache."
+            },
+            {
+              "id": "attr-2",
+              "text": "Schedule is a cron expression, read in the time zone of the site. In the attribute it defaults to every five minutes, and a task without the attribute is scheduled every minute. A task runs at most once per round."
+            },
+            {
+              "id": "attr-3",
+              "text": "A schedule that is not a valid cron expression never starts a scheduled run. Enable set to false stops the scheduled runs, as on the content version pruning task, but a task can still be run on demand."
+            },
+            {
+              "id": "attr-4",
+              "text": "UsePipeline builds the tenant pipeline before the run, so a task can generate URLs. Settings saved in the admin replace the values of the attribute for that tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Register the task",
+      "subtitle": "One line in the Startup class of a module",
+      "clips": [
+        {
+          "id": "04-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "reg-1",
+              "text": "Register the task in the Startup class of your module, with AddSingleton, as IBackgroundTask. It then runs for every tenant where the feature of that Startup class is enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "See it in the admin",
+      "subtitle": "Where the attribute shows up",
+      "clips": [
+        {
+          "id": "05-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "admin-1",
+              "text": "With the Background Tasks feature enabled, the Resized Media Cache Cleaner appears under Tools, Background Tasks. Its title and description come from the attribute, and the Next run badge comes from its schedule."
+            },
+            {
+              "id": "admin-2",
+              "text": "Let's open the task. The Settings card shows its technical name, which is the full name of the class, and its schedule. Atomic says Yes with the lock values for an atomic task, and No otherwise."
+            },
+            {
+              "id": "admin-3",
+              "text": "Let's open Actions and queue a run on this server, whatever the schedule. The Execution card then reports the last run: its result, how long it took, and what triggered it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Atomic tasks and web farms",
+      "subtitle": "One server at a time",
+      "clips": [
+        {
+          "id": "06-farm",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "farm-1",
+              "text": "When an application runs on several servers, each server runs its own background service. A scheduled task then runs on every server, and by default these runs can overlap."
+            },
+            {
+              "id": "farm-2",
+              "text": "Set LockTimeout and LockExpiration, in milliseconds and both above zero, and the task is atomic. Before each run, the service tries to acquire a lock named after the task. If it cannot in time, the service tries again on the next round."
+            },
+            {
+              "id": "farm-3",
+              "text": "A lock needs a distributed lock feature, such as Redis Lock. Without one, these settings are ignored. Set the expiration above the longest run of the task, or the lock can expire while the task is running."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Configure the service",
+      "subtitle": "Polling, idle time and recent runs",
+      "clips": [
+        {
+          "id": "07-config",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cfg-1",
+              "text": "The service reads the BackgroundService section of the OrchardCore configuration. PollingTime and MinimumIdleTime set its pace, MaxRecentRuns sets how many runs each task remembers, and ShellWarmup loads every tenant at startup, so their tasks run without waiting for a first request."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Hook into every run",
+      "subtitle": "IBackgroundTaskEventHandler",
+      "clips": [
+        {
+          "id": "08-hooks",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "hook-1",
+              "text": "To react to every run of every task of a tenant, implement IBackgroundTaskEventHandler. ExecutingAsync is called before a task starts, and ExecutedAsync after it ends, whether it succeeded or failed."
+            },
+            {
+              "id": "hook-2",
+              "text": "The context carries the name of the task, the tenant, the services of the scope, and the exception when there is one. Register the handler as a service. An error thrown by a handler is logged, and the task is not affected."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Read the state from code",
+      "subtitle": "IBackgroundTaskMonitor",
+      "clips": [
+        {
+          "id": "09-monitor",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "mon-1",
+              "text": "IBackgroundTaskMonitor gives your code the execution state of the tasks. It is registered with the background service, so inject an enumerable of it if your code may run in an application without that service."
+            },
+            {
+              "id": "mon-2",
+              "text": "GetStateAsync takes the tenant name and the task name, which is the full name of its class. The state holds the status, the run and failure counts, the next start time, and the last run with its result and error."
+            },
+            {
+              "id": "mon-3",
+              "text": "RequestRunAsync queues a run on this server, whatever the schedule, and returns Queued, AlreadyQueued, AlreadyRunning or NotFound. The state lives in memory on each server, so it starts again when the application restarts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Write an Orchard Core Background Task",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is a background task: a class, an attribute and one registration, with locks for web farms and a monitor to read its runs. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
