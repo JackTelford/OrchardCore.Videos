@@ -1,0 +1,225 @@
+{
+  "title": "The Orchard Core Widgets module",
+  "output": "widgets-overview",
+  "spoken": {
+    "WidgetsList": "Widgets List",
+    "Add & Configure": "Add and Configure",
+    "Raw Html": "Raw H.T.M.L.",
+    "Wysiwyg": "Wizzy wig"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Widgets module",
+      "subtitle": "Content blocks for the zones of your pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Widgets are blocks of content, such as a paragraph or a quote, that appear in the zones of a page. In this video, you'll see what a widget is, how to allow widgets on a content type, and how to add, move, and remove them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a widget is",
+      "subtitle": "Content items that fill the zones of a page",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A widget is a content item like any other, with fields to fill in. What makes it a widget is its content type, which carries the Widget stereotype, a setting that marks the type as a widget type. Paragraph, Image, and Blockquote are examples."
+            },
+            {
+              "id": "idea-2",
+              "text": "A theme lays out each page in named zones. The Blog Theme of this site has zones such as Header, Content, and Footer. A widget appears wherever the theme renders its zone, so zone names must match the zones of the theme."
+            },
+            {
+              "id": "idea-3",
+              "text": "Widgets can be placed in more than one way. With the WidgetsList part, each item of a content type chooses its own widgets for named zones, and this video shows how. Layers and the Flow part each have a separate video."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Widgets feature",
+      "subtitle": "Where it is turned on",
+      "short": "feature",
+      "clips": [
+        {
+          "id": "02-feature",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "feature-1",
+              "text": "Widgets is a feature of its own. Under Tools, Features, search for Widgets. Its description says it provides a part allowing content items to render widgets in theme zones."
+            },
+            {
+              "id": "feature-2",
+              "text": "The row offers Disable because the feature is enabled. On a site where it is turned off, the button reads Enable. The Blog recipe, which sets up this site, turns it on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Widget types",
+      "subtitle": "Content types with the Widget stereotype",
+      "short": "types",
+      "clips": [
+        {
+          "id": "03-types",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "Widget types are content types, so you find them under Design, Content Definition, Content Types."
+            },
+            {
+              "id": "types-2",
+              "text": "Searching the list for Widget shows the widget types: Blockquote, Container, Image, Paragraph, and Raw Html. Each carries a Widget badge."
+            },
+            {
+              "id": "types-3",
+              "text": "Let's open Paragraph. The Stereotype field holds the word Widget. That setting is the only requirement for a widget type."
+            },
+            {
+              "id": "types-4",
+              "text": "Lower on the page, the Fields list shows what the widget holds. Paragraph has one field, Content, edited with a Wysiwyg editor."
+            },
+            {
+              "id": "types-5",
+              "text": "To make your own widget type, choose Create new type, add the parts and fields you need, and enter Widget as its stereotype."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Allow widgets on a content type",
+      "subtitle": "Attach the WidgetsList part",
+      "short": "allow",
+      "clips": [
+        {
+          "id": "04-allow",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "allow-1",
+              "text": "A part adds one capability to a content type. To let each article choose its own widgets for named zones, the Article type needs the WidgetsList part. The About page is an Article, so let's edit that type and choose Add Parts."
+            },
+            {
+              "id": "allow-2",
+              "text": "WidgetsList is described as a way to add widgets to layout zones for your content item. Add & Configure attaches the part and opens its settings."
+            },
+            {
+              "id": "allow-3",
+              "text": "Available widgets zones takes a comma separated list of zone names. Let's enter Content and Footer, two zones of this theme, and choose Save."
+            },
+            {
+              "id": "allow-4",
+              "text": "The Parts list of Article includes WidgetsList, and every article offers those two zones for widgets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add widgets to a page",
+      "subtitle": "Choose the widgets of each zone",
+      "short": "add",
+      "clips": [
+        {
+          "id": "05-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "The Content Items menu entry opens the Manage Content page. Let's edit the About article. Further down, the WidgetsList section shows a card for each zone: Content and Footer."
+            },
+            {
+              "id": "add-2",
+              "text": "In the Footer zone, the plus button titled Add Widget opens a list. It holds every content type with the Widget stereotype, sorted by name."
+            },
+            {
+              "id": "add-3",
+              "text": "Let's choose Paragraph. A card for the widget appears in the zone. Expand it, and write the text that visitors will read in the footer."
+            },
+            {
+              "id": "add-4",
+              "text": "Let's add a Blockquote to the Content zone the same way. Its only field is Quote, a text area."
+            },
+            {
+              "id": "add-5",
+              "text": "Let's choose Publish, which saves the widgets together with the article. The widgets are stored in the article itself, so they belong to this article alone."
+            },
+            {
+              "id": "add-6",
+              "text": "On the About page, the quote is shown in the Content zone, and the paragraph in the Footer zone."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Move and remove widgets",
+      "subtitle": "Reorder, collapse, insert and delete cards",
+      "short": "manage",
+      "clips": [
+        {
+          "id": "06-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "In the WidgetsList section of an article, each card has a handle on its left. Drag a card by its handle to change its order, or to move it into another zone."
+            },
+            {
+              "id": "manage-2",
+              "text": "The arrow button collapses a card to its header. Choose it again to expand the card."
+            },
+            {
+              "id": "manage-3",
+              "text": "Pointing at the header of a card reveals a plus button titled Insert Widget. It opens the same list of widget types and inserts the chosen widget before that card."
+            },
+            {
+              "id": "manage-4",
+              "text": "The trash button removes a card after you confirm. Changes to widgets are saved with the article, not on their own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Widgets module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Widgets are content items that fill the zones of a page: mark a content type with the Widget stereotype, attach the WidgetsList part to the types that need widgets, and choose the widgets of each item. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
