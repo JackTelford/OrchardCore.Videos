@@ -1,0 +1,383 @@
+{
+  "title": "Build a Product Catalog: Types, Categories and Search",
+  "output": "build-a-product-catalog",
+  "spoken": {
+    "/search": "slash search",
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Build a Product Catalog",
+      "subtitle": "Types, categories and search",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A product catalog lists products that visitors can browse by category and find with search. In this video, you build one in Orchard Core, with content types, a taxonomy, the Media Library, and Search."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a catalog needs",
+      "subtitle": "Four building blocks",
+      "clips": [
+        {
+          "id": "01-needs",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "needs-1",
+              "text": "Every product has the same structure: a name, a price, a picture, and a category. A content type defines that structure, and the Content Types feature lets you build one in the admin."
+            },
+            {
+              "id": "needs-2",
+              "text": "A taxonomy holds the categories, and the Taxonomies feature manages it. The Media feature stores the pictures in the Media Library, so every product can show one."
+            },
+            {
+              "id": "needs-3",
+              "text": "The Search feature adds a search page, which finds products in an index. You build the types, the categories, the pictures, the products, and then the search."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the content types",
+      "subtitle": "Product and Product Category",
+      "clips": [
+        {
+          "id": "02-product",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "product-1",
+              "text": "Let's start with the Product type. Under Design, Content Definition, Content Types, you see the types of the site. Click Create new type."
+            },
+            {
+              "id": "product-2",
+              "text": "Enter Product as the Display Name. The Technical Name fills in by itself. Click Create."
+            },
+            {
+              "id": "product-3",
+              "text": "A type is made of parts. The Title part gives every product a name, so check Title and click Add Selected Parts."
+            },
+            {
+              "id": "product-4",
+              "text": "The Parts list shows Product, the part that holds the fields of this type. A field stores a value, such as a price. Click Add Field."
+            },
+            {
+              "id": "product-5",
+              "text": "Enter Price as the Display Name, choose Numeric Field, and click Save & Configure."
+            },
+            {
+              "id": "product-6",
+              "text": "Set Scale to 2, so a price has two digits after the decimal point, and check Required. Then click Save."
+            },
+            {
+              "id": "product-7",
+              "text": "Add a second field. Name it Image, choose Media Field, and click Save. By default, a Media Field accepts several pictures."
+            },
+            {
+              "id": "product-8",
+              "text": "The type lists its fields and its parts. Click Save to return to the list of content types."
+            }
+          ]
+        },
+        {
+          "id": "02-term-type",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "term-1",
+              "text": "Categories are content items too, so each one needs a content type. Click Create new type, and enter Product Category as the Display Name."
+            },
+            {
+              "id": "term-2",
+              "text": "Click Create, check Title, and click Add Selected Parts. A category only needs a title, so click Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Group products in categories",
+      "subtitle": "A taxonomy and its terms",
+      "clips": [
+        {
+          "id": "03-taxonomy",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tax-1",
+              "text": "A taxonomy holds the categories, as terms. Open Content, Content Items, click New, and choose Taxonomy."
+            },
+            {
+              "id": "tax-2",
+              "text": "Enter Product Categories as the Title. For Term Content Type, choose Product Category, which is the type of each term. Click Publish."
+            },
+            {
+              "id": "tax-3",
+              "text": "Open the taxonomy again with Edit. The Add Product Category button appears once the taxonomy is saved."
+            },
+            {
+              "id": "tax-4",
+              "text": "Click Add Product Category, enter Backpacks as the Title, and click Publish. The term appears in the taxonomy."
+            },
+            {
+              "id": "tax-5",
+              "text": "Add Tents and Sleeping Bags the same way. A term also has an Add button, which creates a child term below it."
+            },
+            {
+              "id": "tax-6",
+              "text": "The terms are saved in a draft of the taxonomy. Click Publish to publish the taxonomy with its terms."
+            }
+          ]
+        },
+        {
+          "id": "03-connect",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "conn-1",
+              "text": "Next, connect the Product type to the taxonomy. Open Content Types, click Edit on Product, and click Add Field."
+            },
+            {
+              "id": "conn-2",
+              "text": "Enter Category as the Display Name, choose Taxonomy Field, and click Save & Configure."
+            },
+            {
+              "id": "conn-3",
+              "text": "Select Product Categories as the Taxonomy. Check Unique, so a product has only one category, and click Save."
+            },
+            {
+              "id": "conn-4",
+              "text": "The Product type has three fields: Price, Image, and Category. Each field is saved as soon as you add it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Upload product pictures",
+      "subtitle": "The Media Library",
+      "clips": [
+        {
+          "id": "04-slugify",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "slug-1",
+              "text": "Product pictures belong in the Media Library. Open Tools, Features, search for Media Slugify, and click Enable. It gives uploaded files and folders web-friendly names, and leaves existing ones unchanged."
+            }
+          ]
+        },
+        {
+          "id": "04-library",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "lib-1",
+              "text": "Open Media, Library. The folder tree starts with the Files folder. Use its folder menu, and choose Create a subfolder."
+            },
+            {
+              "id": "lib-2",
+              "text": "Enter Product Photos as the folder name, and click Ok. Media Slugify turns the name into product-photos."
+            },
+            {
+              "id": "lib-3",
+              "text": "Select the folder, and click Upload files. Choose the pictures of the products. Media Slugify renames each file, so Trail Backpack becomes trail-backpack."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add products",
+      "subtitle": "Publish the first product",
+      "clips": [
+        {
+          "id": "05-product",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Open Content, Content Items, click New, and choose Product. The editor shows the Title, and a field for the price, the image, and the category."
+            },
+            {
+              "id": "add-2",
+              "text": "Enter Trail Backpack as the Title, and 89 as the Price."
+            },
+            {
+              "id": "add-3",
+              "text": "For Image, click Add media. The Media Library opens in a window. Select the picture in the product-photos folder, and click OK."
+            },
+            {
+              "id": "add-4",
+              "text": "For Category, choose Backpacks. The Save Draft button keeps a product unpublished, and with the default index settings, search does not find a draft."
+            },
+            {
+              "id": "add-5",
+              "text": "Click Publish instead. A message confirms that the product has been published."
+            },
+            {
+              "id": "add-6",
+              "text": "Add the other products the same way. The list of content items shows the whole catalog."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add search",
+      "subtitle": "An index, a setting and a permission",
+      "clips": [
+        {
+          "id": "06-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "An index lists the words of your content, and each word points to the content items that contain it. The search page looks the words up in the index."
+            },
+            {
+              "id": "how-2",
+              "text": "Search needs three steps. Create an index, choose it as the default search index in the site settings, and allow visitors to query it."
+            },
+            {
+              "id": "how-3",
+              "text": "When a visitor searches, the page checks the permission, looks the words up in the default index, and shows each matching content item."
+            }
+          ]
+        },
+        {
+          "id": "06-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "sf-1",
+              "text": "Lucene builds the index, and Search adds the search page. Open Tools, Features, search for Lucene, and click Enable."
+            },
+            {
+              "id": "sf-2",
+              "text": "Then enable the feature named Search. Both features depend on the Indexing feature, which provides index management."
+            }
+          ]
+        },
+        {
+          "id": "06-index",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "idx-1",
+              "text": "Open Search, Indexes, and click Add index. In the list of sources, click Add for Content in Lucene, which indexes content items."
+            },
+            {
+              "id": "idx-2",
+              "text": "Enter products as the Index Name. Under Content types, check Product, and click Save. By default, only published versions are indexed."
+            },
+            {
+              "id": "idx-3",
+              "text": "The index appears in the list, and Orchard Core builds it in the background. Products you publish later are added to it."
+            }
+          ]
+        },
+        {
+          "id": "06-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "set-1",
+              "text": "Next, tell the search page which index to use. Open Settings, Search, Site Search."
+            },
+            {
+              "id": "set-2",
+              "text": "Choose products as the Default search index, and enter Search products as the Placeholder. Click Save."
+            }
+          ]
+        },
+        {
+          "id": "06-permission",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "Visitors who are not signed in need permission to search. Open Access Control, Roles, and click Edit on Anonymous."
+            },
+            {
+              "id": "perm-2",
+              "text": "Type products in Search permissions, and allow Query 'products' Index. Click Save."
+            }
+          ]
+        },
+        {
+          "id": "06-find",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "Open the search page of the site, at the address /search. Type backpack, and click Search."
+            },
+            {
+              "id": "find-2",
+              "text": "The result shows the product with its title, price, picture, and category. Click the title to open the product page."
+            },
+            {
+              "id": "find-3",
+              "text": "The product page shows the price, the picture, and the category. A visitor reaches it from the search results."
+            },
+            {
+              "id": "find-4",
+              "text": "A word that no product contains shows a message instead: There are no such results."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Recap",
+      "subtitle": "One catalog, four features",
+      "clips": [
+        {
+          "id": "07-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "A content type defines the products, a taxonomy groups them, the Media Library stores their pictures, and Search finds them. You configure each part in the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Build a Product Catalog",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You built a product catalog with a content type, a taxonomy, the Media Library, and Search. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

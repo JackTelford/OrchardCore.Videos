@@ -1,0 +1,75 @@
+{
+  "title": "Build a Product Catalog: Types, Categories and Search | Orchard Core",
+  "description": "A product catalog needs more than a list of pages: every product has a name, a price, a picture and a category, and visitors need a way to find it.\n\nOrchard Core builds this from four features that you configure in the admin. Content Types defines the Product type, Taxonomies holds the categories, the Media Library stores the pictures, and Search finds products through an index.\n\nIn this video:\n• What a product catalog needs\n• Create the Product and Product Category content types\n• Group products in categories with a taxonomy\n• Upload product pictures to the Media Library\n• Publish a product\n• Add search with an index, a site setting and a permission\n• Recap",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Content Types",
+    "Taxonomies",
+    "Media Library",
+    "Search",
+    "Lucene",
+    "Product catalog"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Build a Site"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Content Types",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/"
+    },
+    {
+      "label": "Documentation: Taxonomies",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/"
+    },
+    {
+      "label": "Documentation: Media",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/"
+    },
+    {
+      "label": "Documentation: Media Gallery",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Documentation: Media Slugify",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/"
+    },
+    {
+      "label": "Documentation: Search",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Search/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentTypes/README.md",
+    "src/docs/reference/modules/Taxonomies/README.md",
+    "src/docs/reference/modules/Media/MediaGallery.md",
+    "src/docs/reference/modules/Media/README.md",
+    "src/docs/reference/modules/Media.Slugify/README.md",
+    "src/docs/reference/modules/Search/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentTypes"
+  }
+}

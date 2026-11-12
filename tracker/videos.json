@@ -6880,9 +6880,9 @@
       "src/docs/reference/modules/Media.Slugify/README.md",
       "src/docs/reference/modules/Search/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 7.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 7.1,
+    "words": 1059,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
