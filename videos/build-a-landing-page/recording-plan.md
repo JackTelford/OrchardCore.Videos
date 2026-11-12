@@ -128,7 +128,7 @@ Steps run on the page **New Page** (address `/Admin/Contents/ContentTypes/Page/C
   - Do: click `a.dropdown-item.add-widget[data-widget-type='Paragraph']`. Wait for the card
     `.widget-editor[data-content-type='Paragraph']` and for `.trumbowyg-editor` inside it. Click into
     `.field-wrapper-paragraph-content .trumbowyg-editor` (the field **Content**, a rich text editor, not the hidden
-    textarea; `blog.recipe.json:767`) and type `Join our free two-hour workshop and learn to publish your first website.`
+    textarea; `blog.recipe.json:769`) and type `Join our free two-hour workshop and learn to publish your first website.`
   - On screen at the end: one card with the typed text, its header showing the alignment button (an icon) and the size
     button (`100%`) (`M/OrchardCore.Flows/Views/FlowMetadata.Edit.cshtml:10,35`).
 - `page-4`
@@ -140,7 +140,7 @@ Steps run on the page **New Page** (address `/Admin/Contents/ContentTypes/Page/C
   - Do: click `button[title='Add Widget']` (the plus button under the cards), click
     `a.dropdown-item.add-widget[data-widget-type='Blockquote']`, wait for the card
     `.widget-editor[data-content-type='Blockquote']`. Type `Clear, practical and full of examples. Maya Ortiz` in
-    `.field-wrapper-blockquote-quote textarea` (the field **Quote**, `blog.recipe.json:715`). In this card click the size button
+    `.field-wrapper-blockquote-quote textarea` (the field **Quote**, `blog.recipe.json:716`). In this card click the size button
     `100%` and the option `50%`; then click the first `button.dropdown-toggle` of the card's `.btn-widget-metadata` (the
     alignment button, an icon) and click the option `label.dropdown-item` whose text is `Center` (`FlowMetadata.Edit.cshtml:19`).
   - On screen at the end: two cards side by side, Paragraph on the left and Blockquote on the right; the alignment menu of
