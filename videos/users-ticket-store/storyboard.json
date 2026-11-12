@@ -40,7 +40,7 @@
           "steps": [
             {
               "id": "why-1",
-              "text": "By default, the application cookie holds the whole authentication ticket. The ticket carries the claims of the user, including one for each role and, unless the user is an administrator, one for each permission of those roles."
+              "text": "By default, the application cookie holds the whole authentication ticket. With the Roles module enabled, the ticket carries the claims of the user, including one for each role and, unless the user is an administrator, one for each permission of those roles."
             },
             {
               "id": "why-2",

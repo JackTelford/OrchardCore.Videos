@@ -1,6 +1,6 @@
 # Authentication Ticket Store: Keep Sign-In Tickets on the Server | Orchard Core
 
-**YouTube:** not published yet · **Length:** 3:29 · **Feature:** `OrchardCore.Users.Authentication.CacheTicketStore` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Users/TicketStore/))
+**YouTube:** not published yet · **Length:** 3:31 · **Feature:** `OrchardCore.Users.Authentication.CacheTicketStore` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Users/TicketStore/))
 
 A video for module and site developers about the Users Authentication Ticket Store feature. It explains why the ticket of
 a signed-in user can outgrow its cookie, shows where the feature is enabled and which recipe step enables it, walks through
