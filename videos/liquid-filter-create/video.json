@@ -1,0 +1,49 @@
+{
+  "title": "Write a Liquid Filter | Orchard Core",
+  "description": "The filters that come with Orchard Core do not cover every need of a site, and a template can only call the filters that are registered for its tenant.\n\nA module registers its own filters when the tenant starts: a delegate for a filter without dependencies, or a class that implements ILiquidFilter for a filter that needs services. Both are available in every Liquid template of the tenant.\n\nIn this video:\n• How a filter is called, and where filters are registered\n• A filter in one line, with a delegate registered with AddFilter\n• A filter that needs services, with a class that implements ILiquidFilter\n• What a filter returns: encoding, nil and the immutable options\n• Using the filters in a template for the About page\n• More from the same builder: values, converters, member access and tags",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Liquid",
+    "Fluid",
+    "Liquid filter",
+    "Templates",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Module development"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Liquid/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Liquid/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Liquid"
+  }
+}

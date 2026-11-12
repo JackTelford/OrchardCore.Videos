@@ -1,0 +1,202 @@
+{
+  "title": "Write a Liquid Filter",
+  "output": "liquid-filter-create",
+  "spoken": {
+    "TemplateOptionsBuilder": "Template Options Builder",
+    "TemplateOptions": "Template Options",
+    "ConfigureServices": "Configure Services",
+    "AddLiquidFilter": "Add Liquid Filter",
+    "AddFilter": "Add Filter",
+    "ILiquidFilter": "I Liquid Filter",
+    "ISiteService": "I Site Service",
+    "LiquidTemplateContext": "Liquid Template Context",
+    "ProcessAsync": "Process Async",
+    "ToStringValue": "To String Value",
+    "StringValue": "String Value",
+    "FluidValue": "Fluid Value",
+    "NilValue": "Nil Value",
+    "with_site_name": "with site name"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Write a Liquid Filter",
+      "subtitle": "Add your own filter to the Liquid templates of a site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A Liquid filter changes a value inside a template, the way slugify turns a title into a segment of a URL. In this video, you write two filters in a module, register them, and call them from a template."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a filter works",
+      "subtitle": "Input, arguments and output",
+      "clips": [
+        {
+          "id": "01-filters",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A filter takes the value on the left of the pipe and returns a value in its place. An argument follows a colon, and filters can be chained, each one receiving the result of the one before."
+            },
+            {
+              "id": "how-2",
+              "text": "Each tenant builds its template options once, the first time it needs them, and they are immutable afterwards. A module adds its filters by configuring the TemplateOptionsBuilder in the ConfigureServices method of its Startup class."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "A filter in one line",
+      "subtitle": "A delegate registered with AddFilter",
+      "clips": [
+        {
+          "id": "02-delegate",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "delegate-1",
+              "text": "The simplest filter is a delegate. AddFilter takes the name that templates use, and a function that receives the input value, the arguments, and the template context."
+            },
+            {
+              "id": "delegate-2",
+              "text": "Liquid runs on Fluid, and filters work with its values. Shout reads the input as text with ToStringValue, converts it to capital letters, and returns a StringValue, which is a FluidValue."
+            },
+            {
+              "id": "delegate-3",
+              "text": "In a template, shout writes the value that reaches it in capital letters, so the text hello comes out as HELLO."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "A filter that needs services",
+      "subtitle": "A class that implements ILiquidFilter",
+      "clips": [
+        {
+          "id": "03-class",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "class-1",
+              "text": "A filter that needs services is a class that implements ILiquidFilter. Its constructor receives what it needs, here the ISiteService, and ProcessAsync receives the input, the arguments, and the LiquidTemplateContext."
+            },
+            {
+              "id": "class-2",
+              "text": "ProcessAsync is asynchronous, so the filter can await the site settings. A positional argument is read with At and its index, a named one by its name, and a missing argument is nil, so the filter falls back to a default separator."
+            },
+            {
+              "id": "class-3",
+              "text": "Register the class with AddLiquidFilter and the name of the filter. Orchard Core adds the class as a scoped service, and resolves it from the services of the template context each time a template calls the filter."
+            },
+            {
+              "id": "class-4",
+              "text": "On a site named Orchard Core, the text About piped to with_site_name writes About, a vertical bar, and the site name. An argument replaces the bar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "What a filter returns",
+      "subtitle": "Encoding, nil and the options",
+      "clips": [
+        {
+          "id": "04-rules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "Liquid encodes the string a filter returns as HTML. To return markup that you trust, create the value with encode set to false, as the liquid filter of Orchard Core does."
+            },
+            {
+              "id": "rules-2",
+              "text": "When the input can't be used, return NilValue, as the local filter does for text that isn't a date. A nil value writes nothing."
+            },
+            {
+              "id": "rules-3",
+              "text": "Configure the TemplateOptionsBuilder, never the TemplateOptions. A registration that configures the immutable options makes the tenant throw an exception when the options are first used, and its message names the builder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Using the filters",
+      "subtitle": "A template for the About page",
+      "clips": [
+        {
+          "id": "05-template",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "template-1",
+              "text": "The module with both filters is enabled, so every Liquid template of the site can call them. Under Design, Templates, Add Template opens the editor, and the name of this template selects the About page."
+            },
+            {
+              "id": "template-2",
+              "text": "In the Content box, the editor suggests the names of the registered filters, so shout is on the list. Let's pass the title of the page through it."
+            },
+            {
+              "id": "template-3",
+              "text": "A second expression passes the title to with_site_name. Its argument, a dash between spaces, replaces the default separator."
+            },
+            {
+              "id": "template-4",
+              "text": "Save the template, then open the About page. The title appears in capital letters, then a slash, then the title, a dash, and the name of the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "More from the same builder",
+      "subtitle": "Values, converters, member access and tags",
+      "clips": [
+        {
+          "id": "06-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "The same builder registers global values, value converters, and member access. Custom tags are registered on the Liquid parser. The Liquid page of the documentation shows each of them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Write a Liquid Filter",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A filter is a delegate when it needs nothing and an ILiquidFilter class when it needs services, and either way it is registered when the tenant starts and every Liquid template of the tenant can call it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
