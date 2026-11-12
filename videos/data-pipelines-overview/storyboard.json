@@ -1,0 +1,216 @@
+{
+  "title": "The Orchard Core Data Pipelines module",
+  "output": "data-pipelines-overview",
+  "spoken": {
+    "SFTP": "S.F.T.P.",
+    "FTP": "F.T.P.",
+    "CSV": "C.S.V.",
+    "blog-posts": "blog posts"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Data Pipelines module",
+      "subtitle": "Read, transform and deliver the data of your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Sites hold data that people need elsewhere: a list for finance, a file for a partner, rows to bring in. The Data Pipelines module reads data, changes it and delivers it, without code. In this video, we'll build and run a first pipeline."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why Data Pipelines",
+      "subtitle": "Moving data without code",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Data often has to leave the site or enter it: a spreadsheet of content items, a nightly file for another system, or a CSV file whose rows become content items. Done by hand, the work repeats every time."
+            },
+            {
+              "id": "why-2",
+              "text": "The Data Pipelines module lets an administrator design this work as a pipeline: a set of connected steps. Sources read rows from the data of the site. Transforms change the rows."
+            },
+            {
+              "id": "why-3",
+              "text": "Files write the rows to a CSV file, an Excel workbook, or another format. Destinations deliver the result: to the media library, by email, to a server, or as content items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable Data Pipelines",
+      "subtitle": "A feature, and two pages in the Tools menu",
+      "short": "enable",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Data Pipelines is a feature of the site. Let's open Tools, Features, and search for it."
+            },
+            {
+              "id": "enable-2",
+              "text": "Enabling Data Pipelines also enables Data Pipelines Core, which provides the data sources and the file formats. The Tools menu then has a Data Pipelines section, with two pages: Pipelines, and Run History."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a pipeline",
+      "subtitle": "The list and the designer",
+      "short": "create-pipeline",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "The Pipelines page lists the pipelines of the site, and it is empty. Add Pipeline opens the form for the first one."
+            },
+            {
+              "id": "create-2",
+              "text": "A pipeline needs a name. Let's type Blog posts, and select Create. The designer opens next."
+            },
+            {
+              "id": "create-3",
+              "text": "The designer has Steps on the left, grouped as Sources, Transforms, Files and Destinations. The canvas is empty and offers to start with a source. On the right, a panel has the Pipeline, Issues and History tabs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Build a pipeline",
+      "subtitle": "A source, a file and a destination",
+      "short": "build-pipeline",
+      "clips": [
+        {
+          "id": "04-build",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "A pipeline starts with a source. Add a data source opens the data sets you may read: the content items of each content type, the users, and the results of saved queries."
+            },
+            {
+              "id": "build-2",
+              "text": "Let's add the Blog Post content items. A Read a data source step appears on the canvas, and its settings open: the fields to read, filters, and a maximum number of rows."
+            },
+            {
+              "id": "build-3",
+              "text": "In the Data tab, Preview runs the pipeline up to this step, on a sample of the rows. The Fields tab lists the fields the step produces."
+            },
+            {
+              "id": "build-4",
+              "text": "To add the next step, click the output port on the right edge of the step. The list offers the steps that can receive rows. Let's choose Create a file."
+            },
+            {
+              "id": "build-5",
+              "text": "Create a file writes the rows to a file. Its settings hold the format, which is CSV by default, and the file name, without its extension. Let's name the file blog-posts."
+            },
+            {
+              "id": "build-6",
+              "text": "A file has to go somewhere. Click the output port of Create a file, and choose Save to the media library. Its settings name a folder, and whether to replace a file with the same name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Publish and run",
+      "subtitle": "Versions, runs and their history",
+      "short": "run-and-history",
+      "clips": [
+        {
+          "id": "05-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "The designer saves the draft as you work. The Issues tab lists what must be fixed before publishing. Publish creates the first version, which is the one runs use."
+            },
+            {
+              "id": "run-2",
+              "text": "Run starts the published version. The run is queued and executes in the background, with the access of the user who published the pipeline."
+            },
+            {
+              "id": "run-3",
+              "text": "The History tab lists the runs. With a run selected, each step on the canvas shows its status, and the number of rows or files it handled."
+            },
+            {
+              "id": "run-4",
+              "text": "Open the run shows its page: each step with its status and its rows in and out, what the run delivered, and its log. Here, it saved a CSV file to the media library."
+            },
+            {
+              "id": "run-5",
+              "text": "The Run History page lists the runs, the most recent first, with their status, version, duration, and who started them. A link shows the runs of every pipeline."
+            },
+            {
+              "id": "run-6",
+              "text": "On the Pipelines page, the pipeline shows its version and the status of its last run. Its Actions menu can run it again, open its Run history, or delete it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "What else pipelines do",
+      "subtitle": "Steps, schedules and permissions",
+      "clips": [
+        {
+          "id": "06-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "Pipelines do more than this first export: transforms filter, sort, group, join and calculate, and destinations include download links, email, FTP and SFTP servers, and web APIs. Some steps need another feature enabled. A workflow can run a pipeline on a schedule."
+            },
+            {
+              "id": "more-2",
+              "text": "Three permissions control pipelines: Manage data pipelines, Run data pipelines, and View data pipelines and their runs. The Administrator role has all three. Manage data pipelines is security critical, since a published pipeline runs with the access of its publisher."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Data Pipelines module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Data Pipelines reads the data of your site, changes it and delivers it, and keeps a history of its runs. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

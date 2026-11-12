@@ -1,0 +1,54 @@
+{
+  "title": "Data Pipelines: Move and Transform Your Site's Data | Orchard Core",
+  "description": "Data often has to leave a site or enter it: a spreadsheet of content items, a nightly file for another system, a CSV file whose rows become content items. Done by hand, the work repeats every time.\n\nThe Orchard Core Data Pipelines module lets an administrator design a pipeline: sources read rows, transforms change them, files write them, and destinations deliver the result. This video builds a pipeline that reads Blog Post content items, writes them to a CSV file and saves the file to the media library, then runs it and reads its history.\n\nIn this video:\n• Why Data Pipelines: sources, transforms, files and destinations\n• Enable Data Pipelines and find its pages in the Tools menu\n• Create a pipeline and open the designer\n• Build a pipeline: a source, a file and a destination\n• Publish the pipeline, run it and read the run history\n• What else pipelines do: steps, schedules and permissions",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "DataPipelines"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Data Pipelines",
+    "ETL",
+    "CSV export",
+    "data import",
+    "Excel export"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Data Pipelines"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Data Pipelines documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/"
+    },
+    {
+      "label": "Data Sources documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataSources/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DataPipelines/README.md",
+    "src/docs/reference/modules/DataSources/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataPipelines"
+  }
+}
