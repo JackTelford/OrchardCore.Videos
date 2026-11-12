@@ -149,7 +149,7 @@
             },
             {
               "id": "configure-4",
-              "text": "Sanitized results are cached for fragments up to 64K characters, and a tenant never receives another tenant's result. So whatever you configure with ConfigureHtmlSanitizer, including event handlers, must return the same result for the same fragment."
+              "text": "Sanitized results are cached for fragments up to 64K characters, and a tenant never receives another tenant's result. So whatever you configure with ConfigureHtmlSanitizer, including the sanitizer event handlers, must return the same result for the same fragment."
             }
           ]
         }

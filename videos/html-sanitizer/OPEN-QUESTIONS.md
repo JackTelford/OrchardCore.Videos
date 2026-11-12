@@ -75,7 +75,7 @@ The video says that what the author wrote is stored unchanged.
 
 ## 7. Pronunciation
 
-The `spoken` map of `storyboard.json` has new spellings: "HTML", "I HTML Sanitizer Service", "I HTML Content",
+The `spoken` map of `storyboard.json` has new spellings: "I HTML Sanitizer Service", "I HTML Content",
 "Configure HTML Sanitizer", "Add Orchard CMS", "Orchard dot Sanitize HTML", "sanitize underscore HTML", "mail to" and
 "F.T.P.". They were not played, because the checking script writes audio. A person confirms them with
 `scripts/pronounce.py` before narrating, and adjusts the map. Names with no entry that the voice could misread are

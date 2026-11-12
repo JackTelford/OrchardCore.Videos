@@ -116,7 +116,7 @@ LINK_CHECKS = [
 CACHE = [
     ("1", "Results are cached", "Fragments up to 64K characters are cached and reused."),
     ("2", "Each tenant has its own", "A tenant never receives the result of another tenant."),
-    ("3", "Same fragment, same result", "Configuration actions and event handlers must not vary."),
+    ("3", "Same fragment, same result", "Configuration actions and sanitizer event handlers must not vary."),
 ]
 
 
