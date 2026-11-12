@@ -1,0 +1,241 @@
+{
+  "title": "Lucene and Elasticsearch Queries",
+  "output": "queries-lucene-elasticsearch",
+  "spoken": {
+    "ReturnContentItems": "Return Content Items",
+    "ContentItem/BlogPost": "Content Item slash Blog Post",
+    "RecentBlogPosts": "Recent Blog Posts",
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Lucene and Elasticsearch Queries",
+      "subtitle": "Save a search question, give it parameters, and run it by name",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A Lucene or Elasticsearch index answers search questions written as JSON. In this video, you run one of those questions, give it a parameter, save it as a named query, and see where Elasticsearch differs from Lucene."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why a saved query",
+      "subtitle": "A search question with a name",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "You search an index by sending it a JSON query. When several templates and scripts each carry a copy, every change must be made in each of them. A saved query keeps one copy on the site, under a name."
+            },
+            {
+              "id": "why-2",
+              "text": "Lucene runs inside your site and needs no other service. Elasticsearch runs on a server that your site connects to. Each adds a query source to the Queries module, with the same fields: Index, Return Content Items and Query."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Run a Lucene query",
+      "subtitle": "Try the question before you save it",
+      "clips": [
+        {
+          "id": "02-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "In the admin menu, Search, Queries lists All Queries, and a Run page for each query source. Let's open Run Lucene Query."
+            },
+            {
+              "id": "run-2",
+              "text": "Choose an index that already exists on the site. The editor starts with a Match All query that asks for up to ten documents."
+            },
+            {
+              "id": "run-3",
+              "text": "Run Query lists the stored fields of each matching document in a table. Above the table, the page shows the number of matches and the time taken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The query is a Liquid template",
+      "subtitle": "Parameters with defaults",
+      "clips": [
+        {
+          "id": "03-template",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tmpl-1",
+              "text": "This query finds published blog posts and sorts them by creation date, descending. A bool query combines two term conditions, and size limits how many documents come back."
+            },
+            {
+              "id": "tmpl-2",
+              "text": "A query is a Liquid template, so a parameter can replace a value. Here limit sets size, and default supplies three when the caller passes none."
+            }
+          ]
+        },
+        {
+          "id": "03-params",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "params-1",
+              "text": "On Run Lucene Query, enter the template and click Run Query. With no parameters, the default applies, and the table lists three documents."
+            },
+            {
+              "id": "params-2",
+              "text": "The Parameters box takes a JSON object. Enter a limit of two and run the query again: the table lists two documents."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Save the query",
+      "subtitle": "Give the question a name",
+      "clips": [
+        {
+          "id": "04-save",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "save-1",
+              "text": "Save Query appears when the query returns documents and the Queries feature is enabled. Click it to open the Lucene query editor, with the query already filled in."
+            },
+            {
+              "id": "save-2",
+              "text": "Name is the technical name that callers use to run the query. It takes the letters A to Z and digits, and starts with a letter."
+            },
+            {
+              "id": "save-3",
+              "text": "Index is not carried over from the Run page, so choose Search again. Return Content Items makes the query return the content items that the matching documents refer to, instead of the fields of those documents."
+            },
+            {
+              "id": "save-4",
+              "text": "Click Save. The Queries list shows the query with a Lucene query badge. Run opens Run Lucene Query with this template and index, and runs it with no parameters."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Documents or content items",
+      "subtitle": "What Return Content Items changes",
+      "clips": [
+        {
+          "id": "05-results",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "docs-1",
+              "text": "Unchecked, a Lucene query returns the stored fields of each document, and an Elasticsearch query returns the source data. The Run pages always show documents, never content items."
+            },
+            {
+              "id": "docs-2",
+              "text": "Checked, the query loads the content items by the version ID that each match carries, in the order of the search results. Elasticsearch reads that ID from the source data, so its index needs Store Source Data, which is on by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Elasticsearch",
+      "subtitle": "A connection and a few differences",
+      "clips": [
+        {
+          "id": "06-differences",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "connect-1",
+              "text": "Elasticsearch needs a connection to a server. Set Url and Ports in the OrchardCore, Search, Elasticsearch section of the configuration. The Run Elasticsearch Query menu entry appears only when Url is a valid address."
+            },
+            {
+              "id": "differ-1",
+              "text": "The same question differs a little between the two. The Elasticsearch form of the query uses a boolean for Published, and gives the sort order directly."
+            }
+          ]
+        },
+        {
+          "id": "06-elastic",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "elastic-1",
+              "text": "On Run Elasticsearch Query, choose an Elasticsearch index, enter the Elasticsearch form of the query, and click Run Query. The table shows the source data of each document."
+            },
+            {
+              "id": "elastic-2",
+              "text": "Save Query opens the Elasticsearch query editor, which has the same fields as the Lucene one. Name the query."
+            },
+            {
+              "id": "elastic-3",
+              "text": "Choose the index, check Return Content Items, and save. The Queries list shows the Elasticsearch query next to the Lucene query, each with a badge for its source."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Create queries from a recipe",
+      "subtitle": "The Queries step",
+      "clips": [
+        {
+          "id": "07-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe creates the same query with the Queries step. Each entry gives the Source, Name, Index, Template and ReturnContentItems for the query."
+            },
+            {
+              "id": "recipe-2",
+              "text": "Among the recipes of the Blog theme are Blog - Lucene Query and Blog - Elasticsearch Query. Each replaces the RecentBlogPosts query with a search query, and reads its Template from a file."
+            },
+            {
+              "id": "recipe-3",
+              "text": "Schema is optional. The GraphQL API reads it to learn what the query returns, and for content items it names the type, such as ContentItem/BlogPost."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Lucene and Elasticsearch Queries",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A saved query gives a search question a name, a template and parameters, and a separate video covers running it by that name. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
