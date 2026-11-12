@@ -1,0 +1,63 @@
+{
+  "title": "User Registration: Let Visitors Create Accounts | Orchard Core",
+  "description": "By default, only administrators create accounts on an Orchard Core site, and the login page has no way for a visitor to sign up.\n\nThe Users Registration feature adds a Register page and a link to it on the login page. Two settings decide how each account is checked before it can be used, email verification and administrator approval, and a third sets the theme of the Register page. This video enables the feature and follows a visitor through each case.\n\nIn this video:\n• What the Users Registration feature adds\n• Enable the feature and its Email dependency\n• The three registration settings\n• A visitor registers\n• Verify email addresses with a confirmation link\n• Approve accounts before they work\n• Registration with Google, GitHub and Meta",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "user registration",
+    "sign up",
+    "email confirmation",
+    "user approval",
+    "external login"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Users"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Registration",
+      "url": "https://docs.orchardcore.net/en/latest/topics/security/registration/"
+    },
+    {
+      "label": "Documentation: Google",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Google/"
+    },
+    {
+      "label": "Documentation: GitHub",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/GitHub/"
+    },
+    {
+      "label": "Documentation: Facebook/Meta",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Facebook/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Facebook/README.md",
+    "src/docs/reference/modules/GitHub/README.md",
+    "src/docs/reference/modules/Google/README.md",
+    "src/docs/topics/security/registration.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users.Registration"
+  }
+}

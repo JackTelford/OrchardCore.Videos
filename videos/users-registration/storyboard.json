@@ -1,0 +1,242 @@
+{
+  "title": "User Registration in Orchard Core",
+  "output": "users-registration",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "User Registration in Orchard Core",
+      "subtitle": "Let visitors create their own accounts",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Users Registration feature lets visitors create their own accounts on an Orchard Core site. In this video, you enable it, follow three visitors through the Register page, check their accounts by email and by approval, and see how login providers fit in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What registration adds",
+      "subtitle": "A page, a link and three options",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Without the Users Registration feature, only administrators create accounts, one by one, in the Users list. The login page has no link for visitors who want an account of their own."
+            },
+            {
+              "id": "idea-2",
+              "text": "The feature adds a Register page, and a link to it on the login page. It also adds a settings page. Its options decide how each account is checked before it can be used, and which theme the Register page uses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Users Registration and the Email feature",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Registration is a feature, so it stays off until you enable it. Under Tools, Features, search for Users Registration."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable. A message confirms that the feature was enabled, and its row lists the features it depends on: Users and Email."
+            },
+            {
+              "id": "enable-3",
+              "text": "Email matters here, because confirmation messages leave through the Default provider chosen under Settings, Communication, Email, and without a provider no message is sent. This site uses an SMTP provider that delivers to a test inbox."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The registration settings",
+      "subtitle": "Verification, approval and theme",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "The options live under Settings, Security, Registration. The page has three checkboxes, and all of them start cleared. Two decide how an account is checked, and the third sets the theme of the Register page."
+            },
+            {
+              "id": "settings-2",
+              "text": "The first checkbox, Users must verify their email address, sends each visitor a message with a link. Selecting it shows a warning that users whose email address has not been confirmed cannot log in or reset their password."
+            },
+            {
+              "id": "settings-3",
+              "text": "The second checkbox, Users must be approved before they can log in, creates every registered account disabled, until an administrator enables it."
+            },
+            {
+              "id": "settings-4",
+              "text": "The third checkbox, Use site theme for registration page, shows the Register page in the design of your site, instead of the admin theme. It requires an active site theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "A visitor registers",
+      "subtitle": "From the login page to a working account",
+      "clips": [
+        {
+          "id": "04-register",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "A visitor who is not signed in opens the login page. Under the Log in button is the link Register as a new user, which opens the registration form."
+            },
+            {
+              "id": "register-2",
+              "text": "The form, headed Register a new account, asks for a username, an email address, and a password, which is entered twice. Let's fill it in for a visitor called Jamie."
+            },
+            {
+              "id": "register-3",
+              "text": "Selecting Register creates the account. Because no option is selected, the account works at once, and the visitor is signed in and sent to the home page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Verify email addresses",
+      "subtitle": "A confirmation link for each visitor",
+      "clips": [
+        {
+          "id": "05-verify-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "verify-1",
+              "text": "On the Registration settings page, select Users must verify their email address, and save. The site confirms with the message Site settings updated successfully."
+            }
+          ]
+        },
+        {
+          "id": "05-verify-visitor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "verify-2",
+              "text": "A second visitor, Morgan, registers with the same form. This time, Register opens the page Email confirmation sent, and the visitor is not signed in."
+            },
+            {
+              "id": "verify-3",
+              "text": "The message Confirm your account is waiting in the test inbox. It greets the visitor by username, and holds a link that stays valid for a limited time."
+            },
+            {
+              "id": "verify-4",
+              "text": "Following the link opens the Email confirmation page, which thanks the visitor for confirming. From then on, the visitor can log in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Approve accounts",
+      "subtitle": "Review each registration before it works",
+      "clips": [
+        {
+          "id": "06-approve-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "approve-1",
+              "text": "To review each registration yourself, clear the email option on the same page, so that this example shows approval alone. Then select Users must be approved before they can log in, and save."
+            }
+          ]
+        },
+        {
+          "id": "06-approve-visitor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "approve-2",
+              "text": "A third visitor, Riley, registers. The account is created disabled, so the visitor is not signed in, and the User Registration Pending page explains that the account has to be approved."
+            }
+          ]
+        },
+        {
+          "id": "06-approve-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "approve-3",
+              "text": "Under Access Control, Users, the list shows Riley's account with a Disabled badge. Open its Actions menu, and select Enable."
+            },
+            {
+              "id": "approve-4",
+              "text": "Confirm with Ok. The message User account was successfully enabled appears, and the visitor can log in from then on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "External providers",
+      "subtitle": "Registering with Google, GitHub or Meta",
+      "clips": [
+        {
+          "id": "07-external",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "external-1",
+              "text": "Visitors can also register with a login provider. Enabling Google Authentication, GitHub Authentication or Meta Login adds an External Authentication tab to the Registration settings page, next to the General tab."
+            },
+            {
+              "id": "external-2",
+              "text": "Among its options are Disable new external registration, Do not ask username, Do not ask email address, and Do not create local password. Selecting the username, email and password options together lets the account be created without showing the visitor any form."
+            },
+            {
+              "id": "external-3",
+              "text": "Accounts created through a provider follow the same email and approval options as the Register page. Each provider also needs credentials from its own developer portal, which the documentation of Google, GitHub and Meta explains."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "User Registration in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Users Registration gives visitors a Register page, and with an email provider configured, its options let you check each account by email or by approval. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

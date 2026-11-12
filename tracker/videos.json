@@ -3480,9 +3480,9 @@
       "src/docs/reference/modules/Google/README.md",
       "src/docs/topics/security/registration.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.9,
+    "words": 742,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
