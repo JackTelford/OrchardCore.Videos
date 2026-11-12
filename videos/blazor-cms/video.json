@@ -1,0 +1,49 @@
+{
+  "title": "Blazor: A Blazor Server Front End for Orchard Core Content | Orchard Core",
+  "description": "A site can keep its content in Orchard Core and still draw its pages with Blazor. The questions are where the Blazor code lives, how Orchard Core serves it, and how it reads the content.\n\nA Blazor Server front end lives in a Razor class library that the Orchard Core web project references. Orchard Core maps it into the pipeline of every tenant, and its components read content through Orchard Core services.\n\nIn this video:\n• How Orchard Core and Blazor fit together\n• The content: a Markdown Page item with an alias\n• The Razor class library: App, router, layout and pages\n• Serving Blazor from Orchard Core in Program.cs\n• Rendering content items by alias, with stream rendering\n• Adding a tenant with the Tenants feature\n• The base URL of a tenant\n• Interactive components over a live connection",
+  "hashtags": [
+    "OrchardCore",
+    "Blazor",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Blazor",
+    "Blazor Server",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Headless CMS",
+    "Multi-tenancy",
+    "Razor class library"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Headless and APIs"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/guides/create-blazor-cms/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/create-blazor-cms/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/create-blazor-cms"
+  }
+}

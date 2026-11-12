@@ -5360,9 +5360,9 @@
     "docs": [
       "src/docs/guides/create-blazor-cms/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 7,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.8,
+    "words": 1025,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
