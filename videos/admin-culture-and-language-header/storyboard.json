@@ -1,5 +1,5 @@
 {
-  "title": "Admin Culture and Language Header",
+  "title": "Admin Culture Picker and the Content-Language Header",
   "output": "admin-culture-and-language-header",
   "spoken": {
     "PO files": "P.O. files"
@@ -7,7 +7,7 @@
   "chapters": [
     {
       "id": "00",
-      "title": "Admin Culture and Language Header",
+      "title": "Admin Culture Picker and the Content-Language Header",
       "subtitle": "Choose the language of the admin, and name the language of the responses",
       "clips": [
         {
@@ -132,7 +132,7 @@
             },
             {
               "id": "pick-5",
-              "text": "Let's return to the admin. The pages are still in French, because the choice is stored in a cookie of this browser."
+              "text": "Let's return to the admin. The pages stay in French, because the choice is stored in a cookie of this browser."
             },
             {
               "id": "pick-6",
@@ -165,7 +165,7 @@
     },
     {
       "id": "99",
-      "title": "Admin Culture and Language Header",
+      "title": "Admin Culture Picker and the Content-Language Header",
       "subtitle": "docs.orchardcore.net",
       "clips": [
         {
