@@ -67,7 +67,7 @@ of the slide `conf-5` are a slide, not a recording.
   `references/recording.md` still point at a dead address, and `NO_PROXY` keeps the calls to the emulator working.
   `BasePath` is `media` so that the page of the clip `check-1` shows a value in that row; the module trims the slashes of
   the path, so `media` and `/media` are the same (`<oc>/src/OrchardCore/OrchardCore.FileStorage.AmazonS3/AwsFileStorage.cs:311-319`).
-  The image cache has no base path: its objects are named `<two characters>/<key>.<extension>`
+  The image cache has a `BasePath` setting of its own, which the plan leaves unset, so its objects are named `<two characters>/<key>.<extension>`
   (`<oc>/src/OrchardCore.Modules/OrchardCore.Media.AmazonS3/Services/AWSS3ResizedImageCache.cs:176-181`).
 - **Features to enable before recording**: none. Amazon Media Storage and Amazon Media Image Cache are enabled on camera.
 - **Settings**: none to save.
