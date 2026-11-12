@@ -93,6 +93,13 @@ Open Tools, Background Tasks. All of these must hold:
 - Scheduled Content Items Publisher shows a Last run badge with a check mark, and its Recent runs (details page) holds at least three rows.
 - The rows' Next run badges show a time, except Content Version Pruning Background Task, which shows "not scheduled".
 
+The open list refreshes itself: every 10 seconds the page asks the server for the state of the tasks, and a row whose status or
+number of runs changed is replaced by a new element (`OrchardCore.BackgroundTasks/Assets/ts/background-task-state.ts:11-14, 121-131, 176-181`).
+The Scheduled Content Items Publisher runs every minute, so its row is replaced within 10 seconds after each of its runs, and a highlight
+that was placed on the old element disappears. In `03-list` (`list-1`, `list-2`) and `04-details`, start the capture just after the
+Last run badge of the Publisher changed, so that the highlights of those steps are drawn before its next run. After `05-schedule`,
+Resized Media Cache Cleaner runs every 10 minutes; its row is then replaced the same way, which does not matter for `06-run` and `07-toggle`.
+
 ## 2. Cards and slides
 
 - `intro` (card, chapter 00): nothing to record. The card shows the video title and its subtitle.
@@ -218,7 +225,7 @@ Description, Schedule), `:44` (Reset Schedule), `:47` (hint), `:55` (Use Tenant 
   titled **Edit Task Settings** and opens on the **Properties** tab. Highlight the Title value (`#Title`, read-only, caption `Read-only`),
   then the Description (`#Description`) and the Schedule (`#Schedule`, caption `Schedule`). Must be visible when the narration ends: Title
   "Resized Media Cache Cleaner", Description "Resized media cache cleanup.", Schedule `0 0 * * *`, the **Reset Schedule** button.
-- `schedule-2`: clear the highlights. empty the `#Schedule` field with `FillAsync("")`, then
+- `schedule-2`: clear the highlights. Empty the `#Schedule` field with `FillAsync("")`, then
   `TypeAsync(#Schedule, "every night")`. Click **Save** (`button.save`) with `WaitForNavigationAsync(() => click)`: the page is posted
   back. Highlight the error `span[data-valmsg-for="Schedule"]` with the caption `Rejected`. Must be visible when the narration ends:
   the field still holding `every night` and, under it, the red message "The schedule must be a valid cron expression."
