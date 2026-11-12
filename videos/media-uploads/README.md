@@ -1,6 +1,6 @@
 # Media Uploads: Slugified Names, Resumable Uploads and Live Updates
 
-**YouTube:** not published yet · **Length:** 5:09 · **Feature:** [OrchardCore.Media.Slugify](https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/), with [OrchardCore.Media.Tus](https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/) and [OrchardCore.Media.SignalR](https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/)
+**YouTube:** not published yet · **Length:** 5:10 · **Feature:** [OrchardCore.Media.Slugify](https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/), with [OrchardCore.Media.Tus](https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/) and [OrchardCore.Media.SignalR](https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/)
 
 This video shows three optional features of the Media module and the problem each one solves. Media Slugify gives the
 folders you create and the files you upload clean names. Media TUS Uploads sends a large file in parts, so you can pause
@@ -20,7 +20,7 @@ lists what a person must confirm on the running site.
 2. Sign the recorder in. No feature has to be enabled beforehand: the video enables Media Slugify, Media TUS Uploads and
    Media SignalR on camera. Make the fake files described in the plan (four pictures and two files of 25,000,000
    bytes, all outside the repository), and seed the folder **Team Photos** with its picture
-   through the Media Library while Media Slugify is still disabled. Stop the site and copy its data folder aside (snapshot S0).
+   through the Media Library while Media Slugify is disabled. Stop the site and copy its data folder aside (snapshot S0).
 3. Narrate, then record in this order: the chapter that enables the features, the chapter that creates the folder and
    uploads the pictures, then the resumable uploads and the live updates. Restore the copy of the data folder before
    every full take. The live updates and the resumable uploads both start from the state the slugified names chapter leaves

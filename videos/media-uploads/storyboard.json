@@ -118,11 +118,11 @@
             },
             {
               "id": "create-3",
-              "text": "We type Images & docs and select Ok. The folder tree lists the folder as images-docs."
+              "text": "Let's type Images & docs and select Ok. The folder tree lists the folder as images-docs."
             },
             {
               "id": "create-4",
-              "text": "In images-docs, we select Upload files and choose The team (2020).jpg. The list shows the stored name, the-team-2020.jpg."
+              "text": "In images-docs, let's select Upload files and choose The team (2020).jpg. The list shows the stored name, the-team-2020.jpg."
             },
             {
               "id": "create-5",
@@ -143,7 +143,7 @@
           "steps": [
             {
               "id": "resume-1",
-              "text": "With Media TUS Uploads, the Media Library sends a file in parts. Let's upload a large file, retreat-video.mp4, with Upload files."
+              "text": "In the folder images-docs, Media TUS Uploads sends a file in parts. Let's upload a large file, retreat-video.mp4, with Upload files."
             },
             {
               "id": "resume-2",
@@ -184,7 +184,7 @@
             },
             {
               "id": "live-2",
-              "text": "In the second window, we upload summer-picnic.jpg to the same folder."
+              "text": "In the second window, let's upload summer-picnic.jpg to the same folder."
             },
             {
               "id": "live-3",
@@ -196,7 +196,7 @@
             },
             {
               "id": "live-5",
-              "text": "Updates cover the files of the folder you are viewing, for folders you may manage. Without Media SignalR, a window shows the changes of others only after you reload the page or open a folder."
+              "text": "Updates cover the files of the folder you are viewing, and only for folders you are allowed to manage. Without Media SignalR, a window shows the changes of others only after you reload the page or open a folder."
             }
           ]
         }
