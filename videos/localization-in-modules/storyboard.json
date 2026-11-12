@@ -1,0 +1,258 @@
+{
+  "title": "Localize a Module: Strings, Plurals and Extraction",
+  "output": "localization-in-modules",
+  "spoken": {
+    "IStringLocalizerFactory": "I String Localizer Factory",
+    "IHtmlLocalizerFactory": "I H.T.M.L. Localizer Factory",
+    "IStringLocalizer": "I String Localizer",
+    "IHtmlLocalizer": "I H.T.M.L. Localizer",
+    "IViewLocalizer": "I View Localizer",
+    "CommonLocalizationSources": "Common Localization Sources",
+    "LocalizationSource": "Localization Source",
+    "UpdateLocalizationCatalogs": "Update Localization Catalogs",
+    "UpdateLocalizationCatalog": "Update Localization Catalog",
+    "LocalizationCatalogOutputPath": "Localization Catalog Output Path",
+    "OrchardCore.Localization.Build": "Orchard Core Localization Build",
+    "OrchardCore.Abstractions": "Orchard Core Abstractions",
+    "PrivateAssets": "Private Assets",
+    "SkipLocalizationExtraction": "Skip Localization Extraction",
+    "MyNamespace.MyService": "My Namespace dot My Service",
+    "MyModule.Views.Welcome": "My Module dot Views dot Welcome",
+    "MyModule": "My Module",
+    "MyService": "My Service",
+    "Plural-Forms": "Plural Forms",
+    "Arg helper": "Argument helper",
+    "OCLOC": "O.C.L.O.C.",
+    "POT": "P.O.T.",
+    "PO file": "P.O. file"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Localize a Module: Strings, Plurals and Extraction",
+      "subtitle": "Declare translatable strings, and extract them for translators",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A module shows text in menus, forms, messages and notifications, and translators need to find every one of those strings. In this video, we'll declare strings with localizers, handle plurals, and extract a template for translators."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How module strings are translated",
+      "subtitle": "The English text is the key",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "In Orchard Core, the English text you write in code is the key of its translation. A translation is found by that text and its context, the type or view that asks for it. Without a translation, the text is shown as written."
+            },
+            {
+              "id": "how-2",
+              "text": "A module registers nothing for this. It asks for a localizer through dependency injection. Until the Localization feature is enabled, every localizer returns its text as written."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Localizers",
+      "subtitle": "Strings, HTML and views",
+      "clips": [
+        {
+          "id": "02-localizers",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "loc-1",
+              "text": "In a service, a controller or a driver, inject an IStringLocalizer of your own type, usually kept in a field named S. Index it with the English text, and pass any format arguments after it."
+            },
+            {
+              "id": "loc-2",
+              "text": "An IHtmlLocalizer, usually named H, is for messages that carry HTML, and it encodes its format arguments. In Razor views, T is an IViewLocalizer, and in Liquid the t filter localizes through it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Contexts",
+      "subtitle": "Which type or view owns a string",
+      "clips": [
+        {
+          "id": "03-contexts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ctx-1",
+              "text": "The context of a localizer is the full name of its type. Text from an IStringLocalizer of MyService has the context MyNamespace.MyService, which is the message context of its entry in a PO file."
+            },
+            {
+              "id": "ctx-2",
+              "text": "In a view, the context is the module ID, then Views, then the path of the view without its extension. The Welcome view in the Views folder of MyModule has the context MyModule.Views.Welcome."
+            },
+            {
+              "id": "ctx-3",
+              "text": "When no entry has the context, an entry without a context is used. To share one context between several types, create the localizer from the IStringLocalizerFactory, with a type, or with a context name and an empty location."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Plurals",
+      "subtitle": "One message, several forms",
+      "clips": [
+        {
+          "id": "04-plural-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "plural-1",
+              "text": "The Plural extension takes a count, a singular form and a plural form. The count fills placeholder zero, and any arguments you add start at placeholder one. This call from the Features module lists the features it enabled."
+            },
+            {
+              "id": "plural-2",
+              "text": "A translation lists one string for each form of its language. The Plural-Forms header of the PO file, or else the plural rule of the culture, selects the form for a count."
+            },
+            {
+              "id": "plural-3",
+              "text": "Do not hardcode the number in the text, because languages count differently. To show the count, put placeholder zero in both forms, so that the translation decides where the count goes."
+            }
+          ]
+        },
+        {
+          "id": "04-plural-screen",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "items-1",
+              "text": "Orchard Core uses Plural itself. On the Manage Content page, which the Content Items menu item opens, the summary above the rows counts the items, and with several items it shows the plural form."
+            },
+            {
+              "id": "items-2",
+              "text": "Let's type About in the search box, and press Enter to filter the list."
+            },
+            {
+              "id": "items-3",
+              "text": "One item matches, so the summary shows the singular form. Both counts in the summary come from Plural, with the count in placeholder zero."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Text without a localizer",
+      "subtitle": "LocalizationSource",
+      "clips": [
+        {
+          "id": "05-sources",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "src-1",
+              "text": "Some text is declared where no localizer exists, such as the description of a permission in a static field. LocalizationSource keeps the English text together with the type that owns it, and translates, formats and encodes nothing."
+            },
+            {
+              "id": "src-2",
+              "text": "Translate it where it is displayed. The Localize extension of an IStringLocalizerFactory, or of an IHtmlLocalizerFactory, creates the localizer of the source's type and looks the text up in the current culture."
+            },
+            {
+              "id": "src-3",
+              "text": "Text that several modules share, such as Settings, is declared once in CommonLocalizationSources, so it is translated once. A module keeps its other sources in an internal static class named after the module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Notes and analyzers",
+      "subtitle": "Help translators, and catch mistakes early",
+      "clips": [
+        {
+          "id": "06-notes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "note-1",
+              "text": "Translators see only the text. Explain it with the Note extension, name each format argument with the Arg helper, or put a comment starting with TRANSLATORS on the line above the call. None of these changes anything at runtime."
+            },
+            {
+              "id": "note-2",
+              "text": "Analyzers in the OrchardCore.Abstractions package check localizer calls as you type, and in every build. A key that is not a constant, or a LocalizationSource without a context, cannot be extracted, so it is reported."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Extracting templates",
+      "subtitle": "From code to a template for translators",
+      "clips": [
+        {
+          "id": "07-extraction",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ext-1",
+              "text": "Translators work from a template, not from your code. Add the OrchardCore.Localization.Build package to each project whose strings should be extracted. Referencing it only from the application does not cover the other projects."
+            },
+            {
+              "id": "ext-2",
+              "text": "A normal build only embeds the template that is already checked in. To write it, run the UpdateLocalizationCatalog target on one project, or build with UpdateLocalizationCatalogs set to true to update every project you build that has the package."
+            },
+            {
+              "id": "ext-3",
+              "text": "The template is a POT file named after the assembly, next to the project file. Each entry has its context, its English text, your notes and format arguments, and an empty translation. Commit it with the code."
+            },
+            {
+              "id": "ext-4",
+              "text": "Extraction reads C# localizer calls and LocalizationSource declarations, Razor views, and Liquid files where the t filter gets a literal text. A call it cannot resolve is reported with an OCLOC code, instead of becoming a guessed entry."
+            },
+            {
+              "id": "ext-5",
+              "text": "A helper that only forwards the keys of its callers is not a declaration. Mark it with the SkipLocalizationExtraction attribute, and extraction ignores the localizer calls inside it."
+            },
+            {
+              "id": "ext-6",
+              "text": "To gather the templates for a platform such as Crowdin, build with LocalizationCatalogOutputPath set to one folder. Each template lands in a subfolder named after its target framework. Upload them as source files, and download the translated PO files into a supported location."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Localize a Module: Strings, Plurals and Extraction",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Declare strings with localizers, plurals and sources, add notes where translators need them, and extract the template for them. A separate video covers installing and writing the PO files. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
