@@ -1,0 +1,243 @@
+{
+  "title": "Dynamic Translations in Orchard Core",
+  "output": "data-localization",
+  "spoken": {
+    "PO files": "P.O. files"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Dynamic Translations",
+      "subtitle": "Translate type names, field names and other site data",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Content type names, field names, custom admin menu items and some permission descriptions depend on your site's data, so PO files, the usual translation files, cannot translate them. Data Localization does, culture by culture. We'll enable it, translate into French, and see the result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why dynamic translations",
+      "subtitle": "Text that PO files do not reach",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "PO files translate the fixed text of the interface. Other text depends on the data of your site: names that you or a module create. These are the main kinds."
+            },
+            {
+              "id": "why-2",
+              "text": "The Data Localization feature stores translations in the database, one set for each culture, such as French (France). A page that shows one of these names looks up the translation for the culture of the request. Without one, it shows the original text."
+            },
+            {
+              "id": "why-3",
+              "text": "Each kind of text has its own tool. PO files translate the fixed interface, Data Localization translates names that come from your site's data, and Content Localization translates content items, which a separate video covers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Data Localization in the Features page",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Data Localization depends on the Localization feature. On this site, Localization is enabled, with three supported cultures: English, French and Spanish. Let's open Tools, Features."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's search for Data Localization. It is in the Internationalization category. Select Enable, and a message confirms that the feature was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "The feature adds Dynamic Translations to the admin menu, under Settings, Localization, next to Cultures."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The translation editor",
+      "subtitle": "Culture, category and search",
+      "clips": [
+        {
+          "id": "03-editor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "editor-1",
+              "text": "Select Dynamic Translations. The Culture drop-down lists the supported cultures, and the editor opens on the first one, English (United States)."
+            },
+            {
+              "id": "editor-2",
+              "text": "Let's choose French (France). The strings are grouped in categories: Admin Menus, Content Fields, Content Types and Permissions."
+            },
+            {
+              "id": "editor-3",
+              "text": "Beside each category name, the editor shows how many strings it holds, and how many are translated. Each row pairs the original text with an input for its translation."
+            },
+            {
+              "id": "editor-4",
+              "text": "The Category drop-down shows one category at a time. Search filters the strings by their original text or their translation, and Missing only hides the strings that already have a translation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Translate strings",
+      "subtitle": "Types, fields and menu items",
+      "clips": [
+        {
+          "id": "04-translate",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "translate-1",
+              "text": "Let's translate a content type name. Set the category to Content Types, and search for Blog Post. This type has no French translation, so its input is empty."
+            },
+            {
+              "id": "translate-2",
+              "text": "Type Article de blog. Auto-save stores it two seconds after you stop typing, and Save stores it at once. A message confirms that the translations were saved."
+            },
+            {
+              "id": "translate-3",
+              "text": "Field names work the same way. Under Content Fields, the strings are grouped by the content part that holds the field. Let's translate Tags, in the BlogPost group, as Étiquettes."
+            },
+            {
+              "id": "translate-4",
+              "text": "In Admin Menus, the top-level items of the admin menus you build are listed too. Let's translate Main Menu as Menu principal. A saved translation applies without restarting the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "See the translations",
+      "subtitle": "Switch the admin to French",
+      "clips": [
+        {
+          "id": "05-switch",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "switch-1",
+              "text": "To see the result, switch the admin to French with the culture picker in the top bar, which the Admin Culture Picker feature provides. Let's choose français (France). A separate video covers the picker."
+            },
+            {
+              "id": "switch-2",
+              "text": "The page reloads. The admin menu lists Menu principal in place of Main Menu. The rest of the interface stays in English, since no PO files are installed on this site."
+            },
+            {
+              "id": "switch-3",
+              "text": "On Manage Content, the New menu lists the content types that are set as Creatable, with Article de blog in place of Blog Post. The admin translates content type names in its lists, menus and page titles."
+            },
+            {
+              "id": "switch-4",
+              "text": "Choose Article de blog, and the title reads New Article de blog. Further down, the field that was named Tags is labeled Étiquettes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Track progress",
+      "subtitle": "Statistics by culture and category",
+      "clips": [
+        {
+          "id": "06-statistics",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "stats-1",
+              "text": "In the editor, select Statistics. Overall Progress compares the translated strings with all the strings, across every supported culture."
+            },
+            {
+              "id": "stats-2",
+              "text": "Progress by Culture shows a bar and a count for each culture. A bar is green from 75 percent, yellow from 25 percent, and red below that."
+            },
+            {
+              "id": "stats-3",
+              "text": "Progress by Category breaks one culture down. Choose a culture in the Culture drop-down, and each category shows its own bar and count."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Who can translate",
+      "subtitle": "Permissions for each culture",
+      "clips": [
+        {
+          "id": "07-access",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "access-1",
+              "text": "You grant these permissions on the role editor. Manage all dynamic translations edits every culture, and View dynamic translations and statistics is read-only. Each supported culture also has its own permission, such as Manage French (France) translations."
+            },
+            {
+              "id": "access-2",
+              "text": "By default, the Administrator role manages all translations, and the Editor role can view them. A user who can only view sees the editor with a read-only message, and disabled inputs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Move translations",
+      "subtitle": "Deployment steps",
+      "clips": [
+        {
+          "id": "08-move",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "move-1",
+              "text": "To move translations to another site, add the Translations step to a deployment plan. It exports the cultures and categories you choose. Then import the result on a site where Data Localization is enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Dynamic Translations",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's Data Localization: translations for the names that come from your site's data, edited culture by culture and tracked with statistics. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

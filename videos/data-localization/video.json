@@ -1,0 +1,49 @@
+{
+  "title": "Dynamic Translations: Translate Type Names and Other Site Data | Orchard Core",
+  "description": "Content type names, field names, custom admin menu items and some permission descriptions depend on the data of your site, so PO files cannot translate them.\n\nThe Data Localization feature keeps translations for these strings in the database, one set for each culture, and its editor translates them in the admin. A page shows the translation for the culture of the request, and the original text when there is none.\n\nIn this video:\n• Why dynamic translations exist, and what they translate\n• Enabling Data Localization in the Features page\n• The translation editor: culture, category, search and Missing only\n• Translating a content type, a field and an admin menu item\n• Seeing the translations in the admin with the culture picker\n• Tracking progress with the statistics pages\n• The permissions for viewing and translating each culture\n• Moving translations to another site with a deployment step",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Localization"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Localization",
+    "Data Localization",
+    "Dynamic Translations",
+    "Multilingual",
+    "Translations"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Localization"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataLocalization/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DataLocalization/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataLocalization"
+  }
+}
