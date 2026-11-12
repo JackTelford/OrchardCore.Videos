@@ -1,0 +1,48 @@
+{
+  "title": "Background Tasks: See, Schedule and Run Them | Orchard Core",
+  "description": "An Orchard Core site does work on its own: it clears caches, publishes scheduled content and removes old data. Without a page for that work, you cannot tell what ran, when it runs next, or whether a run failed.\n\nThe Background Tasks module lists every background task with its last run, its outcome and its next run. You change a task's schedule, enable or disable it, and run it on demand.\n\nIn this video:\n• What background tasks are\n• Enabling the Background Tasks module\n• Reading the task list, with its layouts, search and filters\n• Opening the details of a task\n• Changing a task's schedule\n• Running one task or several on demand\n• Enabling and disabling tasks\n• Failures, restarts and web farms",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "BackgroundTasks"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Background Tasks",
+    "Scheduled tasks",
+    "Cron expression",
+    "Administration"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Performance and Background Work"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/BackgroundTasks/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/BackgroundTasks/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.BackgroundTasks"
+  }
+}
