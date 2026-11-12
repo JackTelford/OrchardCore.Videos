@@ -42,7 +42,7 @@
             },
             {
               "id": "why-2",
-              "text": "The SignalR module registers SignalR once for the tenant, and provides the JavaScript client as the signalr resource. The Redis and Azure backplanes are separate modules. Each module that hosts a hub maps it and sets its own access rules."
+              "text": "The SignalR module registers SignalR once for the tenant, and provides the JavaScript client as the signalr resource. Backplanes relay messages between instances, and come in separate Redis and Azure modules. A module that hosts a hub maps it and sets its own access rules."
             }
           ]
         }

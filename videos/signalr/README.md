@@ -1,6 +1,6 @@
 # SignalR: Real-Time Updates and Backplanes
 
-**YouTube:** not published yet · **Length:** 4:42 · **Feature:** `OrchardCore.SignalR` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/SignalR/))
+**YouTube:** not published yet · **Length:** 4:44 · **Feature:** `OrchardCore.SignalR` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/SignalR/))
 
 A video for module developers about the SignalR module. It shows the SignalR feature and the two backplane features
 on the Features page, the Media Library updating in a second tab through the media hub, and then the code a module

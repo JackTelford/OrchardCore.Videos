@@ -212,9 +212,9 @@ def slide(step_id, chapter_title, label):
 
     if step_id == "host-1":
         image = slide_base(chapter_title, label, "1. Declare the hub and its policy")
-        draw_code(image, (96, 240, 818, 240 + code_height(HUB, 24)), "WorkflowsHub.cs", "csharp", HUB,
-                  types=TYPES, size=24)
-        draw_code(image, (842, 240, W - 96, 240 + code_height(POLICY, 22)), "RealTimeStartup.cs", "csharp", POLICY,
+        draw_code(image, (96, 240, 790, 240 + code_height(HUB, 22)), "WorkflowsHub.cs", "csharp", HUB,
+                  types=TYPES, size=22)
+        draw_code(image, (814, 240, W - 96, 240 + code_height(POLICY, 22)), "RealTimeStartup.cs", "csharp", POLICY,
                   types=TYPES, size=22)
         return image
 
