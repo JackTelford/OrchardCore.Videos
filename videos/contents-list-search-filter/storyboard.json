@@ -1,0 +1,214 @@
+{
+  "title": "Content Items List: Search, Filter and Act on Many Items",
+  "output": "contents-list-search-filter",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Items List: Search, Filter and Act on Many Items",
+      "subtitle": "Find your content, and change many items at once",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A growing site holds more content items than you can scroll through. The content items list finds them by title, type or status, and applies one action to several items at once. Let's see how it works."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Narrowing the list",
+      "subtitle": "What a row tells you, and four controls",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Every content item has a content type, such as Article or Page, and a status: published, draft, or both. The list shows each item with its title, its type, its status, and the time of its last change."
+            },
+            {
+              "id": "idea-2",
+              "text": "Four controls narrow and order the list. The search box matches words in the title. Content Type keeps one type, Show keeps one status, and Sort changes the order."
+            },
+            {
+              "id": "idea-3",
+              "text": "Tick two or more items, and an Actions menu appears. Its commands publish, unpublish or delete every selected item in a single step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The content items list",
+      "subtitle": "Content, Content Items",
+      "clips": [
+        {
+          "id": "02-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "In the admin menu, open Content, then Content Items. The page is titled Manage Content, and lists your items with the newest changes at the top."
+            },
+            {
+              "id": "list-2",
+              "text": "The list shows only items of content types whose Listable setting is on, and only those your role allows you to view."
+            },
+            {
+              "id": "list-3",
+              "text": "Each row shows an item's title and content type. A Published badge, a Draft badge, or both show its status; both appear when a published item has a newer draft. The time of the last change and the author follow."
+            },
+            {
+              "id": "list-4",
+              "text": "Edit opens the editor, and View opens the public page of a published item. The Actions menu holds more commands, such as Unpublish, Delete and Clone."
+            },
+            {
+              "id": "list-5",
+              "text": "The count above the list shows how many items this page holds, out of the total. Below the list, a pager moves between pages."
+            },
+            {
+              "id": "list-6",
+              "text": "At the end of the row that holds the count, the List and Grid buttons switch the layout. Grid arranges Title, Type, Status and Last modified in columns, and List returns to rows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Search",
+      "subtitle": "Find items by words in the title",
+      "clips": [
+        {
+          "id": "03-search",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "search-1",
+              "text": "Type a word in the search box and press Enter. The search looks for it in the display text of each item, the title shown in the list. Let's search for schedule."
+            },
+            {
+              "id": "search-2",
+              "text": "Three items contain the word, and the count at the top says so. The search box keeps what you typed, so you can edit it and search again."
+            },
+            {
+              "id": "search-3",
+              "text": "To see what the search box understands, open the Filters button, the funnel at its start, and choose Filter syntax. The Available Filters dialog lists every filter you can type."
+            },
+            {
+              "id": "search-4",
+              "text": "Words separated by a space match any of them. AND combines words, NOT leaves out items that contain a word, parentheses group words, and quotes search for an exact phrase."
+            },
+            {
+              "id": "search-5",
+              "text": "Let's close the dialog and search for schedule NOT winter. The Winter Snowshoe Schedule drops out, and two items remain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Filter and sort",
+      "subtitle": "Content type, status and order",
+      "clips": [
+        {
+          "id": "04-filter",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "filter-1",
+              "text": "Content Type keeps one type. Open it, type a few letters to find a type, and choose Article. The list reloads with articles only."
+            },
+            {
+              "id": "filter-2",
+              "text": "Show filters by status. Published lists items with a published version, and Unpublished lists items whose newest version is a draft. Let's choose Unpublished."
+            },
+            {
+              "id": "filter-3",
+              "text": "Each choice also appears in the search box as a filter, such as type or status. You can type the same filters yourself."
+            },
+            {
+              "id": "filter-4",
+              "text": "Sort changes the order. Besides the modification date, it can order by creation date, publication date, or Title. Let's choose Title."
+            },
+            {
+              "id": "filter-5",
+              "text": "The Filters button also holds shortcuts: Only draft items, Only published items, and Owned by me. Each replaces the current search with a status filter. Let's choose Only draft items."
+            },
+            {
+              "id": "filter-6",
+              "text": "The type shown on each row is also a shortcut. Selecting it lists only the items of that type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Act on many items",
+      "subtitle": "Publish, unpublish or delete in one step",
+      "clips": [
+        {
+          "id": "05-bulk",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "bulk-1",
+              "text": "From the list of drafts, tick Winter Snowshoe Schedule. One selected item shows no Actions menu. Tick Autumn Hiking Schedule, and an Actions menu replaces the Content Type, Show and Sort controls, while the count shows how many items are selected."
+            },
+            {
+              "id": "bulk-2",
+              "text": "The Actions menu lists the commands that apply to every selected item. The first publishes them, Unpublish takes them off the public site, and Delete removes them."
+            },
+            {
+              "id": "bulk-3",
+              "text": "Let's publish the two schedules. A Bulk Action dialog asks you to confirm. Select Ok."
+            },
+            {
+              "id": "bulk-4",
+              "text": "A message confirms that the content was published, and the list reloads without the filter. Both schedules show the Published badge."
+            },
+            {
+              "id": "bulk-5",
+              "text": "Delete works the same way. Let's search for placeholder, which finds the two placeholder notices."
+            },
+            {
+              "id": "bulk-6",
+              "text": "Select both items with the box at the top, open the Actions menu, and choose Delete. The dialog asks you to confirm."
+            },
+            {
+              "id": "bulk-7",
+              "text": "Select Ok. A message says that the content was removed, and the two placeholders are gone from the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Items List",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The content items list finds your content by title, type and status, sorts it, and applies one action to many items at once. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
