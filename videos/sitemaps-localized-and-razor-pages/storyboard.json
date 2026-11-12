@@ -1,0 +1,189 @@
+{
+  "title": "Sitemaps for Localized Content and Razor Pages",
+  "output": "sitemaps-localized-and-razor-pages",
+  "spoken": {
+    "OrchardCore.ContentLocalization.Sitemaps": "Orchard Core dot Content Localization dot Sitemaps",
+    "IRouteableContentTypeProvider": "I Routeable Content Type Provider",
+    "IContentItemsQueryProvider": "I Content Items Query Provider",
+    "SitemapsRazorPagesOptions": "Sitemaps Razor Pages Options",
+    "ConfigureContentType": "Configure Content Type",
+    "RouteValues": "Route Values",
+    "PageName": "Page Name",
+    "Program.cs": "Program dot C.S.",
+    "hreflang": "H ref lang",
+    "xhtml": "X.H.T.M.L.",
+    "href": "H ref"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Sitemaps for Localized Content and Razor Pages",
+      "subtitle": "Language alternates and routes for Razor Pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Search engines read a sitemap to find the pages of your site. This video covers two features for developers: Localized Content Item Sitemaps, which adds language alternates, and Sitemaps for Decoupled Razor Pages, which lists content that your own Razor Pages display."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a sitemap finds its pages",
+      "subtitle": "Providers of routeable content types",
+      "clips": [
+        {
+          "id": "01-routes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "routes-1",
+              "text": "For each content item, the Sitemap Content Types source of a sitemap needs two answers: is its type routeable, and what is its URL. Providers give both answers, and a coordinator asks them one after the other."
+            },
+            {
+              "id": "routes-2",
+              "text": "A provider implements IRouteableContentTypeProvider. It lists the content types it can route, and returns the route of an item. Autoroute supplies one for types with an Autoroute part, and the Razor Pages feature supplies another."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Localized content item sitemaps",
+      "subtitle": "Alternate language links for every item",
+      "clips": [
+        {
+          "id": "02-startup",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "loc-1",
+              "text": "The feature depends on Content Localization and Sitemaps. It registers two services: a metadata provider that adds the language alternates, and a query provider that replaces the default IContentItemsQueryProvider, which selects the items of a sitemap."
+            },
+            {
+              "id": "loc-2",
+              "text": "For each URL, the metadata provider looks among the queried items for the same localization set. It skips a localization excluded by its Sitemap Part, and adds an alternate link with the culture as hreflang and the route as href."
+            }
+          ]
+        },
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "loc-3",
+              "text": "In Tools, Features, the feature is listed as Localized Content Item Sitemaps, with the identifier OrchardCore.ContentLocalization.Sitemaps. Searching for sitemaps lists it with the other sitemap features."
+            }
+          ]
+        },
+        {
+          "id": "02-sitemap",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "loc-4",
+              "text": "Let's open the sitemap. Each address starts with the Base url of the site settings. The English article lists an alternate link for English and one for French, and the French article lists the same two."
+            },
+            {
+              "id": "loc-5",
+              "text": "The root element declares the xhtml namespace, because the metadata provider supplies it. The links are written once per localization, so a page and its translations all list one another."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Sitemaps for Decoupled Razor Pages",
+      "subtitle": "Routes for content that your own pages display",
+      "clips": [
+        {
+          "id": "03-options",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "raz-0",
+              "text": "The Autoroute provider only knows content types with an Autoroute part. A decoupled site routes its content with Razor Pages instead, so those items have no URL for the sitemap. The Sitemaps for Decoupled Razor Pages feature fills that gap."
+            },
+            {
+              "id": "raz-1",
+              "text": "Configure SitemapsRazorPagesOptions in Program.cs. ConfigureContentType takes the name of the content type, and PageName names the Razor Page that displays it."
+            },
+            {
+              "id": "raz-2",
+              "text": "RouteValues builds the link to the page for each item. It must include the area of the page, which for a page of your web project is the name of the project, and the values that the route of the page expects."
+            },
+            {
+              "id": "raz-3",
+              "text": "For each item, the provider calls RouteValues and asks the URL helper for the link to the page. A content type without an option returns no route, so the coordinator asks the next provider."
+            }
+          ]
+        },
+        {
+          "id": "03-types",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "raz-4",
+              "text": "Let's open the Sitemap Content Types source of the sitemap, and clear Index All Content Types. Select Content Types lists Decoupled Blog Post next to Article, although it has no Autoroute part, because the Razor Pages provider lists it as routeable."
+            }
+          ]
+        },
+        {
+          "id": "03-sitemap",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "raz-5",
+              "text": "In the sitemap, each post has the address that the Razor Pages provider built from the page name and the route values. The type has no Localization part, so a post carries no language links."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Routing other content",
+      "subtitle": "Write your own provider",
+      "clips": [
+        {
+          "id": "04-provider",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ext-1",
+              "text": "To route content another way, write your own provider and register it in the services of your module, as the Autoroute module does. The Sitemap Content Types source uses every provider."
+            },
+            {
+              "id": "ext-2",
+              "text": "List the types you route, and return the route of an item, starting with the Base url. Return null for a type you do not route, so that the coordinator asks the next provider."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Sitemaps for Localized Content and Razor Pages",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Both features build on the extension points of the Sitemaps module: providers that route content types, query providers that select items, and metadata providers that complete each URL. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
