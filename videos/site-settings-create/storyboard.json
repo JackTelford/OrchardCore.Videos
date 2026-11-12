@@ -1,0 +1,224 @@
+{
+  "title": "Add Site Settings to Your Module",
+  "output": "site-settings-create",
+  "spoken": {
+    "WriteShapeDebugInformation": "Write Shape Debug Information",
+    "ManageDebuggingSettings": "Manage Debugging Settings",
+    "AddSiteSettingsPropertyDeploymentStep": "Add Site Settings Property Deployment Step",
+    "AddSiteSettingsPermission": "Add Site Settings Permission",
+    "AddSiteDisplayDriver": "Add Site Display Driver",
+    "PermittedSiteProperties": "Permitted Site Properties",
+    "SettingsGroupId": "Settings Group I.D.",
+    "SiteDisplayDriver": "Site Display Driver",
+    "GetSettingsAsync": "Get Settings Async",
+    "ManageSettings": "Manage Settings",
+    "RequestUpdate": "Request Update",
+    "DebugSettings_Edit": "Debug Settings underscore Edit",
+    "DebugSettings": "Debug Settings",
+    "ISiteService": "I Site Service",
+    "GetSettings": "Get Settings",
+    "OnGroup": "On Group"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Add Site Settings to Your Module",
+      "subtitle": "A settings group with its editor, permission and menu entry",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every Orchard Core site keeps its settings in one place, and your module can add a group of its own. In this video, we follow the Debugging group of the Settings module, from its class and editor to its permission and menu entry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How site settings work",
+      "subtitle": "One document, many groups",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "The Settings module keeps one site settings document for each tenant. It holds the site name, the time zone, the page size, and a bag of properties. Each module saves a section of its own in that bag."
+            },
+            {
+              "id": "how-2",
+              "text": "A section is a plain class, saved under the name of the class. The admin shows it as a group: a page under Settings whose address ends with the group identifier. A display driver builds its editor and updates the section."
+            },
+            {
+              "id": "how-3",
+              "text": "To add a group, your module provides four things: a settings class, an editor, a permission, and a menu entry. The Debugging group has all four, so let's read it. Your module follows the same steps, with its own names."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The settings class",
+      "subtitle": "A plain class and a view model",
+      "clips": [
+        {
+          "id": "02-class",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "class-1",
+              "text": "The settings class is a plain class with a parameterless constructor. DebugSettings has one property, WriteShapeDebugInformation. Its properties are saved as JSON in the site settings, under the name of the class."
+            },
+            {
+              "id": "class-2",
+              "text": "The editor binds its form to a view model, a separate small class. Here it matches the settings class, but a view model can hold more, such as the list of choices that a drop-down shows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The display driver and the view",
+      "subtitle": "Build the editor and save the values",
+      "clips": [
+        {
+          "id": "03-editor",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "drv-1",
+              "text": "A display driver builds the editor and updates the section. Derive it from SiteDisplayDriver of your settings class, and return the group identifier from SettingsGroupId. The base class ignores every request for another group."
+            },
+            {
+              "id": "drv-2",
+              "text": "In the edit method, return null when the user lacks the permission. Otherwise create the shape DebugSettings_Edit from the view model, place it in the Content zone, and attach it to the group with OnGroup. Without OnGroup, the page of a group skips the shape."
+            },
+            {
+              "id": "drv-3",
+              "text": "The update method checks the permission again. It binds the posted form to the view model with the prefix, copies the values into the settings, and returns the edit shape."
+            },
+            {
+              "id": "drv-4",
+              "text": "The base class stores the section in the site settings only when the model state is valid. To reject a value, add a model error with the prefix and the property name. Nothing is saved, and the form shows your message."
+            },
+            {
+              "id": "view-1",
+              "text": "The view is a Razor file named after the shape type, with the underscore turned into a dot. Its input binds to the view model, and the label goes through the localizer, T, so it can be translated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Register the group",
+      "subtitle": "Driver, permission and menu entry",
+      "clips": [
+        {
+          "id": "04-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "reg-1",
+              "text": "In the startup class, register the driver with AddSiteDisplayDriver. Then register the permission of the group with AddSiteSettingsPermission, so a user who holds that permission can open the group without holding ManageSettings. The same class adds the permission provider and the menu."
+            },
+            {
+              "id": "reg-2",
+              "text": "ManageDebuggingSettings names ManageSettings as the permission that implies it, so a role that holds the broader permission holds this one too."
+            },
+            {
+              "id": "reg-3",
+              "text": "The permission provider lists the permission, so roles can receive it, and grants it to the Administrator role by default. A separate video covers permissions in depth."
+            },
+            {
+              "id": "reg-4",
+              "text": "The menu merges items that share a caption, so your module adds its entry under Settings. The action is Index on the Admin controller of the Settings module, with the group identifier as a route value. The permission hides the entry from users without it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Try it in the admin",
+      "subtitle": "Open the group and save a value",
+      "clips": [
+        {
+          "id": "05-try",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "try-1",
+              "text": "Let's see the result in the admin. We open Settings in the menu, and the list of groups includes Debugging, the entry from the menu code."
+            },
+            {
+              "id": "try-2",
+              "text": "Debugging opens the group. The page holds the one field the shape adds: a check box labeled Write shape debug information, with its hint below, and a Save button."
+            },
+            {
+              "id": "try-3",
+              "text": "Let's tick the box. The Settings module adds the Save button to every group, so your group needs no button of its own."
+            },
+            {
+              "id": "try-4",
+              "text": "Let's select Save. The controller saves the site settings, adds the message Site settings updated successfully, and redirects to the same group. The box stays ticked, because the editor reads the saved section."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Read the settings",
+      "subtitle": "From code, Liquid and recipes",
+      "clips": [
+        {
+          "id": "06-read",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "use-1",
+              "text": "To read a group from code, use ISiteService. This class calls GetSettings for DebugSettings and copies the value into the options for shape rendering. Asynchronous code calls GetSettingsAsync, and both return an instance with default values when nothing is saved."
+            },
+            {
+              "id": "use-2",
+              "text": "When the editor saves a different value, the driver calls RequestUpdate for those options. The startup class registers a change token source for the options type, so they are built again with the saved value."
+            },
+            {
+              "id": "use-3",
+              "text": "In Liquid, the Site object reads the site settings. Its Properties are empty unless you list the names of your sections in the PermittedSiteProperties option of the configuration."
+            },
+            {
+              "id": "use-4",
+              "text": "A recipe can import a group. The Settings step saves any key it does not recognize in the same bag, so a key named after your class sets your section. AddSiteSettingsPropertyDeploymentStep registers a deployment step that exports it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Add Site Settings to Your Module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A site settings group is a settings class, an editor, a permission, and a menu entry, registered in your module. Read the values with ISiteService. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
