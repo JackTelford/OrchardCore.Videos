@@ -1,0 +1,220 @@
+{
+  "title": "GraphQL: Settings, Permissions and Hidden Fields",
+  "output": "graphql-settings-permissions",
+  "spoken": {
+    "MaxNumberOfResultsValidationMode": "Max Number Of Results Validation Mode",
+    "DefaultNumberOfResults": "Default Number Of Results",
+    "MaxNumberOfResults": "Max Number Of Results",
+    "DiscoverableSterotypes": "Discoverable Stereotypes",
+    "ConfigureContentType": "Configure Content Type",
+    "ExposeExceptions": "Expose Exceptions",
+    "RequirePermission": "Require Permission",
+    "MaxComplexity": "Max Complexity",
+    "ConfigurePart": "Configure Part",
+    "FieldImpact": "Field Impact",
+    "IgnoreField": "Ignore Field",
+    "contentItem": "content item",
+    "MaxDepth": "Max Depth",
+    "SiteLayers": "Site Layers",
+    "OrchardCore": "Orchard Core",
+    "GraphiQL": "graphical"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "GraphQL: Settings, Permissions and Hidden Fields",
+      "subtitle": "Limits, permissions and hidden types for the GraphQL API",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The GraphQL module exposes your content to API clients. This video covers the options that limit queries, the permissions that decide who can run them, and how to hide types, parts and fields from the schema."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Configuration options",
+      "subtitle": "The Apis, GraphQL section",
+      "clips": [
+        {
+          "id": "01-options",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "options-1",
+              "text": "The options live in the OrchardCore section of the configuration, under Apis, GraphQL. This is shell configuration, so a tenant can override them. Every option is optional."
+            },
+            {
+              "id": "options-2",
+              "text": "DefaultNumberOfResults is the number of results a content type query returns when it sets no first argument, 100 by default. MaxNumberOfResults is the maximum for the first and last arguments, 1000 by default. A separate video covers the paging arguments."
+            },
+            {
+              "id": "options-3",
+              "text": "MaxNumberOfResultsValidationMode decides what happens above that maximum. Enabled raises a validation error, and Disabled logs the excess instead. Default means Enabled in the Development environment, and Disabled otherwise."
+            },
+            {
+              "id": "options-4",
+              "text": "MaxDepth limits how deeply a query can nest, 100 by default. MaxComplexity limits the complexity of a query, and FieldImpact sets what each object field adds to it. Neither is set by default."
+            },
+            {
+              "id": "options-5",
+              "text": "ExposeExceptions sends exception details, such as stack traces, to clients. It is on by default only in the Development environment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Permissions",
+      "subtitle": "Who can run queries and see content",
+      "clips": [
+        {
+          "id": "02-levels",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "levels-1",
+              "text": "Every request to the endpoint, and the Tools, GraphiQL menu item, needs the Execute GraphQL permission. Anonymous users do not have it by default. Without it, the endpoint challenges the request for authentication."
+            },
+            {
+              "id": "levels-2",
+              "text": "A mutation operation needs Execute GraphQL Mutations. Execute GraphQL names that permission as one that implies it, so holding the mutations permission also satisfies Execute GraphQL. The Administrator role holds it by default."
+            },
+            {
+              "id": "levels-3",
+              "text": "Content has its own checks. A query on a content type needs View own content for that type. Users with View all content then get every item, and users with only View own content get the items they own."
+            },
+            {
+              "id": "levels-4",
+              "text": "The contentItem query, which takes a content item id, returns nothing when the user cannot view that item. Every item of a type query is also checked once more before it is returned."
+            }
+          ]
+        },
+        {
+          "id": "02-roles",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "roles-1",
+              "text": "To let visitors run queries, edit the Anonymous role under Access Control, Roles. Search the permissions for GraphQL. Execute GraphQL and Execute GraphQL Mutations are listed together."
+            },
+            {
+              "id": "roles-2",
+              "text": "Let's allow Execute GraphQL in the Allow column, and save the role."
+            },
+            {
+              "id": "roles-3",
+              "text": "The role is saved. Anonymous requests can reach the endpoint, and the content permissions of the role decide what they see."
+            }
+          ]
+        },
+        {
+          "id": "02-field",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "field-1",
+              "text": "In your own types, RequirePermission protects a field. The permission is checked while the query is validated, and a user without it gets an authorization error with the status 401. The second argument is an optional resource, such as a content type name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Hide types and parts",
+      "subtitle": "From the content type editor",
+      "clips": [
+        {
+          "id": "03-type",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "GraphiQL is the query editor of the module, and its Explorer lists a query for each content type without a stereotype, such as article. Let's open Design, Content Definition, Content Types, and edit the Article type."
+            },
+            {
+              "id": "type-2",
+              "text": "On the type, Hide removes it from the GraphQL schema. Let's select Hide and save."
+            },
+            {
+              "id": "type-3",
+              "text": "The schema is rebuilt when a content definition changes. Back in GraphiQL, the Explorer no longer lists article."
+            }
+          ]
+        },
+        {
+          "id": "03-parts",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "parts-1",
+              "text": "Each part of a type has options too. Let's open Design, Content Definition, Content Types, edit the Blog Post type, and edit its Markdown body part."
+            },
+            {
+              "id": "parts-2",
+              "text": "Collapse adds the fields of a part directly to the content type, and selecting it reveals Prevent Field Name Collision. Hide removes the part from the GraphQL schema."
+            },
+            {
+              "id": "parts-3",
+              "text": "On the Autoroute part, Collapse is selected and disabled, with a note that it is collapsed by default. The Autoroute module collapses that part in code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Hide in code",
+      "subtitle": "The GraphQL content options",
+      "clips": [
+        {
+          "id": "04-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "Options in code go through the GraphQL content options, in a Startup class. IgnoreField removes a field from the content item types and from their where filter. Here it removes the owner."
+            },
+            {
+              "id": "code-2",
+              "text": "ConfigurePart collapses or hides a part for every content type, as the Autoroute module does. ConfigureContentType hides a content type, or a query of a module such as SiteLayers."
+            },
+            {
+              "id": "code-3",
+              "text": "A content type with a stereotype gets a query only when DiscoverableSterotypes lists that stereotype."
+            },
+            {
+              "id": "code-4",
+              "text": "Options in code can only turn a setting on. Hidden set to false does not undo what an editor selected, so the type stays hidden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "GraphQL: Settings, Permissions and Hidden Fields",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Configuration options limit what queries can ask for, permissions decide who can ask, and hidden types and fields decide what the schema offers. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
