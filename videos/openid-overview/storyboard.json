@@ -1,0 +1,215 @@
+{
+  "title": "OpenID Connect: Orchard Core as an Identity Provider",
+  "output": "openid-overview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "OpenID Connect: Orchard Core as an Identity Provider",
+      "subtitle": "Sign people in once, for all your applications",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Sign in once, and use many applications. With the OpenID Connect module, your Orchard Core site can be the identity provider that signs people in. This video explains how it works, and shows where its features are in the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why an identity provider",
+      "subtitle": "One place where people sign in",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A company may run a website, a mobile app and a partner portal. If each one keeps its own accounts and passwords, people sign in again and again, and you must manage access in every application."
+            },
+            {
+              "id": "why-2",
+              "text": "An identity provider fixes this. It is the one place where people sign in. Each application sends people there, and receives tokens that say who the person is and what the application may do."
+            },
+            {
+              "id": "why-3",
+              "text": "The OpenID Connect module turns your Orchard Core site into that identity provider. People sign in with their Orchard Core user accounts, and applications that follow the OpenID Connect and OAuth standards can use it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "How a sign-in works",
+      "subtitle": "Applications, tokens and APIs",
+      "clips": [
+        {
+          "id": "02-flow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "flow-1",
+              "text": "Here is how a sign-in works. An application, such as a mobile app, sends the person to Orchard Core to sign in."
+            },
+            {
+              "id": "flow-2",
+              "text": "If the person is not signed in, Orchard Core shows its login page. It can then ask whether to grant the application access, and lists the scopes requested, which are named kinds of access, such as the email address."
+            },
+            {
+              "id": "flow-3",
+              "text": "When the person agrees, Orchard Core sends them back to the application with a code. The application exchanges that code for tokens, including an access token."
+            },
+            {
+              "id": "flow-4",
+              "text": "The application sends the access token with each request to an API. The API checks the token before it answers. For the API of your own site, the OpenID Connect Token Validation feature does this check."
+            },
+            {
+              "id": "flow-5",
+              "text": "Orchard Core can play three roles. It can be the identity provider that issues tokens, the API that validates them, or the client that signs people in through another identity provider."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The features",
+      "subtitle": "What the OpenID Connect module offers",
+      "short": "features",
+      "clips": [
+        {
+          "id": "03-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "The module's features are on the Features page, under Tools. Let's search for OpenID."
+            },
+            {
+              "id": "features-2",
+              "text": "The results are grouped under the category OpenID Connect. The list hides OpenID Connect Core Services, which other features turn on automatically."
+            },
+            {
+              "id": "features-3",
+              "text": "OpenID Connect Authorization Server makes your site an identity provider. It signs people in and issues tokens to applications."
+            },
+            {
+              "id": "features-4",
+              "text": "OpenID Connect Client Integration works the other way around. It lets people sign in to your site with an account from another identity provider."
+            },
+            {
+              "id": "features-5",
+              "text": "OpenID Connect Management UI adds the pages for managing applications and scopes. The authorization server depends on it, so enabling the server turns it on."
+            },
+            {
+              "id": "features-6",
+              "text": "OpenID Connect Secrets lets the server use signing and encryption keys that are stored as secrets. It depends on the Secrets feature."
+            },
+            {
+              "id": "features-7",
+              "text": "OpenID Connect Token Validation checks tokens, whether this site issued them or another trusted identity provider did, so that the API of your site can accept them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Enabling the server",
+      "subtitle": "Turning Orchard Core into an identity provider",
+      "short": "enable-server",
+      "clips": [
+        {
+          "id": "04-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's enable the authorization server. Its row lists two dependencies, OpenID Connect Core Services and OpenID Connect Management UI, which are enabled along with it."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's click Enable. A notification confirms that the feature OpenID Connect Authorization Server was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Back on the list, the authorization server and the Management UI show Enabled. Core Services is enabled too, but hidden. Client Integration, Secrets and Token Validation stay disabled until you enable them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The admin pages",
+      "subtitle": "Server settings, applications and scopes",
+      "short": "admin-pages",
+      "clips": [
+        {
+          "id": "05-tour",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tour-1",
+              "text": "Enabling a feature adds its pages to the admin menu. The server's settings are under Settings, OpenID Connect, Authorization Server."
+            },
+            {
+              "id": "tour-2",
+              "text": "A warning at the top says that saving these settings might restart the website. The settings follow in groups, starting with Endpoints, the addresses that applications call."
+            },
+            {
+              "id": "tour-3",
+              "text": "Flows are the ways an application can get tokens. By default, the Authorization Code Flow and the Refresh Token Flow are on, and every endpoint is enabled."
+            },
+            {
+              "id": "tour-4",
+              "text": "Further down are the groups Proof Key for Code Exchange and Pushed Authorization Requests. The last group, Advanced Options, is marked as intended for advanced use only."
+            },
+            {
+              "id": "tour-5",
+              "text": "Applications are under Access Control, OpenID Connect, Applications. An application is a program that is registered to ask this site for tokens. The list is empty until you add one."
+            },
+            {
+              "id": "tour-6",
+              "text": "Scopes are in the same menu. A scope names a kind of access that an application can request. The list has Email, Phone, Profile and Roles."
+            }
+          ]
+        },
+        {
+          "id": "05-map",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "map-1",
+              "text": "Each feature adds its own pages to the admin menu when it is enabled. Under Settings, OpenID Connect, these are Authorization Server, Token Validation and Authentication Client. Applications and Scopes are under Access Control, OpenID Connect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "OpenID Connect: Orchard Core as an Identity Provider",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the OpenID Connect module: Orchard Core as the identity provider for your applications. Separate videos cover the server settings, applications and scopes, the client, and token validation in detail. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
