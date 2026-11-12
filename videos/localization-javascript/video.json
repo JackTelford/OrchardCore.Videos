@@ -1,0 +1,56 @@
+{
+  "title": "JavaScript Localization: Translate Strings in Scripts | Orchard Core",
+  "description": "A script runs in the browser and can't call the string localizer that translates your C# code. The labels of an editor drawn by a script stay in the language they were written in.\n\nIJSLocalizer bridges the gap. A localizer returns a dictionary of strings for a group name, the view writes the dictionary into the page, and the script reads it. The strings come from the same PO files as the rest of the site.\n\nIn this video:\n• Why a script can't call the string localizer\n• Writing and registering a localizer\n• Passing the strings from the view to the script\n• Translating them with PO files\n• The CORS settings page in French\n• Requesting several groups, and a template for translators",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Localization",
+    "JavaScript"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Localization",
+    "JavaScript",
+    "TypeScript",
+    "PO files",
+    "IJSLocalizer",
+    "i18n"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Localization"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/"
+    },
+    {
+      "label": "Localization module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Localize/javascript-localization.md",
+    "src/docs/reference/modules/Localize/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Localization"
+  }
+}
