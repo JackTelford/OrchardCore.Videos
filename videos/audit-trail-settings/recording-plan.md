@@ -177,7 +177,7 @@ Starts on: `await scene.OpenAsync("/Admin/Settings/AuditTrail")` (not recorded; 
 Starts on: `await scene.OpenAsync("/Admin")` (menu groups closed), then `StartCaptureAsync()`. Starts from snapshot B; every drop-down of the page is empty.
 
 - `users-1`
-  - Actions: `ClickAsync("#adminMenu button.item-label:has-text(\"Settings\")", pauseAfter: 600)`; `ClickAsync("#adminMenu button.item-label:has-text(\"Security\")", pauseAfter: 600)`; `ClickAndWaitForNavigationAsync("#adminMenu a[href$=\"/Admin/Users/AuditTrail/Index\"]")`.
+  - Actions: `ClickAsync("#adminMenu button.item-label:has-text(\"Settings\")", pauseAfter: 600)`; `ClickAsync("#adminMenu button.item-label:has-text(\"Security\")", pauseAfter: 600)`; `ClickAndWaitForNavigationAsync("#adminMenu a[href*=\"/Admin/Users/AuditTrail\"]")`.
   - On screen when the narration ends: the page of the user audit trail settings with the heading **User Properties to Store** and the first properties, each with an empty drop-down.
   - Labels: menu "Settings" > "Security" > "User Audit Trail" `US/AuditTrail/AdminMenu.cs:28-30`; the URL `US/AuditTrail/Controllers/AuditTrailAdminController.cs:18`; "User Properties to Store" `US/Views/AuditTrailAdmin/Index.cshtml:15`.
 - `users-2`
