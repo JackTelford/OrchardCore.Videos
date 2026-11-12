@@ -89,5 +89,5 @@ sentence of the narration unless the answer is "no".
     written in mixed case on screen and a voice may read "Url" as a word. A person confirms it with `pronounce.py`
     before the narration is generated.
 17. **"Create & Setup".** The label of the button is written with an ampersand (`Views/Admin/Create.cshtml:30`) and
-    `add-3` reads it. A voice normally says "and"; confirm with `pronounce.py` that it does, and add a `spoken` entry
-    ("Create & Setup" as "Create and Setup") if it does not.
+    `add-3` reads it. A voice normally says "and"; the storyboard has a `spoken` entry ("Create & Setup" as "Create and Setup");
+    confirm with `pronounce.py` that it sounds right.

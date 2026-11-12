@@ -2,7 +2,8 @@
   "title": "The Orchard Core Tenants module",
   "output": "tenants-overview",
   "spoken": {
-    "Url Prefix": "URL Prefix"
+    "Url Prefix": "URL Prefix",
+    "Create & Setup": "Create and Setup"
   },
   "chapters": [
     {
@@ -195,7 +196,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Tenants let one application host many separate sites, and you manage them from the Default tenant. Creating, managing, and limiting tenants each have a video of their own. Thanks for watching."
+              "text": "Tenants let one application host many separate sites, and you manage them from the Default tenant. Thanks for watching."
             }
           ]
         }
