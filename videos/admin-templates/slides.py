@@ -28,7 +28,7 @@ ADMIN_AND_FRONT_END = [
 
 NAMING = [
     ("1", "Shape type", "VisitSiteNavbarItem"),
-    ("2", "Alternate", "Notification_Header__Mention is the view Notification-Mention.Header.cshtml"),
+    ("2", "Alternate", "Content_Summary__BlogPost is the view Content-BlogPost.Summary.cshtml"),
     ("3", "Model", "In Liquid, the shape is Model, and a template reads its properties."),
 ]
 
