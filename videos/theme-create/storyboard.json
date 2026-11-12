@@ -1,0 +1,233 @@
+{
+  "title": "Create an Orchard Core theme",
+  "output": "theme-create",
+  "spoken": {
+    "MyTheme.OrchardCore": "My Theme dot Orchard Core",
+    "MyTheme": "My Theme",
+    "dotnet": "dot net",
+    "octheme": "O.C. theme",
+    "AddLiquid": "Add Liquid",
+    "Manifest.cs": "Manifest dot C.S.",
+    "Layout.liquid": "Layout dot liquid",
+    "Layout.cshtml": "Layout dot C.S.H.T.M.L.",
+    "Theme.png": "Theme dot P.N.G.",
+    "wwwroot": "W.W.W. root",
+    "render_body": "render body",
+    "render_section": "render section",
+    "page_title": "page title"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Create an Orchard Core theme",
+      "subtitle": "Your first theme, from the template to the Themes page",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A theme decides how the pages of an Orchard Core site look. In this video, you generate a theme project from a template, describe it in its manifest, and apply it to your site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a theme is",
+      "subtitle": "A project with a manifest and a layout",
+      "clips": [
+        {
+          "id": "01-theme",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "theme-1",
+              "text": "A theme is a project in your solution that holds the layout, the templates, and the static files, such as stylesheets and images, that Orchard Core uses to render the site."
+            },
+            {
+              "id": "theme-2",
+              "text": "A site uses two themes: a site theme for the front end, and an admin theme for the admin pages. The Themes module, under Design, Themes, lists the themes of your application and applies them. This video creates a site theme."
+            },
+            {
+              "id": "theme-3",
+              "text": "The template creates a theme with three parts: a project file that marks the project as a theme, a manifest that describes it, and a layout that wraps every page. Let's generate one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the theme project",
+      "subtitle": "Install the template, generate it, add it to the solution",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "The project template for themes is part of the Orchard Core project templates package, which also has templates for web applications and modules. Install the package once, with the dotnet new install command."
+            },
+            {
+              "id": "create-2",
+              "text": "In the folder of your solution, next to the web application, run dotnet new octheme with a name for the theme. Here, the name is MyTheme.OrchardCore."
+            },
+            {
+              "id": "create-3",
+              "text": "The name becomes the folder, the project file, and the identifier of the theme. The template creates three files: the project file, Manifest.cs, and a Liquid layout, Layout.liquid, in the Views folder."
+            },
+            {
+              "id": "create-4",
+              "text": "AddLiquid is one of the template options, and it is true by default. Set to false, it leaves out the Liquid layout, for a theme that uses Razor views only."
+            },
+            {
+              "id": "create-5",
+              "text": "Add the project to the solution, then add a reference to it from the web application, so that the application includes the theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "What the template generates",
+      "subtitle": "Project file, manifest and layout",
+      "clips": [
+        {
+          "id": "03-files",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "files-1",
+              "text": "The project file references the Orchard Core Theme Targets package. It marks the project as a theme, and embeds the views and static files of the theme in the assembly."
+            },
+            {
+              "id": "files-2",
+              "text": "The Razor SDK lets the theme use Razor templates as well as Liquid ones. If a theme has Razor views but does not use the Razor SDK, the build stops with an error."
+            },
+            {
+              "id": "files-3",
+              "text": "Manifest.cs holds the Theme attribute. Orchard Core reads the name, author, website, version, and description of the theme from it. The template sets the name and description to the name you gave, and fills in its own author, website, and version."
+            },
+            {
+              "id": "files-4",
+              "text": "Layout.liquid is the layout. The render_body tag outputs the content of the page being rendered, and render_section outputs a named section, here the Footer. The page_title tag writes the page title, with the site name first."
+            },
+            {
+              "id": "files-5",
+              "text": "The resources tags output the meta tags, stylesheets, and scripts that modules register, so keep them in the layout. A comment in the template reads, insert required resources here."
+            },
+            {
+              "id": "files-6",
+              "text": "A script tag near the end of the layout requests jQuery for the foot of the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Describe your theme",
+      "subtitle": "Manifest values, thumbnail and static files",
+      "clips": [
+        {
+          "id": "04-manifest",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "manifest-1",
+              "text": "Replace the values of the template with your own. Here, MyTheme has an author, a website, a description, and a tag. The Themes page shows these values on the card of the theme."
+            },
+            {
+              "id": "manifest-2",
+              "text": "Name is the title of the card, and the identifier stays the name of the assembly. Tags appear on the card too. On the Themes page, two tags have a meaning: Admin marks an admin theme, and hidden keeps the theme off the page."
+            },
+            {
+              "id": "manifest-3",
+              "text": "To give the card a thumbnail, add a file named Theme.png to the wwwroot folder of the theme project. Orchard Core serves it from the static files of the theme, and the Themes page shows it as the card image."
+            },
+            {
+              "id": "manifest-4",
+              "text": "Files in the wwwroot folder, such as stylesheets, scripts, and images, are served under the identifier of the theme. The layout can refer to them by that path."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Apply the theme",
+      "subtitle": "Design, Themes, Make Current",
+      "clips": [
+        {
+          "id": "05-apply",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "apply-1",
+              "text": "Build and run the web application, and open the admin. In the admin menu, Design, Themes lists the themes of the application as cards."
+            },
+            {
+              "id": "apply-2",
+              "text": "Here is the card of MyTheme. It shows the thumbnail from Theme.png, the name and description, and the author, website, tags, and version from the manifest."
+            },
+            {
+              "id": "apply-3",
+              "text": "The card has two buttons. Enable turns the theme on without making it current. Make Current sets the theme as the site theme, and enables it if needed."
+            },
+            {
+              "id": "apply-4",
+              "text": "Let's click Make Current. Two messages confirm it: MyTheme was enabled, and MyTheme was set as the default Site theme. The current themes come first, and the card of MyTheme reads, This is the current Site theme."
+            },
+            {
+              "id": "apply-5",
+              "text": "Open the front end of the site. Its pages are rendered by the layout of MyTheme, which has no stylesheet of its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Where to go from here",
+      "subtitle": "Razor layouts and related topics",
+      "clips": [
+        {
+          "id": "06-next",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "next-1",
+              "text": "To write the layout in Razor, add Layout.cshtml to Views in place of Layout.liquid. The project already uses the Razor SDK. As the built-in Razor themes do, add a view imports file to Views, so the layout inherits from the Orchard Core Razor page."
+            },
+            {
+              "id": "next-2",
+              "text": "To go further, separate videos cover creating a theme from an existing HTML template, declaring scripts and stylesheets as resources, and creating an admin theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Create an Orchard Core theme",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A theme is a project with a manifest and a layout, which you generate from the template, describe in the manifest, and apply with Make Current under Design, Themes. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Create a Theme: Your First Orchard Core Theme | Orchard Core",
+  "description": "A theme holds the layout, the templates and the static files that Orchard Core uses to render a site. Starting a theme from an empty folder means knowing which files Orchard Core expects and how it finds them.\n\nThe Orchard Core project templates package has a theme template that creates the project file, the manifest and the layout. This video generates a theme with dotnet new octheme, adds it to a solution, describes it in its manifest, and applies it from Design, Themes with Make Current.\n\nIn this video:\n• What a theme is and what it holds\n• Creating the theme project from the template\n• What the template generates: the project file, the manifest and the layout\n• Describing the theme: manifest values, thumbnail and static files\n• Applying the theme from Design, Themes\n• Where to go from here",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Theming"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Theme",
+    "Orchard Core theme",
+    "Liquid",
+    "dotnet new",
+    "Layout"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Themes"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/theme/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/getting-started/theme.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:getting-started/theme"
+  }
+}
