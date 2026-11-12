@@ -1,6 +1,6 @@
 # OpenID Connect Client: Sign In With Another Identity Provider
 
-**YouTube:** not published yet · **Length:** 5:25 · **Feature:** [OrchardCore.OpenId.Client](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/)
+**YouTube:** not published yet · **Length:** 5:22 · **Feature:** [OrchardCore.OpenId.Client](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/)
 
 The OpenID Connect Client Integration feature lets people sign in to an Orchard Core site with an account from another
 identity provider. The video explains how the sign-in works, enables the feature, connects a provider in Settings,

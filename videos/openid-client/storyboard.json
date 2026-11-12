@@ -217,7 +217,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "The OpenID Connect Client Integration feature hands the sign-in to an identity provider, and keeps a local account for each person. The documentation describes the settings. Thanks for watching."
+              "text": "The OpenID Connect Client Integration feature hands the sign-in to an identity provider, and keeps a local account for each person. Thanks for watching."
             }
           ]
         }
