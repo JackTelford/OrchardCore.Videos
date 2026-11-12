@@ -1,0 +1,47 @@
+{
+  "title": "Sitemaps: Help Search Engines Find Your Pages | Orchard Core",
+  "description": "A sitemap lists the pages of a site, with the date each one changed, how often it changes and its priority, so that search engines can read the list instead of discovering every page on their own.\n\nThe Orchard Core Sitemaps module builds sitemaps from your content. You create a sitemap, add sources that choose which content types and paths it lists, and control single pages with the Sitemap part.\n\nIn this video:\n• What a sitemap lists, and how Orchard Core describes one\n• Enabling the Sitemaps feature and setting the Base url\n• Creating a sitemap with a name, a permalink and an Enabled setting\n• Adding a Sitemap Content Types source\n• Viewing the sitemap\n• Choosing content types, each with its own Change Frequency and Priority\n• Adding a Sitemap Custom Path source\n• Excluding or configuring a single page with the Sitemap part\n• Listing sitemaps in the robots file with the Include all sitemaps setting",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "SEO"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Sitemaps",
+    "SEO",
+    "Search engine optimization"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "SEO and Analytics"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Sitemaps/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Sitemaps/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Sitemaps"
+  }
+}
