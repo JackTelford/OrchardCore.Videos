@@ -4523,9 +4523,9 @@
       "src/docs/reference/modules/Localize/README.md",
       "src/docs/topics/localize/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.8,
+    "words": 715,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
