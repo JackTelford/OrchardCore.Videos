@@ -1,0 +1,243 @@
+{
+  "title": "GraphQL: Filter, Sort and Page Content Items",
+  "output": "graphql-filters-paging",
+  "spoken": {
+    "MaxNumberOfResultsValidationMode": "max number of results validation mode",
+    "DefaultNumberOfResults": "default number of results",
+    "MaxNumberOfResults": "max number of results",
+    "GraphiQL": "graphical",
+    "orderBy": "order by",
+    "ASC": "A.S.C.",
+    "DESC": "D.E.S.C."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "GraphQL: Filter, Sort and Page Content Items",
+      "subtitle": "Control which items a content type query returns",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A GraphQL query for a content type returns its items, and you decide which ones, in what order, and how many. In this video, you filter with where, sort with orderBy, page with first and skip, and choose versions with status."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The query arguments",
+      "subtitle": "Five arguments on every content type query",
+      "clips": [
+        {
+          "id": "01-arguments",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "args-1",
+              "text": "Each content type that GraphQL exposes becomes a query field with the same five arguments. The content items field type declares them: where filters, orderBy sorts, first and skip page, and status picks the version of each item."
+            },
+            {
+              "id": "args-2",
+              "text": "A query without arguments returns the published version of each item of the type that the user may view, newest first, up to 100 items. You can change each default in the query, and the number of items also in the configuration."
+            },
+            {
+              "id": "args-3",
+              "text": "The field type builds one database query from them. The page is taken last, so first and skip count within the filtered, sorted list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Filter with where",
+      "subtitle": "Conditions on items and on parts",
+      "clips": [
+        {
+          "id": "02-filter",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "This is GraphiQL, under Tools. The query asks every blog post for its display text, and the result lists all eight published posts."
+            },
+            {
+              "id": "where-2",
+              "text": "Add the where argument to filter. A condition is a field name plus an operator suffix: here the display text field with the contains suffix, and only the two titles containing the word with remain."
+            },
+            {
+              "id": "where-3",
+              "text": "A part that provides a filter adds it to where, either as an object named after the part or directly as fields. Autoroute adds its fields directly, so path starts with tutorials returns the three tutorials, and the result shows each path."
+            },
+            {
+              "id": "where-4",
+              "text": "Conditions combine with OR, AND and NOT, written in capitals, each taking a list. This OR keeps the posts whose display text contains Liquid or contains GraphQL."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Filter operators",
+      "subtitle": "What each kind of field accepts",
+      "clips": [
+        {
+          "id": "03-operators",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ops-1",
+              "text": "Each field has an equality condition and a not version. Strings add contains, starts with, ends with and in, each with a not version. Identifiers add in, and dates add in plus greater than and less than, with or without equal."
+            },
+            {
+              "id": "ops-2",
+              "text": "Several conditions side by side in the where argument must all hold, as with AND. OR needs at least one condition to hold, and NOT negates the condition it contains. AND, OR and NOT each take a list."
+            },
+            {
+              "id": "ops-3",
+              "text": "Fields of your own parts can be filtered too. Boolean, date, date and time, numeric, text and time fields work when the Content Fields Indexing (SQL) feature is enabled, with the suffixes of their type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Sort with orderBy",
+      "subtitle": "Choose the order of the result",
+      "clips": [
+        {
+          "id": "04-sort",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "sort-1",
+              "text": "Without orderBy, items come newest first. Add orderBy with a field and a direction, ASC or DESC, and the result follows it: display text ascending lists the titles alphabetically."
+            },
+            {
+              "id": "sort-2",
+              "text": "Creation date ascending puts the oldest post first. You can sort by the properties of the content item, such as display text and the created, modified and published dates, but not by the fields of a part."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Page with first and skip",
+      "subtitle": "Slice the result into pages",
+      "clips": [
+        {
+          "id": "05-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "The first argument limits the number of items. With first set to three, the query returns the three newest posts."
+            },
+            {
+              "id": "page-2",
+              "text": "The skip argument leaves out items from the start. First three with skip three returns the next page, so skip is the page number minus one, times the page size."
+            },
+            {
+              "id": "page-3",
+              "text": "Skip six leaves two posts, so the last page is shorter. When first is missing or zero, the query returns the default number of results."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Choose versions with status",
+      "subtitle": "PUBLISHED, DRAFT, LATEST and ALL",
+      "clips": [
+        {
+          "id": "06-status",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "status-1",
+              "text": "A content item can have a published version and a draft. The status argument defaults to PUBLISHED, and DRAFT returns the most recent versions that are not published, here the Roadmap notes post."
+            },
+            {
+              "id": "status-2",
+              "text": "LATEST returns the most recent version of every item, published or draft, so the draft joins the eight published posts. ALL returns every historical version."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Combine the arguments",
+      "subtitle": "Filter, sort and page in one query",
+      "clips": [
+        {
+          "id": "07-combine",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "combine-1",
+              "text": "The arguments work together. This query keeps the posts under guides, sorts them by display text, and returns the second page of two: Headless with GraphQL and Searching your content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Limits on the number of results",
+      "subtitle": "Default, maximum and validation mode",
+      "clips": [
+        {
+          "id": "08-limits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "limits-1",
+              "text": "Three settings in the GraphQL configuration section control paging. DefaultNumberOfResults applies when first is missing, MaxNumberOfResults is the largest first allowed, and MaxNumberOfResultsValidationMode decides what happens above it. They can also be set for a single tenant."
+            },
+            {
+              "id": "limits-2",
+              "text": "The defaults are 100 and 1,000. Enabled fails validation when first is above the maximum, while Disabled logs the value without rejecting the query. Default means Enabled in the Development environment and Disabled elsewhere."
+            }
+          ]
+        },
+        {
+          "id": "08-limit-error",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "limits-3",
+              "text": "Here the mode is Enabled. Asking for 1001 posts returns a validation error that names the argument and the maximum, 1000, and no data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "GraphQL: Filter, Sort and Page Content Items",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Filters, ordering, paging and versions are arguments on every content type query. Your own parts can add filters to where, which the documentation describes. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
