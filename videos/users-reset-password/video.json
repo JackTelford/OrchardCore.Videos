@@ -1,0 +1,50 @@
+{
+  "title": "Reset Password: Let Users Recover Their Accounts | Orchard Core",
+  "description": "A user who forgets a password has to ask an administrator to change it.\n\nThe Users Reset Password feature adds a Forgot your password? link to the login page. The site emails the user a link, and the link opens a form for choosing a new password. An administrator enables the feature, provides an email provider, and allows the reset in the settings.\n\nIn this video:\n• How password recovery works and what the site needs\n• Enabling the feature and checking the email settings\n• Allowing password reset in the settings\n• A user asking for a reset link\n• The email the user receives\n• Choosing a new password and logging in\n• Limits, delivery problems and verified email addresses",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Reset Password",
+    "Forgot Password",
+    "Users",
+    "Email",
+    "SMTP",
+    "Authentication"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Users"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Users/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users.ResetPassword"
+  }
+}
