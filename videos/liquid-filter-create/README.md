@@ -1,6 +1,6 @@
 # Write a Liquid Filter
 
-**YouTube:** not published yet · **Length:** 3:54 · **Feature:** `OrchardCore.Liquid` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Liquid/))
+**YouTube:** not published yet · **Length:** 3:56 · **Feature:** `OrchardCore.Liquid` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Liquid/))
 
 A developer video for module authors. It shows how a template calls a filter and where a module registers one, then
 writes two filters: a delegate registered with `AddFilter`, and a class that implements `ILiquidFilter` and takes a

@@ -158,7 +158,7 @@
             },
             {
               "id": "template-4",
-              "text": "Save the template, then open the About page. The title appears in capital letters, followed by the title and the name of the site."
+              "text": "Save the template, then open the About page. The title appears in capital letters, then a slash, then the title, a dash, and the name of the site."
             }
           ]
         }
@@ -192,7 +192,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A filter is a delegate when it needs nothing, and an ILiquidFilter class when it needs services. Either way, it is registered when the tenant starts, and every Liquid template of the tenant can call it. Thanks for watching."
+              "text": "A filter is a delegate when it needs nothing and an ILiquidFilter class when it needs services, and either way it is registered when the tenant starts and every Liquid template of the tenant can call it. Thanks for watching."
             }
           ]
         }
