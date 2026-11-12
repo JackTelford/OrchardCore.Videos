@@ -186,7 +186,7 @@ SHARED_DATABASE = """
 
 DATABASE_NOTES_1 = [
     ("Set once", "At the root of OrchardCore."),
-    ("Shared by all", "No per-tenant database settings."),
+    ("Shared by all", "Every tenant uses them."),
     ("Default tenant", "Its own table prefix."),
 ]
 
