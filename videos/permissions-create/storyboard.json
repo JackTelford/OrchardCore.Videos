@@ -1,0 +1,212 @@
+{
+  "title": "Permissions: Declare Them and Check Them in Your Module",
+  "output": "permissions-create",
+  "spoken": {
+    "LocalizationSource.Create": "Localization Source dot Create",
+    "LocalizationSource": "Localization Source",
+    "IAuthorizationService": "I Authorization Service",
+    "IPermissionProvider": "I Permission Provider",
+    "AddPermissionProvider": "Add Permission Provider",
+    "GetPermissionsAsync": "Get Permissions Async",
+    "GetDefaultStereotypes": "Get Default Stereotypes",
+    "AuthorizeAsync": "Authorize Async",
+    "ManageWidgets": "Manage Widgets",
+    "ViewWidgets": "View Widgets",
+    "MyPermissions": "My Permissions",
+    "ImpliedBy": "Implied By",
+    "PO files": "P.O. files"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Permissions in Your Module",
+      "subtitle": "Declare a permission, give it to roles, and check it in code",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Permissions decide who can do what in an Orchard Core site. In this video, you declare permissions in your own module, see how the roles editor shows them, and check them in a controller, a view, and a menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a permission is",
+      "subtitle": "Names, roles and the three jobs of a module",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A permission is a name that stands for one right, such as ManageWidgets. A role holds a set of permission names, and a user receives the permissions of every role the user belongs to."
+            },
+            {
+              "id": "idea-2",
+              "text": "Some roles apply without an assignment. The Anonymous role applies to every visitor, and the Authenticated role applies to every signed-in user. Users in the Administrator role pass every permission check."
+            },
+            {
+              "id": "idea-3",
+              "text": "Your module has three jobs. Declare the permission, provide it to Orchard Core, and check it where the code needs it. The next chapters follow that order."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Declare a permission",
+      "subtitle": "A name and a description",
+      "clips": [
+        {
+          "id": "02-declare",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "declare-1",
+              "text": "Declare each permission once, as a static field of a static class. A Permission takes a name and a description, and the description comes from LocalizationSource.Create."
+            },
+            {
+              "id": "declare-2",
+              "text": "The name must be unique across every module, ignoring case. Roles store that name, so keep it stable. A duplicate is logged as an error at startup, and the roles editor shows Duplicate Permissions Detected."
+            },
+            {
+              "id": "declare-3",
+              "text": "Passing the declaring type, here MyPermissions, gives the description a translation context. The roles editor translates it with PO files, using the full name of that type as the context."
+            },
+            {
+              "id": "declare-4",
+              "text": "A permission can be security critical, for a right that lets a user elevate other permissions. The roles editor marks such a permission with a Security Critical badge."
+            },
+            {
+              "id": "declare-5",
+              "text": "A permission can also be implied by others. ViewWidgets lists ManageWidgets, so a user who holds ManageWidgets also passes a check for ViewWidgets."
+            },
+            {
+              "id": "declare-6",
+              "text": "To group permissions under a heading of your own, set Category. Without it, the roles editor uses the name of the feature that provides the permission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Provide your permissions",
+      "subtitle": "A provider and its registration",
+      "clips": [
+        {
+          "id": "03-provide",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "provide-1",
+              "text": "A class that implements IPermissionProvider lists the permissions of the module. GetPermissionsAsync returns every permission that the module declares."
+            },
+            {
+              "id": "provide-2",
+              "text": "GetDefaultStereotypes names roles and the permissions each one receives by default. A role with one of these names is granted them when the feature is first enabled, or when the role is created."
+            },
+            {
+              "id": "provide-3",
+              "text": "Stereotypes only add permissions to a role and never remove any. Built-in modules usually list the Administrator role too, but users in it pass every check without an entry."
+            },
+            {
+              "id": "provide-4",
+              "text": "Register the provider in Startup with AddPermissionProvider. When the module's feature is enabled, the roles editor lists its permissions, and roles can hold them."
+            },
+            {
+              "id": "provide-5",
+              "text": "A recipe can grant the permission by name too. In the Roles step, the default behavior replaces the permissions of a role, so use Add to keep the ones it already has. The step also sets the description of the role."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "See them in the roles editor",
+      "subtitle": "Where your permissions appear",
+      "clips": [
+        {
+          "id": "04-roles",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "roles-1",
+              "text": "The roles editor, under Access Control, Roles, lists the permissions of every enabled feature. Let's open the Manager role. The Roles module declares its own permissions with the code you have seen."
+            },
+            {
+              "id": "roles-2",
+              "text": "Permissions are grouped by the feature that provides them, shown by name and identifier. Each row shows the description from the code, and the Search permissions box filters the rows."
+            },
+            {
+              "id": "roles-3",
+              "text": "Manage Roles carries the Security Critical badge. This role is allowed it, so the Allow box is ticked."
+            },
+            {
+              "id": "roles-4",
+              "text": "View Roles is not ticked under Allow, but it is Effective, because Manage Roles implies it. That is the ImpliedBy list of the permission at work."
+            },
+            {
+              "id": "roles-5",
+              "text": "The Administrator role has no boxes to tick. Its editor says that this system role provides comprehensive access by granting all available permissions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Check a permission",
+      "subtitle": "Controllers, views and menus",
+      "clips": [
+        {
+          "id": "05-check",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "In a controller, inject IAuthorizationService and call AuthorizeAsync with the user and the permission. When the check fails, the action returns Forbid."
+            },
+            {
+              "id": "check-2",
+              "text": "The check succeeds when a role that applies to the user holds the permission, or a permission that implies it. For users in the Administrator role, it always succeeds."
+            },
+            {
+              "id": "check-3",
+              "text": "A view injects the same service to decide what to show. The Roles module hides its Add Role button from users who do not hold Manage Roles. Its controller still checks permissions in every action."
+            },
+            {
+              "id": "check-4",
+              "text": "A menu item takes a permission through the Permission method. The navigation removes the item, and its child items, for users who do not hold that permission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Permissions in Your Module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You declare a permission with a name and a description, provide it through IPermissionProvider, grant it to roles in the roles editor, and check it with AuthorizeAsync. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
