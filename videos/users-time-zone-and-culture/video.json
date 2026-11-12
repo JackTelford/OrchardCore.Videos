@@ -1,0 +1,47 @@
+{
+  "title": "User Time Zone and Culture: Personal Preferences for Each User | Orchard Core",
+  "description": "A site has one default time zone and one default culture, but the people who use it do not all work in the same place, and they do not all read dates and numbers the same way.\n\nThe User Time Zone and User Localization features add two fields to each user: Default Time Zone and Default User Culture. A user who chooses them sees dates and times in that time zone, written in that culture, while everyone else keeps the site's settings.\n\nIn this video:\n• Why personal preferences\n• Prepare the site: enable the two features and check the supported cultures\n• Choose a time zone and a culture on the page of a user\n• See the difference on a blog post\n• Which setting applies: defaults, profiles and visitors",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Users",
+    "Time zone",
+    "Culture",
+    "Localization"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Users"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Users/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Users/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Users.TimeZone"
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "title": "User Time Zone and Culture",
+  "output": "users-time-zone-and-culture",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "User Time Zone and Culture",
+      "subtitle": "Personal preferences for each user",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site has a default time zone and a default culture, but the people who use it do not all work in the same place. In this video, we give a user a personal time zone and culture, and see what changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why personal preferences",
+      "subtitle": "One site, many places",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "By default, everyone sees dates and times in the site's time zone, and the site decides how dates and numbers are written. An editor in Paris, on a site set to Los Angeles, reads Los Angeles time."
+            },
+            {
+              "id": "why-2",
+              "text": "The User Time Zone and User Localization features add a time zone and a culture to each user. A user who picks them sees dates and times in that time zone, written in that culture, while everyone else keeps the site's settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Prepare the site",
+      "subtitle": "Two features and the supported cultures",
+      "clips": [
+        {
+          "id": "02-prepare",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "prepare-1",
+              "text": "Here is a blog post on the site, which uses the Los Angeles time zone. The header says it was posted on March 14, 2026, and the month is written in English."
+            },
+            {
+              "id": "prepare-2",
+              "text": "To change that, let's enable two features. Under Tools, Features, a search for User Time Zone finds the feature that adds a time zone field to every user. Enable turns it on."
+            },
+            {
+              "id": "prepare-3",
+              "text": "Next, we enable User Localization, which adds a culture field. It depends on the Localization feature, listed beside it, which keeps the supported cultures and is enabled on this site."
+            },
+            {
+              "id": "prepare-4",
+              "text": "Under Settings, Localization, Cultures, a table lists the cultures the site supports, and one of them is the default. The Add culture button adds more. A user can only choose among these."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose a time zone and a culture",
+      "subtitle": "On the page of a user",
+      "clips": [
+        {
+          "id": "03-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "In Access Control, Users, every account has an Edit button. Let's edit the administrator, the account we are signed in with, so the result is visible straight away."
+            },
+            {
+              "id": "edit-2",
+              "text": "Further down the page are two fields: Default Time Zone and Default User Culture. Both start on the option that leaves the choice to the site, Use site's time zone and Use site's culture."
+            },
+            {
+              "id": "edit-3",
+              "text": "Default Time Zone lists time zones, each with its offset and name. Its hint says it determines the time zone used when displaying and editing dates and times. Let's choose Europe, Paris."
+            },
+            {
+              "id": "edit-4",
+              "text": "Default User Culture offers the cultures the site supports. Let's choose French and select Save. A message confirms the update, and because this is our own account, the change applies right away."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "See the difference",
+      "subtitle": "The same post, for this user",
+      "clips": [
+        {
+          "id": "04-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "Back on the blog post, the header shows the 15th, with the month written in French. The post was created in the evening of the 14th in Los Angeles, which is already the early morning of the 15th in Paris."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Which setting applies",
+      "subtitle": "Defaults, profiles and visitors",
+      "clips": [
+        {
+          "id": "05-order",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "order-1",
+              "text": "For the time zone, the user's choice comes first. If it is left on Use site's time zone, the Default Time Zone in Settings, General applies, where Local to server means the time zone of the server."
+            },
+            {
+              "id": "order-2",
+              "text": "For the culture, a personal choice applies to that user's pages, and only the cultures the site supports are offered. Use site's culture leaves the choice to the site, as for a visitor who is not signed in."
+            },
+            {
+              "id": "order-3",
+              "text": "An administrator sets these fields for any user from Access Control, Users, Edit. A user with the Edit own user information and Access admin panel permissions reaches them from Profile in the user menu. Visitors who are not signed in are never affected."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "User Time Zone and Culture",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how User Time Zone and User Localization give each user a personal time zone and culture. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
