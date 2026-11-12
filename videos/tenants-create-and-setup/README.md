@@ -1,6 +1,6 @@
 # Tenants: Create a Tenant and Set It Up
 
-**YouTube:** not published yet · **Length:** 5:22 · **Feature:** OrchardCore.Tenants ([Tenants documentation](https://docs.orchardcore.net/en/latest/reference/modules/Tenants/))
+**YouTube:** not published yet · **Length:** 5:23 · **Feature:** OrchardCore.Tenants ([Tenants documentation](https://docs.orchardcore.net/en/latest/reference/modules/Tenants/))
 
 The video adds a tenant from the administration of the Default tenant, in the two stages the module has: the Create Tenant
 form (name, category, description, Url Prefix, Hostname, recipe and database presets), then the Setup screen of the tenant

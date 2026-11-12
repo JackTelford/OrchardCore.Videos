@@ -16,7 +16,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "A tenant is a separate site that runs inside the same Orchard Core application. In this video you add a tenant from the administration of the Default tenant, finish its setup, and open the site it creates."
+              "text": "A tenant is a separate site that runs inside the same Orchard Core application. In this video you add a tenant from the administration of the Default tenant, the first site of the application, finish its setup, and open the site it creates."
             }
           ]
         }
@@ -74,7 +74,7 @@
             },
             {
               "id": "create-5",
-              "text": "Two tenants can't share the same combination of prefix and hostname. Here, the Default tenant has neither, so Maplewood needs at least one of them."
+              "text": "Two tenants can't share the same combination of prefix and hostname. The Default tenant has neither, so Maplewood needs at least one of them."
             },
             {
               "id": "create-6",
@@ -173,7 +173,7 @@
             },
             {
               "id": "open-3",
-              "text": "The Admin address of the site leads to its sign-in page. Setup creates the super user but doesn't sign anyone in, so the administration of Maplewood asks for a sign-in before it opens."
+              "text": "Open the Admin address of Maplewood, which is its prefix followed by Admin. It leads to a sign-in page, because Setup creates the super user but doesn't sign anyone in."
             }
           ]
         }
