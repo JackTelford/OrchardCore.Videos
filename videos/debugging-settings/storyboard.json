@@ -1,0 +1,165 @@
+{
+  "title": "Debugging settings in Orchard Core",
+  "output": "debugging-settings",
+  "spoken": {
+    "shape-start": "shape start",
+    "shape-end": "shape end"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Debugging settings in Orchard Core",
+      "subtitle": "Find the template behind any part of a page",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "While you build a site, you often need to know which template drew a part of a page. The Debugging settings answer that question. In this video, you'll turn on shape debug information, read the comments it adds, and see who can use it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How pages are built",
+      "subtitle": "Shapes and the templates that draw them",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Orchard Core builds a page from shapes. A shape holds the data to display, and what draws it, usually a template, is called its binding. Shapes sit inside other shapes, so a page is a tree of shapes, down to small fragments."
+            },
+            {
+              "id": "why-2",
+              "text": "A module provides a default template for a shape, and a theme can replace it with its own. Templates created in the admin can draw shapes too, so it can be hard to tell which one drew a part of a page."
+            },
+            {
+              "id": "why-3",
+              "text": "Shape debug information answers that question. When it is on, Orchard Core writes two HTML comments around each shape that a template or other binding draws. A browser does not display comments, so they appear only in the source of the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Turn on shape debug information",
+      "subtitle": "Settings, Debugging",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "In the admin menu, open Settings, and then Debugging. The Settings module is always enabled, so there is no feature to turn on first."
+            },
+            {
+              "id": "enable-2",
+              "text": "The page has one option, Write shape debug information, and it is off by default. Its hint says that it wraps rendered shapes in HTML comments, to help identify the template or binding that produced each fragment."
+            },
+            {
+              "id": "enable-3",
+              "text": "Let's check the box and select Save. A message reads, Site settings updated successfully, and the change applies to the running site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Read the comments",
+      "subtitle": "In the source of a page",
+      "clips": [
+        {
+          "id": "03-read",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "read-1",
+              "text": "Let's open the home page of the site. It looks like any other page, because a browser does not display HTML comments."
+            },
+            {
+              "id": "read-2",
+              "text": "To read the comments, we open the source of the page, which a browser offers as the command View page source. Orchard Core has written a comment before and after each shape that a template or other binding drew."
+            },
+            {
+              "id": "read-3",
+              "text": "A start comment begins with shape-start. After type, it gives the shape type. After bindings, it gives the binding name, an arrow, the template it came from, and in brackets the kind of binding."
+            },
+            {
+              "id": "read-4",
+              "text": "Shapes sit inside other shapes, so comments sit inside other comments. Each shape ends with a comment that begins with shape-end and repeats the type, so you can match every start with its end."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Turn it off",
+      "subtitle": "Leave the page source clean",
+      "clips": [
+        {
+          "id": "04-disable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "off-1",
+              "text": "The setting applies to the whole site and to every visitor, and the comments name the templates of your site. When you finish, return to Settings, Debugging, clear the box, and select Save."
+            },
+            {
+              "id": "off-2",
+              "text": "Let's reload the source of the home page. The comments are gone, and the source is as it was before you turned the setting on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Permissions and a related option",
+      "subtitle": "Who can use it, and what else helps",
+      "clips": [
+        {
+          "id": "05-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "The Debugging page requires the permission Manage debugging settings. The permission Manage settings includes it, together with Manage general settings. The Administrator role has them by default, and you can grant Manage debugging settings to another role."
+            },
+            {
+              "id": "rel-1",
+              "text": "Another option for building a site is Resource Debug Mode, on the General settings page. It decides whether scripts and stylesheets load in their debuggable or minified form. A separate video covers the General settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Debugging settings in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Debugging page has one option, Write shape debug information. Turn it on while you build, read the comments to find the template behind any part of a page, and turn it off when you finish. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
