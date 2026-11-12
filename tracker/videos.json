@@ -5690,9 +5690,9 @@
       "src/docs/reference/modules/DataPipelines/README.md",
       "src/docs/reference/modules/DataSources/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.2,
+    "words": 780,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

@@ -1,0 +1,217 @@
+{
+  "title": "Data Pipelines: Import Rows as Content Items",
+  "output": "data-pipelines-import",
+  "spoken": {
+    "CSV": "C.S.V."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Data Pipelines: Import Rows as Content Items",
+      "subtitle": "Create and update content items from the rows of a file",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Data pipelines can turn the rows of a file into content items. In this video, you import a list of products from a CSV file in the media library, check the result, and run the import a second time to update the items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How an import works",
+      "subtitle": "The file, the content type and the pipeline",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "An import needs three things: a file in the media library, a content type that receives the rows, and a pipeline that reads the file and saves each row. The formats include CSV files and Excel workbooks."
+            },
+            {
+              "id": "how-2",
+              "text": "The pipeline of an import has two steps. Read a media file reads the rows of the file. Save content items creates or updates one content item for each row, with the values you choose."
+            },
+            {
+              "id": "how-3",
+              "text": "Save content items treats a row in one of three ways. It updates the item a row matches or creates one, it creates items and skips matches, or it only updates and rejects the other rows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Read the file",
+      "subtitle": "Add a pipeline and its first step",
+      "clips": [
+        {
+          "id": "02-read",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "read-1",
+              "text": "You find the pipelines under Tools, Data Pipelines, Pipelines. The list is empty, so let's click Add Pipeline."
+            },
+            {
+              "id": "read-2",
+              "text": "A pipeline starts with a name. Let's type Import products, and click Create. The designer opens next."
+            },
+            {
+              "id": "read-3",
+              "text": "An empty pipeline offers the sources to start with. Let's choose Read a media file, which reads the rows of a file in the media library."
+            },
+            {
+              "id": "read-4",
+              "text": "In the File box, we enter the path of the file in the media library: the imports folder, and the products file. The format comes from the extension, and the first row holds the names of the columns."
+            },
+            {
+              "id": "read-5",
+              "text": "The Data tab previews the rows. After a click on Preview, the five rows of the file appear, with the columns Name, Price and Category, all of the type Text. The last row has no price."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Save content items",
+      "subtitle": "Choose the content type, the match and the values",
+      "clips": [
+        {
+          "id": "03-save",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "save-1",
+              "text": "Next, we add the step that saves the rows. A click on the output dot of Read a media file lists the steps that can come after it, and we choose Save content items."
+            },
+            {
+              "id": "save-2",
+              "text": "The Content type list holds the content types of the site. Let's choose Product. The user who publishes the pipeline must be allowed to edit, and to publish, items of this type."
+            },
+            {
+              "id": "save-3",
+              "text": "Once a type is chosen, the other settings appear. Rows decides what happens to each row, and we keep the default: update the item a row matches, or create one."
+            },
+            {
+              "id": "save-4",
+              "text": "Match on tells how a row finds its item: by content item id, or by display text, which is how the item is named in lists. The file has no ids, so we choose Display text and the field Name."
+            },
+            {
+              "id": "save-5",
+              "text": "Values connects the fields of the rows to the parts and fields of the items. Let's add three values: Name goes to Title, Price goes to Price, and Category goes to Category."
+            },
+            {
+              "id": "save-6",
+              "text": "Publish the items stays checked, so the items are published rather than saved as drafts. Items per save keeps its default. The Issues tab shows that nothing is left to fix."
+            },
+            {
+              "id": "save-7",
+              "text": "The Data tab of Save content items previews what the step would receive. A preview never runs a destination, so no content item is created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Publish and run",
+      "subtitle": "Import the rows",
+      "clips": [
+        {
+          "id": "04-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Runs use the published version of a pipeline, so let's click Publish. A published pipeline runs with the access of the user who published it."
+            },
+            {
+              "id": "run-2",
+              "text": "Let's click Run. The History tab lists the run, and its status changes to Succeeded when the import ends."
+            },
+            {
+              "id": "run-3",
+              "text": "A click on Open the run shows the page of the run. Under Delivered, the pipeline reports the result: four content items created, none updated, and one row rejected. The rejected row is the one without a price."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Check the result",
+      "subtitle": "The content items, and a second run",
+      "clips": [
+        {
+          "id": "05-check",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "Under Content, Content Items, the four products of the run are listed, each one named after its row."
+            },
+            {
+              "id": "check-2",
+              "text": "Opening one of them shows its price and its category, taken from the columns of the file."
+            },
+            {
+              "id": "again-1",
+              "text": "To import again, we go back to the list of pipelines. The Actions menu of the pipeline starts a run after a confirmation."
+            },
+            {
+              "id": "again-2",
+              "text": "This time every title already exists, so the four products are updated and none is created. Matching on the display text is what prevents duplicates. The row without a price is rejected again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Rows that cannot be saved",
+      "subtitle": "The Rejected output",
+      "clips": [
+        {
+          "id": "06-rejected",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rej-1",
+              "text": "Each item is validated before it is saved, as the editor would validate it. A row that fails leaves through the Rejected output of Save content items, with the reason in a field named Error."
+            },
+            {
+              "id": "rej-2",
+              "text": "To keep those rows, connect Rejected to Create a file, and then to Save to the media library. The result is a CSV file of the rejected rows and their reasons, ready to fix and import again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Data Pipelines: Import Rows as Content Items",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A data pipeline reads the rows of a file, saves them as content items, and updates those items on the next run. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
