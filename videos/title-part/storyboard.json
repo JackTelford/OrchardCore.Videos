@@ -1,0 +1,196 @@
+{
+  "title": "The Orchard Core Title part",
+  "output": "title-part",
+  "spoken": {
+    "Add & Configure": "Add and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Title part",
+      "subtitle": "Typed titles, generated titles and display text",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A content item needs a name you can recognize. The Title part gives a content type a title that an editor types, or that the site builds from other fields. We add the part, try its behaviors, and generate titles from a pattern."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why the Title part",
+      "subtitle": "Display text and four behaviors",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A content type describes a kind of content, such as a product, and each content item is one entry of that type. A content item can have a display text, which is the name the admin shows in its lists."
+            },
+            {
+              "id": "why-2",
+              "text": "An item without a display text is listed under the name of its content type, which makes items of one type hard to tell apart. The Title part gives a content type a title, and stores it as the display text."
+            },
+            {
+              "id": "why-3",
+              "text": "An editor can type the title, or the site can generate it from other fields of the item. A Behavior option on the part chooses between four settings: editable, editable and required, generated with the input disabled, or generated with the input hidden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add the Title part",
+      "subtitle": "Attach it to a content type and open its settings",
+      "clips": [
+        {
+          "id": "02-attach",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "attach-1",
+              "text": "Under Design, Content Definition, Content Types, you find every content type of the site. Let's click Edit on Product."
+            },
+            {
+              "id": "attach-2",
+              "text": "Add Parts lists the parts that you can attach to a type. Title is one of them. Add & Configure attaches it and opens its settings."
+            },
+            {
+              "id": "attach-3",
+              "text": "The settings of the part open. The Behavior option is Title is editable, which is the default. Render Title is checked, so the part renders the title in display views."
+            },
+            {
+              "id": "attach-4",
+              "text": "Placeholder sets the hint text of an empty Title field. Let's type Product title, and choose Title is editable and required as the Behavior option."
+            },
+            {
+              "id": "attach-5",
+              "text": "Save stores the settings on the Product type, and a message confirms that the part settings have been saved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Typed titles",
+      "subtitle": "Editable and required",
+      "clips": [
+        {
+          "id": "03-typed",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "typed-1",
+              "text": "On the Content Types page, Create New Product opens the editor for a product. It has a Title field, and the placeholder text shows in it."
+            },
+            {
+              "id": "typed-2",
+              "text": "Let's publish with the Title field empty. The title is required, so the item is not saved, and the message reads A value is required for Title."
+            },
+            {
+              "id": "typed-3",
+              "text": "Let's type Brightwater Camp Stove in the Title field and publish. The item is saved, and the Content Types page opens again."
+            },
+            {
+              "id": "typed-4",
+              "text": "List Items on the Product row shows its content items. The title you typed is the name of the item in the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Generated titles",
+      "subtitle": "Build the title from other fields",
+      "clips": [
+        {
+          "id": "04-generate",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "gen-1",
+              "text": "To generate titles, let's edit Product again and then edit the Title part. We choose Title is generated and input is disabled as the Behavior option."
+            },
+            {
+              "id": "gen-2",
+              "text": "The Pattern field appears. It takes a template that can read the fields of the item. Let's combine the Brand field and the Name field, with a space between them."
+            },
+            {
+              "id": "gen-3",
+              "text": "The editor cannot type in a generated title, so let's clear the Placeholder. Save stores the settings."
+            },
+            {
+              "id": "gen-4",
+              "text": "On the Content Types page, Create New Product opens the editor with the Title field disabled, and a hint says The title will be auto-generated using the pattern. We fill in Brightwater as the Brand and Trail Backpack as the Name, and publish."
+            },
+            {
+              "id": "gen-5",
+              "text": "List Items shows the item named Brightwater Trail Backpack. The site builds the title again each time the item is saved or published."
+            },
+            {
+              "id": "gen-6",
+              "text": "Edit opens the item in the editor. The Title field holds the generated title and stays disabled."
+            },
+            {
+              "id": "gen-7",
+              "text": "Back on the list, View opens the item on the site in a new tab. The heading of the page shows the same title."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Hidden Title field",
+      "subtitle": "Generate the title without showing the field",
+      "clips": [
+        {
+          "id": "05-hidden",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "hidden-1",
+              "text": "The last option hides the field. Let's edit the Title part again, choose Title is generated and input is hidden, and save. The same pattern builds the title."
+            },
+            {
+              "id": "hidden-2",
+              "text": "Back on the Content Types page, Create New Product shows no Title field at all. We fill in Brightwater as the Brand and Water Bottle as the Name, and publish."
+            },
+            {
+              "id": "hidden-3",
+              "text": "List Items shows Brightwater Water Bottle. Whichever option you choose, the title ends up as the display text of the content item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Title part",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Title part names your content items. Editors can type the title, the part can require it, or a pattern can generate it, with the field disabled or hidden. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
