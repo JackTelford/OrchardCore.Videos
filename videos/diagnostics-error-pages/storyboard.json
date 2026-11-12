@@ -72,7 +72,7 @@
             },
             {
               "id": "builtin-2",
-              "text": "To preview another status, open the Error route with its code. For 403, the Forbidden page appears. The Users module uses this page when access is denied, and opening the route directly does not cause an error."
+              "text": "To preview another status, open the Error route with its code. For 403, the Forbidden page appears. The Users module uses this page when access is denied."
             },
             {
               "id": "builtin-3",
@@ -122,15 +122,15 @@
             },
             {
               "id": "admin-2",
-              "text": "The name of a template is the name of the shape, so we type HttpError__NotFound. The Content field takes a Liquid template."
+              "text": "The name of a template is the name of the shape, so let's type HttpError__NotFound. The Content field takes a Liquid template."
             },
             {
               "id": "admin-3",
-              "text": "We write a heading, and pass its text through the t filter so it can be translated. Then we select Save, and the template appears in the list."
+              "text": "Let's write a heading, and pass its text through the t filter so it can be translated. Then select Save, and the template appears in the list."
             },
             {
               "id": "admin-4",
-              "text": "We request the missing page again. It shows our heading, in place of the built-in one."
+              "text": "Let's request the missing page again. It shows your heading in place of the built-in one."
             }
           ]
         },

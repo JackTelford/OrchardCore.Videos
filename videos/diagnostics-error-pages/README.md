@@ -1,6 +1,6 @@
 # Error Pages: Customize Not Found and Error Pages
 
-**YouTube:** not published yet · **Length:** 4:00 · **Feature:** `OrchardCore.Diagnostics` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Diagnostics/))
+**YouTube:** not published yet · **Length:** 3:56 · **Feature:** `OrchardCore.Diagnostics` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Diagnostics/))
 
 How the Orchard Diagnostics feature turns an error status into a page, and how to replace the page of a status: with a
 view in a theme (Razor or Liquid), or with a template written in the admin with the Templates feature. The video
