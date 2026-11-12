@@ -1,0 +1,243 @@
+{
+  "title": "Create a Content Type",
+  "output": "content-types-create",
+  "spoken": {
+    "Add & Configure": "Add and Configure",
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Create a Content Type",
+      "subtitle": "Add parts and fields to model your own content",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A content type defines a kind of content on your site, such as a page, a blog post, or an event. In this video, you create a type, add a part and fields to it, set their order, and create an item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a type is built",
+      "subtitle": "Types, parts and fields",
+      "clips": [
+        {
+          "id": "01-model",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "model-1",
+              "text": "Every content item belongs to a content type, such as a Page, a Blog Post, or an Event. What an editor fills in for an item comes from the parts and fields of its type."
+            },
+            {
+              "id": "model-2",
+              "text": "A part is a behavior that you attach to a type. The Title part, for example, gives every item of the type a title."
+            },
+            {
+              "id": "model-3",
+              "text": "A field holds a piece of data that you define, such as a venue, a number, or a date. The fields you add to a type live in a part that is named like the type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the type",
+      "subtitle": "A display name and a technical name",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "In the admin menu, open Design, Content Definition, Content Types. The page lists every content type of the site, with its technical name."
+            },
+            {
+              "id": "create-2",
+              "text": "Each row has buttons to list items, edit the type, and delete it, and one to create an item when the type is Creatable."
+            },
+            {
+              "id": "create-3",
+              "text": "Viewing types needs the View content types permission, and changing them needs Edit content types. The Administrator role has both. Let's select Create new type."
+            },
+            {
+              "id": "create-4",
+              "text": "Enter Event as the Display Name, which is the name that editors see on screens. The Technical Name fills in as you type."
+            },
+            {
+              "id": "create-5",
+              "text": "The technical name identifies the type, and it can't be changed later. It must start with a letter and contain no spaces or special characters, and a reserved or existing name is refused. Select Create."
+            },
+            {
+              "id": "create-6",
+              "text": "Orchard Core confirms that the content type has been created, and opens the Add Parts page for it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add parts",
+      "subtitle": "Give the type its behavior",
+      "clips": [
+        {
+          "id": "03-parts",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "parts-1",
+              "text": "The Add Parts page lists the parts that can be attached to the type, most with a short description. Which parts appear depends on the features enabled on the site. Let's tick Title, which adds a title to every item."
+            },
+            {
+              "id": "parts-2",
+              "text": "Add Selected Parts appears once a part is ticked. The Add & Configure button on a row adds only that part, and opens its settings. Let's select Add Selected Parts."
+            },
+            {
+              "id": "parts-3",
+              "text": "The Edit Content Type page opens. At the top are the names and the settings of the type, such as Creatable and Listable, which are turned on when a type is created. A separate video covers them."
+            },
+            {
+              "id": "parts-4",
+              "text": "Further down, under Parts, Title is listed with an Edit button, which opens the settings of the part, and a Remove button, which takes the part off the type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add fields",
+      "subtitle": "Store the values of your type",
+      "clips": [
+        {
+          "id": "04-fields",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "fields-1",
+              "text": "Under Fields, select Add Field. Enter Venue as the Display Name, and the Technical Name follows. A field stores a value for each content item of the type."
+            },
+            {
+              "id": "fields-2",
+              "text": "Field Type lists the kinds of value a field can hold, such as Text Field, Numeric Field, and Date Time Field. Venue is plain text, so select Text Field, then Save."
+            },
+            {
+              "id": "fields-3",
+              "text": "Save returns to the type, and Venue is listed under Fields. Under Parts, the part named Event appears too: its hint says that it contains the fields for the current type."
+            },
+            {
+              "id": "fields-4",
+              "text": "Let's add Starts as a Date Time Field. This time, select Save & Configure, to open the settings of the field."
+            },
+            {
+              "id": "fields-5",
+              "text": "The Technical Name of a field is read-only here. Tick Required, so that editors must fill the field in, and write a Hint, the help text that appears under the field in the editor. Then select Save."
+            },
+            {
+              "id": "fields-6",
+              "text": "Back on the type, Starts is listed with Venue. Let's add a third field the same way: Capacity, as a Numeric Field, and select Save."
+            },
+            {
+              "id": "fields-7",
+              "text": "Each field in the list has an Edit button, which reopens its settings, and a Remove button, which takes the field off the type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Set the order",
+      "subtitle": "Drag, then save",
+      "clips": [
+        {
+          "id": "05-order",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "order-1",
+              "text": "Once the type is saved, the editor of an item shows its parts and fields in the order of these lists. Let's drag Starts above Venue, so that the date comes first."
+            },
+            {
+              "id": "order-2",
+              "text": "Select Save. It stores the order of the parts and of the fields, and returns to the Content Types page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Create an item",
+      "subtitle": "See the type in the editor",
+      "clips": [
+        {
+          "id": "06-item",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "item-1",
+              "text": "The Content Types page lists Event, with its technical name. Select Create New Event to open the editor that the type produces."
+            },
+            {
+              "id": "item-2",
+              "text": "The editor shows the Title, then the fields in the order you set. Starts is marked with an asterisk, and the hint you wrote appears under it."
+            },
+            {
+              "id": "item-3",
+              "text": "Let's enter a title, a start, a venue, and a capacity. Save Draft stores a draft, and Publish publishes the item. Select Publish."
+            },
+            {
+              "id": "item-4",
+              "text": "Orchard Core confirms that the Event has been published. Select List Items on its row to see the item in the content list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Recap",
+      "subtitle": "Four steps from a name to an editor",
+      "clips": [
+        {
+          "id": "07-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "To recap: create the type with its names, attach the parts that give it behavior, add the fields that hold its values, and drag them into the order editors see."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Create a Content Type",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's a content type, built from parts and fields in the admin. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

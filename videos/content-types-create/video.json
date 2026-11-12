@@ -1,0 +1,49 @@
+{
+  "title": "Content Types: Create a Type and Add Parts and Fields | Orchard Core",
+  "description": "Every item of content on an Orchard Core site belongs to a content type, and the type decides what editors can enter. Without a type for your own kind of content, such as an event, there is no place for its title, its venue and its start.\n\nThe Content Types page of the admin creates a type from a Display Name and a Technical Name, attaches parts that give it behavior, adds fields that hold its values, and sets the order that editors see. This video builds an Event type from start to finish and creates an item with it.\n\nIn this video:\n• How a content type is built from parts and fields\n• Creating the type with a Display Name and a Technical Name\n• Adding the Title part\n• Adding Text, Date Time and Numeric fields, and configuring one\n• Setting the order of the fields and the parts\n• Creating an Event item with the type\n• A recap of the four steps",
+  "hashtags": [
+    "OrchardCore",
+    "ContentTypes",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Content Types",
+    "Content Type",
+    "Content Parts",
+    "Content Fields",
+    "Content Management",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Types"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentTypes/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentTypes"
+  }
+}
