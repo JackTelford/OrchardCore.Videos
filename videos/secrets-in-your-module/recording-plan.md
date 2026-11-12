@@ -187,7 +187,7 @@ provider of Orchard Core. Nothing is recorded for them.
 - `driver-4`: the `Succeeded` check that stores the result, and three cards about the outcomes.
 - `driver-5`: the Startup class that registers the site display driver.
 - `view-1`: the `_ViewImports.cshtml` tag helper line, and the editor row with the secret-input tag helper.
-- `view-2`: three cards: the Secrets feature disabled, enabled, and the placeholder attribute.
+- `view-2`: two cards: the Secrets feature disabled, enabled.
 - `runtime-1`: the GetSecretValueAsync call, and two cards (the secret first, otherwise the protected value).
 - `runtime-2`: the same call with the logger argument highlighted, and two cards (null when no value is available,
   the optional logger receives the reason, never the value).

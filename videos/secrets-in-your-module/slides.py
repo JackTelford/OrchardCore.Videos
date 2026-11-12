@@ -332,7 +332,6 @@ def slide(step_id, chapter_title, label):
         note_cards(image, [
             ("The Secrets feature is disabled", "A password input. The value is protected, and kept in the settings."),
             ("The Secrets feature is enabled", "A choice: User-specified value, or Use a secret."),
-            ("The placeholder attribute", "Optional. The placeholder of the value input."),
         ], (96, 260, W - 96, 1030))
         return image
 

@@ -1,6 +1,6 @@
 # Secrets in Your Module: Offer Secret Inputs in Your Settings
 
-**YouTube:** not published yet · **Length:** 5:14 · **Feature:** [`OrchardCore.Secrets`](https://docs.orchardcore.net/en/latest/reference/modules/Secrets/)
+**YouTube:** not published yet · **Length:** 5:16 · **Feature:** [`OrchardCore.Secrets`](https://docs.orchardcore.net/en/latest/reference/modules/Secrets/)
 
 A video for module authors. It shows the Password field of the SMTP email settings with and without the Secrets
 feature, then the code a module needs to offer the same secret input in its own settings: a settings class that keeps a

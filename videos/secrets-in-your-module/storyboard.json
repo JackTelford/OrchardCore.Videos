@@ -202,7 +202,7 @@
           "steps": [
             {
               "id": "migrate-1",
-              "text": "Optionally, let users move a stored value to a secret without typing it again. Add a display driver of SecretMigration, and register it only when the Secrets feature is enabled."
+              "text": "Optionally, let users move a stored value to a secret without typing it again, on the Migrate Secrets screen. Add a display driver of SecretMigration, and register it only when the Secrets feature is enabled."
             },
             {
               "id": "migrate-2",

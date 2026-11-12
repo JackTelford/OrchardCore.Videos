@@ -69,5 +69,5 @@ confirm before or while recording:
     "Get Secret Value Async", "Move To Secret Async", "Update Async", "Build Prefix", "secret input", "secret name".
     Also check "SMTP", "null" and "Data Protection".
 13. **Length.** The validator counts an identifier such as `SecretInputViewModel` as one word, and the voice says four.
-    The narration is 785 words (5:14 at 150 words per minute); after `narrate.py`, confirm in `durations.json` that the
+    The narration is 790 words (5:16 at 150 words per minute); after `narrate.py`, confirm in `durations.json` that the
     total is still close to 5 minutes (about 5:30 is expected).
