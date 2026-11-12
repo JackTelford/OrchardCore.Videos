@@ -1,0 +1,244 @@
+{
+  "title": "Orchard Core Media Uploads",
+  "output": "media-uploads",
+  "spoken": {
+    "Images & docs": "Images and docs",
+    "images-docs": "images dash docs",
+    "The team (2020).jpg": "The team 2020 dot J.P.G.",
+    "the-team-2020-1.jpg": "the dash team dash 2020 dash 1 dot J.P.G.",
+    "the-team-2020.jpg": "the dash team dash 2020 dot J.P.G.",
+    "The Team 2020.jpg": "The Team 2020 dot J.P.G.",
+    "retreat-video.mp4": "retreat dash video dot M.P. 4",
+    "office-tour.mp4": "office dash tour dot M.P. 4",
+    "summer-picnic.jpg": "summer dash picnic dot J.P.G.",
+    "SignalR": "Signal R"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Media Uploads",
+      "subtitle": "Slugified names, resumable uploads and live updates",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Names with spaces, large files, and several people working at once all affect uploads to the Media Library. Three features of the Media module handle them: Media Slugify, Media TUS Uploads, and Media SignalR. This video shows what each one does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Three upload features",
+      "subtitle": "What each one is for",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "By default, the Media Library keeps names as you type them, and spaces and symbols end up in the web address of a file. Media Slugify cleans the name of each folder you create and each file you upload."
+            },
+            {
+              "id": "why-2",
+              "text": "A large file takes time to upload, and a lost connection stops the default upload. Media TUS Uploads sends a file in parts, so you can pause it, resume it, and continue after an interruption."
+            },
+            {
+              "id": "why-3",
+              "text": "A Media Library open in one window does not update by itself when another window changes the files. Media SignalR keeps the file list of every open Media Library up to date."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "All three are features of the Media module, and all three are disabled until you enable them. Under Tools, Features, let's search for media."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's enable Media Slugify, then Media TUS Uploads. After each one, a message at the top of the page confirms that the feature was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Media SignalR depends on the SignalR feature, so enabling Media SignalR also enables SignalR."
+            },
+            {
+              "id": "enable-4",
+              "text": "Under Settings, Media, Options, Temporary file lifetime is the lifetime of the temporary files that an upload creates. Further down, SignalR and TUS uploads show a check mark."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Slugified names",
+      "subtitle": "Clean names for folders and files",
+      "clips": [
+        {
+          "id": "03-names",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "names-1",
+              "text": "Letters become lowercase, and spaces and most symbols between words become a single dash. The folder Images & docs is stored as images-docs, and the file The team (2020).jpg is stored as the-team-2020.jpg."
+            },
+            {
+              "id": "names-2",
+              "text": "The public address of a file is built from the stored names. Names that exist before you enable the feature stay as they are, and so does a file you rename."
+            }
+          ]
+        },
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "In Media, Library, the folder Team Photos was created before Media Slugify was enabled. Its name, and the name of the file inside it, keep their capital letters and spaces."
+            },
+            {
+              "id": "create-2",
+              "text": "Let's create a folder. The menu button of the Files folder offers Create a subfolder."
+            },
+            {
+              "id": "create-3",
+              "text": "Let's type Images & docs and select Ok. The folder tree lists the folder as images-docs."
+            },
+            {
+              "id": "create-4",
+              "text": "In images-docs, let's select Upload files and choose The team (2020).jpg. The list shows the stored name, the-team-2020.jpg."
+            },
+            {
+              "id": "create-5",
+              "text": "Two different names can give the same slug. With Media TUS Uploads enabled, a second picture named The Team 2020.jpg is saved as the-team-2020-1.jpg, with a number at the end."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Resumable uploads",
+      "subtitle": "Pause, resume and recover",
+      "clips": [
+        {
+          "id": "04-resume",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "resume-1",
+              "text": "In the folder images-docs, Media TUS Uploads sends a file in parts. Let's upload a large file, retreat-video.mp4, with Upload files."
+            },
+            {
+              "id": "resume-2",
+              "text": "The Uploads panel at the bottom right shows the progress and the speed of each file. If the connection breaks for a moment, the upload tries again by itself."
+            },
+            {
+              "id": "resume-3",
+              "text": "The pause button stops the transfer. The progress bar stays where it is, and the parts already sent stay on the server."
+            },
+            {
+              "id": "resume-4",
+              "text": "Selecting the button again, which shows a play icon, continues from that point instead of starting over. When the upload ends, the file is in the list."
+            },
+            {
+              "id": "resume-5",
+              "text": "Closing the page keeps the parts already sent as well. Let's start another upload, office-tour.mp4, and reload the page while it is under way."
+            },
+            {
+              "id": "resume-6",
+              "text": "Selecting the same file again continues the upload from the parts the server kept. The file joins the list once it is complete."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Live updates",
+      "subtitle": "Every open window stays up to date",
+      "clips": [
+        {
+          "id": "05-live",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "live-1",
+              "text": "Media SignalR connects each open Media Library to the server. The folder images-docs is open in this window, and in a second browser window."
+            },
+            {
+              "id": "live-2",
+              "text": "In the second window, let's upload summer-picnic.jpg to the same folder."
+            },
+            {
+              "id": "live-3",
+              "text": "Back in the first window, the file is already in the list, and the page was not reloaded."
+            },
+            {
+              "id": "live-4",
+              "text": "Renaming, moving, copying and deleting a file are announced the same way. When the file is deleted in the other window, it disappears from this list."
+            },
+            {
+              "id": "live-5",
+              "text": "Updates cover the files of the folder you are viewing, and only for folders you are allowed to manage. Without Media SignalR, a window shows the changes of others only after you reload the page or open a folder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Several servers",
+      "subtitle": "What to plan for in production",
+      "clips": [
+        {
+          "id": "06-servers",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "servers-1",
+              "text": "By default, a resumable upload keeps its parts in a temporary folder and its progress in a cache. On several servers, all the parts of a file must reach the same server, or the servers must share the folder and the Redis Cache feature."
+            },
+            {
+              "id": "servers-2",
+              "text": "Live updates need a backplane, which the SignalR Azure Backplane or SignalR Redis Backplane feature provides. Without one, updates reach only windows connected to the same server."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Media Uploads",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Media Slugify cleans the names of folders and files, Media TUS Uploads makes large uploads resumable, and Media SignalR keeps every open Media Library up to date. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
