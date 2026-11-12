@@ -100,3 +100,6 @@ narration as a fact beyond what the source shows.
     `docs/getting-started/starter-recipes.md`. `embeddedIn` keeps the tracker's page; if the iframe is added to the
     Themes page it will sit beside text about another subject. Consider embedding the video in the Starter Recipes
     page, under "ComingSoon Recipe and TheComingSoonTheme".
+
+18. **Pronunciation of InputFieldName** (`edit-3`). A `spoken` entry "Input Field Name" was added for the label
+    InputFieldName; confirm with `scripts/pronounce.py` that the voice reads it naturally.

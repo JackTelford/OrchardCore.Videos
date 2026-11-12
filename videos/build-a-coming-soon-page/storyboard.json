@@ -1,7 +1,9 @@
 {
   "title": "Launch a Coming Soon Page While You Build Your Site",
   "output": "build-a-coming-soon-page",
-  "spoken": {},
+  "spoken": {
+    "InputFieldName": "Input Field Name"
+  },
   "chapters": [
     {
       "id": "00",
@@ -14,7 +16,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "A site that is still being built needs a page for the visitors who arrive early. Let's set up a Coming Soon page, change its message, see how sign-ups work, and learn how to replace the page at launch."
+              "text": "A site under construction needs a page for the visitors who arrive early. Let's set up a Coming Soon page, change its message, see how sign-ups work, and learn how to replace the page at launch."
             }
           ]
         }
@@ -31,7 +33,7 @@
           "steps": [
             {
               "id": "why-1",
-              "text": "A site that is not ready still has an address. A visitor who arrives early finds nothing useful, and has no way to leave an email address to hear when the site opens."
+              "text": "A site that is not ready has an address. A visitor who arrives early finds nothing useful, and has no way to leave an email address to hear when the site opens."
             },
             {
               "id": "why-2",
@@ -195,7 +197,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A Coming Soon page tells early visitors when to return and collects their email addresses while you build. When the site is ready, a home page and a theme of your choice replace it. Thanks for watching."
+              "text": "A Coming Soon page tells early visitors when to return and collects their email addresses, until a home page and a theme of your choice replace it. Thanks for watching."
             }
           ]
         }
