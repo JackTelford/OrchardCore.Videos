@@ -1,0 +1,230 @@
+{
+  "title": "Lucene Query Syntax",
+  "output": "lucene-query-syntax",
+  "spoken": {
+    "Content.ContentItem.DisplayText.Analyzed": "Content dot Content Item dot Display Text dot Analyzed",
+    "Content.ContentItem.DisplayText.Normalized": "Content dot Content Item dot Display Text dot Normalized",
+    "Content.ContentItem.FullText": "Content dot Content Item dot Full Text",
+    "MultiFieldQueryParser": "Multi Field Query Parser",
+    "QueryParser": "Query Parser",
+    "query_string": "query string",
+    "*:*": "star colon star"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Lucene Query Syntax",
+      "subtitle": "Write precise search queries",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "When a visitor types into the search box of an Orchard Core site with a Lucene index, the text is read as a Lucene query. In this video, you see how it is parsed, and how operators, phrases, wildcards, fields and ranges sharpen a search."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a query is read",
+      "subtitle": "From the search box to the parser",
+      "clips": [
+        {
+          "id": "01-parser",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "parse-1",
+              "text": "The search page hands the typed text to the Lucene search service. The service creates a MultiFieldQueryParser from the index's default fields and its analyzer, and parses the text into a query. If parsing fails, it logs the error and returns no results."
+            },
+            {
+              "id": "parse-2",
+              "text": "Three things shape every search. A word with no field name is searched in the default fields, normally the full-text field. The standard analyzer lowercases terms and drops common English words, and a query that cannot be parsed finds nothing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Boolean operators",
+      "subtitle": "Combine, require and exclude words",
+      "clips": [
+        {
+          "id": "02-operators",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "op-1",
+              "text": "Let's search for quince cider. With no operator between the words, a query finds documents that contain either word, so the page lists three posts."
+            },
+            {
+              "id": "op-2",
+              "text": "The operator AND, in capital letters, requires both words. Quince AND cider lists only the one post that mentions both."
+            },
+            {
+              "id": "op-3",
+              "text": "In lowercase, and is not an operator. The analyzer drops it as a common word, so quince and cider behaves like the first query and lists three posts again."
+            },
+            {
+              "id": "op-4",
+              "text": "A plus sign requires the word that follows it, and the other word stays optional. Plus quince cider lists the two posts that mention quince."
+            },
+            {
+              "id": "op-5",
+              "text": "NOT excludes documents that contain the next word. A minus sign or an exclamation mark does the same, but a hyphen inside a word excludes nothing. Quince NOT pruning leaves one post."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Phrases and proximity",
+      "subtitle": "Words side by side, or close together",
+      "clips": [
+        {
+          "id": "03-phrases",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "phrase-1",
+              "text": "Quotation marks search for words side by side, in that order. Fruit trees in quotation marks lists the two posts where the words are next to each other."
+            },
+            {
+              "id": "phrase-2",
+              "text": "A tilde and a number after a phrase allow up to that many words between its words. This is a proximity search. Pruning trees with tilde two lists two posts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Wildcards, fuzzy terms and patterns",
+      "subtitle": "Match words you only partly know",
+      "clips": [
+        {
+          "id": "04-wildcards",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "wild-1",
+              "text": "A question mark stands for exactly one character. Replace the letter i of quince with a question mark, and the query still lists both posts that contain quince."
+            },
+            {
+              "id": "wild-2",
+              "text": "An asterisk stands for any number of characters, including none. The letters p r u n followed by an asterisk list the two posts that contain pruning."
+            },
+            {
+              "id": "wild-3",
+              "text": "A wildcard at the start of a term is rejected. An asterisk followed by i n c e cannot be parsed, so the page shows There are no such results."
+            },
+            {
+              "id": "wild-4",
+              "text": "A tilde after a single word is a fuzzy search. It finds words within two edits of the one typed, so the misspelling quinse still lists both posts that contain quince."
+            },
+            {
+              "id": "wild-5",
+              "text": "A pattern between forward slashes is a regular expression, and it must match a whole term. This one matches terms that begin with p r and end with i n g, so pruning and pressing both count."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Fields, groups and ranges",
+      "subtitle": "Search one field, or between two values",
+      "clips": [
+        {
+          "id": "05-names",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "fields-1",
+              "text": "Every indexed value has a field name. The display text is indexed as Content.ContentItem.DisplayText.Analyzed, and the full text as Content.ContentItem.FullText. A field of a content part is named after its part and its own name, once it is included in the index."
+            }
+          ]
+        },
+        {
+          "id": "05-fields",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "fields-2",
+              "text": "A field name and a colon limit a term to that field. Here quince must appear in the display text, so the page lists the pruning post, not the one that mentions quince in its body."
+            },
+            {
+              "id": "fields-3",
+              "text": "Only the term right after the colon belongs to the field. Parentheses put several terms under one field, and operators work inside them. Fruit AND trees lists the one post whose title has both words."
+            },
+            {
+              "id": "fields-4",
+              "text": "Square brackets and the word TO make a range that includes both ends, and curly braces leave the ends out. The Normalized field holds the lowercase title, so p TO r lists the three titles starting with p."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Lucene queries",
+      "subtitle": "The same syntax in a query_string query",
+      "clips": [
+        {
+          "id": "06-saved",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "saved-1",
+              "text": "Lucene queries accept the same syntax in a query_string query, such as one run from Search, Queries, Run Lucene Query. The text goes to a QueryParser, with the default field from the query, which is empty when omitted."
+            },
+            {
+              "id": "saved-2",
+              "text": "There, a query that cannot be parsed shows an error that starts with Invalid query. And *:* matches every document in the index, whatever its content type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Common mistakes",
+      "subtitle": "Four habits that avoid surprises",
+      "clips": [
+        {
+          "id": "07-habits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "habits-1",
+              "text": "Four habits avoid most surprises: write AND, OR and NOT in capital letters, put a range inside brackets, put a space before a minus sign, and never start a term with a wildcard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Lucene Query Syntax",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how the search box reads a query: default fields, an analyzer, and Lucene's classic syntax for operators, phrases, wildcards, fields and ranges. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
