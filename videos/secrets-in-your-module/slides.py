@@ -175,7 +175,7 @@ if (context.Updater.ModelState.IsValid)
     // ...
     if (hasChanges)
     {
-        _optionsUpdateNotifier.RequestUpdate<SmtpOptions>();
+        _optionsUpdateNotifier.RequestUpdate<SmtpOptions>(); // and the options that build on it
     }
 }
 
