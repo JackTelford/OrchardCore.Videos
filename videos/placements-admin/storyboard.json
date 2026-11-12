@@ -1,0 +1,213 @@
+{
+  "title": "The Orchard Core Placements module",
+  "output": "placements-admin",
+  "spoken": {
+    "MediaField_Edit": "Media Field underscore Edit",
+    "TextField_Edit": "Text Field underscore Edit",
+    "BlogPost-Image": "Blog Post dash Image",
+    "BlogPost-Subtitle": "Blog Post dash Subtitle",
+    "\"-\"": "dash",
+    "IPlacementStore": "I Placement Store",
+    "placement.json": "placement dot JSON",
+    "PlacementsDocument.json": "Placements Document dot JSON",
+    "App_Data/Sites": "App Data slash Sites"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Placements module",
+      "subtitle": "Edit placement rules from the admin",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Placement rules decide where shapes appear, and they usually live in a file of a module or a theme. The Placements module edits the same rules from the admin. We'll create one, start another from a content type, and see where they're stored."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the Placements module works",
+      "subtitle": "Rules in the admin, applied over files",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A placement.json file belongs to a module or a theme. Each property is a shape type, and its value is an array of rules, so changing a rule means changing the project."
+            },
+            {
+              "id": "why-2",
+              "text": "The Placements module keeps the same shape types and rules with the site instead. You edit them in the admin, and by default they're saved in the database."
+            },
+            {
+              "id": "why-3",
+              "text": "When a theme or a module also places the shape, the Placements module takes precedence. A location in its rule replaces theirs, and its alternates and wrappers are added to theirs."
+            },
+            {
+              "id": "why-4",
+              "text": "In the Placements module, every rule of a shape type that matches applies, from the first to the last. A later place replaces an earlier one, and alternates and wrappers accumulate."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enabling the module",
+      "subtitle": "Two features in the Development category",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Placements is a feature of the Placements module. It's listed under Tools, Features, in the Development category, so let's search for placements."
+            },
+            {
+              "id": "enable-2",
+              "text": "Two features match. Placements adds the admin pages and saves rules in the database, while Placements file storage depends on it and saves them in a file. Let's enable Placements."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Creating a placement",
+      "subtitle": "A shape type and its rules",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "With the feature enabled, Design, Placements lists the placements of the site. It's empty until you add one, so let's select Add Placement."
+            },
+            {
+              "id": "create-2",
+              "text": "A placement is a shape type and its rules. Let's enter MediaField_Edit, the shape of the editor of a media field."
+            },
+            {
+              "id": "create-3",
+              "text": "The rules are a JSON array in a code editor, starting with one empty rule. Saving it as it is shows an error, because a rule needs a place, a shape, wrappers, or alternates."
+            },
+            {
+              "id": "create-4",
+              "text": "Let's replace it with a rule for the Image field of the BlogPost part. The differentiator, BlogPost-Image, names the part and the field, and a place of \"-\" hides the shape."
+            },
+            {
+              "id": "create-5",
+              "text": "Save returns to the list, where the placement is a row named after its shape type. Edit reopens its rules, Delete removes the placement, and the search box filters the list by shape type."
+            },
+            {
+              "id": "create-6",
+              "text": "Let's check the result in the editor of a blog post. The Banner Image field, whose technical name is Image, is gone, because the rule hides its editor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Shortcuts in content type settings",
+      "subtitle": "Start from the differentiator of a field",
+      "clips": [
+        {
+          "id": "04-shortcuts",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "shortcut-1",
+              "text": "The settings of a content part, of a part in a type, and of a field link to placements. Let's open Content Types, edit the Blog Post type, and then edit its Subtitle field."
+            },
+            {
+              "id": "shortcut-2",
+              "text": "The field settings have an Edit placements button. Its menu lists a placement for the field, one for detail views, one for summary views, and one for the admin editor."
+            },
+            {
+              "id": "shortcut-3",
+              "text": "The editor entry opens Edit Placement with the shape type TextField_Edit, and a rule whose differentiator, BlogPost-Subtitle, is already filled in."
+            },
+            {
+              "id": "shortcut-4",
+              "text": "The rule needs a place, so let's add a place of \"-\", which hides the shape, and save."
+            },
+            {
+              "id": "shortcut-5",
+              "text": "Save returns to the field settings. In Design, Placements, the list holds both placements, sorted by shape type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Where placements are stored",
+      "subtitle": "The database, or a file",
+      "clips": [
+        {
+          "id": "05-store",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "store-1",
+              "text": "A service that implements IPlacementStore loads and saves the placements. The module registers a database store by default, so placements are part of the data of the site."
+            },
+            {
+              "id": "store-2",
+              "text": "Enabling Placements file storage replaces that registration with a file store. The placements are then saved in PlacementsDocument.json, in the folder of the tenant under App_Data/Sites."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Recipes and deployment",
+      "subtitle": "Move placements between sites",
+      "clips": [
+        {
+          "id": "06-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "In a recipe, the Placements step holds an object with one property per shape type, each an array of rules. Executing the step saves the rules of every shape type it lists, replacing the existing ones."
+            },
+            {
+              "id": "recipe-2",
+              "text": "With the Deployment module enabled, a deployment plan can include the All Placements step. It exports every placement of the site as a Placements step in this format, so another site can import them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Placements module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Placements module: the rules of a placement file, edited in the admin, saved in the database or a file, and moved between sites with recipes. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
