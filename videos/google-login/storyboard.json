@@ -1,0 +1,182 @@
+{
+  "title": "Google Sign-In in Orchard Core",
+  "output": "google-login",
+  "spoken": {
+    "CallbackPath": "Callback Path",
+    "signin-google": "sign in google",
+    "URI": "U.R.I."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Google Sign-In in Orchard Core",
+      "subtitle": "Let users sign in with their Google Account",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core can let people sign in with their Google Account. The Google Authentication feature adds a Google button to the login page. This video covers enabling the feature, entering the credentials from Google, and finding the button on the login page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How Google sign-in works",
+      "subtitle": "What Google provides and what Orchard Core does",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "With Google Authentication, the login page shows a Google button next to the login form. A person selects it, signs in at Google, and approves access. Google then sends the person back to your site."
+            },
+            {
+              "id": "how-2",
+              "text": "Google needs to know about your site first. In the Google API console, you create credentials for your application, and you get a Client ID and a client secret. You also register an authorized redirect URI that points to your site."
+            },
+            {
+              "id": "how-3",
+              "text": "When Google sends the person back, Orchard Core signs in the user linked to that Google Account. If a user has the same email address, the person links the accounts with that user's password. Otherwise, the person registers, unless external registration is disabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Google Authentication in the Features list",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "The feature is part of the Google module. Let's open Tools, Features, and search for Google."
+            },
+            {
+              "id": "enable-2",
+              "text": "Google Analytics, Google Authentication, and Google Tag Manager share the Google category. Google Authentication authenticates users with their Google Account, and it depends on External Authentication."
+            },
+            {
+              "id": "enable-3",
+              "text": "Let's select Enable on Google Authentication. External Authentication is enabled with it, and a message confirms that Google Authentication was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enter the credentials",
+      "subtitle": "Client ID and API secret key",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Google Authentication adds an entry to the admin menu: Settings, Security, Authentication, Google. Let's open it."
+            },
+            {
+              "id": "settings-2",
+              "text": "A warning says the website might be restarted when you save the settings, which can make it unresponsive for a moment. A link opens the documentation."
+            },
+            {
+              "id": "settings-3",
+              "text": "Under Google Authentication Settings, Client ID is marked as required. Let's type the client ID that Google created for your application."
+            },
+            {
+              "id": "settings-4",
+              "text": "API secret key takes the client secret from Google. It's a password field. What you type is stored encrypted, and it's never shown again."
+            },
+            {
+              "id": "settings-5",
+              "text": "CallbackPath is the path where Google returns the person to your site. Leave it empty to use the default, signin-google, which is its placeholder. The redirect URI you register in Google must use the same path."
+            },
+            {
+              "id": "settings-6",
+              "text": "Store tokens keeps the external authentication tokens for reuse. It's cleared by default, and let's leave it that way."
+            },
+            {
+              "id": "settings-7",
+              "text": "Let's select Save. A message confirms that the site settings were updated, and the API secret key field stays empty. Its placeholder says the value is securely stored."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The login page",
+      "subtitle": "The Google button",
+      "clips": [
+        {
+          "id": "04-login",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "Let's open the login page. Next to the Log in form, a section titled Use another service to log in lists the external services."
+            },
+            {
+              "id": "login-2",
+              "text": "It holds one button, labeled Google. The button appears only when a Client ID and an API secret key are both saved."
+            },
+            {
+              "id": "login-3",
+              "text": "Selecting Google sends the browser to Google, where the person signs in and approves access. The credentials in this video are fake, so let's stop here."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Related settings",
+      "subtitle": "Permissions, secrets and other sign-in settings",
+      "clips": [
+        {
+          "id": "05-related",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "related-1",
+              "text": "Two more things apply to this page. The Administrator role has the permission to manage Google Authentication settings. And when the Secrets feature is enabled, the API secret key can come from a secret instead of a typed value."
+            },
+            {
+              "id": "related-2",
+              "text": "The External Login tab, in the User Login settings, can send people straight to Google when it is the only service. The External Authentication tab, in the Registration settings, controls registration through an external service. A separate video covers both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Google Sign-In in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "To let people sign in with Google, enable Google Authentication, enter the Client ID and API secret key from Google, and save. The Google button then appears on the login page. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

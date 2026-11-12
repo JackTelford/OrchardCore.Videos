@@ -1,0 +1,47 @@
+{
+  "title": "Google Sign-In: Let Users Sign In With Google | Orchard Core",
+  "description": "People who already have a Google Account have to create and remember another password to sign in to a site.\n\nThe Google Authentication feature of Orchard Core adds a Google button to the login page. You enter the Client ID and the client secret from the Google API console, save the settings, and people can sign in with their Google Account. The credentials in this video are fake.\n\nIn this video:\n• How Google sign-in works\n• Enable the feature\n• Enter the credentials\n• The login page\n• Related settings",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Google Sign-In",
+    "Google Authentication",
+    "External Authentication",
+    "Login"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "External Authentication"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Google/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Google/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Google.GoogleAuthentication"
+  }
+}
