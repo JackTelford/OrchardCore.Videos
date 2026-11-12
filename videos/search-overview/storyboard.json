@@ -1,0 +1,235 @@
+{
+  "title": "Site Search in Orchard Core",
+  "output": "search-overview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Site Search in Orchard Core",
+      "subtitle": "From enabled features to a working search page",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Visitors expect to find a page by typing a few words. In this video, let's set up site search for an Orchard Core site: the features, an index, the default index, the permission for visitors, and a search box on your pages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How site search works",
+      "subtitle": "An index, a provider and a search page",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "An index stores your content items for searching. By default, a search looks words up in the full text of each item: its title and its body. When someone publishes, changes or removes an item, Orchard Core updates the index."
+            },
+            {
+              "id": "how-2",
+              "text": "A search provider creates and queries indexes. Elasticsearch and Azure AI Search keep their indexes in a separate service. Lucene keeps its indexes in files on the server that runs your site, so this video uses it."
+            },
+            {
+              "id": "how-3",
+              "text": "The Search feature adds the search page and the Search Form widget. Visitors need permission to query an index, which you grant to a role."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Lucene and Search",
+      "short": "features",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Let's start at Search, Indexes, on a Blog site. Select Add index: the dialog lists the available sources, and with no provider enabled it asks you to enable a feature which provides an index source."
+            },
+            {
+              "id": "features-2",
+              "text": "Open Tools, Features, and filter the list for Lucene. Select Enable on the row named Lucene, and the page reloads with a message that names the feature."
+            },
+            {
+              "id": "features-3",
+              "text": "Search is the second feature to enable. Filter the list for frontend search, words from its description, and select Enable on the Search row."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create an index",
+      "subtitle": "Content in Lucene",
+      "short": "index",
+      "clips": [
+        {
+          "id": "03-index",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "index-1",
+              "text": "Back at Search, Indexes, select Add index. The Available Sources dialog groups the sources by provider. Under Lucene, Content in Lucene builds an index from the content items of your site, so select Add."
+            },
+            {
+              "id": "index-2",
+              "text": "Index Name is the name of the index in the provider, and it cannot change once the index exists. Name is the unique name that the settings, the permission and the search address use. Type website in Index Name, and Name follows."
+            },
+            {
+              "id": "index-3",
+              "text": "Content types lists the types to index, and at least one is required. Select Blog Post and Article. Culture stays on Any culture, and the other options keep their defaults."
+            },
+            {
+              "id": "index-4",
+              "text": "Select Save. A message confirms that the index was created and that synchronizing runs in the background. The index appears in the list with the labels Lucene and Content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose the default index",
+      "subtitle": "Settings, Search, Site Search",
+      "short": "settings",
+      "clips": [
+        {
+          "id": "04-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Open Settings, Search, Site Search. Default search index lists the indexes you created. Select website, which the search page queries unless the address names another index."
+            },
+            {
+              "id": "settings-2",
+              "text": "Placeholder is the text that the search box of the search page shows before a visitor types. Enter Search articles and posts, and select Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Let visitors search",
+      "subtitle": "The query permission of an index",
+      "short": "permission",
+      "clips": [
+        {
+          "id": "05-permission",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "permission-1",
+              "text": "A visitor can only search an index that the visitor has permission to query. Open Access Control, Roles, and edit Anonymous, the role of visitors who are not signed in."
+            },
+            {
+              "id": "permission-2",
+              "text": "Filter the permissions for Query 'website' Index, and select it. Then select Save. The permission Query any index covers every index, and the Administrator role has it by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add a search box",
+      "subtitle": "The Search Form widget",
+      "short": "widget",
+      "clips": [
+        {
+          "id": "06-widget",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "widget-1",
+              "text": "A widget puts the search box on your pages. Open Design, Widgets, where zones are the regions of a page in which widgets appear. In the Footer zone, select Add Widget, and choose Search Form."
+            },
+            {
+              "id": "widget-2",
+              "text": "Enter a Title, and select the Always layer, so the widget appears on every page. Enter a Placeholder for the widget's box, which is required. Leave Index Name empty to use the default index, and select Publish."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Search as a visitor",
+      "subtitle": "From the home page to the results",
+      "short": "search",
+      "clips": [
+        {
+          "id": "07-visitor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "visitor-1",
+              "text": "Let's search as a visitor: this browser is not signed in. The search box sits at the bottom of the home page, so type harvest, and select Search."
+            },
+            {
+              "id": "visitor-2",
+              "text": "The search page lists the content items that match: the two posts that mention harvest. Each result links to its content item."
+            },
+            {
+              "id": "visitor-3",
+              "text": "Let's clear the search box of the page: once it is empty, it shows the placeholder from the Site Search settings."
+            },
+            {
+              "id": "visitor-4",
+              "text": "A search that matches nothing says so. Let's search for zebra: the page shows the message \"There are no such results.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Keep an index in step",
+      "subtitle": "Synchronize, Reset and Rebuild",
+      "clips": [
+        {
+          "id": "08-maintain",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "maintain-1",
+              "text": "An index follows your content on its own. When an index falls out of step, open Search, Indexes: each index offers Synchronize, Reset and Rebuild, and a separate video covers when to use each one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Site Search in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A search provider, an index, the Search feature and a query permission give visitors a search page, and the Search Form widget adds a search box to your pages. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
