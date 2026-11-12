@@ -1,0 +1,58 @@
+{
+  "title": "Orchard Core: What It Is and What You Can Build | Orchard Core",
+  "description": "Orchard Core is both a content management system and an application framework for ASP.NET Core, and it is hard to choose where to start without a picture of the whole.\n\nThis video explains what Orchard Core is, shows a site and its admin, and walks through its building blocks: content, themes, widgets, features, recipes and tenants. It ends with the kinds of projects you can build and where to read more.\n\nIn this video:\n• What Orchard Core is: a framework, and a CMS built on it\n• A site and its admin\n• Content items and content types\n• Themes, widgets and layers\n• Features and recipes\n• Many sites, one application\n• What you can build\n• Where to go next",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Headless CMS",
+    "Multi-tenant",
+    "Open source",
+    "Modular"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/"
+    },
+    {
+      "label": "Modules Reference",
+      "url": "https://docs.orchardcore.net/en/latest/reference/"
+    },
+    {
+      "label": "Glossary",
+      "url": "https://docs.orchardcore.net/en/latest/reference/glossary/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/README.md",
+    "src/docs/reference/README.md",
+    "src/docs/reference/glossary/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:README"
+  }
+}
