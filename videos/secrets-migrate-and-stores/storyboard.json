@@ -1,0 +1,234 @@
+{
+  "title": "Secrets: Move Existing Credentials and Change Stores",
+  "output": "secrets-migrate-and-stores",
+  "spoken": {
+    "AzureKeyVault": "Azure Key Vault"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Move Credentials and Change Stores",
+      "subtitle": "Migrate Secrets and Secret Stores",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Credentials that features keep in their own settings can become secrets, and secrets can move from one store to another. This video covers Migrate Secrets and Secret Stores, the two screens that make those moves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Credentials, secrets, and stores",
+      "subtitle": "Where a credential can be kept",
+      "clips": [
+        {
+          "id": "01-settings",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tools-1",
+              "text": "A feature can keep a credential, such as the password of a mail server, encrypted in its own settings, or reference a secret. Migrate Secrets turns the credentials kept in settings into secrets."
+            }
+          ]
+        },
+        {
+          "id": "01-before",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "before-1",
+              "text": "In the SMTP email settings, Password is set to User-specified value. The password is encrypted and kept with these settings, and it is never displayed."
+            }
+          ]
+        },
+        {
+          "id": "01-stores",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tools-2",
+              "text": "A secret lives in a store. The Database store is always available, and Secrets - Azure Key Vault adds the AzureKeyVault store once a developer connects a vault, as a separate video shows. Secret Stores moves secrets between stores."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Migrate Secrets",
+      "subtitle": "Move credentials from settings to secrets",
+      "clips": [
+        {
+          "id": "02-migrate",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "Migrate Secrets is under Tools, Security. It lists the credentials that enabled features keep in their settings and that do not reference a secret."
+            },
+            {
+              "id": "list-1",
+              "text": "Each row shows the feature and the credential: SMTP Password, and GitHub Authentication Client secret. Secret name holds the name that the secret receives, and you can change it."
+            },
+            {
+              "id": "store-1",
+              "text": "Destination store appears when the site has more than one store that accepts secrets. Leave it on Database."
+            },
+            {
+              "id": "pick-1",
+              "text": "Select both credentials. Move to Secrets decrypts each value, saves it as a Text Secret, and changes the settings to reference the secret instead of keeping the value."
+            },
+            {
+              "id": "done-1",
+              "text": "A message says 2 credentials were moved to secrets. The page then reports Nothing to migrate!, because no setting keeps a credential outside of the Secrets module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Check the result",
+      "subtitle": "The secrets, and the settings that use them",
+      "clips": [
+        {
+          "id": "03-check",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "On the Secrets page, both credentials are Text Secret entries in the Database store. Each description records the feature and the credential it came from."
+            },
+            {
+              "id": "check-2",
+              "text": "Back in the SMTP settings, Password is set to Use a secret, with the secret selected. SMTP reads the password from the secret, and the settings no longer keep the value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "When a credential stays",
+      "subtitle": "Why a move can fail",
+      "clips": [
+        {
+          "id": "04-reasons",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "reasons-1",
+              "text": "A credential that can't be moved stays in its settings, unchanged, and the page lists the reason. The name may be missing or in use, the value may not decrypt, or the store may not save it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Secret Stores",
+      "subtitle": "Move every secret of a store",
+      "clips": [
+        {
+          "id": "05-move-all",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "stores-1",
+              "text": "Secret Stores is also under Tools, Security. The Source store is Database, and the total shows the two active secrets it keeps."
+            },
+            {
+              "id": "dest-1",
+              "text": "Under Move all active secrets from this store to, choose AzureKeyVault as the Destination store. Then confirm the move, which includes deleting each secret from the source once the destination is verified."
+            },
+            {
+              "id": "moved-1",
+              "text": "Select Move. Each secret is copied to AzureKeyVault and verified there, and only then removed from Database. Its name, description, and expiration date stay the same."
+            },
+            {
+              "id": "result-1",
+              "text": "Results lists each secret with a Moved badge, and the total for Database drops to zero."
+            },
+            {
+              "id": "source-1",
+              "text": "Choose AzureKeyVault as the Source store, and it keeps both secrets. The features that use them read them by name, so no setting changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Move one secret",
+      "subtitle": "From the Secrets page",
+      "clips": [
+        {
+          "id": "06-move-one",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "one-1",
+              "text": "To move a single secret, open the Secrets page. A badge on each row names the store that keeps the secret, and Move sits between Edit and Delete."
+            },
+            {
+              "id": "one-2",
+              "text": "Select Move next to the SMTP secret. The title names the secret, and the heading names the store it leaves."
+            },
+            {
+              "id": "one-3",
+              "text": "Choose Database as the destination, confirm, and select Move. The secret is copied to Database, verified, and removed from AzureKeyVault."
+            },
+            {
+              "id": "one-4",
+              "text": "Results shows the secret with a Moved badge. Back on the Secrets page, the SMTP secret is kept in Database, and the other one in AzureKeyVault."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Before you retire a store",
+      "subtitle": "What a move leaves behind",
+      "clips": [
+        {
+          "id": "07-retire",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "care-1",
+              "text": "Moving all the secrets of a store is not atomic, so review every result. A failed move can leave a copy in the destination, and a name that already exists there is rejected, so inspect both stores before you retry."
+            },
+            {
+              "id": "care-2",
+              "text": "Before you disable an optional store such as AzureKeyVault, check that its total of active secrets is zero. Backups and vault retention can keep earlier copies, so rotate a credential when old copies must stop working."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Move Credentials and Change Stores",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Migrate Secrets moves credentials from settings into secrets, and Secret Stores moves secrets between stores, keeping every name. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
