@@ -1,0 +1,208 @@
+{
+  "title": "Taxonomy Field: Categories and Tags on Your Content",
+  "output": "taxonomies-field-and-tags",
+  "spoken": {
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Taxonomy Field: Categories and Tags",
+      "subtitle": "Attach the terms of a taxonomy to a content type",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A taxonomy holds the terms you sort content with. A Taxonomy Field attaches them to a content type, so editors can pick them. In this video, you add Category and Tags fields to Blog Post, use both, and see the terms on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the Taxonomy Field works",
+      "subtitle": "Taxonomies, editors and settings",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A taxonomy is a managed vocabulary, and this site has two, Categories and Tags. It is made of terms, and terms can sit inside other terms. A Taxonomy Field lets a content type use a taxonomy: you attach the field to the type."
+            },
+            {
+              "id": "idea-2",
+              "text": "Editors pick terms while they edit an item, and the field offers two editors. The Standard editor shows every term as a checkbox or a radio button. The Tags editor is a box where you type to search, and can create tags as you go."
+            },
+            {
+              "id": "idea-3",
+              "text": "Each field uses one taxonomy, and its settings define the rules for the selection: Required, Unique and Leaves only. The display mode, Standard or Tags, decides how the chosen terms appear on the page. Let's build one field of each kind on Blog Post."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add a Category field",
+      "subtitle": "The Standard editor, one term per post",
+      "clips": [
+        {
+          "id": "02-category",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "category-1",
+              "text": "Content types are under Design, Content Definition, Content Types. Let's edit Blog Post, which has two fields here, a Subtitle and a Banner Image."
+            },
+            {
+              "id": "category-2",
+              "text": "Add Field opens a form. The Display Name is what editors see, so let's type Category. The Technical Name fills in from it."
+            },
+            {
+              "id": "category-3",
+              "text": "Field Type lists the kinds of field. Let's choose Taxonomy Field, and then Save & Configure, which saves the field and opens its settings."
+            },
+            {
+              "id": "category-4",
+              "text": "Taxonomy is where the field draws its terms from, and Categories is the one to select. The Hint is a line of help that editors see with the field, so let's write one."
+            },
+            {
+              "id": "category-5",
+              "text": "Required makes a selection mandatory, and it stays off here. Unique allows one term only, and Leaves only restricts the choice to terms with no children below them. Let's turn on both."
+            },
+            {
+              "id": "category-6",
+              "text": "Below are two questions: What type of editor should be used? What type of display mode should be used? Both stay on Standard, and Save stores the settings."
+            },
+            {
+              "id": "category-7",
+              "text": "Back on Blog Post, Category is listed as a Taxonomy Field, below the Subtitle and the Banner Image."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add a Tags field",
+      "subtitle": "The Tags editor and the Tags display mode",
+      "clips": [
+        {
+          "id": "03-tags",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tags-1",
+              "text": "Back on Blog Post, the Tags field starts the same way: Add Field, the Display Name Tags, the field type Taxonomy Field, and Save & Configure."
+            },
+            {
+              "id": "tags-2",
+              "text": "This time the Taxonomy is Tags, and Required, Unique and Leaves only stay off, so a post can have any number of tags. Placeholder replaces the text Type to search in the Tags editor, and the Standard editor ignores it. Let's leave it empty."
+            },
+            {
+              "id": "tags-3",
+              "text": "Next, let's set the editor question to Tags. One more setting appears, called Open, which lets editors create tags while they type."
+            },
+            {
+              "id": "tags-4",
+              "text": "The hint of Open notes that a tag created this way has only its display text. Let's leave Open on."
+            },
+            {
+              "id": "tags-5",
+              "text": "Let's also set the display mode question to Tags, so the page displays the field as tags. Save stores the settings."
+            },
+            {
+              "id": "tags-6",
+              "text": "Tags is listed with two badges, one for its display mode and one for its editor, both reading Tags. Category has none, because it uses the Standard ones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose terms while editing",
+      "subtitle": "Pick a category, pick and create tags",
+      "clips": [
+        {
+          "id": "04-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "This list of posts comes from the Blog menu. Edit opens the post A Night Train Across the Alps, and its Category and Tags fields are further down the page."
+            },
+            {
+              "id": "edit-2",
+              "text": "Category shows its Hint, then the terms of the Categories taxonomy as radio buttons, because Unique is on. Trains is indented under Travel."
+            },
+            {
+              "id": "edit-3",
+              "text": "Travel is disabled, because Leaves only restricts the choice to terms with no children. Let's select Trains."
+            },
+            {
+              "id": "edit-4",
+              "text": "Tags is a box with the placeholder Type to search. Let's type the first letters of Exploration, and select it from the list."
+            },
+            {
+              "id": "edit-5",
+              "text": "To create a tag, type a name that is not in the list. Let's type Night Train, and the box offers Press enter to create a tag."
+            },
+            {
+              "id": "edit-6",
+              "text": "Pressing Enter adds Night Train to the Tags taxonomy right away, and selects it. Only users with the Manage taxonomies permission can create tags this way."
+            },
+            {
+              "id": "edit-7",
+              "text": "Publish saves the post with its category and its two tags."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "See the terms on the site",
+      "subtitle": "The category and the tags as badges",
+      "clips": [
+        {
+          "id": "05-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "Back in the Blog list, View opens the post on the site."
+            },
+            {
+              "id": "site-2",
+              "text": "Below the text, the category shows as a badge, and each tag as a badge of its own. The field stores the choice, and the theme's templates decide how it looks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Taxonomy Field: Categories and Tags",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A Taxonomy Field attaches the terms of one taxonomy to a content type: the Standard editor shows every term, and the Tags editor lets you search for tags and create them. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

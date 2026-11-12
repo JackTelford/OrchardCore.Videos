@@ -1,0 +1,49 @@
+{
+  "title": "Taxonomy Field: Categories and Tags on Your Content | Orchard Core",
+  "description": "A taxonomy only organizes content once content items are linked to its terms. Without a field that points to the taxonomy, editors have nowhere to choose a category or a tag.\n\nThe Taxonomy Field attaches the terms of one taxonomy to a content type. It has a Standard editor, which shows every term as a checkbox or a radio button, and a Tags editor, where editors type to search and can create tags as they go.\n\nIn this video:\n• How a Taxonomy Field, its editors and its display modes work\n• Adding a Category field with the Standard editor, and the Unique and Leaves only settings\n• Adding a Tags field with the Tags editor, the Open setting and the Tags display mode\n• Choosing a category and tags while editing a post, and creating a tag on the spot\n• Seeing the category and the tags on the site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Taxonomies"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Taxonomies",
+    "Taxonomy Field",
+    "Categories",
+    "Tags",
+    "Content types",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Taxonomies"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Taxonomies/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Taxonomies"
+  }
+}
