@@ -1,0 +1,264 @@
+{
+  "title": "The Orchard Core Templates module",
+  "output": "templates-override-shapes",
+  "spoken": {
+    "Content_Summary__BlogPost": "Content underscore Summary, double underscore, Blog Post",
+    "Content_Summary": "Content underscore Summary",
+    "Content__BlogPost": "Content, double underscore, Blog Post",
+    "Model.ContentItem": "Model dot Content Item",
+    "Model.Content": "Model dot Content",
+    "shape_remove_item": "shape remove item",
+    "shape_render": "shape render",
+    "DisplayText": "Display Text",
+    "ZoneName": "Zone Name"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Templates module",
+      "subtitle": "Override shapes from the admin with Liquid",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every page of an Orchard Core site is built from shapes. The Templates module replaces how a shape renders with Liquid that you write in the admin. In this video, you override a shape, find the names to override, and manage your templates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Shapes, alternates and templates",
+      "subtitle": "How a template finds the shape it replaces",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Orchard Core builds every page from shapes. A shape has a type and a list of alternates, which are more specific names for it. The alternates are tried when the shape is rendered."
+            },
+            {
+              "id": "idea-2",
+              "text": "A blog post shown in a list is a Content_Summary shape, and Content_Summary__BlogPost is its alternate. A view file of the theme answers to that name, and a template answers to it as well."
+            },
+            {
+              "id": "idea-3",
+              "text": "The alternates are tried from the most specific one. For each alternate, Orchard Core looks for a template first, then for a view file. So a template wins over a view file with the same name."
+            },
+            {
+              "id": "idea-4",
+              "text": "Templates apply to the pages of the site. The admin screens use the Admin Templates feature instead, which a separate video covers. A template lives in the site's database, so saving it needs no build."
+            },
+            {
+              "id": "idea-5",
+              "text": "Editing templates takes two permissions: Manage templates, and Manage Liquid templates. You need both to see the menu item, and both are marked security critical. The Administrator and Editor roles have them by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create a template",
+      "subtitle": "Override how a blog post is listed",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "On the blog page, every post is listed by a summary view that comes from the theme. Let's replace it with a template."
+            },
+            {
+              "id": "create-2",
+              "text": "Under Design, Templates, the list is empty, because the site has no templates. Add Template opens the form."
+            },
+            {
+              "id": "create-3",
+              "text": "The name is the alternate to override: Content_Summary__BlogPost. The description is optional, and the list shows it under the name."
+            },
+            {
+              "id": "create-4",
+              "text": "Content is required. If you save without it, the form refuses, and suggests Placements in case you wanted to hide the shape."
+            },
+            {
+              "id": "create-5",
+              "text": "Content takes the Liquid, in a code editor. A template replaces the whole view, so it must write everything the shape displays."
+            },
+            {
+              "id": "create-6",
+              "text": "Beside Save, the Preview button opens a page for previewing templates. A separate video covers it."
+            },
+            {
+              "id": "create-7",
+              "text": "Save stores the template and returns to the list, where it appears with its description under the name."
+            },
+            {
+              "id": "create-8",
+              "text": "Back on the blog page, every post is drawn by the template, without the date and the badges, which the template does not write. Nothing was built or restarted, and the theme's view file is unchanged."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Names and properties",
+      "subtitle": "What to override, and what the Liquid can use",
+      "clips": [
+        {
+          "id": "03-inside",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "names-1",
+              "text": "The documentation lists the names to use. Content items are named by their type and display type, widgets by their type, and parts, fields and zones have patterns of their own. A single item can be named by its slug or alias."
+            },
+            {
+              "id": "inside-1",
+              "text": "In a template, Model is the shape being rendered. For a content item, Model.ContentItem is the item, with its DisplayText, its Author, and, under Content, the data of its parts and fields."
+            },
+            {
+              "id": "inside-2",
+              "text": "Model.Content is a zone with the shapes of the parts and fields. The shape_render filter draws them, and the shape_remove_item tag takes one out by name first. A separate video covers Liquid shapes and zones."
+            },
+            {
+              "id": "inside-3",
+              "text": "Other shapes have other properties. A widget has Classes, and a zone has ZoneName and Parent. The documentation lists the properties of content items, widgets and zones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Find the shape behind a fragment",
+      "subtitle": "Shape debug information",
+      "clips": [
+        {
+          "id": "04-debug",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "debug-1",
+              "text": "To find the shape behind a fragment of a page, open Settings, Debugging, check Write shape debug information, and save."
+            }
+          ]
+        },
+        {
+          "id": "04-comments",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "debug-2",
+              "text": "In the page source, each rendered shape is then wrapped in comments. The start comment gives the shape type, and the binding that rendered it: the alternate that matched, and where its markup came from. For a view file, it names that view."
+            },
+            {
+              "id": "debug-3",
+              "text": "Choose the most specific name that does what you need. A template named for the shape type itself, such as Content_Summary, answers for every content type in summary views that has no more specific match."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Shortcuts in Content Types",
+      "subtitle": "Open the right template from the type",
+      "clips": [
+        {
+          "id": "05-shortcuts",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "shortcuts-1",
+              "text": "Content types have shortcuts, so you don't have to type names. Under Design, Content Definition, Content Types, edit Blog Post and open Edit templates. It lists an entry for detail views and one for summary views."
+            },
+            {
+              "id": "shortcuts-2",
+              "text": "The detail entry stands for the alternate Content__BlogPost. No template has that name, so the form opens with the name filled in."
+            },
+            {
+              "id": "shortcuts-3",
+              "text": "Cancel leaves the form. The summary entry opens the template you created earlier, because it exists, with its content ready to edit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Manage templates",
+      "subtitle": "Search, rename and delete",
+      "clips": [
+        {
+          "id": "06-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "In the list, the search box filters templates by name, and Edit opens one with its name, description and content."
+            },
+            {
+              "id": "manage-2",
+              "text": "The name is editable too. Saving under another name moves the template to another shape, and the old name goes back to the theme."
+            },
+            {
+              "id": "manage-3",
+              "text": "Delete asks for confirmation in a dialog, and then removes the template from the site. The list is empty."
+            },
+            {
+              "id": "manage-4",
+              "text": "The blog page shows the summary view of the theme, because no template answers to that alternate."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Move templates between sites",
+      "subtitle": "Recipes and deployment plans",
+      "clips": [
+        {
+          "id": "07-move",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "move-1",
+              "text": "Templates are data of the site, so recipes and deployment plans can carry them. The Templates recipe step defines each template by name, with its description and content."
+            },
+            {
+              "id": "move-2",
+              "text": "A deployment plan exports them with the All Templates step. Export templates as files writes each one to its own file, and the step refers to that file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Templates module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Templates module: Liquid stored under the name of a shape, written in the admin, and tried before a view file with the same name. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
