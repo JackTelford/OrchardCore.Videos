@@ -168,7 +168,7 @@ The three groups are buttons because they have children and no page of their own
 Starts on: `/Login` (`scene.OpenAsync("/Login")`), **signed out** (a scene without `state.json`, see above), after the
 tenant has restarted with the settings of `snapshot-2`. Wait until the page shows the **GitHub** button before
 `StartCaptureAsync()`: `await scene.Page.Locator("button[name='provider'][value='GitHub']").WaitForAsync();`. The login
-page uses the admin theme (`OrchardCore.Users/Services/UsersThemeSelector.cs`).
+page uses the admin theme unless the Login settings select the site theme (`OrchardCore.Users/Services/UsersThemeSelector.cs`); leave that setting at its default.
 
 - `login-1`:
   1. `var heading = scene.Page.GetByRole(AriaRole.Heading, new() { Name = "Use another service to log in" });`
