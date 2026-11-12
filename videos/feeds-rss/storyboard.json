@@ -1,0 +1,159 @@
+{
+  "title": "Publish an RSS Feed of Your Content",
+  "output": "feeds-rss",
+  "spoken": {
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Publish an RSS Feed of Your Content",
+      "subtitle": "Let readers follow a list without visiting your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "People can follow a site without visiting it, by adding its feed to a feed reader. In this video, you enable the Feeds feature, check that Lists is enabled, find the feed of a list, open it, and choose what it holds."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How feeds work",
+      "subtitle": "Feeds, Lists and the feed of a list",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A feed is a page made for programs, listing the newest entries of a site. A feed reader checks the feeds a person follows and shows their entries in one place."
+            },
+            {
+              "id": "idea-2",
+              "text": "Two features work together. Feeds builds the feed in the RSS format and serves it, but publishes nothing by itself. Lists provides the lists whose items fill a feed, such as the posts of a blog, and gives each list its own feed settings."
+            },
+            {
+              "id": "idea-3",
+              "text": "A list feed starts with the title, the address and the description of the list. Then come the items of the list, newest first by creation date, up to a number you choose. Only published items appear."
+            },
+            {
+              "id": "idea-4",
+              "text": "The page of a list carries a link to its feed. Browsers and feed readers can use that link to find the feed from the page. The feed settings of the list control this link."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Feeds and Lists",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Feeds and Lists are separate features. Let's open Tools, Features, and type Feeds in the Search box."
+            },
+            {
+              "id": "enable-2",
+              "text": "Feeds is listed under the Content category. Click Enable, and a message confirms that the feature Feeds was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Lists is under Content Management, and it shows the Enabled badge, so there is nothing to do. Both features must be enabled before a list can have a feed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The feed of a list",
+      "subtitle": "Find the settings and open the feed",
+      "clips": [
+        {
+          "id": "03-find",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "To find the feed of a list, open Content, Content Items, and edit the Blog. A blog is a list of blog posts."
+            },
+            {
+              "id": "find-2",
+              "text": "The editor of the Blog has three feed settings. The first is a checkbox, Disable RSS feed link generation. Unchecked means the feed is on."
+            },
+            {
+              "id": "find-3",
+              "text": "A hint under Feed proxy Url shows the current address of this feed. Click it, and the feed opens in another tab."
+            },
+            {
+              "id": "find-4",
+              "text": "The feed is a page of structured text, written for programs. A feed reader turns it into a list of entries. The page starts with the title, the address and the description of the Blog."
+            },
+            {
+              "id": "find-5",
+              "text": "After that comes one entry for each published post, newest first. An entry has a title, a link, the body of the post, and the date it was published. A post saved only as a draft is not included."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Control the feed",
+      "subtitle": "How many items, where it points, and when it is off",
+      "clips": [
+        {
+          "id": "04-control",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "control-1",
+              "text": "In the editor, Feed items count sets how many entries the feed holds, and it starts at twenty. Let's change it to three."
+            },
+            {
+              "id": "control-2",
+              "text": "The feed reads the published version of the Blog, so click Publish. When the feed is reloaded, it holds only the three newest posts."
+            },
+            {
+              "id": "control-3",
+              "text": "Feed proxy Url takes a custom public address that proxies the local feed of the list. When it is set, the link in the page of the list points to that address instead."
+            },
+            {
+              "id": "control-4",
+              "text": "To turn the feed off, publish the Blog with this checkbox checked: Disable RSS feed link generation. The page then has no link, and the feed address no longer returns a feed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Publish an RSS Feed of Your Content",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Feeds builds the feed, and Lists supplies its items. Enable both, set the options on a list, and publish it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
