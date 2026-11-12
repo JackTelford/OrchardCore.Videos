@@ -174,7 +174,7 @@
             },
             {
               "id": "writer-5",
-              "text": "Jamie can see both articles, because the Anonymous and Authenticated roles hold View all content. Seeing an article and editing it are separate permissions."
+              "text": "Jamie can see the articles of the admin user as well, because the Anonymous and Authenticated roles hold View all content. Seeing an article and editing it are separate permissions."
             }
           ]
         }

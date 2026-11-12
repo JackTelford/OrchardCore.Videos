@@ -1,6 +1,6 @@
 # Content Permissions: By Content Type and by Owner
 
-**YouTube:** not published yet · **Length:** 5:08 · **Feature:** [OrchardCore.Contents](https://docs.orchardcore.net/en/latest/reference/modules/Contents/) (with OrchardCore.Roles, documented at [Roles](https://docs.orchardcore.net/en/latest/reference/modules/Roles/))
+**YouTube:** not published yet · **Length:** 5:10 · **Feature:** [OrchardCore.Contents](https://docs.orchardcore.net/en/latest/reference/modules/Contents/) (with OrchardCore.Roles, documented at [Roles](https://docs.orchardcore.net/en/latest/reference/modules/Roles/))
 
 The video explains how content permissions work in Orchard Core: the Contents permissions that apply to every content type,
 the permissions of a single Securable content type, and the two forms of each permission, one for the items a user owns and
