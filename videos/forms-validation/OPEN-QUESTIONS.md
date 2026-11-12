@@ -54,8 +54,8 @@ before recording. The narration states only what the source shows; the points be
    (`HttpRequestEvent.Fields.Design.cshtml:4`). The narration says "HTTP Request event", the name of the activity in
    the activities pane; no card carries exactly that text, so confirm that the wording reads naturally against the
    card on screen in `rules-1`.
-8. **Pronunciation.** The storyboard has no `spoken` entry. Check with `scripts/pronounce.py` how the voice reads
-   "HTTP", "URL", "POST", "Antiforgery" (not narrated) and "thank-you" before narrating.
+8. **Pronunciation.** The storyboard has one `spoken` entry, "HTTP" as "H.T.T.P.". Check with `scripts/pronounce.py`
+   that it is read as four letters, and how the voice reads "URL", "POST" and "thank-you", before narrating.
 
 ## Read in the source (no question)
 

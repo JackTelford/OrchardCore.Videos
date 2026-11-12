@@ -1,7 +1,9 @@
 {
   "title": "Forms: Validate What Visitors Type",
   "output": "forms-validation",
-  "spoken": {},
+  "spoken": {
+    "HTTP": "H.T.T.P."
+  },
   "chapters": [
     {
       "id": "00",
@@ -167,7 +169,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Validation in the Forms module is a workflow that records errors and a form that displays them. For rules beyond a missing value, the Add Form Validation Error activity records an error for any check you build. Thanks for watching."
+              "text": "Validation in the Forms module is a workflow that records errors and a form that displays them. Thanks for watching."
             }
           ]
         }

@@ -1,6 +1,6 @@
 # Forms: Validate What Visitors Type
 
-**YouTube:** not published yet · **Length:** 4:38 · **Feature:** [OrchardCore.Forms](https://docs.orchardcore.net/en/latest/reference/modules/Forms/)
+**YouTube:** not published yet · **Length:** 4:30 · **Feature:** [OrchardCore.Forms](https://docs.orchardcore.net/en/latest/reference/modules/Forms/)
 
 How the Forms module validates what visitors type. A workflow checks the submitted values and records an error for each
 one that fails; the form displays the errors with a Validation Summary widget and the Validation option of its inputs;
