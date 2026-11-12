@@ -1,0 +1,330 @@
+{
+  "title": "Implement Full-Text Search",
+  "output": "full-text-search-guide",
+  "spoken": {
+    "Content.ContentItem.FullText": "Content dot Content Item dot Full Text",
+    "/search": "slash search",
+    "full_text": "full text",
+    "standardanalyzer": "standard analyzer",
+    "Search-List": "Search List",
+    "Search-Form": "Search Form",
+    "Search-Results": "Search Results",
+    "SearchSummary": "Search Summary",
+    "CreateOrUpdateIndexProfile": "Create Or Update Index Profile",
+    "RebuildIndex": "Rebuild Index",
+    "TheBlogTheme": "The Blog Theme",
+    "Blog - Lucene Search": "Blog, Lucene Search"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Implement Full-Text Search",
+      "subtitle": "From an index to a results page",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A website search needs four parts: an index, a setting that picks it, a permission to query it, and a results page. This video builds all four with Lucene, then tunes what is indexed and how the results look."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the search works",
+      "subtitle": "From a content item to a results page",
+      "clips": [
+        {
+          "id": "01-flow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "flow-1",
+              "text": "A content item produces a full-text value from its display text, its body, and any Liquid you add. The indexer stores that value in the Content.ContentItem.FullText field of an index that you create."
+            },
+            {
+              "id": "flow-2",
+              "text": "The Search feature adds the search page at /search. It matches a visitor's terms against the index you choose in the settings, checks a permission for that index, and draws the results with shapes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Lucene and Search",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Open Tools, Features. Lucene creates and queries the indexes, and Search adds the front-end search page. Let's type Lucene in the search box to find the first feature."
+            },
+            {
+              "id": "features-2",
+              "text": "Select Enable on the Lucene feature. A message confirms that the feature was enabled."
+            },
+            {
+              "id": "features-3",
+              "text": "Then search for Search, and enable the Search feature. It brings the Site Search settings and the search page of the front end."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create an index",
+      "subtitle": "A Lucene index of your content",
+      "clips": [
+        {
+          "id": "03-index",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "index-1",
+              "text": "Under Search, Indexes, select Add index. The Available Sources dialog lists what can be indexed. Select Add on Content in Lucene."
+            },
+            {
+              "id": "index-2",
+              "text": "Type Posts as the Index Name, the name of the index in Lucene. The Name field fills in as posts. The search page address and the permission both use that name."
+            },
+            {
+              "id": "index-3",
+              "text": "Content types lists the content types of the site, and at least one is required. Let's select Blog Post."
+            },
+            {
+              "id": "index-4",
+              "text": "The Analyzer controls how Lucene prepares text for the index, and standardanalyzer is the default. Store Source Data, which keeps field values in the index for retrieval, stays cleared."
+            },
+            {
+              "id": "index-5",
+              "text": "Under Default Query Settings, Query field names lists the fields of the index. Only Content.ContentItem.FullText is selected, so a search matches the full-text value and nothing else."
+            },
+            {
+              "id": "index-6",
+              "text": "Select Save. A message says that the index was created and that synchronizing runs in the background. The list shows posts with Lucene as its provider."
+            }
+          ]
+        },
+        {
+          "id": "03-analyzer",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "analyzer-1",
+              "text": "The built-in analyzer is registered with the Lucene options in a Startup class. A module adds its own the same way, with a name and an analyzer instance, and the name appears in the Analyzer list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose the search index",
+      "subtitle": "The Site Search settings",
+      "clips": [
+        {
+          "id": "04-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Open Settings, Search, Site Search. Default search index lists the indexes of the site. Let's select posts."
+            },
+            {
+              "id": "settings-2",
+              "text": "Placeholder is the text shown in the empty search box. Type a short prompt, and select Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Grant access to the index",
+      "subtitle": "One permission for each index",
+      "clips": [
+        {
+          "id": "05-permission",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "permission-1",
+              "text": "The search page checks a permission for the index. Open Access Control, Roles, and select Edit on the Anonymous role."
+            },
+            {
+              "id": "permission-2",
+              "text": "In the Search permissions box, type posts. Check Allow on Query 'posts' Index, which lets the search page query this index. Query Lucene Posts Index is listed as well, but the search page does not check it."
+            },
+            {
+              "id": "permission-3",
+              "text": "Select Save. Visitors who are not signed in can query this index through the search page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Try the search page",
+      "subtitle": "The front end",
+      "clips": [
+        {
+          "id": "06-try",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "try-1",
+              "text": "Open /search on the site. The theme draws the form, and the box shows the placeholder from the settings."
+            },
+            {
+              "id": "try-2",
+              "text": "Type apple, and select Search. The page lists the posts whose full-text value contains the word, each one drawn with the Summary display type of its content type."
+            },
+            {
+              "id": "try-3",
+              "text": "Grafting appears only in the subtitle of a post. Searching for it shows There are no such results, because the subtitle is not part of the full-text value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Choose what is indexed",
+      "subtitle": "The full-text value of a content type",
+      "clips": [
+        {
+          "id": "07-options",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "options-1",
+              "text": "The Full-text section of a content type editor controls its full-text value. Include display text and Include body parts are selected by default, and Use custom full-text adds the output of a Liquid template."
+            }
+          ]
+        },
+        {
+          "id": "07-type",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "Open Design, Content Definition, Content Types, and select Edit on Blog Post. The Full-text section sits among the settings of the type."
+            },
+            {
+              "id": "type-2",
+              "text": "Select Use custom full-text. In the editor that opens, type a Liquid expression that reads the Subtitle field of the Blog Post part."
+            },
+            {
+              "id": "type-3",
+              "text": "Select Save. Items that are already indexed keep their old value until they are saved again or the index is rebuilt."
+            }
+          ]
+        },
+        {
+          "id": "07-widgets",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "widgets-1",
+              "text": "To index widgets too, use the full_text filter. It returns the full-text value of each content item in a list, so the second line adds the text of every widget in a Flow part."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Rebuild the index",
+      "subtitle": "Index every content item again",
+      "clips": [
+        {
+          "id": "08-rebuild",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "rebuild-1",
+              "text": "Under Search, Indexes, open the Actions menu of posts and select Rebuild. A dialog asks you to confirm, because the index is removed and created again."
+            },
+            {
+              "id": "rebuild-2",
+              "text": "Select Yes. A message says that the index was rebuilt and that synchronizing runs in the background."
+            },
+            {
+              "id": "rebuild-3",
+              "text": "Search for grafting again. The post whose subtitle contains the word is listed, because the subtitle is part of the full-text value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Change the results page",
+      "subtitle": "Shapes and templates",
+      "clips": [
+        {
+          "id": "09-templates",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "templates-1",
+              "text": "Three shapes build the search page. Search-List arranges the page, Search-Form draws the search box, and Search-Results draws the matching content items. A theme overrides one by adding a template with the same name."
+            },
+            {
+              "id": "templates-2",
+              "text": "Search-Results draws each item with a display type. Change Summary to SearchSummary, then add a SearchSummary template for each content type that the index holds."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Script the setup",
+      "subtitle": "The same steps as a recipe",
+      "clips": [
+        {
+          "id": "10-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe repeats the setup on another site. The feature step enables Search and Lucene, and CreateOrUpdateIndexProfile creates the index with its content types and query fields."
+            },
+            {
+              "id": "recipe-2",
+              "text": "The Settings step selects the index for the search page, RebuildIndex fills it, and the Roles step grants the permission to Anonymous. TheBlogTheme includes these steps as the Blog - Lucene Search recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Implement Full-Text Search",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "An index, the Site Search settings, a permission, and a results page make a full-text search, and the full-text value and the templates tune what is found and how it looks. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
