@@ -1,0 +1,259 @@
+{
+  "title": "Starter Recipes: Choose How Your Site Starts",
+  "output": "starter-recipes",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Starter Recipes",
+      "subtitle": "Choose how your site starts",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every Orchard Core site starts from a recipe. The recipe you choose on the Setup screen decides which features are on, which theme is active, and what content exists. This video compares the starter recipes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a recipe sets up",
+      "subtitle": "Instructions that run once, at setup",
+      "clips": [
+        {
+          "id": "01-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A starter recipe is a list of instructions that Orchard Core follows once, when it sets up a site. It can enable features and activate themes. It can also create roles, content types such as Blog Post, and content."
+            },
+            {
+              "id": "recipe-2",
+              "text": "You choose one recipe on the Setup screen. It decides how the site starts, not what it can become, because you can enable more features and change the theme afterward."
+            },
+            {
+              "id": "recipe-3",
+              "text": "Which recipes you see depends on the application that is running. Blank site and Headless site come with the CMS core, and the standard CMS application adds a recipe for each starter theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Choose on the Setup screen",
+      "subtitle": "The Recipe list",
+      "clips": [
+        {
+          "id": "02-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "This is the Setup screen of a site that has not been set up. Next to the site name, the Recipe button opens the list of starter recipes. A separate video covers the other fields."
+            },
+            {
+              "id": "setup-2",
+              "text": "Each entry has a name and a short description. The entries are in alphabetical order: Agency, Blank site, Blog, Coming Soon, Headless site, and Software as a Service."
+            },
+            {
+              "id": "setup-3",
+              "text": "Software as a Service is selected when the screen opens. Let's choose Blog. The name on the Recipe button changes, and Finish Setup installs the site with that recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Blank site and Headless site",
+      "subtitle": "Starting points for sites you build yourself",
+      "clips": [
+        {
+          "id": "03-core",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "blank-1",
+              "text": "Blank site enables the content management features and activates the admin theme. It sets no site theme and no home page, so the front end is yours to design."
+            },
+            {
+              "id": "blank-2",
+              "text": "Use it when you build your own theme, or when you run a decoupled site, where developers write the pages and Orchard Core manages the content. Otherwise, start from another recipe and change the theme afterward."
+            },
+            {
+              "id": "headless-1",
+              "text": "Headless site is for using Orchard Core as an API as well as a content management system. It enables the GraphQL and OpenID Connect features, and its home page is the admin."
+            },
+            {
+              "id": "headless-2",
+              "text": "The recipe also gives the Authenticated role, which every signed-in user has, permissions that include View all content and Execute GraphQL. Review them under Access Control, Roles before you publish the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Blog",
+      "subtitle": "A blog with posts, tags and categories",
+      "clips": [
+        {
+          "id": "04-blog",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "blog-1",
+              "text": "Blog activates The Blog Theme and makes the blog the home page. On a site set up with this recipe, a header shows the blog's title and description, and the posts follow below."
+            },
+            {
+              "id": "blog-2",
+              "text": "The recipe creates a first blog post. Its preview shows a title, a subtitle, the author and the date, and the category and tags it belongs to."
+            },
+            {
+              "id": "blog-3",
+              "text": "The main menu links to Home and About. About is an Article, one of the content types the recipe adds, along with Blog Post, Page, Tag, and Category."
+            }
+          ]
+        },
+        {
+          "id": "04-blog-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "blog-4",
+              "text": "The Blog Theme also carries optional recipes for SQL, Lucene, and Elasticsearch search. They are not starter recipes, so the Setup screen does not list them. You run them later from Tools, Recipes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Agency",
+      "subtitle": "A company website with a landing page",
+      "clips": [
+        {
+          "id": "05-agency",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "agency-1",
+              "text": "Agency activates The Agency Theme and sets up a company website. The home page is a landing page, with a header that shows the site name and a Tell Me More button."
+            },
+            {
+              "id": "agency-2",
+              "text": "The menu links to the sections below the header: Services, Portfolio, About, Team, and Contact. The recipe fills most of them with sample content, which you change by editing the landing page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Coming Soon",
+      "subtitle": "A holding page that collects email addresses",
+      "clips": [
+        {
+          "id": "06-soon",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "soon-1",
+              "text": "Coming Soon activates The Coming Soon Theme and makes one landing page for a site under construction. It has a heading, a message, an email field, and social icons."
+            },
+            {
+              "id": "soon-2",
+              "text": "Visitors type an email address and select the Notify Me! button. Under the email field, a message reads: ReCaptcha settings are not configured. It stays until you save a Site Key and a Secret Key under Settings, Security, reCaptcha."
+            }
+          ]
+        },
+        {
+          "id": "06-soon-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "soon-3",
+              "text": "A workflow named User Registration validates the form, registers a user for the address, and sends a confirmation email. You find it under Design, Workflows. The recipe also enables the Email, Forms, ReCaptcha, Workflows, and Users Registration features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Software as a Service",
+      "subtitle": "A home for several sites",
+      "clips": [
+        {
+          "id": "07-saas",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "saas-1",
+              "text": "Software as a Service activates The Default Theme, and its home page is a welcome message. The recipe enables the Tenants feature, which lets you manage several sites, called tenants, from the admin of one installation."
+            }
+          ]
+        },
+        {
+          "id": "07-saas-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "saas-2",
+              "text": "Under Multi-Tenancy, Tenants, the Add Tenant button opens a form with a Recipe list. Each tenant can start from a recipe of its own, so one installation can host a blog, an agency site, and more."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Which recipe fits",
+      "subtitle": "Match the recipe to the job",
+      "clips": [
+        {
+          "id": "08-choose",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "choose-1",
+              "text": "For a site where you design the front end, start with Blank site. For an application that serves content to other applications, start with Headless site."
+            },
+            {
+              "id": "choose-2",
+              "text": "For a theme with sample content, pick Blog, Agency, or Coming Soon. To host several sites from one installation, pick Software as a Service."
+            },
+            {
+              "id": "choose-3",
+              "text": "A recipe sets the starting point, not the limits. You enable more features under Tools, Features, change the theme under Design, Themes, and run more recipes under Tools, Recipes. Separate videos cover each of these."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Starter Recipes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Pick the recipe closest to the site you want, then adjust its features and theme from the admin. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
