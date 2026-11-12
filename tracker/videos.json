@@ -5469,9 +5469,9 @@
       "src/docs/reference/modules/Sms/README.md",
       "src/docs/reference/modules/Sms.Azure/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.9,
+    "words": 580,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

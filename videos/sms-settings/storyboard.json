@@ -1,0 +1,191 @@
+{
+  "title": "Orchard Core SMS settings",
+  "output": "sms-settings",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core SMS settings",
+      "subtitle": "Choose a provider, save its settings, and send a test message",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Text messages from an Orchard Core site go through an SMS provider. In this video, you enable the SMS feature, choose the default provider, send a test message, and set up the Twilio and Azure Communication Services providers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How SMS works",
+      "subtitle": "Providers and the default provider",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "The SMS feature sends text messages through a provider, the service that delivers them. Log writes messages to the application log, Twilio sends them through a Twilio account, and Azure Communication Services through an Azure resource."
+            },
+            {
+              "id": "how-2",
+              "text": "One provider is the default. Workflow tasks, notifications, and two-factor sign-in codes that go by text message all use it."
+            },
+            {
+              "id": "how-3",
+              "text": "You choose the default under Settings, Communication, SMS, and check a provider under Tools, Testing, SMS Test. Both pages need the Manage SMS Settings permission, and the settings page also needs Manage settings. Administrators have both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the SMS feature",
+      "subtitle": "Turn it on from Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for SMS. The SMS feature is in the Communication category, with an Enable button on its row."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable. A message confirms that the feature was enabled, and the admin menu gains SMS under Settings, Communication."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose the default provider",
+      "subtitle": "The Providers tab",
+      "clips": [
+        {
+          "id": "03-default",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "default-1",
+              "text": "Open Settings, Communication, SMS. The Providers tab has one setting, Default SMS provider. Its list holds only the providers that are enabled."
+            },
+            {
+              "id": "default-2",
+              "text": "The list shows only Log, because no other provider is enabled. The site offers Log only in a development environment, and it writes each message to the application log instead of sending it. Let's select it."
+            },
+            {
+              "id": "default-3",
+              "text": "Select Save. The page confirms that the site settings were updated successfully."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Send a test message",
+      "subtitle": "Check a provider before you rely on it",
+      "clips": [
+        {
+          "id": "04-test",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "test-1",
+              "text": "Open Tools, Testing, SMS Test. A test goes through the provider you pick in the Provider list, not through the default one, and Phone Number is the recipient."
+            },
+            {
+              "id": "test-2",
+              "text": "Select Log, then enter a phone number with its country code, as the hint under the field says. This number is made up."
+            },
+            {
+              "id": "test-3",
+              "text": "Select Send. The page reports that the test SMS message has been successfully sent. With the Log provider, that means the message was written to the application log, and nothing was delivered."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Configure Twilio",
+      "subtitle": "The details of a Twilio account",
+      "clips": [
+        {
+          "id": "05-twilio",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "twilio-1",
+              "text": "To use Twilio, open the SMS settings again and select the Twilio tab. Select Enable Twilio Provider, and Twilio Account Info appears with three required fields."
+            },
+            {
+              "id": "twilio-2",
+              "text": "Phone Number is the number that sends the messages, with its country code. Account SID and Auth Token are the details of your Twilio account, and the token is hidden as you type. These values are made up."
+            },
+            {
+              "id": "twilio-3",
+              "text": "Select Save, and the page confirms the update. The Auth Token field is empty again, but the text inside it says the value is securely stored: enter a new value to update it, or leave it blank to keep it."
+            },
+            {
+              "id": "twilio-4",
+              "text": "Let's send a test message with Twilio. The values are made up, so the page reports that the test SMS message failed to send. With real values, success means that Twilio accepted the message."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Azure Communication Services",
+      "subtitle": "A feature of its own, and a tab of its own",
+      "clips": [
+        {
+          "id": "06-azure",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "azure-1",
+              "text": "Azure Communication Services has a feature of its own. In Tools, Features, let's enable Azure Communication Services SMS, which adds a tab to the SMS settings."
+            },
+            {
+              "id": "azure-2",
+              "text": "On the Azure Communication Services tab, select Enable, enter the Phone Number that sends the messages and the Connection String of your Azure resource, and select Save. These values are made up."
+            },
+            {
+              "id": "azure-3",
+              "text": "Azure joins Twilio and Log in the Default SMS provider list on the Providers tab. To send the site's messages through one of them, select it there and save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core SMS settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Once a default provider is chosen, the features that send text messages use it, and the SMS Test page checks a provider before you rely on it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

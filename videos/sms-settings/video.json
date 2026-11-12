@@ -1,0 +1,53 @@
+{
+  "title": "SMS: Configure a Provider and Send a Test Message | Orchard Core",
+  "description": "A site that sends text messages needs a provider to deliver them, and a way to check that the provider works before anything depends on it.\n\nThe SMS feature of Orchard Core adds a settings page where you choose the default provider and set up Twilio, and a test page that sends a message through the provider you pick. Azure Communication Services has a feature of its own that adds a tab to the same settings page.\n\nIn this video:\n• How SMS providers and the default provider work\n• Enabling the SMS feature\n• Choosing the default provider\n• Sending a test message\n• Configuring Twilio\n• Configuring Azure Communication Services",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "SMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "SMS",
+    "text messages",
+    "Twilio",
+    "Azure Communication Services"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Email, SMS and Notifications"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: SMS",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Sms/"
+    },
+    {
+      "label": "Documentation: Azure Communication Services SMS",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Sms.Azure/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Sms/README.md",
+    "src/docs/reference/modules/Sms.Azure/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Sms"
+  }
+}
