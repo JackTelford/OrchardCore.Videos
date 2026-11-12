@@ -1,0 +1,191 @@
+{
+  "title": "Setup: Install Your First Orchard Core Site",
+  "output": "setup-first-site",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Setup: Install Your First Orchard Core Site",
+      "subtitle": "Answer the Setup screen and sign in to your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "In this video, we'll set up an Orchard Core site. We'll answer the questions on the Setup screen, finish the setup, and sign in to the admin of the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What setup does",
+      "subtitle": "An empty site asks before it builds",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A site that is not set up is empty. When you open its address, you don't see a website. You see the Setup screen, which asks a few questions about the site you want."
+            },
+            {
+              "id": "idea-2",
+              "text": "Select Finish Setup, and Orchard Core builds the site from your answers. Then you sign in to the admin with the user you created."
+            },
+            {
+              "id": "idea-3",
+              "text": "Behind that button, Orchard Core checks the database, creates its tables, and runs the recipe, which turns on features and can add starting content. It also saves the site name and time zone as settings, and creates the super user."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The setup questions",
+      "subtitle": "Site, recipe, time zone and database",
+      "clips": [
+        {
+          "id": "02-questions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "screen-1",
+              "text": "This is the Setup screen. At the top right, Change language reloads it in another language. The whole form is on this one page, from the site name down to the super user."
+            },
+            {
+              "id": "name-1",
+              "text": "What is the name of your site? The answer becomes the default title of your pages. Let's type Contoso Bakery."
+            },
+            {
+              "id": "recipe-1",
+              "text": "Recipe sets how the site starts, by turning on features and sometimes adding content. Software as a Service is selected when the screen opens. Let's open the list, read the descriptions, and choose Blog."
+            },
+            {
+              "id": "zone-1",
+              "text": "Default Time Zone sets how dates and times are shown and edited. Let's choose Los Angeles from the list."
+            },
+            {
+              "id": "db-1",
+              "text": "What type of database to use? Sqlite is selected, and it needs no database server or connection string. Orchard Core keeps a Sqlite database as a file in the data folder of the site."
+            }
+          ]
+        },
+        {
+          "id": "02-databases",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "db-2",
+              "text": "Sql Server, MySql, and Postgres use a database server. Create the database first, because Orchard Core creates the tables but not the database. Then enter its Connection String."
+            },
+            {
+              "id": "db-3",
+              "text": "Table Prefix and Table Schema are optional. A prefix lets several sites share one database, and the default schema of the server is used when you leave the schema blank."
+            },
+            {
+              "id": "db-4",
+              "text": "If setup can't finish, the screen returns with a message at the top. The connection string may be invalid, or the database, table prefix and schema may already be in use. Correct the answer and try again."
+            },
+            {
+              "id": "db-5",
+              "text": "Your host can preset some answers, such as the recipe or the database. When it does, the screen leaves those questions out, so your form can be shorter than this one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Super user and Finish Setup",
+      "subtitle": "The first user, then the site opens",
+      "clips": [
+        {
+          "id": "03-finish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "user-1",
+              "text": "Below the database questions, the Super User section creates the first user. The screen says this user has all the rights, and should be used only during Setup and for disaster recovery."
+            },
+            {
+              "id": "user-2",
+              "text": "Enter a User Name and an Email. The user name accepts letters, digits, and the characters dash, dot, underscore, and plus."
+            },
+            {
+              "id": "user-3",
+              "text": "Select the Password field. A list shows the rules the password must meet, and checks each one off as you meet it. A bar under the field shows your progress."
+            },
+            {
+              "id": "user-4",
+              "text": "Type the same password in Password Confirmation. The eye button beside each password field shows or hides what you typed."
+            },
+            {
+              "id": "finish-1",
+              "text": "Select Finish Setup. Orchard Core checks the database, builds the site from your answers, and then opens it."
+            },
+            {
+              "id": "finish-2",
+              "text": "This is the front end of the site, the part your visitors see. The name you entered is in the header."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Sign in and check the result",
+      "subtitle": "The admin and the settings Setup saved",
+      "clips": [
+        {
+          "id": "04-signin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signin-1",
+              "text": "The admin is a separate part of the site. By default, you reach it by adding Admin to the end of the site's address. Orchard Core first asks you to log in."
+            },
+            {
+              "id": "signin-2",
+              "text": "In Username or email address, type the user name of the super user. Then type its password."
+            },
+            {
+              "id": "signin-3",
+              "text": "Select Log in. The admin opens with a welcome message and cards for first tasks: Create content, Customize theme, and Manage users, where you add users and assign roles. The menu leads to everything else."
+            },
+            {
+              "id": "settings-1",
+              "text": "Setup saves your site name and time zone as settings. In the menu, select Settings, then General. There, Site name holds the name you entered, and Default Time Zone holds your choice."
+            },
+            {
+              "id": "settings-2",
+              "text": "Further down, Use framework CDN is not selected, so the site loads scripts and stylesheets, such as jQuery, from its own files. That works without an internet connection. The documentation recommends selecting it after setup."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Setup: Install Your First Orchard Core Site",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the Setup screen: the questions it asks, what Finish Setup does, and how to sign in to the site you created. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
