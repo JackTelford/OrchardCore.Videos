@@ -1,0 +1,270 @@
+{
+  "title": "Write a Content Part With a Display Driver",
+  "output": "content-part-create",
+  "spoken": {
+    "ContentPartDisplayDriver": "Content Part Display Driver",
+    "TitlePartViewModel": "Title Part View Model",
+    "TitlePart_Edit": "Title Part underscore Edit",
+    "AlterPartDefinitionAsync": "Alter Part Definition Async",
+    "TryUpdateModelAsync": "Try Update Model Async",
+    "GetDisplayShapeType": "Get Display Shape Type",
+    "GetEditorShapeType": "Get Editor Shape Type",
+    "UseDisplayDriver": "Use Display Driver",
+    "AddDataMigration": "Add Data Migration",
+    "AddContentPart": "Add Content Part",
+    "UpdateAsync": "Update Async",
+    "AddHandler": "Add Handler",
+    "BindNever": "Bind Never",
+    "Add & Configure": "Add and Configure",
+    "ContentPart": "Content Part",
+    "TitlePart": "Title Part"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Write a Content Part With a Display Driver",
+      "subtitle": "A class, a driver, templates, and a registration",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A content part adds data, an editor, and a display to the content items of a type. This video covers the pieces of a part: its class, its display driver, its templates, and its registration. The example is the Title part of Orchard Core."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The pieces of a part",
+      "subtitle": "What a part is made of",
+      "clips": [
+        {
+          "id": "01-pieces",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pieces-1",
+              "text": "A content part groups the data for one purpose, such as a title, with the screens that edit and show it. You attach parts to a content type, and every content item of that type gets them."
+            },
+            {
+              "id": "pieces-2",
+              "text": "A part has four pieces. A class holds its data, a display driver builds the shapes that edit and show it, templates render those shapes, and a registration and a definition make the part available."
+            },
+            {
+              "id": "pieces-3",
+              "text": "The driver never writes HTML. It creates shapes, which are objects that hold the data to display and the information about how to display it. Orchard Core then finds the template for each shape, and renders it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The class and its definition",
+      "subtitle": "Data, a view model, and a migration",
+      "clips": [
+        {
+          "id": "02-class",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "class-1",
+              "text": "The class derives from ContentPart, and its public properties hold the data. TitlePart has one property, Title. Orchard Core saves the properties with the content item, under the name of the part."
+            },
+            {
+              "id": "class-2",
+              "text": "The view model is a plain class that carries what the templates need. TitlePartViewModel has the Title, and also the content item, the part, and the settings, marked BindNever so that model binding never sets them."
+            },
+            {
+              "id": "class-3",
+              "text": "A migration calls AlterPartDefinitionAsync to define the part by the name of its class. Attachable lists it among the parts you can add to a content type, with its description. A separate video covers data migrations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The display driver",
+      "subtitle": "Display, edit, and update",
+      "clips": [
+        {
+          "id": "03-driver",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "driver-1",
+              "text": "The display driver derives from ContentPartDisplayDriver, with the part as its type argument. The constructor receives a string localizer, for the error messages. The work happens in three methods: Display, Edit, and UpdateAsync."
+            },
+            {
+              "id": "driver-2",
+              "text": "Display returns a display result that builds one shape. Initialize creates a strongly typed shape from a view model. The lambda fills in its properties, and the part is passed in as its state."
+            },
+            {
+              "id": "driver-3",
+              "text": "GetDisplayShapeType names the shape TitlePart, and adds the display mode of the part, if it has one. Location places the shape in a zone: the Title part uses Header, for the Detail and Summary display types."
+            },
+            {
+              "id": "driver-4",
+              "text": "A driver can return null to display nothing, as the Title part does when there is no title, or when its Render Title setting is off. A shape with no location isn't displayed either, unless a placement rule gives it one."
+            },
+            {
+              "id": "driver-5",
+              "text": "Edit builds the shape of the editor from the content item, and GetEditorShapeType names it TitlePart_Edit. It sets no location, because the editor shape of a part goes into the shape of that part by default."
+            },
+            {
+              "id": "driver-6",
+              "text": "UpdateAsync runs when the form is posted. TryUpdateModelAsync copies the posted value into the part. The prefix, which is the name of the part, keeps its form field names apart from the fields of other parts."
+            },
+            {
+              "id": "driver-7",
+              "text": "The driver then validates. An error added to the model state keeps the content item from being saved, and the editor is built again to show it. The base class stores the part back in the content item, so the driver doesn't."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The templates",
+      "subtitle": "One Razor file for each shape",
+      "clips": [
+        {
+          "id": "04-templates",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "templates-1",
+              "text": "A Razor file in the Views folder of the module is the template of a shape type. Dots in a file name stand for underscores in the shape type. The Title part has templates for the display, the Summary display type, and the editor."
+            },
+            {
+              "id": "templates-2",
+              "text": "The display template is Razor over the view model: here, a heading. The editor template binds an input to the Title property, and shows the validation message that UpdateAsync adds."
+            },
+            {
+              "id": "templates-3",
+              "text": "The Summary template, for the Summary display type, renders the title as a link to the content item, with the display-for tag helper."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Registering the part",
+      "subtitle": "AddContentPart in the Startup class",
+      "clips": [
+        {
+          "id": "05-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "In the Startup class, AddContentPart registers the part. UseDisplayDriver connects the driver to every display mode and editor, and AddHandler adds a handler for the events of the content item. AddDataMigration registers the migration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add the part to a content type",
+      "subtitle": "From the Content Types page",
+      "clips": [
+        {
+          "id": "06-attach",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "attach-1",
+              "text": "Let's use the part. Under Design, Content Definition, Content Types, choose Create new type, enter Workshop as the Display Name, and choose Create."
+            },
+            {
+              "id": "attach-2",
+              "text": "The next page lists the parts you can add. Title is there, with the description from its migration. Add & Configure adds the part and opens its settings."
+            },
+            {
+              "id": "attach-3",
+              "text": "Under Behavior option, choose Title is editable and required, and choose Save. This setting belongs to the Title part, and its driver reads it when it validates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Edit and display the part",
+      "subtitle": "The editor, the validation, and the page",
+      "clips": [
+        {
+          "id": "07-use",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "use-1",
+              "text": "Under Content, Content Items, New Workshop opens the editor. The Title field comes from the editor template, rendered from the shape that the driver built."
+            },
+            {
+              "id": "use-2",
+              "text": "Choose Publish with the field empty. UpdateAsync adds an error, the item isn't saved, and the editor shows again with the message: A value is required for Title."
+            },
+            {
+              "id": "use-3",
+              "text": "Enter a title, Pruning Apple Trees, and choose Publish. The part is saved with the content item, and the page confirms that your Workshop has been published."
+            },
+            {
+              "id": "use-4",
+              "text": "Choose View to open the page. The Display method placed the shape in the Header zone, and the display template rendered the title as a heading."
+            },
+            {
+              "id": "use-5",
+              "text": "Back in the list, choose Edit. The editor shows the saved title, because UpdateAsync copied it to the display text of the content item, and Edit reads it from there."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Going further",
+      "subtitle": "Settings, handlers, placement, and alternates",
+      "clips": [
+        {
+          "id": "08-further",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "further-1",
+              "text": "A part can have settings for each content type, as the Title part does with its own settings driver. A handler reacts to events of the content item, as the handler of the Title part does to generate titles from a pattern."
+            },
+            {
+              "id": "further-2",
+              "text": "The locations in a driver are defaults. A placement file can move or hide a shape, and a theme can replace a template for one content type. Separate videos cover placement and alternates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Write a Content Part With a Display Driver",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A part is a class, a display driver, its templates, and a registration with a definition. With those pieces, your own part appears in the admin and on your site, like the Title part. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
