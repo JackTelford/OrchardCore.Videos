@@ -1,6 +1,6 @@
 # GraphQL: Settings, Permissions and Hidden Fields
 
-**YouTube:** not published yet · **Length:** 4:30 · **Feature:** `OrchardCore.Apis.GraphQL` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/))
+**YouTube:** not published yet · **Length:** 4:40 · **Feature:** `OrchardCore.Apis.GraphQL` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/))
 
 The video is for developers who run or extend the GraphQL module. It reads the options of the `Apis`, `GraphQL`
 configuration section, follows the permissions that guard the endpoint, mutations and content, grants one to a role,

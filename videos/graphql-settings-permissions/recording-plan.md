@@ -135,18 +135,28 @@ sidebar menu collapsed. Before `StartCaptureAsync`, wait until `.graphiql-explor
 
 ### `03-parts`: Collapse and Hide on a part
 
-Starts on `/Admin/ContentTypes/Edit/BlogPost` (the page "Edit Content Type - Blog Post"), signed in as `admin`.
-Before `StartCaptureAsync`, wait until the **Parts** list (`Views/Admin/Edit.cshtml:144`) is shown. Chapter 03 of the
+Starts on `/Admin/ContentTypes/List` (the **Content Types** page, `Views/Admin/List.cshtml:6`), signed in as `admin`,
+with the sidebar menu collapsed. Before `StartCaptureAsync`, wait for the page to finish loading. Chapter 03 of the
 storyboard. Do not use the part with the same name as the type (`BlogPost`): it has no GraphQL options.
 
 - `parts-1`
-  - Actions: `HighlightAsync` the row of the Markdown body part (the `li` that holds
+  - Actions: click the sidebar entry **Design** (`OrchardCore.ContentTypes/AdminMenu.cs:23`), then **Content
+    Definition** (`:24`), then **Content Types** (`:25`), the last with `ClickAndWaitForNavigationAsync`. Click the
+    **Edit** button of the Blog Post row: `a[href$='/ContentTypes/Edit/BlogPost']`
+    (`Views/ContentTypeEntry.Buttons.SummaryAdmin.cshtml:24`), with `ClickAndWaitForNavigationAsync`. On the page
+    "Edit Content Type - Blog Post", `HighlightAsync` the row of the Markdown body part (the `li` that holds
     `input[name='OrderedPartNames'][value='MarkdownBodyPart']`; its text is read from the page, see the open
     questions), then `ClearHighlightsAsync`. `ClickAndWaitForNavigationAsync` its **Edit** button:
-    `a[href$='/ContentTypes/BlogPost/ContentParts/MarkdownBodyPart/Edit']` (`Views/Admin/Edit.cshtml:163`). On the
-    page "Edit Part - ..." (`Views/Admin/EditTypePart.cshtml:22`), `HighlightAsync` the labels **Collapse** and
-    **Hide**, then `ClearHighlightsAsync` and `ClickAsync` the **Collapse** box
-    (`input[id$='Settings_Collapse']`, `OrchardCore.ContentTypes/Views/GraphQLContentTypePartSettings.Edit.cshtml:19`).
+    `a[href$='/ContentTypes/BlogPost/ContentParts/MarkdownBodyPart/Edit']` (`Views/Admin/Edit.cshtml:163`).
+  - Waits: after the second navigation, wait until the **Parts** list (`Views/Admin/Edit.cshtml:144`) is shown. After
+    the last one, wait until the page "Edit Part - ..." (`Views/Admin/EditTypePart.cshtml:22`) is shown.
+  - On screen when the narration ends: the part page of the Markdown body part, from the top, with the **GraphQL**
+    options not yet touched.
+- `parts-2`
+  - Actions: `HighlightAsync` the labels **Collapse** and **Hide**, then `ClearHighlightsAsync` and `ClickAsync` the
+    **Collapse** box (`input[id$='Settings_Collapse']`,
+    `OrchardCore.ContentTypes/Views/GraphQLContentTypePartSettings.Edit.cshtml:19`). Then `HighlightAsync` the label
+    **Hide**.
   - Waits: after the click, wait until `input[id$='Settings_PreventFieldNameCollision']` is visible: the page hides
     the box and its label until **Collapse** is checked (`Assets/js/graphql-content-type-part-settings.ts:11-22`). The
     hint under it, "Check to prevent fields' names collisions in the GraphQL schema when they are collapsed."
@@ -154,9 +164,9 @@ storyboard. Do not use the part with the same name as the type (`BlogPost`): it 
     click, without a box above it.
   - On screen when the narration ends: the part page with **Collapse** checked and, under it, **Prevent Field Name
     Collision** (label from `GraphQLContentTypePartSettings.Edit.cshtml:36`) unchecked, and **Hide** (`:46`)
-    unchecked below. The hints "Check to collapse fields in the GraphQL schema." (`:27`) and "Check to hide part from
-    the GraphQL schema." (`:54`) are visible.
-- `parts-2`
+    unchecked and highlighted below. The hints "Check to collapse fields in the GraphQL schema." (`:27`) and "Check to
+    hide part from the GraphQL schema." (`:54`) are visible.
+- `parts-3`
   - Actions: click **Cancel** (`a.cancel`, `Views/Admin/EditTypePart.cshtml:112`) with
     `ClickAndWaitForNavigationAsync`; this returns to "Edit Content Type - Blog Post" and discards the box that was
     checked. Never click **Save** in this clip. `ClickAndWaitForNavigationAsync` the **Edit** button of the Autoroute

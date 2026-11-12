@@ -85,7 +85,7 @@
             },
             {
               "id": "levels-2",
-              "text": "A mutation operation needs Execute GraphQL Mutations. Execute GraphQL lists that permission as one that implies it, so holding the mutations permission grants both. The Administrator role holds it by default."
+              "text": "A mutation operation needs Execute GraphQL Mutations. Execute GraphQL names that permission as one that implies it, so holding the mutations permission also satisfies Execute GraphQL. The Administrator role holds it by default."
             },
             {
               "id": "levels-3",
@@ -138,7 +138,7 @@
           "steps": [
             {
               "id": "type-1",
-              "text": "In GraphiQL, the Explorer lists a query for each content type without a stereotype, such as article. Let's open Design, Content Definition, Content Types, and edit the Article type."
+              "text": "GraphiQL is the query editor of the module, and its Explorer lists a query for each content type without a stereotype, such as article. Let's open Design, Content Definition, Content Types, and edit the Article type."
             },
             {
               "id": "type-2",
@@ -156,10 +156,14 @@
           "steps": [
             {
               "id": "parts-1",
-              "text": "Each part of a type has options too. Let's edit the Markdown body part of Blog Post. Collapse adds the fields of a part directly to the content type, and selecting it reveals Prevent Field Name Collision."
+              "text": "Each part of a type has options too. Let's open Design, Content Definition, Content Types, edit the Blog Post type, and edit its Markdown body part."
             },
             {
               "id": "parts-2",
+              "text": "Collapse adds the fields of a part directly to the content type, and selecting it reveals Prevent Field Name Collision. Hide removes the part from the GraphQL schema."
+            },
+            {
+              "id": "parts-3",
               "text": "On the Autoroute part, Collapse is selected and disabled, with a note that it is collapsed by default. The Autoroute module collapses that part in code."
             }
           ]
