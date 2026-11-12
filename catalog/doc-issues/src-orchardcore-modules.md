@@ -1,0 +1,9 @@
+# Documentation issues: src OrchardCore.Modules
+
+Where the documentation and the code disagree. The code wins. See [the index](../DOC-ISSUES.md).
+
+| Feature | Page | What the docs say | What the code does | Code (file:line) | Found by |
+| --- | --- | --- | --- | --- | --- |
+| OrchardCore.Apis.GraphQL | src/OrchardCore.Modules/OrchardCore.Apis.GraphQL/ConfigurationSchema.json (linked from the docs page) | FieldImpact: when not set, the default impact of the GraphQL library is used (the docs page says 'Default: null'). | The middleware passes FieldImpact ?? 0 as DefaultObjectImpact, so an unset FieldImpact gives an impact of 0 for object fields. | src/OrchardCore.Modules/OrchardCore.Apis.GraphQL/GraphQLMiddleware.cs (ComplexityOptions, DefaultObjectImpact = _settings.FieldImpact ?? 0) | graphql-settings-permissions |
+| FieldImpact when not set | src/OrchardCore.Modules/OrchardCore.Apis.GraphQL/ConfigurationSchema.json (the schema file; the docs page only lists 'Default: null') | The schema says that when FieldImpact is not set, the default impact of the GraphQL library is used. | The middleware passes FieldImpact ?? 0 as DefaultObjectImpact, so object fields add 0. The library default is 1 (GraphQL.NET XML documentation). | src/OrchardCore.Modules/OrchardCore.Apis.GraphQL/GraphQLMiddleware.cs:164-169 | graphql-settings-permissions |
+| Lucene feature description on the Features page | src/OrchardCore.Modules/OrchardCore.Lucene/Manifest.cs (shown on the Features page; the module page repeats no such claim) | 'Creates Lucene indexes to support search scenarios, introduces a preconfigured container-enabled content type.' | Nothing in the Lucene module or OrchardCore.Lucene.Core creates or registers a content type or a container (list) part; the second half of the description does not match any code. | OrchardCore.Modules/OrchardCore.Lucene/Manifest.cs:13 | lucene-search |

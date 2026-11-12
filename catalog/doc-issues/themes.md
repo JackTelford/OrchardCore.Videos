@@ -1,0 +1,8 @@
+# Documentation issues: Themes
+
+Where the documentation and the code disagree. The code wins. See [the index](../DOC-ISSUES.md).
+
+| Feature | Page | What the docs say | What the code does | Code (file:line) | Found by |
+| --- | --- | --- | --- | --- | --- |
+| OrchardCore.Themes, Themes page (gap, not a contradiction) | reference/modules/Themes/README.md | Nothing about the Themes admin page. The page is a developer article on shapes, alternates and templates, built around a Portfolio example. | The module provides the Themes admin page (Design, Themes) with Make Current, Enable, Disable, Reset Site Theme and Reset Admin Theme, and the Apply a Theme permission. None of this is described in the module's documentation page, which is the primary documentation link of this admin video. | src/OrchardCore.Modules/OrchardCore.Themes/Controllers/AdminController.cs:44-208; src/OrchardCore.Modules/OrchardCore.Themes/Views/Admin/Index.cshtml; src/OrchardCore.Modules/OrchardCore.Themes/Permissions.cs:8 | themes-choose |
+| TheComingSoonTheme | reference/modules/Themes/README.md | The page named for this video in the tracker explains theming with a portfolio example (shapes, alternates, templates) and never mentions TheComingSoonTheme or the Coming Soon recipe. | The theme ships the ComingSoon setup recipe (home page, Register widget, social icons, User Registration workflow) and its own layout; the only documentation is the section "ComingSoon Recipe and TheComingSoonTheme" in src/docs/getting-started/starter-recipes.md. | src/OrchardCore.Themes/TheComingSoonTheme/Recipes/comingsoon.recipe.json | build-a-coming-soon-page |
