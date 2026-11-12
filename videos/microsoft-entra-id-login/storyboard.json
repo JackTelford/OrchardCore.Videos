@@ -243,7 +243,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Microsoft Entra ID sign-in connects an app registration in Azure to the login page of your site. Register the app, enable the feature, enter the IDs, and people sign in with their work account. Thanks for watching."
+              "text": "Microsoft Entra ID sign-in connects an app registration in Azure to the login page of your site. Register the app, enable the feature, enter the AppId and TenantId, and people sign in with their work account. Thanks for watching."
             }
           ]
         }
