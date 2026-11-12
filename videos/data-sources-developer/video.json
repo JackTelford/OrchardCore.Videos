@@ -1,0 +1,52 @@
+{
+  "title": "Data Sources: Expose Your Module's Data to Pipelines | Orchard Core",
+  "description": "Data pipelines, reports and other features read their data through data sources. A module that keeps its own records can offer them to these consumers only by describing its data and registering a data source.\n\nThis video builds a data source with the RecordDataSource base class: its data set, its fields, its access check and its loading. It registers the data source with AddDataSource, shows where the Data Pipelines designer lists it, and covers IDataSource for data that doesn't come as records.\n\nIn this video:\n• What a data source, a data set, a schema and a batch are\n• What consumers see: the data set dialog of the Data Pipelines designer\n• Build a data source: a record, a data set and its access\n• Register it with one call in a startup\n• Implement IDataSource when data doesn't come as records\n• Going further: confirming what was read, and aggregating",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "DataPipelines"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Data Pipelines",
+    "Data Sources",
+    "Orchard Core modules"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Data Pipelines"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Data Sources",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataSources/"
+    },
+    {
+      "label": "Documentation: Data Pipelines",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DataPipelines/README.md",
+    "src/docs/reference/modules/DataSources/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataPipelines.Core"
+  }
+}
