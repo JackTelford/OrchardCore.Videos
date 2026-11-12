@@ -76,3 +76,14 @@ Confirm on the running site that each reads as the narration says:
   default template of Facebook Save holds the fixed address of a third-party site instead of the address of the
   site (`Migrations/Widgets/migration.recipe.json:214`). None of this is in the narration. A maintainer may want a
   note in the documentation.
+
+## 6. Default roles on the recorded site
+
+- **Checked.** The permission provider grants Manage Liquid templates to the Administrator and Editor stereotypes
+  (`OrchardCore/OrchardCore.Liquid.Abstractions/Permissions.cs:19-30`), and the narration of `rights-1` says only that
+  these roles have it by default. The Blog recipe also lists an Editor role with an empty permission list
+  (`OrchardCore.Themes/TheBlogTheme/Recipes/blog.recipe.json:96-99`); the Roles step only adds the listed permissions
+  to a role (`OrchardCore.Modules/OrchardCore.Roles/Recipes/RolesStep.cs:62-81`).
+- **Not checked.** Which permissions the Editor role holds on a site that Auto Setup provisions with the Blog recipe.
+- **To confirm.** Open Security, Roles, Editor on the recorded site and check whether Manage Liquid templates is
+  ticked. The slides show no screen, so this only matters for the accuracy of "by default"; report it if the box is empty.
