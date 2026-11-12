@@ -1,0 +1,214 @@
+{
+  "title": "Workflows: Events, Tasks and Outcomes",
+  "output": "workflows-events-tasks-outcomes",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Workflows: Events, Tasks and Outcomes",
+      "subtitle": "What starts a workflow, what it does, and where it goes next",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A workflow runs because something happens, does its work in tasks, and moves from one activity to the next through outcomes. In this video, you build a workflow that reacts to a published page, and learn what each of these building blocks does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The building blocks",
+      "subtitle": "Events, tasks and outcomes",
+      "clips": [
+        {
+          "id": "01-blocks",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "blocks-1",
+              "text": "A workflow is a set of activities connected to each other. An event is an activity that waits for something to happen. As the start activity, it starts the workflow; anywhere else, it makes the workflow wait."
+            },
+            {
+              "id": "blocks-2",
+              "text": "A task is an activity that does something, such as showing a notification, writing to the log, or sending an email. The workflow runs a task when it reaches it."
+            },
+            {
+              "id": "blocks-3",
+              "text": "An outcome tells the workflow how an activity ended, such as Done. Some activities offer several outcomes: an If Else Task has True and False, and an Email Task has Done and Failed."
+            },
+            {
+              "id": "blocks-4",
+              "text": "You connect an outcome to the next activity, and the connection tells the workflow what to run next. An activity that no connection reaches from the start never runs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Start with an event",
+      "subtitle": "What makes a workflow run",
+      "clips": [
+        {
+          "id": "02-event",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "event-1",
+              "text": "Workflows are under Design in the admin menu. Let's open Workflows, where the list is empty, and select Create Workflow."
+            },
+            {
+              "id": "event-2",
+              "text": "A workflow only needs a name. Let's type Announce published pages, and select Create and open the designer."
+            },
+            {
+              "id": "event-3",
+              "text": "The designer opens on an empty canvas. A workflow runs when something happens, so it offers events to start with. Let's pick Content Published Event."
+            },
+            {
+              "id": "event-4",
+              "text": "The event appears on the canvas with a Start badge, because the first event you add becomes the start activity. Its settings open at the bottom."
+            },
+            {
+              "id": "event-5",
+              "text": "Content Types filters the event. Let's select Page, so that only publishing a page starts this workflow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Outcomes and connections",
+      "subtitle": "How a workflow moves from one activity to the next",
+      "clips": [
+        {
+          "id": "03-outcomes",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "outcomes-1",
+              "text": "The event has one outcome, Done, shown as a port on the right edge of the activity. Pointing at a port that leads nowhere shows a plus. Let's click it."
+            },
+            {
+              "id": "outcomes-2",
+              "text": "A menu lists the activities you can add next, and you can search it. Let's search for fork, and select Fork Task."
+            },
+            {
+              "id": "outcomes-3",
+              "text": "The Fork Task is added to the right, already connected. The line between the two activities is a connection: when the event finishes with Done, the workflow goes on to the Fork Task."
+            },
+            {
+              "id": "outcomes-4",
+              "text": "Some activities have fixed outcomes, but a Fork Task takes its outcomes from its settings. In Forks, you enter names separated by commas. Let's enter Editors, Audit."
+            },
+            {
+              "id": "outcomes-5",
+              "text": "The Fork Task shows two outcomes, Editors and Audit. When it runs, the workflow follows both of them, so each outcome can lead somewhere different."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Tasks",
+      "subtitle": "The work a workflow does",
+      "clips": [
+        {
+          "id": "04-tasks",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tasks-1",
+              "text": "Let's click the Editors outcome, search for notify, and select Notify Task. A task is where the work of the workflow happens."
+            },
+            {
+              "id": "tasks-2",
+              "text": "Notify Task has a Notification Type and a Message. Let's keep Success, and type: Announced by the workflow, a page was published. The activity on the canvas shows the message."
+            },
+            {
+              "id": "tasks-3",
+              "text": "For the Audit outcome, let's use the Activities pane on the left. Search for log, select Tasks to keep only tasks, and click Log."
+            },
+            {
+              "id": "tasks-4",
+              "text": "Log Task writes a line to the log of the site. Let's keep the Information level, and type: Audit, a page was published."
+            },
+            {
+              "id": "tasks-5",
+              "text": "A badge on the Log Task counts its issues. This one is a warning: nothing connects the task to the start activity, so it never runs."
+            },
+            {
+              "id": "tasks-6",
+              "text": "Let's drag from the Audit outcome onto Log Task. The connection is drawn, and the badge disappears."
+            },
+            {
+              "id": "tasks-7",
+              "text": "Notify Task and Log Task each have one outcome, Done. Nothing is connected to it, so each branch ends there, and the workflow finishes once both have run."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Publish and run",
+      "subtitle": "Check that the workflow ran",
+      "clips": [
+        {
+          "id": "05-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "The designer saves your changes to a draft, and a draft does not run. Select Publish to make the workflow run. The version shown in the toolbar changes to the one you published."
+            },
+            {
+              "id": "run-2",
+              "text": "Let's publish a page. Under Content, Content Items, the New menu lists the content types you can create. Let's choose Page."
+            },
+            {
+              "id": "run-3",
+              "text": "Let's type Opening hours as the title, and select Publish. Publishing a page is the event that starts this workflow."
+            },
+            {
+              "id": "run-4",
+              "text": "The list comes back with the notification of the Notify Task, next to the message that the page was published."
+            },
+            {
+              "id": "run-5",
+              "text": "To check what ran, let's open Instances from the Workflows page. Each run of a workflow is an instance, and this one is Finished."
+            },
+            {
+              "id": "run-6",
+              "text": "Let's open the instance. The canvas highlights the activities and connections that ran: the event, the Fork Task, and both branches. A separate video covers instances in detail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Workflows: Events, Tasks and Outcomes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "An event starts a workflow or makes it wait, tasks do the work, and outcomes connect one activity to the next. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

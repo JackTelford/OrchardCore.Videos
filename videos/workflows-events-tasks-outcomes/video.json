@@ -1,0 +1,50 @@
+{
+  "title": "Workflows: Events, Tasks and Outcomes | Orchard Core",
+  "description": "A workflow can look like boxes and lines until you know what each box is. Orchard Core workflows are built from three things: events that start a workflow or make it wait, tasks that do the work, and outcomes that connect one activity to the next.\n\nThis video builds a small workflow in the designer that reacts to a published page, and explains each building block on the way.\n\nIn this video:\n• The building blocks: events, tasks and outcomes\n• Start with an event: create a workflow and add a Content Published Event\n• Outcomes and connections: add a Fork Task and name its outcomes\n• Tasks: add a Notify Task and a Log Task, and connect them\n• Publish and run: publish the workflow, publish a page, and check the instance",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Workflow designer",
+    "Automation",
+    "Events",
+    "Tasks",
+    "Outcomes"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows"
+  }
+}
