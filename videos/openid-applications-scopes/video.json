@@ -1,0 +1,50 @@
+{
+  "title": "OpenID Connect Applications and Scopes | Orchard Core",
+  "description": "Before a program can use your Orchard Core site as its identity provider, it has to be registered as an application, and you decide which scopes it is allowed to request. The OpenID Connect Management UI feature adds the admin pages that do this.\n\nThis video registers a confidential application for a service and a public application for a web app, manages the applications in the list, and defines a scope of your own with its API audiences.\n\nIn this video:\n• What applications and scopes are, and where they are managed\n• Register a confidential application: Client Id, Client Secret and Client Credentials Roles\n• Register a public application: authorization code flow, redirect addresses and consent type\n• Search, edit and delete applications\n• Define a scope, and allow it on an application",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "OpenIDConnect"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "OpenID Connect",
+    "OAuth",
+    "identity provider",
+    "authentication",
+    "client credentials",
+    "scopes"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "OpenID Connect"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenId/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/OpenId/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenId.Management"
+  }
+}
