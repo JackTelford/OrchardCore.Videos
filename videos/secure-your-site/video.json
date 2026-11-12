@@ -1,0 +1,58 @@
+{
+  "title": "Secure Your Site: A Checklist for Administrators | Orchard Core",
+  "description": "Security in Orchard Core is spread over several pages of the admin, and a page can be missed when you review a site.\n\nThis checklist visits those pages in the order a person would review them, and says what to look for on each one.\n\nIn this video:\n• The four questions the checklist asks, and where the pages are\n• Turning on the security features your site needs\n• Who can do what: roles, permissions and user accounts\n• How people sign in: login settings, two-factor authentication and registration\n• Protecting the connection: HTTPS, security headers and reverse proxy settings\n• Stopping abuse: reCaptcha, rate limits and CORS\n• Keeping records and secrets: Audit Trail and Secrets\n• The checklist to review again",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Security",
+    "Roles and permissions",
+    "Two-factor authentication",
+    "HTTPS",
+    "Content Security Policy",
+    "CORS",
+    "reCaptcha",
+    "Rate limiting",
+    "Audit trail"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Site Security"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Security",
+      "url": "https://docs.orchardcore.net/en/latest/topics/security/"
+    },
+    {
+      "label": "Documentation: Security Settings",
+      "url": "https://docs.orchardcore.net/en/latest/topics/security/security-settings/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/topics/security/README.md",
+    "src/docs/topics/security/security-settings.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:topics/security"
+  }
+}
