@@ -1,6 +1,6 @@
 # A Modular ASP.NET Core MVC Application With Orchard Core
 
-**YouTube:** not published yet · **Length:** 5:36 · **Feature:** `guide:guides/create-modular-application-mvc` ([Creating a modular ASP.NET Core application](https://docs.orchardcore.net/en/latest/guides/create-modular-application-mvc/))
+**YouTube:** not published yet · **Length:** 5:38 · **Feature:** `guide:guides/create-modular-application-mvc` ([Creating a modular ASP.NET Core application](https://docs.orchardcore.net/en/latest/guides/create-modular-application-mvc/))
 
 A developer video for the guide of the same name. It creates a web application and a module from the Orchard Core
 templates, connects them with a project reference, and reads the code of both: `Program.cs` and the layout of the web

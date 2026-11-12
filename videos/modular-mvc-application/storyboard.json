@@ -164,7 +164,7 @@
             },
             {
               "id": "find-3",
-              "text": "The application runs a single tenant with every feature of those modules enabled. There is no setup screen, and the module needs no activation."
+              "text": "The application runs a single tenant, which is one site, with every feature of those modules enabled. There is no setup screen, and the module needs no activation."
             }
           ]
         }
@@ -238,7 +238,7 @@
             },
             {
               "id": "home-2",
-              "text": "The default address still answers as well. The route of the module adds to the default route, and does not replace it."
+              "text": "The default address answers as well. The route of the module adds to the default route, and does not replace it."
             }
           ]
         }
