@@ -1,0 +1,267 @@
+{
+  "title": "What Orchard Core is and what you can build",
+  "output": "orchard-core-overview",
+  "spoken": {
+    "HtmlBody": "H.T.M.L. Body"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "What Orchard Core is and what you can build",
+      "subtitle": "An open-source CMS and application framework for ASP.NET Core",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core is an open-source content management system and application framework for ASP.NET Core. In this video, you'll see what it is, how a site is organized, and what you can build with it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What Orchard Core is",
+      "subtitle": "A framework, and a CMS built on it",
+      "clips": [
+        {
+          "id": "01-what",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "Orchard Core is open source, modular, and multi-tenant. It has two parts: the Orchard Core Framework, and the Orchard Core CMS, which is built on top of the framework."
+            },
+            {
+              "id": "what-2",
+              "text": "The framework is for developers who build modular, multi-tenant applications on ASP.NET Core, such as software as a service products. It is distributed on its own, separate from the CMS."
+            },
+            {
+              "id": "what-3",
+              "text": "The CMS is for building websites that you manage from an admin interface. It includes content management, themes, and user management. This video focuses on the CMS."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "A site and its admin",
+      "subtitle": "The front end, and where you manage it",
+      "clips": [
+        {
+          "id": "02-tour",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tour-1",
+              "text": "This is a website built with the Orchard Core CMS: a blog, with a menu that has Home and About, and a post to read. It is the front end, drawn by a theme."
+            },
+            {
+              "id": "tour-2",
+              "text": "The people who run the site work in the admin. Its welcome page has cards such as Create content, Customize theme, and Manage users."
+            },
+            {
+              "id": "tour-3",
+              "text": "The menu on the left leads to everything else. Content is for what you publish, Design is for themes, widgets, and content types, and Tools is for features and recipes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Content items and content types",
+      "subtitle": "What you publish, and what it is made of",
+      "clips": [
+        {
+          "id": "03-items",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "items-1",
+              "text": "Content, Content Items opens the Manage Content page. Each row is one content item, with its title, its type, its status, such as Published or Draft, and when it was last modified."
+            },
+            {
+              "id": "items-2",
+              "text": "Let's open About with Edit. The editor shows the pieces that the item's type is made of, such as Title, Permalink, and HtmlBody, which holds the body of the item."
+            },
+            {
+              "id": "items-3",
+              "text": "Publish makes your changes visible on the site. Save Draft stores them without publishing, and Preview shows the page as it will look on the site, before you publish it."
+            }
+          ]
+        },
+        {
+          "id": "03-types",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "Behind every content item is a content type. Design, Content Definition, Content Types lists them, such as Article, Blog, and Page."
+            },
+            {
+              "id": "types-2",
+              "text": "Let's open Article. A content type is a set of fields and parts. Fields hold values such as Subtitle and Banner Image, and parts add behavior that many types share, such as Title, Autoroute for the permalink, and HtmlBody for the body."
+            },
+            {
+              "id": "types-3",
+              "text": "Add Field and Add Parts extend a type from this screen, so you can shape your content without leaving the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Themes, widgets and layers",
+      "subtitle": "How the site looks, and where things appear",
+      "clips": [
+        {
+          "id": "04-design",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "design-1",
+              "text": "Design, Themes lists the installed themes. The current Site theme draws the front end, and the current Admin theme draws the admin. Make Current changes which theme is in use."
+            },
+            {
+              "id": "design-2",
+              "text": "A zone is a named section of a theme's layout, and a widget is a block of content shown in a zone. Design, Widgets lists the zones, here Content and Footer. The Footer zone holds one widget, also named Footer."
+            },
+            {
+              "id": "design-3",
+              "text": "A layer decides on which pages its widgets appear. The Always layer shows them on every page, and the Homepage layer shows them only on the home page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Features and recipes",
+      "subtitle": "What a site uses, and how it is set up",
+      "clips": [
+        {
+          "id": "05-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Orchard Core is built from modules, and each module provides features. Tools, Features lists them by category, with a description of each one and the features it depends on."
+            },
+            {
+              "id": "features-2",
+              "text": "Search narrows the list as you type. Let's search for Workflows, which is disabled on this site. Enable turns a feature on, and Disable turns it off, so a site uses only what it needs."
+            }
+          ]
+        },
+        {
+          "id": "05-recipes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe sets up a site in one go. Depending on the recipe, it enables features, defines content types, chooses themes, and creates starting content. The Setup screen runs one, and this blog came from the Blog recipe."
+            },
+            {
+              "id": "recipe-2",
+              "text": "Deployment plans build packages that move content and configuration between sites. Importing a package runs it as a recipe, and Remote Deployment sends a package to another Orchard Core site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Many sites, one application",
+      "subtitle": "Multi-tenancy",
+      "clips": [
+        {
+          "id": "06-tenants",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tenants-1",
+              "text": "Orchard Core is multi-tenant. One running application hosts many independent sites, called tenants, and each tenant has its own URL, content, users, and theme."
+            },
+            {
+              "id": "tenants-2",
+              "text": "You manage tenants from the Default tenant, in Multi-Tenancy, Tenants, once the Tenants feature is enabled. Each tenant is set up with a recipe of its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "What you can build",
+      "subtitle": "Websites, headless sites and applications",
+      "clips": [
+        {
+          "id": "07-build",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "A full CMS site uses a theme and templates to render your content, with little or no custom development. The Blog, Agency, and Coming Soon recipes each set one up."
+            },
+            {
+              "id": "build-2",
+              "text": "A decoupled site keeps the admin, and your own ASP.NET Core pages render the content. A headless site only manages content, and another application reads it through GraphQL or REST APIs."
+            },
+            {
+              "id": "build-3",
+              "text": "With the framework alone, you build your own modular, multi-tenant application, such as a software as a service product, without any of the CMS features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Where to go next",
+      "subtitle": "Documentation, glossary and the rest of the series",
+      "clips": [
+        {
+          "id": "08-next",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "next-1",
+              "text": "The Orchard Core documentation has reference pages for the built-in modules. The Modules Reference groups them by area, such as Content, Design, and Localization."
+            },
+            {
+              "id": "next-2",
+              "text": "The Glossary explains the terms you met here, such as content item, content type, tenant, layer, and recipe."
+            },
+            {
+              "id": "next-3",
+              "text": "Other videos in this series cover setting up your first site and finding your way around the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "What Orchard Core is and what you can build",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Orchard Core is a modular, multi-tenant framework, and a CMS built on it, for ASP.NET Core. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
