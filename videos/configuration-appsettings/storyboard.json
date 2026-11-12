@@ -1,0 +1,260 @@
+{
+  "title": "Configuration: appsettings, Environment Variables and Tenants",
+  "output": "configuration-appsettings",
+  "spoken": {
+    "OrchardCore__Media__MaxFileSize": "Orchard Core double underscore Media double underscore Max File Size",
+    "appsettings.Development.json": "app settings dot Development dot JSON",
+    "appsettings.json": "app settings dot JSON",
+    "ConfigurationSchema.json": "Configuration Schema dot JSON",
+    "tenants.json": "tenants dot JSON",
+    "OrchardCore_Media_Azure": "Orchard Core underscore Media underscore Azure",
+    "OrchardCore_Tenants": "Orchard Core underscore Tenants",
+    "ORCHARD_APP_DATA": "Orchard app data",
+    "App_Data": "App Data",
+    "IShellConfiguration": "I Shell Configuration",
+    "IConfiguration": "I Configuration",
+    "RequireTablePrefix": "Require Table Prefix",
+    "TablePrefixPattern": "Table Prefix Pattern",
+    "SchemaPattern": "Schema Pattern",
+    "DatabaseProvider": "Database Provider",
+    "ConnectionString": "Connection String",
+    "TablePrefix": "Table Prefix",
+    "MaxFileSize": "Max File Size",
+    "MyService": "My Service",
+    "MyProvider": "My Provider",
+    "MyTenant": "My Tenant",
+    "BackgroundService": "Background Service",
+    "appsettings": "app settings",
+    "OrchardCore": "Orchard Core"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Configuration",
+      "subtitle": "Where settings come from, which one wins, and how tenants add theirs",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core reads its settings from files, environment variables and the command line, and every tenant can add settings of its own. In this video, we'll see where configuration comes from, which source wins, and how to configure tenants."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Configuration sections",
+      "subtitle": "Everything sits under OrchardCore",
+      "clips": [
+        {
+          "id": "01-sections",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sections-1",
+              "text": "ASP.NET Core has one configuration for the whole application. Orchard Core adds IShellConfiguration, which extends IConfiguration, so each tenant reads the shared settings with its own settings layered on top."
+            },
+            {
+              "id": "sections-2",
+              "text": "All the configuration of Orchard Core sits under one section named OrchardCore. Modules nest their settings by service: the Azure settings of the Media module are in Media, then Azure, and the SMTP settings are in Email, then Smtp."
+            },
+            {
+              "id": "sections-3",
+              "text": "Section names carry no OrchardCore underscore prefix. Older names such as OrchardCore_Media_Azure are still read, and when a value is set under both names, the current name wins. An array under the current name replaces the older array."
+            },
+            {
+              "id": "sections-4",
+              "text": "Only modules that read a section are configured by it, so check the documentation of a module for its settings. The appsettings.json file of the Orchard Core CMS web project lists many sections as comments."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Environment variables",
+      "subtitle": "The same settings, without a file",
+      "clips": [
+        {
+          "id": "02-env",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "env-1",
+              "text": "Environment variables follow the same paths. A double underscore replaces each colon, so OrchardCore__Media__MaxFileSize sets the maximum file size of the Media module for every tenant."
+            },
+            {
+              "id": "env-2",
+              "text": "Put a tenant name right after OrchardCore, and the value applies to that tenant only: Default, or the name of any other tenant. A tenant's value wins over the shared one, except for settings the host reads for all tenants, like BackgroundService."
+            },
+            {
+              "id": "env-3",
+              "text": "Hosting platforms use the same variables: Azure App Settings reach the site as environment variables, on Windows and on Linux. A pipeline can also transform the appsettings.json file with values from its own variables."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Which value wins",
+      "subtitle": "The sources, in the order they load",
+      "clips": [
+        {
+          "id": "03-order",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "order-1",
+              "text": "ASP.NET Core loads appsettings.json first, then the file of the current environment, such as appsettings.Development.json, then user secrets in the Development environment."
+            },
+            {
+              "id": "order-2",
+              "text": "Next, Orchard Core adds the appsettings.json file of the App_Data folder, then the file of the current environment, such as appsettings.Development.json. They override the files of the host project."
+            },
+            {
+              "id": "order-3",
+              "text": "Environment variables and command-line arguments come after. ASP.NET Core loads them before the App_Data files, and Orchard Core applies them again at this point, so they win over every file so far."
+            },
+            {
+              "id": "order-4",
+              "text": "Last come the settings of the tenant: its own section under OrchardCore, then the appsettings.json file in its own folder of App_Data. A later source wins, so a tenant value beats a shared one."
+            },
+            {
+              "id": "order-5",
+              "text": "By default the App_Data folder sits in the application folder. The ORCHARD_APP_DATA environment variable moves it, to a relative or an absolute path, and Orchard Core creates the folder if it is missing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Tenant configuration",
+      "subtitle": "Before and after a tenant exists",
+      "clips": [
+        {
+          "id": "04-pre",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pre-1",
+              "text": "To configure a tenant before it exists, add a section named for the tenant, with a State of Uninitialized. Its URL prefix routes requests to the tenant, and its database provider and recipe are used when it is set up."
+            },
+            {
+              "id": "pre-2",
+              "text": "Orchard Core treats any section under OrchardCore that has a valid State as a tenant. A section without a State only adds configuration, as we'll see for a tenant that already exists."
+            }
+          ]
+        },
+        {
+          "id": "04-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "In the admin, under Multi-Tenancy, Tenants, the list shows MyTenant, although nobody created it there. Its badges come from the configuration: the Sqlite database provider, the SaaS recipe, and the state Uninitialized."
+            },
+            {
+              "id": "list-2",
+              "text": "Setup opens the tenant's own address. The screen asks for the site name, the time zone and the Super User, but not for a recipe or a database, because the configuration already provides them."
+            }
+          ]
+        },
+        {
+          "id": "04-post",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "post-1",
+              "text": "Once a tenant exists, a section with its name, and no State, sets its configuration. This one sets the maximum file size of the Media module for the Default tenant only."
+            },
+            {
+              "id": "post-2",
+              "text": "A tenant section shares its path with the module sections under OrchardCore. Never name a tenant after a module section, such as Media or Email."
+            },
+            {
+              "id": "file-1",
+              "text": "Each tenant can also have its own appsettings.json file, in a folder named for the tenant. Its keys sit at the root, without an OrchardCore section, and no file for a specific environment is read."
+            },
+            {
+              "id": "file-2",
+              "text": "Orchard Core writes this file during setup, and keeps only the values that differ from the application configuration. The State and the URL of the tenant are saved apart, in tenants.json, under the same rule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "One database for every tenant",
+      "subtitle": "Shared settings at the root",
+      "clips": [
+        {
+          "id": "05-database",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "db-1",
+              "text": "To give every tenant the same database, set the DatabaseProvider and the ConnectionString once, at the root of the OrchardCore section. A Default section can give the Default tenant its own TablePrefix, keeping its tables apart."
+            },
+            {
+              "id": "db-2",
+              "text": "Under Tenants, TablePrefixPattern and SchemaPattern generate the table prefix and schema of each tenant created in the admin or the API, from a template such as the tenant name. The values must be valid SQL identifiers, and RequireTablePrefix makes a prefix mandatory."
+            },
+            {
+              "id": "db-3",
+              "text": "These settings apply to SQL Server, MySQL and PostgreSQL. SQLite does not use the shared connection string: it keeps a database file for each tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Configuration in your module",
+      "subtitle": "Read a section, describe it",
+      "clips": [
+        {
+          "id": "06-module",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "mod-1",
+              "text": "In your own module, a Startup class receives IShellConfiguration, and binds a section to an options class. The Tenants module binds Tenants, and also accepts the older name OrchardCore_Tenants."
+            },
+            {
+              "id": "mod-2",
+              "text": "For your own sections, skip the prefix and nest by service, such as MyService and MyProvider. The environment variable names then stay short."
+            },
+            {
+              "id": "mod-3",
+              "text": "A module can also describe its sections. Ship a ConfigurationSchema.json file in the package, with a targets file that declares it, and Visual Studio suggests and validates those settings in appsettings files."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Configuration",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's configuration in Orchard Core: sections under OrchardCore, files and environment variables, and tenant values layered on top. The documentation also covers live tenant options and the shells configuration providers. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
