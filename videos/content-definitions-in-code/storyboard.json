@@ -138,7 +138,7 @@
             },
             {
               "id": "part-2",
-              "text": "A type has no fields of its own. Create a part with the name of the type, attach it, and add the fields to that part; the admin lists them under the type. A new field needs OfType, or saving the part fails."
+              "text": "A type has no fields of its own. Create a part with the name of the type, attach it, and add the fields to that part; the admin lists them under the type. An added field needs OfType, or saving the part fails."
             }
           ]
         }
@@ -188,7 +188,7 @@
             },
             {
               "id": "version-2",
-              "text": "To change a definition later, add an UpdateFrom method for the current version, and return the next number. A site never runs a method twice, so editing a released one changes nothing for it. CreateAsync can carry the change too, for new sites, as here."
+              "text": "To change a definition later, add an UpdateFrom method for the current version, and return the next number. A site never runs a method twice, so editing a released one changes nothing for it. CreateAsync can carry the change too, for fresh sites, as here."
             },
             {
               "id": "version-3",
