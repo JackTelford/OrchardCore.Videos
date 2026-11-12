@@ -6333,9 +6333,9 @@
       "src/docs/guides/create-install-custom-module/README.md",
       "src/docs/reference/modules/Modules/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.7,
+    "words": 861,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

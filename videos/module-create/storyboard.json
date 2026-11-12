@@ -1,0 +1,281 @@
+{
+  "title": "Create an Orchard Core module",
+  "output": "module-create",
+  "spoken": {
+    "dotnet": "dot net",
+    "OrchardCore.ProjectTemplates": "Orchard Core dot Project Templates",
+    "Greetings.OrchardCore": "Greetings dot OrchardCore",
+    "Manifest.cs": "Manifest dot C.S.",
+    "Startup.cs": "Startup dot C.S.",
+    "Program.cs": "Program dot C.S.",
+    "StartupBase": "Startup Base",
+    "Home/Index": "Home slash Index",
+    "AddOrchardCms": "Add Orchard C.M.S.",
+    "UseOrchardCore": "Use Orchard Core",
+    "ProjectReference": "Project Reference"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Your first Orchard Core module",
+      "subtitle": "Create it, describe it, reference it and enable it",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A module is how you add your own code to Orchard Core. In this video, you create a module from the project template, describe it in its manifest, reference it from your web project, and enable it from the Features page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a module is",
+      "subtitle": "A project, a manifest and features",
+      "clips": [
+        {
+          "id": "01-what",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "A module is a .NET class library that Orchard Core loads into your web application. It can contain services, controllers, views, and static files such as scripts and styles."
+            },
+            {
+              "id": "what-2",
+              "text": "A manifest describes the module: its name, its description, and its category. The Features page shows these when it lists the module."
+            },
+            {
+              "id": "what-3",
+              "text": "A module provides one or more features. Each tenant, meaning each site your application hosts, enables the features it needs. The code of a feature runs only for the tenants that enabled it."
+            },
+            {
+              "id": "what-4",
+              "text": "The modules that come with Orchard Core, such as Features, are built the same way, with a manifest and a Startup class. Your module works like them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the module",
+      "subtitle": "The module template",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Install the Orchard Core project templates once, with dotnet new install. The package is called OrchardCore.ProjectTemplates."
+            },
+            {
+              "id": "create-2",
+              "text": "Then dotnet new creates the module from the CMS module template, and the dash n option names it. Following the documentation, the name is the module name followed by dot OrchardCore."
+            },
+            {
+              "id": "create-3",
+              "text": "Four parts of the generated project matter. The project file marks it as a module, Manifest.cs describes it, and Startup.cs registers its routes and services. A controller and a view give it a page."
+            },
+            {
+              "id": "create-4",
+              "text": "The project file uses the Razor SDK, which precompiles the views of the module. It references the Orchard Core Module Targets package, and that reference is what makes the class library an Orchard Core module."
+            },
+            {
+              "id": "create-5",
+              "text": "In Startup.cs, the Startup class inherits from StartupBase. Its Configure method maps the address Home/Index to the Home controller, in the area named after the module."
+            },
+            {
+              "id": "create-6",
+              "text": "The Index action of the Home controller returns a view. Open the Index view in the Views, Home folder, and replace its text with a heading that greets visitors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Describe the module",
+      "subtitle": "The manifest",
+      "clips": [
+        {
+          "id": "03-manifest",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "manifest-1",
+              "text": "The manifest is an assembly attribute in Manifest.cs. Name is the label the Features page shows, so change it to Greetings. Description appears under the name."
+            },
+            {
+              "id": "manifest-2",
+              "text": "Category sets the group the module is listed in, here Samples. Author, Website, and Version record who made the module and which version it is."
+            },
+            {
+              "id": "manifest-3",
+              "text": "Name changes the label, not the identity. The feature id stays the name of the assembly, Greetings.OrchardCore, and recipes use that id."
+            },
+            {
+              "id": "manifest-4",
+              "text": "Dependencies lists the ids of the features your module needs. Enabling the module enables them too, and the Features page shows them beside the module."
+            },
+            {
+              "id": "manifest-5",
+              "text": "A separate video covers writing the same metadata in the project file instead of in a manifest file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Install the module",
+      "subtitle": "Reference it from the web project",
+      "clips": [
+        {
+          "id": "04-install",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "install-1",
+              "text": "If you do not have a site, the CMS web application template creates a web project for it. Its project file references Orchard Core through a package."
+            },
+            {
+              "id": "install-2",
+              "text": "The web project registers Orchard Core in Program.cs. AddOrchardCms adds its services, and UseOrchardCore adds it to the request pipeline."
+            },
+            {
+              "id": "install-3",
+              "text": "This project must reference the module project. In Visual Studio, right-click Dependencies, choose Add Project Reference, and select the module. The project file then holds a ProjectReference item."
+            },
+            {
+              "id": "install-4",
+              "text": "When the web project builds, Orchard Core records the name of each referenced module in its assembly. At startup, it loads the recorded modules, and that is why the reference is required."
+            },
+            {
+              "id": "install-5",
+              "text": "Run the site with dotnet run, which builds it first. After any change to the manifest, run it again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Enable the module",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "05-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "With the site running, open the admin. In the admin menu, open Tools, then Features. The page lists the features of the installed modules, grouped by category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Type Greetings in the Search box. The search matches the name, the feature id, and the description, and the list narrows as you type."
+            },
+            {
+              "id": "enable-3",
+              "text": "The module is listed in the Samples group, the category from the manifest. The row shows the name, the feature id that recipes use, the description, and a Disabled badge."
+            },
+            {
+              "id": "enable-4",
+              "text": "Select Enable. The page reloads and shows a message that the feature was enabled."
+            },
+            {
+              "id": "enable-5",
+              "text": "Search for Greetings again. The row shows an Enabled badge, and its button reads Disable."
+            },
+            {
+              "id": "enable-6",
+              "text": "Enabling a feature changes the current tenant only. Another tenant of the same application keeps its own set of enabled features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "See it run",
+      "subtitle": "The page of the module",
+      "clips": [
+        {
+          "id": "06-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "With the feature enabled, the Startup class of the module runs for this tenant, and its route is active. Let's open Home/Index."
+            },
+            {
+              "id": "run-2",
+              "text": "The page shows the heading from the view of the module, inside the layout of the site's theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Enable it from a recipe",
+      "subtitle": "The Feature step",
+      "clips": [
+        {
+          "id": "07-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "To enable the module automatically, add a Feature step to a recipe, such as a setup or deployment recipe. Its enable list holds feature ids, and the id of this module is its assembly name, Greetings.OrchardCore."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "When the module is missing",
+      "subtitle": "Two checks and a build",
+      "clips": [
+        {
+          "id": "08-missing",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "missing-1",
+              "text": "If the module does not appear on the Features page, check two things. The module project must reference the Orchard Core Module Targets package, and the web project must reference the module project."
+            },
+            {
+              "id": "missing-2",
+              "text": "Then run the site again. Orchard Core records the referenced modules when the web project builds, so an added reference or a changed manifest takes effect after a build."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Your first Orchard Core module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A module is a project that references the Module Targets package, describes itself in a manifest, and is enabled from Tools, Features. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
