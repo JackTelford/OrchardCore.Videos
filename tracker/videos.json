@@ -2415,9 +2415,9 @@
     "docs": [
       "src/docs/reference/modules/Shortcodes/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.8,
+    "words": 572,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
