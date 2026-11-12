@@ -1,0 +1,48 @@
+{
+  "title": "Title Part: Titles, Generated Titles and Display Text | Orchard Core",
+  "description": "A content item without a display text is listed under the name of its content type, which makes it hard to recognize in the lists of the admin.\n\nThe Title part gives a content type a title. Editors can type it, be required to type it, or let Orchard Core generate it from the other fields of the item with a pattern, while the Title field is disabled or hidden.\n\nIn this video:\n• Why content items need a display text, and the four settings of the Behavior option\n• Adding the Title part to a content type and opening its settings\n• Typed titles, and requiring the editor to type one\n• Generated titles built from a pattern\n• Generating a title without showing the Title field",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Title Part",
+    "Content Types",
+    "Content Items",
+    "Display Text"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Parts"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Title/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Title/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Title"
+  }
+}
