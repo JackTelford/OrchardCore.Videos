@@ -351,9 +351,9 @@
     "docs": [
       "src/docs/reference/modules/AutoSetup/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.8,
+    "words": 716,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

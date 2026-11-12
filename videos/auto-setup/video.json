@@ -1,0 +1,48 @@
+{
+  "title": "Auto Setup: Install Sites Without the Setup Screen | Orchard Core",
+  "description": "An Orchard Core site that is not installed starts on the Setup screen, where a person answers questions about the site, its recipe, its database and its administrator. A script, a container or a deployment pipeline has no one to answer them.\n\nThe Auto Setup module answers the same questions from configuration, so a site installs itself on its first request. This video registers the module, configures a tenant, keeps the secrets out of files, and shows what happens when it runs.\n\nIn this video:\n• The Setup screen and the questions Auto Setup answers\n• Registering the module in the host\n• Configuring a tenant: site name, recipe, time zone, administrator and database\n• Keeping secrets in environment variables and user secrets\n• The first request: a site installs itself, and you log in\n• More than one site, and the AutoSetupPath\n• Validation, failures, and several instances with a lock",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Auto Setup",
+    "Setup",
+    "Configuration",
+    "Environment variables",
+    "Multi-tenancy"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AutoSetup/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/AutoSetup/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AutoSetup"
+  }
+}
