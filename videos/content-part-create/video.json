@@ -1,0 +1,53 @@
+{
+  "title": "Write a Content Part With a Display Driver | Orchard Core",
+  "description": "A content part adds data, an editor, and a display to the content items of a type. Writing one means knowing the pieces Orchard Core expects: a class, a display driver, templates, and a registration.\n\nThis video goes through the Title part of Orchard Core piece by piece, then adds the part to a content type, edits an item, and displays it on the site.\n\nIn this video:\n• The pieces of a part\n• The class, its view model, and its definition\n• The display driver: Display, Edit, and UpdateAsync\n• The templates of each shape\n• Registering the part\n• Adding the part to a content type\n• Editing and displaying the part\n• Settings, handlers, placement, and alternates",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "ContentParts"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "content part",
+    "display driver",
+    "shapes",
+    "module development"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Content Parts",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentParts/"
+    },
+    {
+      "label": "Documentation: Display Management",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DisplayManagement/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentParts/README.md",
+    "src/docs/reference/modules/DisplayManagement/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "topic:ContentParts"
+  }
+}

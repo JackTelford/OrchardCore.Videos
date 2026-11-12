@@ -6413,9 +6413,9 @@
       "src/docs/reference/modules/ContentParts/README.md",
       "src/docs/reference/modules/DisplayManagement/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 7,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.5,
+    "words": 972,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
