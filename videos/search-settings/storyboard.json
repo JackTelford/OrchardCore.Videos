@@ -39,7 +39,7 @@
             },
             {
               "id": "overview-2",
-              "text": "The page queries an index, which a search provider builds, such as Lucene, Elasticsearch or Azure AI Search. This video starts with two Lucene indexes, named Posts and Pages, that already exist."
+              "text": "The page queries an index, which a search provider builds, such as Lucene, Elasticsearch or Azure AI Search. This video starts with two Lucene indexes, named Posts and Pages, that the site has."
             },
             {
               "id": "overview-3",
