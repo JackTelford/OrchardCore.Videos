@@ -9,7 +9,7 @@ point turns out differently.
 The move chapters need two writable stores, and the only second store in the source is `AzureKeyVault`
 (`OrchardCore.Secrets.AzureKeyVault/AzureKeyVaultSecretStore.cs:66`).
 
-1. **The emulator has not been run with this store.** The Secrets documentation describes the James Gould Azure Key Vault
+1. **The emulator has not been run with this store.** The Secrets documentation describes a third-party Azure Key Vault
    Emulator ("Local development with the Azure Key Vault Emulator") and says to create a text secret with
    `AzureKeyVault` selected as its store, then edit and delete it. Confirm that listing, saving, reading and deleting
    work end to end, including from the Secrets list. `GetSecretInfosAsync` of every store runs when the Secrets list
