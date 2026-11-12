@@ -85,7 +85,7 @@
             },
             {
               "id": "config-6",
-              "text": "With those two ranges allowed, the page source holds the title as it is written. The browser shows the same text either way, and the source is shorter and more readable."
+              "text": "With those two ranges allowed, text that a template writes through the injected encoder reaches the page source as it is written. The browser shows the same text either way, and the source is shorter."
             }
           ]
         }

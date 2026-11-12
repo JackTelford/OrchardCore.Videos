@@ -1,6 +1,6 @@
 # Encoding Settings: Render Non-ASCII Text Without Encoding
 
-**YouTube:** not published yet · **Length:** 3:17 · **Feature:** `guide:guides/encoding-settings` ([Customizing encoding settings](https://docs.orchardcore.net/en/latest/guides/encoding-settings/))
+**YouTube:** not published yet · **Length:** 3:18 · **Feature:** `guide:guides/encoding-settings` ([Customizing encoding settings](https://docs.orchardcore.net/en/latest/guides/encoding-settings/))
 
 A developer video about the encoders of ASP.NET Core in an Orchard Core application. By default the HTML, URL and
 JavaScript encoders leave only the Basic Latin range as it is and encode every other character, so accented and
