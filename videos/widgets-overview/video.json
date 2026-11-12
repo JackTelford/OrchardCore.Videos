@@ -1,0 +1,48 @@
+{
+  "title": "Widgets: Add Content Blocks to Your Pages | Orchard Core",
+  "description": "A page often needs a block of text or a quote in a place its own fields do not reach, such as the footer. Writing that block into the theme means a developer for every change.\n\nWidgets are content items that a theme shows in named zones. The Widgets module lets each item of a content type choose its own widgets, and you edit them in the admin like any other content.\n\nIn this video:\n• What a widget is, and what a zone is\n• Where the Widgets feature is turned on\n• Widget types: content types with the Widget stereotype\n• Allowing widgets on a content type with the WidgetsList part\n• Adding widgets to the zones of a page\n• Moving and removing widgets",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Widgets",
+    "Zones",
+    "Content Types",
+    "Stereotype"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Layers and Widgets"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Widgets/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Widgets/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Widgets"
+  }
+}
