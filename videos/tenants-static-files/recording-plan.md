@@ -105,7 +105,7 @@ need no mask script: every name on screen is invented, and the site is fresh.
 1. Stop the site and copy `<app-data>` and `state.json` aside. This copy is state S0. Restore both together, since
    the sign-in cookie is protected by keys kept in `<app-data>`.
 2. Record `02-enable`. It **changes the site**: it enables `Static File Provider` on Maple. Before another take of
-   this clip, stop the site, restore the S0 copy, and start the site again.
+   this clip, stop the site, restore the S0 copy, and start the site again. The restore undoes the feature on Maple, so record `02-enable` again before `04-serve`.
 3. Record `04-serve`. It needs `02-enable` to have been recorded (Maple serves its file only once the feature is
    enabled) and the seed files. It does not change the site, so it can be recorded again at any time.
 
