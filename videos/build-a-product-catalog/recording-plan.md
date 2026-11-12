@@ -364,9 +364,7 @@ The site changes: three products are published.
 
 **`add-4`**
 - Actions: click the radio button `Backpacks` in the field `Category` (the field is unique, so it is a radio button).
-  Scroll the page down if needed, so the buttons at the bottom are visible. `HighlightAsync` the button `Save Draft`
-  (`button.draft`), hold until the narration says that search does not find a draft, `ClearHighlightsAsync`. Do not click
-  it.
+  Scroll the page down if needed, so the buttons at the bottom are visible.
 - Visible at the end: the editor with `Backpacks` selected in `Category` and the buttons `Publish` and `Save Draft` at the
   bottom.
 - Labels from: `OrchardCore.Taxonomies/Views/TaxonomyField.Edit.cshtml:67-91` (radio buttons when the field is Unique),
@@ -376,8 +374,9 @@ The site changes: three products are published.
   `src/OrchardCore/OrchardCore.Indexing.Core/Models/ContentIndexMetadata.cs:5`).
 
 **`add-5`**
-- Actions: click `button.publish` (`Publish`, the main button of the split button group) with
-  `ClickAndWaitForNavigationAsync`.
+- Actions: `HighlightAsync` the button `Save Draft` (`button.draft`), hold until the narration says that search does not
+  find a draft, `ClearHighlightsAsync`; do not click it. Then click `button.publish` (`Publish`, the main button of the
+  split button group) with `ClickAndWaitForNavigationAsync`.
 - Visible at the end: the content list `Manage Content` with the notice `Your Product has been published.` and the row
   `Trail Backpack`.
 - Labels from: `OrchardCore.Contents/Views/Content.PublishButton.cshtml:7,16,19` (the page was opened from the list with a

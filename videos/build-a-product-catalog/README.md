@@ -1,6 +1,6 @@
 # Build a Product Catalog: Types, Categories and Search
 
-**YouTube:** not published yet · **Length:** 7:04 · **Feature:** `OrchardCore.ContentTypes` ([Content Types documentation](https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/))
+**YouTube:** not published yet · **Length:** 7:07 · **Feature:** `OrchardCore.ContentTypes` ([Content Types documentation](https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/))
 
 This video builds a product catalog in the admin of an Orchard Core site. It creates a Product content type with a price,
 an image and a category, groups the products with a taxonomy, uploads the pictures to the Media Library, publishes a

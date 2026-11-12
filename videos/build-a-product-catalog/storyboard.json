@@ -224,11 +224,11 @@
             },
             {
               "id": "add-4",
-              "text": "For Category, choose Backpacks. The Save Draft button keeps a product unpublished, and with the default index settings, search does not find a draft."
+              "text": "For Category, choose Backpacks, one of the terms you added to the taxonomy."
             },
             {
               "id": "add-5",
-              "text": "Click Publish instead. A message confirms that the product has been published."
+              "text": "The Save Draft button keeps a product unpublished, and with the default index settings, search does not find a draft. Click Publish instead. A message confirms that the product has been published."
             },
             {
               "id": "add-6",

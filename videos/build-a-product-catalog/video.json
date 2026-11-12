@@ -1,6 +1,6 @@
 {
   "title": "Build a Product Catalog: Types, Categories and Search | Orchard Core",
-  "description": "A product catalog needs more than a list of pages: every product has a name, a price, a picture and a category, and visitors need a way to find it.\n\nOrchard Core builds this from four features that you configure in the admin. Content Types defines the Product type, Taxonomies holds the categories, the Media Library stores the pictures, and Search finds products through an index.\n\nIn this video:\n• What a product catalog needs\n• Create the Product and Product Category content types\n• Group products in categories with a taxonomy\n• Upload product pictures to the Media Library\n• Publish a product\n• Add search with an index, a site setting and a permission\n• Recap",
+  "description": "A product catalog needs more than a list of pages: every product has a name, a price, a picture and a category, and visitors need a way to find it.\n\nOrchard Core builds this from four features that you configure in the admin. Content Types defines the Product type, Taxonomies holds the categories, the Media Library stores the pictures, and Search finds products through an index.\n\nIn this video:\n• What a catalog needs\n• Create the content types\n• Group products in categories\n• Upload product pictures\n• Add products\n• Add search\n• Recap",
   "hashtags": [
     "OrchardCore",
     "DotNet",
