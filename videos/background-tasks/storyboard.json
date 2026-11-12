@@ -1,0 +1,237 @@
+{
+  "title": "Background Tasks: See, Schedule and Run Them",
+  "output": "background-tasks",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Background Tasks: See, Schedule and Run Them",
+      "subtitle": "The background work of your site, in one place",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Your site does work in the background: it clears caches, publishes scheduled content and removes old data. The Background Tasks module shows that work, changes when it runs, and runs it on demand. Let's see how."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What background tasks are",
+      "subtitle": "Work a site does on its own",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A site does work that no visitor asks for. It clears caches, publishes content on schedule, removes old data and keeps search indexes current. Modules register this work as background tasks, and the tasks run even without the Background Tasks module."
+            },
+            {
+              "id": "why-2",
+              "text": "The Background Tasks module adds a page to see and control them. You see what ran and what runs next, change a schedule, switch a task off, and run it on demand. Access needs the Manage background tasks permission, held by the Administrator role."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the module",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for Background Tasks. The module is in the Tasks category. Select Enable."
+            },
+            {
+              "id": "enable-2",
+              "text": "A message confirms the feature is enabled, and Background Tasks appears in the Tools menu. Let's open it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The task list",
+      "subtitle": "State, layout, search and filters",
+      "clips": [
+        {
+          "id": "03-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Each background task of the site has a row with its title and description. Badges show whether the task is enabled, when it last ran, and when it runs next."
+            },
+            {
+              "id": "list-2",
+              "text": "The Last run badge shows a check mark when the run succeeded, how long ago it started and how long it took. A task that never ran says never."
+            },
+            {
+              "id": "list-3",
+              "text": "The List and Grid buttons switch the layout. The Grid layout shows the last run and the next run in columns of their own."
+            },
+            {
+              "id": "list-4",
+              "text": "Search filters the tasks by title or description. The Status filter offers Enabled, Disabled, Running or queued, and Last run failed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Task details",
+      "subtitle": "Execution, settings and recent runs",
+      "clips": [
+        {
+          "id": "04-details",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "details-1",
+              "text": "Select the title of a task to open its details. The Execution card gives the status, the last run with its duration and trigger, the next run, and the completed and failed runs."
+            },
+            {
+              "id": "details-2",
+              "text": "The Settings card shows the schedule, the enabled state, and whether the task is atomic. Recent runs lists the most recent runs with their start, duration, trigger, result and error."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Change a schedule",
+      "subtitle": "Cron expressions",
+      "clips": [
+        {
+          "id": "05-schedule",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "schedule-1",
+              "text": "To change when a task runs, select Edit. The Properties tab holds the description and the schedule. The title is read-only."
+            },
+            {
+              "id": "schedule-2",
+              "text": "The schedule is a cron expression, which follows the time zone of the site. Text that is not a cron expression, such as every night, is rejected when you save."
+            },
+            {
+              "id": "schedule-3",
+              "text": "Reset Schedule puts the default schedule back in the field. Let's enter a valid cron expression instead, and save. A message confirms the task was updated."
+            },
+            {
+              "id": "schedule-4",
+              "text": "The background service applies the saved schedule at its next check, and the Next run badge then follows it."
+            },
+            {
+              "id": "schedule-5",
+              "text": "Use Tenant Pipeline lets the task generate URLs in the background. The Advanced tab sets a lock timeout and expiration, in milliseconds, for a distributed lock feature such as Redis Lock."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Run tasks on demand",
+      "subtitle": "One task or several",
+      "clips": [
+        {
+          "id": "06-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "To run a task right away, open its Actions menu and run it from there. The task runs whatever its schedule. A message confirms the task is queued and will run shortly."
+            },
+            {
+              "id": "run-2",
+              "text": "The row follows the run without reloading the page. Usually within a few seconds, the Last run badge shows the result."
+            },
+            {
+              "id": "run-3",
+              "text": "A disabled task can be run on demand too, which lets you check it before you enable it. Its schedule is not affected."
+            },
+            {
+              "id": "run-4",
+              "text": "To run several tasks together, select them. The Actions menu of the list then offers Enable, Disable and a run action, after you confirm."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Enable and disable tasks",
+      "subtitle": "Pause a task without losing its settings",
+      "clips": [
+        {
+          "id": "07-toggle",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "toggle-1",
+              "text": "Disable stops a task from running on its schedule, once the background service picks up the change. The badge changes to Disabled, and the Next run badge says not scheduled."
+            },
+            {
+              "id": "toggle-2",
+              "text": "Enable puts the task back on its schedule. A disabled task keeps its settings, so nothing is lost."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Failures, restarts and web farms",
+      "subtitle": "What the pages show, and what they cannot",
+      "clips": [
+        {
+          "id": "08-limits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "limits-1",
+              "text": "When a run fails, the Last run badge turns red, a Failed runs badge counts the failures, and the error message appears under the description. The details page adds the full error and its stack trace."
+            },
+            {
+              "id": "limits-2",
+              "text": "Each server keeps the execution state in memory, so a restart clears it. In a web farm, a server shows only its own runs, which calls for session affinity, and running a task on demand affects only the server that handled the request."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Background Tasks: See, Schedule and Run Them",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Background Tasks module: see what ran, change a schedule, switch a task off, and run it on demand. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
