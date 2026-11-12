@@ -74,8 +74,7 @@ call during an upload and back to false: the upload must carry on. If it does no
 Read: the fingerprint of an upload is the name, the type, the size and the endpoint (`UppyFileUpload.ts:241-245`), tus-js-client keeps the
 upload address in the browser's local storage and removes it on success (`removeFingerprintOnSuccess`), and the server keeps the progress of an
 upload in a cache whose expiration is sliding and lasts the temporary file lifetime, one hour by default, counted from the last activity of the upload
-(`Startup.cs:589-591`, `Services/DistributedMediaTusStore.cs:251-257`, `Services/MediaOptionsConfiguration.cs:76`). The narration of `enable-4` says only that
-the setting is how long an unfinished upload can wait for its next part. Nothing in the source calls `RemoveExpiredFilesAsync`
+(`Startup.cs:589-591`, `Services/DistributedMediaTusStore.cs:251-257`, `Services/MediaOptionsConfiguration.cs:76`). The narration of `enable-4` repeats only the hint of the page (the lifetime of the temporary files created during upload). Nothing in the source calls `RemoveExpiredFilesAsync`
 (`Services/DistributedMediaTusStore.cs:207`), so whether the partial data on disk is removed after the hour is not known: do not narrate it. The chunk size in the
 Media Library is fixed at 5 MB (`UppyFileUpload.ts:234-236`, `Views/Admin/Index.cshtml:21`); the narration does not give it.
 

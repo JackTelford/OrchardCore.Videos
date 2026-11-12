@@ -79,7 +79,7 @@
             },
             {
               "id": "enable-4",
-              "text": "Under Settings, Media, Options, Temporary file lifetime is how long an unfinished upload can wait for its next part. Further down, SignalR and TUS uploads show a check mark."
+              "text": "Under Settings, Media, Options, Temporary file lifetime is the lifetime of the temporary files that an upload creates. Further down, SignalR and TUS uploads show a check mark."
             }
           ]
         }
