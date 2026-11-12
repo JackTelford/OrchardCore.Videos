@@ -1,0 +1,60 @@
+{
+  "title": "Media Field: Attach Images and Files to Content | Orchard Core",
+  "description": "Pages, posts and products often need images and files: a banner, a set of photos, a downloadable guide. Typing addresses by hand, or uploading the same file again for every page, makes them hard to keep up to date.\n\nThe Media Field of the Media module attaches files to a content item. Editors choose them from the media library, or upload them to the item, describe each one, and mark a focal point on images.\n\nIn this video:\n• What a Media Field stores, and its three editors\n• Adding a Media Field to a content type\n• Required, Multiple, media text, anchors and allowed file types\n• Choosing files in the Select Media dialog, and describing them\n• The Gallery editor\n• The Attached editor, its folder and its permission",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Media Field",
+    "Media Library",
+    "Content Fields",
+    "Content Types",
+    "Alt text"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Media Picker",
+      "url": "https://docs.orchardcore.net/en/latest/topics/media/media-picker/"
+    },
+    {
+      "label": "Documentation: Media module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/"
+    },
+    {
+      "label": "Documentation: Media Gallery",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media/MediaGallery.md",
+    "src/docs/reference/modules/Media/README.md",
+    "src/docs/reference/modules/Media.Slugify/README.md",
+    "src/docs/topics/media/media-picker.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media"
+  }
+}
