@@ -76,7 +76,8 @@ using OrchardCore.Modules.Manifest;
     Website = "https://orchardcore.net",
     Version = "0.0.1",
     Description = "Two Liquid filters for a video.",
-    Category = "Development"
+    Category = "Development",
+    Dependencies = ["OrchardCore.Liquid"]
 )]
 ```
 
@@ -145,7 +146,9 @@ Then add this line to the `ItemGroup` of project references in `src/OrchardCore.
 <ProjectReference Include="..\OrchardCore.Modules\Videos.LiquidFilters\Videos.LiquidFilters.csproj" />
 ```
 
-The feature id of the module is its assembly name, `Videos.LiquidFilters`.
+The feature id of the module is its assembly name, `Videos.LiquidFilters`. A manifest with only a `Module` attribute defines one feature with that id, and its `Dependencies` are those of the
+feature (`src/OrchardCore/OrchardCore/Extensions/Features/FeaturesProvider.cs:83-91`), so enabling the module also enables
+Liquid if it is not enabled.
 
 ### Seeding, outside the capture
 
