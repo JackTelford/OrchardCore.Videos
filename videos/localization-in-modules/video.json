@@ -1,0 +1,54 @@
+{
+  "title": "Localize a Module: Strings, Plurals and Extraction | Orchard Core",
+  "description": "Every label, message and notification in a module is a string that translators may have to translate, and they can only translate the strings they can find.\n\nOrchard Core localizers use the English text of the code as the key of its translation. This video declares strings with localizers, handles plurals, declares text that has no localizer, and extracts a template of every string for translators.\n\nIn this video:\n• How module strings are translated\n• Localizers: strings, HTML and views\n• Contexts: which type or view owns a string\n• Plurals: one message, several forms\n• Text without a localizer: LocalizationSource\n• Notes and analyzers\n• Extracting templates for translators",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Localization"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Localization",
+    "Internationalization",
+    "Plural forms",
+    "gettext",
+    "PO files"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Localization"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/"
+    },
+    {
+      "label": "JavaScript localization",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Localize/javascript-localization.md",
+    "src/docs/reference/modules/Localize/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Localization"
+  }
+}
