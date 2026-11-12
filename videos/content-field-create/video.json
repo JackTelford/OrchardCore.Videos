@@ -1,0 +1,47 @@
+{
+  "title": "Write a Content Field With Its Editor and Settings | Orchard Core",
+  "description": "Content fields are the typed pieces of data that content types and content parts carry in Orchard Core, such as a text, a date or a yes-or-no value. When none of the existing fields fits, you can write your own.\n\nThe Boolean field of the Content Fields module has every piece a field needs: a class, a display driver, views, a settings driver with its own view, a registration in Startup, and editors and display modes as extra templates. The video reads each piece, then shows what the pieces produce in the content type editor, the content editor and the front end.\n\nIn this video:\n• What a content field is\n• The field class and its settings class\n• The display driver: display, edit and update\n• The views, one template for each shape\n• The settings driver and its view\n• Registering the field in Startup\n• Editors and display modes\n• The field in the admin",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Content Fields",
+    "Content Types",
+    "Display Driver",
+    "Module development"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentFields/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentFields/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentFields"
+  }
+}
