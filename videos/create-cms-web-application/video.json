@@ -1,0 +1,63 @@
+{
+  "title": "Create a CMS Web Application With dotnet new | Orchard Core",
+  "description": "Starting an Orchard Core site by hand means creating a web project, adding the right NuGet package, registering Orchard Core in Program.cs, and removing the default pages.\n\nThe Orchard Core project templates do that work with one dotnet new command. This video installs the templates, creates a CMS web application with the occms template, looks at the files it writes, runs the project, completes the Setup screen with the Blog recipe, and signs in to the admin.\n\nIn this video:\n• Two ways to start: by hand, or from a template\n• Install the templates\n• Create the project, and the files the template writes\n• Run the project\n• Set up the site with the Blog recipe\n• Sign in to the admin\n• Logging and site data: NLog, and the App_Data folder\n• Where to go next: modules, themes, and Auto Setup",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "dotnet new",
+    "project template",
+    "NuGet",
+    "NLog",
+    "getting started"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Code Generation Templates",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/templates/"
+    },
+    {
+      "label": "Documentation: Creating an Orchard Core CMS website",
+      "url": "https://docs.orchardcore.net/en/latest/guides/create-cms-application/"
+    },
+    {
+      "label": "Documentation: Getting started with Orchard Core as a NuGet package",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/"
+    },
+    {
+      "label": "Documentation: Add preview package source",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/preview-package-source/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/getting-started/README.md",
+    "src/docs/getting-started/templates/README.md",
+    "src/docs/guides/create-cms-application/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:getting-started"
+  }
+}
