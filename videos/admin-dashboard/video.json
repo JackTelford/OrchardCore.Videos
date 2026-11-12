@@ -1,0 +1,48 @@
+{
+  "title": "Admin Dashboard: Build a Start Page for Your Editors | Orchard Core",
+  "description": "The home page of the Orchard Core admin shows a welcome message and a few shortcuts. Your team may need its own links, notes, and reminders on that page.\n\nThe Admin Dashboard module replaces it with widgets. Each widget is a content item that you create, publish, place and size on a grid, and permissions decide who sees the dashboard and its widgets.\n\nIn this video:\n• How the dashboard works: widgets, grid cells and published content\n• Enable the dashboard\n• Add a widget\n• Arrange and manage widgets: drag, resize, and use the Actions menu\n• Who sees the dashboard: two permissions and the right to view a widget\n• Your own widget types",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Admin Dashboard",
+    "dashboard widgets",
+    "admin",
+    "content management",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AdminDashboard/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/AdminDashboard/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AdminDashboard"
+  }
+}
