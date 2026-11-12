@@ -1,0 +1,319 @@
+{
+  "title": "A Blazor Front End for Orchard Core",
+  "output": "blazor-cms",
+  "spoken": {
+    "MarkdownPage": "Markdown Page",
+    "OrchardCore.ContentManagement": "Orchard Core dot Content Management",
+    "IContentHandleManager": "I Content Handle Manager",
+    "IContentManager": "I Content Manager",
+    "ISiteService": "I Site Service",
+    "Program.cs": "Program dot C.S.",
+    "App.razor": "App dot razor",
+    "ConfigureServices": "Configure Services",
+    "OnInitializedAsync": "On Initialized Async",
+    "OnParametersSet": "On Parameters Set",
+    "MarkupString": "Markup String",
+    "StreamRendering": "Stream Rendering",
+    "InteractiveButton": "Interactive Button",
+    "InteractiveServer": "Interactive Server",
+    "NavigationManager": "Navigation Manager",
+    "BaseUri": "Base U.R.I.",
+    "PathBase": "Path Base",
+    "RequestUrlPrefix": "Request Url Prefix",
+    "Url Prefix": "U.R.L. Prefix",
+    "Base url": "Base U.R.L.",
+    "ShellScope": "Shell Scope",
+    "HttpContext": "H.T.T.P. Context",
+    "MainLayout": "Main Layout",
+    "NavMenu": "Nav Menu",
+    "FirstTenant": "First Tenant",
+    "tenant01": "tenant zero one",
+    "WebSocket": "Web Socket"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "A Blazor Front End for Orchard Core",
+      "subtitle": "Serve Orchard Core content from a Blazor Server application",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core manages the content, and Blazor draws the pages. In this video, we build a Blazor Server front end in a Razor class library, serve it from Orchard Core, render content items, add a tenant, and make a component interactive."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How it fits together",
+      "subtitle": "Orchard Core for content, Blazor for pages",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Editors write and publish content in the Orchard Core admin. A Blazor front end turns that content into pages. Both run in one ASP.NET Core application, so components read content through Orchard Core services, not through an HTTP API."
+            },
+            {
+              "id": "idea-2",
+              "text": "The Blazor app lives in a Razor class library. The web project references the library, and Program.cs maps it into the pipeline of every tenant. The library holds the App component, the router, the layout, and the pages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The content",
+      "subtitle": "A Markdown Page in the Headless site",
+      "clips": [
+        {
+          "id": "02-content",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "The site is set up with the Headless site recipe. A recipe is a list of steps that Orchard Core runs. Under Tools, Deployments, JSON Import, you paste a recipe that creates the Markdown Page content type and an item, and select Import."
+            },
+            {
+              "id": "content-2",
+              "text": "Under Content, Content Items, the item is listed with its title and its type, MarkdownPage. A Markdown Page has a title, an alias, and a body written in Markdown."
+            },
+            {
+              "id": "content-3",
+              "text": "Let's open the item. Its alias is orchard-core. The Blazor front end finds the item by this alias, and renders its title and its body."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The Razor class library",
+      "subtitle": "App, router, layout and pages",
+      "clips": [
+        {
+          "id": "03-library",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "lib-1",
+              "text": "Blazor components go in a Razor class library, because Razor components are not supported in Orchard Core modules. Create the library, reference it from the web project, and add a framework reference to ASP.NET Core."
+            },
+            {
+              "id": "lib-2",
+              "text": "App.razor is the root component. It links the Bootstrap style sheet from the Orchard Core Resources module, loads the Blazor script, and renders the Routes component. Routes holds the router, with MainLayout as the default layout."
+            },
+            {
+              "id": "lib-3",
+              "text": "MainLayout shows the navigation menu in a sidebar, and each page in the content area. NavMenu holds the links. The Home page listens on slash home, because Orchard Core also listens on the root path, for example to show the Setup screen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Serving Blazor from Orchard Core",
+      "subtitle": "Two callbacks in Program.cs",
+      "clips": [
+        {
+          "id": "04-serve",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "serve-1",
+              "text": "In Program.cs, the project template leaves a commented block for the Orchard Specific Pipeline. Fill it with two callbacks of the Orchard Core builder. ConfigureServices registers Razor components with interactive server components."
+            },
+            {
+              "id": "serve-2",
+              "text": "Configure adds static files and anti-forgery, and maps the App component with the interactive server render mode. Orchard Core runs both callbacks for each tenant, so every tenant gets its own Blazor services and endpoints."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Rendering content items",
+      "subtitle": "From an alias to HTML",
+      "clips": [
+        {
+          "id": "05-page",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "The Content page takes an alias from its route. It injects IContentHandleManager, IContentManager, and ISiteService, which come with one package reference to OrchardCore.ContentManagement. The site service gives the site name for the page title."
+            },
+            {
+              "id": "page-2",
+              "text": "The handle manager turns the alias prefix and the alias into a content item ID. The content manager loads the published version, and the Body aspect gives its HTML. An unknown alias gives no item, and the aspect call then throws."
+            },
+            {
+              "id": "page-3",
+              "text": "The markup shows Loading until the item exists, then the title and the body. MarkupString writes the HTML as it is, and the Markdown body part sanitizes it by default, through its Sanitize Html setting."
+            },
+            {
+              "id": "page-4",
+              "text": "StreamRendering sends the page right away, with Loading, and streams the content in when the work finishes. The guide adds a half-second delay in OnInitializedAsync to mimic a long-running task."
+            }
+          ]
+        },
+        {
+          "id": "05-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Let's run the site. The sidebar and the Home page come from the Razor class library, and Orchard Core serves them."
+            },
+            {
+              "id": "run-2",
+              "text": "Select Orchard Core in the sidebar. The page loads the item by its alias, and shows its title and its Markdown, rendered as HTML."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Adding a tenant",
+      "subtitle": "Enable Tenants and create FirstTenant",
+      "clips": [
+        {
+          "id": "06-tenant",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tenant-1",
+              "text": "A tenant is a separate site with its own content, served by the same application. Tenants are managed from the default tenant, where the feature is available. Under Tools, Features, search for Tenants, and select Enable on the Tenants feature."
+            },
+            {
+              "id": "tenant-2",
+              "text": "Under Multi-Tenancy, Tenants, select Add Tenant. Enter FirstTenant as the Name and tenant01 as the Url Prefix. Choose Headless site as the Recipe, so the tenant is set up like the default site, and select Create."
+            },
+            {
+              "id": "tenant-3",
+              "text": "The tenant is listed as Uninitialized, with a Setup button. Setup opens the Setup screen of the tenant, at its own URL prefix."
+            }
+          ]
+        },
+        {
+          "id": "06-setup",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "On the Setup screen, the recipe is already chosen: enter a site name and the super user details, and select Finish Setup. Then sign in to the tenant, and use JSON Import to add the Markdown Page type and an item for this tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "The base URL",
+      "subtitle": "Links that follow the tenant",
+      "clips": [
+        {
+          "id": "07-base",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "base-1",
+              "text": "A tenant with a URL prefix lives under a subpath. Orchard Core adds the prefix to the PathBase of each request. With the default base tag, relative links resolve from the root, so they point at the default tenant."
+            },
+            {
+              "id": "base-2",
+              "text": "So App.razor injects NavigationManager, and sets the base tag to its BaseUri in OnParametersSet. For a tenant, the base URI includes the URL prefix, and every link follows it."
+            },
+            {
+              "id": "base-3",
+              "text": "Other sources give the prefix too: the PathBase of the HttpContext request, the RequestUrlPrefix of the tenant's shell settings, through ShellScope, and the Base url site setting, read with ISiteService. That setting is empty unless you set it in the admin."
+            }
+          ]
+        },
+        {
+          "id": "07-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "Browse to the tenant at tenant01. Its pages come from the same library, and the sidebar links keep the tenant's prefix."
+            },
+            {
+              "id": "site-2",
+              "text": "Select Orchard Core. The page shows the item of this tenant, with its own title, because each tenant stores its own content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Interactive components",
+      "subtitle": "Server interactivity over a live connection",
+      "clips": [
+        {
+          "id": "08-component",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "inter-1",
+              "text": "The pages are rendered on the server. To react to a click, a component declares an event handler. This InteractiveButton shows a button, and a Clicked method that stores the time of the click."
+            },
+            {
+              "id": "inter-2",
+              "text": "The page sets the InteractiveServer render mode on the component, which makes it interactive. That mode relies on the interactive server services and render mode that Program.cs registered."
+            }
+          ]
+        },
+        {
+          "id": "08-click",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "inter-3",
+              "text": "Let's open the page and select Test. The text shows the time of the click, so the component reacted through the server."
+            }
+          ]
+        },
+        {
+          "id": "08-socket",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "inter-4",
+              "text": "To see the connection, open the network tab of the browser's developer tools, filter on WebSocket, and refresh the page. The connection to the server appears, and each click sends a message over it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "A Blazor Front End for Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is a Blazor Server front end for Orchard Core: components in a Razor class library, content read through Orchard Core services, and one application that serves every tenant. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
