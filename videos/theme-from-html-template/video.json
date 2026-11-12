@@ -1,0 +1,62 @@
+{
+  "title": "Create a Theme From an HTML Template | Orchard Core",
+  "description": "A static HTML template is a finished design, but it has no way to manage its content. A theme keeps the design and lets Orchard Core supply the pages, the menu, and the widgets.\n\nThis video turns a template into a theme the way the built-in TheBlogTheme was made from the Clean Blog template: static assets in the wwwroot folder, named resources, a Liquid layout with zones, content templates, and an optional setup recipe.\n\nIn this video:\n• From template to theme: what you start with and what you build\n• Copy the assets\n• Declare the resources\n• Build the layout\n• Zones: where widgets appear in the layout\n• Template the content\n• A setup recipe\n• Use the theme",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Theme"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Theme",
+    "HTML template",
+    "Liquid",
+    "Layout",
+    "Resources",
+    "Bootstrap"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Themes"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/topics/display/theme-from-html-template/"
+    },
+    {
+      "label": "Resources",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Resources/"
+    },
+    {
+      "label": "Templates",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Templates/"
+    },
+    {
+      "label": "TheBlogTheme source code",
+      "url": "https://github.com/OrchardCMS/OrchardCore/tree/main/src/OrchardCore.Themes/TheBlogTheme"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/topics/display/theme-from-html-template.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:topics/display/theme-from-html-template"
+  }
+}

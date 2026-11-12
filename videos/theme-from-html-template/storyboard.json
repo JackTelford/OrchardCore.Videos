@@ -1,0 +1,314 @@
+{
+  "title": "Create a Theme From an HTML Template",
+  "output": "theme-from-html-template",
+  "spoken": {
+    "/MyTheme/css/styles.css": "slash My Theme slash C.S.S slash styles dot C.S.S",
+    "css/styles.css": "C.S.S slash styles dot C.S.S",
+    "CSS": "C.S.S",
+    "CDN": "C.D.N",
+    "Content-BlogPost.Summary": "Content dash Blog Post dot Summary",
+    "Layout.liquid": "Layout dot liquid",
+    "index.html": "index dot HTML",
+    "MenuItemLink": "Menu Item Link",
+    "MenuItem": "Menu Item",
+    "Model.Content": "Model dot Content",
+    "IConfigureOptions": "I Configure Options",
+    "ResourceManagementOptions": "Resource Management Options",
+    "AddResourceConfiguration": "Add Resource Configuration",
+    "DefineStyle": "Define Style",
+    "DefineScript": "Define Script",
+    "SetUrl": "Set Url",
+    "SetDependencies": "Set Dependencies",
+    "DisplayText": "Display Text",
+    "RenderBodyAsync": "Render Body Async",
+    "RenderSectionAsync": "Render Section Async",
+    "render_body": "render body",
+    "render_section": "render section",
+    "shape_render": "shape render",
+    "TheBlogTheme": "The Blog Theme",
+    "MyTheme": "My Theme",
+    "wwwroot": "web root",
+    "issetuprecipe": "is setup recipe",
+    "placement.json": "placement dot json"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Create a Theme From an HTML Template",
+      "subtitle": "Turn a static design into an Orchard Core theme",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Many websites start from a static HTML template. This video turns one into a working Orchard Core theme: you copy the assets, declare the resources, build the layout, template the content, and add a setup recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "From template to theme",
+      "subtitle": "What you start with and what you build",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A static template is a finished design: HTML pages, a stylesheet, scripts, and images, filled with sample text. The goal is to keep the design and let Orchard Core supply the content."
+            },
+            {
+              "id": "why-2",
+              "text": "The built-in TheBlogTheme was created this way. It is a port of the Clean Blog template from Start Bootstrap, so its source code is a real reference while you follow along."
+            },
+            {
+              "id": "why-3",
+              "text": "You need an Orchard Core CMS application, an empty theme project in your solution, and the template with its CSS, JavaScript, and images. In the examples, the theme is named MyTheme."
+            },
+            {
+              "id": "why-4",
+              "text": "Four tasks turn the template into a theme: copy the assets, declare them as resources, convert the main page into a layout, and convert the inner pages into content templates. A setup recipe is optional."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Copy the assets",
+      "subtitle": "Static files go to the wwwroot folder",
+      "clips": [
+        {
+          "id": "02-assets",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "assets-1",
+              "text": "Copy the template's stylesheet, scripts, images, and icon into the wwwroot folder of the theme project, as this file tree shows."
+            },
+            {
+              "id": "assets-2",
+              "text": "The static file middleware serves everything in wwwroot under the name of the theme project. So css/styles.css is available at /MyTheme/css/styles.css, which is the address the resources use."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Declare the resources",
+      "subtitle": "Named stylesheets and scripts",
+      "clips": [
+        {
+          "id": "03-resources",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "res-1",
+              "text": "Instead of hardcoded link and script tags, you register the template's stylesheets and scripts as named resources. Orchard Core then handles version hashes, minified and debug files, CDN addresses, and dependency order."
+            },
+            {
+              "id": "res-2",
+              "text": "A class that implements IConfigureOptions of ResourceManagementOptions declares them. DefineStyle and DefineScript give each resource a name, and SetUrl takes the minified file first, then the readable one."
+            },
+            {
+              "id": "res-3",
+              "text": "Register the class in the Startup class of the theme with AddResourceConfiguration. The theme can then ask for these resources by name."
+            },
+            {
+              "id": "res-4",
+              "text": "When the template depends on a library such as Bootstrap, define the library as a resource of its own, and list it with SetDependencies. TheBlogTheme does this, so the library always loads first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Build the layout",
+      "subtitle": "From index.html to Layout.liquid",
+      "clips": [
+        {
+          "id": "04-layout",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "layout-1",
+              "text": "The layout is the markup that every page shares. Copy the template's main page, usually index.html, to a file named Layout.liquid in the Views folder. Keep its markup, and replace what is hardcoded."
+            },
+            {
+              "id": "layout-2",
+              "text": "Replace the hardcoded link and script tags with the resources you declared. The style tag and the script tag take the name of the resource, and the script goes to the foot of the page."
+            },
+            {
+              "id": "layout-3",
+              "text": "Keep the resources tags. They render the stylesheets, scripts, and meta tags that other modules and your own templates register at runtime, so the layout needs them even when it does not use them directly."
+            },
+            {
+              "id": "layout-4",
+              "text": "Replace the hardcoded page content with render_body, and the static navigation list with the menu shape. The shape renders the content items of the menu that has the given alias."
+            },
+            {
+              "id": "layout-5",
+              "text": "Add render_section wherever widgets should be able to appear, such as the header and the footer. With required set to false, a page that puts nothing in a zone still renders."
+            },
+            {
+              "id": "layout-6",
+              "text": "A Razor layout follows the same pattern. RenderBodyAsync and RenderSectionAsync replace the Liquid tags, and the style, script, and menu tag helpers replace the resource and menu tags."
+            }
+          ]
+        },
+        {
+          "id": "04-menu",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "menu-1",
+              "text": "The menu shape renders its items as a list. If the navigation of the template needs specific CSS classes, override the Menu and MenuItem templates in the Views folder, plus a MenuItemLink template for each type of menu item, as TheBlogTheme does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Zones",
+      "subtitle": "Where widgets appear in the layout",
+      "clips": [
+        {
+          "id": "05-zones",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "zones-1",
+              "text": "The layout renders zones, and the admin offers widgets only in the zones that the site lists. In the admin, Settings, Zones has the field Available zones for Layers, a comma separated list of zone names."
+            },
+            {
+              "id": "zones-2",
+              "text": "Design, Widgets shows one card for each listed zone. Content is the zone that render_body renders, and the Footer zone holds a widget that the layout renders with render_section."
+            },
+            {
+              "id": "zones-3",
+              "text": "On the front end, that widget appears at the bottom of the page, because the layout renders the Footer zone inside its footer element."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Template the content",
+      "subtitle": "One template per content type",
+      "clips": [
+        {
+          "id": "06-content",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "With the layout in place, the inner pages become content templates. For each content type, add a file to the Views folder whose name says which content item it renders."
+            },
+            {
+              "id": "content-2",
+              "text": "A hyphen separates the shape name, Content, from the content type. A suffix after the last dot names a display type, so Content-BlogPost.Summary is a blog post as it appears in a list."
+            },
+            {
+              "id": "content-3",
+              "text": "Copy the matching markup from the template into the file, then replace the sample text with the data of the content item. Here, the title reads DisplayText, and the subtitle is a field of the blog post."
+            },
+            {
+              "id": "content-4",
+              "text": "A content item's parts and fields have shapes of their own. Model.Content holds them, and shape_render writes one, such as the HTML body part, wherever the markup needs it."
+            },
+            {
+              "id": "content-5",
+              "text": "A placement.json file at the root of the theme decides which shapes render, and where. This rule hides the shape of the title part on the front end."
+            },
+            {
+              "id": "content-6",
+              "text": "The Templates reference lists the template names for content, widgets, parts, and fields, and the properties each template receives. The Views folder of TheBlogTheme shows them in use."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "A setup recipe",
+      "subtitle": "A theme that works out of the box",
+      "clips": [
+        {
+          "id": "07-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "If the theme is meant to be reused, add a recipe to its Recipes folder. The blog recipe of TheBlogTheme enables the theme, selects it in the themes step, and lists the zones in the settings step."
+            },
+            {
+              "id": "recipe-2",
+              "text": "Its other steps create the content types, menu, widgets, and layers. Because issetuprecipe is true, the recipe is listed in the Recipe field of the setup screen, and choosing it sets up the site with all of this."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Use the theme",
+      "subtitle": "Select it, then look at the result",
+      "clips": [
+        {
+          "id": "08-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "A theme that the site references is listed under Design, Themes. Make Current selects it, and the card of the current site theme says This is the current Site theme. Here, that is The Blog Theme."
+            },
+            {
+              "id": "result-2",
+              "text": "This is the front end of a site set up with the blog recipe. The design of the template is kept: the header image, the navigation, the post list, and the footer. The text comes from the site settings, the menu, and the content items."
+            },
+            {
+              "id": "result-3",
+              "text": "Opening a post shows the content template at work. The masthead holds the title, subtitle, author, and date, and the body of the post renders below it."
+            }
+          ]
+        },
+        {
+          "id": "08-summary",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "summary-1",
+              "text": "To recap: copy the assets and declare them as resources, convert the main page into a layout, convert the inner pages into content templates, and optionally ship a setup recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Create a Theme From an HTML Template",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A static template becomes a theme through assets, resources, a layout, and content templates. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
