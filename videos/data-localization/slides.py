@@ -6,7 +6,7 @@ Everything visual comes from brand.py, so the slides look like those of every ot
 from brand import bullets, slide_base
 
 KINDS = [
-    ("1", "Content type names", "Blog Post, Page, Image: the types you create."),
+    ("1", "Content type names", "Blog Post, Blog: the types you create."),
     ("2", "Content field names", "Subtitle, Tags: the labels of the fields on the editing page."),
     ("3", "Custom admin menu items", "The top-level items of the admin menus you build."),
     ("4", "Permissions", "Descriptions and categories, shown on the role editor."),
