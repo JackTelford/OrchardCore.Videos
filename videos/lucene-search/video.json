@@ -1,0 +1,48 @@
+{
+  "title": "Lucene: Full-Text Search With No External Service | Orchard Core",
+  "description": "A site search needs an index, and indexes usually live in a separate service that you must run, connect and keep available. The Orchard Core Lucene module keeps the index in files inside your site, so full-text search works with no external service.\n\nThis video enables the Lucene feature, creates a Lucene index of your content, explains what the search looks in, and searches the site.\n\nIn this video:\n• How Lucene search works: an index inside your site\n• Enable Lucene on the Features page\n• Create a Lucene index with Content in Lucene: content types, culture, analyzer and query fields\n• What the search looks in: the Full-text section and the Lucene Index settings of parts and fields\n• Search the site with the Search feature\n• Several servers: keeping each copy of the index up to date",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Lucene"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Lucene",
+    "Search",
+    "Full-text search",
+    "Indexing"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lucene/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Lucene/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Lucene"
+  }
+}
