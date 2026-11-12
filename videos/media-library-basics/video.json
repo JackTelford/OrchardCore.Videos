@@ -1,0 +1,58 @@
+{
+  "title": "Media Library: Upload, Organize and Reuse Files | Orchard Core",
+  "description": "Photos, PDFs and downloads end up scattered across pages, and it gets hard to know what a site holds.\n\nThe Media module gives the site one library in the admin. You upload files, organize them in folders, rename, move, copy and delete them, and pick them from content, such as the Banner Image field of an Article.\n\nIn this video:\n• What the library is\n• A tour of the library\n• Upload files\n• Organize with folders\n• Work with files\n• Find files\n• Reuse a file in content\n• Optional features",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MediaLibrary"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Media Library",
+    "Media module",
+    "file upload",
+    "folders",
+    "CMS",
+    "ASP.NET Core",
+    ".NET"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Media Library",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Documentation: Media",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/"
+    },
+    {
+      "label": "Documentation: Media Slugify",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media/MediaGallery.md",
+    "src/docs/reference/modules/Media/README.md",
+    "src/docs/reference/modules/Media.Slugify/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media"
+  }
+}
