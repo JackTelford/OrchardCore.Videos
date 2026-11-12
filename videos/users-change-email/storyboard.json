@@ -1,0 +1,183 @@
+{
+  "title": "Change Email: Let Users Update Their Email Address",
+  "output": "users-change-email",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Users Change Email",
+      "subtitle": "Let users update their own email address",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Users Change Email is an Orchard Core feature that lets each signed-in user change the email address of their own account. In this video, you enable it, turn on its setting, and follow a user through the change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What the feature adds",
+      "subtitle": "A separate way to change an email address",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "By default, the Email field on the edit page of an existing user can't be edited. The User Login setting, Allow user to change their email address, makes that field editable."
+            },
+            {
+              "id": "why-2",
+              "text": "The Users Change Email feature adds another way: a Change Email item in the user menu, and a page where a signed-in user types a different address. A site setting turns both on or off."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "This is the Features page, under Tools. Let's search for change email. The feature is called Users Change Email, and it's listed in the Security category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable. A message confirms that the feature Users Change Email was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Turn on the setting",
+      "subtitle": "Settings, Security, Change Email",
+      "clips": [
+        {
+          "id": "03-setting",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setting-1",
+              "text": "This is Settings, Security, Change Email. Enabling the feature isn't enough: until the setting is on, the user menu doesn't show the item, and the Change Email page returns not found."
+            },
+            {
+              "id": "setting-2",
+              "text": "Check Allow the users to change their email, and select Save. The setting applies to every user of the site."
+            },
+            {
+              "id": "setting-3",
+              "text": "A message confirms it: Site settings updated successfully. Clearing the checkbox hides the item and the page again, while the feature stays enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Change an email address",
+      "subtitle": "From the user menu",
+      "clips": [
+        {
+          "id": "04-change",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "change-1",
+              "text": "This is the Users list, under Access Control. Any signed-in user can change their own address. In the admin, the user menu is the user icon in the top bar."
+            },
+            {
+              "id": "change-2",
+              "text": "The menu starts with Signed in as, followed by the user name. Change Email is listed between Change password and Log off. Let's select it."
+            },
+            {
+              "id": "change-3",
+              "text": "The Change Email page has one field, Email, filled with the current address of the account. Let's replace it with a different address."
+            },
+            {
+              "id": "change-4",
+              "text": "Select Submit. The Email changed page thanks the user. The address is saved as soon as the form is submitted: the form asks for the address only, and the module doesn't ask the user to confirm it."
+            },
+            {
+              "id": "change-5",
+              "text": "Back on the Users list, the row of the user shows the replacement address next to the user name. At sign-in, the user can also type that address in the Username or email address field."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What the page checks",
+      "subtitle": "Addresses it refuses",
+      "clips": [
+        {
+          "id": "05-checks",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "checks-1",
+              "text": "The page checks an address before it saves it. If the address is the one the account already has, the page answers: This email is already your current one."
+            },
+            {
+              "id": "checks-2",
+              "text": "If another user already has the address, the page answers: A user with the same email already exists."
+            },
+            {
+              "id": "checks-3",
+              "text": "A value that isn't an email address is refused with a validation message. In each case, the address of the account stays as it was."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Summary",
+      "subtitle": "Enable it, allow it, use it",
+      "clips": [
+        {
+          "id": "06-summary",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "summary-1",
+              "text": "To sum up: enable the feature, turn on the setting, and users choose Change Email in their menu. When the Deployment feature is enabled, a deployment step called Change Email settings exports the setting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Users Change Email",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's Users Change Email: a menu item and a page that let signed-in users keep their own email address up to date. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
