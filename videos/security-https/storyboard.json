@@ -1,0 +1,167 @@
+{
+  "title": "HTTPS: Require Secure Connections",
+  "output": "security-https",
+  "spoken": {
+    "HSTS": "H.S.T.S."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core HTTPS module",
+      "subtitle": "Redirect requests from HTTP to HTTPS",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The HTTPS module can redirect visitors from HTTP to HTTPS, and can tell browsers to keep using HTTPS. In this video, you turn the module on, set it up, and learn what each setting does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the module works",
+      "subtitle": "Redirects, HSTS and the port",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Over plain HTTP, the data between a browser and your site travels as readable text. HTTPS encrypts that connection, so the data cannot be read along the way."
+            },
+            {
+              "id": "what-1",
+              "text": "When Require HTTPS is on, a request that arrives over HTTP receives a redirect. The browser follows it to the HTTPS address, and the rest of the exchange is encrypted."
+            },
+            {
+              "id": "what-2",
+              "text": "The settings page has four settings. Require HTTPS turns the redirect on, and HSTS mode controls a header for browsers. Require HTTPS Permanent chooses a permanent redirect, and SSL Port names the port to redirect to."
+            },
+            {
+              "id": "what-3",
+              "text": "HTTP Strict Transport Security, or HSTS, is a header that tells browsers to use HTTPS only. The module sends it with a lifetime of 365 days, subdomains included. HSTS mode decides when it is sent: never, in every environment, or only in Production."
+            },
+            {
+              "id": "what-4",
+              "text": "The settings can be changed only when the page is opened over HTTPS. Over plain HTTP, a message says that changing HTTPS-only settings over HTTP has been prevented, and the changes you save are not applied."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Turn on the module",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Let's turn the module on. Open Tools, Features, and type HTTPS in the search box."
+            },
+            {
+              "id": "features-2",
+              "text": "HTTPS is listed in the Security category, with a description of what the module does."
+            },
+            {
+              "id": "features-3",
+              "text": "Select Enable. A message confirms: The feature HTTPS was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Set up HTTPS",
+      "subtitle": "Settings, Security, HTTPS",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Open Settings, Security, HTTPS. A warning at the top says the website might be restarted upon saving the settings."
+            },
+            {
+              "id": "settings-2",
+              "text": "Let's select Require HTTPS. It applies to all requests, so once the settings are saved, a request that arrives over HTTP is redirected to HTTPS."
+            },
+            {
+              "id": "settings-3",
+              "text": "Below it is HSTS mode. The notice under the drop-down list warns that browsers may stop connecting over HTTP after receiving the header, if HTTPS later becomes unavailable. Let's choose the option From environment, enabled in Production, disabled otherwise."
+            },
+            {
+              "id": "settings-4",
+              "text": "Require HTTPS Permanent switches the redirect from a temporary one to a permanent one. Let's leave it unselected, which keeps the temporary redirect."
+            },
+            {
+              "id": "settings-5",
+              "text": "SSL Port is the port to redirect to. Here it already shows the port of this page. Leave it empty to let the site try to work the port out itself."
+            },
+            {
+              "id": "settings-6",
+              "text": "Select Save. A message confirms: Site settings updated successfully."
+            },
+            {
+              "id": "settings-7",
+              "text": "The page shows the saved settings: Require HTTPS is selected, and HSTS mode shows the From environment option."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "After you save",
+      "subtitle": "Redirects, tenants and load balancers",
+      "clips": [
+        {
+          "id": "04-after",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "after-1",
+              "text": "Once the saved settings are applied, a request that arrives over HTTP is redirected to HTTPS. This applies to every page of the site, not only the admin."
+            },
+            {
+              "id": "after-2",
+              "text": "The settings belong to the tenant, so each tenant of a site has its own HTTPS settings. Saving reloads the tenant, which the warning on the page describes as a possible restart of the website."
+            },
+            {
+              "id": "after-3",
+              "text": "If a load balancer handles HTTPS and passes plain HTTP to the site, the site sees HTTP requests, and the page ignores the changes you save. The Reverse Proxy settings can forward the protocol the client used. A separate video covers them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core HTTPS module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the HTTPS module: a redirect from HTTP to HTTPS, a choice of redirect type and port, and an HSTS mode. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
