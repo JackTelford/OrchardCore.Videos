@@ -93,7 +93,7 @@
             },
             {
               "id": "app-3",
-              "text": "Secret Key takes the application secret. On a site without the Secrets feature, it is a password field, so the value is hidden as you type, and the site stores it protected."
+              "text": "Secret Key takes the application secret. On a site without the Secrets feature, it is a password field, so the value is hidden as you type, and the site stores it in protected form."
             },
             {
               "id": "app-4",
@@ -197,7 +197,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Meta Login needs the application ID and the secret key of a Meta app, saved under Meta App. With the feature enabled, the login page offers Facebook as another way to sign in. Thanks for watching."
+              "text": "With the feature enabled and the application ID and secret key of a Meta app saved under Meta App, the login page offers Facebook as another way to sign in. Thanks for watching."
             }
           ]
         }
