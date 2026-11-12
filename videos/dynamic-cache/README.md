@@ -1,6 +1,6 @@
 # Dynamic Cache: Cache Parts of a Page
 
-**YouTube:** not published yet · **Length:** 5:48 · **Feature:** `OrchardCore.DynamicCache` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/DynamicCache/))
+**YouTube:** not published yet · **Length:** 5:46 · **Feature:** `OrchardCore.DynamicCache` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/DynamicCache/))
 
 A developer video about the Dynamic Cache module. It explains why Orchard Core caches sections of markup instead of
 whole pages, shows the Cache Mode setting and a Liquid cache block at work on a page, and then covers caching a shape

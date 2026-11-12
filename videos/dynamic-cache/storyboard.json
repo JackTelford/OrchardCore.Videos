@@ -243,7 +243,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Dynamic Cache stores sections of markup, varies them by context, and removes them by tag or by time. The documentation is at docs.orchardcore.net. Thanks for watching."
+              "text": "Dynamic Cache stores sections of markup, varies them by context, and removes them by tag or by time. Thanks for watching."
             }
           ]
         }
