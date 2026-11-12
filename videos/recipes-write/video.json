@@ -1,0 +1,46 @@
+{
+  "title": "Write a Recipe: Steps, Variables and Content | Orchard Core",
+  "description": "A recipe is a JSON file that sets up an Orchard Core site, and writing one means knowing its header, its variables and the steps that do the work.\n\nThis video builds one recipe for a module, from the first property to the last step: the header, scripts and variables, the feature, themes and settings steps, a content type and a content item. Then it runs the recipe from Tools > Recipes.\n\nIn this video:\n• What a recipe is and where it lives\n• The recipe header\n• Scripts and variables\n• Features, themes and settings\n• Content types and content\n• Run the recipe\n• More steps and reuse",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Orchard Core recipes",
+    "recipe",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "JSON"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Recipes"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Recipes/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Recipes/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Recipes"
+  }
+}

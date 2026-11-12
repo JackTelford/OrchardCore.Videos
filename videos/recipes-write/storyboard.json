@@ -1,0 +1,272 @@
+{
+  "title": "Write an Orchard Core Recipe",
+  "output": "recipes-write",
+  "spoken": {
+    ".recipe.json": "dot recipe dot json",
+    "issetuprecipe": "is setup recipe",
+    "displayName": "display name",
+    "prefix js": "prefix J.S.",
+    "uuid": "U.U.I.D.",
+    "AdminUsername": "Admin Username",
+    "SiteName": "Site Name",
+    "TimeZoneId": "Time Zone I.D.",
+    "HomeRoute": "Home Route",
+    "ContentDefinition": "Content Definition",
+    "BakeryPage": "Bakery Page",
+    "TitlePart": "Title Part",
+    "HtmlBodyPart": "H.T.M.L. Body Part",
+    "PartName": "Part Name",
+    "OpeningHours": "Opening Hours",
+    "ContentItemId": "Content Item I.D.",
+    "ContentType": "Content Type",
+    "IRecipeMigrator": "I Recipe Migrator",
+    "ExecuteAsync": "Execute Async",
+    "ReloadTenant": "Reload Tenant",
+    "DisplayName": "Display Name",
+    "AddDataMigration": "Add Data Migration",
+    "Html": "H.T.M.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Write an Orchard Core Recipe",
+      "subtitle": "A JSON file that sets up and fills an Orchard Core site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A recipe is a JSON file that sets up an Orchard Core site. It enables features, changes settings, and creates content types and content. In this video, you write one for a module, give it variables, and run it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a recipe is",
+      "subtitle": "A file of steps, run in order",
+      "clips": [
+        {
+          "id": "01-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe is a file whose name ends in .recipe.json. Put it directly in the Recipes folder of a module or a theme, and Orchard Core finds it there. The module project embeds the file, so it needs no entry in the project file."
+            },
+            {
+              "id": "recipe-2",
+              "text": "The file holds three kinds of content: properties that describe the recipe, variables, and a list of steps. Orchard Core runs the steps from the first to the last, and a step that fails stops the recipe."
+            },
+            {
+              "id": "recipe-3",
+              "text": "Each step is an object with a name. The name picks the step, and the other properties are its settings. A step whose name no handler recognizes is skipped, so a misspelled name does nothing."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The recipe header",
+      "subtitle": "Properties that describe a recipe",
+      "clips": [
+        {
+          "id": "02-header",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "header-1",
+              "text": "The first properties describe the recipe. The name identifies it, and other recipes use that name to run it. The displayName and the description are what the Recipes page lists."
+            },
+            {
+              "id": "header-2",
+              "text": "Tags appear as badges next to the recipe, and the Recipes page leaves out a recipe tagged hidden. The author, the website, and the version are information about the recipe."
+            },
+            {
+              "id": "header-3",
+              "text": "A recipe that sets issetuprecipe to true is offered on the setup screen, and the Recipes page leaves it out. Leave the property out of a recipe that you run on a site that already exists."
+            },
+            {
+              "id": "header-4",
+              "text": "The file is read leniently: comments and trailing commas are allowed. Use a comment to explain a step where it appears."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Scripts and variables",
+      "subtitle": "Compute a value once, use it in any step",
+      "clips": [
+        {
+          "id": "03-variables",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "vars-1",
+              "text": "A script is a string in square brackets: a prefix, a colon, and the code. The prefix js runs JavaScript, and the prefix file reads a file. Any other prefix is not evaluated, and its brackets are removed."
+            },
+            {
+              "id": "vars-2",
+              "text": "Variables hold values that you define once and use in any step. Declare them in the variables object, before the steps, and read one in a script with the variables function."
+            },
+            {
+              "id": "vars-3",
+              "text": "Orchard Core evaluates a variable the first time a step reads it, and keeps the result. A variable that calls uuid gives one identifier to the whole recipe, so two steps can point at the same content item."
+            },
+            {
+              "id": "vars-4",
+              "text": "Scripts can read their surroundings too. The configuration function reads a tenant configuration key, with a default. The parameters function reads values such as AdminUsername and SiteName."
+            },
+            {
+              "id": "vars-5",
+              "text": "To keep long text out of the recipe, put it in a file beside it. A step reads the file with the file prefix and the text function, and the path is relative to the folder of the recipe. A variable cannot read a file."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Features, themes and settings",
+      "subtitle": "The steps most recipes start with",
+      "clips": [
+        {
+          "id": "04-steps",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "steps-1",
+              "text": "Start with the feature step. Its enable property lists the features to turn on, and its disable property lists the features to turn off. In a recipe run from Tools, Recipes, or during setup, the steps after it use what it enables."
+            },
+            {
+              "id": "steps-2",
+              "text": "A theme is a feature too, so enable it before you set it. The themes step sets the site theme and the admin theme, and a property that is missing or empty leaves that theme as it is."
+            },
+            {
+              "id": "steps-3",
+              "text": "The settings step changes site settings, such as SiteName, TimeZoneId, and HomeRoute. Any other property is stored under its own name, which is how a feature's settings, like the layer settings, are set."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Content types and content",
+      "subtitle": "Define a type, then create an item",
+      "clips": [
+        {
+          "id": "05-content",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "The ContentDefinition step creates content types and parts. The BakeryPage type lists three parts: TitlePart, HtmlBodyPart, and a part of its own. PartName is the part, and Name is what the type calls it."
+            },
+            {
+              "id": "content-2",
+              "text": "A part lists its fields. The BakeryPage part has one field, a text field named OpeningHours, with the display name Opening Hours."
+            },
+            {
+              "id": "content-alter",
+              "text": "If a type or part already exists, the step alters it. It adds the parts and fields you list, and merges their settings. A type's own settings merge only when the type has a DisplayName."
+            },
+            {
+              "id": "content-3",
+              "text": "The content step creates content items from its data array. Each item names its ContentType, has a ContentItemId, and sets Latest and Published to true. Take the ContentItemId from a variable, and other steps can point at the item."
+            },
+            {
+              "id": "content-4",
+              "text": "Each part's data sits under the part's name. TitlePart holds a Title, HtmlBodyPart holds Html, and a text field holds Text. Owner and Author come from the parameters function."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Run the recipe",
+      "subtitle": "From Tools, Recipes",
+      "clips": [
+        {
+          "id": "06-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Tools, Recipes lists the recipes of the modules and themes, grouped by module. Let's search for Bakery. The Bakery Starter module holds our recipe, with its description and its tags."
+            },
+            {
+              "id": "run-2",
+              "text": "Select Run, and confirm with Yes. Orchard Core runs the steps in order, from the feature step to the content step."
+            },
+            {
+              "id": "run-3",
+              "text": "A notification reports that the recipe Bakery Pages has been run successfully. When a step fails, the notification names the recipe and lists the errors of that step instead."
+            },
+            {
+              "id": "run-4",
+              "text": "The home page of the site shows the Bakery Page that the recipe created, with its title, its text from the file, and the opening hours."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "More steps and reuse",
+      "subtitle": "Other steps, other recipes, and migrations",
+      "clips": [
+        {
+          "id": "07-reuse",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "Other features add their own steps, such as Roles, Templates, and Layers. The documentation shows many of the built-in steps, each with an example."
+            },
+            {
+              "id": "more-2",
+              "text": "The ReloadTenant step asks the tenant to reload, so that settings read only at startup, such as CORS policies, take effect. Place it after the steps that write those settings."
+            },
+            {
+              "id": "reuse-1",
+              "text": "The recipes step runs other recipes by name. Each named recipe runs right after that step, before the next one, and a name that no recipe has is reported as an error."
+            },
+            {
+              "id": "reuse-2",
+              "text": "A data migration can run a recipe as well. Inject the IRecipeMigrator, and call ExecuteAsync with the file name of a recipe kept in the Migrations folder of the module. Register the migration with AddDataMigration in the Startup class."
+            },
+            {
+              "id": "reuse-3",
+              "text": "A data migration runs while the tenant is being activated. When a migration runs a recipe, the content step waits and imports its items after all migrations have completed. In a recipe that you run from Tools, Recipes, it imports them immediately."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Write an Orchard Core Recipe",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is a recipe: properties, variables, and steps that enable features, define content types, and create content, written in the Recipes folder of a module and run from Tools, Recipes. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
