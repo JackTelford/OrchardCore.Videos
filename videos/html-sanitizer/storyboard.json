@@ -1,0 +1,176 @@
+{
+  "title": "The Orchard Core HTML Sanitizer",
+  "output": "html-sanitizer",
+  "spoken": {
+    "Orchard.SanitizeHtml": "Orchard dot Sanitize HTML",
+    "IHtmlSanitizerService": "I HTML Sanitizer Service",
+    "IHtmlContent": "I HTML Content",
+    "ConfigureHtmlSanitizer": "Configure HTML Sanitizer",
+    "AddOrchardCms": "Add Orchard CMS",
+    "Sanitize Html": "Sanitize HTML",
+    "sanitize_html": "sanitize underscore HTML",
+    "HtmlBodyPart": "HTML Body Part",
+    "HtmlMenuItemPart": "HTML Menu Item Part",
+    "HtmlField": "HTML Field",
+    "MarkdownBodyPart": "Markdown Body Part",
+    "MarkdownField": "Markdown Field",
+    "LinkMenuItemPart": "Link Menu Item Part",
+    "LinkField": "Link Field",
+    "HtmlBody": "HTML Body",
+    "MarkdownBody": "Markdown Body",
+    "mailto": "mail to",
+    "ftp": "F.T.P."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core HTML Sanitizer",
+      "subtitle": "Keep unsafe markup out of rendered content",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Authored HTML and Markdown are stored as written, and Orchard Core cleans the HTML each time it renders it. This video covers where the HTML Sanitizer applies, how to turn it off for a part, and how to use and configure it in code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the sanitizer works",
+      "subtitle": "Stored as written, cleaned when displayed",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Authors write HTML, or Markdown that becomes HTML. That markup can hold a script element, an event handler attribute, or a link whose address runs a script. Shown as it is, it runs in the visitor's browser, which is cross-site scripting."
+            },
+            {
+              "id": "idea-2",
+              "text": "The HTML Sanitizer cleans the final rendered HTML, each time the content is displayed. What the author wrote is stored unchanged. In this example, the script element is removed from the page, and the paragraph stays."
+            },
+            {
+              "id": "idea-3",
+              "text": "The order matters. A Markdown body is converted to HTML first, then shortcodes are processed, and the sanitizer runs last. So markup that a shortcode produces is cleaned too."
+            },
+            {
+              "id": "idea-4",
+              "text": "By default, it applies to the HtmlBodyPart, the HtmlField, the HtmlMenuItemPart, the MarkdownBodyPart, and the MarkdownField. For the body parts and fields, one setting covers both the rendered page and the HTML that GraphQL returns."
+            },
+            {
+              "id": "idea-5",
+              "text": "The sanitizer also checks addresses. When you save a LinkField, a LinkMenuItemPart, or an HtmlMenuItemPart, the URL is placed in a link and sanitized, and rejected as invalid if the sanitizer changes it. Link and HTML menu items are checked again when displayed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Sanitize Html setting",
+      "subtitle": "On by default, per part",
+      "clips": [
+        {
+          "id": "02-setting",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setting-1",
+              "text": "The Content Types page, under Design, Content Definition, lists the content types. Select Edit for Article. Its Parts list includes HtmlBody, so select Edit next to it."
+            },
+            {
+              "id": "setting-2",
+              "text": "Sanitize Html is checked, which is the default. Its hint says the HTML is sanitized, for example by removing script tags. Clearing the box turns sanitization off for this part of this type, so leave it checked unless you trust every author."
+            },
+            {
+              "id": "setting-3",
+              "text": "The Blog Post type has the same setting on its MarkdownBody part. There, the hint says it is the HTML output from Markdown that is sanitized."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Sanitizing in your code",
+      "subtitle": "Razor, Liquid and the service",
+      "clips": [
+        {
+          "id": "03-use",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "use-1",
+              "text": "The sanitizer is available to your own code too. Call it for any HTML you write to a page that did not pass through a part or field with the setting. There are three ways to call it."
+            },
+            {
+              "id": "use-2",
+              "text": "In a Razor view, Orchard.SanitizeHtml takes a string of HTML and returns it sanitized. It returns IHtmlContent, so Razor writes it as markup instead of encoding it again."
+            },
+            {
+              "id": "use-3",
+              "text": "In a Liquid template, the sanitize_html filter does the same, and the raw filter writes the result as markup. The markdownify filter always sanitizes what it returns."
+            },
+            {
+              "id": "use-4",
+              "text": "In your own classes, take an IHtmlSanitizerService in the constructor and call Sanitize. The Html and Markdown modules call it this way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Configuring the sanitizer",
+      "subtitle": "Allowed tags, attributes and schemes",
+      "clips": [
+        {
+          "id": "04-configure",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "configure-1",
+              "text": "AddOrchardCms registers the sanitizer. On top of the defaults of its library, Orchard Core allows the class attribute, allows the mailto and tel schemes, and removes the form tag from the allowed tags."
+            },
+            {
+              "id": "configure-2",
+              "text": "To change the rules, call ConfigureHtmlSanitizer on the tenant services, with an action that receives the sanitizer. This one allows the ftp scheme. You can call it more than once, and the actions run in the order they were added."
+            },
+            {
+              "id": "configure-3",
+              "text": "The link checks use the same sanitizer, so they accept the schemes you allow here."
+            },
+            {
+              "id": "configure-4",
+              "text": "Sanitized results are cached for fragments up to 64K characters, and a tenant never receives another tenant's result. So whatever you configure with ConfigureHtmlSanitizer, including event handlers, must return the same result for the same fragment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core HTML Sanitizer",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the HTML Sanitizer: authored content is stored as written, cleaned when it is rendered, and configured in code. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
