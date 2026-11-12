@@ -10,7 +10,7 @@ The title, description, tags and chapters YouTube shows are in video.json.
 
 ## Recording it again
 
-The video was recorded on a **fresh site** with fake data only, so it needs no mask script. The exact actions, selectors
+The video is recorded on a **fresh site** with fake data only, so it needs no mask script. The exact actions, selectors
 and screen checks of every clip are in recording-plan.md.
 
 1. Run the Cms.Web project of an Orchard Core checkout that has the Rate Limits module, with its App_Data folder in an
