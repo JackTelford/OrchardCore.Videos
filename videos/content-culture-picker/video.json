@@ -1,0 +1,48 @@
+{
+  "title": "Content Culture Picker: Let Visitors Switch Languages | Orchard Core",
+  "description": "A site with content in several languages needs a way for visitors to choose one, and to land on the right page when they do.\n\nThe Content Culture Picker adds a language menu to the navigation bar of the site. When a visitor picks a language, the picker opens the same page in that language, opens the homepage in that language, or keeps the visitor on the page.\n\nIn this video:\n• How the picker works, and what it relies on\n• Enabling the Content Culture Picker feature\n• Switching languages on the site\n• A page without a translation\n• Homepage redirect\n• The language cookie, and who can change the settings",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Localization"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Localization",
+    "Content Localization",
+    "Culture Picker",
+    "Multilingual"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Localization"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentLocalization/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentLocalization/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentLocalization.ContentCulturePicker"
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "title": "The Content Culture Picker",
+  "output": "content-culture-picker",
+  "spoken": {
+    "ContentCulturePicker": "Content Culture Picker"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Content Culture Picker",
+      "subtitle": "A language menu for the visitors of your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site with content in several languages needs a way for visitors to choose one. The Content Culture Picker adds a language menu to the site. In this video, you will enable it, try it, and set how it behaves."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the picker works",
+      "subtitle": "What it shows, what it needs, where it leads",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "The picker is a menu in the navigation bar of the site. Its button shows the current language, and its menu lists the other supported languages. Orchard Core calls them cultures."
+            },
+            {
+              "id": "how-2",
+              "text": "For the picker to switch pages, the site needs at least two supported cultures, pages translated with the Localization part, and a path for each page from Autoroute. The theme must also show the navigation bar, as The Default Theme does."
+            },
+            {
+              "id": "how-3",
+              "text": "When a visitor picks a language, the picker looks for the same page in that language and opens it. If there is none, it can open the homepage in that language, or leave the visitor on the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the picker",
+      "subtitle": "One feature to turn on",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features. The Content Culture Picker is listed under Internationalization, so let's search for content culture."
+            },
+            {
+              "id": "enable-2",
+              "text": "The row describes the picker, and lists its dependencies, Autoroute and Content Localization. Autoroute gives each page its path, and Content Localization provides the Localization part."
+            },
+            {
+              "id": "enable-3",
+              "text": "Select Enable. A message confirms that the feature Content Culture Picker was enabled, and the row shows Enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Switch languages",
+      "subtitle": "Use the menu on the site",
+      "clips": [
+        {
+          "id": "03-switch",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "switch-1",
+              "text": "Let's select Visit Site. This is the home page in English, and the navigation bar holds a menu that shows the current language, English."
+            },
+            {
+              "id": "switch-2",
+              "text": "Let's open the menu. It lists the other supported language under its own name, so French appears as français."
+            },
+            {
+              "id": "switch-3",
+              "text": "Choose français. The picker finds the French version of the home page and opens it. The menu shows français as the current language, because the page itself is in French."
+            },
+            {
+              "id": "switch-4",
+              "text": "The picker works the same way on every translated page. Let's follow the link to the contact page, Nous contacter."
+            },
+            {
+              "id": "switch-5",
+              "text": "Let's choose English. The picker finds the English version of the contact page, and the visitor lands on Contact us."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "A page without a translation",
+      "subtitle": "The visitor stays on the page",
+      "clips": [
+        {
+          "id": "04-missing",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "missing-1",
+              "text": "Some pages exist in one language only. On the contact page, let's follow the link to Opening hours, which has no French version."
+            },
+            {
+              "id": "missing-2",
+              "text": "Let's choose français. The picker finds no French version of Opening hours, so the visitor stays on the page, in English."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Homepage redirect",
+      "subtitle": "Send the visitor to the homepage",
+      "clips": [
+        {
+          "id": "05-homepage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "homepage-1",
+              "text": "To send the visitor to the homepage instead, open Settings, Localization, Content Culture Picker."
+            },
+            {
+              "id": "homepage-2",
+              "text": "The page has two options. Homepage redirect opens the homepage in the chosen language when the page has no version in that language. Let's select it."
+            },
+            {
+              "id": "homepage-3",
+              "text": "Select Save. A message confirms that the site settings were updated."
+            },
+            {
+              "id": "homepage-4",
+              "text": "Let's visit the site again, and follow the link to Opening hours on the English home page."
+            },
+            {
+              "id": "homepage-5",
+              "text": "Let's choose français. This time, the picker finds no French version of Opening hours, and opens the French homepage, Bienvenue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The language cookie",
+      "subtitle": "Remember the choice of the visitor",
+      "clips": [
+        {
+          "id": "06-cookie",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cookie-1",
+              "text": "Both settings pages have a Set Cookie option. Here, on the Content Culture Picker page, it is selected by default."
+            },
+            {
+              "id": "cookie-2",
+              "text": "When a visitor picks a language, the picker stores it in a cookie, and the site reads that cookie on later requests. The cookie lasts 14 days by default, and scripts in the browser cannot read it."
+            },
+            {
+              "id": "cookie-3",
+              "text": "Let's open Settings, Localization, Content Culture. Its Set Cookie option is not selected by default."
+            },
+            {
+              "id": "cookie-4",
+              "text": "When it is selected, the site stores the language of any page with a Localization part that a visitor opens, even when they skip the picker."
+            },
+            {
+              "id": "cookie-5",
+              "text": "Both pages are available only to users who have the Manage ContentCulturePicker settings permission. The Administrator role has it by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Content Culture Picker",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Content Culture Picker gives visitors a language menu, and takes them to the translation of the page they are on. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
