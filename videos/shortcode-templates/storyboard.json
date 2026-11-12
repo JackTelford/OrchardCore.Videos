@@ -1,0 +1,221 @@
+{
+  "title": "Shortcode Templates",
+  "output": "shortcode-templates",
+  "spoken": {
+    "Args": "Arguments",
+    "ShortcodeTemplates": "Shortcode Templates",
+    "ContentItem": "Content Item"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Shortcode Templates",
+      "subtitle": "Write your own shortcodes with Liquid",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A shortcode is a name in square brackets that an editor types into content. Shortcode Templates lets you write your own in the admin, with Liquid. In this video, you create one, use it in an article, and see what a template can read."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a shortcode template is",
+      "subtitle": "Names, arguments and Liquid",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "An editor writes a shortcode in the body of a content item: a name, optional arguments, and optional text between an opening and a closing tag. When the item is displayed, Orchard Core replaces it with the output of the shortcode."
+            },
+            {
+              "id": "idea-2",
+              "text": "A shortcode can be code that a module registers. With Shortcode Templates, it can also be a template: Liquid that you write in the admin and save with the site. Editors find both in the same list."
+            },
+            {
+              "id": "idea-3",
+              "text": "A template receives three values. Args holds the named arguments, Content holds the text between the tags, and Context holds what the caller passes along, such as the content item being displayed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Under Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Shortcode Templates belongs to the Shortcodes module. Under Tools, Features, search for shortcode. The row lists the dependencies, Liquid and Shortcodes."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable. A notification confirms it, and the Design menu gets a Shortcodes entry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a template",
+      "subtitle": "Liquid code, name and hint",
+      "clips": [
+        {
+          "id": "03-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "template-1",
+              "text": "This template is based on an example in the documentation. If the shortcode has a text argument, the template prints it. Otherwise, it prints the content between the tags."
+            },
+            {
+              "id": "template-2",
+              "text": "Liquid encodes every output. The template captures its markup, cleans it with the sanitize HTML filter, and writes it with the raw filter, which skips the encoding. Values from the arguments and the content stay encoded, so they can't add markup."
+            }
+          ]
+        },
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Open Design, Shortcodes. The list is empty, so select Add Shortcode Template."
+            },
+            {
+              "id": "create-2",
+              "text": "Name is what editors type between the brackets, so type primary. The name is mandatory, it must be valid inside brackets, and it must be unique."
+            },
+            {
+              "id": "create-3",
+              "text": "Hint describes the shortcode, and Usage shows how to write it, in HTML. A preview card follows what you type, as it appears in the picker."
+            },
+            {
+              "id": "create-4",
+              "text": "Categories group shortcodes in the picker, so select HTML Content. Default Shortcode Value is the text the picker inserts, here a shortcode with some text."
+            },
+            {
+              "id": "create-5",
+              "text": "Content takes the Liquid template. Orchard Core checks it when you save, and reports an error if it isn't valid Liquid."
+            },
+            {
+              "id": "create-6",
+              "text": "Select Save. The list shows the template with its hint and its category."
+            },
+            {
+              "id": "create-7",
+              "text": "From the list, you can search templates by name, edit one, delete it, or select several and delete them together."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Use it in content",
+      "subtitle": "The picker and the page",
+      "clips": [
+        {
+          "id": "04-use",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "use-1",
+              "text": "Edit an article, and put the cursor in the body. The Insert Shortcode button of the editor opens Available Shortcodes."
+            },
+            {
+              "id": "use-2",
+              "text": "The list holds the shortcodes registered in code, and your templates. The primary shortcode appears with its hint and usage. Select Add."
+            },
+            {
+              "id": "use-3",
+              "text": "The editor inserts the default value into the body. Publish the article to save it."
+            },
+            {
+              "id": "use-4",
+              "text": "On the page, the shortcode is replaced by the output of the template: the text, in the primary color of the theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "More about templates",
+      "subtitle": "Context, names and rendering",
+      "clips": [
+        {
+          "id": "05-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "To read the content item, use Context. This template, also based on the documentation, prints the display text of the item that holds the shortcode. Html and Markdown body parts and fields fill in Context dot ContentItem."
+            },
+            {
+              "id": "more-2",
+              "text": "A template with the same name as a shortcode from code, such as image, replaces it, because templates are asked first. And an Html Body part with Sanitize Html on cleans the HTML after the shortcodes run."
+            },
+            {
+              "id": "more-3",
+              "text": "In your own views, the shortcode filter in Liquid and the Orchard helper in Razor render the shortcodes of any string you give them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Recipes, deployment and permissions",
+      "subtitle": "Move templates and control access",
+      "clips": [
+        {
+          "id": "06-deploy",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "deploy-1",
+              "text": "Templates also travel as data. The ShortcodeTemplates recipe step creates them, keyed by name, with the fields of the form. When Deployment is enabled, the All Shortcode Templates deployment step exports every template as that step."
+            },
+            {
+              "id": "deploy-2",
+              "text": "Managing templates takes the Manage shortcode templates permission. It is security critical, so assign it with caution. The Administrator and Editor roles have it by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Shortcode Templates",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's Shortcode Templates: your own shortcodes, written in Liquid, with arguments, content and the content item at hand. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

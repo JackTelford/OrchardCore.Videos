@@ -1,0 +1,55 @@
+{
+  "title": "Shortcode Templates: Write Your Own Shortcodes With Liquid | Orchard Core",
+  "description": "A shortcode in the body of a content item is normally code that a module registers, so a small piece of reusable markup becomes a development task.\n\nThe Shortcode Templates feature of Orchard Core moves that work to the admin: you write the shortcode as a Liquid template that receives the arguments, the inner content and the context of the caller.\n\nIn this video:\n• What a shortcode template is, and the three values it receives\n• Enabling the feature under Tools, Features\n• Creating the primary template under Design, Shortcodes\n• Using the template from the shortcode picker of the editor\n• Reading the content item, replacing a shortcode from code, and rendering shortcodes in your own views\n• Moving templates with recipes and deployment plans, and the permission that guards them",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Shortcodes",
+    "Shortcode Templates",
+    "Liquid",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Shortcodes",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Shortcodes/#shortcode-templates"
+    },
+    {
+      "label": "Documentation: Permissions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Documentation: Liquid",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Liquid/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Security/Permissions.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Shortcodes.Templates"
+  }
+}
