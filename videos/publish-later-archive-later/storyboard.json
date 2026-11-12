@@ -1,0 +1,212 @@
+{
+  "title": "Publish Later and Archive Later",
+  "output": "publish-later-archive-later",
+  "spoken": {
+    "PublishLater": "Publish Later",
+    "ArchiveLater": "Archive Later"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Publish Later and Archive Later",
+      "subtitle": "Schedule when content goes live and when it comes down",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some content should appear on a set date, and some should leave on another. The Publish Later and Archive Later modules schedule both, so an item changes state by itself. This video enables them, schedules an item, and cancels a schedule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two scheduled changes",
+      "subtitle": "One part and one background task for each",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "Publish Later holds a draft until the date and time you choose, and then publishes it. Archive Later does the opposite: at the date and time you choose, it unpublishes a published item."
+            },
+            {
+              "id": "idea-2",
+              "text": "Each one is a content part, so you decide which content types offer it. A background task for each part checks every minute for items whose time has arrived, and changes their state."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features and add the parts",
+      "subtitle": "Features first, then the parts of a content type",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Both are features you enable. Open Tools, then Features, search for Publish Later, and select Enable. A message confirms that the feature was enabled."
+            },
+            {
+              "id": "features-2",
+              "text": "Search for Archive Later and enable it in the same way. Each feature adds a part that you can attach to content types."
+            }
+          ]
+        },
+        {
+          "id": "02-parts",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "parts-1",
+              "text": "Next, choose the content types that need a schedule. Open Design, then Content Definition, then Content Types, and select Edit on Article."
+            },
+            {
+              "id": "parts-2",
+              "text": "Select Add Parts, check PublishLater and ArchiveLater, and select Add Selected Parts. A message lists the parts that were added, and the Article type shows them under Parts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Publish Later",
+      "subtitle": "Hold a draft until a set time",
+      "clips": [
+        {
+          "id": "03-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "publish-1",
+              "text": "Let's schedule an article. Open Content, then Content Items, select New, and choose Article. Enter the title Spring Sale Announcement."
+            },
+            {
+              "id": "publish-2",
+              "text": "The action bar at the bottom of the editor has a date and time field beside a Publish Later button. Enter a time a few minutes ahead."
+            },
+            {
+              "id": "publish-3",
+              "text": "Select Publish Later. The article is saved as a draft with its schedule. It is not published."
+            },
+            {
+              "id": "publish-4",
+              "text": "The Content Items list marks the article as Draft. A clock badge shows when it will be published, and hovering over the badge shows the exact date and time."
+            },
+            {
+              "id": "publish-5",
+              "text": "A background task runs every minute. Once the chosen time has passed, it publishes the article. Reload the list: the Draft badge and the clock are gone, and the article shows Published."
+            },
+            {
+              "id": "publish-6",
+              "text": "Visitors can read the published article on the public site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Archive Later",
+      "subtitle": "Unpublish an item at a set time",
+      "clips": [
+        {
+          "id": "04-archive",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "archive-1",
+              "text": "Archive Later works on a published item. Let's open the Spring Sale Announcement from the Content Items list, and look at the Archive Later field and button."
+            },
+            {
+              "id": "archive-2",
+              "text": "Enter a time a few minutes ahead in the field beside Archive Later, and select the button. It also publishes the item, so whatever is in the editor becomes the live version."
+            },
+            {
+              "id": "archive-3",
+              "text": "The list shows the article as Published, with a badge for the scheduled archive time. Hovering over the badge shows the exact date and time."
+            },
+            {
+              "id": "archive-4",
+              "text": "When the time passes, the task unpublishes the article. After a reload, the badge is gone and the article is marked Draft. The content is kept, but visitors no longer see it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Change or cancel a schedule",
+      "subtitle": "Edit the time, or remove it",
+      "clips": [
+        {
+          "id": "05-cancel",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cancel-1",
+              "text": "Reopen a scheduled draft, and its editor shows the time you chose, with a Cancel Publish Later button. To reschedule, enter another time and select Publish Later again."
+            },
+            {
+              "id": "cancel-2",
+              "text": "To remove the schedule, open the draft again and select Cancel Publish Later. The article stays a draft, and the clock badge is gone."
+            },
+            {
+              "id": "cancel-3",
+              "text": "Archive Later has a matching Cancel Archive Later button. Like Archive Later, it also publishes the item, so check the editor before you select it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Good to know",
+      "subtitle": "Time zones, permissions and timing",
+      "clips": [
+        {
+          "id": "06-know",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "know-1",
+              "text": "A time you enter is read in the site's Default Time Zone, set under Settings, General. With the User Time Zone feature enabled, a zone set for a user takes precedence. Changing a zone later changes how a time is shown, not when it happens."
+            },
+            {
+              "id": "know-2",
+              "text": "The scheduling controls appear only for people who may publish the item. A change happens at the first run of the task after the chosen time, never before, and only while the site is running."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Publish Later and Archive Later",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Once the parts are attached to a content type and you enter a time in the editor, a background task publishes or unpublishes the item for you. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

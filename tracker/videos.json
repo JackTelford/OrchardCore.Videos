@@ -567,9 +567,9 @@
       "src/docs/reference/modules/PublishLater/README.md",
       "src/docs/reference/modules/ArchiveLater/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.3,
+    "words": 642,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

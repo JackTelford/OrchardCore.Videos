@@ -1,0 +1,52 @@
+{
+  "title": "Publish Later and Archive Later: Schedule Your Content | Orchard Core",
+  "description": "Content often has to appear at a set time and come down at another, and doing it by hand means someone must be at the keyboard when the moment arrives.\n\nThe Publish Later and Archive Later modules add a date and time to the content editor. A background task checks every minute and publishes or unpublishes the item once its time has arrived.\n\nIn this video:\n• Two scheduled changes: publish a draft later, archive a published item later\n• Enable the features and add the parts to a content type\n• Publish Later: schedule an article and watch it go live\n• Archive Later: schedule a published article to come down\n• Change or cancel a schedule\n• Good to know: time zones, permissions and timing",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Publish Later",
+    "Archive Later",
+    "scheduled publishing",
+    "content scheduling"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Publish Later",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/PublishLater/"
+    },
+    {
+      "label": "Documentation: Archive Later",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ArchiveLater/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/PublishLater/README.md",
+    "src/docs/reference/modules/ArchiveLater/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.PublishLater"
+  }
+}
