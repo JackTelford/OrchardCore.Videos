@@ -2683,9 +2683,9 @@
       "src/docs/reference/modules/Facebook/README.md",
       "src/docs/guides/integrate-facebook-plugins/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.0,
+    "words": 605,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

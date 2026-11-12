@@ -1,0 +1,191 @@
+{
+  "title": "Meta Social Plugins: Like, Share and Comments Widgets",
+  "output": "meta-social-plugins",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Meta Social Plugins: Like, Share and Comments Widgets",
+      "subtitle": "Place the social plugins of Meta on your pages",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Meta offers social plugins, such as a Like button, a Share button, and a comments box. The Meta Social Plugins Widgets feature provides widgets for several of them. In this video, you enable it, register your Meta app, and add three widgets to the footer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Social plugins as widgets",
+      "subtitle": "What the feature adds",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "The feature provides a widget for several of Meta's social plugins. You place a widget in a zone of your theme, and a layer decides on which pages it shows. A separate video covers widgets and layers in depth."
+            },
+            {
+              "id": "idea-2",
+              "text": "The feature adds seven widgets: Facebook Chat, Facebook Comments, Facebook Continue With, Facebook Like, Facebook Quote, Facebook Save, and Facebook Share. The feature and its settings are called Meta, but the widgets keep the Facebook name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Meta Social Plugins Widgets",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for Meta. The Meta category holds the features of the Meta module, including Meta Social Plugins Widgets."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable on its row. Orchard Core also enables Meta Core Components, the feature that provides the Meta App settings, and a message confirms the change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Register your Meta app",
+      "subtitle": "Settings, Integrations, Meta App",
+      "clips": [
+        {
+          "id": "03-app",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "app-1",
+              "text": "Open Settings, Integrations, Meta App. The page has fields for the Application Identifier and the Secret Key of your app, which come from the Meta developer portal."
+            },
+            {
+              "id": "app-2",
+              "text": "Let's enter an identifier and a secret key. The Secret Key field hides what you type, and an Application Identifier is required to save."
+            },
+            {
+              "id": "app-3",
+              "text": "The other fields set the version, file and start-up parameters of Meta's script, and they keep their defaults. Init on every page is off, so the script loads only on pages with one of these widgets."
+            },
+            {
+              "id": "app-4",
+              "text": "The warning at the top of the page explains that the site might restart when you save, and then be temporarily unresponsive. Select Save, and a message confirms that the settings were updated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add the widgets",
+      "subtitle": "Facebook Like, Share and Comments",
+      "clips": [
+        {
+          "id": "04-widgets",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Open Design, Widgets. The Zones list shows the zones defined for this site, Content and Footer, and the Layers list shows its layers, Always and Homepage."
+            },
+            {
+              "id": "add-2",
+              "text": "In the Footer zone, select Add Widget. The list holds every widget type of the site, including the Facebook widgets. Let's choose Facebook Like."
+            },
+            {
+              "id": "add-3",
+              "text": "The editor asks for a Title. Render title shows that title above the widget, and you leave it off. The layer decides where the widget appears: let's select Always, so it shows on every page."
+            },
+            {
+              "id": "add-4",
+              "text": "The Body field already holds the template of the plugin, filled in from the widget type. You leave it as it is, and select Publish."
+            },
+            {
+              "id": "add-5",
+              "text": "The widget appears in the Footer zone, tagged with its layer. Facebook Share follows the same steps, so let's add it with a title and the Always layer."
+            },
+            {
+              "id": "add-6",
+              "text": "Facebook Comments follows the same steps. Each widget stores its own template, so you can edit one later without touching the others."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Check the result",
+      "subtitle": "The widgets on the site",
+      "clips": [
+        {
+          "id": "05-check",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "Let's open a blog post and scroll to the footer. Below the content that was already there, the footer holds the three widgets, in the order you added them."
+            },
+            {
+              "id": "check-2",
+              "text": "Let's open the About page. The Always layer applies to every page, so it holds the same three widgets, and the page loads Meta's script for them. A widget on the Homepage layer would show only on the homepage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Who can edit the widgets",
+      "subtitle": "The Manage Liquid templates permission",
+      "clips": [
+        {
+          "id": "06-rights",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rights-1",
+              "text": "The Body field holds the template of the plugin, so editing or publishing a widget that has it needs the Manage Liquid templates permission, which is security critical. The Administrator and Editor roles have it by default."
+            },
+            {
+              "id": "rights-2",
+              "text": "Without that permission, a role can neither edit nor publish these widgets, even when it can edit other content. Grant it only to roles you trust."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Meta Social Plugins: Like, Share and Comments Widgets",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You enabled the feature, registered your Meta app, and placed Facebook Like, Share and Comments widgets in the footer with a layer. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
