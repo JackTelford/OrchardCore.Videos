@@ -1,0 +1,59 @@
+{
+  "title": "Content Fields: Links, Rich Text, Markdown and YouTube Videos | Orchard Core",
+  "description": "A content type often needs more than text and numbers: a link with its own words, formatted text, Markdown, or a video. A plain text box holds the characters, but it has no link text, no formatting and no player.\n\nThe Link Field, the Html Field, the Markdown Field, and the Youtube Field store each of these and display them on the site. This video adds all four to a content type, fills them in, publishes the content item, and shows how each field is displayed.\n\nIn this video:\n• Four fields for richer content: what each field stores, and the modules they come from\n• Link Field: an address, link text and a target\n• Html Field: formatted text with the Wysiwyg editor\n• Markdown Field: plain text that becomes formatted text\n• Youtube Field: a video address that becomes an embedded player\n• Fill in a Workshop: one value for each field\n• On the site: how each field is displayed\n• Safe by default: how Html and Markdown content is displayed",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Content Fields",
+    "Link Field",
+    "Html Field",
+    "Markdown Field",
+    "Youtube Field",
+    "Content Types",
+    "Rich Text",
+    "Wysiwyg",
+    "Markdown",
+    "YouTube",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Fields"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Content Fields",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentFields/"
+    },
+    {
+      "label": "Documentation: Markdown",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Markdown/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentFields/README.md",
+    "src/docs/reference/modules/Markdown/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentFields"
+  }
+}
