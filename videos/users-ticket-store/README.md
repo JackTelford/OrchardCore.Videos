@@ -10,7 +10,7 @@ as well. The title, description, tags and chapters YouTube shows are in `video.j
 
 ## Recording it again
 
-The video was recorded on a **fresh site** with no data beyond the Blog recipe, so it needs no mask script. Only one clip
+The video is recorded on a **fresh site** with no data beyond the Blog recipe, so it needs no mask script. Only one clip
 is a recording (`02-enable`, on the Features page); the other chapters are slides. [recording-plan.md](recording-plan.md)
 holds the exact actions of each step, and [OPEN-QUESTIONS.md](OPEN-QUESTIONS.md) holds what a person must confirm on a
 running site.
