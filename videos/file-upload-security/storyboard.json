@@ -13,7 +13,10 @@
     "TryAddTransient": "Try Add Transient",
     "TryAddEnumerable": "Try Add Enumerable",
     "ClamAV": "Clam A.V.",
-    "clamd": "clam D."
+    "clamd": "clam D.",
+    "TCP": "T.C.P.",
+    "AWS": "A.W.S.",
+    "EFS": "E.F.S."
   },
   "chapters": [
     {

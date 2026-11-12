@@ -99,5 +99,5 @@ shows only what happens to the first scan of a process.
 The `spoken` entries are written, not heard. A person confirms each with `scripts/pronounce.py` before narrating:
 `IFileEventHandler`, `ITempDirectoryProvider`, `FileCreationService`, `FileCreatingResult`,
 `CreateFileFromStreamAsync`, `CreatingAsync`, `CreatedAsync`, `CreateAsync`, `TryAddTransient`, `TryAddEnumerable`,
-`ClamAV` ("Clam A.V.") and `clamd` ("clam D."). Also listen to "TUS" (in "Media TUS Uploads"), "TCP", "AWS EFS",
+`ClamAV` ("Clam A.V.") and `clamd` ("clam D."). `TCP` ("T.C.P."), `AWS` ("A.W.S.") and `EFS` ("E.F.S.") are also in `spoken`. Also listen to "TUS" (in "Media TUS Uploads"),
 "3310" and "OK" as the voice says them.
