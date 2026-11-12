@@ -1,0 +1,52 @@
+{
+  "title": "Placements Module: Edit Placement From the Admin | Orchard Core",
+  "description": "Placement rules decide where the shapes of a page appear, and they usually live in a placement.json file of a module or a theme, so changing a rule means changing the project.\n\nThe Placements module edits the same rules from the admin, saves them with the site, and moves them between sites with recipes and deployment plans.\n\nIn this video:\n• How placements from the admin apply over placement files\n• Enabling the Placements features\n• Creating a placement in Design, Placements\n• Opening a placement from the settings of a content type\n• Saving placements in the database or in a file\n• Moving placements with recipes and deployment plans",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Placements",
+    "Placement",
+    "Shapes",
+    "Display Management",
+    "Orchard Core modules"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Display Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Placements/"
+    },
+    {
+      "label": "Placement rules format",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Placement/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Placements/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Placements"
+  }
+}
