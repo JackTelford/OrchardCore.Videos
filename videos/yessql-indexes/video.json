@@ -1,0 +1,49 @@
+{
+  "title": "YesSql Indexes: Query Your Own Documents | Orchard Core",
+  "description": "Orchard Core stores most of its data as JSON documents, and SQL cannot query inside a JSON document efficiently. To query your own documents, you write a YesSql index.\n\nThis video defines a map index for a product content part, registers its provider, creates its table with a data migration, and queries it through ISession. It also covers a reduce index, the index tables in the database, and the declarations that tell YesSql what an index holds.\n\nIn this video:\n• Documents and indexes\n• A map index\n• Register and create the table\n• Query your documents\n• A reduce index\n• See the tables\n• Declare the records",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "YesSql"
+  ],
+  "tags": [
+    "Orchard Core",
+    "YesSql",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Document database",
+    "Index",
+    "SQL",
+    "C#"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/topics/data/yessql/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/topics/data/yessql.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:topics/data/yessql"
+  }
+}

@@ -6544,9 +6544,9 @@
     "docs": [
       "src/docs/topics/data/yessql.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.8,
+    "words": 867,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
