@@ -1,0 +1,52 @@
+{
+  "title": "Launch a Coming Soon Page While You Build Your Site | Orchard Core",
+  "description": "A site that is still being built has an address, and visitors can arrive before it is ready. Without a holding page, they find nothing useful and have no way to leave an email address.\n\nThe Coming Soon recipe starts the site with a single page: a message with a launch date, a field for an email address and social icons, drawn by The Coming Soon Theme. You edit the page like any other content item, and replace it when the site launches.\n\nIn this video:\n• Why a Coming Soon page, and what the recipe creates\n• Choosing the Coming Soon recipe on the Setup screen\n• What visitors see on the home page\n• Changing the message, the button and the social icons\n• What a sign-up does, and where to set it up\n• Replacing the page when the site launches",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "ComingSoon"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Coming Soon",
+    "Landing page",
+    "Themes",
+    "Recipes"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Build a Site"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Starter Recipes",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/starter-recipes/"
+    },
+    {
+      "label": "Documentation: Themes",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Themes/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Themes/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "TheComingSoonTheme"
+  }
+}

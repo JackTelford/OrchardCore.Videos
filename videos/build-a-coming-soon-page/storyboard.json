@@ -1,0 +1,205 @@
+{
+  "title": "Launch a Coming Soon Page While You Build Your Site",
+  "output": "build-a-coming-soon-page",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Launch a Coming Soon Page",
+      "subtitle": "A holding page while you build your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A site that is still being built needs a page for the visitors who arrive early. Let's set up a Coming Soon page, change its message, see how sign-ups work, and learn how to replace the page at launch."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why a Coming Soon page",
+      "subtitle": "A page for visitors who arrive early",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A site that is not ready still has an address. A visitor who arrives early finds nothing useful, and has no way to leave an email address to hear when the site opens."
+            },
+            {
+              "id": "why-2",
+              "text": "The Coming Soon recipe starts the site with one page: a title, a message with a launch date, a field for an email address, and links to social sites. The page uses The Coming Soon Theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Choose the recipe",
+      "subtitle": "Start the site with the Coming Soon recipe",
+      "clips": [
+        {
+          "id": "02-recipe",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "The Setup screen asks for the name of the site, and for a recipe, which is a ready-made starting point. Let's type a name, then open the Recipe list and choose Coming Soon."
+            },
+            {
+              "id": "recipe-2",
+              "text": "This recipe makes The Coming Soon Theme the theme of the site, and the Coming Soon page its home page. After the remaining questions, you select Finish Setup."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The page visitors see",
+      "subtitle": "Message, sign-up field and social icons",
+      "clips": [
+        {
+          "id": "03-visit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "visit-1",
+              "text": "After setup, the home page of the site is the Coming Soon page. It shows a title, a message with a target launch date in the month after setup, and a field for an email address."
+            },
+            {
+              "id": "visit-2",
+              "text": "The button carries the text Notify Me!, which the theme draws in capital letters. On a wide screen, social icons sit at the side, and each one links to another site. Below the form, a notice says that ReCaptcha settings are not configured."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Change the message",
+      "subtitle": "Edit the page like any other content item",
+      "clips": [
+        {
+          "id": "04-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "To change the page, open Content, Content Items. The Coming Soon page is listed there, and Edit opens it."
+            },
+            {
+              "id": "edit-2",
+              "text": "The editor lists the parts of the page: Title is the heading, and under Permalink a notice says that this content item is the current homepage. The form fields below include Action, the address that receives a sign-up, so leave them as they are."
+            },
+            {
+              "id": "edit-3",
+              "text": "Under Flow, the Register widget holds the message, the Placeholder field and the Button field. Let's write our own message and button label, and leave InputFieldName as it is."
+            },
+            {
+              "id": "edit-4",
+              "text": "Social Icons lists the icons shown on the page. Each one has an Icon Class and a Social Site Url. Let's point the first icon to our own page."
+            },
+            {
+              "id": "edit-5",
+              "text": "Publish applies the changes. The home page of the site then shows our message and our button label."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Sign-ups",
+      "subtitle": "What happens when a visitor enters an email address",
+      "clips": [
+        {
+          "id": "05-flow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "signup-1",
+              "text": "When a visitor selects the button, the form sends the email address to a workflow, a series of steps that Orchard Core runs for each sign-up."
+            },
+            {
+              "id": "signup-2",
+              "text": "The workflow checks that an address was entered, runs the reCaptcha check, creates a user with that address, sends a confirmation email, and returns the visitor to the home page."
+            }
+          ]
+        },
+        {
+          "id": "05-recaptcha",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signup-3",
+              "text": "Under Settings, Security, reCaptcha, enter the Site Key and the Secret Key that Google gives you. Once both are saved, the page shows the reCaptcha check in place of the notice."
+            }
+          ]
+        },
+        {
+          "id": "05-checklist",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "signup-4",
+              "text": "The confirmation email needs an email provider. Enable one under Tools, Features, and set it up under Settings, Communication, Email. Each sign-up appears as a user under Access Control, Users."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Launch the site",
+      "subtitle": "Replace the Coming Soon page",
+      "clips": [
+        {
+          "id": "06-home",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "launch-1",
+              "text": "When the real site is ready, open the content item that is to be your home page. Under its Permalink, check Set as homepage, then publish it. The item needs a permalink for this to work."
+            }
+          ]
+        },
+        {
+          "id": "06-theme",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "launch-2",
+              "text": "Then open Design, Themes. The Coming Soon Theme is marked as the current Site theme. Select Make Current on the theme of your finished site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Launch a Coming Soon Page",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A Coming Soon page tells early visitors when to return and collects their email addresses while you build. When the site is ready, a home page and a theme of your choice replace it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
