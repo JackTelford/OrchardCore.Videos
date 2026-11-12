@@ -1,6 +1,6 @@
 # GraphQL: Filter, Sort and Page Content Items
 
-**YouTube:** not published yet · **Length:** 4:55 · **Feature:** `OrchardCore.Apis.GraphQL` ([GraphQL documentation](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/))
+**YouTube:** not published yet · **Length:** 4:53 · **Feature:** `OrchardCore.Apis.GraphQL` ([GraphQL documentation](https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/))
 
 A developer video about the five arguments of a content type query: `where` to filter, `orderBy` to sort, `first`
 and `skip` to page, and `status` to choose the version of each item. It runs the queries in GraphiQL on a small blog,

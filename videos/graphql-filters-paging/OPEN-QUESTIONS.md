@@ -66,7 +66,7 @@ before recording. Nothing in the narration depends on an unconfirmed behavior ex
     last title is cut, report it: the fix is in the query, not in the narration.
 12. **Pronunciation.** `narrate.py` could not be run to check these spellings in the `spoken` map of `storyboard.json`; a
     person must hear them (`scripts/pronounce.py`) before narrating: `GraphiQL` as "graphical", `orderBy` as "order by",
-    `ASC` as "A.S.C.", `DESC` as "D.E.S.C.", and the three setting names as separate words. Also listen to `GraphQL`,
+    `ASC` as "A.S.C.", `DESC` as "D.E.S.C.", `SQL` as "S.Q.L.", and the three setting names as separate words. Also listen to `GraphQL`,
     `Autoroute`, `Liquid`, `SQL` and "1001".
 13. **`first` of zero.** The narration says that a missing or zero `first` returns the default number of results; this is
     `ContentItemsFieldType.cs:205-210` (`first == 0`). There is no `last` argument on content type queries.

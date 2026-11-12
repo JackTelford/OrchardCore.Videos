@@ -7,6 +7,7 @@
     "MaxNumberOfResults": "max number of results",
     "GraphiQL": "graphical",
     "orderBy": "order by",
+    "SQL": "S.Q.L.",
     "ASC": "A.S.C.",
     "DESC": "D.E.S.C."
   },
@@ -43,7 +44,7 @@
             },
             {
               "id": "args-2",
-              "text": "A query without arguments returns the published version of each item of the type that the user may view, newest first, up to 100 items. You can change each default in the query, and the number of items also in the configuration."
+              "text": "A query without arguments returns the published version of each item of the type that the user may view, newest first, up to 100 items. You can change each default in the query. The default number of items can also be changed in the configuration."
             },
             {
               "id": "args-3",
@@ -68,7 +69,7 @@
             },
             {
               "id": "where-2",
-              "text": "Add the where argument to filter. A condition is a field name plus an operator suffix: here the display text field with the contains suffix, and only the two titles containing the word with remain."
+              "text": "Add the where argument to filter. A condition is a field name plus an operator suffix: here the display text field with the contains suffix, set to the word with, which leaves two titles."
             },
             {
               "id": "where-3",
@@ -93,7 +94,7 @@
           "steps": [
             {
               "id": "ops-1",
-              "text": "Each field has an equality condition and a not version. Strings add contains, starts with, ends with and in, each with a not version. Identifiers add in, and dates add in plus greater than and less than, with or without equal."
+              "text": "Each field has an equality condition and a not version. Strings add contains, starts with, ends with and in, each with a not version. Identifiers add in and not in, and dates add in, not in, greater than and less than, with or without equal."
             },
             {
               "id": "ops-2",
@@ -233,7 +234,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Filters, ordering, paging and versions are arguments on every content type query. Your own parts can add filters to where, which the documentation describes. Thanks for watching."
+              "text": "Filters, ordering, paging and versions are arguments on every content type query. Thanks for watching."
             }
           ]
         }
