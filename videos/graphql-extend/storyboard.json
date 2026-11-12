@@ -1,0 +1,295 @@
+{
+  "title": "Extend GraphQL",
+  "output": "graphql-extend",
+  "spoken": {
+    "OrchardCore.ContentManagement.GraphQL": "Orchard Core Content Management GraphQL",
+    "OrchardCore.Apis.GraphQL.Abstractions": "Orchard Core Apis GraphQL Abstractions",
+    "AddWhereInputIndexPropertyProvider": "Add Where Input Index Property Provider",
+    "AddInputObjectGraphType": "Add Input Object Graph Type",
+    "WhereInputObjectGraphType": "Where Input Object Graph Type",
+    "AddObjectGraphType": "Add Object Graph Type",
+    "AddScalarFilterFields": "Add Scalar Filter Fields",
+    "AddGraphQLFilterType": "Add GraphQL Filter Type",
+    "LockedAsyncFieldResolver": "Locked Async Field Resolver",
+    "CultureQueryObjectType": "Culture Query Object Type",
+    "IsHiddenByDefault": "Is Hidden By Default",
+    "GraphQLContentOptions": "GraphQL Content Options",
+    "IIndexAliasProvider": "I Index Alias Provider",
+    "AutoroutePartIndex": "Autoroute Part Index",
+    "ContentItemFilters": "Content Item Filters",
+    "GetIdentifierAsync": "Get Identifier Async",
+    "RequirePermission": "Require Permission",
+    "RequireFeatures": "Require Features",
+    "IStringLocalizer": "I String Localizer",
+    "PostQueryAsync": "Post Query Async",
+    "PreQueryAsync": "Pre Query Async",
+    "ObjectGraphType": "Object Graph Type",
+    "ISchemaBuilder": "I Schema Builder",
+    "GraphQLFilter": "GraphQL Filter",
+    "AutoroutePart": "Autoroute Part",
+    "BuildAsync": "Build Async",
+    "FieldType": "Field Type",
+    "siteCultures": "site cultures",
+    "blogPost": "blog post",
+    "GraphiQL": "Graphical",
+    "YesSql": "Yes Sequel",
+    "C#": "C sharp"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Extend GraphQL",
+      "subtitle": "Add your own types, filters and queries",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core builds its GraphQL schema from services that modules register. In this video, you extend it: an object type for a content part, filters for that part, a query of your own, and a filter for content queries."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the schema is built",
+      "subtitle": "Builders, types and identifiers",
+      "clips": [
+        {
+          "id": "01-schema",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "schema-1",
+              "text": "The GraphQL module builds the schema from what modules register. It adds every registered object type and input type, then calls each ISchemaBuilder, which can add fields to the Query root of the schema."
+            },
+            {
+              "id": "schema-2",
+              "text": "The module keeps one schema for each culture, and builds it again when the identifier of a builder changes, such as the identifier of the content definitions."
+            },
+            {
+              "id": "schema-3",
+              "text": "Four extension points cover most needs. An object type describes a content part, an input type and an index filter by it, a schema builder adds a query, and a GraphQLFilter changes how content type queries run."
+            },
+            {
+              "id": "schema-4",
+              "text": "A module that extends GraphQL references OrchardCore.Apis.GraphQL.Abstractions, and OrchardCore.ContentManagement.GraphQL for content. It registers its types in a Startup class, and tests them in GraphiQL, under Tools."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Expose a content part",
+      "subtitle": "An object type for the schema",
+      "clips": [
+        {
+          "id": "02-part",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "Take a content part, such as the AutoroutePart of the Autoroute module. It is a C# class with properties like Path. GraphQL cannot read a class by itself, so the part needs a description."
+            },
+            {
+              "id": "part-2",
+              "text": "Describe it with a class that inherits ObjectGraphType, with the part as its type argument. Give it a Name, a description, and a Field for each property to expose. Here, only Path is exposed."
+            },
+            {
+              "id": "part-3",
+              "text": "Register the description in a Startup class with AddObjectGraphType, naming the part and its graph type. RequireFeatures keeps the registration off until the GraphQL feature is enabled."
+            },
+            {
+              "id": "part-4",
+              "text": "The match is by name: the part on the content type must be named like the part class. Its fields then sit under the part name without Part, in camel case. Autoroute marks its part as collapsed, which puts path directly on the content type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Check it in GraphiQL",
+      "subtitle": "The part in a query",
+      "clips": [
+        {
+          "id": "03-explorer",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "explorer-1",
+              "text": "This is GraphiQL, under Tools. The query asks for the display text of each blogPost, and for path, a field that comes from the object type the Autoroute module registers."
+            },
+            {
+              "id": "explorer-2",
+              "text": "Run the query. Each post comes back with its display text and its path, read from the AutoroutePart. The Explorer on the left lists path among the fields of blogPost."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Filter by the part",
+      "subtitle": "An input type and an index",
+      "clips": [
+        {
+          "id": "04-filter",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "filter-1",
+              "text": "To filter by the part, add an input type that inherits WhereInputObjectGraphType, and pass its IStringLocalizer to the base class. AddScalarFilterFields adds the path filters: equals, contains, starts with, ends with, and in, each with a negation."
+            },
+            {
+              "id": "filter-2",
+              "text": "The filters run against an index. An IIndexAliasProvider connects an alias for the part to the index type, here AutoroutePartIndex. The names of the input fields must match the properties of the index."
+            },
+            {
+              "id": "filter-3",
+              "text": "Register the input type with AddInputObjectGraphType, the alias provider as a transient service, and the index with AddWhereInputIndexPropertyProvider. The content type queries then accept the part in their where argument."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Try the filter",
+      "subtitle": "The where argument",
+      "clips": [
+        {
+          "id": "05-where",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "In GraphiQL, the where argument of blogPost accepts the path filters directly, because the Autoroute module collapses its part. This query asks for the posts whose path contains harvest."
+            },
+            {
+              "id": "where-2",
+              "text": "Run it, and only the matching post is returned. The filter runs in the database, joined to the Autoroute index, so the other posts are never loaded."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add a query of your own",
+      "subtitle": "A schema builder and its types",
+      "clips": [
+        {
+          "id": "06-builder",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "query-1",
+              "text": "A query that belongs to no content type is an ISchemaBuilder. In BuildAsync, create a FieldType with a name, a description, a type, and a resolver, and add it to the Query of the schema."
+            },
+            {
+              "id": "query-2",
+              "text": "The resolver gets its services from the request services of the resolve context. LockedAsyncFieldResolver waits for the execution lock of the request, so the resolvers that use it run one at a time within that request."
+            },
+            {
+              "id": "query-3",
+              "text": "The field returns a list, so each item needs an object type. CultureQueryObjectType declares the fields culture and default, each with a graph type, a description, and a resolver."
+            },
+            {
+              "id": "query-4",
+              "text": "Register the builder as a singleton ISchemaBuilder, and the object type as a transient service. GetIdentifierAsync returns an empty string, because the shape of this query depends on no data that changes."
+            },
+            {
+              "id": "query-5",
+              "text": "The builder calls IsHiddenByDefault, so a site can hide the query with GraphQLContentOptions. And anyone who may execute GraphQL can run it, so call RequirePermission on the field, or check permissions in the resolver."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Run your query",
+      "subtitle": "A root field in GraphiQL",
+      "clips": [
+        {
+          "id": "07-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "This query uses the siteCultures field, which the Localization module adds with an ISchemaBuilder. It asks for the culture code and the default flag of each culture the site supports."
+            },
+            {
+              "id": "run-2",
+              "text": "Run it. The site returns each supported culture, and marks the default one. The Explorer lists siteCultures among the content type queries, because every registered builder adds its fields to the same Query root."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Filter content queries",
+      "subtitle": "Run code before and after",
+      "clips": [
+        {
+          "id": "08-hooks",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "hook-1",
+              "text": "To change how every content type query runs, write a GraphQLFilter. PreQueryAsync receives the YesSql query before it runs, and PostQueryAsync receives the content items after they are loaded."
+            },
+            {
+              "id": "hook-2",
+              "text": "ContentItemFilters is the filter that Orchard Core registers itself. Before the query, it limits the results to what the user may view. After the items load, it checks each one again with the authorization service."
+            },
+            {
+              "id": "hook-3",
+              "text": "Register a filter with AddGraphQLFilterType, naming the type to filter and the filter. Every registered filter runs, in order, for each content type query. The module then adds its own conditions to the query that the filters return."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Examples in the source",
+      "subtitle": "Where to look next",
+      "clips": [
+        {
+          "id": "09-source",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "source-1",
+              "text": "Orchard Core's own source shows a working example of each piece. Autoroute and Alias filter by a part, Localization and Layers add queries, Media adds a query and a field type, and the content management GraphQL library holds the filter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Extend GraphQL",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how you add types, filters, and queries to the GraphQL schema of Orchard Core: register them in a Startup class, and test them in GraphiQL. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
