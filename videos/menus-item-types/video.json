@@ -1,0 +1,48 @@
+{
+  "title": "Menu Items: Links, Content Items, HTML and Permissions | Orchard Core",
+  "description": "A menu in Orchard Core is a list of menu items, and the type of an item decides where it links and who sees it.\n\nThe Menu module provides a Link Menu Item for an address you type, a Content Menu Item for a content item you pick, and an Html Menu Item for a link with HTML as its text. Link and Html items can require permissions, and Content items can check who may view the content they point to.\n\nIn this video:\n• The three types of menu item, and who sees them\n• Adding an item from the menu editor\n• A Link Menu Item\n• A Content Menu Item\n• An Html Menu Item\n• Restricting an item with permissions\n• Publishing the menu, and checking it as an administrator and as a visitor",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Navigation"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Menu",
+    "Menu items",
+    "Navigation",
+    "Permissions"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Menus and Navigation"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Menu/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Menu/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Menu"
+  }
+}
