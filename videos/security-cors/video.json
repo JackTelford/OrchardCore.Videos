@@ -1,0 +1,48 @@
+{
+  "title": "CORS: Allow Other Sites to Call Your APIs | Orchard Core",
+  "description": "A browser lets a web page read a response from another site only when that site agrees. Without a CORS policy, a partner site or a separate front end cannot call the APIs of your Orchard Core site from a browser.\n\nThe CORS Configuration feature lets you define policies: the origins, methods, and headers you allow, with one default policy for the site. The admin refuses to save the unsafe combination of any origin with credentials.\n\nIn this video:\n• How origins, CORS headers, and browsers work together\n• Enabling the CORS Configuration feature and opening its page\n• Creating a policy with credentials, origins, headers, and methods\n• The unsafe combination that the admin refuses to save\n• Settings to keep narrow, and what to check when a browser blocks a call",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CORS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "CORS",
+    "Cross-Origin Resource Sharing",
+    "Security",
+    "API"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Site Security"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Cors/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Cors/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Cors"
+  }
+}

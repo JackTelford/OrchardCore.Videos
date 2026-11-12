@@ -1,0 +1,186 @@
+{
+  "title": "CORS: Allow Other Sites to Call Your APIs",
+  "output": "security-cors",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "CORS: Allow Other Sites to Call Your APIs",
+      "subtitle": "Choose which sites may call your site from a browser",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A browser lets a page read a response from another site only when that site agrees. The CORS Configuration feature of Orchard Core lets you decide which sites may call yours. Let's enable it, create a policy, and keep its settings narrow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How CORS works",
+      "subtitle": "Origins, policies and the browser",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "Every page a browser loads has an origin: a scheme, a host, and a port. When a page from one origin calls another origin, such as your site, the call is cross-origin."
+            },
+            {
+              "id": "how-2",
+              "text": "The browser looks for CORS headers in the responses of your site. They tell it whether the page's origin, method, and headers are allowed, and it blocks the page when they are not. A site with no policy sends no CORS headers."
+            },
+            {
+              "id": "how-3",
+              "text": "CORS is enforced by browsers. It does not sign anyone in, it does not check permissions, and tools that are not browsers ignore it. Your APIs still need their own authentication and authorization."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable CORS",
+      "subtitle": "Turn on the feature and open its page",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features, and search for CORS. The CORS Configuration feature is in the Security category, and it says, Enables configuration of CORS settings."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable. A message confirms that the feature CORS Configuration was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Then open Settings, Security, Cross-Origin Resource Sharing. This page requires the Managing Cors Settings permission, which the Administrator role has by default."
+            },
+            {
+              "id": "enable-4",
+              "text": "The page warns that the current tenant, which is your site, reloads when you save. The list is empty, and says Nothing here! There are no CORS policies for the moment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a policy",
+      "subtitle": "Credentials, origins, headers and methods",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Select Add a policy. The editor opens with the name New policy, and with sections for Details, Credentials, Origins, Headers, Methods, and Exposed headers."
+            },
+            {
+              "id": "create-2",
+              "text": "In Details, set Policy name to Partner portal. Then select Set as default policy: the default policy is the one that the site applies to its requests."
+            },
+            {
+              "id": "create-3",
+              "text": "In Credentials, Allow credentials starts selected. It lets the browser send cookies and other sign-in information with the call, when the page asks for it. A partner that reads only public pages does not need it, so clear it."
+            },
+            {
+              "id": "create-4",
+              "text": "In Origins, leave Allow any origin cleared. Under Allowed origins, type the origin of the partner site, which is a scheme, a host, and an optional port, with no path and no trailing slash, and select Add Origin."
+            },
+            {
+              "id": "create-5",
+              "text": "Headers and Methods work the same way. A policy starts by allowing any header and any method, so clear both, and add only what the partner needs: the Content-Type header, and the GET method."
+            },
+            {
+              "id": "create-6",
+              "text": "Exposed headers lists response headers that scripts on the partner's pages may read, beyond the ones that browsers always allow. Leave it empty unless the partner needs one."
+            },
+            {
+              "id": "create-7",
+              "text": "Select Save. The tenant reloads, a message confirms that the CORS settings have updated successfully, and the list shows Partner portal with a Default Policy badge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "An unsafe combination",
+      "subtitle": "What the admin refuses to save",
+      "clips": [
+        {
+          "id": "04-unsafe",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "unsafe-1",
+              "text": "Allow any origin lets every site call yours, and it ignores the list of allowed origins. Let's edit Partner portal, and select Allow credentials and Allow any origin together."
+            },
+            {
+              "id": "unsafe-2",
+              "text": "Select Save. A warning says that this combination is insecure, and names the affected policy. The admin saves nothing when any policy has it, and an asterisk entry in the allowed origins is treated the same way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Keep policies narrow",
+      "subtitle": "Settings to keep tight, and what to check",
+      "clips": [
+        {
+          "id": "05-narrow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "narrow-1",
+              "text": "Allow only what each client needs: its origins, its methods, and its headers, and expose only the response headers it reads. Use HTTPS origins in production, and list every trusted origin when you allow credentials."
+            },
+            {
+              "id": "narrow-2",
+              "text": "Mark one policy as the default. The other policies in the list stay registered by name, so a module can select one of them for a specific endpoint."
+            },
+            {
+              "id": "narrow-3",
+              "text": "With the Deployment feature enabled, a deployment plan can include the Cors settings step, which exports the policies, ready to import on another site."
+            },
+            {
+              "id": "narrow-4",
+              "text": "When a browser reports a CORS failure, check four things. The call is cross-origin, the feature is enabled on the site that receives it, the policy is the default, and the origin matches exactly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "CORS: Allow Other Sites to Call Your APIs",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Allow the origins, methods, and headers that each partner needs, mark one policy as the default, and keep authentication on every API. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
