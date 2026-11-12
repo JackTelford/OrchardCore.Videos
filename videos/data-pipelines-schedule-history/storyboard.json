@@ -178,7 +178,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A schedule is one workflow away, and every run leaves a record you can read. A separate video shows how a workflow can react when a run ends. Thanks for watching."
+              "text": "A schedule is one workflow away, and every run leaves a record you can read. Thanks for watching."
             }
           ]
         }

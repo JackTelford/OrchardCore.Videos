@@ -1,6 +1,6 @@
 # Data Pipelines: Schedule Runs and Read the History
 
-**YouTube:** not published yet · **Length:** 4:30 · **Feature:** [OrchardCore.DataPipelines](https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/)
+**YouTube:** not published yet · **Length:** 4:24 · **Feature:** [OrchardCore.DataPipelines](https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/)
 
 This video shows how a data pipeline runs on a schedule and how to read what each run did. It explains that a run
 executes the published version of a pipeline in the background, starts one from the list of pipelines, and schedules a
