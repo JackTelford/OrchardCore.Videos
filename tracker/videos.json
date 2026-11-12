@@ -6911,9 +6911,9 @@
       "src/docs/reference/modules/Widgets/README.md",
       "src/docs/reference/modules/Layers/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.8,
+    "words": 870,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

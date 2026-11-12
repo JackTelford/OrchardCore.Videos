@@ -1,0 +1,252 @@
+{
+  "title": "Build a Landing Page With Flows, Widgets and Layers",
+  "output": "build-a-landing-page",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Build a Landing Page With Flows, Widgets and Layers",
+      "subtitle": "Blocks inside one page, and widgets that show only where they belong",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A landing page presents one offer on one page. In this video, you build one from blocks with the Flows module, and then use a layer to show a widget only on that page. Along the way, you meet widgets, zones and conditions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Three building blocks",
+      "subtitle": "Flows, widgets and layers",
+      "clips": [
+        {
+          "id": "01-parts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "parts-1",
+              "text": "The Flows module adds a Flow to a content type, such as a page. A Flow holds the blocks of that one page, and you arrange them in the page editor."
+            },
+            {
+              "id": "parts-2",
+              "text": "Each block is a widget: a content item whose content type has the Widget stereotype. Widgets can also go into zones, the named places of a theme layout, such as Content and Footer."
+            },
+            {
+              "id": "parts-3",
+              "text": "The Layers module decides where those widgets show. A layer has a name and a rule, and its widgets appear on every page where the rule is true."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Build the page with a Flow",
+      "subtitle": "Blocks, sizes and alignment",
+      "clips": [
+        {
+          "id": "02-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "In the admin menu, open Content, Content Items. Select New, then Page. Enter the title Spring Workshop and the permalink spring-workshop, which is the address of the page."
+            },
+            {
+              "id": "page-2",
+              "text": "Below the permalink, the Flow holds the blocks of the page. Select the plus button, Add Widget, to list the widget types of the site: Blockquote, Container, Image, Paragraph and Raw Html."
+            },
+            {
+              "id": "page-3",
+              "text": "Choose Paragraph, and type the opening text of the page in Content. The card has its own size menu and alignment menu."
+            },
+            {
+              "id": "page-4",
+              "text": "The size menu shows 100%. Choose 50%, and the card narrows to half of the editor."
+            },
+            {
+              "id": "page-5",
+              "text": "Add a second block, a Blockquote, and type a customer quote in Quote. Set its size to 50% as well, then open the alignment menu and choose Center."
+            },
+            {
+              "id": "page-6",
+              "text": "Drag the Blockquote card by its handle to the left of the Paragraph card. The order of the cards is the order of the blocks on the page."
+            },
+            {
+              "id": "page-7",
+              "text": "Select Publish. A notification confirms that your Page has been published."
+            },
+            {
+              "id": "page-8",
+              "text": "Open the address of the page. The title is in the page header, and the two blocks sit side by side below it, with the quote first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a layer",
+      "subtitle": "A name and a rule",
+      "clips": [
+        {
+          "id": "03-layer",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "layer-1",
+              "text": "Open Design, Widgets. The Widgets and Layers page lists the zones on the left and the layers on the right. This site was set up with the Blog recipe, which provides two layers, Always and Homepage."
+            },
+            {
+              "id": "layer-2",
+              "text": "Select Edit on Always. Its rule is one Boolean condition set to true, so its widgets show on every page. The Homepage layer uses a Homepage condition instead."
+            },
+            {
+              "id": "layer-3",
+              "text": "Back on the Widgets and Layers page, select Add under Layers. Enter the name Workshop, write a short description, and select Create."
+            },
+            {
+              "id": "layer-4",
+              "text": "The layer is saved, and its page asks for at least one condition. Without a condition, a layer never shows its widgets. Select Add to open the list of available rules."
+            },
+            {
+              "id": "layer-5",
+              "text": "The Available Rules dialog lists a card for each condition, such as Boolean condition, Content type condition, Culture condition, Homepage condition, Role condition and Url condition. The Filter box narrows the cards as you type."
+            },
+            {
+              "id": "layer-6",
+              "text": "Type Url in the Filter box, and choose the Url condition. Keep the operation Equals, enter the value /spring-workshop, and select Create. The condition is saved at once."
+            },
+            {
+              "id": "layer-7",
+              "text": "The rule lists its condition. When a rule has several conditions, all of them must be true. A separate video covers the other conditions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Check the zones",
+      "subtitle": "Where widgets can go",
+      "clips": [
+        {
+          "id": "04-zones",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "zones-1",
+              "text": "Open Settings, Zones. Available zones for Layers holds a comma separated list, and the Blog recipe fills it with Content and Footer."
+            },
+            {
+              "id": "zones-2",
+              "text": "The hint under the field reminds you that the theme layout has to render each zone, because zones do not render automatically."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add a widget to the layer",
+      "subtitle": "Content, zone and layer",
+      "clips": [
+        {
+          "id": "05-widget",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "widget-1",
+              "text": "Back on Design, Widgets, each zone has an Add Widget button. The Footer zone already holds the footer widget of the Always layer. Open Add Widget in that zone, and choose Paragraph."
+            },
+            {
+              "id": "widget-2",
+              "text": "Enter a title, and check Render title so that the title appears with the widget. In The layer list, select Workshop. The layer controls the visibility of this widget."
+            },
+            {
+              "id": "widget-3",
+              "text": "Type a short message in Content, and select Publish. Only a published widget appears on the site. A draft stays in the admin."
+            },
+            {
+              "id": "widget-4",
+              "text": "The widget is listed in the Footer zone, tagged with its layer. Check Workshop in the layer list, and the widgets of that layer are highlighted."
+            },
+            {
+              "id": "widget-5",
+              "text": "Drag the widget above the Footer widget to change the order in the zone. The position is saved at once, and an Undo link appears."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "See the result",
+      "subtitle": "Where the widget shows",
+      "clips": [
+        {
+          "id": "06-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "Open the landing page. The footer shows the widget of the Workshop layer, with its title, because the rule is true at this address."
+            },
+            {
+              "id": "result-2",
+              "text": "Open the homepage. The rule is false there, so the widget does not appear, while the footer widget of the Always layer does."
+            },
+            {
+              "id": "result-3",
+              "text": "Every widget of the Workshop layer follows this rule, in whichever zone it sits. To show a widget on other pages, create a layer with its own rule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Flow or layer",
+      "subtitle": "Choosing between them",
+      "clips": [
+        {
+          "id": "07-choose",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "choose-1",
+              "text": "Use a Flow for content that belongs to one page. Its blocks are stored in the page and edited with it, like the two blocks of the workshop page."
+            },
+            {
+              "id": "choose-2",
+              "text": "Use a layer for content that appears on many pages. Its widgets are separate content items, edited from the Widgets page, and shown wherever the rule is true."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Build a Landing Page With Flows, Widgets and Layers",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's a landing page: a Flow arranges the blocks of one page, and a layer shows a widget only where its rule is true. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
