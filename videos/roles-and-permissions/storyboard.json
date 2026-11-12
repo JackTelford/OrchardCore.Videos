@@ -1,0 +1,250 @@
+{
+  "title": "Roles and Permissions",
+  "output": "roles-and-permissions",
+  "spoken": {
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Roles and Permissions",
+      "subtitle": "Control who can do what on your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Not everyone who uses your site should be able to do everything. Roles and permissions decide who can view, edit, publish, and manage what. In this video, you create a role, choose its permissions, and give it to a user."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Roles and permissions",
+      "subtitle": "The idea, and the system roles",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A permission is one thing a person may do, such as editing content that other people wrote, or managing users. Modules add their own permissions."
+            },
+            {
+              "id": "idea-2",
+              "text": "A role is a named set of permissions, such as Editor. You grant permissions to a role, and then give the role to as many people as you like."
+            },
+            {
+              "id": "idea-3",
+              "text": "A user can have several roles, and receives the permissions of all of them. When you change a role, you change what everyone who has it is allowed to do."
+            },
+            {
+              "id": "system-1",
+              "text": "Three system roles are always there. Administrator is allowed to do everything, and its permissions cannot be changed."
+            },
+            {
+              "id": "system-2",
+              "text": "Anonymous stands for every visitor who is not signed in. Authenticated stands for everyone who is signed in, and signed-in users receive the permissions of Anonymous as well."
+            },
+            {
+              "id": "system-3",
+              "text": "Every other role is yours to create. A site set up with the Blog recipe also has Author, Contributor, Editor, and Moderator, and modules grant default permissions to roles with those names."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Roles page",
+      "subtitle": "Access Control, Roles",
+      "clips": [
+        {
+          "id": "02-roles",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "roles-1",
+              "text": "Roles are under Access Control, Roles in the admin menu. The page lists every role of the site, with its description."
+            },
+            {
+              "id": "roles-2",
+              "text": "The three system roles carry a System badge. Every role has an Edit button, and only the roles that are not system roles have a Delete button."
+            },
+            {
+              "id": "roles-3",
+              "text": "Edit on Administrator opens a page with a notice instead of a list of permissions. This system role already grants all available permissions."
+            },
+            {
+              "id": "roles-4",
+              "text": "Anonymous and Authenticated are edited like any other role. Whatever you allow there applies to every visitor, or to every signed-in user."
+            },
+            {
+              "id": "roles-5",
+              "text": "Opening this page takes the View Roles permission. A user who has View Roles but not Manage Roles sees the list, without the Add Role, Edit, and Delete buttons."
+            },
+            {
+              "id": "roles-6",
+              "text": "Adding, editing, and deleting roles takes Manage Roles. Both are permissions like any other, so you give them to roles in the same way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a role",
+      "subtitle": "A name and a description",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Let's create a role for someone who proofreads posts. Add Role opens the Create Role page, which asks for a Name and a Description."
+            },
+            {
+              "id": "create-2",
+              "text": "We name the role Proofreader, and describe what it is for. A role name must be unique, and it cannot be changed after the role exists."
+            },
+            {
+              "id": "create-3",
+              "text": "Create saves the role and returns to the list. Save & Configure saves it and opens its permissions, so let's use that one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose permissions",
+      "subtitle": "Allow, and what is effective",
+      "clips": [
+        {
+          "id": "04-permissions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perms-1",
+              "text": "Permissions are listed in groups, usually one for each feature that provides them. Each row has an Allow column and an Effective column."
+            },
+            {
+              "id": "perms-2",
+              "text": "No permission is allowed for this role, but View all content is effective. Allow means the permission is granted explicitly. Effective also counts permissions implied by another one, and permissions granted by Anonymous and Authenticated."
+            },
+            {
+              "id": "perms-3",
+              "text": "Search permissions narrows the list. Let's search for access admin, and allow Access admin panel. A user needs this permission, from any of their roles, to use the admin at all."
+            },
+            {
+              "id": "perms-4",
+              "text": "Next, search for list content and allow List content items, so the role can open the content list. Then search for edit content for others and allow Edit content for others, which lets the role change content written by other people."
+            },
+            {
+              "id": "perms-5",
+              "text": "Some rows carry a Security Critical badge, like Manage Roles. Such a permission could let a user elevate their other permissions, so grant it with extreme consideration."
+            },
+            {
+              "id": "perms-6",
+              "text": "Save stores the role and returns to the list, with a confirmation message."
+            },
+            {
+              "id": "perms-7",
+              "text": "Open Proofreader again to check the result. Hovering the Effective box of View all content shows the reason: it is implied by Edit content for others."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Give a role to a user",
+      "subtitle": "From the Create User page",
+      "clips": [
+        {
+          "id": "05-assign",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "assign-1",
+              "text": "Roles are given to users. Under Access Control, Users, Add User opens the Create User page."
+            },
+            {
+              "id": "assign-2",
+              "text": "Enter a user name and an email address. Generate password fills in the password and its confirmation, so nobody has to invent one."
+            },
+            {
+              "id": "assign-3",
+              "text": "The Roles field lists the roles you can give. Anonymous and Authenticated are not offered, because they apply automatically. Let's tick Proofreader."
+            },
+            {
+              "id": "assign-4",
+              "text": "Save creates the user, and the list shows Proofreader on the user's row. The same field appears when you edit a user, and a user can have several roles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Delete a role",
+      "subtitle": "Remove a role you no longer need",
+      "clips": [
+        {
+          "id": "06-delete",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "delete-1",
+              "text": "Back on the Roles page, let's remove a role we no longer need. Guest Blogger has a Delete button, and a dialog asks for confirmation."
+            },
+            {
+              "id": "delete-2",
+              "text": "Choosing Ok deletes the role and shows a confirmation message. Users who had the role lose it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "To sum up",
+      "subtitle": "Four points to remember",
+      "clips": [
+        {
+          "id": "07-recap",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recap-1",
+              "text": "To sum up: permissions belong to roles, and roles belong to users. Allow grants a permission explicitly, Effective shows the full result, and Security Critical marks the permissions to grant with care."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Roles and Permissions",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Roles and permissions decide who can do what on your site. A separate video covers permissions for each content type, and for the owner of a content item. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
