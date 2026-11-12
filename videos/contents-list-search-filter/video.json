@@ -1,0 +1,47 @@
+{
+  "title": "Content Items List: Search, Filter and Act on Many Items | Orchard Core",
+  "description": "On a site with many content items, finding the right one by scrolling takes time, and changing a dozen of them one by one takes longer.\n\nThe content items list in the Orchard Core admin searches the titles, filters by content type and status, sorts the results, and publishes, unpublishes or deletes several items in one step.\n\nIn this video:\n• What a row of the list tells you, and the four controls that narrow and order it\n• The content items list: titles, types, status badges, buttons, count and layouts\n• Searching by title, with AND, NOT and quotes\n• Filtering by content type and status, and sorting\n• Publishing and deleting several items at once",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "content items",
+    "content management",
+    "admin"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Contents/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Contents"
+  }
+}
