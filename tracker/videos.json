@@ -3366,9 +3366,9 @@
       "src/docs/reference/modules/Workflows/README.md",
       "src/docs/reference/modules/Scripting/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.0,
+    "words": 894,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
