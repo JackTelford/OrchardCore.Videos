@@ -1,6 +1,6 @@
 # Create a Theme From an HTML Template
 
-**YouTube:** not published yet · **Length:** 7:06 · **Feature:** `guide:topics/display/theme-from-html-template` ([Create an Orchard Core theme from an HTML template](https://docs.orchardcore.net/en/latest/topics/display/theme-from-html-template/))
+**YouTube:** not published yet · **Length:** 7:08 · **Feature:** `guide:topics/display/theme-from-html-template` ([Create an Orchard Core theme from an HTML template](https://docs.orchardcore.net/en/latest/topics/display/theme-from-html-template/))
 
 A static HTML template is a finished design. This video turns one into an Orchard Core theme, the way the built-in
 TheBlogTheme was made from the Clean Blog template: the assets go to `wwwroot`, the stylesheets and scripts become named
@@ -10,7 +10,7 @@ the result on a site. The title, description, tags and chapters YouTube shows ar
 
 ## Recording it again
 
-The video was recorded on a **fresh site** with fake data only, so it needs no mask script. Only two of its chapters are
+The video is recorded on a **fresh site** with fake data only, so it needs no mask script. Only two of its chapters are
 recordings (`05-zones` and `08-result`); the others are cards and slides. [recording-plan.md](recording-plan.md) has every
 click, wait and expected screen, and [OPEN-QUESTIONS.md](OPEN-QUESTIONS.md) lists what a person confirms on the running site.
 

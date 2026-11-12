@@ -2,8 +2,10 @@
   "title": "Create a Theme From an HTML Template",
   "output": "theme-from-html-template",
   "spoken": {
-    "/MyTheme/css/styles.css": "slash My Theme slash css slash styles dot css",
-    "css/styles.css": "css slash styles dot css",
+    "/MyTheme/css/styles.css": "slash My Theme slash C.S.S slash styles dot C.S.S",
+    "css/styles.css": "C.S.S slash styles dot C.S.S",
+    "CSS": "C.S.S",
+    "CDN": "C.D.N",
     "Content-BlogPost.Summary": "Content dash Blog Post dot Summary",
     "Layout.liquid": "Layout dot liquid",
     "index.html": "index dot HTML",
@@ -209,11 +211,11 @@
           "steps": [
             {
               "id": "content-1",
-              "text": "With the layout in place, the inner pages become content templates. For each content type, add a file to the Views folder, named after the alternate it overrides."
+              "text": "With the layout in place, the inner pages become content templates. For each content type, add a file to the Views folder whose name says which content item it renders."
             },
             {
               "id": "content-2",
-              "text": "A hyphen separates the shape from the content type. A suffix after the last dot names a display type, so Content-BlogPost.Summary is a blog post as it appears in a list."
+              "text": "A hyphen separates the shape name, Content, from the content type. A suffix after the last dot names a display type, so Content-BlogPost.Summary is a blog post as it appears in a list."
             },
             {
               "id": "content-3",

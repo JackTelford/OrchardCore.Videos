@@ -1,6 +1,6 @@
 {
   "title": "Create a Theme From an HTML Template | Orchard Core",
-  "description": "A static HTML template is a finished design, but it has no way to manage its content. A theme keeps the design and lets Orchard Core supply the pages, the menu, and the widgets.\n\nThis video turns a template into a theme the way the built-in TheBlogTheme was made from the Clean Blog template: static assets in the wwwroot folder, named resources, a Liquid layout with zones, content templates, and an optional setup recipe.\n\nIn this video:\n• From template to theme: what you start with and what you build\n• Copy the assets\n• Declare the resources\n• Build the layout and style the menu\n• Zones: where widgets appear in the layout\n• Template the content\n• A setup recipe\n• Use the theme and look at the result",
+  "description": "A static HTML template is a finished design, but it has no way to manage its content. A theme keeps the design and lets Orchard Core supply the pages, the menu, and the widgets.\n\nThis video turns a template into a theme the way the built-in TheBlogTheme was made from the Clean Blog template: static assets in the wwwroot folder, named resources, a Liquid layout with zones, content templates, and an optional setup recipe.\n\nIn this video:\n• From template to theme: what you start with and what you build\n• Copy the assets\n• Declare the resources\n• Build the layout\n• Zones: where widgets appear in the layout\n• Template the content\n• A setup recipe\n• Use the theme",
   "hashtags": [
     "OrchardCore",
     "DotNet",

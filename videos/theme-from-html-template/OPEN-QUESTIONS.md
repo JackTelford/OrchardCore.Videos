@@ -45,7 +45,7 @@ confirms each one before the clips are recorded or the video is assembled.
    the Orchard Core API (`IConfigureOptions`, `ResourceManagementOptions`, `AddResourceConfiguration`, `DefineStyle`,
    `DefineScript`, `SetUrl`, `SetDependencies`, `DisplayText`, `RenderBodyAsync`, `RenderSectionAsync`, `MenuItem`, `MenuItemLink`, `Model.Content`) split into
    words (`MenuItemLink` comes before `MenuItem` in the map, because `narrate.py` replaces in order), `Content-BlogPost.Summary` as "Content dash Blog Post dot Summary", and the two paths `css/styles.css` and
-   `/MyTheme/css/styles.css` spoken letter for letter with "slash" and "dot". Also confirm that "The Blog Theme" (the
+   `/MyTheme/css/styles.css` spoken letter for letter with "slash" and "dot". `CSS` as "C.S.S" and `CDN` as "C.D.N" (also inside the two paths), to be checked the same way. Also confirm that "The Blog Theme" (the
    spoken form of `TheBlogTheme`) is what the viewer should hear, since the card of the Themes page shows "The Blog Theme".
 
 ## About the code on the slides
