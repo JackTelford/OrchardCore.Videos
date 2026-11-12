@@ -1,0 +1,248 @@
+{
+  "title": "URL Rewriting: Redirect and Rewrite Requests",
+  "output": "url-rewriting",
+  "spoken": {
+    "/img/about-bg.jpg": "slash img slash about-bg.jpg",
+    "/img/photo.jpg": "slash img slash photo.jpg",
+    "/media/photo.jpg": "slash media slash photo.jpg",
+    "/About-Us": "slash About-Us",
+    "/about-us": "slash about-us",
+    "/about": "slash about",
+    "/img/": "slash img slash",
+    "/media/": "slash media slash",
+    "/media": "slash media",
+    "/Admin": "slash Admin",
+    "$1": "dollar one",
+    "Found (302)": "Found, three oh two",
+    "Moved Permanently (301)": "Moved Permanently, three oh one"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "URL Rewriting",
+      "subtitle": "Redirect and rewrite incoming requests",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Old addresses keep arriving long after a page has been renamed. The URL Rewriting feature redirects or rewrites incoming requests, so visitors reach the right content. In this video, you create a redirect rule and a rewrite rule, test both, and manage the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the rules work",
+      "subtitle": "Redirects, rewrites, order and patterns",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A page is renamed, but its old address stays in bookmarks, search results, and links on other sites. A folder of files moves, and pages keep pointing to the old location."
+            },
+            {
+              "id": "kinds-1",
+              "text": "A Redirect rule sends the visitor to another address, so the address in the browser changes. Use it when a page is renamed or moved, so that old links and bookmarks keep working."
+            },
+            {
+              "id": "kinds-2",
+              "text": "A Rewrite rule answers with the content of another address, and the address in the browser stays the same. Use it to serve content from a location the visitor never sees."
+            },
+            {
+              "id": "order-1",
+              "text": "Rules are kept in a list and checked from the top down. A Rewrite rule can stop the rules below it from running. Addresses under the admin prefix, which is /Admin by default, are always left alone."
+            },
+            {
+              "id": "pattern-1",
+              "text": "A rule matches addresses with a pattern, written as a regular expression. A caret marks the start of an address, and a dollar sign marks its end. Parentheses capture text, and $1 in the substitution puts the captured text back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Turn on the feature",
+      "subtitle": "Enable URL Rewriting",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "In the admin menu, choose Tools, then Features. The list holds the features of the site, so search for URL Rewriting."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable on the URL Rewriting row. A message confirms it: The feature URL Rewriting was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "With the feature enabled, the Tools menu has a URL Rewriting item. Users see it when their role has the Manage URLs rewriting rules permission, which the Administrator role has by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Redirect a renamed page",
+      "subtitle": "Create a Redirect rule and test it",
+      "clips": [
+        {
+          "id": "03-redirect",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "redirect-1",
+              "text": "Choose Tools, then URL Rewriting. The URL Rewriting Rules page lists the rules of the site, and the list is empty."
+            },
+            {
+              "id": "redirect-2",
+              "text": "Select Add Rule. The Available Rule Types window offers Redirect and Rewrite. Select Add on the Redirect card."
+            },
+            {
+              "id": "redirect-3",
+              "text": "Give the rule a Display Name. In Match URL Pattern, type a caret, then /about-us, then a dollar sign, to match the old address and nothing longer."
+            },
+            {
+              "id": "redirect-4",
+              "text": "Check Case Insensitive, so the pattern ignores letter case and an address typed as /About-Us is caught as well."
+            },
+            {
+              "id": "redirect-5",
+              "text": "Query String Policy controls the part of an address after a question mark. Append Query String from Original Request keeps it, and Exclude Query String from Original Request drops it."
+            },
+            {
+              "id": "redirect-6",
+              "text": "Redirect Type sets the response code. Found (302), the default, is a temporary redirect. Choose Moved Permanently (301) for a page that has moved for good, so bookmarks and links can be updated."
+            },
+            {
+              "id": "redirect-7",
+              "text": "In The Substitution URL Pattern, type /about, the address visitors should reach. Then select Save."
+            },
+            {
+              "id": "redirect-8",
+              "text": "The message reads Rule created successfully, and the list shows one row with the rule name, its source, and when it was created."
+            }
+          ]
+        },
+        {
+          "id": "03-redirect-test",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "redirect-test-1",
+              "text": "Let's visit the old address, /about-us, with a parameter added after a question mark. A green label shows the address we ask for."
+            },
+            {
+              "id": "redirect-test-2",
+              "text": "The browser follows the redirect and opens the About page. The label shows the address it ended on, /about, with the parameter attached, because the policy appends the query string."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Rewrite an address",
+      "subtitle": "Create a Rewrite rule and test it",
+      "clips": [
+        {
+          "id": "04-rewrite",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "rewrite-1",
+              "text": "Back on URL Rewriting Rules, select Add Rule. This time, select Add on the Rewrite card."
+            },
+            {
+              "id": "rewrite-2",
+              "text": "Name the rule Serve media from img. In Match URL Pattern, type a caret, /img/, parentheses around dot star, and a dollar sign. This matches any address that starts with /img/."
+            },
+            {
+              "id": "rewrite-3",
+              "text": "In The Substitution URL Pattern, type /media/ followed by $1. The $1 stands for the text captured after /img/, so /img/photo.jpg is served from /media/photo.jpg."
+            },
+            {
+              "id": "rewrite-4",
+              "text": "Check Case Insensitive, and set Query String Policy to Exclude Query String from Original Request, so that parameters on the old address are not passed on."
+            },
+            {
+              "id": "rewrite-5",
+              "text": "Check Stop Evaluation of Subsequent Rules. When this rule matches, the rules below it in the list are ignored. Then select Save."
+            },
+            {
+              "id": "rewrite-6",
+              "text": "The list shows both rules, with the Redirect rule first and the Rewrite rule below it."
+            }
+          ]
+        },
+        {
+          "id": "04-rewrite-test",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "rewrite-test-1",
+              "text": "Let's open /img/about-bg.jpg. The site answers with the image stored under /media, and the label shows that the address in the browser did not change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Manage the rules",
+      "subtitle": "Edit, reorder and delete",
+      "clips": [
+        {
+          "id": "05-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "Each row shows a drag handle, a checkbox, the rule name, its source, and when it was created. Edit changes a rule, and Delete removes it."
+            },
+            {
+              "id": "manage-2",
+              "text": "Edit opens the same form with the saved values. Select Cancel to leave the rule as it is."
+            },
+            {
+              "id": "manage-3",
+              "text": "Drag a row by its handle to move the rule up or down. The order of the list is the order in which the rules are checked."
+            },
+            {
+              "id": "manage-4",
+              "text": "Select Delete on a row, and the Delete window asks you to confirm. Select Ok, and the page confirms that the rule was deleted."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "URL Rewriting",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A Redirect rule changes the address, a Rewrite rule keeps it, and the order of the list decides which rule is checked first. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1843,9 +1843,9 @@
     "docs": [
       "src/docs/reference/modules/UrlRewriting/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.4,
+    "words": 811,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
