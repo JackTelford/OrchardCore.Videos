@@ -212,7 +212,7 @@
             },
             {
               "id": "tenant-2",
-              "text": "By default, removing a tenant leaves the container alone. Remove Container deletes it, and Remove Files From Base Path deletes only the files under the base path. The image cache has Remove Container only."
+              "text": "By default, removing a tenant leaves the container alone. Remove Container deletes it, and Remove Files From Base Path deletes only the files under the base path, and only when Remove Container is off. The image cache has Remove Container only."
             },
             {
               "id": "tenant-3",

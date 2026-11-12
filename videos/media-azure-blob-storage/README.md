@@ -1,6 +1,6 @@
 # Azure Media Storage: Keep Media in Azure Blob Storage
 
-**YouTube:** not published yet · **Length:** 5:38 · **Feature:** `OrchardCore.Media.Azure.Storage` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Media.Azure/))
+**YouTube:** not published yet · **Length:** 5:40 · **Feature:** `OrchardCore.Media.Azure.Storage` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Media.Azure/))
 
 A video for developers and hosting engineers on the Azure Media module. It shows why media can live in an Azure Blob
 Storage container, how to configure the connection and run against the Azurite emulator, how to enable Azure Media
