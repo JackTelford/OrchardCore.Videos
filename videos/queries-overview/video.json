@@ -1,0 +1,50 @@
+{
+  "title": "Queries: Save and Reuse Search and Database Queries | Orchard Core",
+  "description": "A site asks the same questions again and again: the posts of a blog, a search, a count from the database. When that query text is copied into every template, script and controller, each change is a hunt for copies.\n\nThe Queries module saves a query under a name, with a source that decides how it runs. You run it by name from Liquid, Razor, scripts and the API, move it with recipes and deployment plans, and add a source of your own.\n\nIn this video:\n• Why saved queries, and the features that provide them\n• The Queries screen: Search, Queries, All Queries\n• Creating a query\n• Running a query by name, and the permissions it needs\n• The Queries recipe step and the deployment steps\n• Adding a query source: a source class, a display driver, a Link view and a handler",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Queries",
+    "SQL",
+    "Lucene",
+    "Elasticsearch",
+    "Liquid",
+    "Razor"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Queries"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Queries/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Queries/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Queries"
+  }
+}
