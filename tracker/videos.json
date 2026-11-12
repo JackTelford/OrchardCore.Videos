@@ -2147,9 +2147,9 @@
     "docs": [
       "src/docs/topics/display/theme-from-html-template.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 7,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 7.1,
+    "words": 1066,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
