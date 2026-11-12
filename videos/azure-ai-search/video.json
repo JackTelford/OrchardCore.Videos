@@ -1,0 +1,47 @@
+{
+  "title": "Azure AI Search: Connect Your Site and Create Indexes | Orchard Core",
+  "description": "Site search needs an index to search in, and that index has to live somewhere. Azure AI Search is a search service in Azure that can hold the indexes of your site.\n\nThe Azure AI Search module connects Orchard Core to that service. You enter the endpoint of the service and a way to sign in, create an index of your content types, and manage it from the admin. The search service in the recording is a stand-in, so the addresses and keys on screen are examples.\n\nIn this video:\n• How it works: indexes in a search service\n• Enable the module\n• Connect to the service: endpoint and authentication\n• Create an index: a source, content types and an analyzer\n• What goes into an index\n• Edit an index: name, content types and default query settings\n• Index actions: synchronize, reset, rebuild and delete",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AzureAISearch"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Azure AI Search",
+    "search",
+    "indexing"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AzureAISearch/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/AzureAISearch/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AzureAI"
+  }
+}

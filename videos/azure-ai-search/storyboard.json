@@ -1,0 +1,246 @@
+{
+  "title": "Azure AI Search: Connect Your Site and Create Indexes",
+  "output": "azure-ai-search",
+  "spoken": {
+    "Api Key": "API Key",
+    "standard.lucene": "standard dot lucene",
+    "AzureAISearch": "Azure AI Search",
+    "default-blog-posts": "default hyphen blog hyphen posts",
+    "blog-posts": "blog hyphen posts"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Azure AI Search",
+      "subtitle": "Connect your site and create indexes",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Azure AI Search is a search service that runs in Azure. The Azure AI Search module lets your site keep its search indexes there. In this video, you connect the site to a search service and create an index of your content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How it works",
+      "subtitle": "Indexes in a search service",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "With the Azure AI Search module, the indexes of your site live in an Azure AI Search service. Your site creates the indexes there, sends your content to them, and, with the Search module, asks the service for results when a visitor searches."
+            },
+            {
+              "id": "how-2",
+              "text": "You create the search service in Azure. Orchard Core needs two things from it: its endpoint, which is its address, and a way to sign in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the module",
+      "subtitle": "One feature in the Search category",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Features, under Tools, lists what your site can do. Let's search for Azure AI Search. The entry marked Obsolete is a legacy entry kept for older sites, so enable the one named Azure AI Search."
+            },
+            {
+              "id": "enable-2",
+              "text": "The module depends on Indexing, and Orchard Core enables Indexing with it when needed. A message names what was enabled, and a page named Azure AI Search appears under Settings, Search."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Connect to the service",
+      "subtitle": "Endpoint and authentication",
+      "clips": [
+        {
+          "id": "03-auth",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "auth-1",
+              "text": "Orchard Core offers three authentication types. Default uses the Azure credentials available to the host. Managed Identity uses the identity of the host, and API Key uses a key issued by the search service."
+            }
+          ]
+        },
+        {
+          "id": "03-connect",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "connect-1",
+              "text": "Open Settings, Search, Azure AI Search. This page holds the connection to your search service. Let's type the address of the service into Endpoint."
+            },
+            {
+              "id": "connect-2",
+              "text": "Authentication Type lists the three choices. Let's choose API Key, which shows the Api Key field. The field is masked, so the key stays hidden as you type it."
+            },
+            {
+              "id": "connect-3",
+              "text": "Type the key into Api Key, then select Save, and the field says the value is securely stored. Saving does not contact the service. The site contacts it when you create an index."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create an index",
+      "subtitle": "A source, content types and an analyzer",
+      "clips": [
+        {
+          "id": "04-name",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "name-1",
+              "text": "In the service, each index is named after your tenant and the Index Name you choose, joined by a hyphen. An index named blog-posts on the Default tenant is created as default-blog-posts."
+            }
+          ]
+        },
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Open Search, Indexes. The list is empty, so select Add index to see the available sources."
+            },
+            {
+              "id": "create-2",
+              "text": "Sources are grouped by provider. Under Azure AI Search, Content in Azure AI Search creates an index from the contents of your site. Select Add."
+            },
+            {
+              "id": "create-3",
+              "text": "Index Name is the part of the name in the service that you choose. Use lowercase letters, numbers, and hyphens. Typing it also fills in Name, the unique name of the index in Orchard Core."
+            },
+            {
+              "id": "create-4",
+              "text": "Culture limits the index to the content of one culture, and Any culture indexes all of it. Content types lists what to index. Let's select Blog Post."
+            },
+            {
+              "id": "create-5",
+              "text": "Index Latest version includes drafts when they exist, and Analyzer names the text analyzer of the index. We keep the defaults, including standard.lucene."
+            },
+            {
+              "id": "create-6",
+              "text": "Select Save. The index is created in the service, and a message says that the synchronizing process was triggered in the background."
+            },
+            {
+              "id": "create-7",
+              "text": "The index appears in the list, with its provider, AzureAISearch, and its type, Content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What goes into an index",
+      "subtitle": "Documents, full text and included elements",
+      "clips": [
+        {
+          "id": "05-holds",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "holds-1",
+              "text": "Each content item becomes a document in the index. By default, its full-text field is built from the display text and the body of the item."
+            },
+            {
+              "id": "holds-2",
+              "text": "To index the value of a part or a field, edit it under Design, Content Definition, and check Include this element in the index, in Azure AI Search Index Settings. Then rebuild the index."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Edit an index",
+      "subtitle": "Name, content types and default query settings",
+      "clips": [
+        {
+          "id": "06-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "To change an index, select Edit. Index Name is locked once the index exists, while Name, the content types, and the other options can be changed."
+            },
+            {
+              "id": "edit-2",
+              "text": "Default Query Settings holds the Query analyzer and Query field names. Query field names lists the searchable fields, and a search looks in the checked ones. Leaving every box clear searches all searchable fields."
+            },
+            {
+              "id": "edit-3",
+              "text": "Select Save to store the changes in Orchard Core. Changes that affect the fields of the index reach the service when you rebuild it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Index actions",
+      "subtitle": "Synchronize, reset, rebuild and delete",
+      "clips": [
+        {
+          "id": "07-actions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "actions-1",
+              "text": "Back in the list, each index has Edit and Delete buttons, and an Actions menu. Let's open the menu."
+            },
+            {
+              "id": "actions-2",
+              "text": "Synchronize updates the index with content changes. Reset restarts the indexing of all content items. Rebuild deletes the index in the service, creates it again, and indexes the content again."
+            },
+            {
+              "id": "actions-3",
+              "text": "Delete removes the index from the service and from Orchard Core. If the service cannot delete it, Force Delete removes the index profile regardless. A separate video covers all of these actions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Azure AI Search",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Azure AI Search module: the indexes of your site live in a search service in Azure, and you manage them under Search, Indexes. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
