@@ -1,0 +1,49 @@
+{
+  "title": "Taxonomies: Filter the Content Items List by Term | Orchard Core",
+  "description": "As a site grows, so does the Content Items list, and the items that share a category or a tag are spread through it.\n\nThe Taxonomies Contents List Filters feature adds a filter to the Content Items list for each taxonomy you choose, so the list can show only the content items that have one term.\n\nIn this video:\n• Why you filter the Content Items list by term\n• Enabling the Taxonomies Contents List Filters feature\n• Choosing the taxonomies to filter by in Settings, Taxonomy Filters\n• Filtering the list by a term, with Show all and Clear filter\n• How the taxonomy filters follow the content type",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Taxonomies"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Taxonomies",
+    "Taxonomy filters",
+    "Content items",
+    "Categories",
+    "Tags"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Taxonomies"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Taxonomies/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Taxonomies.ContentsAdminList"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "title": "Taxonomies: Filter the Content Items List by Term",
+  "output": "taxonomies-contents-list-filters",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Taxonomies: Filter the Content Items List by Term",
+      "subtitle": "Find content by category, tag, or any other term",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Taxonomies categorize content items with terms. The Taxonomies Contents List Filters feature turns those terms into filters for the Content Items list. In this video, you enable it, choose the taxonomies to filter by, and filter the list by term."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why filter by term",
+      "subtitle": "Find the items of one term",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A taxonomy is a set of terms that categorize content items, such as the Categories and Tags of a blog. As a site grows, so does the Content Items list, and the items that share one term are spread through it."
+            },
+            {
+              "id": "why-2",
+              "text": "The Taxonomies Contents List Filters feature adds a button to the Content Items list for each taxonomy you choose. Pick a term from its dropdown, and the list shows only the content items that have that term."
+            },
+            {
+              "id": "why-3",
+              "text": "Three steps set it up. Enable the feature, choose the taxonomies to use as filters, and filter the Content Items list by their terms."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features. The Taxonomies Contents List Filters feature depends on the Taxonomies feature, which is already enabled on this site."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's search for taxonomies. Two features match: Taxonomies is enabled, and Taxonomies Contents List Filters is disabled, with the description Provides taxonomy filters in the contents list."
+            },
+            {
+              "id": "enable-3",
+              "text": "Select Enable on the Taxonomies Contents List Filters row. A message reads: The feature Taxonomies Contents List Filters was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose the taxonomies",
+      "subtitle": "Settings, Taxonomy Filters",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Open Settings, Taxonomy Filters, a page the feature adds. It needs the Manage settings and Manage taxonomies permissions, which the Administrator role has by default."
+            },
+            {
+              "id": "settings-2",
+              "text": "The Taxonomies option lists the published taxonomies of the site. Each taxonomy you check becomes a filter in the Content Items list. Let's check Categories and Tags."
+            },
+            {
+              "id": "settings-3",
+              "text": "Select Save. A message reads: Site settings updated successfully. Clearing a checkbox and saving again removes that taxonomy's filter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Filter the list by term",
+      "subtitle": "Content, Content Items",
+      "clips": [
+        {
+          "id": "04-filter",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "filter-1",
+              "text": "Open Content, Content Items. The Manage Content page has a button for each taxonomy you chose, Categories and Tags, beside the Content Type, Show, and Sort filters."
+            },
+            {
+              "id": "filter-2",
+              "text": "Open Categories. The dropdown is titled Filter by Categories and has a search box. It lists Clear filter, Show all, and the terms of the published taxonomy, with child terms indented below their parent."
+            },
+            {
+              "id": "filter-3",
+              "text": "Choose Software. The page reloads, and the list shows only the content items that have the Software term."
+            },
+            {
+              "id": "filter-4",
+              "text": "Open Categories again and choose Show all. The list shows every content item that has at least one term of this taxonomy, so items without a category, such as the About article, leave the list."
+            },
+            {
+              "id": "filter-5",
+              "text": "Choose Clear filter to remove the Categories filter and bring back the full list."
+            },
+            {
+              "id": "filter-6",
+              "text": "Each taxonomy has its own filter. Open Tags and choose Exploration to list the content items that have that tag."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Filters follow the content type",
+      "subtitle": "Content Type",
+      "clips": [
+        {
+          "id": "05-types",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "The taxonomy filters follow the content type. Open Content Type and choose Blog Post, a type that has taxonomy fields for both Categories and Tags. Both taxonomy buttons stay."
+            },
+            {
+              "id": "types-2",
+              "text": "Choose Article instead. The Article type has no taxonomy field, so neither button appears. When you choose a content type, a taxonomy filter shows only if the type has a field that uses that taxonomy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Taxonomies: Filter the Content Items List by Term",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Taxonomies Contents List Filters feature turns the terms of your taxonomies into filters for the Content Items list. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
