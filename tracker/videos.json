@@ -6596,9 +6596,9 @@
     "docs": [
       "src/docs/reference/modules/Deployment/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.7,
+    "words": 858,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
