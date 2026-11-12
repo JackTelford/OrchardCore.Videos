@@ -530,7 +530,7 @@ then open `/TwoFactor`. Site: S6. This clip verifies a phone number for `admin`.
 - Wait for the notification **Your phone number has been confirmed.** on the Two-Factor Authentication page.
 - Highlight the **Verified** badge of the row **SMS authentication**.
 - Visible when the narration ends: the Two-Factor Authentication page with that notification and **Verified** on the
-  row **SMS authentication** (no **Edit** button: **Allow user to change their phone number** is off).
+  row **SMS authentication** (an **Edit** button follows the badge, because **Allow user to change their phone number** is on by default: `OrchardCore.Users.Core/Models/LoginSettings.cs:24`).
 - Source: `Controllers/SmsAuthenticatorController.cs:160-187`; `Views/Items/TwoFactorMethod.Phone.Actions.cshtml:10-17`.
 
 Save snapshot **S7** after this clip.
