@@ -120,6 +120,6 @@ the Workflows feature is on. The code registers each one only with both features
 (`OrchardCore.Forms` and `OrchardCore.ReCaptcha`) and `Workflows/Startup.cs:9` (`OrchardCore.Workflows` and
 `OrchardCore.ReCaptcha`). The Validate ReCaptcha task appears in the designer only on a site with Workflows enabled, and the
 HTTP Request event only with HTTP Workflows Activities (`OrchardCore.Workflows/Manifest.cs`, `Http/Startup.cs:21`). The
-recording site keeps both disabled, and the video shows the task on slides only. A person should open the workflow designer
+recording site keeps Workflows and HTTP Workflows Activities disabled (Forms is enabled for the Contact page), and the video shows the task on slides only. A person should open the workflow designer
 once on a scratch site to confirm that the task is listed as "Validate ReCaptcha" and shows the outcomes Done, Valid and
 Invalid (`ValidateReCaptchaTask.cs:41-42`, `Views/Items/ValidateReCaptchaTask.Fields.Thumbnail.cshtml:1`).
