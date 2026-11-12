@@ -53,15 +53,14 @@ the editor.
 
 ## 3. Which features the calls need
 
-The narration says "The calls need the Lists and Media features as well". Lists: `MetaWeblogHandler.cs:26` and
+The narration says "The Lists and Media modules take part in the calls" and does not claim that the calls fail without them. Lists: `MetaWeblogHandler.cs:26` and
 `src/OrchardCore/OrchardCore/Shell/Builders/CompositionStrategy.cs:56-61`: a type marked `[RequireFeatures]` is composed
 only when the features it names are enabled together with the feature of its module. Media: the constructor of
 `MetaWeblogHandler` (lines 40-50) takes `IMediaFileStore` and `FileCreationService`, which only the Media feature
 registers (`OrchardCore.Media/Startup.cs:96,119`, in the `Startup` class of the `OrchardCore.Media` feature), and the
 Lists manifest does not depend on Media. So the handler cannot be created without Media, which should make `/xmlrpc` and
 `/xmlrpc/metaweblog` fail. This is read from the dependency injection setup, not run: with Lists and Remote Publishing
-enabled and Media disabled, confirm that `/xmlrpc` fails. If it still answers, the narration of `enable-2` must drop
-Media.
+enabled and Media disabled, confirm that `/xmlrpc` fails. If it still answers, the narration of `enable-2` may keep its wording, but a person should not add a claim that Media is required.
 
 ## 4. Permissions
 
