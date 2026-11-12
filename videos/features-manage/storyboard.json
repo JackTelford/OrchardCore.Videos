@@ -1,0 +1,224 @@
+{
+  "title": "Orchard Core Features",
+  "output": "features-manage",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Features",
+      "subtitle": "Enable and disable what your site uses",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Features page is where you choose what your Orchard Core site runs. In this video, you find it, search and filter its list, and enable and disable features one at a time or several at once."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Modules and features",
+      "subtitle": "What your site runs",
+      "clips": [
+        {
+          "id": "01-concept",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "Orchard Core is divided into modules. Each module provides one or more features, such as Media, Workflows, or Sitemaps."
+            },
+            {
+              "id": "what-2",
+              "text": "Your site runs only the features that are enabled, and the recipe you choose at setup decides which ones start out enabled."
+            },
+            {
+              "id": "what-3",
+              "text": "An enabled feature can add admin menu entries, settings pages, and permissions. A feature that is disabled adds none of them, so the admin shows only what your site uses."
+            },
+            {
+              "id": "what-4",
+              "text": "Features can depend on one another. Enabling a feature also enables the features it needs, and disabling a feature also disables the features that need it. A separate video explains dependencies in detail."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Features page",
+      "subtitle": "Where to find it and how to read it",
+      "clips": [
+        {
+          "id": "02-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "Let's open the Features page. In the admin menu, open Tools, and choose Features."
+            },
+            {
+              "id": "page-2",
+              "text": "The page lists the features in groups, one group for each category. Above the list, a summary shows how many features are listed."
+            },
+            {
+              "id": "page-3",
+              "text": "Each row shows the name of a feature, with its identifier beside it. Badges show the features it depends on and whether it is Enabled or Disabled, and the description sits underneath."
+            },
+            {
+              "id": "page-4",
+              "text": "A button at the end of a row changes the state of that feature. Enable turns on a feature that is off, and Disable turns off a feature that is on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Search and filter",
+      "subtitle": "Find a feature in a long list",
+      "clips": [
+        {
+          "id": "03-filter",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "The search box narrows the list as you type. It matches names, identifiers, and descriptions. Let's search for background tasks."
+            },
+            {
+              "id": "find-2",
+              "text": "One row is left, and the summary counts it. Press Escape to clear the search, and the list comes back."
+            },
+            {
+              "id": "find-3",
+              "text": "The Status filter limits the list to features that are enabled, or to those that are disabled. Choose Enabled only to list the features that are turned on."
+            },
+            {
+              "id": "find-4",
+              "text": "The Visibility filter hides two kinds of features by default. Hide on demand covers features that are enabled only when another feature needs them. Hide always enabled covers features that are always enabled and cannot be turned off."
+            },
+            {
+              "id": "find-5",
+              "text": "Let's clear Hide always enabled. Features, the feature behind this page, joins the list with a dimmed Disable button. Pointing at it shows that it is always enabled and cannot be manually disabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Enable a feature",
+      "subtitle": "One click, then a message",
+      "clips": [
+        {
+          "id": "04-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's enable Background Tasks. Search for it, and its row shows a Disabled badge and an Enable button."
+            },
+            {
+              "id": "enable-2",
+              "text": "Click Enable. The page reloads, and a message confirms that the feature was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Under Tools in the admin menu, a Background Tasks entry appears. In the list, the row shows Enabled, and its button says Disable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Disable a feature",
+      "subtitle": "Confirm, and it is off",
+      "clips": [
+        {
+          "id": "05-disable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "disable-1",
+              "text": "Let's disable Background Tasks. Search for it and click Disable on its row."
+            },
+            {
+              "id": "disable-2",
+              "text": "A dialog titled Disable Feature asks you to confirm. Click Yes to continue, or No to keep the feature."
+            },
+            {
+              "id": "disable-3",
+              "text": "Let's click Yes. The page reloads with a message that the feature was disabled, and the Background Tasks entry is gone from the Tools menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Several features at once",
+      "subtitle": "Select rows, then use Bulk Actions",
+      "clips": [
+        {
+          "id": "06-bulk",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "bulk-1",
+              "text": "To change several features together, use the checkbox on each row. Let's search for google, and check Google Analytics and Google Tag Manager."
+            },
+            {
+              "id": "bulk-2",
+              "text": "Open Bulk Actions. Disable turns the checked features off, and Enable turns them on. Neither asks for confirmation, so let's click Enable."
+            },
+            {
+              "id": "bulk-3",
+              "text": "The page reloads with a message naming both features. Searching for google again shows them as Enabled, while Google Authentication, which was not checked, stays Disabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Permissions",
+      "subtitle": "Who can manage features",
+      "clips": [
+        {
+          "id": "07-permission",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "who-1",
+              "text": "Only users with the Manage Features permission can open the Features page. The Administrator role has it by default. To give it to another role, edit that role under Access Control, Roles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Features",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Features page, under Tools, lets you enable and disable the features your site runs, one at a time or in bulk. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Features: Enable and Disable What Your Site Uses | Orchard Core",
+  "description": "An Orchard Core site runs only the features that are enabled, and a feature can add its own pages and permissions to the admin. Knowing where to turn features on and off, and what each change affects, lets you keep the site to what it uses.\n\nThe Features page lists the features by category, with the description, the dependencies and the state of each. You can search and filter the list, then enable or disable features one at a time or several at once.\n\nIn this video:\n• Modules and features: what your site runs\n• The Features page: where to find it and how to read it\n• Search and filter: find a feature in a long list\n• Enable a feature: one click, then a message\n• Disable a feature: confirm, and it is off\n• Several features at once: select rows, then use Bulk Actions\n• Permissions: who can manage features",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Orchard Core features",
+    "Features",
+    "Modules",
+    "Admin",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Features/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Features/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Features"
+  }
+}

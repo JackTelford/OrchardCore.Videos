@@ -164,9 +164,9 @@
     "docs": [
       "src/docs/reference/modules/Features/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.1,
+    "words": 620,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
