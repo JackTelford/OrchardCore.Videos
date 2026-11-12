@@ -1,0 +1,200 @@
+{
+  "title": "Field Editors and Display Modes: One Field, Many Faces",
+  "output": "content-fields-editors",
+  "spoken": {
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Field Editors and Display Modes",
+      "subtitle": "How a field is entered, and how it is shown",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A Text Field stores text, but it can appear as a plain box, an email box, a color input, or a set of radio buttons. Editors decide how a value is entered. Display modes decide how it appears on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "One field, many faces",
+      "subtitle": "Fields, editors and display modes",
+      "clips": [
+        {
+          "id": "01-concept",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "concept-1",
+              "text": "A content field stores one kind of value. A Text Field stores text, a Numeric Field stores a number, and a Date Field stores a date. Whatever the field looks like, it stores the same kind of value."
+            },
+            {
+              "id": "concept-2",
+              "text": "The editor is what you see on the edit screen of a content item. A Numeric Field can be a number box, a slider, or a spinner. The editor changes how a value is entered, not what is stored."
+            },
+            {
+              "id": "concept-3",
+              "text": "The display mode is what visitors see on the site. A Text Field can show its text as it is, or as a heading. You choose the editor and the display mode in the settings of each field."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Choose an editor",
+      "subtitle": "A Numeric Field as a slider",
+      "clips": [
+        {
+          "id": "02-editor",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "editor-1",
+              "text": "Design, Content Definition, Content Types lists the content types of the site. Typing Workshop in the Search box narrows the list to that type, and its Edit button opens it."
+            },
+            {
+              "id": "editor-2",
+              "text": "The Fields list shows the three fields of Workshop, each with its kind next to its name. Seats is a Numeric Field. Its Edit button opens the settings of that field."
+            },
+            {
+              "id": "editor-3",
+              "text": "The settings of Seats include a Minimum and a Maximum, here zero and forty. Editors such as Slider use them as the two ends of their range."
+            },
+            {
+              "id": "editor-4",
+              "text": "Below the settings, a drop-down list answers the question What type of editor should be used? Number is selected. Let's choose Slider."
+            },
+            {
+              "id": "editor-5",
+              "text": "Save returns to the content type. Next to Seats, a badge with the name of the editor, Slider, shows which editor the field uses."
+            },
+            {
+              "id": "editor-6",
+              "text": "Let's open the New Workshop page. Seats shows a slider track under its number box, running from the minimum, zero, to the maximum, forty."
+            },
+            {
+              "id": "editor-7",
+              "text": "Dragging the handle changes the number in the box, and typing a number in the box moves the handle. Both set the same value, the number of seats."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "An editor with its own settings",
+      "subtitle": "A Text Field as a list of choices",
+      "clips": [
+        {
+          "id": "03-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Some editors bring settings of their own. Skill Level is a Text Field that should hold one of a few levels, so let's open its settings."
+            },
+            {
+              "id": "list-2",
+              "text": "Choosing Predefined List in the editor drop-down list reveals the settings of that editor. One asks What type of list editor should be used? Below it, a table holds an Option Label and a Value for each option, here Beginner and Intermediate."
+            },
+            {
+              "id": "list-3",
+              "text": "The list editor can be a Drop down list or Radio buttons, and let's pick Radio buttons. Add an option adds a row, and typing the label, Advanced, fills in the value as well."
+            },
+            {
+              "id": "list-4",
+              "text": "Each option also has a radio button, under the title Default? Selecting one makes that option the default value. Let's leave them all unselected."
+            },
+            {
+              "id": "list-5",
+              "text": "Save stores the options with the field, and the page returns to the content type."
+            },
+            {
+              "id": "list-6",
+              "text": "On the New Workshop page, Skill Level is a set of radio buttons, one for each option. Choosing Intermediate selects it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Choose a display mode",
+      "subtitle": "A Text Field as a heading",
+      "clips": [
+        {
+          "id": "04-display",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "display-1",
+              "text": "Display modes follow the same pattern. Headline is a Text Field, and its Edit button opens the settings, where the display mode is chosen below the editor."
+            },
+            {
+              "id": "display-2",
+              "text": "A drop-down list answers the question What type of display mode should be used? Standard is selected. Let's choose Header."
+            },
+            {
+              "id": "display-3",
+              "text": "A setting appears for the display mode: Select the header level to use. Let's choose H2 and Save, and the content type shows a Header badge next to Headline."
+            },
+            {
+              "id": "display-4",
+              "text": "On the site, the Headline of the Spring Pottery Evening workshop appears as a second-level heading. A display mode changes only what visitors see; the stored text stays the same."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What each field offers",
+      "subtitle": "Editors and display modes of the Content Fields module",
+      "clips": [
+        {
+          "id": "05-catalog",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "catalog-1",
+              "text": "Each field offers its own editors. A Text Field offers Standard, Code Mirror, Color, Email, Icon picker, Monaco editor, Multi-line, Phone, Predefined List and Url. A Numeric Field offers Number, Range, Select, Slider and Spinner."
+            },
+            {
+              "id": "catalog-2",
+              "text": "A Boolean Field offers Standard and Switch, and a Multi Text Field offers Standard, Checkbox List and Picker. A Date Field offers Standard and Localized. The Date Time Field and the Time Field offer Standard only."
+            },
+            {
+              "id": "catalog-3",
+              "text": "Display modes are less common. A Text Field offers Standard and Header, and a User Picker Field offers Standard and User Names. Every other field of the Content Fields module offers Standard only."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Field Editors and Display Modes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "One field can serve many purposes: the editor shapes the edit screen, the display mode shapes the site, and the stored value stays the same. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

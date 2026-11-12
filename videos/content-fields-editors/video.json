@@ -1,0 +1,48 @@
+{
+  "title": "Field Editors and Display Modes: One Field, Many Faces | Orchard Core",
+  "description": "A content field has a default way to be edited and a default way to appear on the site, and the default does not always fit the data. A Numeric Field for seats can be a slider, and a Text Field for a headline can be a heading.\n\nOrchard Core separates both choices from the stored value. An editor changes how a value is entered on the edit screen, and a display mode changes how it is shown to visitors. You set both in the settings of each field on its content type.\n\nIn this video:\n• One field, many faces: fields, editors and display modes\n• Choose an editor: a Numeric Field as a slider\n• An editor with its own settings: a Text Field as a list of choices\n• Choose a display mode: a Text Field as a heading\n• What each field offers: the editors and display modes of the Content Fields module",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "ContentFields"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Content Fields",
+    "Content Types",
+    "Field editors",
+    "Display modes",
+    "CMS",
+    "ASP.NET Core",
+    ".NET"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Fields"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentFields/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentFields/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentFields"
+  }
+}
