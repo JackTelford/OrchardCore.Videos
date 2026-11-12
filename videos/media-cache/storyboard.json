@@ -1,0 +1,166 @@
+{
+  "title": "Media Cache: Purge the Local Copy of Remote Media",
+  "output": "media-cache",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Media Cache",
+      "subtitle": "Purge the local copy of remote media",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "When your site stores media in Azure Blob Storage or Amazon S3, it keeps a local copy of the files it serves. This video enables Media Cache, purges the copy, allows a role to purge it, and names the tasks that can clean the caches."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the cache works",
+      "subtitle": "A local copy of remote files",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "When media lives in Azure Blob Storage or Amazon S3, your Orchard Core site serves the files. The first time someone requests a file, the site downloads it from the store and keeps a copy on the web server."
+            },
+            {
+              "id": "why-2",
+              "text": "Later requests for the file use that copy, and image resizing starts from it. A file you upload in the media library is copied right away, and deleting or moving a file removes its old copy."
+            },
+            {
+              "id": "why-3",
+              "text": "You purge the whole cache to free disk space or to fetch fresh copies. With a content delivery network in front of your site, you can purge once the network has fetched the files it needs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable Media Cache",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, Features, and search for Media Cache. It is in the Content Management category, and its description reads: The media cache module adds remote file store cache support."
+            },
+            {
+              "id": "enable-2",
+              "text": "Azure Media Storage and Amazon Media Storage both depend on Media Cache, so enabling either one enables it too. Let's enable Media Cache alone, to see what its page shows without a remote store."
+            },
+            {
+              "id": "enable-3",
+              "text": "Settings, Media, Cache opens a page titled Asset Cache. Without a remote store, the page reports an error saying that a remote media store must be enabled and configured in the host configuration of the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Purge the cache",
+      "subtitle": "Settings, Media, Cache",
+      "clips": [
+        {
+          "id": "03-purge",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "purge-1",
+              "text": "On a site where Azure Media Storage is enabled and configured, the same page shows a notice that media is configured, and one action, Purge All. It empties the cache of this site."
+            },
+            {
+              "id": "purge-2",
+              "text": "Let's select Purge All. A dialog asks: Are you sure you want to purge the entire asset cache? Let's confirm."
+            },
+            {
+              "id": "purge-3",
+              "text": "The page shows the message: Asset cache purged. If a file is in use and the site cannot delete it, the message reads Asset cache purged, with errors. The files in the remote store stay where they are."
+            },
+            {
+              "id": "purge-4",
+              "text": "The cache fills again on demand. Let's request one of the site's images directly. The site downloads it from the store again, keeps a copy, and serves it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Who can purge",
+      "subtitle": "Manage Asset Cache Folder",
+      "clips": [
+        {
+          "id": "04-permission",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "The Administrator role has the Manage Asset Cache Folder permission. To give it to another role, open Access Control, Roles, and select Edit for Editor."
+            },
+            {
+              "id": "perm-2",
+              "text": "Search the permissions for cache. Under Media Cache, select Allow for Manage Asset Cache Folder, and then Save. The permission exists only while Media Cache is enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Automatic cleanup",
+      "subtitle": "Two caches, two cleaners",
+      "clips": [
+        {
+          "id": "05-clean",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "clean-1",
+              "text": "Purge All empties only the copies of the original files. Resized images are kept in a separate cache, which Purge All leaves alone."
+            },
+            {
+              "id": "clean-2",
+              "text": "Two background tasks clean the caches on a schedule: Remote Media Cache Cleaner and Resized Media Cache Cleaner. With the Background Tasks feature enabled, Tools, Background Tasks lists them."
+            },
+            {
+              "id": "clean-3",
+              "text": "They run once a day by default. They do nothing until the host configuration sets a time limit for the cache they clean."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Media Cache",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A site that stores media remotely keeps a local copy of it, and Purge All empties that copy when you need fresh copies. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

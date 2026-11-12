@@ -1,0 +1,57 @@
+{
+  "title": "Media Cache: Purge the Local Copy of Remote Media | Orchard Core",
+  "description": "When media files live in Azure Blob Storage or Amazon S3, your Orchard Core site keeps a local copy of each file it serves. That copy takes disk space, and it can hold files you want the site to download again.\n\nThe Media Cache feature adds a page under Settings, Media, Cache, with a Purge All action that empties the local copy. The Manage Asset Cache Folder permission controls the page, and two background tasks can clean the caches on a schedule.\n\nIn this video:\n• How the cache works\n• Enable Media Cache\n• Purge the cache\n• Who can purge\n• Automatic cleanup",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Media",
+    "Media Cache",
+    "Azure Blob Storage",
+    "Amazon S3",
+    "Purge cache"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Permissions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/"
+    },
+    {
+      "label": "Documentation: Azure Media",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Azure/"
+    },
+    {
+      "label": "Documentation: Amazon S3 Media",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.AmazonS3/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Security/Permissions.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media.Cache"
+  }
+}
