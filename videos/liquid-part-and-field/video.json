@@ -1,0 +1,50 @@
+{
+  "title": "Liquid Part and Liquid Field: Content That Runs Templates | Orchard Core",
+  "description": "Content that is typed once and shown many times often needs a value that changes: the name of the site, the date of the last change, a link to the item itself. Plain HTML and Markdown can't compute any of them.\n\nThe Liquid part and the Liquid field store a Liquid template exactly as it is submitted and run it whenever the content is displayed, with the content item, the site and the filters of Orchard Core available to it. Editing them takes the Manage Liquid templates permission.\n\nIn this video:\n• Which components run Liquid, and which treat it as text\n• The Liquid part: add it to a content type and write the body\n• The Liquid field: add it to a part and write a template\n• Attaching both from a migration\n• How shapes build the output, and where else it is used\n• The permission that protects Liquid content",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Liquid",
+    "Liquid part",
+    "Liquid field",
+    "Content parts",
+    "Content fields",
+    "Templates"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Liquid/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Liquid/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Liquid"
+  }
+}
