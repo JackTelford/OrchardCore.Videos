@@ -3887,9 +3887,9 @@
     "docs": [
       "src/docs/reference/modules/RateLimits/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.3,
+    "words": 940,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

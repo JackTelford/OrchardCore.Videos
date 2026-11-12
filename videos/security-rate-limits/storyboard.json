@@ -1,0 +1,308 @@
+{
+  "title": "Orchard Core Rate Limits",
+  "output": "security-rate-limits",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Rate Limits",
+      "subtitle": "Protect your site from floods of requests",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A misbehaving crawler, a runaway script, or someone guessing passwords can send a site more requests than it can serve. The Rate Limits module rejects the requests over a budget. In this video, you enable it, then create and manage policies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why rate limits",
+      "subtitle": "The problem and how a budget answers it",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Every request costs the server some work. When one client sends a flood of them, the site can slow down for everyone. Limits also make password guessing and other repeated attempts more expensive."
+            },
+            {
+              "id": "why-2",
+              "text": "A rate limit gives each client its own budget. A signed-in user is counted as that user. An anonymous visitor is counted by IP address, so visitors who share an address share one budget."
+            },
+            {
+              "id": "why-3",
+              "text": "When a client uses up its budget, the next request is rejected, or waits in a queue if the limit has one. A rejected request gets a 429 Too Many Requests response, with no body."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable Rate Limits",
+      "subtitle": "A feature of its own",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Rate limiting is a feature you turn on. Open Tools, Features, and search for Rate Limits. It is in the Security category, with an Enable button."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable, then open Tools, Rate Limits. The Rate Limit Policies page lists one policy, which the feature adds when it is first enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The default policy",
+      "subtitle": "What every site starts with",
+      "clips": [
+        {
+          "id": "03-default",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "default-1",
+              "text": "The Default Global Policy is enabled. The line under its name says it applies to every tenant request, meaning every request to this site, and its description says it limits each signed-in user, or each IP address, per minute."
+            },
+            {
+              "id": "default-2",
+              "text": "Select Edit. While a policy is enabled, its Policy type can't change, and a warning says the policy can't be modified. Disable it first, or create another policy."
+            },
+            {
+              "id": "default-3",
+              "text": "Its limiter is a Fixed window, a type that a later chapter explains: 1000 requests every 60 seconds, queue limit 0. That is the budget of each signed-in user, and of each IP address for anonymous visitors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Policy types",
+      "subtitle": "Global, Endpoint and Group",
+      "clips": [
+        {
+          "id": "04-types",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "Every policy has a type. Global applies to the dynamic requests of the whole site. Endpoint applies to requests for a path you enter and the paths below it, such as /blog."
+            },
+            {
+              "id": "types-2",
+              "text": "Group applies to the endpoints that a feature has placed in a named group. A policy of any type holds limiters, and a request must pass every limiter that applies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Limiter types",
+      "subtitle": "Four ways to count requests",
+      "clips": [
+        {
+          "id": "05-limiters",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "limiters-1",
+              "text": "Fixed window allows a set number of requests during each time period, then resets the count all at once. Sliding window spreads the cap across a rolling period, smoothing traffic."
+            },
+            {
+              "id": "limiters-2",
+              "text": "Concurrency limits how many matching requests run at the same time. Token bucket allows short bursts and refills capacity steadily. If unsure, start with Fixed window."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Create a policy",
+      "subtitle": "Protect the blog",
+      "clips": [
+        {
+          "id": "06-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "On Rate Limit Policies, select Add Policy. Type the Policy name Blog limit and a Description that says what the policy protects."
+            },
+            {
+              "id": "create-2",
+              "text": "Choose the Policy type Endpoint. A Request path field appears. Enter /blog, which matches the blog and the paths below it, such as its posts."
+            },
+            {
+              "id": "create-3",
+              "text": "Select Save and Continue. Policies start out as disabled drafts, so nothing is limited until you enable the policy. The Limiters section is empty: select Add Limiter."
+            },
+            {
+              "id": "create-4",
+              "text": "Available Limiter Types lists the four limiters, each with a description and a Learn more link. Select Add under Fixed window."
+            },
+            {
+              "id": "create-5",
+              "text": "Set Permit limit to 3 and Window seconds to 60. A Queue limit of 0 rejects extra requests at once instead of making them wait. Select Add Limiter."
+            },
+            {
+              "id": "create-6",
+              "text": "The limiter is listed with its summary: 3 requests every 60 seconds, queue limit 0. Select Save. A disabled policy saves without restarting the website."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Enable and test a policy",
+      "subtitle": "See a request rejected",
+      "clips": [
+        {
+          "id": "07-test",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "test-1",
+              "text": "The Blog limit row says Disabled. Open its Actions menu and select Enable. A dialog warns that the website restarts, so select Ok."
+            },
+            {
+              "id": "test-2",
+              "text": "The row says Enabled. Let's visit /blog three times. Each visit counts against the signed-in user, and each is served."
+            },
+            {
+              "id": "test-3",
+              "text": "The fourth request in the same window is rejected with a 429 Too Many Requests response. Only /blog and the paths below it are covered by this policy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Manage policies",
+      "subtitle": "Search, clone, disable and delete",
+      "clips": [
+        {
+          "id": "08-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "The Search policies box finds policies by name, description, path or group. Searching for /blog matches the path of Blog limit."
+            },
+            {
+              "id": "manage-2",
+              "text": "Clone, in the Actions menu, copies a policy as a disabled draft named Blog limit (1), and opens it for editing."
+            },
+            {
+              "id": "manage-3",
+              "text": "A disabled policy can be edited freely, including its type, path and limiters, without a restart. An enabled policy only lets you change its name and description."
+            },
+            {
+              "id": "manage-4",
+              "text": "Let's disable Blog limit. Open its Actions menu, select Disable, and confirm. Disabling an enabled policy restarts the website once."
+            },
+            {
+              "id": "manage-5",
+              "text": "To act on several policies, select their checkboxes. The Actions menu above the list offers Enable, Disable and Delete. Deleting disabled policies needs no restart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Read-only policies",
+      "subtitle": "Limits that features set",
+      "clips": [
+        {
+          "id": "09-readonly",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "readonly-1",
+              "text": "Below the policies, Read-only Policies lists the limits that features set for themselves. The Users feature, for example, limits the sign-in route."
+            },
+            {
+              "id": "readonly-2",
+              "text": "A route limit shows the path and HTTP method it applies to. These limits can't be edited here, and they stay active beside your policies. A request must pass all of them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Shared addresses and proxies",
+      "subtitle": "Who counts as one client",
+      "clips": [
+        {
+          "id": "10-shared",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shared-1",
+              "text": "Many people can share one IP address: an office, a school, or a mobile carrier. Their anonymous requests share one budget, so raise the limits when many such visitors reach your site. Signed-in users keep their own."
+            },
+            {
+              "id": "shared-2",
+              "text": "Behind a reverse proxy or load balancer, every request seems to come from the proxy, so all anonymous visitors share one budget. Processing the forwarded headers fixes that, but trust only your own proxies. A separate video covers reverse proxy settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Move policies between sites",
+      "subtitle": "Deployment plans and recipes",
+      "clips": [
+        {
+          "id": "11-move",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "move-1",
+              "text": "Policies can move between sites. A deployment plan has a step, All Rate Limit Policies, that exports every policy, and a recipe can create or update policies when it runs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Rate Limits",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Rate limits stop one client from using more than its share of your site, and they work beside sign-in lockout, captcha and monitoring, not instead of them. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

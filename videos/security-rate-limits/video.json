@@ -1,0 +1,49 @@
+{
+  "title": "Rate Limits: Protect Your Site From Floods of Requests | Orchard Core",
+  "description": "A misbehaving crawler, a runaway script, or someone guessing passwords can send a site more requests than it can serve.\n\nThe Rate Limits module gives each client a budget of requests, and rejects the requests over it with a 429 Too Many Requests response. You manage its policies in the admin, under Tools, Rate Limits.\n\nIn this video:\n• Why rate limits, and who shares a budget\n• Enabling Rate Limits, and the Default Global Policy\n• The types of policy and the types of limiter\n• Creating a policy that protects the blog\n• Enabling a policy and seeing a request rejected\n• Managing policies: search, clone, disable and delete\n• The read-only policies that features set\n• Shared IP addresses and reverse proxies\n• Moving policies between sites",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Rate Limits",
+    "Rate limiting",
+    "Security",
+    "429 Too Many Requests",
+    "Administration"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Site Security"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/RateLimits/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/RateLimits/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.RateLimits"
+  }
+}
