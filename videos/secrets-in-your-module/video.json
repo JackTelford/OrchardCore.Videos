@@ -1,0 +1,53 @@
+{
+  "title": "Secrets in Your Module: Offer Secret Inputs in Your Settings | Orchard Core",
+  "description": "A module that keeps a password or an API key in its settings has to invent its own way to store that value.\n\nThe Secrets module provides a secret input for settings screens. The user keeps the value in the settings, protected with Data Protection, or selects a secret of the Secrets module by name. Your module needs a reference to the Secrets abstractions, and no dependency on the Secrets feature.\n\nIn this video:\n• What users get: the same field, with and without the Secrets feature\n• Start with the abstractions: a reference, not a dependency\n• Keep the value and the name: the settings of your module\n• The display driver: create the editor model, and apply the posted one\n• The view: render the editor with a tag helper\n• Read the value at runtime: one call, with or without the Secrets feature\n• Migrate Secrets: let users move a stored value to a secret\n• Beyond site settings: the same steps for any stored credential",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Secrets"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Secrets",
+    "Data Protection",
+    "Module development",
+    "Display drivers",
+    "Tag helpers"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Secrets"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Secrets/"
+    },
+    {
+      "label": "Adding secret support to your own credentials",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Secrets/#adding-secret-support-to-your-own-credentials"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Secrets/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Secrets"
+  }
+}
