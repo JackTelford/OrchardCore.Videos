@@ -1,0 +1,49 @@
+{
+  "title": "Reverse Proxy Settings: Run Behind a Load Balancer | Orchard Core",
+  "description": "Behind a reverse proxy or a load balancer, an Orchard Core site sees the address, the protocol and the host of the proxy instead of those of the visitor. Features that depend on the visitor's address, such as the Audit Trail and Rate Limits, are affected.\n\nThe Reverse Proxy Configuration feature adds a Reverse Proxy page to the Settings menu, where you choose which forwarded headers the site reads: X-Forwarded-For, X-Forwarded-Proto and X-Forwarded-Host.\n\nIn this video:\n• Why forwarded headers matter behind a proxy\n• Enabling the Reverse Proxy Configuration feature\n• Choosing the headers on the Reverse Proxy settings page\n• Keeping it safe: trust only your own proxies",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "ReverseProxy"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Reverse Proxy",
+    "Load Balancer",
+    "Forwarded Headers",
+    "X-Forwarded-For",
+    "Security"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Site Security"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ReverseProxy/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ReverseProxy/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ReverseProxy"
+  }
+}
