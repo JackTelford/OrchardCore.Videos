@@ -1,0 +1,198 @@
+{
+  "title": "Static Files per Tenant",
+  "output": "tenants-static-files",
+  "spoken": {
+    "/bakery/robots.txt": "slash bakery slash robots dot text",
+    "/garden/robots.txt": "slash garden slash robots dot text",
+    "application/octet-stream": "application slash octet-stream",
+    "ITenantFileProvider": "I Tenant File Provider",
+    "IStaticFileProvider": "I Static File Provider",
+    "UseStaticFiles": "Use Static Files",
+    "asp-append-version": "A.S.P. append version",
+    "robots.txt": "robots dot text",
+    "wwwroot": "W.W.W. root",
+    "App_Data": "App Data",
+    "favicon": "fav icon",
+    "~/": "tilde slash"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Static Files per Tenant",
+      "subtitle": "Serve each tenant's own files",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every tenant of an Orchard Core application shares the files of the application's wwwroot folder. The Static File Provider feature gives each tenant its own wwwroot folder, served at the tenant's address. In this video, we enable it, add files, and read its code."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why a provider per tenant",
+      "subtitle": "One web root for the application",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "The static files of the application live in its wwwroot folder, and every tenant is served from it. A file there belongs to the application, not to a tenant. A robots.txt or a favicon that differs between tenants needs another place."
+            },
+            {
+              "id": "why-2",
+              "text": "The Static File Provider feature gives each tenant that enables it a file provider of its own. Its files are served under the tenant's domain and URL prefix, even when another tenant has files with the same names."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "In the admin, or in a recipe",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's enable the feature on a tenant. On the Default tenant, open Multi-Tenancy, Tenants. Each running tenant besides Default has a Features button, so let's select the one of Maple."
+            },
+            {
+              "id": "enable-2",
+              "text": "The page lists the features of the Maple tenant. Searching for static finds Static File Provider, in the Infrastructure category. It provides a way to serve independent static files for each tenant."
+            },
+            {
+              "id": "enable-3",
+              "text": "Select Enable, and a message confirms that the feature was enabled. A tenant can also enable it itself, under Tools, Features: the feature is not limited to the Default tenant."
+            }
+          ]
+        },
+        {
+          "id": "02-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe enables it with the feature step, which lists the features to enable and to disable. Add it to the recipe that sets up a tenant, and the tenant starts with the feature enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add files to a tenant",
+      "subtitle": "The wwwroot folder of the tenant",
+      "clips": [
+        {
+          "id": "03-files",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "files-1",
+              "text": "Each tenant's files go in the wwwroot folder of its site folder, under App_Data, Sites. The folder is named after the tenant, here Maple, not after its URL prefix. The feature creates it when it is missing."
+            },
+            {
+              "id": "files-2",
+              "text": "You copy the files to the server yourself, since the feature has no screen to upload them. A file in a subfolder is served at the same path under the tenant's address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Request the files",
+      "subtitle": "The same file name, a different file",
+      "clips": [
+        {
+          "id": "04-serve",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "serve-1",
+              "text": "Maple's URL prefix is bakery, so its robots.txt is served at /bakery/robots.txt. The page shows the content of the file in Maple's folder."
+            },
+            {
+              "id": "serve-2",
+              "text": "Cedar's prefix is garden. The same file name at /garden/robots.txt shows the content of Cedar's own file. Each tenant serves its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "How it works",
+      "subtitle": "What the feature registers",
+      "clips": [
+        {
+          "id": "05-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "The feature's startup registers an ITenantFileProvider, a physical file provider rooted at the tenant's wwwroot folder. It also registers it as an IStaticFileProvider, so other code can find it."
+            },
+            {
+              "id": "code-2",
+              "text": "In the tenant's pipeline, UseStaticFiles serves that provider. A file of an unknown type is sent as application/octet-stream, and each response carries a Cache-Control header for 30 days."
+            },
+            {
+              "id": "code-3",
+              "text": "In a view, a path that starts with ~/ includes the tenant's URL prefix. The asp-append-version attribute adds a version hash to the URL of a tenant file, because the file version provider also searches the tenant's static file providers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Good to know",
+      "subtitle": "Order, SEO and removal",
+      "clips": [
+        {
+          "id": "06-know",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "know-1",
+              "text": "In the Orchard Core CMS web project, a file in the application's wwwroot folder is served before a tenant's file for the same request path. If the SEO module is enabled, a robots.txt in the tenant folder takes precedence over the site's robots settings."
+            },
+            {
+              "id": "know-2",
+              "text": "Removing a tenant removes its site folder, wwwroot included. Keep your own copy of the files, to copy to the server again when you set up a tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Static Files per Tenant",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Each tenant gets a wwwroot folder of its own, served at its own domain and URL prefix. That is the Static File Provider feature. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
