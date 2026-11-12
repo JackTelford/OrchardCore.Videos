@@ -13,7 +13,8 @@
     "AddScoped": "Add Scoped",
     "C#": "C sharp",
     "PO file": "P.O. file",
-    "PO entries": "P.O. entries"
+    "PO entries": "P.O. entries",
+    "cors-admin": "cors admin"
   },
   "chapters": [
     {
@@ -44,7 +45,7 @@
           "steps": [
             {
               "id": "why-1",
-              "text": "Your C# code translates text with a string localizer that reads PO files. A script runs in the browser, where it can't call that localizer, but the editor it draws still needs translated labels."
+              "text": "Your C# code translates text with a string localizer that reads PO files. A script runs in the browser, where it can't call that localizer, but the interface it draws still needs translated labels."
             },
             {
               "id": "why-2",
@@ -69,7 +70,7 @@
             },
             {
               "id": "localizer-2",
-              "text": "When the group is yours, return a dictionary: each key, such as AddPolicy, is the name the script reads, and each value is a localized string, whose English text translators see. For any other group, return null."
+              "text": "When the group is yours, return a dictionary: each key, such as AddPolicy, is the name the script reads, and each value is a string localizer call whose English text becomes the message ID. For any other group, return null."
             },
             {
               "id": "localizer-3",

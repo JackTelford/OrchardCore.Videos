@@ -112,7 +112,7 @@ dotnet msbuild src/MyModule/MyModule.csproj -restore -t:UpdateLocalizationCatalo
 WHY = [
     ("1", "C# code translates with PO files", "A string localizer reads the strings of the current culture."),
     ("2", "A script runs in the browser", "It can't call a string localizer."),
-    ("3", "Its labels still need translating", "An editor drawn by a script shows text to the visitor."),
+    ("3", "Its labels still need translating", "An interface drawn by a script shows text to the visitor."),
 ]
 
 PATH = [

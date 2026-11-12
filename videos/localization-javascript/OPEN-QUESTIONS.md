@@ -50,6 +50,7 @@ The storyboard's `spoken` map says these identifiers; each is a new spelling, so
 - `UpdateLocalizationCatalog` as "Update Localization Catalog" and `OrchardCore.Localization.Build` as "Orchard Core dot Localization dot Build".
 - `setTranslations` as "set Translations", `getTranslations` as "get Translations", `AddPolicy` as "Add Policy", `AddScoped` as "Add Scoped".
 - "PO file" and "PO entries" as "P.O. file" and "P.O. entries"; `C#` as "C sharp".
+- `cors-admin` as "cors admin" (the hyphenated group name of `admin-1`).
 - "CORS" is not mapped: confirm that the voice says it as a word ("cors") and not as letters, and add a `spoken` entry if it does.
 
 ## What the narration relies on, and where it comes from

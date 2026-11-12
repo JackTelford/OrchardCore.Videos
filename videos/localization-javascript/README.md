@@ -1,6 +1,6 @@
 # JavaScript Localization: Translate Strings in Scripts
 
-**YouTube:** not published yet · **Length:** 3:31 · **Feature:** `OrchardCore.Localization` ([JavaScript Localization](https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/))
+**YouTube:** not published yet · **Length:** 3:32 · **Feature:** `OrchardCore.Localization` ([JavaScript Localization](https://docs.orchardcore.net/en/latest/reference/modules/Localize/javascript-localization/))
 
 A script that draws part of a page can't call the string localizer of C# code, but its labels and messages belong in the same PO files. The video, for module and theme authors, follows the CORS module of Orchard Core: a localizer that implements `IJSLocalizer` returns a dictionary for a group name, a Razor view writes it into the page with `Orchard.GetJSLocalizations`, and the script reads it with `setTranslations` and `getTranslations`. It then translates the strings with a PO file, shows the CORS settings page in French, and ends with requesting several groups and extracting a template for translators. The title, description, tags and chapters YouTube shows are in `video.json`.
 
