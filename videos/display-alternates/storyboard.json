@@ -1,0 +1,250 @@
+{
+  "title": "Shape Alternates: Customize the Display of One Type or One Item",
+  "output": "display-alternates",
+  "spoken": {
+    "Content-Slug-events-night-market.liquid": "Content Slug events night market dot liquid",
+    "Content-Event.Summary.liquid": "Content Event dot Summary dot liquid",
+    "Content-Event.Summary": "Content Event dot Summary",
+    "Content-Event.liquid": "Content Event dot liquid",
+    "Content-Event": "Content Event",
+    "events/night-market": "events slash night market",
+    "AddShapeTableProvider": "Add Shape Table Provider",
+    "OnDisplaying": "On Displaying",
+    "Autoroute": "Auto route",
+    "cshtml": "C.S.H.T.M.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Shape alternates",
+      "subtitle": "Customize the display of one content type or one content item",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core renders content items with shared templates. Shape alternates give one content type, or a single content item, a template of its own. In this video, let's name those templates, add them to a theme, and check which one Orchard Core picks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a template is chosen",
+      "subtitle": "Shape types, alternates and file names",
+      "clips": [
+        {
+          "id": "01-choose",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "choose-1",
+              "text": "Orchard Core builds a page from shapes. Each shape has a type, and a template renders that type. A content item on its own page usually has the type Content, so one Content template renders all of those items."
+            },
+            {
+              "id": "choose-2",
+              "text": "An alternate is another name that can render the same shape. Orchard Core tries the alternates first, starting with the last one added. If none of them has a template, it uses the shape type itself."
+            },
+            {
+              "id": "choose-3",
+              "text": "A template is named after its shape. In a file name, a hyphen stands for a double underscore, and a dot after the last hyphen adds a display type, a named way to show an item. So Content-Event.Summary.liquid renders the Summary display of an Event."
+            },
+            {
+              "id": "choose-4",
+              "text": "In a theme, templates live in the Views folder. A theme template wins over a module template of the same name, so you change how a module displays content without editing the module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Alternates of a content item",
+      "subtitle": "The content type, the path and the alias",
+      "clips": [
+        {
+          "id": "02-names",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "names-1",
+              "text": "For a content item, Orchard Core adds an alternate for its content type. A template named Content-Event applies to every Event shown on its own page, and Content-Event.Summary applies to events shown in the Summary display type, which lists often use."
+            },
+            {
+              "id": "names-2",
+              "text": "On its own page, an item with the Autoroute part also gets an alternate from its path, and an item with the Alias part gets one from its alias. In the file name, write the path with hyphens instead of slashes."
+            },
+            {
+              "id": "names-3",
+              "text": "The alternate for the content type is added first, when the item is built. The alternates for the path and the alias are added afterwards, so they are tried before it, and they win for that one item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "One content type",
+      "subtitle": "A template for every event",
+      "clips": [
+        {
+          "id": "03-before",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "before-1",
+              "text": "Here is an event page. The theme has no template for events, so its Content template renders them, and the banner holds only the title."
+            },
+            {
+              "id": "before-2",
+              "text": "The other events look the same, because they share that one Content template."
+            }
+          ]
+        },
+        {
+          "id": "03-type",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "To change every event, add a file named Content-Event.liquid to the Views folder of the theme. A Razor file with the same name and the extension cshtml works the same way."
+            },
+            {
+              "id": "type-2",
+              "text": "This file is based on the Content template of the theme, with two changes. The banner uses another image, and the word Event appears under the title."
+            }
+          ]
+        },
+        {
+          "id": "03-after",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "type-3",
+              "text": "Open the Harvest Festival page again. The banner has a different image, and the word Event appears under the title."
+            },
+            {
+              "id": "type-4",
+              "text": "The other events use the same template. A template named after the content type changes that type only, and the other content types are untouched."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "One content item",
+      "subtitle": "A template for a single event",
+      "clips": [
+        {
+          "id": "04-item",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "item-1",
+              "text": "To change one event, name the file after its path. For the path events/night-market, the file is Content-Slug-events-night-market.liquid."
+            },
+            {
+              "id": "item-2",
+              "text": "It is based on the template of the content type, with two changes: a third banner image, and the words Featured event under the title."
+            }
+          ]
+        },
+        {
+          "id": "04-after",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "item-3",
+              "text": "Open the Night Market page. The banner has the third image, and the words Featured event appear under the title."
+            },
+            {
+              "id": "item-4",
+              "text": "Open the Harvest Festival page again. It keeps the template of its content type, because only the Night Market has a template for its own path."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Which template was used",
+      "subtitle": "Shape debug information",
+      "clips": [
+        {
+          "id": "05-debug",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "debug-1",
+              "text": "When a template does not apply, ask Orchard Core which one rendered a shape. Under Settings, Debugging, the setting Write shape debug information is off by default. Check it and select Save."
+            },
+            {
+              "id": "debug-2",
+              "text": "Then load the Night Market page. Its HTML source holds a pair of comments around each shape that Orchard Core renders for that request, and the next slide shows the pair around the Content shape."
+            }
+          ]
+        },
+        {
+          "id": "05-output",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "output-1",
+              "text": "The first comment gives the shape type, then the template name and file that rendered it, with its language. Here the name comes from the path of the item, which confirms that the alternate for the path won."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Your own alternates",
+      "subtitle": "From a template or from code",
+      "clips": [
+        {
+          "id": "06-own",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "own-1",
+              "text": "A template can add an alternate when it creates a shape. The Liquid shape tag takes an alternate argument, the Razor tag helpers an alternate attribute, and a metadata element can add, remove or clear alternates."
+            },
+            {
+              "id": "own-2",
+              "text": "Add the alternate before the shape renders. Orchard Core picks the template first and only then runs it, so a template cannot change the choice made for itself."
+            },
+            {
+              "id": "own-3",
+              "text": "To add alternates for a shape type everywhere, write a shape table provider. The Alias module describes the Content shape, and in OnDisplaying it adds the alias alternates to the metadata of the shape."
+            },
+            {
+              "id": "own-4",
+              "text": "A module registers its provider with AddShapeTableProvider. Add alternates from the least to the most specific, because the last one added is tried first. A separate video covers placement, which can add alternates too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Shape alternates",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Alternates let a theme change the display of one content type, or one content item, without touching a module. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
