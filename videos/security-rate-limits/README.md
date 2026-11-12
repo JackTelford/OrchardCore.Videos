@@ -1,6 +1,6 @@
 # Rate Limits: Protect Your Site From Floods of Requests
 
-**YouTube:** not published yet · **Length:** 6:10 · **Feature:** [OrchardCore.RateLimits](https://docs.orchardcore.net/en/latest/reference/modules/RateLimits/)
+**YouTube:** not published yet · **Length:** 6:16 · **Feature:** [OrchardCore.RateLimits](https://docs.orchardcore.net/en/latest/reference/modules/RateLimits/)
 
 This video shows an administrator how to turn on the Rate Limits module, read the Default Global Policy it adds, and
 create an Endpoint policy with a Fixed window limiter. It enables that policy, shows a request rejected with a 429 Too

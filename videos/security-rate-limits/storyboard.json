@@ -77,7 +77,7 @@
           "steps": [
             {
               "id": "default-1",
-              "text": "The Default Global Policy is enabled. The line under its name says it applies to every tenant request, and its description says it limits each signed-in user, or each IP address, per minute."
+              "text": "The Default Global Policy is enabled. The line under its name says it applies to every tenant request, meaning every request to this site, and its description says it limits each signed-in user, or each IP address, per minute."
             },
             {
               "id": "default-2",
@@ -85,7 +85,7 @@
             },
             {
               "id": "default-3",
-              "text": "Its limiter is a Fixed window: 1000 requests every 60 seconds, queue limit 0. That is the budget of each signed-in user, and of each IP address for anonymous visitors."
+              "text": "Its limiter is a Fixed window, a type that a later chapter explains: 1000 requests every 60 seconds, queue limit 0. That is the budget of each signed-in user, and of each IP address for anonymous visitors."
             }
           ]
         }
@@ -298,7 +298,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Rate limits stop one client from using more than its share of your site. Use them with sign-in lockout, captcha and monitoring, not instead of them. Thanks for watching."
+              "text": "Rate limits stop one client from using more than its share of your site, and they work beside sign-in lockout, captcha and monitoring, not instead of them. Thanks for watching."
             }
           ]
         }
