@@ -108,7 +108,7 @@
             },
             {
               "id": "generate-3",
-              "text": "Let's change the title to Contact and publish again. The alias is still contact-us, because Orchard Core builds an alias only while the field is empty. That is what keeps an alias stable."
+              "text": "Let's change the title to Contact and publish again. The alias stays contact-us, because Orchard Core builds an alias only while the field is empty. That is what keeps an alias stable."
             },
             {
               "id": "generate-4",
@@ -167,7 +167,7 @@
           "steps": [
             {
               "id": "rules-1",
-              "text": "An alias belongs to one content item on the whole site, whatever its content type. A generated alias that is already taken gets a number at the end. An alias holds up to 735 characters, and lookups ignore letter case."
+              "text": "An alias belongs to one content item on the whole site, whatever its content type. A generated alias that is already taken gets a number at the end. An alias holds up to 735 characters, and finding an item by its alias ignores letter case."
             }
           ]
         }

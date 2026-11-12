@@ -20,7 +20,7 @@ RULES = [
     ("1", "One item per alias", "Unique across every content type of the site."),
     ("2", "A number when taken", "A generated alias that exists gets a number at the end."),
     ("3", "Up to 735 characters", "Longer generated aliases are cut to fit."),
-    ("4", "Case ignored in lookups", "Lookups treat Support and support the same."),
+    ("4", "Case ignored when finding", "Finding an item treats Support and support the same."),
 ]
 
 

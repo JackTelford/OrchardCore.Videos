@@ -85,7 +85,7 @@ Before every clip, check that no section of the admin menu is open on `/Admin`.
 - `why-2`: slide "An alias is a name you choose", three cards with check marks: A name you choose, Stored with the
   item, Not a web address.
 - `rules-1`: slide "The rules of an alias", four cards: One item per alias, A number when taken, Up to 735
-  characters, Case ignored in lookups.
+  characters, Case ignored when finding.
 - `outro`: the closing card, "The Orchard Core Alias part" and "docs.orchardcore.net".
 
 ## Clip `02-feature`
