@@ -1,0 +1,252 @@
+{
+  "title": "Call the Orchard Core API With Client Credentials",
+  "output": "openid-client-credentials-api",
+  "spoken": {
+    "ContentItemId": "Content Item I.D.",
+    "ContentType": "Content Type"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Call the Orchard Core API With Client Credentials",
+      "subtitle": "A program signs in as an application and calls the Content API",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A back-end job has no one to sign in for it. With the client credentials flow, it proves who it is with a client ID and a secret, then calls the Orchard Core Content API. Let's prepare the site and write the calls."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the flow works",
+      "subtitle": "A program that signs in as itself",
+      "clips": [
+        {
+          "id": "01-flow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "flow-1",
+              "text": "A scheduled import, a build step, or another service runs without a person at the keyboard. It cannot type a password, so the program signs in as itself: as an application that you register on your site."
+            },
+            {
+              "id": "flow-2",
+              "text": "The program sends its client ID and client secret to the token endpoint, and receives an access token. It then sends that token as a bearer token with every call to the Content API."
+            },
+            {
+              "id": "flow-3",
+              "text": "The roles you give the application decide what it can do, in addition to the Authenticated role that every signed-in caller has. The permissions of the application's roles are copied into the access token when the token is issued."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Prepare the site",
+      "subtitle": "Enable the server, allow the flow",
+      "clips": [
+        {
+          "id": "02-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "Under Tools, Features, let's search for OpenID. Enable OpenID Connect Authorization Server, the feature that issues the tokens. The features it depends on are enabled with it."
+            },
+            {
+              "id": "site-2",
+              "text": "Then enable OpenID Connect Token Validation. The Content API uses it to check the token of every request it receives."
+            },
+            {
+              "id": "site-3",
+              "text": "Under Settings, OpenID Connect, Authorization Server, Enable Token Endpoint is checked. Check Allow Client Credentials Flow, which stays off until you allow it, and save."
+            },
+            {
+              "id": "site-4",
+              "text": "Under Settings, OpenID Connect, Token Validation, the authorization server tenant is the tenant of this site. The site accepts the tokens that it issues itself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create a role",
+      "subtitle": "The permissions of the application",
+      "clips": [
+        {
+          "id": "03-role",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "role-1",
+              "text": "Under Access Control, Roles, choose Add Role. Name it Content API Client, a dedicated role that limits the application, and use Save & Configure to open its permissions."
+            },
+            {
+              "id": "role-2",
+              "text": "Search the permissions for api, and allow Access content via the api. Then search for publish, and allow Publish or unpublish content for others."
+            },
+            {
+              "id": "role-3",
+              "text": "Publishing for others includes editing and viewing, so these two permissions are enough to read, create and update content. Save the role."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Register the application",
+      "subtitle": "Client ID, secret and role",
+      "clips": [
+        {
+          "id": "04-app",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "app-1",
+              "text": "Under Access Control, OpenID Connect, Applications, choose New application. The form starts with a display name, a type, and a client ID."
+            },
+            {
+              "id": "app-2",
+              "text": "Enter Content Sync Job as the Display Name, and content-sync as the Client Id. Confidential client is selected, so the application needs a Client Secret. Enter a long random value."
+            },
+            {
+              "id": "app-3",
+              "text": "Under Flows, check Allow Client Credentials Flow. Only the flows that the server settings allow are listed. A list of Client Credentials Roles appears."
+            },
+            {
+              "id": "app-4",
+              "text": "Check the role Content API Client, and save. The application appears in the list, ready to request tokens."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Request an access token",
+      "subtitle": "The token endpoint",
+      "clips": [
+        {
+          "id": "05-token",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "token-1",
+              "text": "In the client program, post a form to connect slash token on the site. It holds the grant type client credentials, the client ID, and the client secret, which the program reads from its environment."
+            },
+            {
+              "id": "token-2",
+              "text": "The response is JSON, and its access underscore token property holds the token. Keep the secret out of source code and logs, since it is the password of the application."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Call the Content API",
+      "subtitle": "Create, read, update and delete",
+      "clips": [
+        {
+          "id": "06-call",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "call-1",
+              "text": "Send the access token in the Authorization header as a bearer token. Then post a content item as JSON to api slash content, with its content type and its title. The item is created and published."
+            },
+            {
+              "id": "call-2",
+              "text": "The content item properties, such as ContentType and ContentItemId, are case sensitive, so write them as shown. A body with an existing content item ID updates that item, and the query string draft equals true saves a draft instead of publishing."
+            },
+            {
+              "id": "call-3",
+              "text": "To read an item, send a get to api slash content, a slash, and the content item ID. A delete to the same address removes it, but it needs Delete content for others, which this role does not have."
+            },
+            {
+              "id": "call-4",
+              "text": "Every call needs Access content via the api, plus a permission for its action: View all content to read, Publish or unpublish content for others to create, Edit content for others to update, Delete content for others to delete."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "See the result",
+      "subtitle": "The article in the admin",
+      "clips": [
+        {
+          "id": "07-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "After the program has run, open Content, Content Items. The article Hello from the sync job is listed, created by the program through the API and published."
+            },
+            {
+              "id": "result-2",
+              "text": "Open the article, and its title is the one the program sent. From here, an editor can continue working on it like any other article."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "When a call fails",
+      "subtitle": "Status codes and their causes",
+      "clips": [
+        {
+          "id": "08-fail",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "fail-1",
+              "text": "An unauthorized response means the request has no accepted token: check that Token Validation is enabled, and request another token. A forbidden response means the token is valid, but its role lacks a permission."
+            },
+            {
+              "id": "fail-2",
+              "text": "A missing content item answers not found. A body without a known content type answers bad request, and a body that fails validation answers with the names of the invalid fields."
+            },
+            {
+              "id": "fail-3",
+              "text": "A change to a role does not reach tokens that were already issued. Request another token to pick up the changed permissions."
+            },
+            {
+              "id": "fail-4",
+              "text": "If the token request itself is refused, check that Allow Client Credentials Flow is checked in the server settings and in the application, and that the client ID and the secret are right."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Call the Orchard Core API With Client Credentials",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the client credentials flow: a registered application, a role that limits it, an access token, and calls to the Content API. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

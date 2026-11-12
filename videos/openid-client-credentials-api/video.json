@@ -1,0 +1,55 @@
+{
+  "title": "Call the Orchard Core API With Client Credentials | Orchard Core",
+  "description": "A scheduled import, a build step or another service runs without a person, so it cannot sign in with a password. The OpenID Connect client credentials flow lets such a program sign in as an application, receive an access token, and call the Orchard Core Content API.\n\nThis video enables the authorization server and token validation, creates a role and an application, and writes the token request and the Content API calls in C#.\n\nIn this video:\n• How the client credentials flow works\n• Enabling the authorization server and token validation, and allowing the flow\n• Creating a role with the permissions of the application\n• Registering the application with its client ID, secret and role\n• Requesting an access token from the token endpoint\n• Creating, reading, updating and deleting content with a bearer token, and the permission each call needs\n• Checking the result in the admin\n• Understanding unauthorized, forbidden and refused requests",
+  "hashtags": [
+    "OrchardCore",
+    "OpenIDConnect",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "OpenID Connect",
+    "OAuth",
+    "client credentials",
+    "Content API",
+    "REST API",
+    "bearer token",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "OpenID Connect"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "OpenID Connect documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenId/"
+    },
+    {
+      "label": "Contents documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/OpenId/README.md",
+    "src/docs/reference/modules/Contents/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenId.Server"
+  }
+}
