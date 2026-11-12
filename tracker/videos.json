@@ -757,9 +757,9 @@
       "src/docs/reference/modules/ContentTypes/README.md",
       "src/docs/reference/modules/Migrations/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 6,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.1,
+    "words": 917,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
