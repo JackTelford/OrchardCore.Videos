@@ -1,0 +1,206 @@
+{
+  "title": "Lists in Templates",
+  "output": "lists-in-templates",
+  "spoken": {
+    "Blog-ListPart.liquid": "Blog dash List Part dot liquid",
+    "Content-BlogPost.liquid": "Content dash Blog Post dot liquid",
+    "Content__BlogPost": "Content double underscore Blog Post",
+    "ListPartViewModel": "List Part View Model",
+    "Model.ContentItems": "model dot Content Items",
+    "Model.Pager": "model dot Pager",
+    "QueryListItemsCountAsync": "Query List Items Count Async",
+    "QueryListItemsAsync": "Query List Items Async",
+    "ContainedPart": "Contained Part",
+    "ContentItems": "Content Items",
+    "ListPart": "List Part",
+    "list_items": "list items",
+    "list_count": "list count",
+    "display_url": "display U.R.L.",
+    "display_text": "display text",
+    "Autoroute": "Auto route"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Lists in Templates",
+      "subtitle": "Liquid filters for containers and their items",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A list is a content item that holds other content items, such as a blog and its posts. This video shows how templates read a list: the ListPart template, and the three Liquid filters container, list_items, and list_count."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a list is stored",
+      "subtitle": "ContainedPart and three filters",
+      "clips": [
+        {
+          "id": "01-stored",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "store-1",
+              "text": "A list is a content item with a ListPart. Each item inside the list carries a ContainedPart, which stores the id of its list, the content type of that list, and the position of the item in it."
+            },
+            {
+              "id": "store-2",
+              "text": "The Lists module adds three Liquid filters that read this relationship: container, list_items, and list_count. They work in any Liquid template, not only in the templates of a list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The ListPart template",
+      "subtitle": "Rendering the items of a list",
+      "clips": [
+        {
+          "id": "02-part",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "To display a list, the ListPart shape receives a ListPartViewModel. Its ContentItems property holds one page of published items, and its Pager property holds the links to the other pages."
+            },
+            {
+              "id": "part-2",
+              "text": "The Blog Theme overrides the template of this shape in Blog-ListPart.liquid. It loops over Model.ContentItems, builds the Summary display of each item, and renders Model.Pager. Because of its name, it applies to the Blog content type only."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The container filter",
+      "subtitle": "From an item to its list",
+      "clips": [
+        {
+          "id": "03-container",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "container-1",
+              "text": "The container filter takes a content item and returns the list that holds it. In the Blog recipe, the Autoroute pattern of a blog post uses it to start each post's address with the name of its blog."
+            },
+            {
+              "id": "container-2",
+              "text": "If an item is not in a list, or its list is not published, container returns the item itself. The input must be a content item: anything else raises an exception."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Items and counts",
+      "subtitle": "list_items and list_count",
+      "clips": [
+        {
+          "id": "04-items",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "items-1",
+              "text": "The list_items filter returns the content items of a list, and list_count counts them. Give either one a content item, or the content item id of the list as a string."
+            },
+            {
+              "id": "items-2",
+              "text": "Only published items count, so an item that exists only as a draft is left out. The filters do not page: list_count counts the whole list, and list_items returns all of it, sorted by the order stored in each ContainedPart."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "A template that uses them",
+      "subtitle": "All three on a blog post page",
+      "clips": [
+        {
+          "id": "05-template",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "template-1",
+              "text": "Let's use all three in the template for blog posts. The assign tag saves the blog that container returns for the current post, and the template prints its title as a link, followed by its number of published posts from list_count."
+            },
+            {
+              "id": "template-2",
+              "text": "Then list_items returns the published posts of that blog, assign saves them in a variable, and a for loop prints a link to each one, with display_url for the address and display_text for the title."
+            },
+            {
+              "id": "template-3",
+              "text": "Add this block at the end of the post template: Content-BlogPost.liquid in a theme, or a template named Content__BlogPost under Design, Templates. A template saved in the admin takes priority over the theme file of the same name, so it must be complete."
+            }
+          ]
+        },
+        {
+          "id": "05-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "In the admin, Design, Templates lists the template under its name, Content__BlogPost. It applies to the page of every blog post."
+            },
+            {
+              "id": "site-2",
+              "text": "On the page of a blog post, the block follows the content. The heading links back to the blog, and list_count reports three published posts, although the blog also holds a draft."
+            },
+            {
+              "id": "site-3",
+              "text": "Below the count, the loop prints a link to each published post. The draft is missing from the list, because list_items returns published items only."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "In Razor",
+      "subtitle": "The same queries in a view",
+      "clips": [
+        {
+          "id": "06-razor",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "razor-1",
+              "text": "In a Razor view, the Orchard helper offers the same two queries: QueryListItemsAsync and QueryListItemsCountAsync. Both take the id of the list."
+            },
+            {
+              "id": "razor-2",
+              "text": "An optional second argument is a predicate on the content item index. It replaces the default of published items: a predicate on the Latest property of the index includes drafts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Lists in Templates",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how templates read a list: the ListPart shape renders one page of items, container finds the list of an item, and list_items and list_count work on every published item of a list. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
