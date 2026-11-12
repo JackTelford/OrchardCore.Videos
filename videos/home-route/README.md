@@ -1,6 +1,6 @@
 # Home Page: Choose What Your Site Shows First
 
-**YouTube:** not published yet · **Length:** 3:32 · **Feature:** [OrchardCore.HomeRoute](https://docs.orchardcore.net/en/latest/reference/modules/HomeRoute/), with [OrchardCore.Autoroute](https://docs.orchardcore.net/en/latest/reference/modules/Autoroute/)
+**YouTube:** not published yet · **Length:** 3:34 · **Feature:** [OrchardCore.HomeRoute](https://docs.orchardcore.net/en/latest/reference/modules/HomeRoute/), with [OrchardCore.Autoroute](https://docs.orchardcore.net/en/latest/reference/modules/Autoroute/)
 
 This video shows how a site owner or editor chooses the page that opens at the address of the site, and how to change
 it. It covers the Home Route and Autoroute features, the Show homepage options setting of a content type, the Set as

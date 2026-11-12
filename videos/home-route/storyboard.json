@@ -1,11 +1,11 @@
 {
-  "title": "Choose the home page of your site",
+  "title": "Home Page: Choose What Your Site Shows First",
   "output": "home-route",
   "spoken": {},
   "chapters": [
     {
       "id": "00",
-      "title": "Choose the home page of your site",
+      "title": "Home Page: Choose What Your Site Shows First",
       "subtitle": "Choose which page your site shows first",
       "clips": [
         {
@@ -39,7 +39,7 @@
             },
             {
               "id": "idea-3",
-              "text": "A content type, such as Article, defines what an item contains. A type offers the checkbox when it has the Autoroute part and the part's Show homepage options setting is checked. Your role also needs the Set homepage permission."
+              "text": "A content type, such as Article, defines what an item contains and is built from parts. A type offers the checkbox when it has the Autoroute part and that part's Show homepage options setting is checked. Your role also needs the Set homepage permission."
             }
           ]
         }
@@ -176,7 +176,7 @@
     },
     {
       "id": "99",
-      "title": "Choose the home page of your site",
+      "title": "Home Page: Choose What Your Site Shows First",
       "subtitle": "docs.orchardcore.net",
       "clips": [
         {

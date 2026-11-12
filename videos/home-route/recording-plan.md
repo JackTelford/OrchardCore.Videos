@@ -1,4 +1,4 @@
-# Recording plan: Choose the home page of your site
+# Recording plan: Home Page: Choose What Your Site Shows First
 
 An admin video: the recorder shows the admin screens and the front end of the site, never code. Read this file top to
 bottom once, then record the clips in the order of "Order of the takes". Run `scripts/narrate.py` first: each step is
