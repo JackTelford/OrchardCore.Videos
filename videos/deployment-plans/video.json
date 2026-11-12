@@ -1,0 +1,48 @@
+{
+  "title": "Deployment Plans: Choose What to Export | Orchard Core",
+  "description": "Before content and configuration move to another site, you decide what leaves this one. A deployment plan holds that decision as a saved, named list of steps, so the same package can be built again whenever you need it.\n\nIn Orchard Core, you create a plan, add the steps that export content, content definitions, and files, put them in order, and execute the plan to download one package.\n\nIn this video:\n• What a deployment plan is\n• Creating a plan\n• Adding steps from the available categories\n• Putting the steps in order\n• General-purpose steps: Custom File and Recipe File\n• Executing a plan with File Download\n• Searching and renaming plans, and the permissions they need",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Deployment"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Deployment",
+    "Deployment plans",
+    "Export",
+    "Recipes"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Deployment"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Deployment/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Deployment/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Deployment"
+  }
+}
