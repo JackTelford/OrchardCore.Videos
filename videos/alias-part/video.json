@@ -1,0 +1,49 @@
+{
+  "title": "Alias Part: Give Content Items a Stable Name | Orchard Core",
+  "description": "A content item ID is generated, and it can differ from one site to another, so a menu or a template that moves between sites cannot rely on it.\n\nThe Alias part gives a content item a name that you choose, stored with the item. This video adds the part to the Article content type of a site made with the Blog recipe, generates and keeps aliases, shows the rules that aliases follow, and ends with the alias of the main menu.\n\nIn this video:\n• Why a content item needs an alias\n• Checking that the Alias feature is enabled\n• Adding the Alias part to a content type\n• Generating an alias from the title, keeping it, and generating it again\n• Typing an alias, and why each alias belongs to one content item\n• The generated and disabled option\n• The rules of an alias: uniqueness, length and case\n• The alias of the main menu at work",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Alias part",
+    "content alias",
+    "content items",
+    "content types",
+    "content parts"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Parts"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Alias/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Alias/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Alias"
+  }
+}

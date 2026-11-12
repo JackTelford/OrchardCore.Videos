@@ -1,0 +1,215 @@
+{
+  "title": "The Orchard Core Alias part",
+  "output": "alias-part",
+  "spoken": {
+    "Add & Configure": "Add and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Alias part",
+      "subtitle": "Give content items a stable name",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core generates the ID of a content item, and it can differ between sites. The Alias part gives an item a name that you choose. In this video, we add the part to a content type, create aliases, and see the rules they follow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why an alias",
+      "subtitle": "A name that you choose",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A content item ID is a string that Orchard Core generates. The same menu can have a different ID on your development site and on your production site, so nothing that moves between sites can rely on it."
+            },
+            {
+              "id": "why-2",
+              "text": "An alias is a name that you choose, such as main-menu. It is stored with the content item, so recipes and deployments carry it to other sites. An alias is not a web address, because a page address comes from the Autoroute part."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Check the Alias feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-feature",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "feature-1",
+              "text": "Let's open Tools, then Features, and search for alias. The Alias feature is listed under Content Management and is enabled, because the Blog recipe turns it on. On another site, you click Enable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add the part to a content type",
+      "subtitle": "Design, Content Definition, Content Types",
+      "clips": [
+        {
+          "id": "03-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Let's open Design, Content Definition, Content Types, and click Edit on the Article type. A type is made of parts, and its Parts list shows the parts that Article already has."
+            },
+            {
+              "id": "add-2",
+              "text": "We click Add Parts. The page lists the parts that can be added, and we click Add & Configure on the Alias row."
+            },
+            {
+              "id": "add-3",
+              "text": "The settings of the part open on their own page. Options decides who writes the alias: with Alias is editable, an editor can type one, and with Alias is generated and input is disabled, the editor cannot change it."
+            },
+            {
+              "id": "add-4",
+              "text": "Pattern is the template that builds an alias while the alias is empty. The default uses the display text of the item, in lowercase, with hyphens between words. We keep the defaults and click Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Generate an alias",
+      "subtitle": "Content, Content Items",
+      "clips": [
+        {
+          "id": "04-generate",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "generate-1",
+              "text": "Under Content, Content Items, we choose New, then Article, and type the title Contact Us. The Alias field is further down the page. We leave it empty, because Orchard Core can generate it."
+            },
+            {
+              "id": "generate-2",
+              "text": "We click Publish, and then edit the item again. The Alias field holds contact-us, which Orchard Core built from the title when it saved the item."
+            },
+            {
+              "id": "generate-3",
+              "text": "Let's change the title to Contact and publish again. The alias stays contact-us, because Orchard Core builds an alias only while the field is empty. That is what keeps an alias stable."
+            },
+            {
+              "id": "generate-4",
+              "text": "To generate an alias again, we clear the field and publish. Orchard Core builds the alias from the title Contact, so when we open the item again, the field holds contact."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "One alias, one content item",
+      "subtitle": "Type your own alias",
+      "clips": [
+        {
+          "id": "05-unique",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "unique-1",
+              "text": "An editor can also type an alias. We create an Article titled Help Center and enter main-menu. When we publish, the editor shows an error and saves nothing, because the Main Menu already has that alias."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Generated and disabled",
+      "subtitle": "Keep editors from changing aliases",
+      "clips": [
+        {
+          "id": "06-disabled",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "disabled-1",
+              "text": "To stop editors from changing aliases, we edit the Alias part of the Article type again. We choose Alias is generated and input is disabled for Options, and click Save."
+            },
+            {
+              "id": "disabled-2",
+              "text": "Let's open the About article. Its Alias field is disabled and empty, because About existed before the part. We click Publish and open the article again, and the Alias field holds about."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "The rules of an alias",
+      "subtitle": "Uniqueness, length and case",
+      "clips": [
+        {
+          "id": "07-rules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "An alias belongs to one content item on the whole site, whatever its content type. A generated alias that is already taken gets a number at the end. An alias holds up to 735 characters, and finding an item by its alias ignores letter case."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "An alias at work",
+      "subtitle": "The main menu",
+      "clips": [
+        {
+          "id": "08-use",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "use-1",
+              "text": "The Menu feature depends on Alias, so menus have an alias too. Under Content, Menus, we edit the Main Menu, and its Alias field holds main-menu. We leave it as it is."
+            },
+            {
+              "id": "use-2",
+              "text": "The layout of the Blog theme asks for the menu by this alias. On the front end, the Home and About links in the navigation bar come from that menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Alias part",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Alias part gives a content item a name that stays with it from site to site. Menus, templates, and queries can find the item by that name, instead of by an ID. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
