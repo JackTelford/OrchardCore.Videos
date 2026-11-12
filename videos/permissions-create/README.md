@@ -1,6 +1,6 @@
 # Permissions: Declare Them and Check Them in Your Module
 
-**YouTube:** not published yet · **Length:** 4:47 · **Feature:** `OrchardCore.Roles` ([Roles documentation](https://docs.orchardcore.net/en/latest/reference/modules/Roles/))
+**YouTube:** not published yet · **Length:** 4:46 · **Feature:** `OrchardCore.Roles` ([Roles documentation](https://docs.orchardcore.net/en/latest/reference/modules/Roles/))
 
 A video for module authors. It explains what a permission is, then declares one with a name and a description,
 lists it in an `IPermissionProvider`, registers the provider, shows how the roles editor displays a permission, and
