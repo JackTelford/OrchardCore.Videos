@@ -5964,9 +5964,9 @@
     "docs": [
       "src/docs/reference/modules/MiniProfiler/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.4,
+    "words": 660,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
