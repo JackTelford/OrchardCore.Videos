@@ -1,0 +1,205 @@
+{
+  "title": "The Orchard Core Tenants module",
+  "output": "tenants-overview",
+  "spoken": {
+    "Url Prefix": "URL Prefix"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Tenants module",
+      "subtitle": "Run many sites from one application",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "An Orchard Core application can host many separate websites. Each one is a tenant. In this video, you will learn what a tenant is, how the Tenants module is organized, and how to read the list of tenants in the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a tenant is",
+      "subtitle": "One application, many sites",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A tenant is one website hosted by the application. Tenants keep their content, themes, and users apart, each in its own database or its own tables of a shared database. A single deployment serves them all."
+            },
+            {
+              "id": "idea-2",
+              "text": "Every application has a tenant named Default. It is the first tenant you set up, and the only one that manages the others: the Tenants pages exist on the Default tenant alone. The Default tenant cannot be disabled."
+            },
+            {
+              "id": "idea-3",
+              "text": "A request reaches a tenant through its host name, its URL prefix, or both. One tenant can answer on a host name of its own, and another under the first segment of the path, such as a prefix named bakery."
+            },
+            {
+              "id": "idea-4",
+              "text": "A tenant is in one state at a time. Uninitialized means it exists but is not set up, and Running means it is set up and answers requests. Disabled means it is set up but stopped, and Enable starts it again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Tenants module",
+      "subtitle": "Features and permissions",
+      "clips": [
+        {
+          "id": "02-module",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "module-1",
+              "text": "The Tenants module groups several features. The one named Tenants adds the Multi-Tenancy menu, where you manage the tenants of the application."
+            },
+            {
+              "id": "module-2",
+              "text": "Tenant Feature Profiles limits the features that each tenant can use. Distributed Tenants keeps tenant states in sync, and needs a distributed cache and a stateless configuration. Like Tenants, both are available only on the Default tenant."
+            },
+            {
+              "id": "module-3",
+              "text": "Static File Provider serves static files from a folder of each tenant, so two tenants can have files with the same name. You enable it on each tenant that needs its own files."
+            },
+            {
+              "id": "module-4",
+              "text": "Managing tenants requires the Manage tenants permission, and managing feature profiles requires Manage tenant feature profiles. The Administrator role has both permissions by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable the Tenants feature",
+      "subtitle": "Tools, Features",
+      "short": "enable-tenants",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, then Features, on the Default tenant, and search for tenants. The features of the module are among the results, grouped by category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Tenants is listed under the Infrastructure category. Let's select Enable."
+            },
+            {
+              "id": "enable-3",
+              "text": "The page confirms that the feature was enabled, and the admin menu shows a Multi-Tenancy section with Tenants inside it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The list of tenants",
+      "subtitle": "Multi-Tenancy, Tenants",
+      "short": "tenants-list",
+      "clips": [
+        {
+          "id": "04-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Multi-Tenancy, Tenants lists every tenant of the application. Each row shows the tenant's name, with badges for its state and, when they are set, its category, database provider, and recipe. The description and host name, if any, appear below."
+            },
+            {
+              "id": "list-2",
+              "text": "The search box finds tenants by name, host name, or URL prefix. The Category, State, and Sort menus narrow and order the list. Selecting a state badge shows only the tenants in that state."
+            },
+            {
+              "id": "list-3",
+              "text": "To act on several tenants at once, select their checkboxes. The Actions menu then offers Disable and Enable for the selected tenants."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "States and actions",
+      "subtitle": "The buttons of each state",
+      "short": "tenant-actions",
+      "clips": [
+        {
+          "id": "05-actions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "actions-1",
+              "text": "The buttons of a row depend on the state of the tenant. The Default tenant has Edit, View, and Reload. It has no Disable button, because the Default tenant cannot be disabled."
+            },
+            {
+              "id": "actions-2",
+              "text": "A Running tenant such as Bakery adds Disable and Features. Features manages the features of that tenant from the Default tenant. View opens the site of the tenant, which the same application serves under its URL prefix."
+            },
+            {
+              "id": "actions-3",
+              "text": "A Disabled tenant such as Studio has Enable instead of View, Disable, and Features. An Uninitialized tenant such as Workshop has Setup instead, which opens its setup screen. Remove appears only for these two states, and only when tenant removal is allowed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add Tenant",
+      "subtitle": "The form and its buttons",
+      "short": "add-tenant",
+      "clips": [
+        {
+          "id": "06-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Add Tenant opens the form. The Name identifies the tenant and cannot be changed later. Category and Description are shown in the list, and the category is also a filter."
+            },
+            {
+              "id": "add-2",
+              "text": "Url Prefix and Hostname decide which requests the tenant answers. The prefix is a single path segment, and no two tenants can share the same host and prefix."
+            },
+            {
+              "id": "add-3",
+              "text": "The Recipe and database settings preset the setup screen of the tenant. Create saves the tenant as Uninitialized, and Create & Setup also opens its setup screen. Cancel leaves the form without saving."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Tenants module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Tenants let one application host many separate sites, and you manage them from the Default tenant. Creating, managing, and limiting tenants each have a video of their own. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
