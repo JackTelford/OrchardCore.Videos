@@ -1,0 +1,215 @@
+{
+  "title": "Bag Part: Embed Content Items Inside a Content Item",
+  "output": "flows-bag-part",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Bag Part: Content Items Inside a Content Item",
+      "subtitle": "Content items that live inside another content item",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A help page can hold questions and tips that editors add, reorder, and remove inside the page. The Bag part of the Flows module makes that possible. We add a Bag to a content type, fill it, and see it on the site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a Bag part is",
+      "subtitle": "A content part that holds content items",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "bag-1",
+              "text": "A content part adds one capability to a content type. The Bag part lets a content item hold other content items, of the content types you choose. Editors add them from the page's own editor."
+            },
+            {
+              "id": "bag-2",
+              "text": "The items are stored inside the page's own document, so they are saved and published with it. Each item is a full content item, with its own parts and fields."
+            },
+            {
+              "id": "bag-3",
+              "text": "The Flows module has a second part, the Flow part. A Flow part holds widgets, each with an alignment and a size. A Bag part holds items of the content types you choose and has no layout settings."
+            },
+            {
+              "id": "bag-4",
+              "text": "The Bag part comes with the Flows feature. Recipes such as Blog enable it. On any other site, you enable Flows under Tools, Features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add a Bag to a content type",
+      "subtitle": "Choose which content types it holds",
+      "clips": [
+        {
+          "id": "02-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Under Design, Content Definition, Content Types, we see every content type. We select Create new type, name it Help Page, and select Create."
+            },
+            {
+              "id": "add-2",
+              "text": "The Add Parts page lists the parts a type can use. We tick Title, so every page has a name, and select Add Selected Parts."
+            },
+            {
+              "id": "add-3",
+              "text": "We add the bag as a named part, so the type could hold several bags. On the Edit Content Type page, we select Add Named Part."
+            },
+            {
+              "id": "add-4",
+              "text": "We call the part Help Items and describe it. The Bag part is selected. Save & Configure opens its settings."
+            },
+            {
+              "id": "add-5",
+              "text": "Contained Content Types offers two choices, Content Types and Stereotype. We keep Content Types, and tick Question and Tip, two content types that already exist on this site and that this bag will hold."
+            },
+            {
+              "id": "add-6",
+              "text": "Display Type is the display type the site uses for each item, and an empty value means Summary. Collapse Contained Items makes saved items start collapsed when the editor opens. We tick it."
+            },
+            {
+              "id": "add-7",
+              "text": "The editor stays Standard. Selecting Save stores the settings and returns to the type, which lists Title and Help Items."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add items to a page",
+      "subtitle": "Fill the bag in the content editor",
+      "clips": [
+        {
+          "id": "03-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "Under Content, Content Items, the New button lists the content types we can create. We choose Help Page."
+            },
+            {
+              "id": "edit-2",
+              "text": "We type a title, Account Help. The Help Items bag is empty. Because it accepts two content types, its button is Add Item."
+            },
+            {
+              "id": "edit-3",
+              "text": "Add Item lists the two types. We choose Question. A card opens with the fields of that content type, a Title and an Answer, and we fill them in."
+            },
+            {
+              "id": "edit-4",
+              "text": "Choosing Tip from Add Item appends a second card at the end of the bag, and we fill in its Title and Details. The items keep the order of the cards."
+            },
+            {
+              "id": "edit-5",
+              "text": "We select Publish. The items are saved and published together with the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Reorder and remove items",
+      "subtitle": "Manage the items of a saved page",
+      "clips": [
+        {
+          "id": "04-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "When we edit the page again, the saved items load collapsed, because of the setting we ticked. The arrow on a card expands it."
+            },
+            {
+              "id": "manage-2",
+              "text": "The handle at the left of a card moves it. We drag the Tip above the Question, and the order of the items changes."
+            },
+            {
+              "id": "manage-3",
+              "text": "The red trash button removes an item, after asking for confirmation. We cancel, so the item stays."
+            },
+            {
+              "id": "manage-4",
+              "text": "Publish saves the reordered items together with the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The bag on the site",
+      "subtitle": "How the items are displayed",
+      "clips": [
+        {
+          "id": "05-view",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "In the Content Items list, View opens the published page in another tab. Under the title, the site shows the items of the bag in the order of the editor, the Tip first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The Blocks editor",
+      "subtitle": "Pick a content type from a dialog",
+      "clips": [
+        {
+          "id": "06-blocks",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "blocks-1",
+              "text": "The Bag part has a second editor. In the part's settings, the question What type of editor should be used? offers Standard and Blocks. We choose Blocks, and two more settings appear: Add Button Text and Modal Title Text."
+            },
+            {
+              "id": "blocks-2",
+              "text": "We leave both empty, which keeps the defaults, Add Block and Select Block, and select Save."
+            },
+            {
+              "id": "blocks-3",
+              "text": "In the page editor, the button reads Add Block. It opens a dialog with a card for each content type. Selecting Add on a card adds an item to the bag."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Bag Part: Content Items Inside a Content Item",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Bag part keeps a group of content items inside a page, and editors manage them in the page's own editor. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

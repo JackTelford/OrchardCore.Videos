@@ -1,0 +1,54 @@
+{
+  "title": "Bag Part: Embed Content Items Inside a Content Item | Orchard Core",
+  "description": "A page often needs a group of related items, such as questions and tips, that belong to that page and nowhere else. Creating each one as a separate content item and linking it to the page adds work for editors.\n\nThe Bag part of the Orchard Core Flows module holds content items of the content types you choose inside another content item. Editors add, reorder, and remove them in the page's own editor, and the site displays them with the page.\n\nIn this video:\n• What a Bag part is, and how it differs from the Flow part\n• Adding a Bag to a content type and choosing the content types it holds\n• Adding items to a page\n• Reordering and removing items\n• How the bag is displayed on the site\n• The Blocks editor, a dialog for picking a content type",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Flows",
+    "Bag part",
+    "Content parts",
+    "Content types",
+    "Content editing"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Flows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Bag part",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/BagPart/"
+    },
+    {
+      "label": "Documentation: Flows",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Flow/BagPart.md",
+    "src/docs/reference/modules/Flow/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Flows"
+  }
+}
