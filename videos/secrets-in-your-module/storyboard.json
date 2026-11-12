@@ -1,0 +1,254 @@
+{
+  "title": "Secrets in Your Module",
+  "output": "secrets-in-your-module",
+  "spoken": {
+    "OrchardCore.Secrets.Abstractions": "Orchard Core Secrets Abstractions",
+    "SecretMigrationItem_Edit": "Secret Migration Item Edit",
+    "SecretInputViewModel": "Secret Input View Model",
+    "SecretMigration": "Secret Migration",
+    "GetSecretValueAsync": "Get Secret Value Async",
+    "MoveToSecretAsync": "Move To Secret Async",
+    "UpdateAsync": "Update Async",
+    "BuildPrefix": "Build Prefix",
+    "secret-input": "secret input",
+    "secret-name": "secret name"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Secrets in Your Module",
+      "subtitle": "Offer secret inputs in your settings",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A module that keeps a password or an API key in its settings can let users keep it in the Secrets module instead, without depending on it. Let's see what users get, and the code behind it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What users get",
+      "subtitle": "The same field, with and without the Secrets feature",
+      "clips": [
+        {
+          "id": "01-without",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "editor-1",
+              "text": "Here are the SMTP email settings, under Settings, Communication, Email. They follow the pattern this video describes. Without the Secrets feature, the Password field is a password input."
+            },
+            {
+              "id": "editor-2",
+              "text": "Let's type a value, and save. It's protected with Data Protection and kept in the settings. The field then says the value is securely stored, and leaving it blank keeps it."
+            }
+          ]
+        },
+        {
+          "id": "01-with",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "editor-3",
+              "text": "With the Secrets feature enabled, the same field offers a choice. User-specified value keeps the value in the settings, as we saw. Use a secret references a secret by name."
+            },
+            {
+              "id": "editor-4",
+              "text": "Choosing Use a secret lists the text secrets of the site. Next to the list are a button that reloads it, and New secret, which opens the secret editor in another tab with a suggested name."
+            },
+            {
+              "id": "editor-5",
+              "text": "Let's select a secret, and save. The settings keep only the name of the secret, and the value that was stored with them is removed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Start with the abstractions",
+      "subtitle": "A reference, not a dependency",
+      "clips": [
+        {
+          "id": "02-pieces",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pieces-1",
+              "text": "The OrchardCore.Secrets.Abstractions package provides everything you need: an editor model, a tag helper that renders it, a helper that reads the value at runtime, and a model for the optional Migrate Secrets screen."
+            },
+            {
+              "id": "pieces-2",
+              "text": "Add a reference to that package. Don't add a dependency on the Secrets feature to your manifest: the editor and the runtime helper detect whether the feature is enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Keep the value and the name",
+      "subtitle": "The settings of your module",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Keep the protected value, as a module without secrets would, and add a property for the name of a secret. When a secret is referenced, it takes precedence."
+            },
+            {
+              "id": "settings-2",
+              "text": "Use one constant for the Data Protection purpose, and another for the suggested secret name. Never change the purpose: a value protected with another purpose can't be decrypted, or moved to a secret."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The display driver",
+      "subtitle": "Create the editor model, and apply the posted one",
+      "clips": [
+        {
+          "id": "04-driver",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "driver-1",
+              "text": "The editor model holds a SecretInputViewModel. It carries the source, which is a value or a secret, the typed value, the name of the secret, and whether a value is already kept."
+            },
+            {
+              "id": "driver-2",
+              "text": "The display driver of the settings screen calls Create to build the model from the stored values. The source is Secret when a name is stored, and Value otherwise."
+            },
+            {
+              "id": "driver-3",
+              "text": "When the settings are saved, the driver calls UpdateAsync on the model. It passes the services, a Data Protection protector, the model state, and the full name of the property, so that errors appear next to the field."
+            },
+            {
+              "id": "driver-4",
+              "text": "UpdateAsync rejects a secret that doesn't exist, and a switch back to a value when none is kept. Otherwise it protects a typed value, or keeps the current one. Store the result only when it succeeded."
+            },
+            {
+              "id": "driver-5",
+              "text": "Register the driver as a site display driver, the way any other settings screen is registered."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The view",
+      "subtitle": "Render the editor with a tag helper",
+      "clips": [
+        {
+          "id": "05-view",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "Add the tag helpers of the abstractions to the view imports. Then render the property in a standard row with the secret-input tag helper. Its secret-name attribute is the name suggested when a user creates a secret."
+            },
+            {
+              "id": "view-2",
+              "text": "The tag helper decides what to render. Without the Secrets feature, it is a password input. With the feature, it offers the choice between a value and a secret."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Read the value at runtime",
+      "subtitle": "One call, with or without the Secrets feature",
+      "clips": [
+        {
+          "id": "06-runtime",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "runtime-1",
+              "text": "At runtime, GetSecretValueAsync returns the clear value. It reads the referenced secret when the Secrets feature is enabled and the secret has a value, and otherwise decrypts the protected value."
+            },
+            {
+              "id": "runtime-2",
+              "text": "It returns null when no value is available. An optional logger receives the reason when a referenced secret can't be read or a protected value can't be decrypted, never the value."
+            },
+            {
+              "id": "runtime-3",
+              "text": "When the value feeds cached options, request an options update when the settings change, and register a signal change token source for that options type, as the SMTP settings do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Migrate Secrets",
+      "subtitle": "Let users move a stored value to a secret",
+      "clips": [
+        {
+          "id": "07-migrate",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "migrate-1",
+              "text": "Optionally, let users move a stored value to a secret without typing it again, on the Migrate Secrets screen. Add a display driver of SecretMigration, and register it only when the Secrets feature is enabled."
+            },
+            {
+              "id": "migrate-2",
+              "text": "Its editor renders a SecretMigrationItem_Edit shape while a value is kept and no secret is referenced. Override BuildPrefix, since several drivers edit one migration, and check the permission that guards your settings."
+            },
+            {
+              "id": "migrate-3",
+              "text": "UpdateAsync moves the selected credential with MoveToSecretAsync. It never overwrites a secret, and records a failed move. The settings reference the secret only once every driver has saved its secrets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Beyond site settings",
+      "subtitle": "The same steps for any stored credential",
+      "clips": [
+        {
+          "id": "08-other",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "other-1",
+              "text": "The same steps apply to a credential kept anywhere else, such as a content part. Keep the protected value and the secret name side by side, edit them with a SecretInputViewModel, and read them with GetSecretValueAsync. Only the driver and the persistence change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Secrets in Your Module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the secret input: keep the protected value and the secret name, offer both in the editor, and read the value at runtime, with or without the Secrets feature. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
