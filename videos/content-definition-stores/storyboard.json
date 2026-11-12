@@ -129,7 +129,7 @@
             },
             {
               "id": "import-2",
-              "text": "The page reports that the deployment package was imported. Back in Content Types, searching for Event finds the type. The definitions are in the database, and the site no longer reads the file."
+              "text": "The page reports that the deployment package was imported. Back in Content Types, searching for Event finds the type. The definitions are in the database, and the site reads them from there."
             }
           ]
         }
@@ -146,7 +146,7 @@
           "steps": [
             {
               "id": "profile-1",
-              "text": "On the Default tenant, with Tenant Feature Profiles enabled, a feature profile can keep the file store out of other tenants. Its rules exclude features by id, and a tenant given the profile cannot enable them."
+              "text": "On the Default tenant, with Tenant Feature Profiles enabled, a feature profile restricts the features of the tenants given it. This Feature Profiles recipe step has an Exclude rule that names File Content Definition by its id, so those tenants cannot enable it."
             }
           ]
         }

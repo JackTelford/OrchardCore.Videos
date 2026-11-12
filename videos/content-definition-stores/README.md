@@ -1,6 +1,6 @@
 # Content Definition Stores: Keep Types in the Database or a File
 
-**YouTube:** not published yet · **Length:** 3:50 · **Feature:** `OrchardCore.Contents.FileContentDefinition` ([Understanding Content Definition Stores](https://docs.orchardcore.net/en/latest/guides/content-definitions/))
+**YouTube:** not published yet · **Length:** 3:52 · **Feature:** `OrchardCore.Contents.FileContentDefinition` ([Understanding Content Definition Stores](https://docs.orchardcore.net/en/latest/guides/content-definitions/))
 
 A developer video about where a tenant's content definition is kept. It shows the content definition record and the
 `IContentDefinitionStore` that reads and writes it, how the File Content Definition feature replaces the database store with a
