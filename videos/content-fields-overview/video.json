@@ -1,0 +1,52 @@
+{
+  "title": "Content Fields: Text, Numbers, Dates and Yes or No | Orchard Core",
+  "description": "A content type needs places to keep its data: a name, a number of seats, a date, a yes or no answer. Content fields are those places, and each one has a type that fits its value.\n\nThe Content Fields feature of Orchard Core provides these typed fields. Their settings can make a value required, limit a number to a range, give a field a default value, or add a hint for editors, and the editor and the site show each value in the form that fits its type.\n\nIn this video:\n• What a content type, a part and a field are\n• Finding the Content Fields feature and opening a content type\n• Adding a Text Field and its settings\n• Adding a Numeric Field with a scale, a minimum and a maximum\n• Adding a Boolean Field with a label and a default value\n• Adding a Date Field, a Date Time Field and a Time Field\n• Filling in a content item, and what validation refuses\n• How the values appear on the site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "content fields",
+    "content types",
+    "Text Field",
+    "Numeric Field",
+    "Boolean Field",
+    "Date Field",
+    "Date Time Field",
+    "Time Field"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Fields"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentFields/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentFields/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentFields"
+  }
+}
