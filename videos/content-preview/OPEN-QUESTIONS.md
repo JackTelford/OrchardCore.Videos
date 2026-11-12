@@ -38,8 +38,8 @@ narration step named in brackets must change before the clip is recorded.
   `ready` (`preview-swap.ts:54-57`), the editor sends the form (`contentpreview.edit.js:43-44`), and the `token` message
   hides the alert (`preview-swap.ts:59-62`).
 - Confirm: after **Cancel**, the alert is on screen in the preview window; and after opening Article 1 for editing again,
-  without selecting **Preview**, the same window shows the page again and the alert disappears. The last sentence of
-  `live-6` ("Opening the article in the editor again reconnects the window") depends on it; it was not run.
+  without selecting **Preview**, the same window shows the page again and the alert disappears. The reconnection is not narrated (the sentence was removed
+  in review because it was not run); add it to `live-6` only if this check passes.
 
 ## 4. Preview Draft and View (`draft-2`, `draft-3`)
 

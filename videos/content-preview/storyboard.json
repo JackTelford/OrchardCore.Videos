@@ -93,7 +93,7 @@
             },
             {
               "id": "live-6",
-              "text": "In the preview window, a Preview Disconnected message appears, because you left the editor. Opening the article in the editor again reconnects the window."
+              "text": "In the preview window, a Preview Disconnected message appears, because you left the editor."
             }
           ]
         }
@@ -164,7 +164,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "Preview checks your changes while you edit, and Preview Draft checks the version you saved. Both show the content before it goes live. Thanks for watching."
+              "text": "Preview checks your changes while you edit, and Preview Draft checks the version you saved, both before anything goes live. Thanks for watching."
             }
           ]
         }

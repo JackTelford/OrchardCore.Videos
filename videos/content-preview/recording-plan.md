@@ -195,11 +195,7 @@ Both pages are in one context, so the editor and the preview window share the br
   left (the `pagehide` event), which **Cancel** does by loading the list.
 - Labels: "Preview Disconnected" from `OrchardCore.ContentPreview/Views/Preview/Index.cshtml:11`; the message is posted
   by `OrchardCore.ContentPreview/Assets/js/contentpreview.edit.js:122` and shown by
-  `OrchardCore.ContentPreview/Assets/ts/preview-swap.ts:82`. The sentence "Opening the article in the editor again
-  reconnects the window" is not recorded. It follows the messages of the code: the editor posts `hello` when its page
-  loads (`contentpreview.edit.js:52`), an open window answers `ready` (`preview-swap.ts:54-57`), the editor then sends
-  the form (`contentpreview.edit.js:43-44`), and the `token` message hides the alert (`preview-swap.ts:59-62`).
-  Confirm it by hand (OPEN-QUESTIONS.md).
+  `OrchardCore.ContentPreview/Assets/ts/preview-swap.ts:82`. Reconnecting by opening the article in the editor again is not narrated.
 
 ## Clip 04-draft (chapter 04, Preview a saved draft)
 

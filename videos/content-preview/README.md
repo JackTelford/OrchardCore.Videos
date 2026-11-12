@@ -1,6 +1,6 @@
 # Content Preview: See Your Changes Before You Publish
 
-**YouTube:** not published yet · **Length:** 3:32 · **Feature:** [OrchardCore.ContentPreview](https://docs.orchardcore.net/en/latest/reference/modules/ContentPreview/)
+**YouTube:** not published yet · **Length:** 3:26 · **Feature:** [OrchardCore.ContentPreview](https://docs.orchardcore.net/en/latest/reference/modules/ContentPreview/)
 
 This video shows the two previews of a content item. Preview, in the editor, opens a separate window that follows the
 form while you type, without saving anything. Preview Draft, in the content items list, opens the saved draft as a
