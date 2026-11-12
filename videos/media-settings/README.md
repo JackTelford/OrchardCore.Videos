@@ -1,6 +1,6 @@
 # Media Settings: Options, Allowed Files and the Media API
 
-**YouTube:** not published yet · **Length:** 4:40 · **Feature:** `OrchardCore.Media` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Media/))
+**YouTube:** not published yet · **Length:** 4:42 · **Feature:** `OrchardCore.Media` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Media/))
 
 The video shows the Options and API pages under Settings, Media. The Options page is read-only: it displays the values the site
 uses for allowed and restricted file extensions, upload limits, caching and storage. The API page holds the one setting

@@ -154,7 +154,7 @@
             },
             {
               "id": "api-3",
-              "text": "Bearer uses OAuth2 bearer tokens. It needs the OpenID Connect Token Validation feature and a registered client. Without that setup, the Media Library cannot sign in, and it tells you to check OpenID Connect or switch back to Cookie."
+              "text": "Let's choose Bearer, without saving. It uses OAuth2 bearer tokens and needs the OpenID Connect Token Validation feature and a registered client. Without that setup, the Media Library cannot sign in, and it tells you to check OpenID Connect or switch back to Cookie."
             },
             {
               "id": "api-4",
