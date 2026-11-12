@@ -6439,9 +6439,9 @@
     "docs": [
       "src/docs/reference/modules/ContentFields/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 7,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 7.3,
+    "words": 1094,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

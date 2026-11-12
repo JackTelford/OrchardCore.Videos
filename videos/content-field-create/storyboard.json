@@ -1,0 +1,259 @@
+{
+  "title": "Write a Content Field With Its Editor and Settings",
+  "output": "content-field-create",
+  "spoken": {
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Write a Content Field",
+      "subtitle": "Class, display driver, views, settings and editors",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A content field is a named, typed piece of data that a content part carries. In this video, you read the pieces of a field: its class, display driver, views, settings and editors. Then you see them at work in the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a field is",
+      "subtitle": "The pieces you write",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A content field is a class that inherits from Content Field. Its properties are the data, saved as JSON in the content item, under the part that carries the field, by the name of the field."
+            },
+            {
+              "id": "idea-2",
+              "text": "The class does not say where it is used. A part definition lists its fields, with a technical name, a display name, an editor, a display mode and settings for each. A content type keeps its own fields in a part with its name."
+            },
+            {
+              "id": "idea-3",
+              "text": "Four pieces make a field: the class that holds the data, a display driver that displays, edits and updates it, views that draw each shape, and a settings driver that edits the options. Registration in Startup ties them together."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The field class",
+      "subtitle": "Data and settings",
+      "clips": [
+        {
+          "id": "02-class",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "class-1",
+              "text": "Take the Boolean field of the Content Fields module, which has all four pieces. Its class inherits from Content Field and has one property, Value. The content item serializes that property with the rest of its data."
+            },
+            {
+              "id": "class-2",
+              "text": "Settings are a second class, inheriting from Field Settings, which already has Hint and Required. The Boolean field adds a Label and a Default Value. They belong to the definition of the field, not to a content item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The display driver",
+      "subtitle": "Display, edit and update",
+      "clips": [
+        {
+          "id": "03-driver",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "driver-1",
+              "text": "The display driver inherits from Content Field Display Driver of the field type. Display builds the front end, Edit builds the editor, and Update Async applies the posted form. Each method returns a display result."
+            },
+            {
+              "id": "driver-2",
+              "text": "Display creates a shape, which a template renders, with Initialize. Get Display Shape Type names it after the field type and display mode, and the lambda fills its view model. Location puts it in the Content zone, for the Detail and Summary display types."
+            },
+            {
+              "id": "driver-3",
+              "text": "Edit builds the editor shape the same way, and Get Editor Shape Type adds the chosen editor to the name. For an item that is being created, the value starts from the default in the settings. Otherwise, it starts from the field."
+            },
+            {
+              "id": "driver-4",
+              "text": "Update Async copies the posted value into the field. The prefix, built from the part name and the field name, keeps form names apart. Return the editor: the base class applies the field to its part only when the result is not null."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The views",
+      "subtitle": "One template for each shape",
+      "clips": [
+        {
+          "id": "04-views",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "views-1",
+              "text": "Each shape has a view model. The editor one carries the value to bind, with the field, its part and its part field definition. The display one exposes the same value, read from the field."
+            },
+            {
+              "id": "views-2",
+              "text": "A template's file name gives its shape type: Boolean Field is the front end, and Boolean Field dot Edit is the editor. The editor template binds a checkbox to Value, and labels it with the Label setting or, if empty, the field's display name."
+            },
+            {
+              "id": "views-3",
+              "text": "The display template prints the value inside a div, with a class made from the part and field names. Templates in the Views folder of an enabled feature are found by their file names, with no registration."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The settings",
+      "subtitle": "Options stored in the field definition",
+      "clips": [
+        {
+          "id": "05-settings",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "A settings driver inherits from Content Part Field Definition Display Driver of the field type. Edit builds the settings editor with Initialize, fills it from Get Settings of the part field definition, and places it in the Content location."
+            },
+            {
+              "id": "settings-2",
+              "text": "Update Async reads the form into a settings object. With Settings, on the builder, stores it in the definition of the field. Returning Edit gives back the editor, which the page shows again when the form has errors."
+            },
+            {
+              "id": "settings-3",
+              "text": "The settings view is a template named after its shape, with one input each for the hint, the label and the default value. The admin shows them as Hint, Label, and a check box labeled Default value is true."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Registration",
+      "subtitle": "Tell Orchard Core about the field",
+      "clips": [
+        {
+          "id": "06-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "In the Startup class of your module, Add Content Field registers the type. Use Display Driver attaches the display driver to every editor and display mode. The settings driver is a scoped service of I Content Part Field Definition Display Driver."
+            },
+            {
+              "id": "register-2",
+              "text": "Registering the type is what lists it under Field Type when you add a field to a content type. Depend on the Content Types feature in the manifest of your module, as the Content Fields module does. A separate video covers creating a module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Editors and display modes",
+      "subtitle": "Alternatives for the same field",
+      "clips": [
+        {
+          "id": "07-editors",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "editors-1",
+              "text": "A field can have several editors. The Switch editor of the Boolean field is two templates. The one named Boolean Field, a dash, Switch, dot Edit draws the switch, and its Option template adds Switch to the list of editors."
+            },
+            {
+              "id": "editors-2",
+              "text": "The driver does not change. Get Editor Shape Type adds the editor name to the shape type, so the Switch template is found, and Use Display Driver registered the driver for every editor."
+            },
+            {
+              "id": "editors-3",
+              "text": "Display modes follow the same pattern, with a Display template and a Display Option template. An editor or a display mode can have its own settings. The Header mode of the Text field uses the Display Mode location for its heading level."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "The field in the admin",
+      "subtitle": "What the pieces produce",
+      "clips": [
+        {
+          "id": "08-admin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "admin-1",
+              "text": "The pieces on the slides show up in the admin. This Event content type has the Title and Autoroute parts, and its Fields list is empty. Let's select Add Field."
+            },
+            {
+              "id": "admin-2",
+              "text": "The Field Type list holds every field type that an enabled module registered with Add Content Field. Let's name the field Featured, choose Boolean Field, and select Save & Configure."
+            },
+            {
+              "id": "admin-3",
+              "text": "The settings page shows the settings of the Boolean field. Hint, Label and a check box labeled Default value is true come from the settings view, and the settings driver saves them. Let's set a label, and tick the check box."
+            },
+            {
+              "id": "admin-4",
+              "text": "The next label asks What type of editor should be used? Its list has one entry for each Option template of the field: Standard and Switch. Let's choose Switch."
+            },
+            {
+              "id": "admin-5",
+              "text": "The next label asks What type of display mode should be used? Its list has only Standard, because the Boolean field has one Display Option template. Let's save the settings."
+            },
+            {
+              "id": "admin-6",
+              "text": "The type editor lists the field with its display name, its type, and a badge for its editor, Switch."
+            },
+            {
+              "id": "admin-7",
+              "text": "Next, the content editor. The switch is on, because the item is being created and the default value is true, and its label is the one set in the settings. Let's enter a title, and publish."
+            },
+            {
+              "id": "admin-8",
+              "text": "On the front end, the Content zone of the item holds the field, and the display template prints its value."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Write a Content Field",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is a content field: a class, a display driver, views, settings and a registration in Startup, with editors and display modes added as templates. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
