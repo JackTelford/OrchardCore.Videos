@@ -138,9 +138,9 @@
     "docs": [
       "src/docs/reference/modules/Settings/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.3,
+    "words": 793,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

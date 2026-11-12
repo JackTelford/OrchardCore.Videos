@@ -1,0 +1,227 @@
+{
+  "title": "Orchard Core site settings",
+  "output": "site-settings-general",
+  "spoken": {
+    "Base url": "Base U.R.L.",
+    "base url": "base U.R.L.",
+    "Europe/London": "Europe London"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core site settings",
+      "subtitle": "Name, time zone, page size and more",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every Orchard Core site keeps its name, its time zone, and the number of items an admin list shows in one place: the General settings. In this video, we'll open that page and go through what each setting does."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What the settings are",
+      "subtitle": "One set of options for the whole site",
+      "clips": [
+        {
+          "id": "01-about",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "about-1",
+              "text": "Site settings are one set of options that apply to the whole site. They include the site name, the default time zone, the page size of lists in the admin, and how scripts, stylesheets, and caches behave."
+            },
+            {
+              "id": "about-2",
+              "text": "You find them in the admin menu under Settings, General. The page has three tabs: Site, Resources, and Cache. Other modules add pages of their own under Settings."
+            },
+            {
+              "id": "about-3",
+              "text": "The page needs the Manage general settings permission. The Manage settings permission includes it, and the Administrator role has both by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Open the General settings",
+      "subtitle": "Settings, General",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "In the admin menu, let's open Settings and choose General."
+            },
+            {
+              "id": "open-2",
+              "text": "The page is titled Settings. A warning at the top says the website might restart when you save, which can make it unresponsive for a moment."
+            },
+            {
+              "id": "open-3",
+              "text": "The fields are grouped in three tabs: Site, Resources, and Cache. A single Save button at the bottom saves the changes of all three."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Site name, page title and base url",
+      "subtitle": "The Site tab",
+      "clips": [
+        {
+          "id": "03-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "On the Site tab, Site name is the name that the admin and the themes show for the site. Let's replace it with Harbor Lane Journal."
+            },
+            {
+              "id": "site-2",
+              "text": "Page title format sets how the Blog theme, the theme of this site, builds the title of the browser tab. A site starts with a format that adds the site name after the page title. Let's leave it as it is."
+            },
+            {
+              "id": "site-3",
+              "text": "Base url is the full address of the site. A background task runs on its own, without a visitor's request, so when Base url is set, the site uses it as the address there. Let's leave it empty."
+            },
+            {
+              "id": "site-4",
+              "text": "Let's save. A message reads, Site settings updated successfully, and the name in the top bar of the admin changes to Harbor Lane Journal."
+            },
+            {
+              "id": "site-5",
+              "text": "The Visit Site icon opens the front end, the public side of the site, where the Blog theme shows the same name at the top of the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Default time zone",
+      "subtitle": "Dates and times",
+      "clips": [
+        {
+          "id": "04-zone",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "zone-1",
+              "text": "Default Time Zone, also on the Site tab, is the time zone the site uses to display and edit dates and times. Daylight saving time is applied automatically for the zones that have it."
+            },
+            {
+              "id": "zone-2",
+              "text": "Each entry shows a time zone's name, its standard offset from GMT, and a second offset that includes daylight saving time while it is in effect. Local to server uses the time zone of the machine that runs the site."
+            },
+            {
+              "id": "zone-3",
+              "text": "Let's choose Europe/London and save. The drop-down list shows the entry for that zone, with its offsets."
+            },
+            {
+              "id": "zone-4",
+              "text": "A time zone set on a user, when the User Time Zone feature is enabled, takes priority over this default for that user."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Page size",
+      "subtitle": "How many items an admin list shows",
+      "clips": [
+        {
+          "id": "05-size",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "size-1",
+              "text": "This is the Manage Content page, which the Content Items menu entry opens. It shows one page of items, and the pager leads to the rest."
+            },
+            {
+              "id": "size-2",
+              "text": "Back in Settings, General, Page size is the default number of items on one page of a list. Let's set it to 5 and save. A page size below 1 is refused, and so is one above the maximum page size of the site."
+            },
+            {
+              "id": "size-3",
+              "text": "Back on the list, each page holds 5 items, and the pager shows more pages."
+            },
+            {
+              "id": "size-4",
+              "text": "Back in Settings, General, Page size selection lets users choose a page size themselves. Let's check Allow users to change the page size on listing pages. A Page size options field appears."
+            },
+            {
+              "id": "size-5",
+              "text": "Let's enter 25, 5, 10 and save. Page size options comes back sorted, as 5, 10, 25. These are the sizes users can choose from."
+            },
+            {
+              "id": "size-6",
+              "text": "Back on the list, an Items per page selector sits next to the pager. Let's choose 10, and the list reloads with 10 items on each page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Resources and caches",
+      "subtitle": "The Resources and Cache tabs",
+      "clips": [
+        {
+          "id": "06-resources",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "res-1",
+              "text": "The Resources tab has settings for scripts and stylesheets. Use resources cache busting appends a version to the addresses of local scripts and stylesheets, so browsers load changed files. It is on by default."
+            },
+            {
+              "id": "res-2",
+              "text": "Use framework CDN (Content Delivery Network) loads registered scripts and stylesheets, such as jQuery, from a CDN instead of the local copy."
+            },
+            {
+              "id": "res-3",
+              "text": "Site CDN (Content Delivery Network) base url is a CDN address that prefixes local scripts and stylesheets. It is not applied while Resource Debug Mode, described next, is enabled."
+            },
+            {
+              "id": "res-4",
+              "text": "Resource Debug Mode chooses between debuggable and minified versions of scripts and stylesheets. The default, From environment, is disabled in Production and enabled otherwise."
+            },
+            {
+              "id": "res-5",
+              "text": "On the Cache tab, Cache Mode determines whether the dynamic caches are enabled or disabled. The default, From environment, is enabled in Production and disabled otherwise. Let's leave both tabs unchanged."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core site settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the General settings page: the site name, the default time zone, the page size, and how scripts, stylesheets, and caches behave. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
