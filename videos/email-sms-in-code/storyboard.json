@@ -1,0 +1,212 @@
+{
+  "title": "Send Email, SMS and Notifications From Your Module",
+  "output": "email-sms-in-code",
+  "spoken": {
+    "Bcc": "B.C.C.",
+    "Cc": "C.C.",
+    "Html": "H.T.M.L.",
+    "Url": "U.R.L."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Email, SMS and Notifications in Code",
+      "subtitle": "Three services for the messages of your module",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core modules send messages through three services: email, SMS, and notifications. In this video, you inject each service in your own module, send a message, check the result, and register a notification type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Three services",
+      "subtitle": "One pattern for every message",
+      "clips": [
+        {
+          "id": "01-services",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "services-1",
+              "text": "The Email module provides I Email Service, the SMS module provides I SMS Service, and the Notifications module provides I Notification Service. You inject the one you need, and call Send Async."
+            },
+            {
+              "id": "services-2",
+              "text": "Email and SMS return a Result. Check Succeeded, and read Errors when it is false. A notification returns a Notification Send Result, which counts the methods that sent it and the methods that failed."
+            },
+            {
+              "id": "services-3",
+              "text": "Declare the features your module uses in its manifest, and the Features page enables them together with your module. Email Notifications and SMS Notifications are separate features, and each one adds a notification method."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Send an email",
+      "subtitle": "IEmailService and MailMessage",
+      "clips": [
+        {
+          "id": "02-email",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "email-1",
+              "text": "Inject I Email Service in the class that sends the message. The Email module registers it, so the constructor is all your code needs. The site settings select the default provider."
+            },
+            {
+              "id": "email-2",
+              "text": "Create a Mail Message. To, Cc, and Bcc take one or more addresses, separated by commas or semicolons. Set a Subject, and an Html Body, a Text Body, or both."
+            },
+            {
+              "id": "email-3",
+              "text": "Send Async returns a Result, so check Succeeded. The service validates every address first. It requires at least one recipient in To, Cc, or Bcc, and reports problems as errors in the result."
+            },
+            {
+              "id": "email-4",
+              "text": "Pass the technical name of a provider, such as SMTP, to skip the default provider. A name that no provider uses throws an exception. A shorter overload takes the recipient, the subject, and the body."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Send an SMS",
+      "subtitle": "ISmsService and SmsMessage",
+      "clips": [
+        {
+          "id": "03-sms",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sms-1",
+              "text": "I SMS Service works the same way. Create an SMS Message with the phone number in To, including the country code, and the text in Body. From is optional: the provider uses its own number when empty."
+            },
+            {
+              "id": "sms-2",
+              "text": "I SMS Service has no provider argument. It uses the default SMS provider that the site settings select. A shorter overload takes the phone number and the text."
+            },
+            {
+              "id": "sms-3",
+              "text": "Providers validate differently. The Azure Communication Services provider returns a failed result for a missing number or body, but the Twilio provider throws an exception. Check the number and the body before you send."
+            },
+            {
+              "id": "sms-4",
+              "text": "While you develop, the Log provider writes each message to the application log instead of sending it. It is registered only in the Development environment, and you select it as the default SMS provider."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Notify a user",
+      "subtitle": "INotificationService and NotificationMessage",
+      "clips": [
+        {
+          "id": "04-notify",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "notify-1",
+              "text": "A notification is stored in the notification center of a user, then sent with each notification method that user receives. Inject I Notification Service, and pass the user as a User object."
+            },
+            {
+              "id": "notify-2",
+              "text": "Build a Notification Message. The Subject is plain text, and the Summary can hold Html markup. Email and SMS send the Text Body, and email sends the Html Body instead when Is Html Preferred is true and the Html Body is not empty."
+            },
+            {
+              "id": "notify-3",
+              "text": "Send Async returns a Notification Send Result, whose Notification property is the stored notification. Status is Success, Partially Successful, Failed, or None when no method was available. Errors says why a method failed."
+            },
+            {
+              "id": "notify-4",
+              "text": "Which methods run depends on the enabled features and the preferences of the user. A method that cannot reach the user, such as email without an address, fails alone, and the notification stays in the notification center."
+            },
+            {
+              "id": "notify-5",
+              "text": "Do not confuse notifications with I Notifier. I Notifier shows a short message in the page the user sees next, such as a confirmation after a save. It is not kept in the notification center."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Notification types",
+      "subtitle": "Register a type and keep notifications in sync",
+      "clips": [
+        {
+          "id": "05-types",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "A type names the notifications of your module. Register it in your startup with Add Notification Type, a technical name, and a display name. Keep the technical name in a constant, since each notification stores it."
+            },
+            {
+              "id": "types-2",
+              "text": "The display name labels the notifications and fills the Type filter of the notification center. It also appears in the preferences of each user when a notification method is enabled, and Disabled Methods turns a method off by default for this type."
+            },
+            {
+              "id": "types-3",
+              "text": "On the message, set the Type, a Reference Id for the record the notification is about, and a Url that opens when the user selects it. The type is limited to 64 characters, and the reference id to 255."
+            },
+            {
+              "id": "types-4",
+              "text": "When the record changes, inject I Notification Manager. Delete, mark as read, or list the notifications with a filter on the user, the type, and the reference id. At least one of them is required."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Extension points",
+      "subtitle": "Providers, methods and events",
+      "clips": [
+        {
+          "id": "06-extend",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "extend-1",
+              "text": "To add a provider, implement I Email Provider or I SMS Provider, and register it with a technical name. An enabled provider appears in the default provider list, and email also accepts its name in Send Async."
+            },
+            {
+              "id": "extend-2",
+              "text": "A notification method implements I Notification Method Provider. Register it as a scoped service, and it appears in the preferences of each user. To follow each email as it is sent or fails, implement I Email Service Events."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Email, SMS and Notifications in Code",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's how a module sends email, SMS, and notifications: inject the service, check its result, and register a type for your notifications. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
