@@ -1655,9 +1655,9 @@
       "src/docs/reference/core/file-upload-security.md",
       "src/docs/reference/core/temporary-file-storage.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.3,
+    "words": 802,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

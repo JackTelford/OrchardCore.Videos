@@ -1,0 +1,236 @@
+{
+  "title": "File Upload Security in Orchard Core",
+  "output": "file-upload-security",
+  "spoken": {
+    "IFileEventHandler": "I File Event Handler",
+    "ITempDirectoryProvider": "I Temp Directory Provider",
+    "FileCreationService": "File Creation Service",
+    "FileCreatingResult": "File Creating Result",
+    "CreateFileFromStreamAsync": "Create File From Stream Async",
+    "CreatingAsync": "Creating Async",
+    "CreatedAsync": "Created Async",
+    "CreateAsync": "Create Async",
+    "TryAddTransient": "Try Add Transient",
+    "TryAddEnumerable": "Try Add Enumerable",
+    "ClamAV": "Clam A.V.",
+    "clamd": "clam D.",
+    "TCP": "T.C.P.",
+    "AWS": "A.W.S.",
+    "EFS": "E.F.S."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "File Upload Security in Orchard Core",
+      "subtitle": "Antivirus scanning and temporary files",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A file that a user uploads is untrusted input. This video shows how Orchard Core checks it before storing it, how the ClamAV Antivirus Scanner rejects a test file, and how your own module can use the same checks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Check before you store",
+      "subtitle": "The upload pipeline",
+      "clips": [
+        {
+          "id": "01-pipeline",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "pipeline-1",
+              "text": "Orchard Core runs a pipeline on an upload before the file is stored. FileCreationService passes the stream to each IFileEventHandler in turn, and any handler can reject the file or replace the stream."
+            },
+            {
+              "id": "pipeline-2",
+              "text": "A handler returns a successful result to continue, or a failed result to stop the upload. Only a file that passes is written to the store, and then CreatedAsync tells every handler that the file exists."
+            },
+            {
+              "id": "pipeline-3",
+              "text": "The Media upload API behind the media library, the Media recipe step, Package Import and remote instance import all call it. Resumable uploads from the Media TUS Uploads feature, and direct calls to the media store, skip it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The ClamAV scanner",
+      "subtitle": "A handler that scans with clamd",
+      "clips": [
+        {
+          "id": "02-clamav",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "clamav-1",
+              "text": "The ClamAV Antivirus Scanner feature adds one handler. It streams each file to a clamd service over TCP. A detection rejects the upload, and so does any failure to reach the scanner or read its answer."
+            },
+            {
+              "id": "clamav-2",
+              "text": "Configure the connection under OrchardCore, Antivirus, ClamAV, or with environment variables. Host has no default, so until you set it every scan fails. Port defaults to 3310, and the connect and transfer timeouts to 5 and 30 seconds."
+            },
+            {
+              "id": "clamav-3",
+              "text": "The handler rewinds the stream before and after the scan. A stream that cannot seek is first copied to a temporary file from ITempDirectoryProvider, which is deleted when that stream is closed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Scan an upload",
+      "subtitle": "A clean file and a test file",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "The scanner is configured, so let's enable it. In Tools, Features, the ClamAV Antivirus Scanner is listed in the Security category. Let's search for ClamAV and select Enable."
+            },
+            {
+              "id": "enable-2",
+              "text": "A notification confirms that the feature was enabled. There is nothing else to set in the admin, because the connection comes from the configuration."
+            }
+          ]
+        },
+        {
+          "id": "03-clean",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "upload-1",
+              "text": "In Media, Library, Upload files sends the files you choose to the Media upload API. Let's upload a small spreadsheet of office supplies."
+            },
+            {
+              "id": "upload-2",
+              "text": "The file appears in the library. ClamAV answered OK for it, so the upload continued to the file store."
+            }
+          ]
+        },
+        {
+          "id": "03-test",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "upload-3",
+              "text": "Let's upload a standard antivirus test file next. It is harmless, and antivirus scanners are designed to detect it."
+            },
+            {
+              "id": "upload-4",
+              "text": "The upload is rejected. The Uploads panel counts one error, and its message names the file and the signature that ClamAV detected."
+            },
+            {
+              "id": "upload-5",
+              "text": "The test file was never stored, so it is not in the library. Clear Errors empties the panel."
+            }
+          ]
+        },
+        {
+          "id": "03-down",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "down-1",
+              "text": "The scanner checks each file that arrives at the Media upload API. With the clamd service stopped, let's upload a second clean spreadsheet."
+            },
+            {
+              "id": "down-2",
+              "text": "The upload is rejected again, and the message names the ClamAV antivirus scanner and the file. A scanner that cannot answer stops the upload instead of letting the file through."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Your own upload flow",
+      "subtitle": "Run the pipeline in your module",
+      "clips": [
+        {
+          "id": "04-own",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "own-1",
+              "text": "Code that stores an uploaded file itself calls FileCreationService before the write. CreateAsync takes a context and the stream, and returns a FileCreatingResult that owns the final stream, so declare it with await using."
+            },
+            {
+              "id": "own-2",
+              "text": "If the result did not succeed, stop. Otherwise store the processed stream, then call CreatedAsync. Scan before the permanent write: a file that is stored first and scanned afterward is already persisted."
+            },
+            {
+              "id": "own-3",
+              "text": "FileCreationService is registered by the Media, Deployment and Remote Deployment modules with TryAddTransient, so a module that depends on none of them registers it. In the media store, call the CreateFileFromStreamAsync overload that takes the service. The plain call does not scan."
+            },
+            {
+              "id": "own-4",
+              "text": "A handler of your own implements IFileEventHandler. Return Failed from CreatingAsync, with an error message, to stop the upload, or Success with the stream to continue."
+            },
+            {
+              "id": "own-5",
+              "text": "Register the handler as a singleton with TryAddEnumerable, as the ClamAV feature does, and every FileCreationService call runs it. A handler can also throw, as ClamAV does when the scanner is unreachable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Temporary file storage",
+      "subtitle": "One tenant-scoped location",
+      "clips": [
+        {
+          "id": "05-temp",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "temp-1",
+              "text": "A chunked upload in progress, a resumable upload on the default disk store, an extracted deployment archive and a recipe sent to the tenant setup API each ask ITempDirectoryProvider for a path, not the operating system temporary folder."
+            },
+            {
+              "id": "temp-2",
+              "text": "By default, files go to OrchardCore, Temp, in the user's local application data folder, in one sub-folder per tenant. Set Path in the OrchardCore, TempDirectory section to use a larger or shared volume."
+            },
+            {
+              "id": "temp-3",
+              "text": "The path must be a real file system, because consumers seek inside the files. A mounted file share such as Azure Files or AWS EFS works. Azure Blob and Amazon S3 object storage do not."
+            },
+            {
+              "id": "temp-4",
+              "text": "In your own code, inject ITempDirectoryProvider. Its members return the tenant root folder, a unique file path, or a sub-folder that they create with a unique name. You create, write and delete the files yourself, and the provider does not scan them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "File Upload Security in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Uploads that call FileCreationService are checked before storage, the ClamAV scanner is one handler in that pipeline, and ITempDirectoryProvider hands out temporary paths in one tenant-scoped location. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
