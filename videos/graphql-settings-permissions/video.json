@@ -1,0 +1,55 @@
+{
+  "title": "GraphQL: Settings, Permissions and Hidden Fields | Orchard Core",
+  "description": "A GraphQL endpoint answers any query it accepts, so its limits, its permissions and its schema decide what a client can reach.\n\nThe Orchard Core GraphQL module reads its limits from the configuration, protects the endpoint, mutations and content with permissions, hides content types and parts from the schema in the content type editor, and hides fields, parts and content types in code.\n\nIn this video:\n• Configuration options: result limits, depth, complexity and exception details\n• Permissions: Execute GraphQL, Execute GraphQL Mutations and content permissions\n• Granting a permission to the Anonymous role\n• Hiding a content type, and collapsing or hiding a part, in the content type editor\n• Hiding fields, parts and types in code with the GraphQL content options",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "GraphQL"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "GraphQL",
+    "GraphiQL",
+    "Headless CMS",
+    "API",
+    "Permissions",
+    "Schema"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "GraphQL"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/"
+    },
+    {
+      "label": "GraphQL Abstractions documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL.Abstractions/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Apis.GraphQL/README.md",
+    "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Apis.GraphQL"
+  }
+}
