@@ -1,0 +1,52 @@
+{
+  "title": "Data Pipelines: Import Rows as Content Items | Orchard Core",
+  "description": "Adding a list of records to a site by hand means creating each content item one at a time, and doing it again whenever the list changes.\n\nA data pipeline reads the rows of a CSV file from the media library and creates or updates one content item for each row. Running the pipeline again updates the items it created, and the rows that cannot be saved leave through a Rejected output, with the reason.\n\nIn this video:\n• How an import works: the file, the content type and the pipeline\n• Adding a pipeline and reading a file from the media library\n• Saving the rows as content items: the content type, the match and the values\n• Publishing the pipeline and running it\n• Checking the content items, and running the import again to update them\n• The Rejected output for the rows that cannot be saved",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Data Pipelines",
+    "Import",
+    "CSV",
+    "Content Items"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Data Pipelines"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Data Pipelines",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/"
+    },
+    {
+      "label": "Documentation: Data Sources",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataSources/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DataPipelines/README.md",
+    "src/docs/reference/modules/DataSources/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataPipelines"
+  }
+}
