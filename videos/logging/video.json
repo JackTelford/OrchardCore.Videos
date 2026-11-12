@@ -1,0 +1,53 @@
+{
+  "title": "Logging: Configure NLog and Serilog | Orchard Core",
+  "description": "An Orchard Core deployment can host several tenants, and by default they write to the same log files, so a log line is more useful when it says which tenant wrote it.\n\nOrchard Core offers two logging packages, one for NLog and one for Serilog. Each puts the name of the tenant in the log output, and the Orchard Core CMS project template configures either one.\n\nIn this video:\n• Why the tenant name matters in a log, and the two logging packages\n• Choosing NLog, Serilog or no logger with the project template, and adding a logger to an existing project\n• Configuring NLog: the host call, the configDir variable, the targets, the layout, the tenant name renderer, the rules and the levels\n• Configuring Serilog: the host call, the tenant name middleware, the Serilog section, and the Console and File sinks\n• What differs between the two, and what does not",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Logging"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Logging",
+    "NLog",
+    "Serilog",
+    "Multi-tenancy"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Diagnostics and Logging"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Serilog logging",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Logging.Serilog/"
+    },
+    {
+      "label": "Documentation: Code generation templates",
+      "url": "https://docs.orchardcore.net/en/latest/getting-started/templates/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/getting-started/templates/README.md",
+    "src/docs/reference/modules/Logging.Serilog/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Logging.NLog"
+  }
+}
