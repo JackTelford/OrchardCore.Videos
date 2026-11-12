@@ -14,6 +14,10 @@
     "InstancePrefix": "Instance Prefix",
     "AllowAdmin": "Allow Admin",
     "ShellSettings": "Shell Settings",
+    "OrchardCore": "Orchard Core",
+    "SMTP": "S.M.T.P.",
+    "XML": "X.M.L.",
+    "MyApp": "My App",
     "AOF": "A.O.F.",
     "RDB": "R.D.B."
   },
@@ -50,7 +54,7 @@
             },
             {
               "id": "why-2",
-              "text": "By default, each tenant has its own key ring, in a folder named DataProtection-Keys inside the tenant's folder under App_Data. The application name is the tenant name, so one tenant cannot decrypt what another tenant encrypted. Nothing needs configuring."
+              "text": "By default, each tenant has its own key ring, the set of its keys, in a folder named DataProtection-Keys inside the tenant's folder under App_Data. The application name is the tenant name, so one tenant cannot decrypt what another tenant encrypted. Nothing needs configuring."
             },
             {
               "id": "why-3",
@@ -96,7 +100,7 @@
           "steps": [
             {
               "id": "enable-1",
-              "text": "Features are managed under Tools, Features. Let's search for data protection. Two features remain, both in the Security category: Distributed Data Protection (Azure Storage), and Distributed Data Protection (Redis)."
+              "text": "Features are managed under Tools, Features. Let's search for data protection. Two features match, both in the Security category: Distributed Data Protection (Azure Storage), and Distributed Data Protection (Redis)."
             },
             {
               "id": "enable-2",

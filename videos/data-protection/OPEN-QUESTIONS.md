@@ -70,6 +70,7 @@ before recording. The source is Orchard Core at commit 92db4a83.
 `appsettings.json` as "app settings dot JSON", `OrchardCore.DataProtection.Azure` as "Orchard Core dot Data Protection dot
 Azure", `DataProtection-Keys` as "Data Protection Keys", `dataprotection` as "data protection", and `ConnectionString`,
 `ContainerName`, `BlobName`, `CreateContainer`, `InstancePrefix`, `AllowAdmin` and `ShellSettings` as separate words.
+The map also holds `OrchardCore` as "Orchard Core", `SMTP` as "S.M.T.P.", `XML` as "X.M.L." and `MyApp` as "My App".
 Also listen to "AOF" as "A.O.F." and "RDB" as "R.D.B.", to "Redis", to "Azure Blob Storage", and to the step
 `redis-2`, which reads "DataProtection-Keys" inside a sentence.
 

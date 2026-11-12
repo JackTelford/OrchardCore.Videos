@@ -1,6 +1,6 @@
 # Data Protection Keys: Share Them Across Servers
 
-**YouTube:** not published yet · **Length:** 5:23 · **Feature:** `OrchardCore.DataProtection.Azure` ([Data Protection (Azure Storage)](https://docs.orchardcore.net/en/latest/reference/modules/DataProtection.Azure/)), with `OrchardCore.Redis.DataProtection` ([Redis](https://docs.orchardcore.net/en/latest/reference/modules/Redis/)) and the [Data Protection guide](https://docs.orchardcore.net/en/latest/guides/data-protection/)
+**YouTube:** not published yet · **Length:** 5:25 · **Feature:** `OrchardCore.DataProtection.Azure` ([Data Protection (Azure Storage)](https://docs.orchardcore.net/en/latest/reference/modules/DataProtection.Azure/)), with `OrchardCore.Redis.DataProtection` ([Redis](https://docs.orchardcore.net/en/latest/reference/modules/Redis/)) and the [Data Protection guide](https://docs.orchardcore.net/en/latest/guides/data-protection/)
 
 A video for module and theme authors and for the developers who deploy Orchard Core. It explains what Data Protection
 keys protect, why the default key ring in the local folder of each tenant fails with several servers, and how the
