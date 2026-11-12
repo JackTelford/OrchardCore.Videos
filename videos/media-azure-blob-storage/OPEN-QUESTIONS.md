@@ -24,7 +24,7 @@ person must confirm on a running site before the video is recorded or published.
    image only as "the image that the Azurite documentation names", because the name of the image contains the host name
    of a container registry, a domain outside the three the programme allows. The recording plan names it the same way,
    as `<azurite-image>`.
-3. **Pronunciation.** The voice has to say `Azurite`, `Gen1`, `Gen2`, `Blob`, and the spoken replacements of the
+3. **Pronunciation.** The voice has to say `Azurite`, `Gen1`, `Gen2`, `Blob`, `TUS` (in "Media TUS Uploads", step `svc-2`), and the spoken replacements of the
    storyboard (`IMediaFileStore` as "I Media File Store", `IResizedImageCache` as "I Resized Image Cache", `App_Data` as
    "App Data", `OrchardCore` as "Orchard Core"). Check them with `scripts/pronounce.py` before narrating; no new
    spelling was tried here.
