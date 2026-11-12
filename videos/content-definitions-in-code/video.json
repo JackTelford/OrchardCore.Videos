@@ -1,0 +1,55 @@
+{
+  "title": "Content Definitions in Code: Migrations and Recipes | Orchard Core",
+  "description": "Content types, parts and fields built in the admin live in the database of one site. A module that needs them on every site has to define them in code.\n\nOrchard Core offers two tools for that: a data migration, which alters content definitions through the content definition manager, and a recipe, which holds a longer definition as JSON and is run by a migration. The migration is versioned, so each site catches up on its own.\n\nIn this video:\n• Why define content in code\n• The migration class: manifest, registration and injection\n• Content types: create and configure a type in C#\n• Parts and fields: fields belong to parts\n• Recipes: longer definitions as JSON\n• Versions: every site catches up on its own\n• A migration at work: the SEO module in the admin\n• Reading the values in C#: a class for the part",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CSharp"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "content types",
+    "content parts",
+    "content fields",
+    "data migrations",
+    "recipes",
+    "C#"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Types"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Content Types",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/ContentTypes/"
+    },
+    {
+      "label": "Documentation: Data Migrations",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Migrations/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/ContentTypes/README.md",
+    "src/docs/reference/modules/Migrations/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.ContentTypes"
+  }
+}

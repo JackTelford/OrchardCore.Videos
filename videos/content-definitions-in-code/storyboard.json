@@ -1,0 +1,269 @@
+{
+  "title": "Content Definitions in Code: Migrations and Recipes",
+  "output": "content-definitions-in-code",
+  "spoken": {
+    "IContentDefinitionManager": "I Content Definition Manager",
+    "DeleteTypeDefinitionAsync": "Delete Type Definition Async",
+    "DeletePartDefinitionAsync": "Delete Part Definition Async",
+    "AlterTypeDefinitionAsync": "Alter Type Definition Async",
+    "AlterPartDefinitionAsync": "Alter Part Definition Async",
+    "ReplaceContentDefinition": "Replace Content Definition",
+    "DeleteContentDefinition": "Delete Content Definition",
+    "DefaultSocialImage": "Default Social Image",
+    "ContentDefinition": "Content Definition",
+    "AddDataMigration": "Add Data Migration",
+    "UpdateFrom1Async": "Update From 1 Async",
+    "IRecipeMigrator": "I Recipe Migrator",
+    "WithDisplayName": "With Display Name",
+    "AddContentPart": "Add Content Part",
+    "DataMigration": "Data Migration",
+    "WithSettings": "With Settings",
+    "ContentTypes": "Content Types",
+    "ContentParts": "Content Parts",
+    "RemoveField": "Remove Field",
+    "DisplayName": "Display Name",
+    "ContentPart": "Content Part",
+    "GetOrCreate": "Get Or Create",
+    "CreateAsync": "Create Async",
+    "RemovePart": "Remove Part",
+    "MediaField": "Media Field",
+    "UpdateFrom": "Update From",
+    "WithField": "With Field",
+    "WithPart": "With Part",
+    "SeoMeta": "S.E.O. Meta",
+    "OfType": "Of Type",
+    "C#": "C sharp"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Definitions in Code",
+      "subtitle": "Create types, parts and fields with migrations and recipes",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Types, parts and fields do not have to be built in the admin. A module can define them in code, so that every site that enables the module gets them. This video shows how, with a data migration and with a recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why define content in code",
+      "subtitle": "Definitions that travel with a module",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Content definitions built in the admin live in the database of one site. A module that needs a Product type, or an SEO part, cannot ask every site to rebuild them by hand. It defines them in code, and they travel with the module."
+            },
+            {
+              "id": "why-2",
+              "text": "Two tools do this: a data migration, which is a C# class that alters definitions through the content definition manager, and a recipe, which is a JSON file that a migration can run. The migration is versioned, so each site catches up on its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The migration class",
+      "subtitle": "Manifest, registration and injection",
+      "clips": [
+        {
+          "id": "02-class",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "class-1",
+              "text": "The SEO module is a complete example. Its manifest lists the modules it depends on, among them Media, whose field it uses, and Recipes Core Services, which provides IRecipeMigrator. Orchard Core enables them with the module, and runs their migrations first."
+            },
+            {
+              "id": "class-2",
+              "text": "Startup registers the migration with AddDataMigration. Orchard Core does not discover migrations by itself, so a migration that is not registered never runs. Startup also registers the part class, with AddContentPart."
+            },
+            {
+              "id": "class-3",
+              "text": "The migration inherits from DataMigration. Dependency injection provides IContentDefinitionManager, which reads and writes definitions, and IRecipeMigrator, which runs a recipe file. The steps of the migration come next."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Content types",
+      "subtitle": "Create and configure a type in C#",
+      "clips": [
+        {
+          "id": "03-type",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "type-1",
+              "text": "AlterTypeDefinitionAsync takes the name of a type and a builder. It creates the type when it does not exist, and changes it when it does. The builder sets the settings of the type, such as Creatable, Draftable, Versionable and Securable."
+            },
+            {
+              "id": "type-2",
+              "text": "WithPart attaches a part by name. A second builder configures the part in the context of this type, for example its position in the editor. Names start with a letter and contain only letters and digits."
+            },
+            {
+              "id": "type-3",
+              "text": "A type created without a display name is shown as its name with a space before each capital letter, as the slide shows. WithDisplayName chooses another label."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Parts and fields",
+      "subtitle": "Fields belong to parts",
+      "clips": [
+        {
+          "id": "04-part",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "AlterPartDefinitionAsync creates or changes a part. Attachable lets editors add the part to a type in the admin. WithField adds a field: OfType names its field type, WithDisplayName sets its label, and WithSettings gives it settings."
+            },
+            {
+              "id": "part-2",
+              "text": "A type has no fields of its own. Create a part with the name of the type, attach it, and add the fields to that part; the admin lists them under the type. A new field needs OfType, or saving the part fails."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Recipes",
+      "subtitle": "Longer definitions as JSON",
+      "clips": [
+        {
+          "id": "05-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "When a definition is long, put it in a recipe. The file goes in the Migrations folder of the module. The migration runs it with IRecipeMigrator, passing the file name and the migration itself."
+            },
+            {
+              "id": "recipe-2",
+              "text": "This recipe belongs to the SEO module. Its first step lists ContentTypes and ContentParts: the Social Meta Settings type, and the part that holds its fields. A deployment plan can export definitions as these same two lists."
+            },
+            {
+              "id": "recipe-3",
+              "text": "Give every type in a recipe a DisplayName. The step applies the display name and the settings of a type only when the DisplayName is present, while the parts of the type are attached either way."
+            },
+            {
+              "id": "recipe-4",
+              "text": "The Content Types feature provides three recipe steps for definitions. ContentDefinition adds and updates, ReplaceContentDefinition deletes each type and part it lists before creating it again, and DeleteContentDefinition removes them by name. Deleting a part also removes it from every type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Versions",
+      "subtitle": "Every site catches up on its own",
+      "clips": [
+        {
+          "id": "06-version",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "version-1",
+              "text": "Each method returns the version it leaves the site at, and Orchard Core stores that number for each site. A site without one runs CreateAsync, and any other runs only the later methods. Here CreateAsync returns 2, so a fresh tenant skips UpdateFrom1Async."
+            },
+            {
+              "id": "version-2",
+              "text": "To change a definition later, add an UpdateFrom method for the current version, and return the next number. A site never runs a method twice, so editing a released one changes nothing for it. CreateAsync can carry the change too, for new sites, as here."
+            },
+            {
+              "id": "version-3",
+              "text": "An alteration starts from the stored definition and changes only what it names, so it never removes. RemovePart takes a part from a type, RemoveField takes a field from a part, and DeleteTypeDefinitionAsync and DeletePartDefinitionAsync delete a definition itself."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "A migration at work",
+      "subtitle": "The SEO module in the admin",
+      "clips": [
+        {
+          "id": "07-seo",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "seo-1",
+              "text": "Let's see the SEO migration run. On the Features page, search for SEO, and select Enable. The site restarts, and the migrations of the enabled features run as it starts again."
+            },
+            {
+              "id": "seo-2",
+              "text": "Under Design, Content Definition, Content Parts, the SeoMeta part is listed, with the description that the migration gave it."
+            },
+            {
+              "id": "seo-3",
+              "text": "Let's edit the part. Its three Media fields, Default social image, Open graph image and Twitter image, are the ones AlterPartDefinitionAsync added, with the same display names."
+            },
+            {
+              "id": "seo-4",
+              "text": "Under Content Types, Social Meta Settings comes from the recipe. Let's edit it. Its Fields come from the part named like the type, which the Parts list marks as Contains the fields for the current type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Reading the values in C#",
+      "subtitle": "A class for the part",
+      "clips": [
+        {
+          "id": "08-class",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cs-1",
+              "text": "To use the values in code, write a class that inherits from ContentPart, named like the part. For each field, add a property with the name and the type of the field. DefaultSocialImage is a MediaField, as the migration declares."
+            },
+            {
+              "id": "cs-2",
+              "text": "A part handler receives the typed part. Anywhere else, GetOrCreate returns it from a content item. The admin can still change definitions, so a property can be null, and your code should check it before use."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Definitions in Code",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is how a module carries its content definitions: migrations in C#, recipes in JSON, and a version stored for each site. Define them once, and every site that enables the module gets them. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
