@@ -1,0 +1,153 @@
+{
+  "title": "Reverse Proxy Settings: Run Behind a Load Balancer",
+  "output": "security-reverse-proxy",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Reverse Proxy Settings",
+      "subtitle": "Run Orchard Core behind a reverse proxy or a load balancer",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Behind a reverse proxy or a load balancer, your site sees the proxy instead of the visitor. The Reverse Proxy Configuration feature tells the site which forwarded headers to read. In this video, we enable it, choose the headers, and keep it safe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why forwarded headers",
+      "subtitle": "What a proxy hides from your site",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A reverse proxy or a load balancer sits in front of your site. Visitors connect to the proxy, and the proxy passes each request on. So the site sees the address of the proxy, not the address of the visitor."
+            },
+            {
+              "id": "why-2",
+              "text": "The proxy can pass the original details along in HTTP headers. X-Forwarded-For carries the client IP address, X-Forwarded-Proto carries the protocol, HTTP or HTTPS, and X-Forwarded-Host carries the host the visitor asked for."
+            },
+            {
+              "id": "why-3",
+              "text": "Some features depend on the visitor's address. The Audit Trail can record the client IP address, and Rate Limits count the requests of anonymous visitors per address. Behind a proxy, without the headers, all of them share the address of the proxy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Reverse Proxy Configuration",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "The settings come with a feature that you enable first. Let's open Tools, then Features, and search for reverse."
+            },
+            {
+              "id": "enable-2",
+              "text": "Reverse Proxy Configuration is listed in the Infrastructure category. Let's select Enable."
+            },
+            {
+              "id": "enable-3",
+              "text": "A message confirms that the feature was enabled, and the Settings menu has a Reverse Proxy entry. Opening the page takes two permissions, Manage Reverse Proxy Settings and Manage settings, and the Administrator role has both by default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose the headers",
+      "subtitle": "Settings, Reverse Proxy",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Let's open Settings, then Reverse Proxy. A warning at the top says: The website might be restarted upon saving the settings, potentially leading to temporary unresponsiveness during the process."
+            },
+            {
+              "id": "settings-2",
+              "text": "The page has one option for each header: X-Forwarded-For, X-Forwarded-Proto, and X-Forwarded-Host. Each label reads Enables the forwarding of the HTTP header, followed by the header name. All three are off."
+            },
+            {
+              "id": "settings-3",
+              "text": "Under each option, Current request value shows what the site sees for this page: the client IP address, the protocol, and the host. Here there is no proxy, so these are the values of the local connection."
+            },
+            {
+              "id": "settings-4",
+              "text": "Let's turn on all three options. Behind a proxy that sends the headers, turning an option on makes the site use the forwarded value instead."
+            },
+            {
+              "id": "settings-5",
+              "text": "Select Save. The site confirms: Site settings updated successfully. The three options stay selected, and they are saved for this tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Keep it safe",
+      "subtitle": "Trust only your own proxies",
+      "clips": [
+        {
+          "id": "04-safe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "safe-1",
+              "text": "Forwarded headers are only as trustworthy as whoever sends them. The documentation warns that wrong settings can expose a site to IP spoofing and header injection. So trust the headers only when they come from your own proxies."
+            },
+            {
+              "id": "safe-2",
+              "text": "Known proxies lists the IP addresses of the proxies you trust, and known networks lists their network ranges. This page has no fields for them. Set them in the Settings recipe step, or in the server configuration when the application reads it."
+            },
+            {
+              "id": "safe-3",
+              "text": "When the application is set up to read these settings from the server configuration, its values take precedence. This page then shows a message: The current settings are coming from configuration sources, saving the settings will affect the AdminSettings not the configuration."
+            },
+            {
+              "id": "safe-4",
+              "text": "The options of this page belong to the current tenant, so each tenant of an installation has its own. A deployment plan can export them with the Reverse Proxy settings step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Reverse Proxy Settings",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Enable Reverse Proxy Configuration, turn on the headers your proxy sends, and trust only your own proxies. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
