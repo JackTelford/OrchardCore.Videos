@@ -1,6 +1,6 @@
 # Azure AI Search: Connect Your Site and Create Indexes
 
-**YouTube:** not published yet · **Length:** 4:58 · **Feature:** OrchardCore.AzureAI ([Azure AI Search](https://docs.orchardcore.net/en/latest/reference/modules/AzureAISearch/))
+**YouTube:** not published yet · **Length:** 4:56 · **Feature:** OrchardCore.AzureAI ([Azure AI Search](https://docs.orchardcore.net/en/latest/reference/modules/AzureAISearch/))
 
 The video shows how an Orchard Core site keeps its search indexes in an Azure AI Search service. It enables the module,
 connects the site to the service with an endpoint and an API key, creates an index of the Blog Post content type,

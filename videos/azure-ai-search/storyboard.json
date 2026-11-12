@@ -58,7 +58,7 @@
           "steps": [
             {
               "id": "enable-1",
-              "text": "Features, under Tools, lists what your site can do. Let's search for Azure AI Search. The entry marked Obsolete is a legacy entry kept for older sites, so enable the one named Azure AI Search."
+              "text": "Features, under Tools, lists what your site can do. Let's search for Azure AI Search. The entry marked Obsolete is kept for backwards compatibility, so enable the one named Azure AI Search."
             },
             {
               "id": "enable-2",
