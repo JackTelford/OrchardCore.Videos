@@ -157,7 +157,7 @@
           "steps": [
             {
               "id": "check-1",
-              "text": "Under Content, Content Items, the four products of the run are listed, each one named after its row."
+              "text": "Under Content, Content Items, the list filtered on the Product type shows the four products of the run, each one named after its row."
             },
             {
               "id": "check-2",
