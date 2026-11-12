@@ -1,6 +1,6 @@
 # Custom User Settings: Add Your Own Fields to User Profiles
 
-**YouTube:** not published yet · **Length:** 4:47 · **Feature:** `OrchardCore.Users.CustomUserSettings` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Users/CustomUserSettings/))
+**YouTube:** not published yet · **Length:** 4:48 · **Feature:** `OrchardCore.Users.CustomUserSettings` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Users/CustomUserSettings/))
 
 The video shows how a site keeps its own information about each user. It explains that a section of custom user
 settings is a content type with the Custom User Settings stereotype, enables the feature, creates a section with a

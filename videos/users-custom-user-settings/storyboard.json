@@ -77,7 +77,7 @@
           "steps": [
             {
               "id": "section-1",
-              "text": "A section is a content type. Create a dedicated type for each section, because marking a type that already has content items breaks them. Open Design, Content Definition, Content Types, and select Create new type."
+              "text": "A section is a content type. Create a dedicated type for each section, because the documentation warns against marking a type that already has content items. Open Design, Content Definition, Content Types, and select Create new type."
             },
             {
               "id": "section-2",
