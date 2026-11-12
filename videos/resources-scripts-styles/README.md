@@ -1,6 +1,6 @@
 # Resources: Declare and Include Scripts and Stylesheets
 
-**YouTube:** not published yet · **Length:** 5:13 · **Feature:** `OrchardCore.Resources` ([Resources module](https://docs.orchardcore.net/en/latest/reference/modules/Resources/))
+**YouTube:** not published yet · **Length:** 5:16 · **Feature:** `OrchardCore.Resources` ([Resources module](https://docs.orchardcore.net/en/latest/reference/modules/Resources/))
 
 A video for module and theme authors. It shows how the Resources module declares scripts and stylesheets in a resource
 manifest, how Razor and Liquid views include them by name, with a version, dependencies and a location, and how the

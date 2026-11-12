@@ -98,7 +98,7 @@
             },
             {
               "id": "include-4",
-              "text": "The at option chooses where a resource renders. Head and Foot hand it to the layout, and Inline renders it where the tag is. Without at, a script renders in place, and a stylesheet goes to the head."
+              "text": "The at option chooses where a resource renders. Head hands a script or stylesheet to the layout, Foot hands it a script, and Inline renders the resource where the tag is. Without at, a script renders in place, and a stylesheet goes to the head."
             }
           ]
         }
