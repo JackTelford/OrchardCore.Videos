@@ -1,0 +1,49 @@
+{
+  "title": "Secrets: Move Existing Credentials and Change Stores | Orchard Core",
+  "description": "A site often keeps credentials, such as the password of a mail server, in the settings of its features. Bringing them into the Secrets module, and changing the store that keeps a secret, should not mean entering every value again.\n\nMigrate Secrets moves the credentials kept in settings into secrets. Secret Stores moves secrets from one store to another, such as from the Database store to the AzureKeyVault store, and keeps their names, so the settings that use them keep working.\n\nIn this video:\n• Where a credential can be kept: in settings, or as a secret in a store\n• Migrate Secrets: select credentials and move them to secrets\n• Check the secrets and the settings that use them\n• Why a credential can stay in its settings\n• Secret Stores: move every secret of a store\n• Move one secret from the Secrets page\n• What a move leaves behind before you retire a store",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Secrets"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Secrets",
+    "Migrate Secrets",
+    "Secret Stores",
+    "Azure Key Vault",
+    "Credentials",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Secrets"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Secrets/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Secrets/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Secrets"
+  }
+}
