@@ -56,7 +56,7 @@
           "steps": [
             {
               "id": "enable-1",
-              "text": "Open Tools, Features. The Taxonomies Contents List Filters feature depends on the Taxonomies feature, which is already enabled on this site."
+              "text": "Open Tools, Features. The Taxonomies Contents List Filters feature depends on the Taxonomies feature, which this site has enabled."
             },
             {
               "id": "enable-2",
