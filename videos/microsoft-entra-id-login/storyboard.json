@@ -1,0 +1,253 @@
+{
+  "title": "Microsoft Entra ID: Sign In With Work Accounts",
+  "output": "microsoft-entra-id-login",
+  "spoken": {
+    "AppId": "App I.D.",
+    "TenantId": "Tenant I.D.",
+    "ID": "I.D."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Microsoft Entra ID: Sign In With Work Accounts",
+      "subtitle": "Let people sign in with their organization account",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Many organizations keep their people in Microsoft Entra ID, also known as Azure Active Directory. The Microsoft Entra ID feature lets those people sign in to your Orchard Core site with that account. Let's connect the two and look at the sign-in button."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the sign-in works",
+      "subtitle": "Your site, Microsoft, and the callback path",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "With this feature, people enter their credentials at Microsoft, not on your site. The login page shows a button, and selecting it sends the browser to the Microsoft sign-in page."
+            },
+            {
+              "id": "how-2",
+              "text": "Microsoft then sends the browser back to a path on your site, the callback path. From what Microsoft reports, Orchard Core decides which user the person is."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Register the app",
+      "subtitle": "In the Azure portal",
+      "clips": [
+        {
+          "id": "02-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "In the Azure portal, open App registrations and select New registration. Name the app, choose the account types, and add a redirect URI: the address of your site followed by the callback path."
+            },
+            {
+              "id": "register-2",
+              "text": "When the app exists, the portal shows two values that Orchard Core needs: the Application (client) ID and the Directory (tenant) ID. Copy both."
+            },
+            {
+              "id": "register-3",
+              "text": "Under Authentication, in the section for implicit grant and hybrid flows, enable Access tokens and ID tokens. The reference documentation asks for both."
+            },
+            {
+              "id": "register-4",
+              "text": "Under Token configuration, select Add optional claim, choose the ID token type, and add the email claim. Without it, Orchard Core cannot match a login to an existing user by email address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Who can sign in",
+      "subtitle": "The tenant ID",
+      "clips": [
+        {
+          "id": "03-who",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "who-1",
+              "text": "The audience you choose in the portal and the tenant ID you enter in Orchard Core go together. The Directory (tenant) ID of your own directory allows only its user and guest accounts."
+            },
+            {
+              "id": "who-2",
+              "text": "The word organizations allows work or school accounts from any Microsoft Entra directory. The word common adds personal Microsoft accounts. Both widen the audience, so choose them with care."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "04-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "In the admin, open Tools, Features, and search for Entra ID. The feature is called Microsoft Entra ID (Azure Active Directory) Authentication, in the Microsoft Authentication category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable. Orchard Core also enables External Authentication, which this feature depends on, and a message confirms that the feature was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Configure the settings",
+      "subtitle": "Settings, Security, Authentication",
+      "clips": [
+        {
+          "id": "05-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Open Settings, Security, Authentication, Microsoft Entra ID. A notice warns that the website might be restarted upon saving the settings, with temporary unresponsiveness."
+            },
+            {
+              "id": "settings-2",
+              "text": "Display Name is the text of the sign-in button. A name that mentions your organization and Microsoft, such as Maple Works Microsoft account, tells people which account to use."
+            },
+            {
+              "id": "settings-3",
+              "text": "AppId takes the Application (client) ID, and TenantId takes the Directory (tenant) ID, both from the Azure portal. The values in this recording are made up. These two fields and Display Name are required."
+            },
+            {
+              "id": "settings-4",
+              "text": "CallbackPath is optional. Leave it empty to use the default path shown in the field, or enter a path that starts with a slash. It must match the redirect URI registered in the portal."
+            },
+            {
+              "id": "settings-5",
+              "text": "Store tokens keeps the external authentication tokens for reuse. It is optional, and we leave it cleared."
+            },
+            {
+              "id": "settings-6",
+              "text": "Select Save. The message Site settings updated successfully appears, and the site may restart to apply the settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The sign-in button",
+      "subtitle": "On the login page",
+      "clips": [
+        {
+          "id": "06-login",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "Signed out, the login page shows two sections. The local Log in form is on the left. On the right, Use another service to log in has a button named after the Display Name."
+            },
+            {
+              "id": "login-2",
+              "text": "The button appears only when the feature is enabled and Display Name, AppId and TenantId are all set."
+            },
+            {
+              "id": "login-3",
+              "text": "Selecting the button sends the browser to Microsoft to sign in. We stop here, because completing the sign-in needs a real account in a real directory."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Matching the person to a user",
+      "subtitle": "Linked, same email, or no match",
+      "clips": [
+        {
+          "id": "07-match",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "match-1",
+              "text": "When Microsoft sends the person back, Orchard Core first looks for a user already linked to that Microsoft account. If there is one, the person is signed in as that user, as long as that user is allowed to sign in."
+            },
+            {
+              "id": "match-2",
+              "text": "If no user is linked, Orchard Core looks for a user with the email address that Microsoft reports. The person sees Link your account, enters that account's local password, and selects Register to link the two."
+            },
+            {
+              "id": "match-3",
+              "text": "If no user matches, a local account is created, with the details the external registration settings ask for. If those settings disable new registrations, the person sees a message that New registrations are disabled for this site."
+            },
+            {
+              "id": "match-4",
+              "text": "Existing users can also link their account later. When an external provider is enabled, the user menu has an External Logins page, where they add another service to log in with."
+            },
+            {
+              "id": "match-5",
+              "text": "Options that apply to every external provider live in two places, User Login and Registration, under Settings, Security. A separate video covers them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Roles from groups",
+      "subtitle": "Security groups and the User Login option",
+      "clips": [
+        {
+          "id": "08-roles",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "roles-1",
+              "text": "The Orchard Core guide for Microsoft Entra ID adds roles. You create a security group in Entra ID for each Orchard Core role, and in the app registration you add the groups claim under Token configuration."
+            },
+            {
+              "id": "roles-2",
+              "text": "In Orchard Core, the User Login option Use a script to set user roles, user claims and user properties based on external provider claims turns those groups into roles. The guide on docs.orchardcore.net has the script."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Microsoft Entra ID: Sign In With Work Accounts",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Microsoft Entra ID sign-in connects an app registration in Azure to the login page of your site. Register the app, enable the feature, enter the IDs, and people sign in with their work account. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
