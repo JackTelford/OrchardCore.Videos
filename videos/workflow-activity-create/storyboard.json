@@ -197,7 +197,7 @@
             },
             {
               "id": "designer-4",
-              "text": "The header shows the display text, Notify Task. The body is the Design view: a Success Notification title, and the message in quotes, still empty. The node also shows an issue, because Message is required."
+              "text": "The header shows the display text, Notify Task. The body is the Design view: a Success Notification title, and the message in quotes, left empty. The node also shows an issue, because Message is required."
             },
             {
               "id": "designer-5",
