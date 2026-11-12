@@ -1,6 +1,6 @@
 # Health Checks: Let Your Host Know the Site Is Up
 
-**YouTube:** not published yet · **Length:** 3:51 · **Feature:** `OrchardCore.HealthChecks` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/HealthChecks/))
+**YouTube:** not published yet · **Length:** 3:48 · **Feature:** `OrchardCore.HealthChecks` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/HealthChecks/))
 
 A video for module and theme authors about the Health Checks module. It explains why a load balancer, a container
 platform or an uptime monitor probes a site, enables the feature and opens the endpoint, adds checks from Orchard Core

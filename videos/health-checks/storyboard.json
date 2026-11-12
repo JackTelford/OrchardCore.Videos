@@ -9,7 +9,8 @@
     "AddCheck": "Add Check",
     "RequireFeatures": "Require Features",
     "ShowDetails": "Show Details",
-    "Url": "U.R.L."
+    "Url": "U.R.L.",
+    "ASP.NET": "A.S.P. .NET"
   },
   "chapters": [
     {
@@ -188,7 +189,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "The Health Checks module gives each tenant that enables it one endpoint that runs every registered check and reports the result. Enable it, register your checks, and point your monitor at the address. Thanks for watching."
+              "text": "The Health Checks module gives each tenant that enables it one endpoint that runs every registered check, so your monitor can read the result. Thanks for watching."
             }
           ]
         }

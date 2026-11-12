@@ -5,7 +5,7 @@ Nothing below is stated in the narration as a fact that the source does not supp
 
 ## 1. Spoken spellings (before narrating)
 
-`storyboard.json` has a `spoken` map with eight entries. A person confirms each one with `scripts/pronounce.py`
+`storyboard.json` has a `spoken` map with nine entries. A person confirms each one with `scripts/pronounce.py`
 before the narration is generated:
 
 | Written | Spoken as | Why |
@@ -18,6 +18,7 @@ before the narration is generated:
 | `RequireFeatures` | Require Features | `checks-3` |
 | `ShowDetails` | Show Details | `resp-2`, `resp-3`, `detail-1`, `sec-1` |
 | `Url` | U.R.L. | `resp-3` ("The Url setting is the route") |
+| `ASP.NET` | A.S.P. .NET | `why-1` |
 
 Also listen for how the voice says "Redis" and "Twilio" (no entry yet).
 
