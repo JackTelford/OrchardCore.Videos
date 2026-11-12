@@ -1,0 +1,174 @@
+{
+  "title": "Microsoft Account sign-in",
+  "output": "microsoft-account-login",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Microsoft Account sign-in",
+      "subtitle": "Let visitors sign in with their Microsoft account",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Many visitors already have a Microsoft account. The Microsoft Account Authentication feature lets them sign in to your site with it. In this video, you enable the feature, enter its settings, and find the button on the login page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How Microsoft sign-in works",
+      "subtitle": "What you need from Microsoft",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "The feature adds Microsoft as a way to log in. A visitor chooses it on your login page, signs in on a Microsoft page, and is sent back to your site."
+            },
+            {
+              "id": "how-2",
+              "text": "You create an app for your site in the Microsoft developer portal, which gives you an Application ID and lets you create a secret key. The app also needs to use your site's callback path, where visitors return. The settings page shows the default."
+            },
+            {
+              "id": "how-3",
+              "text": "This feature covers Microsoft accounts. For work or school accounts as well, the documentation recommends Microsoft Entra ID authentication with a multi-tenant app, which a separate video covers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Microsoft Account Authentication",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's open Tools, then Features, and search for Microsoft Account. The Microsoft Account Authentication feature appears under the Microsoft Authentication category, with a short description and an Enable button."
+            },
+            {
+              "id": "enable-2",
+              "text": "Let's click Enable. The feature depends on External Authentication, which Orchard Core enables along with it, and a message confirms that the feature was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enter the settings",
+      "subtitle": "AppId, Secret Key and CallbackPath",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Let's open Settings, then Security, Authentication, and Microsoft. The page starts with a warning that the website might restart when you save, which can make it briefly unresponsive."
+            },
+            {
+              "id": "settings-2",
+              "text": "AppId is the Application ID of the app you created at Microsoft, and the form cannot be saved without it. Let's type a sample ID."
+            },
+            {
+              "id": "settings-3",
+              "text": "Secret Key holds the secret you created for the app. The field hides what you type, and Orchard Core stores the saved value in protected form."
+            },
+            {
+              "id": "settings-4",
+              "text": "CallbackPath is optional. Leave it empty to use the default path, shown here as the placeholder, and set the Microsoft app up to use the same path."
+            },
+            {
+              "id": "settings-5",
+              "text": "Store tokens saves the access and refresh tokens from the sign-in for reuse. Let's leave it cleared."
+            },
+            {
+              "id": "settings-6",
+              "text": "Let's click Save. A message confirms that the site settings were updated, and the website restarts to apply them. The login button appears once AppId and Secret Key are both saved."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The login page",
+      "subtitle": "A Microsoft Account button",
+      "clips": [
+        {
+          "id": "04-login",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "Let's visit the login page as a visitor. Beside the Log in form, a section titled Use another service to log in shows a Microsoft Account button."
+            },
+            {
+              "id": "login-2",
+              "text": "Choosing the button sends the visitor to Microsoft to sign in. Let's stop here, because the sign-in itself happens on Microsoft's side, with the app you created."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "After Microsoft sends the visitor back",
+      "subtitle": "Sign in, link or register",
+      "clips": [
+        {
+          "id": "05-return",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "return-1",
+              "text": "When Microsoft sends the visitor back, Orchard Core looks for a local user already linked to that Microsoft account. If it finds one, the visitor is signed in."
+            },
+            {
+              "id": "return-2",
+              "text": "If no link exists but a local user has the same email address, the visitor sees Link your account, and enters that user's local password to link the two."
+            },
+            {
+              "id": "return-3",
+              "text": "Otherwise, the visitor sees Create a new account, with Username, Email, Password and Confirm password fields. The external registration settings can turn new registrations off or skip some of those fields, and a separate video covers them."
+            },
+            {
+              "id": "return-4",
+              "text": "Signed-in users can also link a Microsoft account later, from External Logins in the user menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Microsoft Account sign-in",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Microsoft Account Authentication feature adds a Microsoft Account button to your login page, once AppId and Secret Key are saved. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

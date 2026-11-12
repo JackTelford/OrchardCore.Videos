@@ -1,0 +1,47 @@
+{
+  "title": "Microsoft Account: Sign In With Personal Microsoft Accounts | Orchard Core",
+  "description": "Many visitors already have a Microsoft account, and it can sign them in to your site.\n\nThe Microsoft Account Authentication feature of Orchard Core adds a Microsoft Account button to the login page. You enable the feature, enter the AppId and Secret Key of an app you created at Microsoft, and visitors sign in with their Microsoft account.\n\nIn this video:\n• How the sign-in works, and what you create at Microsoft\n• Enabling the Microsoft Account Authentication feature\n• Entering AppId, Secret Key, CallbackPath and Store tokens\n• The Microsoft Account button on the login page\n• What happens when Microsoft sends the visitor back",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "MicrosoftAccount"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Microsoft Account",
+    "Authentication",
+    "External Login"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "External Authentication"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Microsoft.Authentication/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Microsoft.Authentication/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Microsoft.Authentication.MicrosoftAccount"
+  }
+}
