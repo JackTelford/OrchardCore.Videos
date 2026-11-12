@@ -1,6 +1,6 @@
 # Export Content From the List: Download, Add to Plan, Send
 
-**YouTube:** not published yet · **Length:** 4:34 · **Feature:** [OrchardCore.Contents.Deployment.Download](https://docs.orchardcore.net/en/latest/reference/modules/Contents/) (with OrchardCore.Contents.Deployment.AddToDeploymentPlan and OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget)
+**YouTube:** not published yet · **Length:** 4:36 · **Feature:** [OrchardCore.Contents.Deployment.Download](https://docs.orchardcore.net/en/latest/reference/modules/Contents/) (with OrchardCore.Contents.Deployment.AddToDeploymentPlan and OrchardCore.Contents.Deployment.ExportContentToDeploymentTarget)
 
 Three features of the Contents module add actions to the content items list: view or download an item as JSON, add it to
 a deployment plan, and export the selected items to a deployment target. The video enables the features, then uses each
