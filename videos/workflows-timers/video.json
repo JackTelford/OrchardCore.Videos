@@ -1,0 +1,49 @@
+{
+  "title": "Timer Workflows: Run Tasks on a Schedule | Orchard Core",
+  "description": "Some tasks have to run at set times: a reminder every Monday, a cleanup every night, a report every morning. A workflow normally waits for something to happen, so a task that depends on the clock needs the clock to be an event.\n\nThe Timer Event of the Orchard Core Workflows module is that event. It runs a workflow on a CRON schedule, or makes a running workflow wait until the next scheduled time. This video enables the timer, builds a scheduled workflow and follows its instances.\n\nIn this video:\n• How a timer works, and the five fields of a CRON expression\n• Enabling the Timer Workflows Activities feature\n• Building a scheduled workflow with a Timer Event and a Log Task\n• Watching the instances of a timer workflow\n• Good to know: the one-minute check, restarts and housekeeping",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Timer Event",
+    "CRON",
+    "Scheduled tasks",
+    "Automation"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows.Timers"
+  }
+}
