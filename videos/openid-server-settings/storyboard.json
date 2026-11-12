@@ -184,7 +184,7 @@
             },
             {
               "id": "advanced-2",
-              "text": "The server uses a signing certificate and an encryption certificate. If you select none, Orchard Core creates self-signed certificates for the site. When the site starts, it creates new ones if the existing ones expire within a week."
+              "text": "The server uses a signing certificate and an encryption certificate. If you select none, Orchard Core creates self-signed certificates for the site, and creates a new one when the existing ones are within a week of expiring."
             },
             {
               "id": "advanced-3",
@@ -196,11 +196,11 @@
             },
             {
               "id": "advanced-5",
-              "text": "Token Format sets the format of access tokens. ASP.NET Core Data Protection is the default. JSON Web Token produces standard access tokens that are signed and, unless you turn it off, encrypted."
+              "text": "Token Format sets the format of access tokens. ASP.NET Core Data Protection is the default. JSON Web Token (JWT) produces standard access tokens that are signed and, unless you turn it off, encrypted."
             },
             {
               "id": "advanced-6",
-              "text": "With JSON Web Token selected, Disable Access Token Encryption becomes available. Selecting it leaves the access tokens unencrypted, which lets third-party resource servers use them. Use Reference Access Tokens keeps tokens in the database and returns fixed-size tokens to clients."
+              "text": "With JSON Web Token (JWT) selected, Disable Access Token Encryption (only for JWT tokens) becomes available. Selecting it leaves the access tokens unencrypted, which lets third-party resource servers use them. Use Reference Access Tokens keeps tokens in the database and returns fixed-size tokens to clients."
             }
           ]
         }

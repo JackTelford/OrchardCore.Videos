@@ -67,13 +67,12 @@ item says what was checked in the source and what to look at.
     libraries support it" comes from the application page (`Views/Application/Create.cshtml:182`). The narration
     does not explain how the proof key works.
 12. **Self-signed certificates.** `advanced-2` says that with no certificate selected Orchard Core creates self-signed
-    certificates for the site, and creates new ones when the site starts if the existing ones expire within a week
+    certificates for the site, and creates a new one when the existing ones are within a week of expiring
     (`OpenIdServerService.cs:284-352` and `356-426`: a new certificate is created when none is valid for more than seven
     days; `:571-624`: self-signed, valid for three months; `OrchardCore.OpenId/Tasks/OpenIdBackgroundTask.cs` removes
     expired ones). The keys are read inside `Configure(OpenIddictServerOptions)`
     (`Configuration/OpenIdServerConfiguration.cs:61-70`), and `Startup.cs` registers no change token source for those
-    options, so the check runs when the tenant builds its options, not on a timer; "when the site starts" is the reading
-    of that code. Confirm on a running site that the tenant folder under the site's data folder
+    options, so the check runs when the tenant builds its options, not on a timer; the narration therefore names no moment. Confirm on a running site that the tenant folder under the site's data folder
     (`IdentityModel-Signing-Certificates`, `IdentityModel-Encryption-Certificates`) gets certificate files after the
     first request to the server; the narration gives no duration of the certificates.
 13. **Applications offer only the allowed flows.** `idea-3` and `save-2` say that an application can use only the flows

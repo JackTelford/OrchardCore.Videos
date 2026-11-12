@@ -1,6 +1,6 @@
 # OpenID Connect Server: Flows, Endpoints and Keys
 
-**YouTube:** not published yet · **Length:** 6:04 · **Feature:** [OrchardCore.OpenId.Server](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/)
+**YouTube:** not published yet · **Length:** 6:06 · **Feature:** [OrchardCore.OpenId.Server](https://docs.orchardcore.net/en/latest/reference/modules/OpenId/)
 
 A tour of the OpenID Connect Authorization Server settings page, for the administrator of a site. It enables the
 feature, then goes through the endpoints applications call, the flows they use to get a token, the requirements that

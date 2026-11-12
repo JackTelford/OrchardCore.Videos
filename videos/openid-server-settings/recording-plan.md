@@ -360,7 +360,7 @@ is saved. **Never choose a store name, and never open a certificate list** (sect
   `OrchardCore.OpenId/Services/OpenIdServerService.cs:284-352` (encryption), `:356-426` (signing) and `:571-624`
   (self-signed, valid for three months). A new certificate is made when none of the existing ones is valid for more
   than seven days (`:314`, `:386`); the keys are read when the server options are built (`Configuration/OpenIdServerConfiguration.cs:61-70`),
-  which is when the site starts or reloads.
+  which is a moment the narration does not name.
 
 #### `advanced-3`
 
