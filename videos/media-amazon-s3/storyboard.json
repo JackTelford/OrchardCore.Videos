@@ -1,0 +1,242 @@
+{
+  "title": "Amazon S3 Media Storage: Keep Media in an S3 Bucket",
+  "output": "media-amazon-s3",
+  "spoken": {
+    "IMediaFileStore": "I Media File Store",
+    "IResizedImageCache": "I Resized Image Cache",
+    "App_Data": "App Data",
+    "ShellSettings": "Shell Settings",
+    "S3Mock": "S3 Mock"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Amazon S3 Media Storage",
+      "subtitle": "Keep media in an Amazon S3 bucket",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "By default, Orchard Core keeps uploaded media in the App_Data folder. The Amazon S3 Media module keeps it in an S3 bucket instead. In this video, you configure the connection, enable the features, and follow an uploaded file to the browser."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why Amazon S3",
+      "subtitle": "Media that does not live on the web server",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Containers and clean deployments can remove the files on the local disk of a web server, and several instances of a site need the same media. An S3 bucket keeps the files outside the web server."
+            },
+            {
+              "id": "why-2",
+              "text": "The module has three features. Amazon Media Storage keeps the media files in a bucket, and Amazon Media Image Cache keeps resized copies of images. The third, marked Obsolete, is kept for backwards compatibility and enables the image cache."
+            },
+            {
+              "id": "why-3",
+              "text": "The site serves every file. A request reaches Orchard Core, which reads the object from the bucket into a local cache folder when no copy exists, and sends it. Asset URLs point to your site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Connect a bucket",
+      "subtitle": "Settings in the configuration",
+      "clips": [
+        {
+          "id": "02-configure",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "conf-1",
+              "text": "Amazon Media Storage reads the Orchard Core, Media, Amazon S3 section of the configuration. It needs a bucket name, and a region or a service URL. If they are invalid, it logs an error and the site keeps its local file storage."
+            },
+            {
+              "id": "conf-2",
+              "text": "Credentials come from the first source that has them: the Credentials section, profiles, environment variables, then the role of the host in AWS. Profiles and environment variables are preferred to keys in a file."
+            },
+            {
+              "id": "conf-3",
+              "text": "Base Path stores the media in a folder of the bucket. Create Bucket is false by default. When true, a tenant that starts creates a missing bucket, without access control lists, and blocks public access."
+            },
+            {
+              "id": "conf-4",
+              "text": "An environment variable overrides the application's configuration file, and a double underscore separates each level of the setting's path. Set the bucket name and the access keys that way, outside source control."
+            },
+            {
+              "id": "conf-5",
+              "text": "To try this without an AWS account, run an S3 emulator in a container, such as S3Mock. Set the Service URL to its address, leave the region out, turn on Force Path Style, and enter dummy keys, which an emulator ignores."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable the features",
+      "subtitle": "Tools, Features, and the options pages",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "In the admin, open Tools, Features, and search for Amazon Media. The features of the module are listed under the Hosting category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Enable Amazon Media Storage. The Media Cache feature it depends on is enabled with it. With the settings in place, the media store is the bucket from then on."
+            }
+          ]
+        },
+        {
+          "id": "03-check",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "check-1",
+              "text": "Settings, Media, Amazon S3 Options shows what the feature read. Bucket Name, Base Path, and Create Bucket are read-only, because they come from the configuration. The credentials are never shown."
+            },
+            {
+              "id": "check-2",
+              "text": "Settings, Media, Options confirms the active store. Storage provider reads Amazon S3, and Hierarchical namespace and Atomic move show crosses: a bucket is flat, and a move is a copy followed by a delete."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Upload and serve a file",
+      "subtitle": "From the library to the browser",
+      "clips": [
+        {
+          "id": "04-serve",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "serve-1",
+              "text": "Open Media, Library. The library reads the bucket, which is empty, so the root folder lists no files."
+            },
+            {
+              "id": "serve-2",
+              "text": "Choose Upload files, and select the picture that the home page uses as its banner. The site writes it to the bucket as an object, and keeps a copy in a local cache folder."
+            },
+            {
+              "id": "serve-3",
+              "text": "Open the file. Its address begins with the media path of your site, not the address of the bucket. A request for a file with no local copy reads it from the bucket, and Settings, Media, Cache purges the copies."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What the feature registers",
+      "subtitle": "The services behind the settings",
+      "clips": [
+        {
+          "id": "05-services",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "svc-1",
+              "text": "When the settings are valid, the feature registers the S3 client, replaces IMediaFileStore with a store over an S3 file store, and serves files from a cache folder. Otherwise it registers none of this."
+            },
+            {
+              "id": "svc-2",
+              "text": "When Media TUS Uploads is enabled and the media settings are valid, a separate startup class replaces the temporary store of resumable uploads. Partial uploads are then staged in the media bucket, instead of on the local disk."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Cache resized images",
+      "subtitle": "Amazon Media Image Cache",
+      "clips": [
+        {
+          "id": "06-cache-setup",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cache-1",
+              "text": "Amazon Media Image Cache has its own Image Cache section, inside the Amazon S3 section. It sets a bucket of its own, with creation and removal, and takes the region and the other AWS settings from the Amazon S3 section."
+            },
+            {
+              "id": "cache-2",
+              "text": "It replaces IResizedImageCache with an implementation backed by the bucket. The resized images survive the replacement of the web server's disk, and that disk is spared reading and writing them."
+            }
+          ]
+        },
+        {
+          "id": "06-cache",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cache-3",
+              "text": "Enable Amazon Media Image Cache in Tools, Features. It depends on Amazon Media Storage, and each feature uses a bucket only when its own settings are valid."
+            },
+            {
+              "id": "cache-4",
+              "text": "Open the home page. Its banner is the uploaded picture, which the theme resizes with a media profile named banner. The first request resizes it and writes the result to the cache bucket, and later requests read it from there."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Tenants and removal",
+      "subtitle": "Buckets and folders per tenant",
+      "clips": [
+        {
+          "id": "07-tenants",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "tenant-1",
+              "text": "Bucket Name and Base Path accept Liquid, and ShellSettings holds the name of the tenant. Use it for a bucket per tenant, or a folder in a shared bucket. The name is used as rendered, so it must already be a valid S3 bucket name."
+            },
+            {
+              "id": "tenant-2",
+              "text": "By default, removing a tenant leaves the bucket alone. Remove Bucket asks S3 to delete the bucket, without deleting its objects first, and reports an error if S3 refuses. The image cache has its own Remove Bucket setting."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Amazon S3 Media Storage",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is Amazon S3 Media Storage: media files in a bucket, resized images in another, and settings for each tenant. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

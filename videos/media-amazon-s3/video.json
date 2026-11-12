@@ -1,0 +1,49 @@
+{
+  "title": "Amazon S3 Media Storage: Keep Media in an S3 Bucket | Orchard Core",
+  "description": "By default, Orchard Core keeps uploaded media on the local disk of the web server, where containers, clean deployments, and several instances of the same site get in the way.\n\nThe Amazon Media Storage feature keeps the media files in an Amazon S3 bucket, and the Amazon Media Image Cache feature keeps the resized copies of images in a bucket too. The site serves every file.\n\nIn this video:\n• Why Amazon S3\n• Connect a bucket: the configuration, credentials, environment variables, and an S3 emulator\n• Enable the features, and check the options pages\n• Upload and serve a file\n• What the feature registers\n• Cache resized images\n• Tenants and removal: a bucket or a folder per tenant",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "AWS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Amazon S3",
+    "AWS",
+    "S3 bucket",
+    "Media",
+    "S3Mock"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.AmazonS3/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media.AmazonS3/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media.AmazonS3"
+  }
+}

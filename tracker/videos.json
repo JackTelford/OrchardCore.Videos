@@ -1625,9 +1625,9 @@
     "docs": [
       "src/docs/reference/modules/Media.AmazonS3/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.7,
+    "words": 857,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
