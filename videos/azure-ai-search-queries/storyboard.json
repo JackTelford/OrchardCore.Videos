@@ -75,7 +75,7 @@
             },
             {
               "id": "source-3",
-              "text": "The template renders to the search text. The ISearchService that Azure AI Search registers returns content item ids, and the source loads those items from the database, in the order of the results."
+              "text": "The Liquid template renders to the search text, with the parameters of the call as variables. The ISearchService that Azure AI Search registers returns content item ids, and the source loads those items from the database, in the order of the results."
             }
           ]
         }
@@ -117,7 +117,7 @@
           "steps": [
             {
               "id": "create-1",
-              "text": "On the Queries page, Add Query opens the Available Query Types dialog. Azure AI Search is listed there, with the other sources that are enabled. Let's add it."
+              "text": "With the module enabled, Add Query on the Queries page opens the Available Query Types dialog. Azure AI Search is listed there, with the other sources that are enabled. Let's add it."
             },
             {
               "id": "create-2",
@@ -150,7 +150,7 @@
           "steps": [
             {
               "id": "run-1",
-              "text": "The API runs a saved query by its name. The parameters are a JSON object in the parameters value. Let's search for the word orchard."
+              "text": "The API runs a saved query by its name, and the parameters are a JSON object in the parameters value. Let's open that address in the browser, and search for the word orchard."
             },
             {
               "id": "run-2",
@@ -162,7 +162,7 @@
             },
             {
               "id": "run-4",
-              "text": "The API runs a query for a caller whose role holds its Execute Api permission, or one that implies it: Manage queries, or Execute Api - All queries. Here the Anonymous role holds the permission for BlogSearch, so the browser needs no token."
+              "text": "The API runs a query only for a caller whose role holds its Execute Api permission, or a permission that implies it: Manage queries, or Execute Api - All queries. Here the Anonymous role holds the permission for BlogSearch, so the browser needs no token."
             }
           ]
         }
@@ -200,7 +200,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A query source turns a name into a search. With one for Azure AI Search, the API, Liquid, Razor and scripts can all search an Azure AI Search index. Thanks for watching."
+              "text": "A query source turns the name of a saved query into a search, so the API, Liquid, Razor and scripts can search an Azure AI Search index. Thanks for watching."
             }
           ]
         }
