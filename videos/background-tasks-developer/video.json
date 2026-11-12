@@ -1,0 +1,50 @@
+{
+  "title": "Write a Background Task: Schedules, Locks and Monitoring | Orchard Core",
+  "description": "Some work does not belong in a web request: cleaning a cache, publishing scheduled content, retrying a failed job. In Orchard Core, a background task is a class that the background service runs on a schedule, for each tenant.\n\nThis video shows how to write one: implement IBackgroundTask, describe it with the BackgroundTask attribute, register it, see it in the admin, make it atomic on a web farm with a distributed lock, configure the background service, and read the state of the tasks from code.\n\nIn this video:\n• How background tasks run\n• Write a task\n• Describe the task: title, schedule and options\n• Register the task\n• See it in the admin\n• Atomic tasks and web farms\n• Configure the service\n• Hook into every run\n• Read the state from code",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "BackgroundTasks"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Background tasks",
+    "Cron",
+    "Hosted service",
+    "IBackgroundTask",
+    "Distributed lock",
+    "Web farm"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Performance and Background Work"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/BackgroundTasks/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/BackgroundTasks/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.BackgroundTasks"
+  }
+}
