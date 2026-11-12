@@ -3643,9 +3643,9 @@
       "src/docs/guides/password-configuration/README.md",
       "src/docs/guides/lockout-configuration/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.8,
+    "words": 573,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
