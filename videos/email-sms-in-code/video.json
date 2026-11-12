@@ -1,0 +1,59 @@
+{
+  "title": "Send Email, SMS and Notifications From Your Module | Orchard Core",
+  "description": "A module that needs to reach its users has three things to do: send an email, send an SMS, and leave a notice in the notification center of a user.\n\nOrchard Core provides a service for each one that you inject in your module: IEmailService, ISmsService and INotificationService. The email and SMS providers are selected in the site settings, so your code does not depend on SMTP, Twilio or any other provider.\n\nIn this video:\n• Three services: one for email, one for SMS, one for notifications, and the features your module declares\n• Send an email with IEmailService and MailMessage, and check the Result\n• Send an SMS with ISmsService and SmsMessage, and the Log provider for development\n• Notify a user with INotificationService and NotificationMessage, and how INotifier differs\n• Register a notification type, and keep notifications in sync with INotificationManager\n• Extension points: email and SMS providers, notification methods and email events",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CSharp"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "C#",
+    "Email",
+    "SMS",
+    "Notifications",
+    "Module development"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Email, SMS and Notifications"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Email documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Email/"
+    },
+    {
+      "label": "SMS documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Sms/"
+    },
+    {
+      "label": "Notifications documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Notifications/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Email/README.md",
+    "src/docs/reference/modules/Sms/README.md",
+    "src/docs/reference/modules/Notifications/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Email"
+  }
+}
