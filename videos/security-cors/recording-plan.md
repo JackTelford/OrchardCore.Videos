@@ -160,7 +160,7 @@ Starts on: `/Admin`, the dashboard of the admin, signed in as `admin`. The captu
     Settings, Security, Cross-Origin Resource Sharing open in the admin menu.
   - Labels: `Cors/AdminMenu.cs:18-20`; the breadcrumb, `Cors/Views/Admin/Index.cshtml:11`; the permission, `Cors/Permissions.cs:8`
     (shown as `Managing Cors Settings` on the role editor, `OrchardCore.Roles/Views/Admin/_RolePermissions.cshtml:121`);
-    the Administrator role gets it by default, `Cors/Permissions.cs:19`.
+    the Administrator role gets it by default, `Cors/Permissions.cs:23`.
 - `enable-4`
   - Actions: `HighlightAsync` on `p.alert.alert-warning` (the text `The current tenant will be reloaded when the CORS is executed.`);
     `PauseAsync(4000)`; `ClearHighlightsAsync`; `HighlightAsync` on `#list-alert:not(.d-none)`.
