@@ -7,7 +7,7 @@ widget to it, and fills the form with Input, Select, Text Area, and Button widge
 its name, its label, and its placeholder. It ends with the published form on the site. The title, description, tags and
 chapters YouTube shows are in video.json.
 
-Validation messages and the processing of a submission are not part of this video; the Forms series has a video for each.
+Validation messages and the processing of a submission are not part of this video.
 
 ## Recording it again
 
