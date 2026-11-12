@@ -1,0 +1,52 @@
+{
+  "title": "Export Content From the List: Download, Add to Plan, Send | Orchard Core",
+  "description": "Content you want to move to another Orchard Core site is listed on the content items list, while deployment plans are managed on separate admin screens.\n\nThree features of the Contents module add actions to that list: view or download an item as JSON, add it to a deployment plan, and export the items you select to a deployment target such as File Download.\n\nIn this video:\n• The three actions and who can use them\n• Enabling the three features\n• Viewing and downloading a content item as JSON\n• Adding one item, then several, to a deployment plan\n• Choosing the plan that the export action uses\n• Exporting one item, then several, to a deployment target",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Deployment",
+    "Deployment plan",
+    "Content items",
+    "Export content"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Deployment"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Deployment documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Deployment/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Contents/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Contents.Deployment.Download"
+  }
+}
