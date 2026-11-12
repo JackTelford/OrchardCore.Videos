@@ -4309,9 +4309,9 @@
     "docs": [
       "src/docs/reference/modules/X/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.0,
+    "words": 745,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

@@ -1,0 +1,235 @@
+{
+  "title": "X (Twitter): Sign In With X and Post From Workflows",
+  "output": "x-twitter-integration",
+  "spoken": {
+    "CallbackPath": "callback path",
+    "/signin-x": "slash sign in x"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "X (Twitter) in Orchard Core",
+      "subtitle": "Sign in with X, and post from workflows",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The X (Twitter) module connects your site to X in two ways. Visitors can sign in with their X account, and a workflow can post to X when something happens on your site. In this video, we'll set up both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What the module provides",
+      "subtitle": "Two features and one X app",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "The module has two features. X (Twitter) Integration stores the keys of your X app, and adds a workflow task that posts to X. Sign in with X (Twitter) adds a button to the login page."
+            },
+            {
+              "id": "why-2",
+              "text": "Both rely on an app that you create on the X developer platform. Its Keys and tokens tab provides the four values the module asks for: the API key, the API secret key, the Access Token, and the Access Token Secret."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Let's open Tools, Features, and search for Twitter. The module has two features, listed under the X (Twitter) category."
+            },
+            {
+              "id": "features-2",
+              "text": "Sign in with X (Twitter) lists X (Twitter) Integration and External Authentication as its dependencies. Let's enable it."
+            },
+            {
+              "id": "features-3",
+              "text": "Enabling a feature also enables its dependencies, so both X (Twitter) features show Enabled. Their settings pages are in the Settings menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enter the keys of your X app",
+      "subtitle": "Settings, Integrations, X (Twitter)",
+      "clips": [
+        {
+          "id": "03-keys",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "keys-1",
+              "text": "Open Settings, Integrations, X (Twitter). As the warning at the top of the page says, saving these settings might restart the site."
+            },
+            {
+              "id": "keys-2",
+              "text": "Enter the API key and the Access Token from the Keys and tokens tab of your app. Both fields are marked as required."
+            },
+            {
+              "id": "keys-3",
+              "text": "The API secret key and the Access Token Secret are password fields, so their values show as dots. Enter both: with any of the four values missing, the login page shows no X button."
+            },
+            {
+              "id": "keys-4",
+              "text": "Select Save. The page confirms that the site settings are updated, and the two secret fields tell you that the value is securely stored."
+            },
+            {
+              "id": "keys-5",
+              "text": "If the Secrets feature is enabled, each secret field can instead use a secret kept in the Secrets module. A separate video covers that feature."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Set up Sign in with X",
+      "subtitle": "Callback path and tokens",
+      "clips": [
+        {
+          "id": "04-signin",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "signin-1",
+              "text": "Open Settings, Security, Authentication, Sign In with X (Twitter). The keys come from the integration settings, so this page has only two options."
+            },
+            {
+              "id": "signin-2",
+              "text": "The CallbackPath is where X returns visitors to your site after they sign in. Enter /signin-x, and set the callback URL of your X app to your site's address followed by the same path."
+            },
+            {
+              "id": "signin-3",
+              "text": "Store tokens saves the external authentication tokens for reuse, and we leave it cleared. Select Save, and the site might restart to apply the settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The login page",
+      "subtitle": "The X (Twitter) button",
+      "clips": [
+        {
+          "id": "05-login",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "login-1",
+              "text": "Let's open the login page. Next to the usual Log in form, a section titled Use another service to log in offers the X (Twitter) button."
+            },
+            {
+              "id": "login-2",
+              "text": "Selecting the button sends the visitor to X to sign in. X then returns the visitor to the callback path of your site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The first sign-in",
+      "subtitle": "Link, create or sign in",
+      "clips": [
+        {
+          "id": "06-first",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "first-1",
+              "text": "When X returns a visitor, the site looks for an account already linked to that X account. If it finds one and that account is allowed to sign in, the visitor is signed in."
+            },
+            {
+              "id": "first-2",
+              "text": "Otherwise, if X provides an email that matches a local account, the page Link your account asks for that account's password. If not, the page Create a new account opens, unless the external registration settings disable new registrations or create accounts without asking."
+            },
+            {
+              "id": "first-3",
+              "text": "A signed-in user can also add X to an account later, from External Logins in the user menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Post from a workflow",
+      "subtitle": "Update X (Twitter) Status Task",
+      "clips": [
+        {
+          "id": "07-workflow",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "flow-1",
+              "text": "The module adds a task to Workflows, which is enabled on this site. Let's open Design, Workflows, select Create Workflow, enter a name, and select Create and open the designer."
+            },
+            {
+              "id": "flow-2",
+              "text": "An empty workflow offers the events to start with. We pick Content Published Event, and the designer marks it as the start activity."
+            },
+            {
+              "id": "flow-3",
+              "text": "In its settings, Content Types limits the event to the types you choose. We pick Blog Post, so other content does not run the workflow."
+            },
+            {
+              "id": "flow-4",
+              "text": "Point at the Done outcome until a plus appears, select it, and search for Twitter. Update X (Twitter) Status Task is listed under Social, and the designer adds it already connected."
+            },
+            {
+              "id": "flow-5",
+              "text": "Its settings include Template for updating X (Twitter) status, the text of the post. The field is required, so the activity shows an issue until you enter text and leave the field."
+            },
+            {
+              "id": "flow-6",
+              "text": "The task has two outcomes. Done follows when X accepts the post, and Failed follows when X returns an error."
+            },
+            {
+              "id": "flow-7",
+              "text": "The designer keeps your changes as a draft, and a draft does not run. Select Publish, and from then on publishing a Blog Post sends the text to X."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "X (Twitter) in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "With the keys of your X app saved, visitors can sign in with X, and workflows can post to X. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
