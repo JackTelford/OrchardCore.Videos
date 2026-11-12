@@ -1,0 +1,55 @@
+{
+  "title": "Feeds: Publish an RSS Feed of Your Content | Orchard Core",
+  "description": "People follow sites with a feed reader, which shows each entry without a visit to the site. An Orchard Core list, such as the posts of a blog, can publish an RSS feed for them, once the Feeds and Lists features are enabled.\n\nThe Feeds feature builds and serves the feed, and the Lists feature supplies the items. Each list has its own feed settings: how many items the feed holds, a public address that the page links to, and whether the feed is on.\n\nIn this video:\n• How feeds work: Feeds, Lists and the feed of a list\n• Enable the Feeds feature and check that Lists is enabled\n• Find the feed settings of a list and open its feed\n• Control the feed: how many items, where it points, and when it is off",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "RSS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "RSS",
+    "RSS feed",
+    "Feeds",
+    "Lists",
+    "Feed reader",
+    "Syndication"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "SEO and Analytics"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Feeds",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Feeds/"
+    },
+    {
+      "label": "Documentation: Lists",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lists/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Feeds/README.md",
+    "src/docs/reference/modules/Lists/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Feeds"
+  }
+}

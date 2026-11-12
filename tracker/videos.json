@@ -2004,9 +2004,9 @@
       "src/docs/reference/modules/Feeds/README.md",
       "src/docs/reference/modules/Lists/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 3.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 3.6,
+    "words": 533,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
