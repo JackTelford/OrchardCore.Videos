@@ -1,0 +1,204 @@
+{
+  "title": "Liquid Part and Liquid Field: Content That Runs Templates",
+  "output": "liquid-part-and-field",
+  "spoken": {
+    "LiquidPart_Summary": "Liquid Part Summary",
+    "LiquidPart": "Liquid Part",
+    "LiquidField": "Liquid Field",
+    "field-type-liquidfield": "field type liquid field",
+    "ContentItem": "Content Item",
+    "WithPart": "With Part",
+    "OfType": "Of Type",
+    "Html": "HTML"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Liquid Part and Liquid Field",
+      "subtitle": "Content that runs templates",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Liquid templates can live inside your content. The Liquid part and the Liquid field store a template, and run it whenever the content is displayed. In this video, you add each one, write a template, and see how it renders."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two components that run Liquid",
+      "subtitle": "The Liquid part and the Liquid field",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "The Liquid module provides two building blocks for content types that run templates. The Liquid part is the body of a content item. The Liquid field is a named block inside a part, and a part can have several."
+            },
+            {
+              "id": "idea-2",
+              "text": "Their source is stored exactly as you submit it, and runs when the content is displayed. The HTML body part, the HTML field, and the Markdown body part and field do not run Liquid. They treat it as ordinary text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Liquid part",
+      "subtitle": "Add it to a type, and write the body",
+      "clips": [
+        {
+          "id": "02-part",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "Let's add the Liquid part to a content type named Notice. On the Edit Content Type page, under Parts, choose Add Parts."
+            },
+            {
+              "id": "part-2",
+              "text": "The part is listed as Liquid, with the description: Provides a Liquid formatted body for your content item. Select it, and choose Add Selected Parts."
+            },
+            {
+              "id": "part-3",
+              "text": "In Content Items, choose New, then Notice. Enter a title. The Liquid part adds an editor labeled Body, with the hint: The body of the content item, in Liquid format."
+            },
+            {
+              "id": "part-4",
+              "text": "Write the template. It prints the site name from the Site object, and the modified date of the ContentItem, converted to the time zone of the site by the local filter."
+            },
+            {
+              "id": "part-5",
+              "text": "Liquid is checked when you save. Add an if tag with no end tag and choose Publish: the item is not saved, and the message begins, The Liquid Body doesn't contain a valid Liquid expression."
+            },
+            {
+              "id": "part-6",
+              "text": "Correct the template and publish again, then choose View. The page shows the title in the header, and below it the output of the template, with the site name and the date."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The Liquid field",
+      "subtitle": "A named block inside a part",
+      "clips": [
+        {
+          "id": "03-field",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "field-1",
+              "text": "Next comes the Liquid field. On the Edit Content Type page, under Fields, choose Add Field. Enter Closing Note as the Display Name; the Technical Name follows from it."
+            },
+            {
+              "id": "field-2",
+              "text": "Choose the field type Liquid Field, and save. The field is added to the part named after the type, which holds the fields of the type itself."
+            },
+            {
+              "id": "field-3",
+              "text": "Edit the notice. The editor is labeled with the display name of the field, Closing Note, and its hint reads: The content of the field, in Liquid format. This template links to the item with the display URL filter."
+            },
+            {
+              "id": "field-4",
+              "text": "Publish, then view the item again. The output of the field is on the page too: a link to the content item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Adding them from code",
+      "subtitle": "A migration does the same",
+      "clips": [
+        {
+          "id": "04-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "A migration does the same from code. WithPart attaches the Liquid part by name, and the field goes on the part named after the type, with OfType set to LiquidField."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "From source to page",
+      "subtitle": "Shapes, models and the output",
+      "clips": [
+        {
+          "id": "05-render",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "render-1",
+              "text": "Orchard Core renders content through shapes. The module describes the shapes LiquidPart, LiquidPart_Summary and LiquidField, and renders the stored source when a shape is processed."
+            },
+            {
+              "id": "render-2",
+              "text": "The shape itself is the Model, and the content item is passed in as ContentItem. The result is not sanitized: it becomes the Html property of the shape, and the shape's view writes it to the page as it is."
+            },
+            {
+              "id": "render-3",
+              "text": "The summary view removes the tags and cuts the text to about 200 characters. The field view wraps the Html in a div with the class field-type-liquidfield."
+            },
+            {
+              "id": "render-4",
+              "text": "Other code reads the same sources. A feed asks for the body aspect, which holds the rendered Liquid part. And in GraphQL, a Liquid field has a field named liquid that returns the rendered result."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Who can edit Liquid",
+      "subtitle": "The Manage Liquid templates permission",
+      "clips": [
+        {
+          "id": "06-safe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "safe-1",
+              "text": "Editing Liquid takes its own permission, Manage Liquid templates. It is marked security-critical, and the Administrator and Editor roles have it by default."
+            },
+            {
+              "id": "safe-2",
+              "text": "Without it, a user cannot edit or publish a content item that has a Liquid part or a Liquid field, even one nested inside a Flow or Bag part."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Liquid Part and Liquid Field",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Liquid part and the Liquid field: templates that live in your content, run when it is displayed, and are protected by their own permission. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
