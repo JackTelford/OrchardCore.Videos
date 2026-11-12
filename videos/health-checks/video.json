@@ -1,0 +1,48 @@
+{
+  "title": "Health Checks: Let Your Host Know the Site Is Up | Orchard Core",
+  "description": "Load balancers, container platforms, and uptime monitors need a way to ask a site whether it is running. ASP.NET Core defines health checks for this, but a site has to expose them.\n\nThe Orchard Core Health Checks module maps one endpoint in each tenant that enables it. The endpoint runs every registered check, such as the Redis and SMS checks of Orchard Core or a check of your own, and returns a compact or a detailed response.\n\nIn this video:\n• Why the Health Checks module exists and what it registers\n• Enabling the feature and opening the endpoint\n• Adding checks from Orchard Core features and from your own code\n• Reading the compact and the detailed response, and configuring them\n• Seeing a check fail, with the Redis feature and no server\n• Keeping the endpoint private, and what it does not do",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "HealthChecks"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Health Checks",
+    "IHealthCheck",
+    "Monitoring",
+    "Diagnostics"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Diagnostics and Logging"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/HealthChecks/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/HealthChecks/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.HealthChecks"
+  }
+}
