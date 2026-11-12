@@ -1,0 +1,65 @@
+{
+  "title": "Headless: Serve Content to Any Front End | Orchard Core",
+  "description": "A front end that lives in its own application needs three things from its content back end: a way to read the content, permission from the browser to call it, and a way to identify the caller.\n\nOrchard Core provides them with the GraphQL module for queries, the CORS Configuration module for cross-origin policies, and the OpenID Connect Authorization Server and Token Validation features for access tokens.\n\nIn this video:\n• What headless means, and the three questions it raises\n• Reading content with GraphQL, and allowing the Execute GraphQL permission\n• Letting a front end on another origin call Orchard Core with a CORS policy\n• Registering a public client in OpenID Connect, and validating its tokens\n• Applying the same setup on another site with a recipe",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Headless"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Headless CMS",
+    "GraphQL",
+    "CORS",
+    "OpenID Connect",
+    "OAuth",
+    "API"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Headless and APIs"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "GraphQL documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/"
+    },
+    {
+      "label": "GraphQL extensibility documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL.Abstractions/"
+    },
+    {
+      "label": "CORS documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Cors/"
+    },
+    {
+      "label": "OpenID Connect documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenId/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Apis.GraphQL/README.md",
+    "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md",
+    "src/docs/reference/modules/Cors/README.md",
+    "src/docs/reference/modules/OpenId/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Apis.GraphQL"
+  }
+}

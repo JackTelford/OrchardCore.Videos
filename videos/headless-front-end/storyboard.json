@@ -1,0 +1,219 @@
+{
+  "title": "Headless: Serve Content to Any Front End",
+  "output": "headless-front-end",
+  "spoken": {
+    "GraphiQL": "Graphical",
+    "Redirect Uris": "Redirect U.R.I.s"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Headless: Serve Content to Any Front End",
+      "subtitle": "Orchard Core as the content back end of your own app",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core can be the content back end of a front end built with any technology. This video connects three modules that make that work: GraphQL to read the content, CORS to let a browser call it, and OpenID Connect to identify the caller."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What headless means",
+      "subtitle": "Content in one place, front end anywhere",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "In a headless setup, editors work in the Orchard Core admin, and a separate application reads the published content over HTTP. That application is your front end: a single-page app, a mobile app, or a site built with any framework."
+            },
+            {
+              "id": "idea-2",
+              "text": "Three questions come up: how the app reads the content, how the browser allows the call, and how the app proves who it is. GraphQL, CORS, and OpenID Connect answer them in that order. Each module has a video of its own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Read content with GraphQL",
+      "subtitle": "One endpoint for your front end",
+      "clips": [
+        {
+          "id": "02-graphql",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "graphql-1",
+              "text": "Let's start with reading the content. In the features list, search for GraphQL and enable it. The module serves queries at one endpoint, and adds a GraphiQL page to the Tools menu."
+            },
+            {
+              "id": "graphql-2",
+              "text": "A front end that isn't signed in is an anonymous visitor, and anonymous visitors can't run queries by default. Open the Anonymous role, allow Execute GraphQL, and save the role."
+            },
+            {
+              "id": "graphql-3",
+              "text": "Open Tools, GraphiQL to try a query. This one asks for the display text of every published blog post. Run it, and the result lists the posts that the caller is allowed to view."
+            }
+          ]
+        },
+        {
+          "id": "02-request",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "request-1",
+              "text": "A front end sends the same query over HTTP. A POST request carries it in a JSON body, and a GET request carries it in the query string. The response is JSON, with the data, and the errors if there are any."
+            },
+            {
+              "id": "request-2",
+              "text": "A caller with an access token adds it in the Authorization header. A front end that sends no sign-in is an anonymous visitor, so the Anonymous role decides what comes back."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Allow the browser with CORS",
+      "subtitle": "Let your front end call Orchard Core",
+      "clips": [
+        {
+          "id": "03-cors",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cors-1",
+              "text": "Here is a front end on its own address, which makes it a different origin. When it loads the posts, the browser blocks the call, because Orchard Core has not said that this origin may read its responses."
+            },
+            {
+              "id": "cors-2",
+              "text": "CORS Configuration is a feature of its own. Let's enable it, and open Settings, Security, Cross-Origin Resource Sharing."
+            },
+            {
+              "id": "cors-3",
+              "text": "Select Add a policy, and name it Frontend. Select Set as default policy, so the CORS middleware applies that policy by default. This app sends no cookies, so turn off Allow credentials."
+            },
+            {
+              "id": "cors-4",
+              "text": "Under Allowed origins, add the origin of the front end: the scheme, the host, and the port, with no path. Methods and headers stay open here, and you can narrow them to what the app uses. Save the policy."
+            },
+            {
+              "id": "cors-5",
+              "text": "The policy is saved, and the tenant reloads. Back in the front end, loading the posts works, and the titles of the blog posts appear on the page."
+            }
+          ]
+        },
+        {
+          "id": "03-preflight",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cors-6",
+              "text": "To test a policy without a browser, send the preflight request yourself with curl. It is an OPTIONS request that carries the origin, the method, and the headers the app will use. The response headers show what the policy allows."
+            },
+            {
+              "id": "cors-7",
+              "text": "Remember that CORS is enforced by browsers. It is not authentication, and it does not restrict server-to-server clients, so keep sign-in and permissions in place. Allow only the origins, methods, and headers the app needs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Protect the API with OpenID Connect",
+      "subtitle": "Tokens issued and validated by Orchard Core",
+      "clips": [
+        {
+          "id": "04-openid",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "openid-1",
+              "text": "Some content is for signed-in users only. The OpenID Connect Authorization Server feature issues access tokens, and OpenID Connect Token Validation lets the API accept them. Let's enable both."
+            },
+            {
+              "id": "openid-2",
+              "text": "Under Settings, OpenID Connect, Authorization Server, the endpoints are enabled, and the Authorization Code and Refresh Token flows are allowed. These values are the defaults, and the server runs with them."
+            },
+            {
+              "id": "openid-3",
+              "text": "Under Access Control, OpenID Connect, Applications, select New application to register the front end. Enter a Display Name, choose Public client, because a browser app can't keep a secret, and enter a Client Id."
+            },
+            {
+              "id": "openid-4",
+              "text": "Select Allow Authorization Code Flow. In Redirect Uris, enter the address where the app receives the code, and select Require Proof Key for Code Exchange. Choose the scopes the app may request, such as profile and roles, and save."
+            },
+            {
+              "id": "openid-5",
+              "text": "Token Validation completes the setup. When the authorization server runs on the same tenant, validation uses it by default, so the API accepts the tokens this server issues. Another tenant or a remote authority can be set instead."
+            }
+          ]
+        },
+        {
+          "id": "04-flow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "flow-1",
+              "text": "In the authorization code flow, the app sends the visitor to the authorization endpoint, where they sign in to Orchard Core and, with Explicit consent, approve the request. The app then receives a code at its redirect address."
+            },
+            {
+              "id": "flow-2",
+              "text": "The app exchanges the code at the token endpoint, with its proof key, and receives an access token. The token request is cross-origin too, so the CORS policy covers it. The app sends the token in the Authorization header of each API call."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Set it up with a recipe",
+      "subtitle": "The same setup on every site",
+      "clips": [
+        {
+          "id": "05-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe applies the same setup to another site. Start with the feature step, because steps for features that are not enabled are skipped. In a CORS policy, list the allowed methods and headers: an empty list permits none."
+            },
+            {
+              "id": "recipe-2",
+              "text": "The OpenID Connect steps follow. The validation settings name the tenant that runs the server, and the application step registers the public client with its flow, its redirect address, and its scopes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Headless: Serve Content to Any Front End",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Orchard Core keeps the content and the rules, and your front end decides how it looks. GraphQL reads the content, CORS lets the browser ask for it, and OpenID Connect says who is asking. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
