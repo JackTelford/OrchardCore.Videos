@@ -1,6 +1,6 @@
 # Data Pipelines: Import Rows as Content Items
 
-**YouTube:** not published yet · **Length:** 5:14 · **Feature:** OrchardCore.DataPipelines ([Data Pipelines](https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/))
+**YouTube:** not published yet · **Length:** 5:19 · **Feature:** OrchardCore.DataPipelines ([Data Pipelines](https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/))
 
 An administrator imports the rows of a CSV file from the media library as content items. The video explains what an import
 needs, then designs the pipeline on screen (Read a media file, then Save content items, with the content type, the match on

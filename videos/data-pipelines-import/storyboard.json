@@ -95,7 +95,7 @@
             },
             {
               "id": "save-2",
-              "text": "The Content type list holds the content types of the site. Let's choose Product. The user who publishes the pipeline must be allowed to edit, and to publish, items of this type."
+              "text": "The Content type list holds the content types of the site. Let's choose Product, which has a title, a Price and a Category. The user who publishes the pipeline must be allowed to edit and publish its items."
             },
             {
               "id": "save-3",
@@ -140,7 +140,7 @@
             },
             {
               "id": "run-3",
-              "text": "A click on Open the run shows the page of the run. Under Delivered, the pipeline reports the result: four content items created, none updated, and one row rejected. The rejected row is the one without a price."
+              "text": "A click on Open the run shows the page of the run. Under Delivered, the pipeline reports the result: four content items created, none updated, and one row rejected. The rejected row is the one without a price, which the Product type requires."
             }
           ]
         }
