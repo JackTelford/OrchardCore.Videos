@@ -9,8 +9,11 @@ narration is generated; if a point differs, the step named in brackets changes f
 1. **Culture display names** (`enable-1`, `editor-1`, `editor-2`, `switch-1`, `access-1`). The editor lists cultures as
    "display name (culture name)", for example "French (France) (fr-FR)", and the culture permission is "Manage French
    (France) translations". The display name comes from .NET (`CultureInfo.DisplayName` in
-   `OrchardCore.DataLocalization/Controllers/AdminController.cs`), so it depends on the language of the machine that runs
-   the site. Confirm the English names on the recording machine. The admin culture picker lists the native names
+   `OrchardCore.DataLocalization/Controllers/AdminController.cs`), so it follows the interface culture of the request
+   (CurrentUICulture), which is English until `05-switch` sets the admin culture cookie; it also needs the .NET
+   culture data of the machine (not invariant globalization mode). Confirm the English names on the recording machine,
+   and that they turn into French names when the admin culture is French (the editor and permission pages are not
+   recorded in French). The admin culture picker lists the native names
    ("English (United States)", "français (France)"; `OrchardCore.Localization/Views/AdminCulturePicker.cshtml`).
 2. **The four categories** (`editor-2`, `stats-3`). The narration names Admin Menus, Content Fields, Content Types and
    Permissions. A fifth category, Search, appears only when the Search settings hold a placeholder and the Search module is

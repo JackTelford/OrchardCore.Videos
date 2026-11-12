@@ -250,7 +250,7 @@ visible. The browser stays in English.
 `editor-1` Click **Dynamic Translations** with `ClickAndWaitForNavigationAsync`. Wait until `#translation-editor` is
 visible and the spinner is gone. Highlight `#culture-select`. On screen at the end: the title `Dynamic Translations`,
 the **Culture** drop-down showing `English (United States) (en-US)`, and the first category with the text
-`strings` beside its name and no `translated` count. Labels: `OrchardCore.DataLocalization/Views/Admin/Index.cshtml:18,42-48,103`.
+`strings` beside its name and no `translated` count. Labels: `OrchardCore.DataLocalization/Views/Admin/Index.cshtml:42-48,101-104`.
 The option text is `{display name} ({culture name})` (`Index.cshtml:46`).
 
 `editor-2` Clear the highlight. Select French in `#culture-select` with `SelectAsync(..., "fr-FR")`. Wait until the
