@@ -72,7 +72,7 @@
             },
             {
               "id": "build-5",
-              "text": "Data pipeline lists the pipelines of the site. Choose Blog posts export. The task runs the published version, so publish a pipeline again after you change it."
+              "text": "Data pipeline lists the pipelines of the site. Choose Blog posts export, which saves the blog posts as a CSV file in the media library. The task runs the published version, so publish a pipeline again after you change it."
             },
             {
               "id": "build-6",
@@ -126,7 +126,7 @@
           "steps": [
             {
               "id": "react-1",
-              "text": "The outcomes of the task cover only the runs that the first workflow starts. To react to any run, including one started by hand, create a second workflow."
+              "text": "The outcomes of the task cover only the runs that the first workflow starts. To react to any run, including one started by hand, create a second workflow, in the same way, under Design, Workflows."
             },
             {
               "id": "react-2",
@@ -138,11 +138,11 @@
             },
             {
               "id": "react-4",
-              "text": "Any activity can follow the event, such as one that sends an email. Let's add a Log Task: its level is Error, and its text says that a run failed."
+              "text": "Any activity can follow the event, such as one that sends an email. Let's add a Log Task: set Log Level to Error, and Text to a sentence that says a run failed."
             },
             {
               "id": "react-5",
-              "text": "Publish the workflow so that it reacts when a run ends. Then let's start a pipeline that is set up to fail."
+              "text": "Publish the workflow so that it reacts when a run ends. Then let's run Blog posts by email, a pipeline that sends the file by email."
             },
             {
               "id": "react-6",

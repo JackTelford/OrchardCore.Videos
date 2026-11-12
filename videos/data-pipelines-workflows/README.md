@@ -1,6 +1,6 @@
 # Data Pipelines and Workflows: Run a Pipeline From a Workflow
 
-**YouTube:** not published yet · **Length:** 4:25 · **Feature:** [OrchardCore.DataPipelines](https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/)
+**YouTube:** not published yet · **Length:** 4:36 · **Feature:** [OrchardCore.DataPipelines](https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/)
 
 The Run Data Pipeline Task and the Data Pipeline Run Completed Event connect Data Pipelines to Workflows. The video
 builds a workflow that runs a published pipeline when a blog post is published, reads the run in Run History, and
