@@ -1,0 +1,188 @@
+{
+  "title": "Data Pipelines: Schedule Runs and Read the History",
+  "output": "data-pipelines-schedule-history",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Schedule runs and read the history",
+      "subtitle": "Run a pipeline on a timer, and see what every run did",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A pipeline can run when you ask it to, or on a schedule. In this video, we schedule a pipeline with a workflow, and then read the run history to see what each run did and why one of them failed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How runs and schedules work",
+      "subtitle": "Published versions, background runs and timers",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "runs-1",
+              "text": "A run executes the published version of a pipeline, never its draft. It is queued and executes in the background, so no page waits for it."
+            },
+            {
+              "id": "runs-2",
+              "text": "A run reads and writes data with the access of the user who published the pipeline. Only one run of a pipeline executes at a time, and the others wait in the queue."
+            },
+            {
+              "id": "schedule-1",
+              "text": "A pipeline has no schedule of its own. A workflow provides one: a Timer Event starts the workflow, and a Run Data Pipeline Task queues the run. These activities need the Workflows and Timer Workflows Activities features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Start a run",
+      "subtitle": "From the list of pipelines",
+      "clips": [
+        {
+          "id": "02-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Under Tools, Data Pipelines, Pipelines, each pipeline shows its published version and the status of its last run. A pipeline that was never published, or that is disabled, can't be run."
+            },
+            {
+              "id": "run-2",
+              "text": "From the Actions menu of Blog posts export, we start a run, and confirm with Run. The same menu has Run history, which lists the runs of this pipeline only."
+            },
+            {
+              "id": "run-3",
+              "text": "The run is queued and executes in the background. Its page shows the status, here Succeeded, the version that ran, and when the run was queued, started and ended."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Schedule a pipeline",
+      "subtitle": "A workflow with a timer",
+      "clips": [
+        {
+          "id": "03-schedule",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "sched-1",
+              "text": "Let's schedule it. Under Design, Workflows, we choose Create Workflow, name the workflow Nightly blog posts export, and choose Create and open the designer."
+            },
+            {
+              "id": "sched-2",
+              "text": "A workflow starts with an event, and the designer offers the common ones. We choose Timer Event, which runs the workflow repeatedly according to a CRON expression."
+            },
+            {
+              "id": "sched-3",
+              "text": "In the CRON Expression field, we enter a schedule for two in the morning, every day. A CRON expression uses UTC by default, so we check Use site time zone."
+            },
+            {
+              "id": "sched-4",
+              "text": "Pointing at the Done outcome of the Timer Event shows a plus. We click it, search for Run Data Pipeline Task, and choose it. The designer adds it, already connected."
+            },
+            {
+              "id": "sched-5",
+              "text": "In Data pipeline, we choose Blog posts export. We also check Skip when a run is already queued or running, so that runs do not pile up in the queue."
+            },
+            {
+              "id": "sched-6",
+              "text": "Publish turns the draft into the published workflow. From then on, the workflow queues a run every night, and each run is recorded in the run history."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Read the run history",
+      "subtitle": "Statuses, versions and errors",
+      "clips": [
+        {
+          "id": "04-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "hist-1",
+              "text": "Under Tools, Data Pipelines, Run History, the runs of every pipeline are listed, the most recent first. Each run shows its status, the version that ran, when it was queued, how long it took, and what started it."
+            },
+            {
+              "id": "hist-2",
+              "text": "The last badge, with the play icon, says what started the run: Manual, followed by a user name, for a run started from the Actions menu, and Workflow for a run that a workflow queued."
+            },
+            {
+              "id": "hist-3",
+              "text": "Search by pipeline narrows the list by pipeline name, and the Status menu narrows it by status. We choose Failed."
+            }
+          ]
+        },
+        {
+          "id": "04-details",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "hist-4",
+              "text": "We open the failed run with Details. Its page shows the status and the version, when the run was queued, started and ended, and the error that stopped it."
+            },
+            {
+              "id": "hist-5",
+              "text": "The Steps table lists each step with its status, rows read and written, files, and warnings. This run stopped before its first step began, so every step is Pending. The Log repeats the error in red, after the name of the step."
+            },
+            {
+              "id": "hist-6",
+              "text": "On the page of a run that succeeded, the Steps table shows the rows and files of each step, and Delivered lists what the run produced, such as a file saved to the media library, with a link to it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Cancel runs, keep the history",
+      "subtitle": "Permissions and retention",
+      "clips": [
+        {
+          "id": "05-keep",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "keep-1",
+              "text": "In the Actions menu of a run, Cancel the run stops it at once if it is queued, or at its next batch if it is running. It needs the Run data pipelines permission. By default, runs are deleted 30 days after they end."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Schedule runs and read the history",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A schedule is one workflow away, and every run leaves a record you can read. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

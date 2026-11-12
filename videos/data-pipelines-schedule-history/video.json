@@ -1,0 +1,55 @@
+{
+  "title": "Data Pipelines: Schedule Runs and Read the History | Orchard Core",
+  "description": "A data pipeline that someone must start by hand depends on that person remembering to do it, and when a run goes wrong, you need to know what it did.\n\nA workflow with a Timer Event and a Run Data Pipeline Task runs a published pipeline on a schedule. The run history lists every run, with its status, its version, what started it, each step, what it delivered, and the error of a run that failed.\n\nIn this video:\n• How a run works: the published version, the background, and one run at a time\n• Starting a run from the list of pipelines\n• Scheduling a pipeline with a Timer Event and a Run Data Pipeline Task\n• Reading the run history: statuses, filters, steps, the log and what a run delivered\n• Cancelling runs, and how long the history is kept",
+  "hashtags": [
+    "OrchardCore",
+    "DataPipelines",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Data Pipelines",
+    "Workflows",
+    "Timer",
+    "Schedule",
+    "Run history",
+    "ETL",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Data Pipelines"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Data Pipelines documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataPipelines/"
+    },
+    {
+      "label": "Data Sources documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/DataSources/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/DataPipelines/README.md",
+    "src/docs/reference/modules/DataSources/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.DataPipelines"
+  }
+}
