@@ -1,0 +1,62 @@
+{
+  "title": "Create an Admin Theme: Restyle the Admin | Orchard Core",
+  "description": "The Orchard Core admin has its own theme, separate from the theme of your site. To change how the admin looks, you create an admin theme instead of editing the files of Orchard Core.\n\nAn admin theme carries the admin tag and names TheAdmin as its base theme, so it replaces only the templates and styles you change. This video builds one: it overrides the admin branding, loads a stylesheet that makes the forms horizontal, and makes the theme current from Design, Themes.\n\nIn this video:\n• How the admin gets its theme: the Admin attribute, the admin tag and the base theme\n• Create the theme: a manifest with the admin tag and TheAdmin as base theme\n• Override a template: the admin branding and your stylesheet\n• Restyle the forms: the ocat classes and a horizontal layout\n• Make it the admin theme: Design, Themes, Make Current\n• The restyled admin: branding and forms\n• More to customize: templates, hints and the Admin attribute for pages of your own",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "admin theme",
+    "theme",
+    "TheAdmin",
+    "Razor",
+    "CSS",
+    "Orchard Core themes"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Themes"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Creating a custom admin theme",
+      "url": "https://docs.orchardcore.net/en/latest/guides/create-admin-theme/"
+    },
+    {
+      "label": "Documentation: Admin theme conventions",
+      "url": "https://docs.orchardcore.net/en/latest/reference/themes/admin-theme/"
+    },
+    {
+      "label": "Documentation: Admin module",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Admin/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/guides/create-admin-theme/README.md",
+    "src/docs/reference/themes/admin-theme.md",
+    "src/docs/reference/modules/Admin/README.md",
+    "src/docs/reference/modules/AdminMenu/README.md",
+    "src/docs/reference/modules/Localize/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "guide:guides/create-admin-theme"
+  }
+}

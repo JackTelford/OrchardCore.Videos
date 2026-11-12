@@ -1,0 +1,237 @@
+{
+  "title": "Create an Orchard Core Admin Theme",
+  "output": "admin-theme-create",
+  "spoken": {
+    "TheAdminLayout": "The Admin Layout",
+    "TheAdmin": "The Admin",
+    "MyAdminTheme": "My Admin Theme",
+    "AdminBranding": "Admin Branding",
+    "wwwroot": "W.W.W. root",
+    "depends-on": "depends on",
+    "Base url": "Base U.R.L.",
+    "ocat ": "O.C.A.T. ",
+    "ocat-": "O.C.A.T. ",
+    "the-admin": "the admin",
+    "Hint.Admin": "Hint dot Admin",
+    "Model.Hint": "Model dot Hint"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Create an Orchard Core admin theme",
+      "subtitle": "Restyle the admin with a theme of your own",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Orchard Core admin has a theme of its own, separate from the theme of your site. In this video, you create an admin theme on top of TheAdmin, change its branding, restyle its forms, and make it current."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the admin gets its theme",
+      "subtitle": "Two current themes and a base theme",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "A site has two current themes: one renders the pages visitors see, and the other renders the admin. The setup recipes of Orchard Core, such as Blog and Blank, set TheAdmin as the admin theme."
+            },
+            {
+              "id": "how-2",
+              "text": "The Admin attribute marks a request as an admin request. For those requests, Orchard Core renders with the admin theme instead of the site theme."
+            },
+            {
+              "id": "how-3",
+              "text": "Your admin theme does not start from zero. It names TheAdmin as its base theme, so a template in your theme replaces the same template of TheAdmin, and every other template stays as it is."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Create the theme",
+      "subtitle": "A manifest with the admin tag and a base theme",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Create the theme project with the theme template, add it to your solution, and reference it from the web application. A separate video covers creating a theme in detail."
+            },
+            {
+              "id": "create-2",
+              "text": "In the manifest, add the tag admin, and set the base theme to TheAdmin. The tag lets the Themes page offer your theme as an admin theme. The base theme makes TheAdmin supply every template you do not override."
+            },
+            {
+              "id": "create-3",
+              "text": "The template also adds a Layout file for a site theme. Delete it. A Layout in your theme replaces the layout of TheAdmin, which draws the menu and the top bar of the admin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Override a template",
+      "subtitle": "Branding and your stylesheet",
+      "clips": [
+        {
+          "id": "03-template",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "template-1",
+              "text": "To change a template, add a file with the same name to the Views folder of your theme. The Razor files of your theme rely on a view imports file, like the one in TheAdmin, that sets the page class and registers the tag helpers."
+            },
+            {
+              "id": "template-2",
+              "text": "The Admin module provides AdminBranding, which renders the brand in the top bar: the logo and the site name. Your template keeps only the site name, linked to the admin home page."
+            },
+            {
+              "id": "template-3",
+              "text": "The layout renders the branding before the head of the page, so a stylesheet required here loads on every page that uses the admin layout. The file lives in the wwwroot folder of your theme."
+            },
+            {
+              "id": "template-4",
+              "text": "The depends-on attribute names TheAdminLayout, bootstrap and the-admin, the styles that the layout loads for the admin. The browser loads them first and your file after, so your rules can override theirs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Restyle the forms",
+      "subtitle": "The ocat classes",
+      "clips": [
+        {
+          "id": "04-forms",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "forms-1",
+              "text": "Admin editors do not fix a form layout. They mark up a field with ocat classes: ocat-wrapper around the field, ocat-label for its label, and ocat-end for the input and its hint."
+            },
+            {
+              "id": "forms-2",
+              "text": "Fields of limited width, such as dropdowns and numbers, use ocat-limited-wrapper and ocat-limited. By default, all of these classes stack the label above the input."
+            },
+            {
+              "id": "forms-3",
+              "text": "Your stylesheet can restyle every editor that uses these classes without touching a Razor view. This one makes the wrapper a flex row, gives the label a quarter of the width, aligned to the end, and the input the rest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Make it the admin theme",
+      "subtitle": "Design, Themes",
+      "clips": [
+        {
+          "id": "05-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Build and run the site, then open Design, Themes. Your theme appears as a card, after the cards of the current admin theme and the current site theme."
+            },
+            {
+              "id": "enable-2",
+              "text": "The card lists the author, the website, the tags and the version from the manifest. The tags include admin, so Make Current applies this theme to the admin and not to the site."
+            },
+            {
+              "id": "enable-3",
+              "text": "Select Make Current. Orchard Core enables the theme and reports that MyAdminTheme was set as the default Admin theme."
+            },
+            {
+              "id": "enable-4",
+              "text": "The card reads: This is the current Admin theme, and every page of the admin renders with your theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The restyled admin",
+      "subtitle": "Branding and forms",
+      "clips": [
+        {
+          "id": "06-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "The top bar shows the branding of your template: the site name, without the logo. The rest of the layout still comes from TheAdmin."
+            },
+            {
+              "id": "result-2",
+              "text": "Open Settings, General. Site name, Page title format and Base url each sit beside their field, because the editors use the ocat classes that your stylesheet changed."
+            },
+            {
+              "id": "result-3",
+              "text": "The Settings module did not change. Only the theme decides the layout. To go back, make The Admin Theme current again on the Themes page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "More to customize",
+      "subtitle": "Templates, hints and pages of your own",
+      "clips": [
+        {
+          "id": "07-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "Any template of TheAdmin can be replaced the same way, for example Layout, Breadcrumb, Pager and Message. A placement file in your theme also changes where parts of the admin pages are placed."
+            },
+            {
+              "id": "more-2",
+              "text": "Content fields render their hint with the Hint.Admin template. A template with that name in your theme replaces it, and reads the text from Model.Hint. This one renders a tooltip button."
+            },
+            {
+              "id": "more-3",
+              "text": "Pages of your own modules use the admin theme when you apply the Admin attribute to their controller or to a single action. The Admin module also checks that the user has the Access admin panel permission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Create an Orchard Core admin theme",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is an admin theme: a manifest with the admin tag and TheAdmin as base theme, and only the templates and styles you want to change. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
