@@ -4097,9 +4097,9 @@
       "src/docs/reference/modules/AuditTrail/README.md",
       "src/docs/reference/modules/Users/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.3,
+    "words": 646,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
