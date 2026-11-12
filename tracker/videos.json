@@ -242,9 +242,9 @@
     "docs": [
       "src/docs/reference/modules/AdminDashboard/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.6,
+    "words": 696,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

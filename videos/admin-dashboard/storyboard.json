@@ -1,0 +1,217 @@
+{
+  "title": "Admin Dashboard: Build a Start Page for Your Editors",
+  "output": "admin-dashboard",
+  "spoken": {
+    "DashboardWidget": "Dashboard Widget"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Admin Dashboard",
+      "subtitle": "A start page of widgets for your editors",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every Orchard Core site has a home page in its admin. The Admin Dashboard module replaces it with widgets that you choose and arrange. In this video, we enable the dashboard, add and arrange widgets, and decide who sees them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the dashboard works",
+      "subtitle": "Widgets, grid cells and published content",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "The dashboard is built from widgets. A widget is a content item, so you create, edit, publish, and delete it in the same way as any other content."
+            },
+            {
+              "id": "how-2",
+              "text": "The dashboard is a grid. Each widget has a Position, which sets its order, and a Width and a Height, counted in grid cells. On a wide screen, the grid has six columns."
+            },
+            {
+              "id": "how-3",
+              "text": "The dashboard shows only published widgets. A widget that is only a draft, or that you unpublish, stays out of the dashboard but remains in the editor, so you can finish it first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the dashboard",
+      "subtitle": "Replace the home page of the admin",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "This is the home page of the admin. Under Welcome to Orchard Core, cards lead to Create content, Customize theme, Manage users, and Learn more."
+            },
+            {
+              "id": "enable-2",
+              "text": "To replace it, open Tools, then Features, and search for Admin Dashboard. The feature is listed under Content Management."
+            },
+            {
+              "id": "enable-3",
+              "text": "Select Enable on its row. A message confirms that the feature is enabled."
+            },
+            {
+              "id": "enable-4",
+              "text": "Select the site name in the top bar to return to the home page. It is titled Dashboard, and a message asks you to click Manage Dashboard to add a widget."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add a widget",
+      "subtitle": "Create an Html Dashboard Widget",
+      "clips": [
+        {
+          "id": "03-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Select Manage Dashboard to open the editor. Close Editor leaves it, and Add Widget lists the types of widget that you can create."
+            },
+            {
+              "id": "add-2",
+              "text": "This site has one widget type, Html Dashboard Widget, whose body holds text or HTML. Let's choose it."
+            },
+            {
+              "id": "add-3",
+              "text": "Enter a title, and type some text in the body. Let's write a short welcome for editors."
+            },
+            {
+              "id": "add-4",
+              "text": "Position, Width, and Height set the place and size of the widget. A Position of zero puts it first, a Width of two spans two columns, and a Height of one is one row."
+            },
+            {
+              "id": "add-5",
+              "text": "Save Draft keeps the widget out of the dashboard until you publish it. Publish adds it to the dashboard and returns to the editor, where the widget appears."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Arrange and manage widgets",
+      "subtitle": "Drag, resize, and use the Actions menu",
+      "clips": [
+        {
+          "id": "04-arrange",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "arrange-1",
+              "text": "The editor shows every widget, each with a drag handle beside its title. Let's drag Office hours by its handle to the front. The other widgets make room."
+            },
+            {
+              "id": "arrange-2",
+              "text": "The order is saved as soon as you drop the widget. A message says that the dashboard was successfully updated, and Undo restores the previous arrangement."
+            },
+            {
+              "id": "arrange-3",
+              "text": "To resize a widget, drag its right edge, its bottom edge, or its bottom right corner. Let's drag the corner of Style reminders. It snaps to whole grid cells."
+            },
+            {
+              "id": "arrange-4",
+              "text": "The size is saved the same way. You can also type the values in the Position, Width, and Height fields of the widget's edit form."
+            },
+            {
+              "id": "arrange-5",
+              "text": "Each widget has an Actions menu. For a published widget, it offers Edit, Delete, and Unpublish."
+            },
+            {
+              "id": "arrange-6",
+              "text": "A draft, such as Holiday schedule, offers Publish Draft and Discard Draft instead of Unpublish."
+            },
+            {
+              "id": "arrange-7",
+              "text": "Select Close Editor. The dashboard shows the published widgets in the order and sizes that you set. Holiday schedule is a draft, so it stays out until you publish it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Who sees the dashboard",
+      "subtitle": "Two permissions and the right to view a widget",
+      "clips": [
+        {
+          "id": "05-who",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "who-1",
+              "text": "Two permissions control the dashboard. Access the Admin Dashboard lets a user see the dashboard. Manage the Admin Dashboard adds the Manage Dashboard button, and it includes the access permission."
+            },
+            {
+              "id": "who-2",
+              "text": "By default, the Administrator role has both permissions. The Editor, Moderator, Author, and Contributor roles can access the dashboard. You change the permissions of these four roles on the Roles page, under Access Control."
+            },
+            {
+              "id": "who-3",
+              "text": "Access to the dashboard is not enough to see a widget. A user who cannot manage the dashboard also needs permission to view the widget's content. If no widget is left to see, that user gets the welcome home page instead."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Your own widget types",
+      "subtitle": "Any content type can be a widget",
+      "clips": [
+        {
+          "id": "06-types",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "types-1",
+              "text": "Widgets come from content types. To make your own, create a content type under Design, Content Definition, Content Types, and enter DashboardWidget as its Stereotype."
+            },
+            {
+              "id": "types-2",
+              "text": "Add parts such as a title and a body. The type then appears under Add Widget, and a part that stores the position and size is added for you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Admin Dashboard",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Admin Dashboard module: a start page of widgets that you arrange for your editors, with permissions that decide who sees what. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
