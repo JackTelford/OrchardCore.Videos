@@ -1,0 +1,234 @@
+{
+  "title": "Taxonomies in Code: Query Content Items by Term",
+  "output": "taxonomies-query-content",
+  "spoken": {
+    "QueryCategorizedContentItemsAsync": "Query Categorized Content Items Async",
+    "IContentsTaxonomyListFilter": "I Contents Taxonomy List Filter",
+    "DisplayText": "Display Text",
+    "ContentQueryAsync": "Content Query Async",
+    "TaxonomyIndex": "Taxonomy Index",
+    "TaxonomyField": "Taxonomy Field",
+    "GetBlogsByFilter": "Get Blogs By Filter",
+    "TermPart": "Term Part",
+    "ISession": "I Session",
+    "Ids": "I.D.s"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Taxonomies in Code: Query Content Items by Term",
+      "subtitle": "Find content items by the terms they carry",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A taxonomy field stores the terms an editor picked. This video queries content items by those terms from code: through the TaxonomyIndex table, through a Lucene query with parameters, and through the term page filter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Where the terms are stored",
+      "subtitle": "The field and the index",
+      "clips": [
+        {
+          "id": "01-store",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "store-1",
+              "text": "The TaxonomyField class has two properties: the content item id of its taxonomy, and the content item ids of the terms an editor selected. Every query in this video works on those term ids."
+            },
+            {
+              "id": "store-2",
+              "text": "The TaxonomyIndex table has one row for each selected term of each field. A row names the taxonomy, the content item, its type, the part and the field, and the term, plus two flags, Published and Latest."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Query the TaxonomyIndex",
+      "subtitle": "From a view or from a service",
+      "clips": [
+        {
+          "id": "02-sql",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "sql-1",
+              "text": "In a view, the Orchard helper provides QueryCategorizedContentItemsAsync. You pass a function that receives a query on TaxonomyIndex, and you get back the content items, loaded."
+            },
+            {
+              "id": "sql-2",
+              "text": "This TaxonomyField view lists related items. It reads the term ids of the field, keeps the rows whose term is one of them, and leaves out the item being displayed."
+            },
+            {
+              "id": "sql-3",
+              "text": "The helper adds no filter of its own. The index has rows for the published version of an item and for the version flagged Latest, so add Published or Latest to the query, as this view does with Published."
+            },
+            {
+              "id": "sql-4",
+              "text": "The index holds only the terms an editor selected. An item filed under a child term has no row for its parent, so a query on the parent term does not return it."
+            },
+            {
+              "id": "sql-5",
+              "text": "Outside a view, run the same query on ISession, and load the results with the content manager. Use it in a service, a controller, or any code that is not a template."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Index the terms for Lucene",
+      "subtitle": "Keys, field settings and a rebuild",
+      "clips": [
+        {
+          "id": "03-keys",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "keys-1",
+              "text": "A Lucene index can hold the same ids. For a field marked Include this element in the index, the key is the type name, the field name, and then Ids for the selected terms, or Inherited for those terms and all their parents."
+            }
+          ]
+        },
+        {
+          "id": "03-index",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "index-1",
+              "text": "On the Blog Post content type, edit its Category field. Under Lucene Index settings, check Include this element in the index, and save."
+            },
+            {
+              "id": "index-2",
+              "text": "Do the same for the Tags field, so both fields write their term ids to the index."
+            },
+            {
+              "id": "index-3",
+              "text": "A rebuild indexes the existing posts again. Go to Search, Indexes, and open Actions on the Search index."
+            },
+            {
+              "id": "index-4",
+              "text": "Choose Rebuild. A notification says the index was rebuilt, and the posts are indexed again in the background."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "A Lucene query with parameters",
+      "subtitle": "A Liquid template, saved by name",
+      "clips": [
+        {
+          "id": "04-template",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "template-1",
+              "text": "A Lucene query is JSON, and Liquid renders it first. The clause for the content type always applies. An if tag adds a match clause for categories or tags only when that parameter has a value."
+            },
+            {
+              "id": "template-2",
+              "text": "A match query splits its text into ids and joins them with or. The must list joins the clauses with and, so a post needs a matching category and a matching tag."
+            }
+          ]
+        },
+        {
+          "id": "04-query",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "query-1",
+              "text": "On the Lucene Query page, the template runs against the Search index. Without parameters, it returns the blog posts, up to ten."
+            },
+            {
+              "id": "query-2",
+              "text": "Save Query opens the form for a Lucene query. Name it GetBlogsByFilter, select the Search index, and check Return Content Items."
+            },
+            {
+              "id": "query-3",
+              "text": "Save it. The query appears in All Queries, and Razor or Liquid can run it by name."
+            },
+            {
+              "id": "run-1",
+              "text": "In All Queries, Run opens the query on the Lucene Query page again. Parameters takes a JSON object, with one value for each parameter name."
+            },
+            {
+              "id": "run-2",
+              "text": "Passing the id of the Politics term as categories returns two posts. The table shows the stored fields, including the term ids."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Call the query from code",
+      "subtitle": "Razor and Liquid",
+      "clips": [
+        {
+          "id": "05-razor",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "razor-1",
+              "text": "In Razor, ContentQueryAsync runs the query by name. Pass the parameters in a dictionary, join several ids with a space, and leave out a filter you do not use."
+            },
+            {
+              "id": "razor-2",
+              "text": "ContentQueryAsync returns content items, so a view can list their DisplayText. In Liquid, the query filter on the Queries property runs the same query with named arguments."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The term page query",
+      "subtitle": "Customize what a term page lists",
+      "clips": [
+        {
+          "id": "06-filter",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "filter-1",
+              "text": "A term page lists its items with the same index. It asks TaxonomyIndex for the rows of the page's term, then calls every registered IContentsTaxonomyListFilter before it applies the pager."
+            },
+            {
+              "id": "filter-2",
+              "text": "A filter receives the query and the TermPart. Implement it to narrow or change the query before the list is paged."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Taxonomies in Code: Query Content Items by Term",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You can query content items by term from the TaxonomyIndex, from a Lucene query with parameters, and from the term page filter. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

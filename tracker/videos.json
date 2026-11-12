@@ -1318,9 +1318,9 @@
       "src/docs/reference/modules/Taxonomies/README.md",
       "src/docs/guides/query-content-items-based-on-taxonomy/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.6,
+    "words": 692,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
