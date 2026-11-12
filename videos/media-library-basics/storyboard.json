@@ -1,0 +1,269 @@
+{
+  "title": "Media Library: Upload, Organize and Reuse Files",
+  "output": "media-library-basics",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Media Library: Upload, Organize and Reuse Files",
+      "subtitle": "Upload, organize and reuse the files of your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Photos, documents and downloads need a home on every site. The Media Library keeps them in folders, and any page can reuse them. In this video, you upload files, organize them in folders, rename, move and find them, and reuse them in content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What the library is",
+      "subtitle": "One place for the files of a site",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A site uses many files: photos, PDFs and downloads. When they are scattered across pages, it is hard to know what the site holds."
+            },
+            {
+              "id": "why-2",
+              "text": "The Media module gives the site one library. You manage its files and folders in the admin, and each file is served from its own public address."
+            },
+            {
+              "id": "why-3",
+              "text": "A media field on a page keeps the path of a file in the library. The file is stored once, and any number of pages can use it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "A tour of the library",
+      "subtitle": "Folders, files and tools",
+      "clips": [
+        {
+          "id": "02-tour",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tour-1",
+              "text": "In the admin menu, Media, Library opens the media library. The entry appears for users whose role has the Manage Media permission, or a permission that includes it."
+            },
+            {
+              "id": "tour-2",
+              "text": "On the left is the folder tree. Its first entry, Files, is the root folder, and the files of the selected folder are listed beside it."
+            },
+            {
+              "id": "tour-3",
+              "text": "The list shows each file's Name, when it was Last modified, and its Size. Folders appear only in the tree."
+            },
+            {
+              "id": "tour-4",
+              "text": "Above the list, Upload files adds files from your computer. The trash can button deletes the selected files, and the download button downloads them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Upload files",
+      "subtitle": "Add files to a folder",
+      "clips": [
+        {
+          "id": "03-upload",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "upload-1",
+              "text": "Select the folder that should receive the files. Click Upload files and choose one or more files, or drag files from your computer onto the page."
+            },
+            {
+              "id": "upload-2",
+              "text": "The Uploads panel in the corner lists each file with its progress, and a check mark when it is done. The files then appear in the list."
+            },
+            {
+              "id": "upload-3",
+              "text": "A file whose name already exists in the folder is refused with a warning: A file with this name already exists in the current folder."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Organize with folders",
+      "subtitle": "Create and delete folders",
+      "clips": [
+        {
+          "id": "04-folders",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "folders-1",
+              "text": "Point at a folder in the tree, and a button with three dots appears. Click it on Files to open the folder menu, which offers Create a subfolder."
+            },
+            {
+              "id": "folders-2",
+              "text": "Choose Create a subfolder. The Create folder dialog asks for a name: type Harvest Festival, and click Ok."
+            },
+            {
+              "id": "folders-3",
+              "text": "The folder is added to the tree under Files. Select it, and the breadcrumb above the list reads Files, then Harvest Festival, while the page says This folder is empty."
+            },
+            {
+              "id": "folders-4",
+              "text": "Every folder except Files also offers Delete. Choose it on Old Drafts, and the Delete folder dialog asks, Are you sure you want to delete this folder?"
+            },
+            {
+              "id": "folders-5",
+              "text": "With the default file storage, deleting a folder also deletes the files inside it. Click Ok. Old Drafts leaves the tree, and the library returns to Files."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Work with files",
+      "subtitle": "Rename, move, copy and delete",
+      "clips": [
+        {
+          "id": "05-files",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "files-1",
+              "text": "Each file has a menu with three dots at the end of its row. It offers Rename, Move, Copy, View, Download and Delete."
+            },
+            {
+              "id": "files-2",
+              "text": "Rename opens the Rename file dialog, with the current name in the File name box. Type another name that keeps an allowed file extension, and click Ok."
+            },
+            {
+              "id": "files-3",
+              "text": "Move opens the Move file dialog. In the Select a folder box, choose Harvest Festival and click Ok; the file leaves this list, and a message confirms the move."
+            },
+            {
+              "id": "files-4",
+              "text": "Copy works the same way, except that the original stays where it is. Click Ok, and a message confirms the copy. Open Harvest Festival, and the copy is there under the same name, next to the moved file."
+            },
+            {
+              "id": "files-5",
+              "text": "To work on several files, tick their check boxes. The trash can and download buttons above the list show how many files are selected, and they act on all of them."
+            },
+            {
+              "id": "files-6",
+              "text": "Click the trash can button, and the Delete file dialog asks you to confirm. Click Ok, and the selected files are deleted from the library."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Find files",
+      "subtitle": "Filter, sort and view",
+      "clips": [
+        {
+          "id": "06-find",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "find-1",
+              "text": "Select Orchard Photos. By default the list shows ten files per page, so its twelve files take two pages. The pager below the list offers First, Previous, page numbers, Next and Last."
+            },
+            {
+              "id": "find-2",
+              "text": "Type in the Search and filter box to show only the files whose names contain your text. The filter applies to the open folder."
+            },
+            {
+              "id": "find-3",
+              "text": "Click the Name, Last modified or Size heading to sort by it, and click it again to reverse the order."
+            },
+            {
+              "id": "find-4",
+              "text": "The grid button above the list switches to thumbnails for images; other files show an icon with their extension. Click it again to return to the list."
+            },
+            {
+              "id": "find-5",
+              "text": "The gear button opens the settings. Items per page offers 10, 20, 50 and 100 files, and Thumbnail size switches between Normal and Large."
+            },
+            {
+              "id": "find-6",
+              "text": "The drive button next to the gear shows Available Storage. With the default file storage, that is the free space on the drive that holds the library."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Reuse a file in content",
+      "subtitle": "Pick a file from the library",
+      "clips": [
+        {
+          "id": "07-reuse",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "reuse-1",
+              "text": "A media field can open the library, so you pick a file instead of uploading it again. When you create an Article, its Banner Image field has an Add media button. Let's click it."
+            },
+            {
+              "id": "reuse-2",
+              "text": "The Select Media dialog holds the same library, with the folder tree, the Upload files button and the list. Open Harvest Festival, tick a photo, and click OK."
+            },
+            {
+              "id": "reuse-3",
+              "text": "The field shows the photo. It keeps the path of the file in the library, so any other page can use the same file without another upload."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Optional features",
+      "subtitle": "Clean names, resumable uploads and live updates",
+      "clips": [
+        {
+          "id": "08-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "Three optional features extend the library. Media Slugify gives the folders and files you add clean names, Media TUS Uploads makes uploads resumable, and Media SignalR keeps open libraries in sync. A separate video covers them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Media Library: Upload, Organize and Reuse Files",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Media Library keeps the files of your site in one place, ready to upload, organize and reuse. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
