@@ -1,0 +1,284 @@
+{
+  "title": "Orchard Core Workflows",
+  "output": "workflows-overview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Workflows",
+      "subtitle": "Automate tasks without writing code",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "When an editor publishes an article or a visitor registers, something else often has to happen. The Workflows module lets you describe that follow-up as a diagram, with no code. In this video, we'll build a workflow and watch it run."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why workflows",
+      "subtitle": "Reacting to what happens on a site",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Sites often need to react to what happens on them: an article is published, a user registers, a form is submitted. Doing it by hand is slow, and writing code for every case is costly."
+            },
+            {
+              "id": "why-2",
+              "text": "With the Workflows module, you draw the reaction in the admin. Orchard Core runs the diagram each time the event happens, and you can inspect the runs afterwards."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The parts of a workflow",
+      "subtitle": "Events, tasks, outcomes and transitions",
+      "clips": [
+        {
+          "id": "02-parts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "parts-1",
+              "text": "A workflow is a diagram of activities. An event is an activity that waits for something to happen, such as content being published. Only an event can start a workflow."
+            },
+            {
+              "id": "parts-2",
+              "text": "A task is an activity that does something, such as showing a notification, sending an email, or publishing content."
+            },
+            {
+              "id": "parts-3",
+              "text": "Each activity has outcomes, which are the exits it can take, such as Done. You connect an outcome to the next activity, and that connection is called a transition."
+            },
+            {
+              "id": "parts-4",
+              "text": "When the event happens, Orchard Core starts an instance of the workflow and follows the transitions. An instance can finish at once, or wait for another event and continue later."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable Workflows",
+      "subtitle": "A feature to turn on",
+      "short": "enable",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Orchard Core turns capabilities on as features, and Workflows is one of them. Let's open Tools, Features, and search for workflows."
+            },
+            {
+              "id": "enable-2",
+              "text": "Workflows is the feature the others build on. HTTP Workflows Activities, Session Workflows Activities, and Timer Workflows Activities add activities of their own, and each is enabled separately."
+            },
+            {
+              "id": "enable-3",
+              "text": "Let's enable Workflows. The Contents module provides the content events this video uses, once Workflows is enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create a workflow",
+      "subtitle": "A name is all it needs",
+      "short": "create",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Workflows is under Design in the admin menu. The page lists your workflows. This site has none, so the list is empty."
+            },
+            {
+              "id": "create-2",
+              "text": "Let's select Create Workflow. It asks only for a name, and the name says what the workflow does, such as notifying the editors when an article is published."
+            },
+            {
+              "id": "create-3",
+              "text": "Let's open More settings. It holds options, such as whether the workflow is enabled and how many instances run at a time. The defaults suit most workflows, so they stay as they are."
+            },
+            {
+              "id": "create-4",
+              "text": "Let's select Create and open the designer. It saves the workflow and opens the designer with an empty canvas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The designer",
+      "subtitle": "Toolbar, activities, canvas and panels",
+      "short": "designer",
+      "clips": [
+        {
+          "id": "05-designer",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "designer-1",
+              "text": "The toolbar shows the name of the workflow, with a link back to Workflows, and the Publish and Discard draft buttons."
+            },
+            {
+              "id": "designer-2",
+              "text": "The Activities pane on the left lists everything you can add, grouped by category. Search it by name, or show only Events or Tasks."
+            },
+            {
+              "id": "designer-3",
+              "text": "The canvas in the middle is where the workflow takes shape. A workflow runs when something happens, so an empty one offers events to start with."
+            },
+            {
+              "id": "designer-4",
+              "text": "On the right, the workflow panel has three tabs. Variables holds named values, Workflow holds settings such as the name, and Issues lists the problems found."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Build a workflow",
+      "subtitle": "An event, a task and a transition",
+      "short": "build",
+      "clips": [
+        {
+          "id": "06-build",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "Under Start with an event, let's pick the Content Published Event. The first event you add becomes the start activity, and its card shows a Start badge."
+            },
+            {
+              "id": "build-2",
+              "text": "Its settings open at the bottom of the canvas. Content Types limits the event to the types you choose. Let's pick Article, so other content does not start the workflow."
+            },
+            {
+              "id": "build-3",
+              "text": "Each activity shows its outcomes as ports. Let's point at the Done port, where a plus sign appears, then click it and search for Notify."
+            },
+            {
+              "id": "build-4",
+              "text": "Let's select Notify Task. It is added to the right, connected to Done by a transition, and it displays a notification when it runs."
+            },
+            {
+              "id": "build-5",
+              "text": "A message is required, so the card and the Issues tab flag a problem. Let's type a message and leave the field, and the problem clears."
+            },
+            {
+              "id": "build-6",
+              "text": "The designer saves your changes as a draft while you work, and a draft does not run. Let's select Publish, which makes the draft the version that runs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Run the workflow",
+      "subtitle": "Publish an article",
+      "short": "run",
+      "clips": [
+        {
+          "id": "07-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Let's trigger it. Under Content, Content Items, Edit opens an article in the editor, which has a Publish button."
+            },
+            {
+              "id": "run-2",
+              "text": "Let's select Publish. That makes the Content Published Event happen, so the workflow starts. The Notify Task shows its message, next to the notification Orchard Core adds when content is published."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Follow the instances",
+      "subtitle": "Every run is kept",
+      "short": "instances",
+      "clips": [
+        {
+          "id": "08-instances",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "instances-1",
+              "text": "Back in Design, Workflows, the workflow has an Instances badge, because each run of a workflow is kept as an instance."
+            },
+            {
+              "id": "instances-2",
+              "text": "The page counts the instances by status, and this one is Finished. Let's open it to see the activities that ran, highlighted on the diagram."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "What else workflows can do",
+      "subtitle": "More events, more tasks, more control",
+      "clips": [
+        {
+          "id": "09-more",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "HTTP Workflows Activities receive requests and call web services. Timer Workflows Activities run on a schedule. Other modules add events and tasks of their own."
+            },
+            {
+              "id": "more-2",
+              "text": "A workflow can branch with an If Else Task, repeat with loops, and keep values in variables. A separate video covers them in depth."
+            },
+            {
+              "id": "more-3",
+              "text": "Permissions guard workflows. Manage workflows is needed to build them, and Execute workflows to run them from the designer. By default, only administrators have Manage workflows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Workflows",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Workflows let a site react to what happens on it, with activities you connect on a canvas. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

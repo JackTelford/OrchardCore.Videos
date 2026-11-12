@@ -1,0 +1,52 @@
+{
+  "title": "Workflows: Automate Tasks Without Writing Code | Orchard Core",
+  "description": "Sites often have to react to what happens on them: content is published, a user registers, a form is submitted. Doing that by hand is slow, and writing code for every case is costly.\n\nThe Workflows module lets you describe the reaction as a diagram in the admin. An event starts the workflow, tasks do the work, and Orchard Core keeps each run as an instance you can inspect.\n\nIn this video:\n• Why workflows: reacting to what happens on a site\n• The parts of a workflow: events, tasks, outcomes and transitions\n• Enabling the Workflows feature\n• Creating a workflow\n• The designer: toolbar, activities, canvas and panels\n• Building a workflow: an event, a task and a transition\n• Running the workflow by publishing an article\n• Following the instances of a workflow\n• What else workflows can do: more events, more tasks, more control",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Automation",
+    "Workflow designer"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Workflows"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Workflows topic in the documentation",
+      "url": "https://docs.orchardcore.net/en/latest/topics/workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Workflows/README.md",
+    "src/docs/topics/workflows/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Workflows"
+  }
+}
