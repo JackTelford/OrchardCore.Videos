@@ -1,0 +1,157 @@
+{
+  "title": "Content Version Pruning",
+  "output": "content-version-pruning",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Content Version Pruning",
+      "subtitle": "Remove old content versions automatically",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Publishing a change to a versioned content item leaves the previous version in the database, and these old versions pile up. Content Version Pruning deletes them on a schedule. In this video, we'll enable it, choose its rules, and run its task."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How pruning works",
+      "subtitle": "What is kept and what is deleted",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "In a content type that is Versionable, publishing a change keeps the version it replaces. That copy is an archived version: it is neither the most recent version nor the published one. Here, archived has nothing to do with Archive Later."
+            },
+            {
+              "id": "how-2",
+              "text": "Pruning never deletes the published version or the most recent version. It deletes an archived version of a chosen content type only when the version is older than the retention period and is not among the newest archived versions you keep for its item."
+            },
+            {
+              "id": "how-3",
+              "text": "Three steps put it to work: enable the features, choose the rules, and enable the background task, which runs once a day by default. Pruning is permanent, because a deleted version cannot be restored."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Content Version Pruning and Background Tasks",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Let's open Tools, Features, and search for pruning. The Content Version Pruning feature is listed in the Content Management category."
+            },
+            {
+              "id": "features-2",
+              "text": "Select Enable. The feature adds a Content Version Pruning page to the Settings menu, and it adds the background task that does the deleting."
+            },
+            {
+              "id": "features-3",
+              "text": "The task is managed on the Background Tasks page, which has a feature of its own in the Tasks category. Let's search for Background Tasks, and select Enable."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose the rules",
+      "subtitle": "Retention, versions to keep and content types",
+      "clips": [
+        {
+          "id": "03-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Open Settings, Content Version Pruning. Administrators can open this page by default. Other roles need two permissions: Manage settings, and Manage Content Version Pruning settings."
+            },
+            {
+              "id": "settings-2",
+              "text": "At the top, the Disable check box stops the pruning while the feature stays enabled. It is separate from the switch of the background task, which comes later. Let's leave it cleared."
+            },
+            {
+              "id": "settings-3",
+              "text": "Retention period (days) is 30 by default. An archived version that was last modified within this many days is not deleted."
+            },
+            {
+              "id": "settings-4",
+              "text": "Archived versions to keep per item is 1 by default. That many of the most recent archived versions of each item always stay, whatever their age. A value of 0 turns this protection off."
+            },
+            {
+              "id": "settings-5",
+              "text": "Under Content types to prune, nothing is selected by default, and nothing is pruned until you select a type. Let's select Blog Post and Page, not Select all, so that only those two types are pruned."
+            },
+            {
+              "id": "settings-6",
+              "text": "Select Save. A message confirms that the site settings were updated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Run the task",
+      "subtitle": "Enable it, then run it on demand",
+      "clips": [
+        {
+          "id": "04-task",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "task-1",
+              "text": "Open Tools, Background Tasks, and find the Content Version Pruning Background Task. Its Disabled badge shows that it does not run on its schedule."
+            },
+            {
+              "id": "task-2",
+              "text": "Select Enable. By default, the task then runs every day at midnight, in the time zone of your site, and the Next run badge shows when. Edit opens its settings, where you can change the schedule."
+            },
+            {
+              "id": "task-3",
+              "text": "To try the task before midnight, open its Actions menu and choose the item that runs it on demand. The Last run badge then shows when the task ran, and how long it took."
+            },
+            {
+              "id": "task-4",
+              "text": "On this site, there are no archived versions, so the run deletes nothing. On a site with older versions, each run removes the ones your rules allow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Content Version Pruning",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Content Version Pruning removes the old versions of your content on a schedule, by the rules you choose. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

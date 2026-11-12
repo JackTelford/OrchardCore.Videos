@@ -1,0 +1,46 @@
+{
+  "title": "Content Version Pruning: Remove Old Versions Automatically | Orchard Core",
+  "description": "Publishing a change to a versioned content item leaves the previous version in the database. On a site that is edited often, these old versions pile up.\n\nThe Content Version Pruning feature adds a background task that deletes old archived versions. You choose the retention period, the number of archived versions to keep for each item, and the content types to prune. The published version and the most recent version are never deleted.\n\nIn this video:\n• How pruning decides what to keep and what to delete\n• Enabling the Content Version Pruning and Background Tasks features\n• Choosing the retention period, the versions to keep and the content types\n• Enabling the background task and running it on demand",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Content Version Pruning",
+    "content versions",
+    "background tasks",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Management"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Contents/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Contents/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Contents.VersionPruning"
+  }
+}
