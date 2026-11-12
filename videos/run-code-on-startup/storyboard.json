@@ -1,0 +1,212 @@
+{
+  "title": "Run Code When a Tenant Starts",
+  "output": "run-code-on-startup",
+  "spoken": {
+    "IModularTenantEvents": "I Modular Tenant Events",
+    "ModularTenantEvents": "Modular Tenant Events",
+    "ActivatingAsync": "Activating Async",
+    "ActivatedAsync": "Activated Async",
+    "TerminatingAsync": "Terminating Async",
+    "TerminatedAsync": "Terminated Async",
+    "RemovingAsync": "Removing Async",
+    "ConfigureServices": "Configure Services",
+    "ShellSettings": "Shell Settings",
+    "ShellRemovingContext": "Shell Removing Context",
+    "ErrorMessage": "Error Message"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Run Code When a Tenant Starts",
+      "subtitle": "Tenant event handlers in your own module",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some code has to run when a tenant starts, such as warming a cache, checking a folder, or writing a log entry. Orchard Core modules do this with tenant events. In this video, you write a handler, register it, and see when it runs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "When a tenant starts",
+      "subtitle": "Activation and tenant events",
+      "clips": [
+        {
+          "id": "01-when",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "when-1",
+              "text": "An Orchard Core application hosts one or more sites, called tenants. A module's Startup class registers services and middleware for each tenant. To run your own code at key moments in the life of a tenant, you write a tenant event handler."
+            },
+            {
+              "id": "when-2",
+              "text": "Orchard Core itself uses handlers to run data migrations, preload the site settings, create the storage container of Azure media, and empty a temporary folder of media fields."
+            },
+            {
+              "id": "when-3",
+              "text": "By default, tenants are loaded lazily, so no handler runs when the application starts. A tenant activates when it handles its first request, and its handlers run before that request is processed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Write a handler",
+      "subtitle": "The interface and its base class",
+      "clips": [
+        {
+          "id": "02-write",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "write-1",
+              "text": "A handler implements IModularTenantEvents. It has five methods: ActivatingAsync and ActivatedAsync when the tenant starts, TerminatingAsync and TerminatedAsync when it is released, and RemovingAsync when it is removed."
+            },
+            {
+              "id": "write-2",
+              "text": "Inherit from ModularTenantEvents instead. It implements every method as an empty one, so you override only the methods you need. Here, ActivatingAsync writes a log entry."
+            },
+            {
+              "id": "write-3",
+              "text": "Orchard Core creates the handler from the services of the tenant. The constructor can ask for any service the tenant registers, such as this logger, or the ShellSettings of the tenant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Register the handler",
+      "subtitle": "One line in your Startup class",
+      "clips": [
+        {
+          "id": "03-register",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "register-1",
+              "text": "In ConfigureServices of your module's Startup class, register the handler as a scoped IModularTenantEvents. Orchard Core calls every handler registered this way, so a module can register as many as it needs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "The order of the events",
+      "subtitle": "Registration order and its reverse",
+      "clips": [
+        {
+          "id": "04-order",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "order-1",
+              "text": "Orchard Core calls ActivatingAsync on every handler in the order of registration, which follows the dependency graph of the modules. A module's handlers run after those of the modules it depends on."
+            },
+            {
+              "id": "order-2",
+              "text": "Then it calls ActivatedAsync in the reverse order. So when any ActivatedAsync runs, every ActivatingAsync has completed. TerminatingAsync follows the order of registration, while TerminatedAsync and RemovingAsync run in reverse."
+            },
+            {
+              "id": "order-3",
+              "text": "Orchard Core uses both. The handler that runs data migrations uses ActivatingAsync. The handler that preloads the site settings uses ActivatedAsync, which runs after every ActivatingAsync has completed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Run it",
+      "subtitle": "When the handler is called",
+      "clips": [
+        {
+          "id": "05-run",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Run the application from a terminal, and send the first request to the tenant. The console shows the log entry: the category is the handler's class, and the message is the text it logged."
+            },
+            {
+              "id": "run-2",
+              "text": "A second request logs nothing more, because the tenant is already activated. The handlers run again after a feature is enabled or disabled, or the tenant is reloaded, since Orchard Core then builds the tenant again for its next request."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Stopping and removing",
+      "subtitle": "TerminatingAsync, TerminatedAsync and RemovingAsync",
+      "clips": [
+        {
+          "id": "06-stop",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "stop-1",
+              "text": "TerminatingAsync and TerminatedAsync run when the tenant is released, for example when it reloads, once the work already using it has finished."
+            },
+            {
+              "id": "remove-1",
+              "text": "When a disabled tenant is removed, Orchard Core calls RemovingAsync on every handler, in reverse order. A handler uses it to remove what the tenant created outside its database, such as the storage container of its media."
+            },
+            {
+              "id": "remove-2",
+              "text": "The method receives a ShellRemovingContext. A handler that fails sets its ErrorMessage, and Orchard Core stops calling the other handlers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Write handlers with care",
+      "subtitle": "What Orchard Core's own handlers do",
+      "clips": [
+        {
+          "id": "07-care",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "care-1",
+              "text": "The first request waits for the handlers, and an exception in one fails that request. Activation is tried again on the next request. Some of Orchard Core's handlers catch errors that should not stop the tenant, and log them, like this one."
+            },
+            {
+              "id": "care-2",
+              "text": "An Uninitialized tenant has no database session, and several of Orchard Core's handlers check the state of the tenant before they do their work. This one cleans up only when the tenant is Running."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Run Code When a Tenant Starts",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A tenant event handler runs your code as a tenant starts, stops, or is removed. Implement the interface, register the class in your Startup class, and Orchard Core calls it. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
