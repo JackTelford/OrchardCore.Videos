@@ -1,6 +1,6 @@
 # X (Twitter): Sign In With X and Post From Workflows
 
-**YouTube:** not published yet · **Length:** 4:58 · **Feature:** [OrchardCore.Twitter.Signin](https://docs.orchardcore.net/en/latest/reference/modules/X/)
+**YouTube:** not published yet · **Length:** 5:00 · **Feature:** [OrchardCore.Twitter.Signin](https://docs.orchardcore.net/en/latest/reference/modules/X/)
 
 The video shows the two features of the X (Twitter) module: Sign in with X (Twitter), which adds an X (Twitter) button
 to the login page, and X (Twitter) Integration, which stores the keys of an X app and adds the Update X (Twitter)
