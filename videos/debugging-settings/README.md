@@ -1,6 +1,6 @@
 # Debugging Settings: Show Errors While You Build a Site
 
-**YouTube:** not published yet · **Length:** 3:38 · **Feature:** [`OrchardCore.Settings`](https://docs.orchardcore.net/en/latest/reference/modules/Settings/)
+**YouTube:** not published yet · **Length:** 3:40 · **Feature:** [`OrchardCore.Settings`](https://docs.orchardcore.net/en/latest/reference/modules/Settings/)
 
 The video is for site owners and editors. It explains that Orchard Core builds a page from shapes, turns on Write shape
 debug information under Settings, Debugging, and reads the comments that the option writes around each shape in the

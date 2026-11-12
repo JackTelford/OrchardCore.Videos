@@ -88,11 +88,11 @@
             },
             {
               "id": "read-2",
-              "text": "To read the comments, we look at the source of the page. Orchard Core has written a comment before and after each shape that a template or other binding drew."
+              "text": "To read the comments, we open the source of the page, which a browser offers as the command View page source. Orchard Core has written a comment before and after each shape that a template or other binding drew."
             },
             {
               "id": "read-3",
-              "text": "A start comment begins with shape-start. After type, it gives the shape type. After bindings, it gives the binding name, an arrow, the template it came from, and in brackets its kind: razor, liquid, or code."
+              "text": "A start comment begins with shape-start. After type, it gives the shape type. After bindings, it gives the binding name, an arrow, the template it came from, and in brackets the kind of binding."
             },
             {
               "id": "read-4",
