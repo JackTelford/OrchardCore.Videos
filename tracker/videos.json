@@ -5993,9 +5993,9 @@
       "src/docs/reference/modules/SignalR/README.md",
       "src/docs/reference/modules/Media/MediaGallery.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.7,
+    "words": 710,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
