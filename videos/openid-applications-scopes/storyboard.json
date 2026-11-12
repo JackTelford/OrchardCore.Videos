@@ -1,0 +1,205 @@
+{
+  "title": "OpenID Connect Applications and Scopes",
+  "output": "openid-applications-scopes",
+  "spoken": {
+    "Client Id": "Client I.D.",
+    "Uris": "U.R.I.s"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "OpenID Connect Applications and Scopes",
+      "subtitle": "Register the programs that use your site as an identity provider",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Before a program can sign users in through your Orchard Core site, or ask it for a token, you register it. In this video, you create applications, choose their flows and scopes, and define a scope of your own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Applications and scopes",
+      "subtitle": "What you register",
+      "clips": [
+        {
+          "id": "01-concepts",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "An application is a program that uses your site as its identity provider: a web store, a mobile app, or a service that runs without a person. You register each one, and each one has a Client Id."
+            },
+            {
+              "id": "what-2",
+              "text": "A scope is a named kind of access, such as Email or Roles. When an application asks for a token, it lists the scopes it wants, and you choose which scopes each application is allowed to request."
+            },
+            {
+              "id": "what-3",
+              "text": "Both are managed by the OpenID Connect Management UI feature. The OpenID Connect Authorization Server feature depends on it, so enabling the server adds the Applications and Scopes pages under Access Control, OpenID Connect."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Register a confidential application",
+      "subtitle": "A service that runs without a person",
+      "clips": [
+        {
+          "id": "02-service",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "service-1",
+              "text": "Let's open Access Control, OpenID Connect, Applications. The page lists each registered application by display name, with Edit and Delete buttons. New application opens the form that registers one."
+            },
+            {
+              "id": "service-2",
+              "text": "Display Name is how the application is listed, so we enter Inventory Sync. The Type is Confidential client: it must send its client secret when it communicates with the token and revocation endpoints."
+            },
+            {
+              "id": "service-3",
+              "text": "Client Id identifies the application when it asks for a token, so we enter inventory-sync. A confidential client also needs a Client Secret, and the button beside the field that generates a new value fills it in."
+            },
+            {
+              "id": "service-4",
+              "text": "Under Flows, the form lists only the flows that the authorization server allows. A separate video covers those settings. Let's check Allow Client Credentials Flow, which lets a service get a token for itself, without a user."
+            },
+            {
+              "id": "service-5",
+              "text": "Client Credentials Roles appears. The application receives the roles you check whenever it gets a token this way, so we check Editor."
+            },
+            {
+              "id": "service-6",
+              "text": "Allowed Scopes lists the scopes of the site by name. The default ones describe a user's data, which this service does not use, so we leave them unchecked and select Save. The list shows Inventory Sync beside Legacy Prototype."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Register a public application",
+      "subtitle": "A client without a secret",
+      "clips": [
+        {
+          "id": "03-web",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "web-1",
+              "text": "Let's select New application again to register a web application. We enter Storefront Web as the display name, and choose Public client. The Client Secret field disappears, because public applications don't use a client secret, and Allow Client Credentials Flow is disabled."
+            },
+            {
+              "id": "web-2",
+              "text": "The Client Id is storefront-web. Let's check Allow Authorization Code Flow, the flow that sends users to your site to sign in. Allow Refresh Token Flow becomes available."
+            },
+            {
+              "id": "web-3",
+              "text": "More fields appear below the flows. Redirect Uris lists where the site may send users back to, so we enter an address on example.com. Allow End Session Endpoint adds Post-Logout Redirect Uris, where users go after signing out."
+            },
+            {
+              "id": "web-4",
+              "text": "Require Proof Key for Code Exchange and Require Pushed Authorization Requests each require this application to use that feature. Each hint reminds you to check that your client library supports it. We check the first one."
+            },
+            {
+              "id": "web-5",
+              "text": "Consent type sets how authorization requests are handled. Explicit consent needs the user's approval, and the hint calls it the recommended option. Implicit consent shows no consent form, and External consent rejects a request unless an authorization already exists."
+            },
+            {
+              "id": "web-6",
+              "text": "Under Allowed Scopes, we check email and profile, which describe the signed-in user, and select Save. The list shows Storefront Web beside the other applications."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Manage applications",
+      "subtitle": "Search, edit and delete",
+      "clips": [
+        {
+          "id": "04-manage",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "manage-1",
+              "text": "As the list grows, Search narrows it by display name. We type Legacy and select the search button, and only Legacy Prototype remains. Clear brings back the full list."
+            },
+            {
+              "id": "manage-2",
+              "text": "Edit opens the same form with the saved values. The Client Secret field is empty on purpose: enter a new value to replace the secret, or leave it empty to keep it. This page also offers Allow Introspection Endpoint and Allow Revocation Endpoint."
+            },
+            {
+              "id": "manage-3",
+              "text": "On the list, Delete asks you to confirm that you want to remove the element. We select Ok, and Legacy Prototype is removed from the list."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Scopes",
+      "subtitle": "Define what an application can request",
+      "clips": [
+        {
+          "id": "05-scopes",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "scopes-1",
+              "text": "Let's open Access Control, OpenID Connect, Scopes. On a site with the authorization server enabled, the list holds Email, Phone, Profile and Roles. Each row shows the display name, the name in a badge, and a description."
+            },
+            {
+              "id": "scopes-2",
+              "text": "Let's select New scope. Display Name is how the scope is listed, and Name is the value an application requests, so it must be unique. We enter Inventory as the display name, inventory as the name, and a short description."
+            },
+            {
+              "id": "scopes-3",
+              "text": "Additional resources (API audiences) names the other APIs that tokens for this scope are meant for, separated by spaces. The hint under the field shows how to name another tenant. We enter inventory-api."
+            },
+            {
+              "id": "scopes-4",
+              "text": "The site itself is always an audience, so you never list it. We select Save, and Inventory appears in the list with its name in a badge."
+            },
+            {
+              "id": "scopes-5",
+              "text": "Creating a scope doesn't allow it on any application. Let's open Applications, edit Inventory Sync, and check inventory under Allowed Scopes."
+            },
+            {
+              "id": "scopes-6",
+              "text": "Saving stores the choice as part of the application. Inventory Sync is then allowed to request the inventory scope."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "OpenID Connect Applications and Scopes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Applications register the programs that use your site as an identity provider, and scopes define what they can request. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
