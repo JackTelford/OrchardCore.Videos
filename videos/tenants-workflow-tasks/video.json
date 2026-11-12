@@ -1,0 +1,55 @@
+{
+  "title": "Workflows for Tenants: Create and Set Up Tenants Automatically | Orchard Core",
+  "description": "Creating a tenant means the same forms and the same choices for every site. A workflow can do those steps from values you type once.\n\nThe Tenants module adds four activities to the Workflows module: Create Tenant Task, Setup Tenant Task, Disable Tenant Task and Enable Tenant Task. This video builds a workflow that creates a tenant, sets it up, runs from the designer, and opens the site it creates.\n\nIn this video:\n• The four Tenant activities, their outcomes, and what each one checks\n• Turning on the Tenants and Workflows features\n• Creating a workflow that starts with Started By Workflow\n• The settings of Create Tenant Task and Setup Tenant Task\n• Publishing and running the workflow, and opening the tenant it creates\n• What happens when a task takes its Failed outcome",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Workflows"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Workflows",
+    "Tenants",
+    "Multi-tenancy",
+    "Workflow activities",
+    "Create Tenant",
+    "Setup Tenant"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Multi-Tenancy"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Tenants",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Documentation: Workflows",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Workflows/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Tenants/README.md",
+    "src/docs/reference/modules/Workflows/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Tenants"
+  }
+}
