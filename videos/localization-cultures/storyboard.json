@@ -1,0 +1,206 @@
+{
+  "title": "Cultures: Make Your Site Multilingual",
+  "output": "localization-cultures",
+  "spoken": {
+    "culture(s)": "cultures"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Cultures: Make Your Site Multilingual",
+      "subtitle": "Choose the languages your site supports",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Visitors read a site in their own language, and that starts with a list of cultures. In this video, you enable the Localization feature, choose the cultures your site supports, set a default, and save. Then you see a culture at work on a page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a culture is",
+      "subtitle": "Supported cultures and the default culture",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A culture is a language, optionally with a region. French is one culture, and French as used in Canada is another, with French as its parent culture. Each request to your site is served in one culture."
+            },
+            {
+              "id": "why-2",
+              "text": "Your site keeps a list of supported cultures, and one of them is the default, the culture used when nothing asks for another. A site starts with only the culture of the system it runs on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the Localization feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Cultures belong to the Localization feature. Let's open Tools, Features in the admin menu."
+            },
+            {
+              "id": "enable-2",
+              "text": "Type Localization in the search box. Several features match, so look for the row named Localization, in the Internationalization category."
+            },
+            {
+              "id": "enable-3",
+              "text": "Click Enable on that row. A message says the feature Localization was enabled."
+            },
+            {
+              "id": "enable-4",
+              "text": "Under Settings in the admin menu, a Localization entry has appeared. It holds Cultures, so let's open Settings, Localization, Cultures."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Choose the supported cultures",
+      "subtitle": "Add cultures, set the default, save",
+      "clips": [
+        {
+          "id": "03-cultures",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cultures-1",
+              "text": "The page is headed Settings. A warning says the website might be restarted upon saving the settings, and a label asks you to define which cultures are supported by the site."
+            },
+            {
+              "id": "cultures-2",
+              "text": "The table is headed Culture and Default culture. It lists one culture, the one of the system the site runs on. Here it is English as used in the United States, marked as the default."
+            },
+            {
+              "id": "cultures-3",
+              "text": "To add a culture, choose it in the list under the table. Each entry shows the name of the culture, followed by its display name in parentheses. Let's choose French."
+            },
+            {
+              "id": "cultures-4",
+              "text": "Click Add culture, and French joins the table. A culture that is in the table no longer appears in the list. Let's add German the same way."
+            },
+            {
+              "id": "cultures-5",
+              "text": "Each row has a radio button in the Default culture column, and the selected one is the default. Let's select French to see the choice move, and then select English again, so English stays the default."
+            },
+            {
+              "id": "cultures-6",
+              "text": "The trash button at the end of a row removes that culture from the table. If you remove the default culture, the first culture in the table becomes the default when you save."
+            },
+            {
+              "id": "cultures-7",
+              "text": "Under the table, Fall back to parent culture(s) is a checkbox. When it is checked, a text with no translation in a culture is looked up in its parent culture, which for French as used in Canada is French. Let's check it."
+            },
+            {
+              "id": "cultures-8",
+              "text": "Click Save. The page reloads with a message: Site settings updated successfully."
+            },
+            {
+              "id": "cultures-9",
+              "text": "Saving restarts the site, so a warning stays on screen: The site has been restarted for the settings to take effect. The table keeps its three cultures, and the default is unchanged."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "See a culture at work",
+      "subtitle": "Ask for French with the culture parameter",
+      "clips": [
+        {
+          "id": "04-ask",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ask-1",
+              "text": "A browser set to French asks for French, and the site answers with French texts when it has them. You can also ask for a culture yourself, by adding the culture parameter to the address of a page."
+            },
+            {
+              "id": "ask-2",
+              "text": "The parameter applies to that request only. This site has a small sample file with French labels for the Cultures page, so you can see the effect."
+            }
+          ]
+        },
+        {
+          "id": "04-french",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "french-1",
+              "text": "Let's open the Cultures page again, asking for French with the culture parameter."
+            },
+            {
+              "id": "french-2",
+              "text": "The heading, the column titles, the Add culture button, the checkbox label and the Save button appear in French. The table still lists the same three cultures."
+            },
+            {
+              "id": "french-3",
+              "text": "Opening the page without the parameter brings English back, because the browser asks for English, which the site supports."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What builds on the list",
+      "subtitle": "Other localization features, permission and deployment",
+      "clips": [
+        {
+          "id": "05-next",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "next-1",
+              "text": "The list of cultures is the base that other localization features build on. Content Localization manages localized versions of a content item in the supported cultures, and the Content Culture Picker offers the cultures on the front end."
+            },
+            {
+              "id": "next-2",
+              "text": "Data Localization lets you translate texts that the site stores, such as the names of content types, for each supported culture. The Admin Culture Picker offers the cultures in the admin. Separate videos cover these features."
+            },
+            {
+              "id": "next-3",
+              "text": "The Administrator role has the Manage supported culture permission by default. A deployment plan can export the settings with the step Culture settings, and a recipe can set the cultures too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Cultures: Make Your Site Multilingual",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You enabled Localization, chose the supported cultures, set a default, and saw a culture at work on a page. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
