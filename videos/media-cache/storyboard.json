@@ -31,7 +31,7 @@
           "steps": [
             {
               "id": "why-1",
-              "text": "When media lives in Azure Blob Storage or Amazon S3, your Orchard Core site still serves the files. The first time someone requests a file, the site downloads it from the store and keeps a copy on the web server."
+              "text": "When media lives in Azure Blob Storage or Amazon S3, your Orchard Core site serves the files. The first time someone requests a file, the site downloads it from the store and keeps a copy on the web server."
             },
             {
               "id": "why-2",

@@ -1,6 +1,6 @@
 # Media Cache: Purge the Local Copy of Remote Media
 
-**YouTube:** not published yet · **Length:** 3:32 · **Feature:** [OrchardCore.Media.Cache](https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/)
+**YouTube:** not published yet · **Length:** 3:31 · **Feature:** [OrchardCore.Media.Cache](https://docs.orchardcore.net/en/latest/reference/modules/Security/Permissions/)
 
 When media files live in Azure Blob Storage or Amazon S3, the site keeps a local copy of each file it serves. The video
 explains what that copy is used for, enables the Media Cache feature, empties the cache with Purge All on the Asset
