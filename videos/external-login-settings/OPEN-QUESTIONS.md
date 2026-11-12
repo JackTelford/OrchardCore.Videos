@@ -116,3 +116,9 @@ does not settle it: with all three options selected the controller still attempt
 address (`ExternalAuthenticationsController.cs:201-224`) and shows an error and the form when it fails, and the
 Email field is shown whenever the address is empty (`RegisterExternalLogin.cshtml:25`). The narration now states only the
 case with a shared address. A person may confirm the other case on a running site (see question 9).
+
+## 11. Reviewer note: the email match depends on a setting
+
+**Read:** the lookup of a local user by the provider's email address (`ExternalAuthenticationsController.cs:150`) runs
+only when the identity option `RequireUniqueEmail` is true, which is its default (`IdentitySettings.cs:24`), and the
+address is not empty. The narration (`how-3`) describes the default behaviour.

@@ -66,7 +66,7 @@
             },
             {
               "id": "features-3",
-              "text": "Enable a provider feature instead. Here that is OpenID Connect Client Integration. The Google, Microsoft, GitHub, Meta and X provider features depend on External Authentication in the same way."
+              "text": "Enable a provider feature instead. Here that is OpenID Connect Client Integration, with a provider named Example Accounts set up beforehand. The Google, Microsoft, GitHub, Meta and X provider features depend on External Authentication in the same way."
             },
             {
               "id": "features-4",
@@ -157,7 +157,7 @@
             },
             {
               "id": "new-3",
-              "text": "The visitor completes the fields and selects Register. The site creates the local account, links it to the provider, and signs the visitor in. The external logins page of the visitor then lists the link under Registered Logins, as OpenIdConnect."
+              "text": "The visitor completes the fields and selects Register. The site creates the local account, links it to the provider, and signs the visitor in. The visitor's page of external logins then lists the link under Registered Logins, as OpenIdConnect."
             }
           ]
         }

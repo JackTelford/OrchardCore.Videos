@@ -1,6 +1,6 @@
 # External Login: Let Users Sign In With Other Accounts
 
-**YouTube:** not published yet · **Length:** 4:59 · **Feature:** [OrchardCore.Users.ExternalAuthentication](https://docs.orchardcore.net/en/latest/reference/modules/Users/)
+**YouTube:** not published yet · **Length:** 5:02 · **Feature:** [OrchardCore.Users.ExternalAuthentication](https://docs.orchardcore.net/en/latest/reference/modules/Users/)
 
 The video explains what the External Authentication feature adds to a site, whichever provider is used: a button on the
 login page for each provider, the pages a visitor sees the first time they sign in, and two groups of settings. It
