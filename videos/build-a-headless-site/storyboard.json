@@ -1,0 +1,300 @@
+{
+  "title": "Build a Headless Site: Content in Orchard Core, Front End Anywhere",
+  "output": "build-a-headless-site",
+  "spoken": {
+    "Execute Api - RecentBlogPosts": "Execute A.P.I. dash Recent Blog Posts",
+    "RecentBlogPosts": "Recent Blog Posts",
+    "recentBlogPosts": "recent blog posts",
+    "blogPost": "blog post",
+    "orderBy": "order by",
+    "publishedUtc": "published U.T.C.",
+    "GraphiQL": "Graphical",
+    "BlogPost": "Blog Post",
+    "Content-Type": "Content Type",
+    "CorsSettings": "Cors Settings"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Build a Headless Site",
+      "subtitle": "Content in Orchard Core, front end anywhere",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A headless site keeps its content in Orchard Core and shows it somewhere else, such as a web app or a mobile app. We serve blog posts through GraphQL, a saved query and CORS, and read them from a page on another address."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a headless site works",
+      "subtitle": "Content here, front end elsewhere",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "In a headless site, Orchard Core stores and manages the content, and does not draw the pages. The front end is a separate application on its own address. It asks for the content over HTTP, and draws it in any way it likes."
+            },
+            {
+              "id": "idea-2",
+              "text": "Three modules connect the two. GraphQL answers requests at one endpoint, Queries holds saved queries that become fields of that endpoint when they have a schema, and CORS tells browsers which other addresses may call the site."
+            },
+            {
+              "id": "idea-3",
+              "text": "The API is closed to visitors by default. Anonymous users cannot execute GraphQL, and each saved query has a permission of its own. We grant only what the front end needs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the modules",
+      "subtitle": "GraphQL and CORS Configuration",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "The site was created with the Blog recipe. Let's open Tools, Features, and search for GraphQL. The GraphQL feature is in the Api category, and we enable it."
+            },
+            {
+              "id": "features-2",
+              "text": "Next, we search for CORS and enable CORS Configuration. Queries and SQL Queries are already enabled, because the Blog recipe turns them on."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Explore the API",
+      "subtitle": "Query content in GraphiQL",
+      "clips": [
+        {
+          "id": "03-graphiql",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "graphiql-1",
+              "text": "Tools, GraphiQL opens an explorer for the API, and it sends requests as the signed-in user. The Explorer panel lists the root fields you can query, such as blogPost for the Blog Post content type."
+            },
+            {
+              "id": "graphiql-2",
+              "text": "This query asks for the first three blog posts, most recent first, with their display text and publication date. The run button, titled Execute Query, sends it. The response is JSON, with the posts under data."
+            },
+            {
+              "id": "graphiql-3",
+              "text": "A content type field such as blogPost takes the arguments where, orderBy, first and skip, and a status that defaults to published. A front end can filter, sort and page the content without any server code."
+            },
+            {
+              "id": "graphiql-4",
+              "text": "The Docs panel shows what Orchard Core says about each field: blogPost represents a Blog Post, and publishedUtc is the date and time of publication."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Saved queries",
+      "subtitle": "A saved query as a GraphQL field",
+      "clips": [
+        {
+          "id": "04-query",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "query-1",
+              "text": "A saved query lets an administrator define a request in the admin. Search, Queries, All Queries lists them. The Blog recipe saved one named RecentBlogPosts, from the SQL source."
+            },
+            {
+              "id": "query-2",
+              "text": "Add Query lists the available query types. SQL is there because the SQL Queries feature provides that source. Other modules provide their own."
+            },
+            {
+              "id": "query-3",
+              "text": "We edit RecentBlogPosts. The Query field holds the SQL, with a limit parameter that defaults to three. Return Documents is checked, so Orchard Core loads the content items for the document IDs that the SQL selects."
+            },
+            {
+              "id": "query-4",
+              "text": "The Schema field is what exposes the query to GraphQL. This one names the BlogPost type, so the results are blog post content items. A SQL query without a schema is not a field of the endpoint."
+            },
+            {
+              "id": "query-5",
+              "text": "Back in GraphiQL, the Explorer lists recentBlogPosts along with blogPost. Running it returns the posts that the SQL selects. A parameters argument, written as JSON text, passes values to the SQL parameters."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Permissions",
+      "subtitle": "Let visitors call the API",
+      "clips": [
+        {
+          "id": "05-permissions",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "perm-1",
+              "text": "The API is still closed to visitors. Access Control, Roles lists the roles of the site. We edit Anonymous, the role of visitors who are not signed in."
+            },
+            {
+              "id": "perm-2",
+              "text": "We search the permissions for execute, and allow Execute GraphQL and Execute Api - RecentBlogPosts, which runs only this saved query. Mutations need a separate permission, and it stays off. Then Save."
+            },
+            {
+              "id": "perm-3",
+              "text": "Content has its own check. The blogPost field returns every post to a role that has View all content, which Anonymous has by default, as its Allow box shows. A saved query checks only its own permission, so its SQL decides what it returns."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "The front end",
+      "subtitle": "A page on its own address",
+      "clips": [
+        {
+          "id": "06-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "front-1",
+              "text": "The endpoint accepts a query in several ways: a POST with a JSON body, a POST of application GraphQL whose body is the query text, or a GET with the query in the query string. The response is JSON."
+            },
+            {
+              "id": "front-2",
+              "text": "The front end is one HTML page, served from its own address. It posts the query as JSON to the GraphQL endpoint of the site, and reads the posts from the data property of the response."
+            },
+            {
+              "id": "front-3",
+              "text": "It draws a list item for each post, and shows a message if the request fails. Any client that sends HTTP and reads JSON works the same way, in any language."
+            }
+          ]
+        },
+        {
+          "id": "06-before",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "front-4",
+              "text": "Let's open the page and select Load posts. The browser blocks the request, because the site has no CORS policy for this address, and the page reports that the request failed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "CORS policy",
+      "subtitle": "Let the browser read the response",
+      "clips": [
+        {
+          "id": "07-policy",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cors-1",
+              "text": "Settings, Security, Cross-Origin Resource Sharing manages the CORS policies of the tenant. The list is empty, so we select Add a policy. Saving reloads the current tenant."
+            },
+            {
+              "id": "cors-2",
+              "text": "We name the policy Frontend and check Set as default policy. The default policy is the one that the CORS middleware applies to every request of the site, the GraphQL endpoint included."
+            },
+            {
+              "id": "cors-3",
+              "text": "A policy starts with Allow credentials checked. The page sends no cookies, so we clear it. Under Allowed origins, we add the address of the page, with its scheme and port, and no path."
+            },
+            {
+              "id": "cors-4",
+              "text": "The request is a POST with a Content-Type header. So we clear Allow any method and Allow any header, and add POST and Content-Type. Then we select Save."
+            },
+            {
+              "id": "cors-5",
+              "text": "Orchard Core confirms that the CORS settings were updated, and the list shows Frontend as the default policy. Policies are site settings of the tenant, so each tenant keeps its own."
+            }
+          ]
+        },
+        {
+          "id": "07-after",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cors-6",
+              "text": "On the page, we select Load posts again. The browser asks the site if this address is allowed, the policy answers, and the posts appear."
+            },
+            {
+              "id": "cors-7",
+              "text": "The page and the endpoint are the same as before. Only the policy changed. The permissions decide who can call the API, and the policy decides which browser pages may call it and read the answer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Going further",
+      "subtitle": "Recipes, limits and sign-in",
+      "clips": [
+        {
+          "id": "08-further",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "more-1",
+              "text": "A recipe can create the same policy. The feature step enables CORS Configuration, and the settings step holds CorsSettings. With the Deployment feature, a plan step named Cors settings exports it."
+            },
+            {
+              "id": "more-2",
+              "text": "A recipe can also create a saved query. The queries step takes the source, the name, the SQL template, the schema, and whether the query returns content items."
+            },
+            {
+              "id": "more-3",
+              "text": "A public endpoint needs limits. The GraphQL section of the configuration sets query depth and complexity, the default number of results of a paged field, a maximum that rejects larger requests in Enabled mode, and whether exceptions are exposed."
+            },
+            {
+              "id": "more-4",
+              "text": "For private content or writes, the client signs in. The endpoint accepts the cookie and OAuth token authentication of the other APIs, and mutations need Execute GraphQL Mutations."
+            },
+            {
+              "id": "more-5",
+              "text": "A saved query is also served over REST, by name. And the Headless site recipe, offered at setup, enables GraphQL, Queries and the OpenID features."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Build a Headless Site",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A headless site is content in Orchard Core, an API with the right permissions, and a CORS policy for the front end. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
