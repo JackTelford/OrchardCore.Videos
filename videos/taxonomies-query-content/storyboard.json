@@ -106,7 +106,7 @@
           "steps": [
             {
               "id": "index-1",
-              "text": "On the Blog Post content type, edit its Category field. Under Lucene Index settings, check Include this element in the index, and save."
+              "text": "In Design, Content Definition, Content Types, open the Blog Post type and edit its Category field. Under Lucene Index settings, check Include this element in the index, and save."
             },
             {
               "id": "index-2",

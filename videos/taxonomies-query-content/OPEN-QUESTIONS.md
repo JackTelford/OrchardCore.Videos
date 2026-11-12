@@ -59,7 +59,7 @@ The map is applied with a plain text replacement, in the order written. Each spe
 - `Ids` is spoken `I.D.s` (it appears in `keys-1`). The lower case "id" and "ids" in the other steps are left to the voice: check that it says "I D" and "I D s".
 - The voice's reading of "Lucene", "Liquid", "Razor" and "JSON" (`run-1`).
 
-The narration counts 692 words (4:37). Identifiers take longer to say than their word count suggests, so the narrated length is expected to be a little over 5 minutes.
+The narration counts 699 words (4:40). Identifiers take longer to say than their word count suggests, so the narrated length is expected to be a little over 5 minutes.
 
 ## 4. The seed data and the recording plan
 

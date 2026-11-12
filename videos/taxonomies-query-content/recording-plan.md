@@ -123,7 +123,7 @@ The slide steps and the two cards need no recording.
 
 Starts on **Design > Content Definition > Content Types > Blog Post**: open `/Admin/ContentTypes/Edit/BlogPost`
 (title "Edit Content Type - Blog Post", `OrchardCore.ContentTypes/Views/Admin/Edit.cshtml:63`) before the capture, with the
-**Design** menu open on **Content Definition > Content Types** (`OrchardCore.ContentTypes/AdminMenu.cs:23-25`); the narration of `index-1` does not name the menu. The **Fields** list shows **Subtitle**, **Banner Image**, **Tags** and **Category** with an **Edit** button each
+**Design** menu open on **Content Definition > Content Types** (`OrchardCore.ContentTypes/AdminMenu.cs:23-25`); the narration of `index-1` names the menu, so the menu stays open and visible while it is read. The **Fields** list shows **Subtitle**, **Banner Image**, **Tags** and **Category** with an **Edit** button each
 (`Edit.cshtml:88-100`). Start the capture here.
 
 - `index-1`: Click **Edit** on the **Category** row
