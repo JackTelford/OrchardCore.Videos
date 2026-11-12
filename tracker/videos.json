@@ -1460,9 +1460,9 @@
     "docs": [
       "src/docs/reference/modules/Security/Permissions.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.4,
+    "words": 664,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
