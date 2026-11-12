@@ -1,6 +1,6 @@
 # Content Localization: Translate Your Content Items
 
-**YouTube:** not published yet · **Length:** 5:42 · **Feature:** [OrchardCore.ContentLocalization](https://docs.orchardcore.net/en/latest/reference/modules/ContentLocalization/)
+**YouTube:** not published yet · **Length:** 5:44 · **Feature:** [OrchardCore.ContentLocalization](https://docs.orchardcore.net/en/latest/reference/modules/ContentLocalization/)
 
 The video shows how the Content Localization module keeps one page in several languages: each translation is a content
 item of its own, linked to the others by the Localization part. It adds the part to the Article content type, saves an

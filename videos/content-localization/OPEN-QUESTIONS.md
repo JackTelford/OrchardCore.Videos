@@ -52,6 +52,9 @@ itself: the list script clicks the filter button on every selection, see `manage
     list" does return to `/Admin/Contents/ContentItems/Article`.
 10. **Voice.** No spoken-form entry was added. Listen to "Localizations", "localization set" and "permalink" in the
     first narration and add a spelling to the storyboard only if the voice gets one wrong.
+11. **Narrowing the list to Article (`original-1`).** The narration says "list the Article items" without naming the
+    filter control, because its label was not read. Confirm on the running site how the Content Items page narrows to
+    one type (a content type filter in the list's toolbar), and write the click in the plan.
 
 ## Not claimed in the narration
 

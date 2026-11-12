@@ -106,7 +106,7 @@
           "steps": [
             {
               "id": "original-1",
-              "text": "The Article type already has an item, About, created before the part was added. In the list of Article items, it shows neither a culture badge nor a Localizations button."
+              "text": "The Article type already has an item, About, created before the part was added. Open Content, Content Items, and list the Article items. The About row shows neither a culture badge nor a Localizations button."
             },
             {
               "id": "original-2",

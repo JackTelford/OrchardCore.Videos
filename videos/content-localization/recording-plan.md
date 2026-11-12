@@ -181,6 +181,10 @@ row, **About**.
 
 ### `original-1`
 
+- The narration says to open Content, Content Items. `ClickAndWaitForNavigationAsync` on **Content**, then **Content
+  Items** (`src/OrchardCore.Modules/OrchardCore.Contents/AdminMenu.cs:65-68`), then narrow the list to the Article type
+  with the list's content type filter (the exact control is in OPEN-QUESTIONS.md, item 11); the page ends on
+  `/Admin/Contents/ContentItems/Article`.
 - `HighlightAsync` the About row's badges (type "Article", status "Published") and then its buttons **Edit**, **View**
   and **Actions**, to show that the row has no globe badge and no **Localizations** button. The badge and the button
   only appear when the item has a culture and a localization set
