@@ -1,0 +1,54 @@
+{
+  "title": "Azure AI Search Queries: Search From a Saved Query | Orchard Core",
+  "description": "A saved query gives a search a name, so the API, Liquid templates, Razor views and scripts can run it. Orchard Core provides saved queries for Lucene, Elasticsearch and SQL, but its Azure AI Search module registers no query source, so a saved query cannot search an Azure AI Search index.\n\nA query source of your own closes the gap. It reads an index and a text template from the saved query, searches through the Azure AI Search service, and returns the content items that match.\n\nIn this video:\n• Saved queries, their sources and the ways to run them\n• The query source that searches an Azure AI Search index\n• The settings, the editor and the startup of the module\n• Creating a saved query on the Queries page\n• Running the saved query through the API\n• Vector and hybrid searches with the Azure Search SDK",
+  "hashtags": [
+    "OrchardCore",
+    "AzureAISearch",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Azure AI Search",
+    "Queries",
+    "Saved queries",
+    "Query source",
+    "Search",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Search and Indexing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Azure AI Search",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AzureAISearch/"
+    },
+    {
+      "label": "Documentation: Queries",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Queries/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/AzureAISearch/README.md",
+    "src/docs/reference/modules/Queries/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.AzureAI"
+  }
+}
