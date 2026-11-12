@@ -1,0 +1,48 @@
+{
+  "title": "HTTPS: Require Secure Connections | Orchard Core",
+  "description": "Over plain HTTP, the data between a browser and a site travels as readable text.\n\nThe Orchard Core HTTPS module can redirect requests from HTTP to HTTPS, and can send the HSTS header that tells browsers to keep using HTTPS. This video turns the module on and goes through each of its settings.\n\nIn this video:\n• How the redirect, the HSTS header and the HTTPS port work\n• Turning on the HTTPS module in Tools, Features\n• Setting up HTTPS in Settings, Security, HTTPS\n• Tenants, restarts and load balancers",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "HTTPS",
+    "Security"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "HTTPS",
+    "HSTS",
+    "Security"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Site Security"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Https/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Https/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Https"
+  }
+}
