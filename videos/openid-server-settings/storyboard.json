@@ -184,7 +184,7 @@
             },
             {
               "id": "advanced-2",
-              "text": "The server uses a signing certificate and an encryption certificate. If you select none, Orchard Core creates self-signed certificates for the site, and creates a new one when the existing ones are within a week of expiring."
+              "text": "The server uses a signing certificate and an encryption certificate. If you select none, Orchard Core creates self-signed certificates for the site, and creates replacements when the existing ones are within a week of expiring."
             },
             {
               "id": "advanced-3",
@@ -238,7 +238,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "That's the OpenID Connect Authorization Server: endpoints, flows, and keys, set from a single page. Keeping the keys as secrets is covered in a separate video. Thanks for watching."
+              "text": "That's the OpenID Connect Authorization Server: endpoints, flows, and keys, set from a single page. Thanks for watching."
             }
           ]
         }
