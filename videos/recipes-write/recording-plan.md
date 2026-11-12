@@ -40,8 +40,11 @@ OrchardCore__AutoSetup__Tenants__0__RecipeName=Blog
 
 No feature needs to be enabled before the recording: the recipe enables what it needs, and the Blog recipe
 (`src/OrchardCore.Themes/TheBlogTheme/Recipes/blog.recipe.json`) already enables every feature that the `feature` step of
-the recipe lists. The step therefore changes nothing on the site (the features manager skips a feature that is already
-enabled: `src/OrchardCore/OrchardCore/Shell/ShellDescriptorFeaturesManager.cs:163-168`). Do not enable anything else.
+the recipe lists. The step therefore enables no feature that is missing (the features manager skips a dependency that is
+already enabled: `src/OrchardCore/OrchardCore/Shell/ShellDescriptorFeaturesManager.cs:163-168`). It may still update the
+shell descriptor and reload the tenant, because the features manager first marks every enabled feature that is only
+enabled by dependency for disabling (`ShellDescriptorFeaturesManager.cs:50-56`); the first request after the step can
+therefore be slow (OPEN-QUESTIONS.md, item 15). Do not enable anything else.
 
 ## 2. The module that holds the recipe (seed, made outside the capture)
 

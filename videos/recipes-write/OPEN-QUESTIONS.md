@@ -94,3 +94,9 @@ before the clip is recorded. The narration states none of them as more than the 
     recipe run from Tools, Recipes finds an activated shell. What a recipe does during setup is not claimed: each step
     of a setup recipe runs after the activation of its own scope, so the import is probably immediate there too, but this
     was not traced to the end.
+15. **The `feature` step on the Blog site.** Read in the code: every listed feature is already enabled, so the step
+    enables nothing (`ShellDescriptorFeaturesManager.cs:163-168`), but `UpdateFeaturesAsync` always adds the enabled
+    features that are enabled only by dependency to the list to disable (`ShellDescriptorFeaturesManager.cs:50-56`) and
+    re-enables them as dependencies of the listed features, so the shell descriptor may be updated and the tenant
+    released during the step. The narration does not depend on it. Confirm that the recipe still ends with the success
+    notification, and note whether the run takes noticeably longer than a recipe without a `feature` step.
