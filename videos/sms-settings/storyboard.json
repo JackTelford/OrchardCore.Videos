@@ -156,7 +156,7 @@
           "steps": [
             {
               "id": "azure-1",
-              "text": "Azure Communication Services has a feature of its own. In Tools, Features, we enable Azure Communication Services SMS, which adds a tab to the SMS settings."
+              "text": "Azure Communication Services has a feature of its own. In Tools, Features, let's enable Azure Communication Services SMS, which adds a tab to the SMS settings."
             },
             {
               "id": "azure-2",
