@@ -67,3 +67,10 @@ recorded. None of the unconfirmed points is stated as a fact in the narration.
 13. **The sample post in the task log.** The Blog recipe enables Indexing in its first step and creates the post in a
     later one, so the post should have an `Update` task when the index is created. Confirm that the first **Query Index**
     lists one document; the plan has a fallback (publish the post again) if it lists none.
+14. **The Query Index link of the Actions menu.** `LuceneIndexProfile.ActionsMenuItems.SummaryAdmin.cshtml` gives the same
+    `<a>` two `asp-action` attributes (`QueryIndex`, then `Query`) and `asp-route-indexName`. `QueryIndex` (route
+    `Lucene/query/{indexName}`, `Controllers/AdminController.cs:70`) runs the match all query at once, but `Query` without
+    a form post (`:90`) only shows the empty form. Probe which URL the link has. If the page opens without a result line,
+    press **Run Query** (`Views/Admin/Query.cshtml:47`) before the narration of `reset-2` ends, or open
+    `/Admin/Lucene/query/blogposts` directly. The narration claims only the stored columns, not how the page is reached.
+

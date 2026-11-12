@@ -129,6 +129,8 @@ The row shows the badges `Lucene` and `Content`.
 - Click **Actions** on the `blogposts` row, then **Query Index** (`LuceneIndexProfile.ActionsMenuItems.SummaryAdmin.cshtml:11`)
   with `ClickAndWaitForNavigationAsync`. The page is **Lucene Query** (`OrchardCore.Lucene/Views/Admin/Query.cshtml:14`,
   route `Lucene/query/{indexName}`, `Controllers/AdminController.cs:70`), and it runs a match all query at once.
+- If the page opens with the form only and no "Found ... result(s)" line (the link of the menu item may not reach the
+  `QueryIndex` action; see OPEN-QUESTIONS.md, point 14), click **Run Query** (`Query.cshtml:47`) first.
 - Scroll down to the line "Found 1 result(s) in N ms" (`Query.cshtml:54`) and the table, then scroll the table sideways
   with `ScrollIntoViewIfNeeded()` on the header cell `th:text-is('BlogPost.Subtitle')` (`Query.cshtml:75`), and highlight
   that cell and the value under it, "Problems look mighty small from 150 miles up".
