@@ -10,7 +10,8 @@
     "IPlacementStore": "I Placement Store",
     "placement.json": "placement dot JSON",
     "PlacementsDocument.json": "Placements Document dot JSON",
-    "App_Data/Sites": "App Data slash Sites"
+    "App_Data/Sites": "App Data slash Sites",
+    "BlogPost": "Blog Post"
   },
   "chapters": [
     {
