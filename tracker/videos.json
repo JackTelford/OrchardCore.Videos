@@ -5912,9 +5912,9 @@
       "src/docs/reference/modules/AutoSetup/README.md",
       "src/docs/reference/modules/BackgroundTasks/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.1,
+    "words": 910,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",

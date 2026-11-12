@@ -1,0 +1,60 @@
+{
+  "title": "Redis: Distributed Cache, Locks, Bus and Data Protection | Orchard Core",
+  "description": "When Orchard Core runs on several servers, each server keeps its own cache, signals, locks and data protection keys, so the servers do not share their state.\n\nThe Redis module moves that state to a shared Redis server. You connect the site with one connection string, enable the features you need, and check the connection with a health check.\n\nIn this video:\n• Why each server keeps its own state by default\n• The Redis section of the configuration, and what happens when it is missing or invalid\n• Enabling Redis, Redis Cache, Redis Bus and Redis Lock from the Features page\n• Checking the connection with Redis Health Check\n• Redis Cache: the distributed cache and the tag cache\n• Redis Bus: signals that reach every server\n• Redis Lock: named locks for Auto Setup and atomic background tasks\n• Data protection keys in Redis, and why Redis needs persistence\n• Using IRedisService and IsRedisConfigured in your own module",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Redis"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Redis",
+    "distributed cache",
+    "distributed lock",
+    "data protection",
+    "web farm",
+    "health checks"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Performance and Background Work"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Redis documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Redis/"
+    },
+    {
+      "label": "Auto Setup documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/AutoSetup/"
+    },
+    {
+      "label": "Background Tasks documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/BackgroundTasks/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Redis/README.md",
+    "src/docs/reference/modules/AutoSetup/README.md",
+    "src/docs/reference/modules/BackgroundTasks/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Redis"
+  }
+}

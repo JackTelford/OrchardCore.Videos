@@ -1,0 +1,279 @@
+{
+  "title": "The Orchard Core Redis module",
+  "output": "redis",
+  "spoken": {
+    "OrchardCore.Redis": "Orchard Core dot Redis",
+    "IsRedisConfigured": "Is Redis Configured",
+    "NullRedisService": "Null Redis Service",
+    "IRedisService": "I Redis Service",
+    "DisableCertificateVerification": "Disable Certificate Verification",
+    "InstancePrefix": "Instance Prefix",
+    "AllowAdmin": "Allow Admin",
+    "ConnectAsync": "Connect Async",
+    "LockTimeout": "Lock Timeout",
+    "LockExpiration": "Lock Expiration",
+    "ShowDetails": "Show Details",
+    "DataProtection-Keys": "Data Protection Keys",
+    "App_Data": "App Data",
+    "/health/live": "slash health slash live",
+    "AOF": "A.O.F.",
+    "RDB": "R.D.B."
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Redis module",
+      "subtitle": "One shared server for the state of every instance of a site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "When Orchard Core runs on several servers, each one keeps its own cache, locks, signals and encryption keys. The Redis module moves them to a shared server. In this video, we'll connect a site to Redis and see what each feature shares."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why Redis",
+      "subtitle": "What each server keeps for itself",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "By default, each server keeps its state to itself. Its cache is in its own memory, its signals and locks reach only its own code, and its data protection keys are files on its own disk."
+            },
+            {
+              "id": "why-2",
+              "text": "The Redis module replaces these defaults. One feature holds the connection, and four more share the cache, the signals, the locks and the keys between servers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Connect to Redis",
+      "subtitle": "One connection string for every feature",
+      "clips": [
+        {
+          "id": "02-connect",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "connect-1",
+              "text": "Start a Redis server, for example in Docker. The Redis feature reads its connection from the Redis section of the configuration. Configuration is the connection string, and it is the only required value."
+            },
+            {
+              "id": "connect-2",
+              "text": "InstancePrefix starts every key, so applications can share one Redis server. AllowAdmin permits admin commands, which the data protection feature uses to check persistence. DisableCertificateVerification accepts a self-signed certificate."
+            },
+            {
+              "id": "connect-3",
+              "text": "Tenants with the same connection string share one connection, and each tenant prefixes its keys with the instance prefix and its own name."
+            },
+            {
+              "id": "connect-4",
+              "text": "If Configuration is missing or invalid, the module logs an error. The tenant keeps running on its defaults, the Redis features stay inactive, and the health check reports the server as unhealthy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable the features",
+      "subtitle": "Redis, Redis Cache, Redis Bus and Redis Lock",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Features are managed in Tools, Features. Search for OrchardCore.Redis, the start of the feature IDs, and five features appear. Four are in the Distributed category, and the data protection one is in Security."
+            },
+            {
+              "id": "enable-2",
+              "text": "Redis Cache depends on Redis, so enabling it enables both. Select Enable on Redis Cache. The page reloads, and a message confirms that Redis Cache was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Search again, and Redis and Redis Cache are both enabled. To enable several features at once, select them, and choose Enable in Bulk Actions. Let's do it for Redis Bus and Redis Lock."
+            },
+            {
+              "id": "enable-4",
+              "text": "Redis, Redis Cache, Redis Bus and Redis Lock are enabled. Distributed Data Protection (Redis) stays disabled: it is recommended only with a Redis server configured for persistence."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Check the connection",
+      "subtitle": "The Redis health check",
+      "clips": [
+        {
+          "id": "04-health",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "health-1",
+              "text": "To check the connection, enable Health Checks. When Health Checks and Redis are both enabled, the Redis module adds a check named Redis Health Check."
+            },
+            {
+              "id": "health-2",
+              "text": "The endpoint is /health/live. With ShowDetails on in the Health Checks section of the configuration, the response lists each check. Redis Health Check is Healthy: the site connected to the server and received a reply to a ping."
+            },
+            {
+              "id": "health-3",
+              "text": "With ShowDetails off, the endpoint returns only the status, and Unhealthy returns 503 Service Unavailable. It needs no sign-in, so turn ShowDetails on only when the endpoint is restricted to trusted monitoring clients."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Redis Cache",
+      "subtitle": "A distributed cache and a tag cache",
+      "clips": [
+        {
+          "id": "05-cache",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "cache-1",
+              "text": "Redis Cache replaces the in-memory distributed cache of the tenant with Redis. Orchard Core keeps documents there, such as the site settings and the roles, and the Dynamic Cache module keeps its rendered output there."
+            },
+            {
+              "id": "cache-2",
+              "text": "It also replaces the tag cache. Cached items are grouped under tags, and the tags are kept in Redis, so every server sees the same items under a tag."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Redis Bus",
+      "subtitle": "Signals that reach every server",
+      "clips": [
+        {
+          "id": "06-bus",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "bus-1",
+              "text": "Orchard Core raises signals to tell caches to refresh, and by default they reach only the server that raised them. Redis Bus registers a message bus, and the signal service then publishes each signal to a Redis channel."
+            },
+            {
+              "id": "bus-2",
+              "text": "Every server subscribes to that channel, and signals its own caches when a message arrives. Each message carries the host name and process ID of its sender, so a server ignores the messages it published."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Redis Lock",
+      "subtitle": "One holder for a named lock",
+      "clips": [
+        {
+          "id": "07-lock",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "lock-1",
+              "text": "By default, the distributed lock is local, and holds back only its own server. Redis Lock takes it in Redis instead, so one server at a time holds a name, until it releases it or its expiration passes."
+            },
+            {
+              "id": "lock-2",
+              "text": "Auto Setup takes this lock, so servers that share a database set a site up once. Add Redis Lock to the setup features beside Auto Setup. LockTimeout and LockExpiration are in milliseconds; set both or neither, and each defaults to sixty seconds."
+            },
+            {
+              "id": "lock-3",
+              "text": "Background tasks use it too. A task that sets a LockTimeout and a LockExpiration is atomic: it still runs on every server, but never on two at once. Without a distributed lock, both values are ignored."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "Data protection",
+      "subtitle": "Keys shared by every server",
+      "clips": [
+        {
+          "id": "08-protect",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "protect-1",
+              "text": "Data protection encrypts authentication cookies, anti-forgery tokens and stored secrets, such as an SMTP password. Every server of a site needs the same keys, and by default each server keeps them in its own App_Data folder."
+            },
+            {
+              "id": "protect-2",
+              "text": "Distributed Data Protection (Redis) stores the keys under the instance prefix, the tenant name and DataProtection-Keys. This key ring is not a cache. Give Redis persistence, with AOF or RDB, and a backup strategy."
+            },
+            {
+              "id": "protect-3",
+              "text": "The module logs a warning unless it can confirm that persistence is on, which it can only do when admin commands are allowed, with AllowAdmin or in the connection string."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "Redis in your module",
+      "subtitle": "The Redis service and the configured check",
+      "clips": [
+        {
+          "id": "09-module",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "module-1",
+              "text": "Your own modules can use the same connection. Take IRedisService in a constructor: it is registered whenever the Redis feature is enabled. When the configuration is invalid, it is a NullRedisService, which never connects."
+            },
+            {
+              "id": "module-2",
+              "text": "Connection and Database are null until a connection is created. Check Database, call ConnectAsync if needed, and handle a failure, because a connection does not mean the server is reachable."
+            },
+            {
+              "id": "module-3",
+              "text": "A feature that replaces a default service with one that relies on Redis should do it only when IsRedisConfigured returns true. Otherwise, the tenant keeps the default."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Redis module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Redis module: one shared server for the cache, the signals, the locks and the data protection keys of every instance of a site. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
