@@ -1,0 +1,195 @@
+{
+  "title": "Orchard Core Themes",
+  "output": "themes-choose",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Themes",
+      "subtitle": "Change the look of your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A theme decides how your site looks. In this video, you open the Themes page, switch the theme of your site, and turn themes on and off."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a theme is",
+      "subtitle": "Site theme and Admin theme",
+      "clips": [
+        {
+          "id": "01-concept",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "what-1",
+              "text": "A theme draws your pages. It sets the layout, the colors, and the fonts, while the content itself stays in your site. You can change the theme without editing a single page or post."
+            },
+            {
+              "id": "what-2",
+              "text": "Some themes also include templates for specific content. The Blog Theme, for example, has templates for blog posts, categories, and tags."
+            },
+            {
+              "id": "what-3",
+              "text": "A site has two themes. The Site theme draws the pages that visitors see. The Admin theme draws the admin, and the sign-in page as well, unless Use site theme for login page is checked in the User Login settings."
+            },
+            {
+              "id": "what-4",
+              "text": "The recipe you choose during setup sets the first Site theme. Blog uses The Blog Theme, Agency uses The Agency Theme, Coming Soon uses The Coming Soon Theme, and Software as a Service uses The Default Theme. Blank site and Headless site set none."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "The Themes page",
+      "subtitle": "Where to find it and how to read it",
+      "clips": [
+        {
+          "id": "02-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "Let's start on the admin home page. The Customize theme card has a Manage themes button that opens the Themes page. The same page is in the admin menu, under Design, Themes."
+            },
+            {
+              "id": "page-2",
+              "text": "Click Manage themes. The Themes page shows a card for each theme you can apply. The current themes come first, marked This is the current Site theme and This is the current Admin theme."
+            },
+            {
+              "id": "page-3",
+              "text": "Each card shows a thumbnail, the name of the theme, and a description. Below them are the author, the website, the tags, and the version of the theme."
+            },
+            {
+              "id": "page-4",
+              "text": "A theme tagged Admin is an admin theme, such as The Admin Theme. Make Current on an admin theme sets the Admin theme, and on any other theme it sets the Site theme."
+            },
+            {
+              "id": "page-5",
+              "text": "The other cards are The Agency Theme, The Coming Soon Theme, The Default Theme, and Safe Mode Theme, which describes itself as a fail-safe theme when no other themes are available."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Change the Site theme",
+      "subtitle": "Make Current",
+      "clips": [
+        {
+          "id": "03-site",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "site-1",
+              "text": "First, let's see the site as it is. On the Themes page, click the Visit Site icon in the top bar. The home page uses The Blog Theme."
+            },
+            {
+              "id": "site-2",
+              "text": "Back on the Themes page, find The Default Theme. It is disabled, so Orchard Core enables it when you click Make Current. Two messages confirm that it was enabled and set as the default Site theme."
+            },
+            {
+              "id": "site-3",
+              "text": "The card of The Default Theme shows This is the current Site theme, and its buttons are gone. The Blog Theme offers Make Current and Disable instead."
+            },
+            {
+              "id": "site-4",
+              "text": "Open the site again with Visit Site. Make Current changes no content. The layout and the styling come from The Default Theme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Enable and disable themes",
+      "subtitle": "Switch back, then turn a theme off",
+      "clips": [
+        {
+          "id": "04-toggle",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "toggle-1",
+              "text": "On the Themes page, go back by clicking Make Current on The Blog Theme. It is already enabled, so one message confirms that it was set as the default Site theme."
+            },
+            {
+              "id": "toggle-2",
+              "text": "Disable switches a theme off. Let's click Disable on The Default Theme. A message confirms it, and the card then offers Enable, which switches a theme on without making it current."
+            },
+            {
+              "id": "toggle-3",
+              "text": "A current theme has no Make Current, Enable, or Disable button, so this page does not let you switch off a theme that is in use. Choose another theme with Make Current first."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Reset the current themes",
+      "subtitle": "For sites that can't use theming",
+      "clips": [
+        {
+          "id": "05-reset",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "reset-1",
+              "text": "At the bottom of the page, the Reset current themes box has two buttons, Reset Site Theme and Reset Admin Theme. The box says they are used for sites that can't use theming."
+            },
+            {
+              "id": "reset-2",
+              "text": "Each button asks you to confirm, and then clears the Site theme or the Admin theme, until you choose one again with Make Current. Leave them alone unless you need them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Permissions",
+      "subtitle": "Who can change themes",
+      "clips": [
+        {
+          "id": "06-permission",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "who-1",
+              "text": "Only users with the Apply a Theme permission can open the Themes page. The Administrator role has it by default. To give it to another role, edit that role under Access Control, Roles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Themes",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Themes decide how your site looks: under Design, Themes, you choose the Site theme with Make Current and switch themes on and off with Enable and Disable. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "title": "Themes: Change the Look of Your Site | Orchard Core",
+  "description": "The look of an Orchard Core site comes from its theme. Knowing where the themes are listed, and what each button on the page does, lets you change how the site looks without touching its content.\n\nThe Themes page lists each theme you can apply as a card. Make Current applies a theme, and Enable and Disable switch a theme on or off.\n\nIn this video:\n• What a theme is: the Site theme and the Admin theme\n• The Themes page: where to find it and how to read it\n• Change the Site theme with Make Current\n• Enable and disable themes\n• Reset the current themes\n• Permissions: who can change themes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Orchard Core themes",
+    "Themes",
+    "Site theme",
+    "Admin theme",
+    "Admin",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Themes"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Themes/"
+    },
+    {
+      "label": "Documentation: Admin",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Admin/"
+    },
+    {
+      "label": "Documentation: Navigation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Navigation/"
+    },
+    {
+      "label": "Documentation: Notifications",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Notifications/"
+    },
+    {
+      "label": "Documentation: Resources",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Resources/"
+    },
+    {
+      "label": "Documentation: Widgets",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Widgets/"
+    },
+    {
+      "label": "Documentation: Bag part",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Flow/BagPart/"
+    },
+    {
+      "label": "Documentation: Tenants",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Tenants/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Themes/README.md",
+    "src/docs/reference/modules/Admin/README.md",
+    "src/docs/reference/modules/Navigation/README.md",
+    "src/docs/reference/modules/Notifications/README.md",
+    "src/docs/reference/modules/Resources/README.md",
+    "src/docs/reference/modules/Widgets/README.md",
+    "src/docs/reference/modules/Flow/BagPart.md",
+    "src/docs/reference/modules/Tenants/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Themes"
+  }
+}

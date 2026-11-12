@@ -2095,9 +2095,9 @@
       "src/docs/reference/modules/Flow/BagPart.md",
       "src/docs/reference/modules/Tenants/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4.5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.4,
+    "words": 659,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
