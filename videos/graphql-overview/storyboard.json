@@ -1,0 +1,234 @@
+{
+  "title": "The Orchard Core GraphQL module",
+  "output": "graphql-overview",
+  "spoken": {
+    "AddObjectGraphType": "Add Object Graph Type",
+    "ObjectGraphType": "Object Graph Type",
+    "ISchemaBuilder": "I Schema Builder",
+    "GetIdentifierAsync": "Get Identifier Async",
+    "BuildAsync": "Build Async",
+    "AutoroutePart": "Autoroute Part",
+    "BlogPost": "Blog Post",
+    "blogPost": "blog post",
+    "orderBy": "order by",
+    "contentItem": "content item",
+    "/api/graphql": "slash API slash GraphQL",
+    "application/graphql": "application slash GraphQL",
+    "GraphiQL": "graphical",
+    "OrchardCore": "Orchard Core"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core GraphQL module",
+      "subtitle": "Query your content with one request",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core can answer a question about your content in a single request. The GraphQL module turns your content types into a schema that clients query over HTTP. This video shows how it works, how to try it, and how to extend it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why GraphQL",
+      "subtitle": "One request, only the fields you ask for",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A page that lists posts needs a title and a path for each one. When the server fixes the shape of every response, the client either receives fields it never uses, or sends several requests to collect related data."
+            },
+            {
+              "id": "why-2",
+              "text": "With GraphQL, the client sends a query that names the fields it wants. The response has the same shape as the query, and related items are part of the same query, so one request is enough."
+            },
+            {
+              "id": "why-3",
+              "text": "The GraphQL module builds the schema from your content types and parts. A content type you add appears in the schema without any code, and every request is checked against permissions."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the module",
+      "subtitle": "A feature of the Api category",
+      "short": "enable",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "The GraphQL module is a feature. Let's open Tools, Features, and search for GraphQL. The Headless site recipe enables it during setup, and on other sites you enable it yourself."
+            },
+            {
+              "id": "enable-2",
+              "text": "GraphQL is listed under the Api category. Select Enable, and a notification confirms that the feature was enabled."
+            },
+            {
+              "id": "enable-3",
+              "text": "Tools has a GraphiQL entry once GraphQL is enabled. Modules such as Contents, Lists, Markdown and Autoroute each add their own types to the schema when they find GraphQL enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Your first query",
+      "subtitle": "Run it in GraphiQL",
+      "short": "first-query",
+      "clips": [
+        {
+          "id": "03-query",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "query-1",
+              "text": "Tools, GraphiQL opens a page for writing and running queries. The Explorer on the left lists the fields you can query, the editor is in the middle, and the response appears on the right."
+            },
+            {
+              "id": "query-2",
+              "text": "Each content type is a field of the query, named after the type with a lowercase first letter. The BlogPost type is blogPost. This query asks for the display text of the published blog posts."
+            },
+            {
+              "id": "query-3",
+              "text": "Let's run it. The response is JSON, with a data property. Inside it, blogPost is a list with one entry for each published blog post, newest first, and each entry holds only the display text."
+            },
+            {
+              "id": "query-4",
+              "text": "One request can also follow relationships. The list part of the blog holds its posts, and the inline fragment on BlogPost picks the fields of each post. Run it, and the blog and its posts come back together."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "What the schema contains",
+      "subtitle": "From content types to queries",
+      "clips": [
+        {
+          "id": "04-schema",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "schema-1",
+              "text": "A content type becomes a query field, unless its settings give it a stereotype, such as Widget. A part with fields or a GraphQL type becomes an object, unless it is collapsed. A part named like its type, such as BlogPost, is collapsed."
+            },
+            {
+              "id": "schema-2",
+              "text": "Every content type query takes the same arguments. The where argument filters, orderBy sorts, first and skip page through the items, and status chooses which versions are read. The contentItem query returns one item from its id."
+            },
+            {
+              "id": "schema-3",
+              "text": "The schema keeps up with your content definitions. After you change a content type, the next request builds the schema again, and GraphiQL shows the change when you reload the page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Calling the endpoint",
+      "subtitle": "HTTP, JSON and permissions",
+      "short": "endpoint",
+      "clips": [
+        {
+          "id": "05-http",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "http-1",
+              "text": "Outside the admin, any HTTP client calls the same endpoint, /api/graphql. A POST request sends the query in a JSON body, and a GET request sends it in the query string."
+            },
+            {
+              "id": "http-2",
+              "text": "A POST request can also use the application/graphql content type, where the body is the query itself. Variables and the operation name travel in the JSON body, or in the query string of a GET request."
+            },
+            {
+              "id": "http-3",
+              "text": "The response is JSON. A successful query returns status 200 and a data property. When the query has errors, an errors list describes them, with status 400, or 401 when the user lacks a permission the query needs."
+            },
+            {
+              "id": "http-4",
+              "text": "Every request needs the Execute GraphQL permission. A client authenticates with the session cookie of a signed-in user, or with a bearer token from the OpenID Connect module. Anonymous users cannot run queries by default."
+            },
+            {
+              "id": "http-5",
+              "text": "Content permissions apply as well. A query returns only the content items that the user is allowed to view."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Configuration",
+      "subtitle": "Limits for queries and results",
+      "clips": [
+        {
+          "id": "06-config",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "config-1",
+              "text": "The module reads its options from the configuration, under OrchardCore, Apis, GraphQL. They limit the depth and complexity of a query and the number of results, and they decide whether exception details reach clients."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Extending the schema",
+      "subtitle": "Your own parts and queries",
+      "clips": [
+        {
+          "id": "07-extend",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "ext-1",
+              "text": "To expose your own part, write an ObjectGraphType that maps the fields you want, and register it with AddObjectGraphType in a startup class that requires the GraphQL feature. The Autoroute module does this for AutoroutePart."
+            },
+            {
+              "id": "ext-2",
+              "text": "For a query that no part provides, implement ISchemaBuilder. BuildAsync adds fields to the schema. GetIdentifierAsync returns a value that changes when the schema must be built again, or an empty string when nothing it depends on changes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core GraphQL module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the GraphQL module: a schema built from your content, one endpoint, and permission checks on every request. The other videos of this series go deeper into each part. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
