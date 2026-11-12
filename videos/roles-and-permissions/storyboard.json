@@ -194,7 +194,7 @@
     {
       "id": "06",
       "title": "Delete a role",
-      "subtitle": "System roles stay",
+      "subtitle": "Remove a role you no longer need",
       "clips": [
         {
           "id": "06-delete",
@@ -202,7 +202,7 @@
           "steps": [
             {
               "id": "delete-1",
-              "text": "To remove a role, use its Delete button. Let's delete Guest Blogger, a role we no longer need. A dialog asks for confirmation."
+              "text": "Back on the Roles page, let's remove a role we no longer need. Guest Blogger has a Delete button, and a dialog asks for confirmation."
             },
             {
               "id": "delete-2",
