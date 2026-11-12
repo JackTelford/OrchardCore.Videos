@@ -1,0 +1,221 @@
+{
+  "title": "Create a Tenant and Set It Up",
+  "output": "tenants-create-and-setup",
+  "spoken": {
+    "Create & Setup": "Create and Setup"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Create a Tenant and Set It Up",
+      "subtitle": "Add a site to your Orchard Core application",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A tenant is a separate site that runs inside the same Orchard Core application. In this video you add a tenant from the administration of the Default tenant, the first site of the application, finish its setup, and open the site it creates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Two stages",
+      "subtitle": "Create the tenant, then set it up",
+      "clips": [
+        {
+          "id": "01-stages",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "stages-1",
+              "text": "Adding a tenant takes two stages. First you create it: the Default tenant saves the name, the address and the presets of the tenant, and the tenant waits in the Uninitialized state."
+            },
+            {
+              "id": "stages-2",
+              "text": "Then you set it up. The Setup screen asks for the name of the site and a super user, prepares the database, and runs the recipe. The tenant ends up Running."
+            },
+            {
+              "id": "stages-3",
+              "text": "The Tenants feature is available on the Default tenant only. Its Multi-Tenancy menu appears for users with the Manage tenants permission, which the Administrator role has."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Add a tenant",
+      "subtitle": "The Create Tenant form",
+      "clips": [
+        {
+          "id": "02-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "In the administration of the Default tenant, open Multi-Tenancy, Tenants. The list holds one tenant, Default. Select Add Tenant."
+            },
+            {
+              "id": "create-2",
+              "text": "The Create Tenant form starts with the Name. Type Maplewood. The name identifies the tenant, it can't contain spaces, and it can't be changed afterwards."
+            },
+            {
+              "id": "create-3",
+              "text": "Category and Description are for your own use. The list shows both, and a Category filter narrows the list. Let's enter Customers and a short description."
+            },
+            {
+              "id": "create-4",
+              "text": "Url Prefix and Hostname decide which requests reach the tenant. A prefix adds a segment to the address, and a hostname gives the tenant its own domain. Type maplewood as the prefix."
+            },
+            {
+              "id": "create-5",
+              "text": "Two tenants can't share the same combination of prefix and hostname. The Default tenant has neither, so Maplewood needs at least one of them."
+            },
+            {
+              "id": "create-6",
+              "text": "Recipe lists the setup recipes. Choose Blog to preset the choice, so the Setup screen doesn't ask for a recipe. Left on Select a recipe, whoever sets up the tenant chooses."
+            },
+            {
+              "id": "create-7",
+              "text": "Database Presets say where the tenant keeps its data. With Sql Server, MySql or Postgres, you can enter a Connection string, and a Table Prefix lets tenants share one database."
+            },
+            {
+              "id": "create-8",
+              "text": "Sqlite needs neither, so the Connection string, Table Prefix and Table Schema fields disappear when you choose it. You can also leave the type on None, and then the Setup screen asks for the database."
+            },
+            {
+              "id": "create-9",
+              "text": "Create saves the tenant and returns to the list. Create & Setup saves it and opens its Setup screen straight away, which a later chapter shows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The tenant in the list",
+      "subtitle": "Uninitialized, until it is set up",
+      "clips": [
+        {
+          "id": "03-list",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "list-1",
+              "text": "Maplewood appears with its category, its description, the Sqlite database, the Blog recipe and the state Uninitialized. Uninitialized means the tenant is saved, but its setup has not run."
+            },
+            {
+              "id": "list-2",
+              "text": "Setup and the name of the tenant both open its Setup screen. Their link carries a token that is valid for 24 hours, and the Setup screen answers Not Found without it. Loading the list again makes a fresh link."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Set up the tenant",
+      "subtitle": "The Setup screen of the tenant",
+      "clips": [
+        {
+          "id": "04-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "Select Setup in the Maplewood row. The first question is What is the name of your site? Type Maplewood Bakery: it is the default title of the pages."
+            },
+            {
+              "id": "setup-2",
+              "text": "This screen has no Recipe and no database questions, because the tenant already has those presets. Without them, the screen would ask for the recipe and the database."
+            },
+            {
+              "id": "setup-3",
+              "text": "Default Time Zone sets how dates and times are displayed and edited in the site. It starts as the time zone of the server, and you can choose another."
+            },
+            {
+              "id": "setup-4",
+              "text": "The Super User is the first user of the tenant, and has all the rights. Enter a User Name, an Email and a Password, and confirm the password. Use this user only for setup and disaster recovery."
+            },
+            {
+              "id": "setup-5",
+              "text": "The Finish Setup button starts the work. Setup prepares the database and runs the recipe, and while it runs, the tenant is Initializing and answers requests with Service Unavailable."
+            },
+            {
+              "id": "setup-6",
+              "text": "Let's select Finish Setup. When Setup is done, the browser opens the home page of the site. It is a blog with a sample post, and the name you entered appears at the top."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Open the site",
+      "subtitle": "View it and find its sign-in",
+      "clips": [
+        {
+          "id": "05-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "In the list, Maplewood is Running, and its row offers View, Disable, Reload and Features instead of Setup. A separate video covers managing running tenants."
+            },
+            {
+              "id": "open-2",
+              "text": "Select View. The site opens in another tab. A tenant is a separate site with its own content, theme and users, although it runs inside the same application."
+            },
+            {
+              "id": "open-3",
+              "text": "Open the Admin address of Maplewood, which is its prefix followed by Admin. It leads to a sign-in page, because Setup creates the super user but doesn't sign anyone in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Create & Setup",
+      "subtitle": "Straight to the Setup screen",
+      "clips": [
+        {
+          "id": "06-shortcut",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "shortcut-1",
+              "text": "Create & Setup saves the tenant and goes straight to its Setup screen, so the list is skipped. Let's add Riverside with a prefix, the Blog recipe and Sqlite, the same way as before."
+            },
+            {
+              "id": "shortcut-2",
+              "text": "Select Create & Setup. The tenant is saved, and its Setup screen opens straight away, with the token already in the address. It is the same screen, so the setup continues as before."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Create a Tenant and Set It Up",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Adding a tenant takes two stages: you create it from the Default tenant, then you set it up on its own Setup screen. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
