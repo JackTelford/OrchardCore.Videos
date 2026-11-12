@@ -52,7 +52,8 @@ pin it (`[data-cy="step-panel-pin"]`) before the narration reaches it.
 - The preview of **Blog Post** (`build-3`) lists the five fake posts, and the **Fields** tab lists the fields with their types.
 - The run ends within the narration of `run-2`, or `OffCameraAsync` cuts the wait. The step badges of `run-3` read the number of rows
   and files each step handled (`runs/runOverlay.ts:46-68`): "5 rows" for **Read a data source**, "1 file" for **Create a file**, and
-  for **Save to the media library**, which has no output, what it received, probably "0 rows · 1 file". Confirm the three badges.
+  for **Save to the media library**, which has no output and a file input only, what it received: "1 file" (the badge shows rows only for a step with a
+  row port). Confirm the three badges.
 - The **Delivered** list of `run-4` reads "Saved 'blog-posts.csv' to the media library." (`Steps/Media/SaveToMediaStep.cs:87`), so the file is
   at the root of the media library (the **Folder** setting is empty).
 - The **Run History** page reached from the breadcrumb is the page of one pipeline ("The runs of Blog posts, the most recent first.")

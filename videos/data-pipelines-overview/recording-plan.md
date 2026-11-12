@@ -257,7 +257,8 @@ its **Pipeline** tab.
   `.Nth(0)`, `.Nth(1)` and `.Nth(2)` of that locator (a locator that matches three elements fails in strict mode and rings
   nothing), 1.5 s each, with `ClearHighlightsAsync` between. The badges read what each step handled
   (`DP/designer/runs/runOverlay.ts:46-68`): **5 rows** for **Read a data source**, **1 file** for **Create a file**, and
-  what **Save to the media library** received, which is probably **0 rows · 1 file**; confirm on the take.
+  **1 file** for **Save to the media library**, whose only port is a file input, so its badge counts the files it received and no
+  rows (`DataPipelineStepType.cs`, `GetInputs`, in `src/OrchardCore/OrchardCore.DataPipelines.Abstractions/Steps/`); confirm on the take.
 - On screen when the narration ends: the canvas with a status badge on each of the three steps, and the run's details in the panel.
 - Labels: `DP/designer/panel/RunsTab.vue`, `DP/designer/runs/runOverlay.ts:17-19`.
 
