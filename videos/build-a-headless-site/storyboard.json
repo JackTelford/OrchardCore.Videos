@@ -226,7 +226,7 @@
             },
             {
               "id": "cors-5",
-              "text": "Orchard Core confirms that the CORS settings were updated, and the list shows Frontend as the default policy. Policies are site settings of the tenant, so each tenant keeps its own."
+              "text": "Orchard Core confirms that the CORS settings have updated successfully, and the list shows Frontend as the default policy. Policies are site settings of the tenant, so each tenant keeps its own."
             }
           ]
         },

@@ -380,8 +380,8 @@ Starts on `/Admin`.
   `OrchardCore.Cors/Services/CorsJSLocalizer.cs:17,28,30`; the editor is `OrchardCore.Cors/Assets/ts/cors-admin-index.ts`.
 - `cors-2`: In the **Policy name** box (the text input of the card **Details**) empty the value (`FillAsync("")`) and type
   `Frontend`. Select **Set as default policy** (`#set-default-policy`). Ends with `Frontend` in the box and the check
-  box checked. Without it no policy is the default and the CORS middleware applies none
-  (`OrchardCore.Cors/Services/CorsOptionsConfiguration.cs:78-84`); do not skip this box. Labels: `CorsJSLocalizer.cs:28,30`; ids `cors-admin-index.ts:110`; the heading shows the policy name.
+  box checked. The code makes the first policy the default when none is marked (`OrchardCore.Cors/Services/CorsOptionsConfiguration.cs:78-84`),
+  so the policy would still apply, but the narration says the box is checked and the list shows the **Default Policy** badge only when it is: do not skip this box. Labels: `CorsJSLocalizer.cs:28,30`; ids `cors-admin-index.ts:110`; the heading shows the policy name.
 - `cors-3`: Select **Allow credentials** (`#allow-credentials`, checked when the editor opens, `cors-admin-index.ts:290`) to
   clear it. Scroll to the card **Origins**. In the box of **Allowed origins**
   (`.ocat-wrapper:has(label:text-is("Allowed origins")) input.form-control`) type `http://localhost:5173` and select
