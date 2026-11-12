@@ -1,0 +1,60 @@
+{
+  "title": "Media in Templates: Image Resizing, Asset URLs and Tag Helpers | Orchard Core",
+  "description": "A media field stores the path of a file in the media library, and a template has to turn that path into a URL, often for an image of another size.\n\nThe Media module maps a path to a public URL, resizes images on request through signed URLs, and offers the same options in Liquid filters, Razor helpers, and tag helpers.\n\nIn this video:\n• From a path to an image: asset URLs, resize commands, tokens, and the cache\n• Liquid filters: asset_url, img_tag, and resize_url\n• Media profiles: resize commands under a name\n• Razor helpers: AssetUrl and AssetProfileUrlAsync\n• Tag helpers: asset-src, the img attributes, and asset-href\n• The result in the browser: one image, five renditions\n• Versions and the image engine: cache busting and a custom engine",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid",
+    "Razor"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Media",
+    "Image resizing",
+    "Liquid",
+    "Razor",
+    "Tag helpers"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/"
+    },
+    {
+      "label": "Media Gallery documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Media Slugify documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media/MediaGallery.md",
+    "src/docs/reference/modules/Media/README.md",
+    "src/docs/reference/modules/Media.Slugify/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media"
+  }
+}
