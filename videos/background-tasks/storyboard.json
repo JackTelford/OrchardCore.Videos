@@ -85,7 +85,7 @@
             },
             {
               "id": "list-4",
-              "text": "Search filters the tasks by title or description. The Status filter shows the tasks that are enabled, disabled, running or queued, or whose last run failed."
+              "text": "Search filters the tasks by title or description. The Status filter offers Enabled, Disabled, Running or queued, and Last run failed."
             }
           ]
         }
@@ -156,7 +156,7 @@
           "steps": [
             {
               "id": "run-1",
-              "text": "To run a task right away, open its Actions menu and run it on demand, whatever its schedule. A message confirms the task is queued and will run shortly."
+              "text": "To run a task right away, open its Actions menu and run it from there. The task runs whatever its schedule. A message confirms the task is queued and will run shortly."
             },
             {
               "id": "run-2",
@@ -168,7 +168,7 @@
             },
             {
               "id": "run-4",
-              "text": "To run several tasks together, select them. The Actions menu of the list then offers to enable, disable or run them, after you confirm."
+              "text": "To run several tasks together, select them. The Actions menu of the list then offers Enable, Disable and a run action, after you confirm."
             }
           ]
         }
@@ -227,7 +227,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "That's the Background Tasks module: see what ran, change a schedule, switch a task off, and run it on demand. A separate video covers writing your own task. Thanks for watching."
+              "text": "That's the Background Tasks module: see what ran, change a schedule, switch a task off, and run it on demand. Thanks for watching."
             }
           ]
         }
