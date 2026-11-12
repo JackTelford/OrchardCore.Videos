@@ -1,0 +1,48 @@
+{
+  "title": "Templates: Preview a Template on Any Page Before You Save It | Orchard Core",
+  "description": "Checking a Liquid template usually means saving it and then loading the pages that use it.\n\nThe Templates module has a Preview button in its editor. It renders a page of your site with the template as it stands in the editor, saved or not, and renders that page again after every change.\n\nIn this video:\n• How a template is matched by name, and what the preview leaves untouched\n• Opening the preview from the Edit Template page\n• Following a link to preview another page, then saving the template\n• How the editor, the Render action and the shape binding resolver work together\n• The permissions and pages the preview needs, and that Admin Templates have no Preview button",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Liquid"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Liquid",
+    "Templates",
+    "Shapes",
+    "Template preview"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Templates and Liquid"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Templates/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Templates/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Templates"
+  }
+}

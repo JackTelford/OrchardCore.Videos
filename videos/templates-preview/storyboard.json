@@ -1,0 +1,184 @@
+{
+  "title": "Preview a Template on Any Page",
+  "output": "templates-preview",
+  "spoken": {
+    "Content__BlogPost": "Content double underscore Blog Post",
+    "PreviewTemplatesProvider": "Preview Templates Provider",
+    "TemplatesShapeBindingResolver": "Templates Shape Binding Resolver",
+    "Autoroute": "Auto route",
+    "404": "four oh four"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Preview a Template on Any Page",
+      "subtitle": "Try your Liquid on your site before you save it",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A saved template changes how your site renders. The Preview button of the Templates module shows a template on a real page before you save it. This video covers using it, how it works, and its limits."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why preview a template",
+      "subtitle": "Templates are matched by name",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A template of the Templates module is matched by name. Name it after a shape or one of its alternates, such as Content__BlogPost, and once it is saved it is used instead of a template file with that name."
+            },
+            {
+              "id": "why-2",
+              "text": "The Preview button renders a page of your site with the template as it stands in the editor. Nothing is saved, so visitors keep seeing the saved version until you press Save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Open the preview",
+      "subtitle": "From the Templates list to the preview tab",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "The Templates page is under Design, Templates in the admin menu, and lists each template by name. On this site, Content__BlogPost is the template that draws the page of a blog post."
+            },
+            {
+              "id": "open-2",
+              "text": "Let's open it. The editor has fields for the Name, the Description, and the Content, which is written in Liquid. This template puts the words Posted by above the title of the post, then renders the content of the post below it."
+            },
+            {
+              "id": "open-3",
+              "text": "The action bar at the bottom of the page has a Preview button, after Save and Cancel. It opens the preview in its own browser tab, so the editor stays open."
+            },
+            {
+              "id": "open-4",
+              "text": "The preview tab opens on the home page of your site, which here is the blog. It lists the posts as summaries. The theme draws each summary with its own, more specific template, so the Content__BlogPost template does not change this page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Preview another page",
+      "subtitle": "Edit, watch the page change, then save",
+      "clips": [
+        {
+          "id": "03-any-page",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "any-1",
+              "text": "To try the template on another page, follow a link in the preview. Let's open the blog post. The saved template renders it, with the words Posted by above the title."
+            },
+            {
+              "id": "any-2",
+              "text": "Back in the editor tab, let's finish the byline by typing the editorial team after Posted by. Each change goes to the preview tab, and nothing is saved."
+            },
+            {
+              "id": "any-3",
+              "text": "The preview tab renders the blog post again, with the finished byline. It remembers the page you opened, and renders that page after every change in the editor."
+            },
+            {
+              "id": "any-4",
+              "text": "When the result is right, press Save. The template is stored, and the Templates list opens."
+            },
+            {
+              "id": "any-5",
+              "text": "The preview tab shows Preview Disconnected, because the editor page it followed has gone. The saved template applies to the site, and you can close the preview tab."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "How the preview works",
+      "subtitle": "From the editor to the shape that renders",
+      "clips": [
+        {
+          "id": "04-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "how-1",
+              "text": "Whenever the content changes, the editor tab stores the name and the content of the template in local storage. The preview tab shares that storage, so it is told about every change."
+            },
+            {
+              "id": "how-2",
+              "text": "The preview tab posts the name, the content and the page address to the Render action of the Preview controller. The action keeps the template in the HTTP context, then builds the Detail display of that content item."
+            },
+            {
+              "id": "how-3",
+              "text": "The PreviewTemplatesProvider reads the template from the HTTP context. The TemplatesShapeBindingResolver checks it first for every shape, so the template from the editor wins over a saved one with the same name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "What to know",
+      "subtitle": "Permissions, pages and admin templates",
+      "clips": [
+        {
+          "id": "05-limits",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "limits-1",
+              "text": "The preview needs two permissions: Manage templates and Manage Liquid templates. The Administrator and Editor roles have both by default."
+            },
+            {
+              "id": "limits-2",
+              "text": "The preview renders the home page when it is a content item, or any published content item that has an address from the Autoroute module. For any other address, it shows Preview Error with a status code, such as 404."
+            },
+            {
+              "id": "limits-3",
+              "text": "A preview template applies to every shape on the page with its name, unless a more specific template matches first. To try a template for summaries, open a page that lists them, such as the home page of the blog."
+            },
+            {
+              "id": "limits-4",
+              "text": "The Edit Admin Template page has no Preview button. Admin templates are not previewed this way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Preview a Template on Any Page",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Preview button renders a page of your site with the template as typed in the editor, and saves nothing until you press Save. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

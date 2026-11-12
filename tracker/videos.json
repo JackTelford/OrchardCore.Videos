@@ -2310,9 +2310,9 @@
     "docs": [
       "src/docs/reference/modules/Templates/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 4,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 4.2,
+    "words": 631,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
