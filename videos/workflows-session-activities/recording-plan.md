@@ -193,7 +193,7 @@ before the capture, signed in. The list shows every feature, the search box is e
   *On screen when the narration ends:* the search box with `session`, the **Workflows** heading and the one row,
   ringed in green. No other group.
 - `enable-2`: click the **Enable** button of that row, the link
-  `a.btn-primary[href*="Features/OrchardCore.Workflows.Session/Enable"]` (`Views/FeatureEntry.Buttons.SummaryAdmin.cshtml:51`;
+  `a.btn-primary[href*="Features/OrchardCore.Workflows.Session/Enable"]` (`Views/FeatureEntry.Buttons.SummaryAdmin.cshtml:40`;
   its id is `btn-enable-` followed by the feature id with dots changed to underscores: check it with `Recorder probe`).
   The click posts and redirects to `/Admin/Features`; enabling a feature restarts the shell, so the page can take a
   few seconds: wrap the wait in `OffCameraAsync` with the condition

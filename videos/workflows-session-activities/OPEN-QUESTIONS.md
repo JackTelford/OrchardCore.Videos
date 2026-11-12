@@ -27,7 +27,7 @@ video confirms them on a running site before the clips are used. Paths are in `s
    their defaults, since the source has no example of how those enumerations are written). Confirm that the import
    succeeds, that the Issues tab shows no issue, that the Fork's editor shows `Billing, Shipping` and the Join's **Mode**
    shows `WaitAll`, and that no two cards overlap.
-5. **The `Enable` link on the Features page.** `OrchardCore.Features/Views/FeatureEntry.Buttons.SummaryAdmin.cshtml:51`
+5. **The `Enable` link on the Features page.** `OrchardCore.Features/Views/FeatureEntry.Buttons.SummaryAdmin.cshtml:40`
    is a link with `data-url-af="UnsafeUrl"` to a POST action (`Controllers/AdminController.cs:226`). Confirm that
    clicking it enables the feature without a confirmation dialog, that the notification reads "The feature Session
    Workflows Activities was enabled.", and that its id is as the plan says.
