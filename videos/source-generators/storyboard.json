@@ -1,0 +1,215 @@
+{
+  "title": "Orchard Core source generators",
+  "output": "source-generators",
+  "spoken": {
+    "OrchardCore.SourceGenerators": "Orchard Core dot Source Generators",
+    "PropertyBasedNamedEnumerable": "Property Based Named Enumerable",
+    "InterceptorsNamespaces": "Interceptors Namespaces",
+    "DebugSettingsViewModel": "Debug Settings View Model",
+    "NavigationItemViewModel": "Navigation Item View Model",
+    "NavigationArguments": "Navigation Arguments",
+    "GenerateArguments": "Generate Arguments",
+    "GenerateShape": "Generate Shape",
+    "Arguments.From": "Arguments dot From",
+    "CreateAsync": "Create Async",
+    "IPositioned": "I Positioned",
+    "IShape": "I Shape",
+    "OCSG001": "O.C.S.G. zero zero one",
+    "OCSG002": "O.C.S.G. zero zero two"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core source generators",
+      "subtitle": "Build-time code for shapes, and warnings for common mistakes",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Orchard Core builds pages from shapes, and creating a shape takes code that reads properties by name. The OrchardCore.SourceGenerators project writes that code when you build, and warns about shape and feature mistakes. In this video, we'll go through each generator and each analyzer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why source generators",
+      "subtitle": "Work moved from runtime to build time",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A shape holds the data to display. Without generated code, Orchard Core fills a shape from an object by reading its properties through reflection, and creates a strongly typed shape from a proxy class that derives from your model, at runtime."
+            },
+            {
+              "id": "why-2",
+              "text": "The OrchardCore.SourceGenerators project moves that work to build time. Its generators write the code for argument classes, anonymous objects and typed shapes, and its analyzers report warnings while you build."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Argument classes",
+      "subtitle": "GenerateArguments",
+      "clips": [
+        {
+          "id": "02-arguments",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "args-1",
+              "text": "Start with a class that holds the arguments. Mark it with GenerateArguments, and declare it partial, because the generator adds the other half. This is NavigationArguments, from the menu filter of the Admin module."
+            },
+            {
+              "id": "args-2",
+              "text": "The generated half derives from PropertyBasedNamedEnumerable. It keeps the property names in an array, reports their count, and returns each value from a switch on the index, so the class reads its own properties directly, without reflection."
+            },
+            {
+              "id": "args-3",
+              "text": "Pass an instance to Arguments.From, and it returns the instance itself, because the class already provides named values. The menu filter creates the Navigation shape this way, with the menu name and the route data."
+            },
+            {
+              "id": "args-4",
+              "text": "Four rules follow from the generated code. The class is partial, its public instance properties with a getter are listed, properties inherited from a base class are left out, and the class cannot name another base class."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Anonymous objects",
+      "subtitle": "Arguments.From and an interceptor",
+      "clips": [
+        {
+          "id": "03-anonymous",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "anon-1",
+              "text": "An anonymous object has no name to mark, so another generator uses an interceptor, a generated method that replaces a call. This method from the navigation code passes one to Arguments.From, and the generator finds that call at build time."
+            },
+            {
+              "id": "anon-2",
+              "text": "The generated method replaces that call. It casts the object back to its anonymous type through type inference, then reads each property directly and passes the values and the names to Arguments.From."
+            },
+            {
+              "id": "anon-3",
+              "text": "An object without generated code takes the reflection path, which caches the property lookup for each type. The interceptor skips an anonymous object that has no public property, and one with a property that is itself an anonymous object."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Typed shapes",
+      "subtitle": "Initialize, CreateAsync and GenerateShape",
+      "clips": [
+        {
+          "id": "04-shapes",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shapes-1",
+              "text": "A display driver creates a strongly typed shape with Initialize and a view model class. This driver, from the Settings module, uses DebugSettingsViewModel. Without generated code, the shape is a proxy class that derives from the view model."
+            },
+            {
+              "id": "shapes-2",
+              "text": "The shape generator finds Initialize calls in display drivers and CreateAsync calls on the shape factory that name a model type. For each model, it writes a class that derives from it and implements IShape and IPositioned, and intercepts the calls to create it."
+            },
+            {
+              "id": "shapes-3",
+              "text": "When you own the model, mark a partial class with GenerateShape instead. The generator implements IShape and IPositioned on the class itself, so that model needs neither an interceptor nor a proxy. NavigationItemViewModel uses Metadata in its constructor."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Analyzers",
+      "subtitle": "OCSG001 and OCSG002",
+      "clips": [
+        {
+          "id": "05-analyzers",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "analyzers-1",
+              "text": "The OCSG001 analyzer reports a warning when a sealed model that does not implement IShape is passed to Initialize, or to a CreateAsync overload that builds a proxy. To fix it, remove sealed, implement IShape, or use View, Copy or Dynamic."
+            },
+            {
+              "id": "analyzers-2",
+              "text": "The OCSG002 analyzer checks the Feature attribute. A marked class is used only when that feature is enabled, and the feature must belong to the same module. A name from another module is not found, so the class joins every feature of its module."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Turning them on",
+      "subtitle": "The build properties of the Orchard Core solution",
+      "clips": [
+        {
+          "id": "06-build",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "build-1",
+              "text": "In the Orchard Core solution, the shared build properties turn the generators on for the framework, module and theme projects. They reference OrchardCore.SourceGenerators as an analyzer, and add the namespace of the generated interceptors to InterceptorsNamespaces."
+            },
+            {
+              "id": "build-2",
+              "text": "A project gets generated code only when it references the generators as an analyzer. Without that reference, a class marked with GenerateArguments has no generated half, and Arguments.From falls back to reading its properties by reflection."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Choosing an approach",
+      "subtitle": "Which one to use, and when",
+      "clips": [
+        {
+          "id": "07-choose",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "choose-1",
+              "text": "Use a named class with GenerateArguments for arguments you reuse, and Arguments.From with an anonymous object for a value you pass once. Mark a view model you own with GenerateShape, and let the generator intercept Initialize and CreateAsync for the others."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core source generators",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A named class with GenerateArguments, an anonymous object passed to Arguments.From, and a typed shape each move work from runtime to build time. The Source Generators page of the documentation covers the first two and the analyzers. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
