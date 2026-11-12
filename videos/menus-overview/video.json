@@ -1,0 +1,53 @@
+{
+  "title": "Menus: Build the Navigation of Your Site | Orchard Core",
+  "description": "Visitors find their way around a site with its menus, and the people who manage the site need to change them without touching a theme.\n\nThe Orchard Core Menu module stores each menu as a content item with a title, an alias and a tree of menu items. You add items, arrange them by dragging, and publish the menu to change what visitors see.\n\nIn this video:\n• Menus and menu items: what a menu is made of\n• Open a menu: find a menu and its items\n• Add a menu item: a link at the first level\n• Nest and reorder: build the tree and set the order\n• Publish a menu: make the changes visible\n• Create a menu: a second menu for the site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CMS"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Menu",
+    "Menus",
+    "Navigation",
+    "Menu items"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Menus and Navigation"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Menu",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Menu/"
+    },
+    {
+      "label": "Documentation: Navigation",
+      "url": "https://docs.orchardcore.net/en/latest/topics/navigation/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Menu/README.md",
+    "src/docs/topics/navigation/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Menu"
+  }
+}

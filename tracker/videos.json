@@ -1683,9 +1683,9 @@
       "src/docs/reference/modules/Menu/README.md",
       "src/docs/topics/navigation/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.0,
+    "words": 748,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
