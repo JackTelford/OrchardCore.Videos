@@ -1,0 +1,49 @@
+{
+  "title": "Lists: Ordering, Paging and Contained Types | Orchard Core",
+  "description": "A list holds content items of other types, such as a blog and its posts. Editors and visitors need those items on pages of a sensible size, in an order that makes sense, and only of the types the list is meant for.\n\nThe settings of the List part on a content type control exactly that: the contained content types, the Page Size, manual ordering by drag and drop, a full pager with numbered pages, and a header with the title of the list.\n\nIn this video:\n• How the List part settings are organized\n• Opening the List settings of a content type\n• Choosing the contained content types\n• Setting the Page Size and paging through a list\n• Ordering the items by dragging them\n• The full pager and the container's header",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Lists",
+    "List part",
+    "Page size",
+    "Pager",
+    "Content ordering",
+    "Content types"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Lists"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Lists/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Lists/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Lists"
+  }
+}
