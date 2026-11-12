@@ -1,0 +1,191 @@
+{
+  "title": "Meta Pixel: Track Conversions From Meta Ads",
+  "output": "meta-pixel",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Meta Pixel",
+      "subtitle": "Track conversions from your Meta ads",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Meta Pixel feature connects your site to Meta, so you can track conversions from your Meta ads. In this video, you enable it, add your Pixel Identifier, and configure the Conversions API, which sends events from the server."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How the Meta Pixel works",
+      "subtitle": "In the browser and on the server",
+      "clips": [
+        {
+          "id": "01-how",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "When you run ads on Meta, you want to know what visitors do after they click. The Meta Pixel feature reports their visits and actions to Meta in two ways."
+            },
+            {
+              "id": "why-2",
+              "text": "The pixel runs in the browser of each visitor. The Conversions API runs on your server, so it also covers events that do not depend on the browser. Both use the Pixel Identifier of your pixel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features. Let's search for Meta Pixel. The result is listed under the Meta category, which holds the Meta features."
+            },
+            {
+              "id": "enable-2",
+              "text": "The description of Meta Pixel says it provides a way to enable Meta Pixel tracking for your site. Let's select Enable."
+            },
+            {
+              "id": "enable-3",
+              "text": "A notice confirms it: The feature Meta Pixel was enabled. The feature adds a Meta Pixel page under Settings, Integrations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add your Pixel Identifier",
+      "subtitle": "Settings, Integrations, Meta Pixel",
+      "clips": [
+        {
+          "id": "03-pixel",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "pixel-1",
+              "text": "Open Settings, Integrations, Meta Pixel. The Pixel Identifier field comes first, and its hint says where to find the identifier: the Meta Data Sources portal."
+            },
+            {
+              "id": "pixel-2",
+              "text": "Let's enter the identifier of the pixel. This example uses a made-up value, and you enter the one from your own Meta account."
+            },
+            {
+              "id": "pixel-3",
+              "text": "Select Save. A notice confirms: Site settings updated successfully. Once the settings are saved, the pixel is added to the pages of your site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "What the pixel does on your pages",
+      "subtitle": "Front end only",
+      "clips": [
+        {
+          "id": "04-pages",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "page-1",
+              "text": "The pixel is added to the pages that visitors see, and it reports a page view each time one of them loads. It is not added to the admin pages."
+            },
+            {
+              "id": "page-2",
+              "text": "If the Pixel Identifier is empty, no pixel is added to your pages. And when tracking is not allowed for a visitor, Orchard Core leaves the pixel out of that visitor's pages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "The Conversions API",
+      "subtitle": "Access token and test event code",
+      "clips": [
+        {
+          "id": "05-capi",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "capi-1",
+              "text": "Below the Pixel Identifier, the Conversions API section is optional. It delivers events to Meta from the server, so workflows can send events such as Purchase or Lead."
+            },
+            {
+              "id": "capi-2",
+              "text": "The Conversions API Access Token is a password field. You generate the token for your dataset in the Events Manager, and Orchard Core encrypts it before it saves it."
+            },
+            {
+              "id": "capi-3",
+              "text": "The Test Event Code is optional, and comes from the Test Events tab of the Events Manager. While it is set, events appear in the test console instead of counting as production data."
+            },
+            {
+              "id": "capi-4",
+              "text": "Remove the Test Event Code before you go live. Select Save to keep the settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Send events from a workflow",
+      "subtitle": "The Meta Conversions API Event task",
+      "clips": [
+        {
+          "id": "06-workflow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "wf-1",
+              "text": "The settings do not send events by themselves. A workflow does. Enable the Workflows feature, open Design, Workflows, and the workflow editor offers the Meta Conversions API Event task in its Meta category."
+            },
+            {
+              "id": "wf-2",
+              "text": "Event Name is required: a standard name such as Purchase or Lead, or a custom name. Action Source tells Meta where the conversion took place, and Website is the default."
+            },
+            {
+              "id": "wf-3",
+              "text": "Event Source URL is optional: the browser address where the event happened. Event ID is optional too. It is a unique id that lets Meta deduplicate the event when the browser pixel also reports the same event."
+            },
+            {
+              "id": "wf-4",
+              "text": "The task ends with one of two outcomes. Done means Meta accepted the event, and Failed means it did not, for example when the Pixel Identifier or the access token is missing. A separate video covers workflows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Meta Pixel",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The Meta Pixel feature adds your pixel to the pages of your site, and the Conversions API lets workflows send events from the server. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
