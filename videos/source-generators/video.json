@@ -1,0 +1,50 @@
+{
+  "title": "Source Generators: Less Boilerplate in Your Modules | Orchard Core",
+  "description": "Without generated code, Orchard Core fills a shape from an object by reading its properties through reflection, and creates a strongly typed shape from a proxy class at runtime. A sealed view model, or a feature name from another module, is not reported while you build.\n\nThe OrchardCore.SourceGenerators project moves that work to build time: its generators write the code for argument classes, anonymous objects and typed shapes, and its analyzers report shape and feature mistakes while you build.\n\nIn this video:\n• Why source generators: what moves from runtime to build time\n• Argument classes with GenerateArguments\n• Anonymous objects and the Arguments.From interceptor\n• Typed shapes: Initialize, CreateAsync and GenerateShape\n• The OCSG001 and OCSG002 analyzers\n• The build properties that turn the generators on in the Orchard Core solution\n• Choosing an approach",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "CSharp"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "source generators",
+    "Roslyn",
+    "analyzers",
+    "interceptors",
+    "shapes",
+    "C#"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Extending Orchard Core"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/topics/source-generators/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/topics/source-generators/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.SourceGenerators"
+  }
+}
