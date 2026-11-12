@@ -1,0 +1,54 @@
+{
+  "title": "GraphQL: Filter, Sort and Page Content Items | Orchard Core",
+  "description": "A GraphQL query for a content type returns up to 100 published items, newest first, and a client rarely wants exactly that.\n\nThe arguments of a content type query filter the items, sort them, take a page of them and choose which version of each item to return, and three settings limit the number of results.\n\nIn this video:\n• The five arguments of a content type query and their defaults\n• Filter with where: fields, parts and the OR, AND and NOT conditions\n• The filter operators for strings, identifiers, dates and content fields\n• Sort with orderBy\n• Page with first and skip\n• Choose versions with status: PUBLISHED, DRAFT, LATEST and ALL\n• Combine the arguments in one query\n• The default and maximum number of results, and the validation mode",
+  "hashtags": [
+    "OrchardCore",
+    "GraphQL",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "GraphQL",
+    "GraphiQL",
+    "Headless CMS",
+    "API",
+    "Content items"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "GraphQL"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: GraphQL",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL/"
+    },
+    {
+      "label": "Documentation: GraphQL queries and filters",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Apis.GraphQL.Abstractions/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Apis.GraphQL/README.md",
+    "src/docs/reference/modules/Apis.GraphQL.Abstractions/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Apis.GraphQL"
+  }
+}
