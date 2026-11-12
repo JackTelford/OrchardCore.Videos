@@ -6271,9 +6271,9 @@
       "src/docs/reference/modules/DataProtection.Azure/README.md",
       "src/docs/reference/modules/Redis/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 5,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 5.4,
+    "words": 812,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
