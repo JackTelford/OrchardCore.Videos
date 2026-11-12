@@ -1,0 +1,54 @@
+{
+  "title": "SignalR: Real-Time Updates and Backplanes | Orchard Core",
+  "description": "Pages that update while they are open need a connection between the browser and the server, and that connection has to keep working when a site runs on more than one instance.\n\nThe Orchard Core SignalR module registers SignalR once for the tenant and provides the JavaScript client as a named resource. The Redis and Azure backplane modules relay hub messages between instances. The Media Library and the Workflows hub show how a module uses it.\n\nIn this video:\n• Why the SignalR module exists and what it provides\n• The SignalR, SignalR Redis Backplane and SignalR Azure Backplane features\n• A hub at work: the Media Library updating in a second tab\n• Hosting a hub in your own module\n• Sending messages from the server to a group of clients\n• Connecting from the browser with the signalr resource\n• Scaling out with the Redis and Azure backplanes",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "SignalR"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "SignalR",
+    "Redis",
+    "Azure SignalR Service",
+    "backplane",
+    "real-time"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Performance and Background Work"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "SignalR documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/SignalR/"
+    },
+    {
+      "label": "Media Gallery documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/SignalR/README.md",
+    "src/docs/reference/modules/Media/MediaGallery.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.SignalR"
+  }
+}

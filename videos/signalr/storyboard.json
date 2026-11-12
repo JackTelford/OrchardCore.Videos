@@ -1,0 +1,215 @@
+{
+  "title": "SignalR: Real-Time Updates and Backplanes",
+  "output": "signalr",
+  "spoken": {
+    "SignalR": "Signal R",
+    "signalr": "signal R",
+    "MediaChanged": "Media Changed",
+    "SubscribePath": "Subscribe Path",
+    "HubOptions": "Hub Options",
+    "RequireFeatures": "Require Features"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "SignalR in Orchard Core",
+      "subtitle": "Real-time updates and backplanes",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Some pages need to change while they are open. The SignalR module gives every module of an Orchard Core site one shared way to host hubs, and the Redis and Azure backplanes carry their messages between instances. This video shows how it works."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why the SignalR module",
+      "subtitle": "Hubs, and what the module provides",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "SignalR keeps a connection open between the browser and the server, so the server can send a message the moment something changes. A hub is the class that receives these connections. The Media Library and the Workflows designer each use one."
+            },
+            {
+              "id": "why-2",
+              "text": "The SignalR module registers SignalR once for the tenant, and provides the JavaScript client as the signalr resource. The Redis and Azure backplanes are separate modules. Each module that hosts a hub maps it and sets its own access rules."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Three features",
+      "subtitle": "SignalR and its two backplanes",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "In Tools, Features, search for SignalR. The SignalR module provides the SignalR feature, while SignalR Redis Backplane and SignalR Azure Backplane each come from a module of their own. Media SignalR comes from the Media module."
+            },
+            {
+              "id": "features-2",
+              "text": "SignalR has no pages of its own. A feature that hosts a hub needs it. Both backplanes depend on SignalR, and the Redis backplane also depends on Redis, as the dependency badges show."
+            },
+            {
+              "id": "features-3",
+              "text": "Let's enable SignalR Redis Backplane. Enabling a feature also enables the features it depends on, and the page confirms that the backplane was enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Live updates in the Media Library",
+      "subtitle": "A hub at work",
+      "clips": [
+        {
+          "id": "03-live",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "live-1",
+              "text": "When Media SignalR is enabled, the Media Library connects to a hub. Here are two tabs of Media, Library, both showing the same folder."
+            },
+            {
+              "id": "live-2",
+              "text": "In the second tab, let's open the menu of a file, choose Rename, type another file name, and select Ok."
+            },
+            {
+              "id": "live-3",
+              "text": "Back in the first tab, the list shows the renamed file, and the page was not reloaded. The Media module sent a message to the hub, and the library asked for the folder's files again."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Hosting a hub",
+      "subtitle": "Policy, feature, mapping and options",
+      "clips": [
+        {
+          "id": "04-host",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "host-1",
+              "text": "A hub is a class that derives from Hub. The Workflows hub carries the Authorize attribute with a policy name, and its module registers that policy so that it requires the permission to manage workflows."
+            },
+            {
+              "id": "host-2",
+              "text": "Media SignalR lists the SignalR feature as a dependency in its manifest. Workflows uses RequireFeatures, which runs its real-time startup only when SignalR is enabled. In both, the startup class maps the hub to a path."
+            },
+            {
+              "id": "host-3",
+              "text": "Options for one hub are configured with HubOptions of that hub's type, such as the keep-alive interval. Options for every hub use HubOptions without a type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Sending messages",
+      "subtitle": "Groups and the hub context",
+      "clips": [
+        {
+          "id": "05-send",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "send-1",
+              "text": "Clients call the public methods of a hub. The media hub's SubscribePath method checks the user's permission for a folder, and then adds the connection to a group named after that folder."
+            },
+            {
+              "id": "send-2",
+              "text": "Code outside the hub sends through the hub context. This media event handler sends a MediaChanged message to the group of the parent folder, so only browsers showing that folder receive it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Connecting from the browser",
+      "subtitle": "The signalr resource and bundled apps",
+      "clips": [
+        {
+          "id": "06-client",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "client-1",
+              "text": "In a server-rendered view, load the client with a script tag that names the signalr resource. A script that opens a connection declares that it depends on signalr, so the client is on the page first."
+            },
+            {
+              "id": "client-2",
+              "text": "A bundled app, such as the Media gallery, includes the client in its own bundle and does not load this resource. The gallery connects to the media hub and calls SubscribePath for the folder it shows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Scaling out",
+      "subtitle": "Redis and Azure backplanes",
+      "clips": [
+        {
+          "id": "07-scale",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "scale-1",
+              "text": "A hub keeps its connections in the memory of one instance. With two instances behind a load balancer, a message sent on one reaches only the browsers connected to it, unless a backplane relays it to the other."
+            },
+            {
+              "id": "scale-2",
+              "text": "The Redis backplane reuses the connection string of the Redis module. Each tenant's messages use their own channel prefix, made of the instance prefix, the tenant name and SignalR, so tenants can share one Redis server."
+            },
+            {
+              "id": "scale-3",
+              "text": "The Azure SignalR Service backplane has its own connection string. The optional application name separates deployments that share one service, and a hash of the tenant name is added to keep tenants apart."
+            },
+            {
+              "id": "scale-4",
+              "text": "Enable one backplane per tenant. If both are enabled and configured, one of them logs an error and stays inactive. A backplane without its connection string stays inactive too, and SignalR keeps working in memory."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "SignalR in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "The SignalR module registers SignalR once for the tenant, and the Redis and Azure backplanes carry hub messages between instances. Your modules map their hubs and set their own access rules. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
