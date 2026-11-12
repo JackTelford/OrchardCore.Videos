@@ -96,7 +96,7 @@
           "steps": [
             {
               "id": "keys-1",
-              "text": "A Lucene index can hold the same ids. For a field marked Include this element in the index, the key is the type name or the part name, then the field name, and then Ids for the selected terms, or Inherited for those terms and all their parents."
+              "text": "A Lucene index can hold the same ids. For a field marked Include this element in the index, the key is the type or part name, the field name, then Ids for the selected terms, or Inherited for those terms and all their parents."
             }
           ]
         },
