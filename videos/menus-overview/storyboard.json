@@ -1,0 +1,229 @@
+{
+  "title": "Menus: Build the Navigation of Your Site",
+  "output": "menus-overview",
+  "spoken": {
+    "Url": "U.R.L.",
+    "Html": "H.T.M.L.",
+    "main-menu": "main menu",
+    "footer-menu": "footer menu"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Menus",
+      "subtitle": "Build the navigation of your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Visitors find their way around a site with its menus. In this video, you use the Orchard Core Menu module to open a menu, add items to it, arrange them, and publish the result. Then you create a second menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Menus and menu items",
+      "subtitle": "What a menu is made of",
+      "clips": [
+        {
+          "id": "01-menus",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "menus-1",
+              "text": "Orchard Core has two kinds of navigation. The admin menu is for the people who manage the site. The menus of the Menu module are for your visitors, and this video is about them."
+            },
+            {
+              "id": "menus-2",
+              "text": "A menu is a content item of the type Menu, like the pages and posts of your site. It has a title, an alias, and a list of menu items. An item can hold other items, so a menu is a tree."
+            },
+            {
+              "id": "menus-3",
+              "text": "The Menu module has three types of menu items: Link Menu Item, Content Menu Item, and Html Menu Item. This video uses links. A separate video covers the other types."
+            },
+            {
+              "id": "menus-4",
+              "text": "A theme shows a menu where its layout asks for it, usually by the alias of the menu. It shows the published version, so your changes reach visitors when you publish."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Open a menu",
+      "subtitle": "Find a menu and its items",
+      "short": "open-a-menu",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "This is the front end of a site. In the navigation bar, a menu lists two items: Home and About."
+            },
+            {
+              "id": "open-2",
+              "text": "In the admin, let's open Content, then Menus. If your site does not show Menus, enable the Menu feature under Tools, Features. The list shows one menu, the Main Menu."
+            },
+            {
+              "id": "open-3",
+              "text": "Let's select Edit on the Main Menu. Title is the name of the menu in the admin, and Alias is the name a theme uses to ask for it. This theme asks for the alias main-menu."
+            },
+            {
+              "id": "open-4",
+              "text": "Below, the items are listed in order, each with Edit, Add, and Delete buttons. Add Menu Item starts an item at the first level of the menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add a menu item",
+      "subtitle": "A link at the first level",
+      "short": "add-a-menu-item",
+      "clips": [
+        {
+          "id": "03-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Let's add a link to the Main Menu. Add Menu Item opens a window named Available Menu Items, with the three types. Choose Link Menu Item, and select its Add button."
+            },
+            {
+              "id": "add-2",
+              "text": "Name is the text that visitors read, and Url is the address of the link. Let's name the item Browse, and point it to the blog. Target, which says where the link opens, and Permissions, which limit who sees the item, are optional."
+            },
+            {
+              "id": "add-3",
+              "text": "On this form, the Publish button adds the item to the menu. It does not publish the menu itself. That comes later."
+            },
+            {
+              "id": "add-4",
+              "text": "Browse appears at the end of the list. Adding an item saves a draft of the menu, and the published menu does not change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Nest and reorder",
+      "subtitle": "Build the tree and set the order",
+      "short": "nest-and-reorder",
+      "clips": [
+        {
+          "id": "04-arrange",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "arrange-1",
+              "text": "In the editor, to put an item inside another one, use the Add button of its row. Let's add Categories inside Browse. The same window lists the three types."
+            },
+            {
+              "id": "arrange-2",
+              "text": "Let's choose Link Menu Item again, name it Categories, and point it to the categories page. Publish adds the item inside Browse."
+            },
+            {
+              "id": "arrange-3",
+              "text": "Categories appears indented under Browse. To reorder, drag an item by its row; dragging sideways changes its level. Let's drag Browse above About, and the items inside it move along."
+            },
+            {
+              "id": "arrange-4",
+              "text": "The order is stored when the menu is saved. Save Draft keeps it as a draft, and the confirmation says so."
+            },
+            {
+              "id": "arrange-5",
+              "text": "Edit changes an item. Delete removes an item together with the items inside it, after a confirmation. Let's cancel, to keep Categories."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Publish a menu",
+      "subtitle": "Make the changes visible",
+      "short": "publish-a-menu",
+      "clips": [
+        {
+          "id": "05-publish",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "publish-1",
+              "text": "The site shows the published menu. The items you added are in a draft, so the navigation bar lists only Home and About."
+            },
+            {
+              "id": "publish-2",
+              "text": "Back in the admin, the Menus page shows two badges on the Main Menu: Published and Draft. Let's open it with the Edit button."
+            },
+            {
+              "id": "publish-3",
+              "text": "Publish makes the draft the published version. The page returns to the list, which confirms that the menu is published."
+            },
+            {
+              "id": "publish-4",
+              "text": "On the site, the navigation bar lists Home, Browse, and About. Browse opens a drop-down list with Categories."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Create a menu",
+      "subtitle": "A second menu for the site",
+      "short": "create-a-menu",
+      "clips": [
+        {
+          "id": "06-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "A site can have more than one menu. On the Menus page, New Menu opens the editor for an empty menu."
+            },
+            {
+              "id": "create-2",
+              "text": "Let's type Footer Menu as the title, and leave Alias empty. Add Menu Item is disabled, because a menu has to be saved before it can have items."
+            },
+            {
+              "id": "create-3",
+              "text": "Publish saves the menu and returns to the list, where Footer Menu and Main Menu are listed."
+            },
+            {
+              "id": "create-4",
+              "text": "Let's open Footer Menu: its alias is footer-menu, generated from the title. This theme asks only for main-menu, so Footer Menu does not appear on the site. A separate video shows how a theme renders a menu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Menus",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's the Menu module: you create a menu, add items, arrange them in a tree, and publish it to change what visitors see. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
