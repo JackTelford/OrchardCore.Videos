@@ -1,0 +1,239 @@
+{
+  "title": "Export Content From the List: Download, Add to Plan, Send",
+  "output": "deployment-content-actions",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Export Content From the List",
+      "subtitle": "Download, add to a plan, or send",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Moving content to another Orchard Core site can start on the content items list. Three actions there export a content item: download it as JSON, add it to a deployment plan, or send it to a deployment target. Let's enable them and try each one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Three actions on the list",
+      "subtitle": "What each one does",
+      "clips": [
+        {
+          "id": "01-actions",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "actions-1",
+              "text": "Three features add actions to the Actions menu of a content item. View Or Download Content As JSON shows the item as a JSON document, and saves it as a file."
+            },
+            {
+              "id": "actions-2",
+              "text": "Add Content To Deployment Plan puts a Content Item step in a plan you choose. Each time the plan runs, it exports the item."
+            },
+            {
+              "id": "actions-3",
+              "text": "Export Content To Deployment Target sends the items you select once, through a target such as File Download. It uses one plan, which you choose in the settings."
+            },
+            {
+              "id": "actions-4",
+              "text": "The actions appear for users with the Export Data permission. Adding to a plan also needs Manage deployment plans. Administrators have both."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Three features, one search",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "Let's open Tools, Features, and search for content items list. Three features match: View Or Download Content As JSON, Add Content To Deployment Plan, and Export Content To Deployment Target."
+            },
+            {
+              "id": "features-2",
+              "text": "Each lists Deployment among its dependencies, and enabling a feature enables its dependencies too. Let's select the three, open Bulk Actions, and choose Enable."
+            },
+            {
+              "id": "features-3",
+              "text": "When the page reloads, each of the three rows shows the Enabled badge. The export action also uses a deployment plan, which the settings choose."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "View or download as JSON",
+      "subtitle": "One content item, saved as a file",
+      "clips": [
+        {
+          "id": "03-download",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "download-1",
+              "text": "On the content items list, let's open the Actions menu of Apple Harvest Schedule. After a divider, below Unpublish, Delete and Clone, come View as JSON and Download as JSON."
+            },
+            {
+              "id": "download-2",
+              "text": "View as JSON opens the item in a text editor, under the title View As JSON Article. The editor shows the content item with all its parts and fields."
+            },
+            {
+              "id": "download-3",
+              "text": "Download saves the document as a file named after the item's identifier. Cancel returns to the list."
+            },
+            {
+              "id": "download-4",
+              "text": "On the list, Download as JSON saves the same document directly, and the menu closes. Both options export the published version of the item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add content to a plan",
+      "subtitle": "One item, then several",
+      "clips": [
+        {
+          "id": "04-add",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "add-1",
+              "text": "Let's add Apple Harvest Schedule to a plan. Open its Actions menu and choose Add to Deployment Plan."
+            },
+            {
+              "id": "add-2",
+              "text": "The Available Deployment Plans dialog has a card for every plan on the site. Let's select Orchard Harvest Content."
+            },
+            {
+              "id": "add-3",
+              "text": "The list reloads with a notification: Content added successfully to the deployment plan."
+            },
+            {
+              "id": "add-4",
+              "text": "Let's open Tools, Deployments, Plans, and choose Manage Steps for Orchard Harvest Content."
+            },
+            {
+              "id": "add-5",
+              "text": "The plan has a Content Item step that shows the title of the article. The step stores only the item's identifier, so each run exports the published version at that moment."
+            }
+          ]
+        },
+        {
+          "id": "04-many",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "addmany-1",
+              "text": "To add several items, select their checkboxes. When two or more are selected, an Actions menu appears above the list. Choose Add to deployment plan."
+            },
+            {
+              "id": "addmany-2",
+              "text": "A confirmation dialog asks about the bulk action. Select Ok, then select the plan in the dialog that follows."
+            },
+            {
+              "id": "addmany-3",
+              "text": "The same notification appears. Let's open the plan again with Manage Steps: each selected item has its own Content Item step."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Choose the export plan",
+      "subtitle": "Settings, Deployment Targets",
+      "clips": [
+        {
+          "id": "05-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "Enabling the export feature creates a plan for it. Let's open Tools, Deployments, Plans, and choose Manage Steps for Export content to deployment plan target."
+            },
+            {
+              "id": "settings-2",
+              "text": "Its only step is Export Content To Deployment Target. It stands for the items you select in the content items list."
+            },
+            {
+              "id": "settings-3",
+              "text": "Then open Settings, Deployment Targets. Deployment Plan lists the plans that have this step. Choose it and select Save; without such a plan, the page asks you to create one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Export to a target",
+      "subtitle": "File Download, one item or several",
+      "clips": [
+        {
+          "id": "06-export",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "export-1",
+              "text": "Once the plan is chosen, the Actions menu offers Export to Deployment Target. Let's choose it for Apple Harvest Schedule."
+            },
+            {
+              "id": "export-2",
+              "text": "The Available Targets dialog lists each target with a description. File Download downloads a plan locally, and a configured remote instance appears here too. A separate video covers remote deployment."
+            },
+            {
+              "id": "export-3",
+              "text": "Let's select File Download. The site runs the plan with this item, and the browser saves a zip deployment package."
+            }
+          ]
+        },
+        {
+          "id": "06-many",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "exportmany-1",
+              "text": "For several items, select two or more checkboxes, open Actions, and choose Export to deployment target."
+            },
+            {
+              "id": "exportmany-2",
+              "text": "Confirm with Ok, and select File Download. The package holds every selected item."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Export Content From the List",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Download as JSON saves one item, Add to Deployment Plan keeps it in a plan, and Export to Deployment Target sends items once. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
