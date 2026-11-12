@@ -1,0 +1,50 @@
+{
+  "title": "Geo Point Field: Add Locations to Content Items | Orchard Core",
+  "description": "Some content belongs on a map: a shop, an office, a venue. A text field can hold an address, but not a point that an editor picks on a map or that a search can use.\n\nThe Geo Point field of the Spatial feature stores a latitude and a longitude on a content item. Editors type the two numbers or click a map, and the location is shown on the site and can be indexed for Lucene searches.\n\nIn this video:\n• What the field stores, and its two editors\n• Enabling the Spatial feature\n• Adding the field to a content type, with Required, Hint and the Leaflet editor\n• Setting a location by clicking the map or typing the numbers\n• Checking the saved location in the editor and on the site\n• What happens to the location after you save",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Geo Point Field",
+    "Spatial",
+    "Content fields",
+    "Content types",
+    "Leaflet",
+    "Maps",
+    "Latitude and longitude",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Content Fields"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Spatial/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Spatial/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Spatial"
+  }
+}
