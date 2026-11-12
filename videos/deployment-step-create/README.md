@@ -1,6 +1,6 @@
 # Write a Deployment Step
 
-**YouTube:** not published yet · **Length:** 5:45 · **Feature:** `OrchardCore.Deployment` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Deployment/))
+**YouTube:** not published yet · **Length:** 5:43 · **Feature:** `OrchardCore.Deployment` ([documentation](https://docs.orchardcore.net/en/latest/reference/modules/Deployment/))
 
 A video for module authors. It follows the All Features deployment step of the Features module through its parts: the
 step class a plan stores (`Name`, `Category`, `Title`), the source that adds recipe steps and files to the package, the

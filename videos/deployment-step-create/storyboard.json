@@ -55,7 +55,7 @@
             },
             {
               "id": "how-2",
-              "text": "A deployment step of your own has three parts. The step stores its settings in the plan, and the source adds recipe steps and files to the package. A display driver gives the step its card, summary, and editor."
+              "text": "A deployment step of your own has three parts, which one registration ties together. The step stores its settings in the plan, and the source adds recipe steps and files to the package. A display driver gives the step its card, summary, and editor."
             }
           ]
         }
@@ -250,7 +250,7 @@
           "steps": [
             {
               "id": "outro",
-              "text": "A deployment step is a step class, a source, a display driver, and a registration. The Deployment page of the documentation lists these parts. Thanks for watching."
+              "text": "A deployment step is a step class, a source, a display driver, and a registration. Thanks for watching."
             }
           ]
         }
