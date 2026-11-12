@@ -1,0 +1,268 @@
+{
+  "title": "Shells and Configuration: How Tenants Are Configured",
+  "output": "shells-and-configuration",
+  "spoken": {
+    "ORCHARD_APP_DATA": "ORCHARD APP DATA",
+    "App_Data": "App Data",
+    "IShellConfiguration": "I Shell Configuration",
+    "appsettings.json": "app settings dot json",
+    "tenants.json": "tenants dot json",
+    "OrchardCore.Shells.Azure": "Orchard Core dot Shells dot Azure",
+    "AddAzureShellsConfiguration": "Add Azure Shells Configuration",
+    "AddDatabaseShellsConfiguration": "Add Database Shells Configuration",
+    "MigrateFromFiles": "Migrate From Files",
+    "RequireTablePrefix": "Require Table Prefix",
+    "TablePrefixPattern": "Table Prefix Pattern",
+    "SchemaPattern": "Schema Pattern",
+    "DatabaseProvider": "Database Provider",
+    "ConnectionString": "Connection String",
+    "ConfigureServices": "Configure Services",
+    "PostConfigure": "Post Configure",
+    "UseCdn": "Use C.D.N.",
+    "MyService": "My Service",
+    "MyProvider": "My Provider",
+    "OrchardCore_": "Orchard Core underscore",
+    "OrchardCore": "Orchard Core"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Shells and Configuration",
+      "subtitle": "How Orchard Core configures each tenant",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Every tenant in Orchard Core has its own settings and its own configuration. In this video, we'll see where they are stored, how the layers combine, how to prepare a tenant before it exists, and how to keep them in a database or in Azure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Settings and configuration",
+      "subtitle": "What a tenant is made of",
+      "clips": [
+        {
+          "id": "01-tenant",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shell-1",
+              "text": "Each tenant runs as a shell. A shell has settings, such as its state and its URL prefix, and a configuration, which the modules of the tenant read through IShellConfiguration."
+            },
+            {
+              "id": "shell-2",
+              "text": "By default, both are files in the App_Data folder. The settings of all tenants are in tenants.json. The configuration of each tenant is in its own appsettings.json, in the Sites folder, under the name of the tenant."
+            },
+            {
+              "id": "shell-3",
+              "text": "Orchard Core finds the tenants in two places: the entries of tenants.json, and the sections of the configuration that have a State."
+            },
+            {
+              "id": "shell-4",
+              "text": "The ORCHARD_APP_DATA environment variable moves the App_Data folder. The path can be relative to the application or absolute, and Orchard Core tries to create the folder if it doesn't exist."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Layers of configuration",
+      "subtitle": "Which source wins",
+      "clips": [
+        {
+          "id": "02-layers",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "layers-1",
+              "text": "The configuration of a tenant is built in layers, and the last layer wins. The first layer is the host application: appsettings.json, user secrets in development, environment variables, and command line arguments."
+            },
+            {
+              "id": "layers-2",
+              "text": "Next come the files in App_Data that apply to every tenant: appsettings.json, and one for the environment. Environment variables and command line arguments are applied again after them, so they still win."
+            },
+            {
+              "id": "layers-3",
+              "text": "Then comes the section named for the tenant, under OrchardCore, taken from any of those sources. Its values override the shared ones, for that tenant only."
+            },
+            {
+              "id": "layers-4",
+              "text": "Last is the file of the tenant itself. It has no OrchardCore section and no variant for the environment, and Orchard Core writes to it, for example when the tenant is set up."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Preparing a tenant",
+      "subtitle": "Presets before it exists",
+      "clips": [
+        {
+          "id": "03-prepare",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "prepare-1",
+              "text": "To prepare a tenant before it exists, add a section named for it under OrchardCore, with a State of Uninitialized. Orchard Core treats any section that has a State as a tenant, and uses its other values when the tenant is set up."
+            }
+          ]
+        },
+        {
+          "id": "03-tenants",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "tenants-1",
+              "text": "With the Tenants feature enabled in the Default tenant, the Tenants page under Multi-Tenancy lists the prepared tenant. Acme is Uninitialized, with its category and database provider from the configuration, and a Setup button."
+            },
+            {
+              "id": "tenants-2",
+              "text": "Let's open Edit. It shows the same values: the Url Prefix and the Description, and under Database Presets, the database provider that the setup of this tenant uses."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Changing a tenant",
+      "subtitle": "Overrides for one tenant",
+      "clips": [
+        {
+          "id": "04-override",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "override-1",
+              "text": "To change the configuration of a tenant that exists, use a section named for it, without a State. Here, the Default tenant gets a smaller maximum file size for media, and every other tenant keeps the default."
+            },
+            {
+              "id": "override-2",
+              "text": "Environment variables use the same layout, with a double underscore between levels. The first applies to every tenant, the second to the Default tenant, and the third to the tenant named Acme."
+            },
+            {
+              "id": "override-3",
+              "text": "Don't give a tenant the name of a configuration section, such as Media or Email. Tenant sections and module sections share the same path under OrchardCore."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "One database for every tenant",
+      "subtitle": "Shared data access settings",
+      "clips": [
+        {
+          "id": "05-shared",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "shared-1",
+              "text": "To give every tenant the same database, set DatabaseProvider and ConnectionString once, at the root of the OrchardCore section. The Default tenant gets a table prefix of its own, so its tables stay apart."
+            },
+            {
+              "id": "shared-2",
+              "text": "RequireTablePrefix demands a table prefix when a tenant is created, for providers that support one. TablePrefixPattern generates it from a Fluid template, such as the name of the tenant, and SchemaPattern does the same for the schema. Both must be valid SQL identifiers."
+            },
+            {
+              "id": "shared-3",
+              "text": "Tenants don't copy these shared values into their own files, so moving the application to another environment means changing them in one place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Reading configuration",
+      "subtitle": "In your own modules",
+      "clips": [
+        {
+          "id": "06-modules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "modules-1",
+              "text": "A module reads the configuration of its tenant by taking IShellConfiguration in the constructor of its Startup class. It binds a section to an options class with Configure."
+            },
+            {
+              "id": "modules-2",
+              "text": "Name the section without an OrchardCore_ prefix, and group related settings by nesting, such as MyService, then MyProvider. The names of environment variables then stay short."
+            },
+            {
+              "id": "modules-3",
+              "text": "In the host, ConfigureServices runs for each tenant. This code reads the UseCdn value of the Resources section from the tenant's configuration and sets it with PostConfigure. It changes the options only: the admin still shows the value saved in the site settings."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Shared stores",
+      "subtitle": "Azure Blob Storage and the database",
+      "clips": [
+        {
+          "id": "07-stores",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "stores-1",
+              "text": "The files in App_Data suit most sites. When several stateless hosts must create tenants and change their settings while they run, they can share a store instead. Orchard Core offers Azure Blob Storage and a database."
+            },
+            {
+              "id": "stores-2",
+              "text": "For Azure, add the OrchardCore.Shells.Azure package, and call AddAzureShellsConfiguration on the Orchard Core builder of the host."
+            },
+            {
+              "id": "stores-3",
+              "text": "Configure it under OrchardCore, Shells, Azure: the connection string of the storage account, the name of the container, and optionally a base path. The container must exist before the host starts."
+            },
+            {
+              "id": "stores-4",
+              "text": "The container holds tenants.json at its root, and a Sites folder with a folder and an appsettings.json for each tenant. An appsettings.json at the root, and one for the environment, apply to every tenant."
+            },
+            {
+              "id": "stores-5",
+              "text": "For a database, call AddDatabaseShellsConfiguration, and set DatabaseProvider and ConnectionString under OrchardCore, Shells, Database. The settings of the tenants go in one document, and their configurations in another."
+            },
+            {
+              "id": "stores-6",
+              "text": "Both providers read their own options from the host configuration, not from the store. MigrateFromFiles copies the existing files of App_Data into a store that doesn't have them."
+            },
+            {
+              "id": "stores-7",
+              "text": "The providers are meant for hosts that share tenants while they run, not for sharing configuration between development and production. To skip a provider in development, call it only when the environment isn't Development."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Shells and Configuration",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That's how Orchard Core configures a tenant: its settings in tenants.json, its configuration in layers, presets for tenants that don't exist, and a shared store for stateless hosts. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
