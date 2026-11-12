@@ -1,0 +1,61 @@
+{
+  "title": "Media: Manage the Files of Your Site | Orchard Core",
+  "description": "Pictures, documents, audio and video end up uploaded again for every page, in copies that drift apart, and a stored file is hard to find later.\n\nThe Media module gives the site one library. You upload a file once, keep it in a folder, attach it to content, and let a media profile resize it when the theme shows it.\n\nIn this video:\n• Why the Media module exists\n• Where it lives: the Media menu, the settings and the optional features\n• The Media Library: folders, files, search, uploads and menus\n• Media in content: attaching a file with a media field and seeing it on the site",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "Media",
+    "Media Library",
+    "Media Profiles",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Media"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation: Media",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/"
+    },
+    {
+      "label": "Documentation: Media Gallery",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Documentation: Media Slugify",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media.Slugify/"
+    },
+    {
+      "label": "Documentation: Media topic",
+      "url": "https://docs.orchardcore.net/en/latest/topics/media/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media/MediaGallery.md",
+    "src/docs/reference/modules/Media/README.md",
+    "src/docs/reference/modules/Media.Slugify/README.md",
+    "src/docs/topics/media/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Media"
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "title": "The Orchard Core Media module",
+  "output": "media-overview",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "The Orchard Core Media module",
+      "subtitle": "One library for the files of your site",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Sites use pictures, documents, audio and video. The Media module gives your site one library for these files. In this video, we see where the module lives in the admin, tour the library, and attach a file to content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why the Media module",
+      "subtitle": "The problem it solves",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "Without a shared place for files, the same picture is uploaded again for every page that needs it. Copies drift apart, nobody knows which one is current, and a file is hard to find later."
+            },
+            {
+              "id": "why-2",
+              "text": "The Media module gives the site one library. You upload a file once, keep it in a folder, and attach it to content. Content stores the path of the file, so every page that uses it points to the same place."
+            },
+            {
+              "id": "why-3",
+              "text": "A file travels in three moves. You upload it to the library, attach it to a content item, and the site shows it. A media profile, a preset that resizes or crops an image, applies when the theme asks for one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Where it lives",
+      "subtitle": "Menus, settings and features",
+      "short": "where",
+      "clips": [
+        {
+          "id": "02-where",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "where-1",
+              "text": "In the admin menu, Media has two pages. Library holds the files, and Profiles holds the presets that resize images."
+            },
+            {
+              "id": "where-2",
+              "text": "Profiles lists the media profiles of the site. This site has one, named banner, which crops an image to a wide banner."
+            },
+            {
+              "id": "where-3",
+              "text": "Under Settings, Media has two entries. Options shows the values the library runs with, such as the allowed file extensions and the maximum file size, and API chooses how the library authenticates with the media API. A separate video covers both."
+            },
+            {
+              "id": "where-4",
+              "text": "Tools, Features lists what a site can turn on. Searching for media narrows the list to the features that mention it. Media itself is enabled on this site."
+            },
+            {
+              "id": "where-5",
+              "text": "Media Slugify rewrites the names of the folders and files you create as lowercase words joined by dashes, which keeps their addresses clean. Secure Media adds permissions that restrict access to media folders."
+            },
+            {
+              "id": "where-6",
+              "text": "Other features make uploads resumable and keep every open library up to date when files and folders change. Azure Media Storage and Amazon Media Storage store the files in Azure Blob Storage or in Amazon S3, instead of on the server's disk."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "The Media Library",
+      "subtitle": "Folders, files and uploads",
+      "short": "library",
+      "clips": [
+        {
+          "id": "03-library",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "library-1",
+              "text": "The Library page shows the folders of the site on the left, starting with the root folder, named Files."
+            },
+            {
+              "id": "library-2",
+              "text": "On the right, a table lists the files of the selected folder, with their name, the date they were last modified, and their size."
+            },
+            {
+              "id": "library-3",
+              "text": "The toolbar above the table has a button with a grid icon. It switches the table to a grid of thumbnails, so you can recognize images at a glance."
+            },
+            {
+              "id": "library-4",
+              "text": "Press it again to return to the table. The search box narrows the list to the files whose name contains what you type."
+            },
+            {
+              "id": "library-5",
+              "text": "Upload files adds files to the selected folder, and you can also drop files onto the page. A file needs an allowed extension and must not exceed the maximum size."
+            },
+            {
+              "id": "library-6",
+              "text": "The menu at the end of each row offers Rename, Move, Copy, View, Download and Delete."
+            },
+            {
+              "id": "library-7",
+              "text": "Each folder has a menu too. Create a subfolder adds a folder inside it, and Delete is offered for every folder except the root."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Media in content",
+      "subtitle": "Attach a file to a content item",
+      "short": "content",
+      "clips": [
+        {
+          "id": "04-content",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "content-1",
+              "text": "Content uses the library through media fields. This is the form that creates an Article, and its Banner Image field is empty."
+            },
+            {
+              "id": "content-2",
+              "text": "Add media opens the media picker, which shows the same library in a dialog."
+            },
+            {
+              "id": "content-3",
+              "text": "Select a file and confirm the choice. The field shows a thumbnail. When you save, the content item stores the path of the file, not a copy of it."
+            },
+            {
+              "id": "content-4",
+              "text": "On the site, the About page uses this same file in its Banner Image field. The theme requests the image through the banner profile, so the header shows it cropped to a wide banner."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "The Orchard Core Media module",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the Media module: one library for the files of your site, attached to content, resized by profiles, and extended by optional features. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
