@@ -1,0 +1,274 @@
+{
+  "title": "Content Fields: Text, Numbers, Dates and Yes or No",
+  "output": "content-fields-overview",
+  "spoken": {
+    "Save & Configure": "Save and Configure"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Orchard Core Content Fields",
+      "subtitle": "Text, numbers, dates and yes or no",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "A content type needs places to keep its data, such as a name, a number of seats, or a date. Content fields are those places. In this video you add six kinds of field to a content type, and fill them in."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "What a content field is",
+      "subtitle": "Types, parts and the fields they hold",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "A content type describes one kind of content on your site, such as a workshop. It is built from parts, and the fields you add to a type are kept in a part with the same name as the type."
+            },
+            {
+              "id": "why-2",
+              "text": "A field holds a named piece of data. Its field type decides what it stores, its settings decide what it accepts, and its editor decides how people fill it in."
+            },
+            {
+              "id": "why-3",
+              "text": "The Content Fields feature provides the common field types. A Text Field holds text. A Numeric Field holds a number, and can limit it to a range."
+            },
+            {
+              "id": "why-4",
+              "text": "A Boolean Field holds yes or no. A Date Field, a Date Time Field and a Time Field hold a day, a day with a time, and a time of day."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Open a content type",
+      "subtitle": "Where fields are added",
+      "short": "open-type",
+      "clips": [
+        {
+          "id": "02-open",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "open-1",
+              "text": "Let's check that the Content Fields feature is on. Under Tools, Features, search for Content Fields. The Enabled badge confirms it, and an Enable button turns the feature on when it is off."
+            },
+            {
+              "id": "open-2",
+              "text": "Let's add the fields to a content type. Under Design, Content Definition, Content Types, this site has a type named Workshop, and its Edit button opens it. A separate video covers creating a type."
+            },
+            {
+              "id": "open-3",
+              "text": "The Parts list holds a part named Workshop, which contains the fields for the current type. The Fields section is empty, and Add Field starts the first one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add a Text Field",
+      "subtitle": "A line of text with rules",
+      "short": "text-field",
+      "clips": [
+        {
+          "id": "03-text",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "text-1",
+              "text": "On the Workshop type, Add Field opens a form with a Display Name, a Technical Name and a Field Type. The Technical Name follows the Display Name as you type it. Let's call the field Speaker."
+            },
+            {
+              "id": "text-2",
+              "text": "The Field Type list shows the fields that the enabled features provide. Let's choose Text Field, and then Save & Configure, which adds the field and opens its settings."
+            },
+            {
+              "id": "text-3",
+              "text": "A Text Field has settings such as Required, Hint, Placeholder, Default value, Minimum length and Maximum length. Two lists below choose the editor and the display mode, which a separate video covers."
+            },
+            {
+              "id": "text-4",
+              "text": "Let's make the field required, and add a hint that says who leads the workshop. Save returns to the type, where Speaker is listed with the field type Text Field."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Add a Numeric Field",
+      "subtitle": "Whole numbers, decimals and limits",
+      "short": "numeric-field",
+      "clips": [
+        {
+          "id": "04-numeric",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "num-1",
+              "text": "A Numeric Field holds a number. On the Workshop type, let's add a field named Seats, choose Numeric Field as its type, and open the settings with Save & Configure."
+            },
+            {
+              "id": "num-2",
+              "text": "Scale is the number of digits after the decimal point, and zero accepts whole numbers only. Minimum and Maximum limit the range, and Default value fills the box when you create an item."
+            },
+            {
+              "id": "num-3",
+              "text": "A workshop room has limited seats, so let's require a value from one to forty, and start at twenty. Save returns to the type."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Add a Boolean Field",
+      "subtitle": "Yes or no, as a checkbox",
+      "short": "boolean-field",
+      "clips": [
+        {
+          "id": "05-boolean",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "bool-1",
+              "text": "A Boolean Field holds a yes or no value, which appears as a checkbox. On the Workshop type, let's add Registration Open as a Boolean Field and open its settings."
+            },
+            {
+              "id": "bool-2",
+              "text": "Label is the text beside the checkbox. Default value is true decides whether it starts checked when you create an item. Let's set the label to Participants can register, turn on Default value is true, and save."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Dates and times",
+      "subtitle": "Date, Date Time and Time fields",
+      "short": "date-time-fields",
+      "clips": [
+        {
+          "id": "06-dates",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "dates-1",
+              "text": "A Date Field holds a day without a time. On the Workshop type, let's add Registration Deadline as a Date Field. Beyond the two lists, its settings are Required and Hint, so let's save it as it is."
+            },
+            {
+              "id": "dates-2",
+              "text": "A Date Time Field holds a day and a time. It stores them in Coordinated Universal Time, and shows them in the time zone of the site. Let's add Starts At, and save it as it is."
+            },
+            {
+              "id": "dates-3",
+              "text": "A Time Field holds a time of day, with no date. Let's add Doors Open. Its settings include a Step, which sets whether the time input accepts seconds and milliseconds."
+            },
+            {
+              "id": "dates-4",
+              "text": "The type lists its six fields in the order they were added, each with its field type beside the name."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Fill in a workshop",
+      "subtitle": "Defaults, inputs and validation",
+      "short": "fill-in",
+      "clips": [
+        {
+          "id": "07-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "Under Content, Content Items, the New menu lists the content types you can create. Let's choose Workshop."
+            },
+            {
+              "id": "edit-2",
+              "text": "The editor for a workshop lists the fields in the order they were added, each with the input that fits its type. A red asterisk marks Speaker and Seats as required, and the hint of Speaker appears with its field."
+            },
+            {
+              "id": "edit-3",
+              "text": "Seats starts at twenty, its default value, with the minimum and the maximum beside the input. The checkbox labeled Participants can register starts checked, because its default value is true."
+            },
+            {
+              "id": "edit-4",
+              "text": "Let's enter a title and the speaker. Then, to see validation at work, let's enter a seat count of fifty, which is above the maximum."
+            },
+            {
+              "id": "edit-5",
+              "text": "The date, the date and time, and the time use the inputs that your browser provides. Let's enter a registration deadline, a start date and time, and a time when the doors open."
+            },
+            {
+              "id": "edit-6",
+              "text": "Publish checks every field against its settings. The Numeric Field refuses fifty, so the editor stays open and shows an error message."
+            },
+            {
+              "id": "edit-7",
+              "text": "Let's change the seat count to twenty-five and publish again. The item is saved, and a message confirms it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "See it on the site",
+      "subtitle": "The values on the front end",
+      "short": "front-end",
+      "clips": [
+        {
+          "id": "08-view",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "view-1",
+              "text": "The Content Items list shows the workshop you published. View opens it on the site, where the fields print their values in the order they have in the type."
+            },
+            {
+              "id": "view-2",
+              "text": "By default, these fields print their value alone, without the field name. The Text Field prints its text, the Numeric Field its number, and the Boolean Field prints True or False."
+            },
+            {
+              "id": "view-3",
+              "text": "The Date Field prints only the day. The Date Time Field prints the day and the time in the time zone of the site. The Time Field prints hours, minutes and seconds."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Orchard Core Content Fields",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "Content fields keep typed values in a content type, such as text, numbers, yes or no, dates and times, with settings for required values, limits and defaults. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
