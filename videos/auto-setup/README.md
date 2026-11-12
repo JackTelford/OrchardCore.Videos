@@ -1,6 +1,6 @@
 # Auto Setup: Install Sites Without the Setup Screen
 
-**YouTube:** not published yet · **Length:** 4:46 · **Feature:** `OrchardCore.AutoSetup` ([Auto Setup documentation](https://docs.orchardcore.net/en/latest/reference/modules/AutoSetup/))
+**YouTube:** not published yet · **Length:** 4:48 · **Feature:** `OrchardCore.AutoSetup` ([Auto Setup documentation](https://docs.orchardcore.net/en/latest/reference/modules/AutoSetup/))
 
 The video shows how the Auto Setup module answers the questions of the Setup screen from configuration, so a site
 installs itself on its first request. It registers the module in the host, configures a tenant, keeps the secrets in

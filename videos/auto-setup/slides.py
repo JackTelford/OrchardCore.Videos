@@ -316,7 +316,7 @@ def slide(step_id, chapter_title, label):
         bottom = code(image, MARGIN, 240, W - MARGIN, None, "Environment variables", "bash", LOCK_OPTIONS, 26)
         notes(image, [("Milliseconds", "Both values are in milliseconds.")], MARGIN, bottom + 50, 640)
         notes(image, [("Both or neither", "Set both above zero, or neither.")], 690, bottom + 50, 1240)
-        notes(image, [("Default", "60 seconds each.")], 1290, bottom + 50, W - MARGIN)
+        notes(image, [("Distributed lock", "Default: 60 seconds each.")], 1290, bottom + 50, W - MARGIN)
         return image
 
     raise SystemExit(f"No slide for {step_id}")

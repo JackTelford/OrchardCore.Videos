@@ -200,7 +200,7 @@
             },
             {
               "id": "lock-2",
-              "text": "The lock options are optional. When you set LockOptions, give both LockTimeout and LockExpiration a value above zero, in milliseconds. Without LockOptions, each defaults to 60 seconds."
+              "text": "The lock options are optional. When you set LockOptions, give both LockTimeout and LockExpiration a value above zero, in milliseconds. Without LockOptions, a distributed lock uses 60 seconds for each."
             }
           ]
         }
