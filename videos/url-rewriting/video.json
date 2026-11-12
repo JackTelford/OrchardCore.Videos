@@ -1,6 +1,6 @@
 {
   "title": "URL Rewriting: Redirect and Rewrite Requests | Orchard Core",
-  "description": "A renamed page or a moved folder leaves old addresses in bookmarks, search results and links on other sites. Visitors who follow them should still reach the right content.\n\nThe URL Rewriting feature of Orchard Core redirects or rewrites incoming requests with rules that you manage in the admin, in the order you choose.\n\nIn this video:\n• How Redirect rules, Rewrite rules, rule order and patterns work\n• Turning on the URL Rewriting feature\n• Redirecting a renamed page and testing the redirect\n• Rewriting an address to serve content from another location\n• Editing, reordering and deleting rules",
+  "description": "A renamed page or a moved folder leaves old addresses in bookmarks, search results and links on other sites. Visitors who follow them need to reach the right content.\n\nThe URL Rewriting feature of Orchard Core redirects or rewrites incoming requests with rules that you manage in the admin, in the order you choose.\n\nIn this video:\n• How Redirect rules, Rewrite rules, rule order and patterns work\n• Turning on the URL Rewriting feature\n• Redirecting a renamed page and testing the redirect\n• Rewriting an address to serve content from another location\n• Editing, reordering and deleting rules",
   "hashtags": [
     "OrchardCore",
     "DotNet",

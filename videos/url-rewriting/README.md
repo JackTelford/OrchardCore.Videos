@@ -1,6 +1,6 @@
 # URL Rewriting: Redirect and Rewrite Requests
 
-**YouTube:** not published yet · **Length:** 5:24 · **Feature:** [OrchardCore.UrlRewriting](https://docs.orchardcore.net/en/latest/reference/modules/UrlRewriting/)
+**YouTube:** not published yet · **Length:** 5:26 · **Feature:** [OrchardCore.UrlRewriting](https://docs.orchardcore.net/en/latest/reference/modules/UrlRewriting/)
 
 This video shows how a site owner turns on the URL Rewriting feature and manages its rules in the admin. It explains the
 difference between a Redirect rule, which sends the visitor to another address, and a Rewrite rule, which serves the

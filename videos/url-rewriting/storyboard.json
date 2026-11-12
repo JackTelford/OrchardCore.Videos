@@ -111,7 +111,7 @@
             },
             {
               "id": "redirect-3",
-              "text": "Give the rule a Display Name. In Match URL Pattern, type a caret, then /about-us, then a dollar sign, to match the old address and nothing longer."
+              "text": "Give the rule the Display Name Redirect about-us to about. In Match URL Pattern, type a caret, then /about-us, then a dollar sign, to match the old address and nothing longer."
             },
             {
               "id": "redirect-4",
