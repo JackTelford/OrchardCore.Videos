@@ -6944,9 +6944,9 @@
       "src/docs/reference/modules/Security/Permissions.md",
       "src/docs/reference/modules/Contents/README.md"
     ],
-    "status": "planned",
-    "estimatedMinutes": 7,
-    "words": 0,
+    "status": "content-ready",
+    "estimatedMinutes": 6.9,
+    "words": 1040,
     "contentCommit": "",
     "recordedBy": "",
     "recordedOn": "",
