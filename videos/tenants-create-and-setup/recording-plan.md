@@ -21,6 +21,7 @@ The video follows the administration of the **Default** tenant, and ends on the 
 | Outbound calls | Set `HTTP_PROXY` and `HTTPS_PROXY` to a dead address, so nothing calls out. |
 | Admin lists | The defaults: the List layout and the Buttons actions layout (`OrchardCore.Admin.Abstractions/AdminListOptions.cs:30,36`). Don't change Settings, Admin. With the Menu actions layout the buttons of a row are inside a drop-down and every click below changes. |
 | Root database settings | None. Set no `OrchardCore__DatabaseProvider` or `OrchardCore__ConnectionString` variable and no `DatabaseProvider` in a configuration file: when the root configuration names a provider, the Create Tenant form shows it read-only instead of a list (`OrchardCore.Tenants/Controllers/AdminController.cs:764-791`), and the video shows the list. |
+| Tenant options | None. Set no `OrchardCore__Tenants__TenantRemovalAllowed`, `RequireTablePrefix`, `TablePrefixPattern` or `SchemaPattern` variable (`OrchardCore.Tenants/TenantsOptions.cs`, `Startup.cs:51`). With removal allowed, an Uninitialized row gets a "Remove" button (`ManageTenantActionButtons.cshtml:26`), and the buttons named below change; with a table prefix pattern, the Table Prefix field is read-only. |
 | Feature profiles | None exist, so the Feature profile field is not on the Create Tenant form (`OrchardCore.Tenants/Views/Shared/_TenantFeatureProfile.cshtml:3`). Don't create any. |
 | Features to enable | None. The SaaS recipe is enough. |
 
