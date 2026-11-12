@@ -1,0 +1,46 @@
+{
+  "title": "Features: Dependencies and Features That Enable Others | Orchard Core",
+  "description": "Some Orchard Core features need other features to work, so enabling or disabling one can change several others.\n\nThe Features page shows the dependencies of each feature, enables the dependencies of a feature you enable, and lists the dependent features before it disables them. A few features have no working switch: some are enabled only while another feature needs them, and others are always enabled.\n\nIn this video:\n• Features need features: dependencies and dependents\n• Dependencies on the Features page: badges, tooltips and indirect dependencies\n• Enable a feature: its dependencies are enabled with it\n• Disable a feature: its dependents are disabled with it\n• Features you do not switch by hand: on demand and always enabled",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Orchard Core features",
+    "Feature dependencies",
+    "Orchard Core admin"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Getting Started"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Features/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Features/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Features"
+  }
+}
