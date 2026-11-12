@@ -1,0 +1,281 @@
+{
+  "title": "Build a Multilingual Site",
+  "output": "build-a-multilingual-site",
+  "spoken": {
+    "en-US": "E.N. U.S.",
+    "fr-FR": "F.R. F.R.",
+    "a-propos": "a propos"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Build a Multilingual Site",
+      "subtitle": "Cultures, translations and a picker",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Visitors expect a site in their own language. In this video, you enable the localization features, choose the languages of the site, translate a page, and add a menu that lets visitors switch between languages."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a multilingual site works",
+      "subtitle": "A plan, and three features with three jobs",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "plan-1",
+              "text": "Let's build a small site in two languages. English is the default, and French is the second language. The About page gets a French translation, and a language menu lets visitors switch between them."
+            },
+            {
+              "id": "idea-1",
+              "text": "Three features make a site multilingual. Localization defines the cultures the site supports. A culture is a language, usually with a region, such as English in the United States, and one of the cultures is the default."
+            },
+            {
+              "id": "idea-2",
+              "text": "Content Localization lets a content item have one translation for each culture. Each translation is a content item of its own, with its own title, text, and permalink, and the translations of a page are linked together."
+            },
+            {
+              "id": "idea-3",
+              "text": "Content Culture Picker provides a language menu for the navigation bar of the site. When a visitor chooses a language, the picker takes them to the translation of the page they are reading, if one exists."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the features",
+      "subtitle": "Localization, Content Localization and Content Culture Picker",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Let's start with the features. Open Tools, Features, and type localization in the search box to narrow the list."
+            },
+            {
+              "id": "enable-2",
+              "text": "Find Content Culture Picker. Its row lists Content Localization among the features it depends on, and Content Localization needs Localization. Press Enable, and all three features are enabled together."
+            },
+            {
+              "id": "enable-3",
+              "text": "A message confirms that the feature was enabled. Search for localization again: Localization, Content Localization, and Content Culture Picker are all marked Enabled."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Add the cultures",
+      "subtitle": "Choose the languages of the site",
+      "clips": [
+        {
+          "id": "03-cultures",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "cultures-1",
+              "text": "Open Settings, Localization, Cultures. The table starts with one culture, taken from the computer that runs the site. Here it is en-US, English in the United States."
+            },
+            {
+              "id": "cultures-2",
+              "text": "Below the table, choose fr-FR, French in France, in the list of cultures. Press Add culture, and a second row appears."
+            },
+            {
+              "id": "cultures-3",
+              "text": "Each row has a radio button in the Default culture column. The selected one is the default, and a translatable content item starts in that culture when you create it. Leave English selected."
+            },
+            {
+              "id": "cultures-4",
+              "text": "Press Save. The site restarts so that the settings take effect, and a message says so. After the restart, the site supports English and French."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Make a type translatable",
+      "subtitle": "The Localization part",
+      "clips": [
+        {
+          "id": "04-part",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "part-1",
+              "text": "A content type is translatable when it has the Localization part. Let's add it to Article. Open Design, Content Definition, Content Types, and press Edit on Article."
+            },
+            {
+              "id": "part-2",
+              "text": "Under Parts, press Add Parts. The list shows the parts you can attach to the type. Check Localization, then press Add Selected Parts."
+            },
+            {
+              "id": "part-3",
+              "text": "A message confirms that the part was added, and Localization appears in the parts of the type. Press Save. A type without this part cannot be translated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Translate a page",
+      "subtitle": "One content item for each language",
+      "clips": [
+        {
+          "id": "05-translate",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "translate-1",
+              "text": "Let's translate the About page. Open Content, Content Items, and find the About row."
+            },
+            {
+              "id": "translate-2",
+              "text": "Press Edit, then scroll down to the panel that begins with Current Culture. It names the culture of this content item."
+            },
+            {
+              "id": "translate-3",
+              "text": "Open the panel. It asks you to save the content item before creating localizations, so press Publish. The list opens again."
+            },
+            {
+              "id": "translate-4",
+              "text": "The About row shows a culture badge and a Localizations button. Open Localizations to see French. A plus sign marks a culture that has no translation."
+            },
+            {
+              "id": "translate-5",
+              "text": "Choose French. Orchard Core creates a French copy of the page and opens it in the editor. The panel shows French as the current culture, and lists English with a pencil, a link back to the original."
+            },
+            {
+              "id": "translate-6",
+              "text": "Change the title to À propos, give the page its own permalink, a-propos, and replace the text with a French version."
+            },
+            {
+              "id": "translate-7",
+              "text": "Press Publish. The list shows both pages: About in en-US, and À propos in fr-FR. Each translation is a content item of its own, so you can edit and publish it separately."
+            },
+            {
+              "id": "translate-8",
+              "text": "The list also has a Culture filter. Choose fr-FR, and the list shows only French content."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Add the culture picker",
+      "subtitle": "A theme that shows it, and two settings pages",
+      "clips": [
+        {
+          "id": "06-picker",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "picker-1",
+              "text": "The picker appears in the navigation bar of themes that render it. The Blog Theme does not, and The Default Theme does. Open Design, Themes, and press Make Current on The Default Theme."
+            },
+            {
+              "id": "picker-2",
+              "text": "A message confirms the change. Next, open Settings, Localization, Content Culture Picker. Set Cookie remembers the language a visitor chooses, and Homepage redirect makes the picker try the home page in that language when the page has no translation."
+            },
+            {
+              "id": "picker-3",
+              "text": "Content Culture, next to it, has its own Set Cookie option. When it is on, opening a translated page also remembers the language of that page, for pages that have no culture of their own."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Switch languages on the site",
+      "subtitle": "The picker in action",
+      "clips": [
+        {
+          "id": "07-try",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "try-1",
+              "text": "Let's visit the site and open the About page. The navigation bar shows a menu with the current language, English (United States)."
+            },
+            {
+              "id": "try-2",
+              "text": "Open the menu. It lists the other languages by their own names. Choose français (France)."
+            },
+            {
+              "id": "try-3",
+              "text": "The picker takes the visitor to the French page, with its own title and text. The menu shows the current language, français (France)."
+            },
+            {
+              "id": "try-4",
+              "text": "Choose English (United States) in the menu to go back to the About page, in English."
+            },
+            {
+              "id": "try-5",
+              "text": "A page without a translation behaves differently. On the home page, choose français (France), and the visitor stays on the same page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "How the picker chooses a page",
+      "subtitle": "Three rules",
+      "clips": [
+        {
+          "id": "08-rules",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "rules-1",
+              "text": "When a visitor chooses a language, the picker first looks for the translation of the current page. If there is one, the visitor goes straight to it."
+            },
+            {
+              "id": "rules-2",
+              "text": "If the page has no translation and Homepage redirect is on, the picker tries the home page in the chosen language."
+            },
+            {
+              "id": "rules-3",
+              "text": "In every other case, the visitor stays on the current page. When Set Cookie is on, the picker still remembers the chosen language."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Build a Multilingual Site",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "You have a site with two languages: cultures, a translatable type, a translated page, and a picker. The labels of the interface itself come from translation files, which a separate video covers. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
