@@ -1,0 +1,233 @@
+{
+  "title": "Workflows for Tenants",
+  "output": "tenants-workflow-tasks",
+  "spoken": {},
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Workflows for Tenants",
+      "subtitle": "Create and set up tenants automatically",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "Creating a tenant by hand means filling in forms, one after another. A workflow can create a tenant and set it up from values you type once. In this video, we build one, run it, and open the site it creates."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "The Tenant activities",
+      "subtitle": "Four activities for the Default tenant",
+      "clips": [
+        {
+          "id": "01-activities",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "activities-1",
+              "text": "The Tenants module adds four activities to the workflow designer, in the Tenant category. Create Tenant Task adds a tenant. Setup Tenant Task sets it up, with a site name, an administrator, and a recipe."
+            },
+            {
+              "id": "activities-2",
+              "text": "Disable Tenant Task switches a running tenant off, and Enable Tenant Task switches a disabled one back on. Each of the four has a Failed outcome, which it takes when it can't do its job."
+            },
+            {
+              "id": "activities-3",
+              "text": "Each activity checks its tenant first. Create Tenant Task needs a name that no tenant uses, and an address of its own. Setup Tenant Task needs a tenant in the Uninitialized state."
+            },
+            {
+              "id": "activities-4",
+              "text": "Disable Tenant Task needs a Running tenant other than the Default one, and Enable Tenant Task needs a Disabled tenant. All four activities work in the Default tenant, which manages the others."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Turn on the features",
+      "subtitle": "Tenants and Workflows",
+      "clips": [
+        {
+          "id": "02-features",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "features-1",
+              "text": "The activities need two features. Open Tools, Features, search for Tenants, and select Enable on the Tenants feature."
+            },
+            {
+              "id": "features-2",
+              "text": "Search for Workflows, and enable that feature too. The admin menu then lists Multi-Tenancy, Tenants, and Design, Workflows."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create the workflow",
+      "subtitle": "A name and a start event",
+      "clips": [
+        {
+          "id": "03-workflow",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "workflow-1",
+              "text": "Open Design, Workflows, and select Create Workflow. A workflow only needs a name, so let's call this one Create and set up a tenant."
+            },
+            {
+              "id": "workflow-2",
+              "text": "Under More settings, clear Record activity data. It keeps the values each activity evaluated, in the journal of every instance, and this workflow will hold an administrator password. Then select Create and open the designer."
+            },
+            {
+              "id": "workflow-3",
+              "text": "The designer opens on an empty canvas. A workflow starts with an event, so we search the activities for Started, and add Started By Workflow, which becomes the start, marked Start. The designer's Run button can run a workflow that begins with it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Create the tenant",
+      "subtitle": "Create Tenant Task",
+      "clips": [
+        {
+          "id": "04-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Select Done on Started By Workflow, search for Create Tenant, and pick Create Tenant Task from the Tenant category. Its settings open at the bottom of the canvas."
+            },
+            {
+              "id": "create-2",
+              "text": "We type Bluebird in Name, and again in Description, so the tenant's name and its description read the same. The Url Prefix, bluebird, gives the site an address of its own."
+            },
+            {
+              "id": "create-3",
+              "text": "For What type of database to use, type the provider's name, Sqlite. For Recipe, type the name of a setup recipe, here Blog. The other fields can stay empty."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Set the tenant up",
+      "subtitle": "Setup Tenant Task",
+      "clips": [
+        {
+          "id": "05-setup",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "setup-1",
+              "text": "Select Done on Create Tenant Task, and add Setup Tenant Task. Its Tenant name is Bluebird again, and its Site name is Bluebird Books."
+            },
+            {
+              "id": "setup-2",
+              "text": "Admin user name, Admin email, and Admin password describe the administrator of the site: admin, owner@example.com, and a password you choose."
+            },
+            {
+              "id": "setup-3",
+              "text": "The database fields and Recipe stay empty, so the task uses what Create Tenant Task stored for the tenant. The workflow stores the admin password as plain text, so anyone who can edit the workflow can read it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Publish and run",
+      "subtitle": "Start the workflow from the designer",
+      "clips": [
+        {
+          "id": "06-run",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "run-1",
+              "text": "Select Publish. The designer saves your changes as you work, but a workflow runs its published version."
+            },
+            {
+              "id": "run-2",
+              "text": "Select Run, and Run again in the dialog. Setting up the site takes a moment, and then the dialog reports the Instance as Finished."
+            },
+            {
+              "id": "run-3",
+              "text": "Open the instance. The page highlights the activities and connections the instance ran: Started By Workflow, Create Tenant Task, and Setup Tenant Task."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Open the tenant",
+      "subtitle": "The tenants list and the site",
+      "clips": [
+        {
+          "id": "07-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "In Multi-Tenancy, Tenants, Bluebird is listed with its description, its database, Sqlite, its recipe, Blog, and the state Running."
+            },
+            {
+              "id": "result-2",
+              "text": "Select its name to open the site. It answers at the Url Prefix we gave it, and shows the content of the Blog recipe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "When a task fails",
+      "subtitle": "Failed outcomes and other starts",
+      "clips": [
+        {
+          "id": "08-failed",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "wrap-1",
+              "text": "A task that takes Failed leads nowhere unless you connect that outcome. With no connection, the workflow ends there, and the instance reads Finished. Connect Failed to an activity such as Log or Notify, to report the problem."
+            },
+            {
+              "id": "wrap-2",
+              "text": "Run this workflow a second time, and Create Tenant Task takes Failed, because Bluebird exists. Disable Tenant Task and Enable Tenant Task need only a tenant name, and any event can start a workflow that uses them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Workflows for Tenants",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A workflow can create a tenant, set it up, and later disable or enable it, all from the Default tenant. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
