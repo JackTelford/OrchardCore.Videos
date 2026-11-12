@@ -39,7 +39,7 @@
             },
             {
               "id": "versions-3",
-              "text": "Only the content types you choose in the settings are recorded. Events are removed after the retention period, which is ten days by default, unless you disable the trimming task. A Restore button appears on Published events and on Removed events."
+              "text": "Only the content types you choose in the settings are recorded. Events are removed after the retention period, which is ten days by default, unless you disable the trimming task. Restore appears on Published and Removed events, except for the latest version."
             },
             {
               "id": "versions-4",

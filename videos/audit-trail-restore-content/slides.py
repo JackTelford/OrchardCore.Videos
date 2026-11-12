@@ -20,7 +20,7 @@ COPY = [
 LIMITS = [
     ("1", "Chosen content types", "Only the types selected in the Audit Trail settings are recorded."),
     ("2", "Retention period", "Events older than the period are removed: ten days by default, unless trimming is disabled."),
-    ("3", "Two restorable events", "Restore appears on Published events and on Removed events."),
+    ("3", "Two restorable events", "Restore appears on Published and Removed events, except for the latest version."),
     ("4", "Permissions", "View audit trail opens the list. Edit permission views a version, publish permission restores it."),
 ]
 
