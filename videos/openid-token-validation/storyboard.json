@@ -1,0 +1,202 @@
+{
+  "title": "OpenID Connect Token Validation",
+  "output": "openid-token-validation",
+  "spoken": {
+    "ChallengeOrForbid": "Challenge Or Forbid",
+    "AllowAnonymous": "Allow Anonymous"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "OpenID Connect Token Validation",
+      "subtitle": "Protect your APIs with access tokens",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "An API has to know who is calling, and what that caller may do. The OpenID Connect Token Validation feature checks the access tokens that clients send. This video shows how it works, how to configure it, and how to protect your own endpoint."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How an API checks a token",
+      "subtitle": "The API scheme and its handler",
+      "clips": [
+        {
+          "id": "01-flow",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "flow-1",
+              "text": "Endpoints that serve other applications authenticate through the API scheme. A client sends its access token with each request, and the scheme passes it to a token handler."
+            },
+            {
+              "id": "flow-2",
+              "text": "The scheme has no token logic of its own. It forwards to the scheme named in its options. When no such scheme is registered, nobody is authenticated, and a challenge answers 401 Unauthorized."
+            },
+            {
+              "id": "flow-3",
+              "text": "Enabling the Token Validation feature points the API scheme at the validation handler. The handler is registered when the settings are valid. A valid token then gives your endpoint a user, built from the claims in the token."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Who issues the tokens",
+      "subtitle": "An authorization server tenant or an authority",
+      "clips": [
+        {
+          "id": "02-issuer",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "issuer-1",
+              "text": "Validation has to know who issues the tokens. The settings name either an authorization server tenant or an authority, and exactly one of them. A tenant is a separate site hosted by the same installation."
+            },
+            {
+              "id": "issuer-2",
+              "text": "With a tenant, Orchard Core reads the signing and encryption keys straight from that tenant, so it sends no discovery request. The audience is fixed, so you cannot enter one."
+            },
+            {
+              "id": "issuer-3",
+              "text": "With an authority, Orchard Core finds the keys by discovery, and the audience your API expects is required. The OpenID Connect Metadata Address overrides the discovery address. Disable token type validation accepts tokens from servers that do not set the access token type."
+            },
+            {
+              "id": "issuer-4",
+              "text": "Another tenant adds a requirement. Its server needs a scope that lists this tenant in Additional resources, API audiences, or saving fails with No appropriate scope was found. A tenant whose server uses reference access tokens cannot be selected."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Enable the feature",
+      "subtitle": "Tools, Features",
+      "clips": [
+        {
+          "id": "03-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Features are under Tools, Features. Search for token validation to find OpenID Connect Token Validation, listed under the OpenID Connect heading."
+            },
+            {
+              "id": "enable-2",
+              "text": "Select Enable, and the row shows Enabled. The feature builds on OpenID Connect Core Services, which the Authorization Server already enabled on this site. Roles other than Administrator need the permission View and edit the OpenID Connect validation settings to use its page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Configure the validation",
+      "subtitle": "Settings, OpenID Connect, Token Validation",
+      "clips": [
+        {
+          "id": "04-settings",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "settings-1",
+              "text": "The settings are under Settings, OpenID Connect, Token Validation. A warning at the top says the website might be restarted when you save."
+            },
+            {
+              "id": "settings-2",
+              "text": "This site also runs the OpenID Connect Authorization Server, so Authorization server tenant is already filled in with the name of this tenant, Default. Tokens issued here are validated against it."
+            },
+            {
+              "id": "settings-3",
+              "text": "To name a remote server instead, clear the field. Authority, Audience, and Disable token type validation appear around the OpenID Connect Metadata Address, which is always shown."
+            },
+            {
+              "id": "settings-4",
+              "text": "Enter the address of the server, and save without an audience. The page refuses, with the message An audience must be set when configuring the authority."
+            },
+            {
+              "id": "settings-5",
+              "text": "Enter the audience your API expects, and save again. A message reads OpenID validation configuration successfully updated."
+            },
+            {
+              "id": "settings-6",
+              "text": "Saving checks the form of the values, and sends no request to the remote server. This site also runs the Authorization Server, so Orchard Core applies that server's issuer and keys after the authority. A remote authority belongs on a site without it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Protect your own endpoint",
+      "subtitle": "The API scheme and a permission check",
+      "clips": [
+        {
+          "id": "05-endpoint",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "endpoint-1",
+              "text": "Name the API scheme in the Authorize attribute, and the token handler authenticates the request, so the user carries the claims of the token. This class also carries AllowAnonymous, so the action makes the decision."
+            },
+            {
+              "id": "endpoint-2",
+              "text": "The action asks the authorization service whether the user has the permission the endpoint needs. When the answer is no, it returns ChallengeOrForbid with the API scheme."
+            },
+            {
+              "id": "endpoint-3",
+              "text": "ChallengeOrForbid answers according to who is calling. Without a valid token, the caller is challenged, a 401 response. With a valid token but no permission, the caller is forbidden, a 403 response."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Set it from a recipe",
+      "subtitle": "The validation settings step",
+      "clips": [
+        {
+          "id": "06-recipe",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "recipe-1",
+              "text": "A recipe sets the same values with its validation settings step. Enable the feature first, because a step without a registered handler is skipped. Then set Tenant, or Authority and Audience."
+            },
+            {
+              "id": "recipe-2",
+              "text": "The page checks your values when you save, but the recipe step stores what it receives. Invalid values register no handler, so the API scheme authenticates nobody, and the site logs a warning."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "OpenID Connect Token Validation",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the Token Validation feature: the API scheme gets a handler, and your settings decide whose tokens it trusts. A separate video shows how a client gets a token. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

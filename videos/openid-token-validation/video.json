@@ -1,0 +1,54 @@
+{
+  "title": "OpenID Connect Token Validation: Protect Your APIs | Orchard Core",
+  "description": "An API has to know who is calling and what that caller may do. A client proves who it is with an access token, and the endpoint can only rely on that token once it knows whose tokens to trust.\n\nThe OpenID Connect Token Validation feature gives the API authentication scheme a handler that checks the tokens clients send. This video shows how the scheme finds that handler, how to choose the issuer of the tokens, and how to protect your own endpoint with a permission check.\n\nIn this video:\n• How an API checks a token\n• Who issues the tokens: a tenant or an authority\n• Enabling the feature\n• Configuring the validation settings\n• Protecting your own endpoint\n• Setting it from a recipe",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "OpenIDConnect"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "OpenID Connect",
+    "OAuth",
+    "access tokens",
+    "bearer tokens",
+    "token validation",
+    "API security"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "OpenID Connect"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "OpenID Connect documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenId/#token-validation"
+    },
+    {
+      "label": "Media Gallery documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Media/MediaGallery/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Media/MediaGallery.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenId.Validation"
+  }
+}
