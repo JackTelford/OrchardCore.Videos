@@ -1,0 +1,56 @@
+{
+  "title": "Taxonomies in Code: Query Content Items by Term | Orchard Core",
+  "description": "A taxonomy field files a content item under terms, but a template or a service often needs the opposite: the content items filed under a given term. The Taxonomies module offers three places to ask: the TaxonomyIndex table, the Lucene index, and the query that every term page runs.\n\nThis video shows what a TaxonomyField stores, how to query the TaxonomyIndex with QueryCategorizedContentItemsAsync or ISession, how to index the terms for Lucene and save a Lucene query with parameters, how to call that query from Razor and Liquid, and how a term page builds its list.\n\nIn this video:\n• Where the terms are stored\n• Query the TaxonomyIndex\n• Index the terms for Lucene\n• A Lucene query with parameters\n• Call the query from code\n• The term page query",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet",
+    "Lucene"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Taxonomies",
+    "Taxonomy",
+    "Lucene",
+    "Razor",
+    "Liquid",
+    "YesSql",
+    "Content queries"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Taxonomies"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Taxonomies/"
+    },
+    {
+      "label": "Guide: query content items based on taxonomy",
+      "url": "https://docs.orchardcore.net/en/latest/guides/query-content-items-based-on-taxonomy/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Taxonomies/README.md",
+    "src/docs/guides/query-content-items-based-on-taxonomy/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Taxonomies"
+  }
+}
