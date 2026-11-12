@@ -97,7 +97,7 @@ recipe and the names in the tables above; nothing else is created.
    setup (`AutoSetupMiddleware.cs:145`), for example
    `curl --noproxy "*" -sL -o /dev/null -w "%{http_code}\n" http://localhost:5010/`, retried every 5 seconds for at
    most 3 minutes. This request executes the Blog recipe of the Default tenant. The other tenant is created once the
-   Default tenant is set up (`AutoSetupMiddleware.cs:140`).
+   Default tenant is set up (`AutoSetupMiddleware.cs:135`).
 5. Set up the Marketing tenant the same way with `http://localhost:5010/marketing`. This request executes the Blog
    recipe of the Marketing tenant: it is the trace `traces-4` opens.
 6. Send traffic to both tenants: six times in a row `curl --noproxy "*" -s -o /dev/null http://localhost:5010/` and
@@ -190,7 +190,7 @@ lists traces of the single resource. The labels below belong to the dashboard (c
   one), click the first span whose name starts with `Render shape`, and `HighlightAsync` the details
   `orchardcore.shape.type` and `orchardcore.shape.binding`. Visible at the end: many spans named `Render shape ...`
   in the tree, one selected, with its shape type and its binding (a template path) ringed. Source:
-  `OrchardCore.DisplayManagement/Implementation/ShapeTelemetry.cs:32` and `DefaultHtmlDisplay.cs:85`.
+  `OrchardCore.DisplayManagement/Implementation/ShapeTelemetry.cs:31` and `DefaultHtmlDisplay.cs:234`.
 
 ## Clip `05-metrics`: the metrics (dashboard)
 
@@ -221,7 +221,7 @@ which the Aspire documentation does not name) and wait until the table holds at 
   or with `ClickAsync` if it opens a panel. `HighlightAsync` the attribute `orchardcore.tenant.name` = `Marketing`
   in the details. Visible at the end: the details of a record, with `orchardcore.tenant.name` = `Marketing` ringed, and
   the filter still shown. Source: the processor adds the attribute to the records written in a tenant scope
-  (`OrchardCore.OpenTelemetry/TenantLogRecordProcessor.cs:14`).
+  (`OrchardCore.OpenTelemetry/TenantLogRecordProcessor.cs:12`).
 - `logs-2`: `ClearHighlightsAsync()`, close the details, and `HoldAsync` on the table. Visible at the end: the table of
   records with their levels. No click is needed: the narration talks about log levels and the Logging option.
 

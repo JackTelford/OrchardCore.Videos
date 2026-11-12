@@ -42,6 +42,13 @@ plan, not the narration, where the dashboard differs:
 - With the slow shape threshold at zero (`recording-plan.md`), a page has a `Render shape` span for every shape.
   The narration says so ("Here the threshold is zero"). The trace of a page may then hold a long list of spans: check
   that the span details can be reached on screen.
+- Whether the request that sets the Marketing tenant up (the longest trace, seed step 5) carries `orchardcore.tenant.name`
+  = `Marketing` on its request span and on the recipe spans, so that it stays in the list filtered on `Marketing`
+  in `traces-2` and `traces-4`. The source tags a span with the tenant of the current shell scope
+  (`TenantActivityProcessor.cs`) and the request span from the shell context of the request
+  (`TenantTelemetryMiddleware.cs`); what the shell scope holds during Auto Setup was not read. If the setup trace is
+  not under the filter, open it before applying the filter in `traces-2`, or filter on `Default` for `traces-4`
+  (the narration of `traces-4` does not name the tenant).
 
 ## 3. Logs
 
@@ -76,6 +83,12 @@ the voice may read as one word or two.
   the sentence of the page must stay true, either change the sentence or add a second instance to the recording.
 
 ## 6. Not checked by running it
+
+- The sources and meters of other libraries (`YesSql`, `Npgsql`, `Elastic.Transport`, `MailKit.Net.SmtpClient`,
+  `Azure.*`) and the N+1 remark of `conf-2` come from the documentation page and the slide; the libraries are not in the
+  Orchard Core source (`OrchardCore.OpenTelemetry` only adds the names of `Tracing:Sources` and `Metrics:Meters`
+  with `AddSource` and `AddMeter`, `OpenTelemetryOrchardCoreBuilderExtensions.cs:66` and `:90`). A person confirms
+  with the YesSql package version of the checkout that its activity source and meter are named `YesSql`.
 
 - An endpoint that is not an absolute HTTP or HTTPS URI stops the application from starting (documentation, and the
   exception in `OtlpExporterOptionsFactory.cs`): the narration does not say it.
