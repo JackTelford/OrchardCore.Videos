@@ -1,0 +1,236 @@
+{
+  "title": "Autoroute patterns in Orchard Core",
+  "output": "autoroute-patterns",
+  "spoken": {
+    "ContentItem.Content.Product.Color.Text": "Content Item dot Content dot Product dot Color dot Text",
+    "Model.ContentItem": "Model dot Content Item",
+    "GetContentItemBySlugAsync": "Get Content Item By Slug Async",
+    "AlterTypeDefinitionAsync": "Alter Type Definition Async",
+    "AutoroutePartSettings": "Autoroute Part Settings",
+    "ContentDefinition": "Content Definition",
+    "ContentItem": "Content Item",
+    "WithSettings": "With Settings",
+    "display_text": "display text",
+    "Content.Slug": "Content dot Slug",
+    "blog/notes-from-the-orchard": "blog slash notes from the orchard",
+    "trail-mug-forest-green-1": "trail mug forest green dash 1",
+    "trail-mug-forest-green": "trail mug forest green",
+    "trail-mug-slate-blue": "trail mug slate blue",
+    "trail-mug": "trail mug"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "Autoroute patterns in Orchard Core",
+      "subtitle": "Generate URLs with Liquid",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "The Autoroute part gives a content item a URL, and its pattern decides what that URL looks like. In this video, you write patterns in Liquid, see the URLs they generate, define them in code, and load content by URL."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "How a pattern works",
+      "subtitle": "From a Liquid expression to a URL",
+      "clips": [
+        {
+          "id": "01-idea",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "idea-1",
+              "text": "A content type with the Autoroute part has a Pattern setting. The pattern is a Liquid expression, and the text it renders becomes the path of a content item: its Permalink, and its URL on the site."
+            },
+            {
+              "id": "idea-2",
+              "text": "The pattern runs when a content item is created or updated, and only while its path is empty. A path that is already set is kept, so changing a pattern does not move existing content."
+            },
+            {
+              "id": "idea-3",
+              "text": "If another content item already uses the path, the generator appends a dash and a number. A permalink can't contain spaces, two slashes in a row, or characters such as a question mark, a colon, or a dot."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "What a pattern can use",
+      "subtitle": "The content item, filters and fields",
+      "clips": [
+        {
+          "id": "02-vocabulary",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "use-1",
+              "text": "Inside a pattern, ContentItem is the item being routed, and Model.ContentItem is the same item. The display_text filter returns its display text, and slugify lowercases text, replacing spaces and most punctuation with dashes."
+            },
+            {
+              "id": "use-2",
+              "text": "The container filter returns the list that holds a content item. A blog post can build its path from the blog title, a slash, and its own title. Outside a list, the filter returns the item itself."
+            },
+            {
+              "id": "use-3",
+              "text": "A field is read through the Content property, under the part that holds it. For a Text field named Color on a Product type, that is ContentItem.Content.Product.Color.Text."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Edit a pattern",
+      "subtitle": "The Autoroute part of a content type",
+      "clips": [
+        {
+          "id": "03-edit",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "edit-1",
+              "text": "You set a pattern on the content type. Under Design, Content Definition, Content Types, open the Product type, and choose Edit on its Autoroute part."
+            },
+            {
+              "id": "edit-2",
+              "text": "The Pattern field holds the Liquid expression. This one slugifies the display text, so a product titled Trail Mug gets the path trail-mug."
+            },
+            {
+              "id": "edit-3",
+              "text": "Let's add the color on a second line: a dash, then the Color field of the product, slugified. The line break is removed from the result."
+            },
+            {
+              "id": "edit-4",
+              "text": "Liquid is checked when you save. A pattern with a syntax error is refused, and the message begins: Pattern doesn't contain a valid Liquid expression."
+            },
+            {
+              "id": "edit-5",
+              "text": "With the expression repaired, Save stores the setting, and a notification confirms it. Content items that get a path afterwards use the edited pattern."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Generated paths",
+      "subtitle": "What the pattern produces",
+      "clips": [
+        {
+          "id": "04-result",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "result-1",
+              "text": "Let's create a product with the title Trail Mug and the color Forest Green. The Permalink field is disabled, because this type doesn't allow a custom path. Publish saves the product."
+            },
+            {
+              "id": "result-2",
+              "text": "The editor reloads with the Permalink the pattern produced: trail-mug-forest-green. The slugified title and the slugified color are joined by the dash from the pattern."
+            },
+            {
+              "id": "result-3",
+              "text": "Let's create a second product with the same title and color. The path is taken, so the generator appends a dash and a number, and the Permalink is trail-mug-forest-green-1."
+            },
+            {
+              "id": "result-4",
+              "text": "Editing a product does not change a path that is set. Let's change the color to Slate Blue and check Refresh the path, a checkbox that appears when the type allows path updates. After Publish, the path is generated again: trail-mug-slate-blue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "A pattern with a container",
+      "subtitle": "Blog posts inside a blog",
+      "clips": [
+        {
+          "id": "05-container",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "container-1",
+              "text": "The Blog Post type of the Blog recipe builds its path with the container filter: the slugified blog title, a slash, and the slugified post title."
+            },
+            {
+              "id": "container-2",
+              "text": "A post gets its container when you create it from the blog. On the Blog page, Create Blog Post opens the editor. Let's give the post the title Notes from the Orchard, and publish it."
+            },
+            {
+              "id": "container-3",
+              "text": "The Permalink is blog, a slash, and the post title: blog/notes-from-the-orchard. Created outside the blog, a post has no container, so the filter returns the post and its title appears twice."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "Patterns in code",
+      "subtitle": "Migrations and recipes",
+      "clips": [
+        {
+          "id": "06-code",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "code-1",
+              "text": "In a data migration, AlterTypeDefinitionAsync adds the Autoroute part to a type. WithSettings takes an AutoroutePartSettings object, and its Pattern property holds the Liquid expression."
+            },
+            {
+              "id": "code-2",
+              "text": "A recipe sets the same value in its ContentDefinition step. Under the part, AutoroutePartSettings holds the Pattern. The Blog recipe defines its Article type this way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "Find content by its URL",
+      "subtitle": "Slugs in Liquid and Razor",
+      "clips": [
+        {
+          "id": "07-lookup",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "lookup-1",
+              "text": "Content with an Autoroute part can be loaded by its path. In Liquid, index the Content object with slug, a colon, and the path. Content.Slug takes the path alone."
+            },
+            {
+              "id": "lookup-2",
+              "text": "In Razor, the Orchard helper has GetContentItemBySlugAsync, which loads the content item for a path. Passing true as the second argument loads the most recent version instead of the published one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "Autoroute patterns in Orchard Core",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "A pattern is a Liquid expression on the Autoroute part of a content type. Slugify what it uses, set it in the admin or in code, and the path it generates becomes the URL of the content item. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

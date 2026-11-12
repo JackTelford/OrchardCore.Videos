@@ -1,0 +1,48 @@
+{
+  "title": "Autoroute Patterns: Generate URLs With Liquid | Orchard Core",
+  "description": "Every content item needs a URL, and typing each one by hand does not scale.\n\nThe Autoroute part generates the URL from a Liquid pattern that you write once on the content type. This video shows what a pattern can use, when it runs, how to edit it in the admin and set it in code, and how to load content by its URL.\n\nIn this video:\n• How a pattern works: from a Liquid expression to a URL\n• What a pattern can use: the content item, filters and fields\n• Edit a pattern on a content type\n• The paths a pattern generates\n• A pattern with a container\n• Patterns in a migration and in a recipe\n• Find content by its URL in Liquid and Razor",
+  "hashtags": [
+    "OrchardCore",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "ASP.NET Core",
+    ".NET",
+    "CMS",
+    "Autoroute",
+    "Liquid",
+    "permalink",
+    "URL",
+    "content type"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "Routing"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/Autoroute/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/Autoroute/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.Autoroute"
+  }
+}
