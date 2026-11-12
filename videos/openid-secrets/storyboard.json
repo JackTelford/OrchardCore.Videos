@@ -1,0 +1,178 @@
+{
+  "title": "OpenID Connect Keys as Secrets",
+  "output": "openid-secrets",
+  "spoken": {
+    "ServerSigningKey": "Server Signing Key",
+    "ServerEncryptionKey": "Server Encryption Key",
+    "X.509": "X five oh nine"
+  },
+  "chapters": [
+    {
+      "id": "00",
+      "title": "OpenID Connect Keys as Secrets",
+      "subtitle": "Signing and encryption keys, kept in the Secrets module",
+      "clips": [
+        {
+          "id": "00-intro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "intro",
+              "text": "An Orchard Core site that works as an OpenID Connect server uses a signing key and an encryption key for its tokens. The OpenID Connect Secrets feature keeps those keys as secrets. In this video, you enable it, create the keys, and select them."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "title": "Why keep the keys as secrets",
+      "subtitle": "Certificate files stay on one server",
+      "clips": [
+        {
+          "id": "01-why",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "why-1",
+              "text": "By default, the OpenID Connect server generates its own signing and encryption certificates. It saves them as files in the data folder of the site, on the server that runs it."
+            },
+            {
+              "id": "why-2",
+              "text": "A server that finds no such files generates certificates of its own. A site on several servers, or in containers that start with an empty disk, can end up with different keys on each one."
+            },
+            {
+              "id": "why-3",
+              "text": "With the OpenID Connect Secrets feature, the keys are secrets: encrypted, listed on the Secrets page, and kept in a secret store, the database by default. Servers that share the database and the Data Protection keys, which decrypt the secrets, read the same ones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Enable the feature",
+      "subtitle": "OpenID Connect Secrets, on the Features page",
+      "clips": [
+        {
+          "id": "02-enable",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "enable-1",
+              "text": "Open Tools, Features, and search for OpenID. The OpenID Connect Secrets feature is listed with the other features of the OpenID Connect category."
+            },
+            {
+              "id": "enable-2",
+              "text": "Its description says it allows storing OpenID Connect signing and encryption keys as secrets. The badges beside it show its direct dependencies: OpenID Connect Authorization Server, and Secrets."
+            },
+            {
+              "id": "enable-3",
+              "text": "Select Enable. A message confirms that the feature was enabled, and its row shows the Enabled badge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Create the keys",
+      "subtitle": "RSA Key secrets for signing and encryption",
+      "clips": [
+        {
+          "id": "03-create",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "create-1",
+              "text": "Open Tools, Security, Secrets, and select Add Secret. The dialog lists the secret types. RSA Key stores cryptographic keys for signing, encryption, or verification, so select Create on its card."
+            },
+            {
+              "id": "create-2",
+              "text": "Enter a name. The server settings use it to reference the secret, and it cannot be changed later. Let's call this one ServerSigningKey."
+            },
+            {
+              "id": "create-3",
+              "text": "Key size sets the size of the generated key pair, so leave it at 2048 bits. The description and the expiration date are optional, and the expiration date is only a reminder. Select Save."
+            },
+            {
+              "id": "create-4",
+              "text": "Create a second RSA Key secret the same way, for the encryption key. Name it ServerEncryptionKey, leave the other fields as they are, and select Save."
+            },
+            {
+              "id": "create-5",
+              "text": "The Secrets list shows both secrets with badges for their type, RSA Key, their store, Database, and their expiration. With no expiration date, each one reads Never expires."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "Select the keys",
+      "subtitle": "RSA Keys from Secrets, in the server settings",
+      "clips": [
+        {
+          "id": "04-select",
+          "kind": "clip",
+          "steps": [
+            {
+              "id": "select-1",
+              "text": "Open Settings, OpenID Connect, Authorization Server, and scroll to the RSA Keys from Secrets card. It says to use RSA keys stored in Secrets instead of managed certificates, and that they take precedence over the certificate store options."
+            },
+            {
+              "id": "select-2",
+              "text": "Signing Key Secret lists the RSA Key and X.509 Certificate secrets. Its hint asks you to pick one to use for signing JSON Web Tokens. Select ServerSigningKey."
+            },
+            {
+              "id": "select-3",
+              "text": "Encryption Key Secret works the same way, and its hint asks you to pick one to use for encrypting access tokens. Select ServerEncryptionKey."
+            },
+            {
+              "id": "select-4",
+              "text": "Select Save. The page warns that the website might be restarted upon saving, and a message confirms that the OpenID server configuration was updated. The card keeps both secrets selected."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "Existing certificates",
+      "subtitle": "What carries over, and what stays in use",
+      "clips": [
+        {
+          "id": "05-carry",
+          "kind": "slide",
+          "steps": [
+            {
+              "id": "carry-1",
+              "text": "If the server settings already name a signing or an encryption certificate, enabling the feature saves each one as an X.509 Certificate secret that references it, and selects that secret in the card."
+            },
+            {
+              "id": "carry-2",
+              "text": "A list left on None keeps the server on its certificates. So does a secret that cannot be loaded, and the server records the problem in its log."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "title": "OpenID Connect Keys as Secrets",
+      "subtitle": "docs.orchardcore.net",
+      "clips": [
+        {
+          "id": "99-outro",
+          "kind": "card",
+          "steps": [
+            {
+              "id": "outro",
+              "text": "That is the OpenID Connect Secrets feature: the signing and encryption keys of the server, kept as secrets in the Secrets module. Thanks for watching."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

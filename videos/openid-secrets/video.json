@@ -1,0 +1,52 @@
+{
+  "title": "OpenID Connect Signing and Encryption Keys as Secrets | Orchard Core",
+  "description": "By default, an Orchard Core site that works as an OpenID Connect server generates its own signing and encryption certificates, and saves them as files in the data folder of the server that runs it.\n\nThe OpenID Connect Secrets feature keeps the signing and encryption keys as secrets in the Secrets module instead, and the Authorization Server settings select them.\n\nIn this video:\n• Why keep the keys as secrets\n• Enable the OpenID Connect Secrets feature\n• Create RSA Key secrets for signing and encryption\n• Select the keys in the Authorization Server settings\n• What happens to a certificate that is already selected",
+  "hashtags": [
+    "OrchardCore",
+    "OpenIDConnect",
+    "DotNet"
+  ],
+  "tags": [
+    "Orchard Core",
+    "OpenID Connect",
+    "OpenID",
+    "Secrets",
+    "signing key",
+    "encryption key",
+    "RSA key",
+    "JWT",
+    "identity provider",
+    "ASP.NET Core",
+    ".NET",
+    "CMS"
+  ],
+  "categoryId": "28",
+  "privacyStatus": "public",
+  "playlists": [
+    "Orchard Core",
+    "OpenID Connect"
+  ],
+  "chapters": [],
+  "links": [
+    {
+      "label": "Documentation",
+      "url": "https://docs.orchardcore.net/en/latest/reference/modules/OpenId/"
+    },
+    {
+      "label": "Orchard Core on GitHub",
+      "url": "https://github.com/OrchardCMS/OrchardCore"
+    },
+    {
+      "label": "Orchard Core",
+      "url": "https://orchardcore.net"
+    }
+  ],
+  "embeddedIn": [
+    "src/docs/reference/modules/OpenId/README.md"
+  ],
+  "source": {
+    "repository": "OrchardCMS/OrchardCore",
+    "pullRequest": null,
+    "feature": "OrchardCore.OpenId.Secrets"
+  }
+}
