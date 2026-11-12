@@ -150,7 +150,7 @@
           "steps": [
             {
               "id": "perm-1",
-              "text": "The API is still closed to visitors. Access Control, Roles lists the roles of the site. We edit Anonymous, the role of visitors who are not signed in."
+              "text": "The API is closed to visitors by default. Access Control, Roles lists the roles of the site. We edit Anonymous, the role of visitors who are not signed in."
             },
             {
               "id": "perm-2",
