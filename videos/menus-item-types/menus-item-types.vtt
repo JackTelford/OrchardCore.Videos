@@ -1,0 +1,206 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.150
+A menu is a list of menu items, and the Menu module provides
+
+00:00:05.150 --> 00:00:06.785
+three types of them.
+
+00:00:06.785 --> 00:00:10.746
+In this video, we add a link, a content item, and an HTML
+
+00:00:10.746 --> 00:00:13.890
+item to a menu, and choose who sees an item.
+
+00:00:18.490 --> 00:00:21.922
+A Link Menu Item links to an address you type.
+
+00:00:21.922 --> 00:00:25.816
+A Content Menu Item links to a content item you pick.
+
+00:00:25.816 --> 00:00:30.172
+An Html Menu Item links to an address, and shows HTML as the
+
+00:00:30.172 --> 00:00:31.690
+text of the link.
+
+00:00:32.440 --> 00:00:35.243
+Link and Html items have a Permissions field.
+
+00:00:35.243 --> 00:00:39.420
+People who do not have the permissions you choose do not see the item.
+
+00:00:40.170 --> 00:00:44.214
+A Content Menu Item has the option Check content permissions instead.
+
+00:00:44.214 --> 00:00:48.690
+It hides the item from people who may not view the content item it points to.
+
+00:00:49.440 --> 00:00:53.693
+The HTML of an Html Menu Item is cleaned when the menu is
+
+00:00:53.693 --> 00:00:56.596
+displayed, to prevent custom scripts.
+
+00:00:56.596 --> 00:01:01.390
+The Sanitize Html setting controls this, and it is on by default.
+
+00:01:05.690 --> 00:01:08.755
+Under Content, Menus, open the Main Menu.
+
+00:01:08.755 --> 00:01:13.386
+A separate video covers creating menus and arranging their items.
+
+00:01:13.386 --> 00:01:17.430
+Here, the Add Menu Item button adds an item to this one.
+
+00:01:17.888 --> 00:01:21.694
+The Available Menu Items window lists the three types:
+
+00:01:21.694 --> 00:01:25.437
+Link Menu Item, Content Menu Item and Html Menu Item.
+
+00:01:25.437 --> 00:01:27.848
+Each one has its own Add button.
+
+00:01:32.148 --> 00:01:33.941
+Let's add a Link Menu Item.
+
+00:01:33.941 --> 00:01:37.038
+It has a Name, which is the text of the link, and a
+
+00:01:37.038 --> 00:01:38.940
+Url that says where it leads.
+
+00:01:38.940 --> 00:01:42.418
+We name it Editor Guide, and link it to the documentation.
+
+00:01:46.158 --> 00:01:48.431
+Target says where the link opens.
+
+00:01:48.431 --> 00:01:52.975
+It suggests values, and one of them opens the linked document in another
+
+00:01:52.975 --> 00:01:55.538
+window or tab, so the site stays open.
+
+00:01:56.027 --> 00:01:58.451
+Publish adds the item to the menu.
+
+00:01:58.451 --> 00:02:02.147
+The menu editor lists it with its name and its address.
+
+00:02:06.447 --> 00:02:08.915
+Add Menu Item opens the same window.
+
+00:02:08.915 --> 00:02:14.027
+This time we choose Content Menu Item, which links to a content item of the site.
+
+00:02:14.480 --> 00:02:17.572
+Name is the text of the link, so we type Hours.
+
+00:02:17.572 --> 00:02:22.590
+In Selected Content Item, we type to search, and pick the Opening Hours article.
+
+00:02:23.069 --> 00:02:24.819
+No address is typed here.
+
+00:02:24.819 --> 00:02:28.659
+The link is built from the content item itself, so it leads to
+
+00:02:28.659 --> 00:02:30.409
+the address of that item.
+
+00:02:30.875 --> 00:02:34.640
+Check content permissions stays off for a public page.
+
+00:02:34.640 --> 00:02:39.723
+Turn it on for restricted content, and cache the menu, as its hint advises.
+
+00:02:39.723 --> 00:02:41.795
+Then Publish adds the item.
+
+00:02:46.037 --> 00:02:50.636
+The third type, the Html Menu Item, has the same Name, Url and
+
+00:02:50.636 --> 00:02:54.897
+Target fields as a link, and one more field for the HTML.
+
+00:03:00.388 --> 00:03:04.027
+Let's name it Contact us, and link it to an email address, so
+
+00:03:04.027 --> 00:03:07.448
+that selecting it opens the email program of the visitor.
+
+00:03:07.909 --> 00:03:11.718
+The Html field replaces the name as the text of the link, and
+
+00:03:11.718 --> 00:03:13.253
+sits inside the link.
+
+00:03:13.253 --> 00:03:15.469
+Let's make the first word italic.
+
+00:03:15.957 --> 00:03:22.069
+The HTML is cleaned when the menu is displayed, because Sanitize Html is on by default.
+
+00:03:22.069 --> 00:03:24.697
+Publish adds the item to the menu.
+
+00:03:28.971 --> 00:03:31.584
+To restrict an item, choose Edit on its row.
+
+00:03:31.584 --> 00:03:36.391
+Let's restrict Editor Guide, because it is meant for the people who work in the admin.
+
+00:03:36.844 --> 00:03:41.035
+In Permissions, we type to search, and select Access admin panel.
+
+00:03:41.035 --> 00:03:44.341
+Only people who have this permission see the item.
+
+00:03:44.341 --> 00:03:47.764
+When you choose several, a person needs all of them.
+
+00:03:48.234 --> 00:03:51.884
+A restricted item hides the items under it as well.
+
+00:03:51.884 --> 00:03:54.574
+Publish adds the change to the menu.
+
+00:03:58.807 --> 00:04:02.331
+Each change is saved in a draft of the menu, so the site
+
+00:04:02.331 --> 00:04:06.537
+keeps showing the published menu until the menu itself is published.
+
+00:04:08.521 --> 00:04:11.452
+Let's publish the Main Menu with the Publish button.
+
+00:04:11.452 --> 00:04:16.151
+A message confirms that your Menu has been published, and the editor stays on the menu.
+
+00:04:16.609 --> 00:04:21.703
+On the site, signed in as the administrator, the menu lists Home, About,
+
+00:04:21.703 --> 00:04:26.469
+Editor Guide, Hours and Contact us, with the first word in italics.
+
+00:04:28.090 --> 00:04:32.282
+A visitor who is not signed in gets the same menu without Editor Guide.
+
+00:04:32.282 --> 00:04:35.820
+The other items have no permissions, so everyone sees them.
+
+00:04:37.820 --> 00:04:42.750
+That is how Link, Content and Html menu items work, and how permissions
+
+00:04:42.750 --> 00:04:44.479
+decide who sees them.
+
+00:04:44.479 --> 00:04:47.936
+A separate video covers how themes render menus.
+
+00:04:47.936 --> 00:04:49.600
+Thanks for watching.
+
