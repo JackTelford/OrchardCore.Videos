@@ -1,0 +1,292 @@
+1
+00:00:01,000 --> 00:00:06,602
+Recipes, workflows and layer rules can all run JavaScript, and the Scripting module runs it.
+
+2
+00:00:06,602 --> 00:00:11,004
+This video shows where scripts run, which methods they can call, how to
+
+3
+00:00:11,004 --> 00:00:14,320
+add your own, and how to limit what a script can do.
+
+4
+00:00:18,920 --> 00:00:21,948
+A script is a prefix, a colon and the code.
+
+5
+00:00:21,948 --> 00:00:27,632
+The js prefix selects the JavaScript engine, which uses Jint, a JavaScript interpreter
+
+6
+00:00:27,632 --> 00:00:32,390
+for .NET, and the file prefix selects an engine that reads a text file.
+
+7
+00:00:32,390 --> 00:00:35,170
+The Scripting module is always enabled.
+
+8
+00:00:35,920 --> 00:00:39,027
+Scripts run wherever Orchard Core takes an expression:
+
+9
+00:00:39,027 --> 00:00:42,289
+in any text value of a recipe, in the Script Task and the
+
+10
+00:00:42,289 --> 00:00:46,484
+expressions of a workflow, in the Javascript condition of a layer rule, and
+
+11
+00:00:46,484 --> 00:00:48,400
+in the external login settings.
+
+12
+00:00:52,600 --> 00:00:58,311
+In a recipe, any text value can be a script between square brackets, with its prefix.
+
+13
+00:00:58,311 --> 00:01:02,578
+Orchard Core replaces it with the result before the step runs.
+
+14
+00:01:02,578 --> 00:01:07,410
+Here uuid generates an identifier, and the file prefix loads a snippet.
+
+15
+00:01:08,160 --> 00:01:12,816
+Variables declared at the top are computed on first read, then reused.
+
+16
+00:01:12,816 --> 00:01:15,451
+Three methods exist only in a recipe:
+
+17
+00:01:15,451 --> 00:01:20,720
+variables, parameters, which reads a value of the recipe environment such as the
+
+18
+00:01:20,720 --> 00:01:25,560
+admin user id, and configuration, which reads a tenant configuration key.
+
+19
+00:01:29,860 --> 00:01:34,656
+In a workflow, the Script Task runs a whole script, and expression fields
+
+20
+00:01:34,656 --> 00:01:36,842
+can use the JavaScript syntax.
+
+21
+00:01:36,842 --> 00:01:39,878
+Let's open a sample workflow that does both:
+
+22
+00:01:39,878 --> 00:01:40,667
+Sample:
+
+23
+00:01:40,667 --> 00:01:41,760
+order total.
+
+24
+00:01:42,214 --> 00:01:45,531
+The Script Task has Available Outcomes and a Script.
+
+25
+00:01:45,531 --> 00:01:50,906
+This script reads the query string with queryString, stores values with setVariable, and
+
+26
+00:01:50,906 --> 00:01:55,194
+ends with setOutcome, which chooses the outcome the workflow follows.
+
+27
+00:01:55,647 --> 00:02:00,357
+A Set Variable Task takes its Value from an expression, and the syntax
+
+28
+00:02:00,357 --> 00:02:03,394
+list offers Literal, Liquid and JavaScript.
+
+29
+00:02:03,394 --> 00:02:05,129
+Here it is JavaScript.
+
+30
+00:02:05,129 --> 00:02:08,847
+A separate video covers workflow expressions in depth.
+
+31
+00:02:09,309 --> 00:02:12,623
+The Available data tab lists what an activity can use.
+
+32
+00:02:12,623 --> 00:02:16,489
+Under Functions are the methods a script can call in a workflow.
+
+33
+00:02:20,689 --> 00:02:24,696
+Modules register the methods a script can call.
+
+34
+00:02:24,696 --> 00:02:26,435
+Always available:
+
+35
+00:02:26,435 --> 00:02:31,424
+log, protect, encrypt, decrypt, base64, html, gzip and uuid.
+
+36
+00:02:31,424 --> 00:02:40,269
+Contents adds methods for content items, Layers adds checks such as isAnonymous, and Queries adds executeQuery.
+
+37
+00:02:41,019 --> 00:02:44,437
+Other methods exist for one evaluation only.
+
+38
+00:02:44,437 --> 00:02:52,435
+A workflow gets workflow, input, output, property, variable and setVariable, and a Script Task adds setOutcome.
+
+39
+00:02:52,435 --> 00:02:57,699
+Each of these is a scoped method, passed in when the evaluation starts.
+
+40
+00:03:01,899 --> 00:03:04,426
+This is how the uuid method is written.
+
+41
+00:03:04,426 --> 00:03:10,602
+A provider implements IGlobalMethodProvider and returns GlobalMethod objects, where Name is what scripts
+
+42
+00:03:10,602 --> 00:03:15,149
+call and Method is a factory that receives the service provider and returns
+
+43
+00:03:15,149 --> 00:03:16,609
+the delegate to run.
+
+44
+00:03:17,359 --> 00:03:21,775
+Register the provider as a singleton in the Startup class of your module.
+
+45
+00:03:21,775 --> 00:03:26,135
+The factory usually runs lazily, the first time a script reads the name,
+
+46
+00:03:26,135 --> 00:03:28,539
+with the services of that evaluation.
+
+47
+00:03:29,289 --> 00:03:32,211
+A GlobalMethod can also set AsyncMethod.
+
+48
+00:03:32,211 --> 00:03:37,230
+Scripts then get a second function, with the same name followed by Async,
+
+49
+00:03:37,230 --> 00:03:39,073
+that returns a promise.
+
+50
+00:03:39,073 --> 00:03:44,409
+The Contents module registers newContentItem and newContentItemAsync this way.
+
+51
+00:03:48,609 --> 00:03:52,312
+To run a script from your own code, call IScriptingManager.
+
+52
+00:03:52,312 --> 00:03:57,438
+EvaluateAsync takes the directive, picks the engine from its prefix, runs the script
+
+53
+00:03:57,438 --> 00:04:00,742
+with the registered methods, and releases the scope.
+
+54
+00:04:00,742 --> 00:04:03,989
+A string with no known prefix comes back unchanged.
+
+55
+00:04:04,739 --> 00:04:08,711
+To give a script data for one call, pass a scoped method provider.
+
+56
+00:04:08,711 --> 00:04:13,621
+The Users module does this for its external login scripts, because prepared scripts
+
+57
+00:04:13,621 --> 00:04:17,703
+are cached by their text, and data written into the script would add
+
+58
+00:04:17,703 --> 00:04:19,689
+a cache entry for every login.
+
+59
+00:04:23,889 --> 00:04:27,587
+By default a script has no time, statement or memory limit.
+
+60
+00:04:27,587 --> 00:04:32,706
+If people other than administrators can write scripts, configure the options of Jint
+
+61
+00:04:32,706 --> 00:04:35,949
+with MaxStatements, TimeoutInterval or LimitMemory.
+
+62
+00:04:35,949 --> 00:04:39,419
+One options instance serves every engine of the tenant.
+
+63
+00:04:40,169 --> 00:04:43,993
+In a workflow, a script that throws or returns the wrong type falls
+
+64
+00:04:43,993 --> 00:04:46,560
+back to a default, and the error is logged.
+
+65
+00:04:46,560 --> 00:04:50,331
+A script stopped by a limit faults the workflow, as does any error
+
+66
+00:04:50,331 --> 00:04:53,369
+when Fault the workflow on script errors is checked.
+
+67
+00:04:54,119 --> 00:04:59,431
+The engine guards against unbounded recursion by raising a JavaScript error that a
+
+68
+00:04:59,431 --> 00:05:02,450
+script can catch, not by ending the process.
+
+69
+00:05:02,450 --> 00:05:07,219
+Each tenant also reuses a small pool of engines, sized by EnginePoolSize.
+
+70
+00:05:09,219 --> 00:05:13,784
+Scripts are strings with a prefix, evaluated by the Scripting module with the
+
+71
+00:05:13,784 --> 00:05:18,734
+methods that modules register, and the Scripting page of the documentation lists the
+
+72
+00:05:18,734 --> 00:05:20,769
+methods and the engine options.
+
+73
+00:05:20,769 --> 00:05:22,199
+Thanks for watching.
+
