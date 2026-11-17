@@ -1,0 +1,296 @@
+1
+00:00:01,000 --> 00:00:05,984
+Visitors read a site in their own language, and that starts with a list of cultures.
+
+2
+00:00:05,984 --> 00:00:10,802
+In this video, you enable the Localization feature, choose the cultures your site
+
+3
+00:00:10,802 --> 00:00:13,017
+supports, set a default, and save.
+
+4
+00:00:13,017 --> 00:00:15,620
+Then you see a culture at work on a page.
+
+5
+00:00:20,220 --> 00:00:23,817
+A culture is a language, optionally with a region.
+
+6
+00:00:23,817 --> 00:00:28,570
+French is one culture, and French as used in Canada is another, with
+
+7
+00:00:28,570 --> 00:00:30,819
+French as its parent culture.
+
+8
+00:00:30,819 --> 00:00:34,480
+Each request to your site is served in one culture.
+
+9
+00:00:35,230 --> 00:00:38,996
+Your site keeps a list of supported cultures, and one of them is
+
+10
+00:00:38,996 --> 00:00:42,546
+the default, the culture used when nothing asks for another.
+
+11
+00:00:42,546 --> 00:00:46,150
+A site starts with only the culture of the system it runs on.
+
+12
+00:00:50,398 --> 00:00:53,334
+Cultures belong to the Localization feature.
+
+13
+00:00:53,334 --> 00:00:56,328
+Let's open Tools, Features in the admin menu.
+
+14
+00:00:58,373 --> 00:01:00,843
+Type Localization in the search box.
+
+15
+00:01:00,843 --> 00:01:07,133
+Several features match, so look for the row named Localization, in the Internationalization category.
+
+16
+00:01:07,599 --> 00:01:09,330
+Click Enable on that row.
+
+17
+00:01:09,330 --> 00:01:12,569
+A message says the feature Localization was enabled.
+
+18
+00:01:13,051 --> 00:01:17,603
+Under Settings in the admin menu, a Localization entry has appeared.
+
+19
+00:01:17,603 --> 00:01:22,031
+It holds Cultures, so let's open Settings, Localization, Cultures.
+
+20
+00:01:26,331 --> 00:01:28,179
+The page is headed Settings.
+
+21
+00:01:28,179 --> 00:01:32,580
+A warning says the website might be restarted upon saving the settings, and
+
+22
+00:01:32,580 --> 00:01:36,601
+a label asks you to define which cultures are supported by the site.
+
+23
+00:01:37,083 --> 00:01:40,121
+The table is headed Culture and Default culture.
+
+24
+00:01:40,121 --> 00:01:43,891
+It lists one culture, the one of the system the site runs on.
+
+25
+00:01:43,891 --> 00:01:48,223
+Here it is English as used in the United States, marked as the default.
+
+26
+00:01:48,715 --> 00:01:52,263
+To add a culture, choose it in the list under the table.
+
+27
+00:01:52,263 --> 00:01:57,527
+Each entry shows the name of the culture, followed by its display name in parentheses.
+
+28
+00:01:57,527 --> 00:01:59,015
+Let's choose French.
+
+29
+00:01:59,537 --> 00:02:02,389
+Click Add culture, and French joins the table.
+
+30
+00:02:02,389 --> 00:02:06,063
+A culture that is in the table no longer appears in the list.
+
+31
+00:02:06,063 --> 00:02:08,037
+Let's add German the same way.
+
+32
+00:02:08,534 --> 00:02:12,326
+Each row has a radio button in the Default culture column, and the
+
+33
+00:02:12,326 --> 00:02:14,117
+selected one is the default.
+
+34
+00:02:14,117 --> 00:02:18,330
+Let's select French to see the choice move, and then select English again,
+
+35
+00:02:18,330 --> 00:02:20,174
+so English stays the default.
+
+36
+00:02:20,662 --> 00:02:24,504
+The trash button at the end of a row removes that culture from the table.
+
+37
+00:02:24,504 --> 00:02:28,346
+If you remove the default culture, the first culture in the table becomes
+
+38
+00:02:28,346 --> 00:02:29,902
+the default when you save.
+
+39
+00:02:30,378 --> 00:02:34,151
+Under the table, Fall back to parent culture(s) is a checkbox.
+
+40
+00:02:34,151 --> 00:02:37,923
+When it is checked, a text with no translation in a culture is
+
+41
+00:02:37,923 --> 00:02:42,583
+looked up in its parent culture, which for French as used in Canada is French.
+
+42
+00:02:42,583 --> 00:02:43,748
+Let's check it.
+
+43
+00:02:44,241 --> 00:02:45,209
+Click Save.
+
+44
+00:02:45,209 --> 00:02:47,375
+The page reloads with a message:
+
+45
+00:02:47,375 --> 00:02:49,711
+Site settings updated successfully.
+
+46
+00:02:50,184 --> 00:02:53,903
+Saving restarts the site, so a warning stays on screen:
+
+47
+00:02:53,903 --> 00:02:57,926
+The site has been restarted for the settings to take effect.
+
+48
+00:02:57,926 --> 00:03:02,254
+The table keeps its three cultures, and the default is unchanged.
+
+49
+00:03:06,454 --> 00:03:10,253
+A browser set to French asks for French, and the site answers with
+
+50
+00:03:10,253 --> 00:03:12,153
+French texts when it has them.
+
+51
+00:03:12,153 --> 00:03:16,268
+You can also ask for a culture yourself, by adding the culture parameter
+
+52
+00:03:16,268 --> 00:03:17,904
+to the address of a page.
+
+53
+00:03:18,654 --> 00:03:21,216
+The parameter applies to that request only.
+
+54
+00:03:21,216 --> 00:03:25,137
+This site has a small sample file with French labels for the Cultures
+
+55
+00:03:25,137 --> 00:03:27,124
+page, so you can see the effect.
+
+56
+00:03:28,712 --> 00:03:33,272
+Let's open the Cultures page again, asking for French with the culture parameter.
+
+57
+00:03:33,758 --> 00:03:38,654
+The heading, the column titles, the Add culture button, the checkbox label and
+
+58
+00:03:38,654 --> 00:03:40,927
+the Save button appear in French.
+
+59
+00:03:40,927 --> 00:03:43,958
+The table still lists the same three cultures.
+
+60
+00:03:44,462 --> 00:03:49,497
+Opening the page without the parameter brings English back, because the browser asks
+
+61
+00:03:49,497 --> 00:03:51,902
+for English, which the site supports.
+
+62
+00:03:56,102 --> 00:04:00,520
+The list of cultures is the base that other localization features build on.
+
+63
+00:04:00,520 --> 00:04:05,866
+Content Localization manages localized versions of a content item in the supported cultures,
+
+64
+00:04:05,866 --> 00:04:09,902
+and the Content Culture Picker offers the cultures on the front end.
+
+65
+00:04:10,652 --> 00:04:15,035
+Data Localization lets you translate texts that the site stores, such as the
+
+66
+00:04:15,035 --> 00:04:18,082
+names of content types, for each supported culture.
+
+67
+00:04:18,082 --> 00:04:21,503
+The Admin Culture Picker offers the cultures in the admin.
+
+68
+00:04:21,503 --> 00:04:23,802
+Separate videos cover these features.
+
+69
+00:04:24,552 --> 00:04:29,150
+The Administrator role has the Manage supported culture permission by default.
+
+70
+00:04:29,150 --> 00:04:33,693
+A deployment plan can export the settings with the step Culture settings, and
+
+71
+00:04:33,693 --> 00:04:35,882
+a recipe can set the cultures too.
+
+72
+00:04:37,882 --> 00:04:42,481
+You enabled Localization, chose the supported cultures, set a default, and saw a
+
+73
+00:04:42,481 --> 00:04:44,192
+culture at work on a page.
+
+74
+00:04:44,192 --> 00:04:45,582
+Thanks for watching.
+
