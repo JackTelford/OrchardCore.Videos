@@ -2683,18 +2683,18 @@
       "src/docs/reference/modules/Facebook/README.md",
       "src/docs/guides/integrate-facebook-plugins/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 4.0,
     "words": 605,
     "contentCommit": "",
-    "recordedBy": "",
+    "recordedBy": "wipke",
     "recordedOn": "",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: 05-check needs Meta's live servers: the Like, Share and Comments frames are drawn by Meta's SDK for a made-up application id on a local address; no local emulator, and the result is unknown (see its OPEN-QUESTIONS.md)"
   },
   {
     "slug": "search-overview",
