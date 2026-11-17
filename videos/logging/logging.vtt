@@ -1,0 +1,224 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.183
+Every Orchard Core site writes logs, and one application can serve many tenants.
+
+00:00:06.183 --> 00:00:10.884
+In this video, you configure the two logging libraries that put the name
+
+00:00:10.884 --> 00:00:13.174
+of the tenant in the log output:
+
+00:00:13.174 --> 00:00:14.560
+NLog and Serilog.
+
+00:00:19.160 --> 00:00:24.170
+One Orchard Core deployment can host several tenants, each an isolated site with
+
+00:00:24.170 --> 00:00:26.442
+its own content, theme and users.
+
+00:00:26.442 --> 00:00:30.112
+By default they write to the same log files, so a line is
+
+00:00:30.112 --> 00:00:33.200
+more useful when it says which tenant wrote it.
+
+00:00:33.950 --> 00:00:38.922
+Orchard Core has two logging packages, one for NLog and one for Serilog.
+
+00:00:38.922 --> 00:00:42.363
+You reference one of them from your web project.
+
+00:00:42.363 --> 00:00:47.080
+They are libraries, not modules, so the admin has nothing to enable.
+
+00:00:51.280 --> 00:00:55.830
+The Orchard Core CMS project template configures one for you.
+
+00:00:55.830 --> 00:01:01.195
+With dotnet new occms, the logger option takes nlog, serilog or none, and
+
+00:01:01.195 --> 00:01:06.900
+NLog is the default, as in the CMS web project of the Orchard Core repository.
+
+00:01:07.650 --> 00:01:13.653
+For NLog, the template adds the package, one call in Program.cs, an NLog.config
+
+00:01:13.653 --> 00:01:17.466
+file, and a Logging section in appsettings.json.
+
+00:01:17.466 --> 00:01:23.610
+For Serilog, it adds the package, two calls in Program.cs, and a Serilog section.
+
+00:01:23.610 --> 00:01:25.870
+For none, it adds nothing.
+
+00:01:26.620 --> 00:01:30.343
+Without the template, add the package with dotnet add package.
+
+00:01:30.343 --> 00:01:35.380
+Then copy the calls and the configuration that the template generates for your logger.
+
+00:01:39.580 --> 00:01:43.620
+In Program.cs, UseNLogHost turns NLog on for the host.
+
+00:01:43.620 --> 00:01:50.690
+It also registers a layout renderer named orchard-tenant-name, which prints the name of the tenant.
+
+00:01:51.440 --> 00:01:55.283
+UseNLogHost also sets an NLog variable named configDir.
+
+00:01:55.283 --> 00:02:00.009
+Its value is the folder in the ORCHARD_APP_DATA environment variable.
+
+00:02:00.009 --> 00:02:04.860
+Without the variable, it is the App_Data folder under the content root.
+
+00:02:05.610 --> 00:02:10.984
+In NLog.config, the file target writes to the logs folder under configDir, in
+
+00:02:10.984 --> 00:02:13.897
+a file named orchard-log with the date.
+
+00:02:13.897 --> 00:02:16.940
+The console target writes to the console.
+
+00:02:17.690 --> 00:02:22.870
+Each line holds the date and time, the tenant name, the trace identifier,
+
+00:02:22.870 --> 00:02:27.067
+the event id, the logger name, the level, and the message.
+
+00:02:27.067 --> 00:02:29.690
+An exception adds its stack trace.
+
+00:02:30.440 --> 00:02:34.994
+The orchard-tenant-name renderer reads the tenant of the current request.
+
+00:02:34.994 --> 00:02:40.470
+Without a request, it uses the tenant of the current scope, and otherwise it prints None.
+
+00:02:41.220 --> 00:02:43.531
+Three rules choose where events go:
+
+00:02:43.531 --> 00:02:47.702
+YesSql events go to the file, hosting lifetime events go to the file
+
+00:02:47.702 --> 00:02:52.550
+and the console, and every event at the default level or above goes to the file.
+
+00:02:53.300 --> 00:02:58.556
+Each rule reads its minimum level from the Logging section of appsettings.json:
+
+00:02:58.556 --> 00:03:03.751
+Default is Warning, and YesSql and Microsoft.Hosting.Lifetime are Information.
+
+00:03:03.751 --> 00:03:06.286
+Lower Default to write more events.
+
+00:03:06.286 --> 00:03:10.800
+The development settings of the Orchard Core web project use Debug.
+
+00:03:15.000 --> 00:03:20.756
+Reference the Serilog package, then call UseSerilog on the host builder in Program.cs.
+
+00:03:20.756 --> 00:03:26.762
+It reads the settings of the logger from the configuration, and Enrich.FromLogContext adds
+
+00:03:26.762 --> 00:03:29.640
+the properties that a middleware pushes.
+
+00:03:30.390 --> 00:03:33.828
+The second call goes in the callback of UseOrchardCore:
+
+00:03:33.828 --> 00:03:35.745
+UseSerilogTenantNameLogging.
+
+00:03:35.745 --> 00:03:40.029
+The middleware it adds runs after the one that resolves the tenant, so
+
+00:03:40.029 --> 00:03:42.340
+it can read the name of the tenant.
+
+00:03:43.090 --> 00:03:47.683
+The middleware takes the tenant name from the request or the current scope,
+
+00:03:47.683 --> 00:03:51.143
+or uses None, and pushes it as the TenantName property.
+
+00:03:51.143 --> 00:03:56.700
+NLog needs no middleware, because its renderer looks up the tenant as each line is rendered.
+
+00:03:57.450 --> 00:03:59.976
+The library also has UseSerilogWeb.
+
+00:03:59.976 --> 00:04:04.905
+It makes the same UseSerilog call, so one line can replace the first call.
+
+00:04:04.905 --> 00:04:09.280
+The call that adds the tenant middleware stays in UseOrchardCore.
+
+00:04:10.030 --> 00:04:16.144
+The Serilog section of appsettings.json sets a minimum level, with overrides for individual
+
+00:04:16.144 --> 00:04:18.729
+loggers, and the sinks to write to.
+
+00:04:18.729 --> 00:04:21.250
+The template configures two sinks:
+
+00:04:21.250 --> 00:04:22.700
+Console and File.
+
+00:04:23.450 --> 00:04:27.916
+The console sink prints the TenantName property in its output template.
+
+00:04:27.916 --> 00:04:33.136
+Each sink has its own restricted to minimum level, and the console's is Information.
+
+00:04:33.136 --> 00:04:37.660
+To write more events, lower the minimum level and the level of the sink.
+
+00:04:38.410 --> 00:04:42.506
+The file sink writes to the logs folder under App_Data, starts a file
+
+00:04:42.506 --> 00:04:45.182
+for each day, and is restricted to Warning.
+
+00:04:45.182 --> 00:04:49.715
+A comment in the template shows how to follow ORCHARD_APP_DATA, as NLog does:
+
+00:04:49.715 --> 00:04:54.030
+replace App_Data in the path with ORCHARD_APP_DATA between percent signs.
+
+00:04:58.230 --> 00:05:03.075
+NLog is configured by NLog.config and the Logging section, and it finds the
+
+00:05:03.075 --> 00:05:05.228
+tenant with a layout renderer.
+
+00:05:05.228 --> 00:05:10.850
+Serilog is configured by the Serilog section, and it finds the tenant with a middleware.
+
+00:05:11.600 --> 00:05:16.388
+With either library, the template's log files include the tenant name, and by
+
+00:05:16.388 --> 00:05:19.734
+default the files go to the logs folder of App_Data.
+
+00:05:19.734 --> 00:05:24.060
+To export logs to a collector, a separate video covers OpenTelemetry.
+
+00:05:26.060 --> 00:05:28.184
+That is logging in Orchard Core:
+
+00:05:28.184 --> 00:05:32.711
+NLog or Serilog, chosen with the project template, each putting the name of
+
+00:05:32.711 --> 00:05:34.667
+the tenant in the log output.
+
+00:05:34.667 --> 00:05:36.120
+Thanks for watching.
+
