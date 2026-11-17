@@ -1,0 +1,209 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.682
+Creating a tenant by hand means filling in forms, one after another.
+
+00:00:05.682 --> 00:00:10.554
+A workflow can create a tenant and set it up from values you type once.
+
+00:00:10.554 --> 00:00:15.110
+In this video, we build one, run it, and open the site it creates.
+
+00:00:19.710 --> 00:00:25.601
+The Tenants module adds four activities to the workflow designer, in the Tenant category.
+
+00:00:25.601 --> 00:00:28.019
+Create Tenant Task adds a tenant.
+
+00:00:28.019 --> 00:00:33.290
+Setup Tenant Task sets it up, with a site name, an administrator, and a recipe.
+
+00:00:34.040 --> 00:00:38.742
+Disable Tenant Task switches a running tenant off, and Enable Tenant Task switches
+
+00:00:38.742 --> 00:00:40.291
+a disabled one back on.
+
+00:00:40.291 --> 00:00:43.871
+Each of the four has a Failed outcome, which it takes when it
+
+00:00:43.871 --> 00:00:45.100
+can't do its job.
+
+00:00:45.850 --> 00:00:48.628
+Each activity checks its tenant first.
+
+00:00:48.628 --> 00:00:53.994
+Create Tenant Task needs a name that no tenant uses, and an address of its own.
+
+00:00:53.994 --> 00:00:58.160
+Setup Tenant Task needs a tenant in the Uninitialized state.
+
+00:00:58.910 --> 00:01:03.433
+Disable Tenant Task needs a Running tenant other than the Default one, and
+
+00:01:03.433 --> 00:01:06.203
+Enable Tenant Task needs a Disabled tenant.
+
+00:01:06.203 --> 00:01:10.670
+All four activities work in the Default tenant, which manages the others.
+
+00:01:14.970 --> 00:01:17.435
+The activities need two features.
+
+00:01:17.435 --> 00:01:23.060
+Open Tools, Features, search for Tenants, and select Enable on the Tenants feature.
+
+00:01:23.512 --> 00:01:27.094
+Search for Workflows, and enable that feature too.
+
+00:01:27.094 --> 00:01:32.082
+The admin menu then lists Multi-Tenancy, Tenants, and Design, Workflows.
+
+00:01:36.382 --> 00:01:39.590
+Open Design, Workflows, and select Create Workflow.
+
+00:01:39.590 --> 00:01:43.474
+A workflow only needs a name, so let's call this one Create and
+
+00:01:43.474 --> 00:01:44.712
+set up a tenant.
+
+00:01:45.184 --> 00:01:48.415
+Under More settings, clear Record activity data.
+
+00:01:48.415 --> 00:01:53.441
+It keeps the values each activity evaluated, in the journal of every instance,
+
+00:01:53.441 --> 00:01:57.031
+and this workflow will hold an administrator password.
+
+00:01:57.031 --> 00:01:59.844
+Then select Create and open the designer.
+
+00:02:00.294 --> 00:02:02.817
+The designer opens on an empty canvas.
+
+00:02:02.817 --> 00:02:07.347
+A workflow starts with an event, so we search the activities for Started,
+
+00:02:07.347 --> 00:02:11.533
+and add Started By Workflow, which becomes the start, marked Start.
+
+00:02:11.533 --> 00:02:15.604
+The designer's Run button can run a workflow that begins with it.
+
+00:02:19.904 --> 00:02:24.548
+Select Done on Started By Workflow, search for Create Tenant, and pick Create
+
+00:02:24.548 --> 00:02:26.954
+Tenant Task from the Tenant category.
+
+00:02:26.954 --> 00:02:29.864
+Its settings open at the bottom of the canvas.
+
+00:02:30.319 --> 00:02:35.066
+We type Bluebird in Name, and again in Description, so the tenant's name
+
+00:02:35.066 --> 00:02:37.500
+and its description read the same.
+
+00:02:37.500 --> 00:02:41.699
+The Url Prefix, bluebird, gives the site an address of its own.
+
+00:02:42.156 --> 00:02:46.455
+For What type of database to use, type the provider's name, Sqlite.
+
+00:02:46.455 --> 00:02:50.048
+For Recipe, type the name of a setup recipe, here Blog.
+
+00:02:50.048 --> 00:02:52.286
+The other fields can stay empty.
+
+00:02:56.586 --> 00:03:01.062
+Select Done on Create Tenant Task, and add Setup Tenant Task.
+
+00:03:01.062 --> 00:03:06.206
+Its Tenant name is Bluebird again, and its Site name is Bluebird Books.
+
+00:03:08.869 --> 00:03:15.239
+Admin user name, Admin email, and Admin password describe the administrator of the site:
+
+00:03:15.239 --> 00:03:19.169
+admin, owner@example.com, and a password you choose.
+
+00:03:19.624 --> 00:03:23.866
+The database fields and Recipe stay empty, so the task uses what Create
+
+00:03:23.866 --> 00:03:26.069
+Tenant Task stored for the tenant.
+
+00:03:26.069 --> 00:03:30.311
+The workflow stores the admin password as plain text, so anyone who can
+
+00:03:30.311 --> 00:03:32.294
+edit the workflow can read it.
+
+00:03:36.594 --> 00:03:37.832
+Select Publish.
+
+00:03:37.832 --> 00:03:43.314
+The designer saves your changes as you work, but a workflow runs its published version.
+
+00:03:43.772 --> 00:03:46.568
+Select Run, and Run again in the dialog.
+
+00:03:46.568 --> 00:03:52.342
+Setting up the site takes a moment, and then the dialog reports the Instance as Finished.
+
+00:03:52.800 --> 00:03:54.238
+Open the instance.
+
+00:03:54.238 --> 00:03:58.674
+The page highlights the activities and connections the instance ran:
+
+00:03:58.674 --> 00:04:02.810
+Started By Workflow, Create Tenant Task, and Setup Tenant Task.
+
+00:04:07.110 --> 00:04:13.920
+In Multi-Tenancy, Tenants, Bluebird is listed with its description, its database, Sqlite, its
+
+00:04:13.920 --> 00:04:16.810
+recipe, Blog, and the state Running.
+
+00:04:17.273 --> 00:04:19.451
+Select its name to open the site.
+
+00:04:19.451 --> 00:04:23.248
+It answers at the Url Prefix we gave it, and shows the content
+
+00:04:23.248 --> 00:04:24.643
+of the Blog recipe.
+
+00:04:28.843 --> 00:04:33.620
+A task that takes Failed leads nowhere unless you connect that outcome.
+
+00:04:33.620 --> 00:04:38.769
+With no connection, the workflow ends there, and the instance reads Finished.
+
+00:04:38.769 --> 00:04:43.793
+Connect Failed to an activity such as Log or Notify, to report the problem.
+
+00:04:44.543 --> 00:04:50.666
+Run this workflow a second time, and Create Tenant Task takes Failed, because Bluebird exists.
+
+00:04:50.666 --> 00:04:55.380
+Disable Tenant Task and Enable Tenant Task need only a tenant name, and
+
+00:04:55.380 --> 00:04:58.563
+any event can start a workflow that uses them.
+
+00:05:00.563 --> 00:05:04.432
+A workflow can create a tenant, set it up, and later disable or
+
+00:05:04.432 --> 00:05:06.955
+enable it, all from the Default tenant.
+
+00:05:06.955 --> 00:05:08.413
+Thanks for watching.
+
