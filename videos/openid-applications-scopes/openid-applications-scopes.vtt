@@ -1,0 +1,254 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.171
+Before a program can sign users in through your Orchard Core site, or
+
+00:00:05.171 --> 00:00:07.506
+ask it for a token, you register it.
+
+00:00:07.506 --> 00:00:12.344
+In this video, you create applications, choose their flows and scopes, and define
+
+00:00:12.344 --> 00:00:13.790
+a scope of your own.
+
+00:00:18.390 --> 00:00:23.303
+An application is a program that uses your site as its identity provider:
+
+00:00:23.303 --> 00:00:27.843
+a web store, a mobile app, or a service that runs without a person.
+
+00:00:27.843 --> 00:00:31.450
+You register each one, and each one has a Client Id.
+
+00:00:32.200 --> 00:00:35.961
+A scope is a named kind of access, such as Email or Roles.
+
+00:00:35.961 --> 00:00:40.250
+When an application asks for a token, it lists the scopes it wants,
+
+00:00:40.250 --> 00:00:44.540
+and you choose which scopes each application is allowed to request.
+
+00:00:45.290 --> 00:00:49.397
+Both are managed by the OpenID Connect Management UI feature.
+
+00:00:49.397 --> 00:00:54.974
+The OpenID Connect Authorization Server feature depends on it, so enabling the server
+
+00:00:54.974 --> 00:01:00.000
+adds the Applications and Scopes pages under Access Control, OpenID Connect.
+
+00:01:04.223 --> 00:01:08.120
+Let's open Access Control, OpenID Connect, Applications.
+
+00:01:08.120 --> 00:01:14.092
+The page lists each registered application by display name, with Edit and Delete buttons.
+
+00:01:14.092 --> 00:01:17.613
+New application opens the form that registers one.
+
+00:01:18.071 --> 00:01:22.553
+Display Name is how the application is listed, so we enter Inventory Sync.
+
+00:01:22.553 --> 00:01:24.682
+The Type is Confidential client:
+
+00:01:24.682 --> 00:01:30.171
+it must send its client secret when it communicates with the token and revocation endpoints.
+
+00:01:30.698 --> 00:01:36.450
+Client Id identifies the application when it asks for a token, so we enter inventory-sync.
+
+00:01:36.450 --> 00:01:41.303
+A confidential client also needs a Client Secret, and the button beside the
+
+00:01:41.303 --> 00:01:44.358
+field that generates a new value fills it in.
+
+00:01:44.825 --> 00:01:49.711
+Under Flows, the form lists only the flows that the authorization server allows.
+
+00:01:49.711 --> 00:01:52.268
+A separate video covers those settings.
+
+00:01:52.268 --> 00:01:56.870
+Let's check Allow Client Credentials Flow, which lets a service get a token
+
+00:01:56.870 --> 00:01:58.745
+for itself, without a user.
+
+00:01:59.238 --> 00:02:01.338
+Client Credentials Roles appears.
+
+00:02:01.338 --> 00:02:05.644
+The application receives the roles you check whenever it gets a token this
+
+00:02:05.644 --> 00:02:07.258
+way, so we check Editor.
+
+00:02:07.715 --> 00:02:11.218
+Allowed Scopes lists the scopes of the site by name.
+
+00:02:11.218 --> 00:02:15.991
+The default ones describe a user's data, which this service does not use,
+
+00:02:15.991 --> 00:02:18.951
+so we leave them unchecked and select Save.
+
+00:02:18.951 --> 00:02:22.575
+The list shows Inventory Sync beside Legacy Prototype.
+
+00:02:26.811 --> 00:02:31.073
+Let's select New application again to register a web application.
+
+00:02:31.073 --> 00:02:35.636
+We enter Storefront Web as the display name, and choose Public client.
+
+00:02:35.636 --> 00:02:41.399
+The Client Secret field disappears, because public applications don't use a client secret,
+
+00:02:41.399 --> 00:02:44.521
+and Allow Client Credentials Flow is disabled.
+
+00:02:44.976 --> 00:02:47.329
+The Client Id is storefront-web.
+
+00:02:47.329 --> 00:02:52.408
+Let's check Allow Authorization Code Flow, the flow that sends users to your
+
+00:02:52.408 --> 00:02:53.771
+site to sign in.
+
+00:02:53.771 --> 00:02:56.806
+Allow Refresh Token Flow becomes available.
+
+00:02:57.314 --> 00:03:00.066
+More fields appear below the flows.
+
+00:03:00.066 --> 00:03:04.765
+Redirect Uris lists where the site may send users back to, so we
+
+00:03:04.765 --> 00:03:07.316
+enter an address on example.com.
+
+00:03:07.316 --> 00:03:13.894
+Allow End Session Endpoint adds Post-Logout Redirect Uris, where users go after signing out.
+
+00:03:14.358 --> 00:03:19.432
+Require Proof Key for Code Exchange and Require Pushed Authorization Requests each require
+
+00:03:19.432 --> 00:03:21.704
+this application to use that feature.
+
+00:03:21.704 --> 00:03:25.615
+Each hint reminds you to check that your client library supports it.
+
+00:03:25.615 --> 00:03:27.148
+We check the first one.
+
+00:03:27.621 --> 00:03:31.409
+Consent type sets how authorization requests are handled.
+
+00:03:31.409 --> 00:03:37.123
+Explicit consent needs the user's approval, and the hint calls it the recommended option.
+
+00:03:37.123 --> 00:03:42.595
+Implicit consent shows no consent form, and External consent rejects a request unless
+
+00:03:42.595 --> 00:03:44.881
+an authorization already exists.
+
+00:03:45.354 --> 00:03:52.046
+Under Allowed Scopes, we check email and profile, which describe the signed-in user, and select Save.
+
+00:03:52.046 --> 00:03:56.174
+The list shows Storefront Web beside the other applications.
+
+00:04:00.413 --> 00:04:04.154
+As the list grows, Search narrows it by display name.
+
+00:04:04.154 --> 00:04:09.543
+We type Legacy and select the search button, and only Legacy Prototype remains.
+
+00:04:09.543 --> 00:04:11.953
+Clear brings back the full list.
+
+00:04:12.408 --> 00:04:15.673
+Edit opens the same form with the saved values.
+
+00:04:15.673 --> 00:04:18.754
+The Client Secret field is empty on purpose:
+
+00:04:18.754 --> 00:04:23.437
+enter a new value to replace the secret, or leave it empty to keep it.
+
+00:04:23.437 --> 00:04:28.798
+This page also offers Allow Introspection Endpoint and Allow Revocation Endpoint.
+
+00:04:29.277 --> 00:04:34.474
+On the list, Delete asks you to confirm that you want to remove the element.
+
+00:04:34.474 --> 00:04:38.657
+We select Ok, and Legacy Prototype is removed from the list.
+
+00:04:42.892 --> 00:04:46.480
+Let's open Access Control, OpenID Connect, Scopes.
+
+00:04:46.480 --> 00:04:53.015
+On a site with the authorization server enabled, the list holds Email, Phone, Profile and Roles.
+
+00:04:53.015 --> 00:04:58.012
+Each row shows the display name, the name in a badge, and a description.
+
+00:04:58.464 --> 00:05:00.313
+Let's select New scope.
+
+00:05:00.313 --> 00:05:04.648
+Display Name is how the scope is listed, and Name is the value
+
+00:05:04.648 --> 00:05:07.964
+an application requests, so it must be unique.
+
+00:05:07.964 --> 00:05:13.894
+We enter Inventory as the display name, inventory as the name, and a short description.
+
+00:05:14.359 --> 00:05:19.960
+Additional resources (API audiences) names the other APIs that tokens for this scope
+
+00:05:19.960 --> 00:05:22.511
+are meant for, separated by spaces.
+
+00:05:22.511 --> 00:05:26.494
+The hint under the field shows how to name another tenant.
+
+00:05:26.494 --> 00:05:28.299
+We enter inventory-api.
+
+00:05:28.751 --> 00:05:32.707
+The site itself is always an audience, so you never list it.
+
+00:05:32.707 --> 00:05:37.561
+We select Save, and Inventory appears in the list with its name in a badge.
+
+00:05:38.017 --> 00:05:41.611
+Creating a scope doesn't allow it on any application.
+
+00:05:41.611 --> 00:05:47.277
+Let's open Applications, edit Inventory Sync, and check inventory under Allowed Scopes.
+
+00:05:47.731 --> 00:05:51.367
+Saving stores the choice as part of the application.
+
+00:05:51.367 --> 00:05:55.631
+Inventory Sync is then allowed to request the inventory scope.
+
+00:05:57.631 --> 00:06:02.330
+Applications register the programs that use your site as an identity provider, and
+
+00:06:02.330 --> 00:06:04.573
+scopes define what they can request.
+
+00:06:04.573 --> 00:06:05.961
+Thanks for watching.
+
