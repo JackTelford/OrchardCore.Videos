@@ -1,0 +1,40 @@
+1
+00:00:03,220 --> 00:00:07,147
+Let's open Search, Queries, All Queries in the admin menu.
+
+2
+00:00:07,147 --> 00:00:12,364
+A site created with the Blog recipe has one saved query, RecentBlogPosts, which
+
+3
+00:00:12,364 --> 00:00:14,450
+the Blog theme runs by name.
+
+4
+00:00:14,910 --> 00:00:18,251
+Each row shows the name and a badge for the source.
+
+5
+00:00:18,251 --> 00:00:22,412
+SQL Queries adds a Run button to its queries, and every query has
+
+6
+00:00:22,412 --> 00:00:24,170
+Edit and Delete buttons.
+
+7
+00:00:24,622 --> 00:00:27,497
+Add Query opens Available Query Types.
+
+8
+00:00:27,497 --> 00:00:30,961
+Each source feature adds a card to this dialog.
+
+9
+00:00:30,961 --> 00:00:35,340
+On this site, SQL is the only one, because SQL Queries is the
+
+10
+00:00:35,340 --> 00:00:37,562
+only source feature enabled.
+

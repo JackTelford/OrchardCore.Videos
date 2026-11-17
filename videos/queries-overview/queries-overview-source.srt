@@ -1,0 +1,68 @@
+1
+00:00:03,200 --> 00:00:06,907
+To add a source of your own, implement IQuerySource.
+
+2
+00:00:06,907 --> 00:00:14,192
+Its Name identifies the source, and ExecuteQueryAsync takes a Query and parameters, and returns the results.
+
+3
+00:00:14,192 --> 00:00:18,793
+Values specific to the source, such as the SQL text, are read from
+
+4
+00:00:18,793 --> 00:00:21,030
+metadata stored on the query.
+
+5
+00:00:21,780 --> 00:00:25,060
+Register the source with AddQuerySource and its name.
+
+6
+00:00:25,060 --> 00:00:28,785
+The query manager finds a source by that name, so a query can
+
+7
+00:00:28,785 --> 00:00:32,510
+be created and run only when its Source is a registered name.
+
+8
+00:00:33,260 --> 00:00:37,425
+A DisplayDriver for Query builds the source's part of the form, such as
+
+9
+00:00:37,425 --> 00:00:39,642
+Return Documents and Query for SQL.
+
+10
+00:00:39,642 --> 00:00:43,753
+It returns nothing unless the query's Source is its own, and on update
+
+11
+00:00:43,753 --> 00:00:46,890
+it stores the source's values on the query with Put.
+
+12
+00:00:47,640 --> 00:00:52,365
+A Link view named after the source draws its card in the Add Query dialog.
+
+13
+00:00:52,365 --> 00:00:56,912
+SQL, Lucene and Elasticsearch each have one, and its Add link opens the
+
+14
+00:00:56,912 --> 00:00:58,920
+create page for that source.
+
+15
+00:00:59,670 --> 00:01:04,124
+A source reads its own properties from recipe data in an IQueryHandler.
+
+16
+00:01:04,124 --> 00:01:08,695
+The SQL source checks the query's Source, then copies the Template when a
+
+17
+00:01:08,695 --> 00:01:11,240
+recipe initializes or updates a query.
+

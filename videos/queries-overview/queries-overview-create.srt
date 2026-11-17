@@ -1,0 +1,68 @@
+1
+00:00:03,222 --> 00:00:07,881
+To create a query, choose Add Query, then Add on the card of its source.
+
+2
+00:00:07,881 --> 00:00:12,062
+The page names the source in its title, and the form starts with
+
+3
+00:00:12,062 --> 00:00:14,212
+the fields every query shares.
+
+4
+00:00:14,666 --> 00:00:17,500
+Name is the technical name every caller uses.
+
+5
+00:00:17,500 --> 00:00:21,724
+It takes letters and digits, starts with a letter, and must be unique.
+
+6
+00:00:21,724 --> 00:00:24,336
+Let's call this query PublishedBlogPosts.
+
+7
+00:00:24,792 --> 00:00:26,304
+Schema is optional.
+
+8
+00:00:26,304 --> 00:00:29,572
+It tells the GraphQL API what the query returns.
+
+9
+00:00:29,572 --> 00:00:32,536
+The rest of the form comes from the source:
+
+10
+00:00:32,536 --> 00:00:38,102
+for SQL, Return Documents loads the content items whose document identifiers the query
+
+11
+00:00:38,102 --> 00:00:40,462
+selects, and Query holds the SQL.
+
+12
+00:00:40,945 --> 00:00:45,889
+Let's check Return Documents, and enter a query that selects the document identifiers
+
+13
+00:00:45,889 --> 00:00:47,735
+of the published blog posts.
+
+14
+00:00:48,213 --> 00:00:51,951
+Save adds the query to the list, and a message confirms it.
+
+15
+00:00:51,951 --> 00:00:56,033
+Its row has the same source badge and buttons as RecentBlogPosts.
+
+16
+00:00:56,483 --> 00:00:59,969
+As the list grows, the search box filters it by name.
+
+17
+00:00:59,969 --> 00:01:04,163
+Let's search for Published, which leaves only PublishedBlogPosts.
+
