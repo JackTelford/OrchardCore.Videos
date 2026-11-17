@@ -1,0 +1,248 @@
+1
+00:00:01,000 --> 00:00:06,327
+Orchard Core generates the ID of a content item, and it can differ between sites.
+
+2
+00:00:06,327 --> 00:00:09,878
+The Alias part gives an item a name that you choose.
+
+3
+00:00:09,878 --> 00:00:14,226
+In this video, we add the part to a content type, create aliases,
+
+4
+00:00:14,226 --> 00:00:16,430
+and see the rules they follow.
+
+5
+00:00:21,030 --> 00:00:24,427
+A content item ID is a string that Orchard Core generates.
+
+6
+00:00:24,427 --> 00:00:28,248
+The same menu can have a different ID on your development site and
+
+7
+00:00:28,248 --> 00:00:32,600
+on your production site, so nothing that moves between sites can rely on it.
+
+8
+00:00:33,350 --> 00:00:36,817
+An alias is a name that you choose, such as main-menu.
+
+9
+00:00:36,817 --> 00:00:42,190
+It is stored with the content item, so recipes and deployments carry it to other sites.
+
+10
+00:00:42,190 --> 00:00:47,390
+An alias is not a web address, because a page address comes from the Autoroute part.
+
+11
+00:00:51,620 --> 00:00:55,306
+Let's open Tools, then Features, and search for alias.
+
+12
+00:00:55,306 --> 00:01:00,589
+The Alias feature is listed under Content Management and is enabled, because the
+
+13
+00:01:00,589 --> 00:01:02,432
+Blog recipe turns it on.
+
+14
+00:01:02,432 --> 00:01:04,890
+On another site, you click Enable.
+
+15
+00:01:09,095 --> 00:01:14,502
+Let's open Design, Content Definition, Content Types, and click Edit on the Article type.
+
+16
+00:01:14,502 --> 00:01:18,201
+A type is made of parts, and its Parts list shows the parts
+
+17
+00:01:18,201 --> 00:01:19,965
+that Article already has.
+
+18
+00:01:20,416 --> 00:01:21,706
+We click Add Parts.
+
+19
+00:01:21,706 --> 00:01:25,111
+The page lists the parts that can be added, and we click Add
+
+20
+00:01:25,111 --> 00:01:26,916
+& Configure on the Alias row.
+
+21
+00:01:27,371 --> 00:01:30,767
+The settings of the part open on their own page.
+
+22
+00:01:30,767 --> 00:01:33,472
+Options decides who writes the alias:
+
+23
+00:01:33,472 --> 00:01:37,937
+with Alias is editable, an editor can type one, and with Alias is
+
+24
+00:01:37,937 --> 00:01:42,151
+generated and input is disabled, the editor cannot change it.
+
+25
+00:01:42,601 --> 00:01:47,211
+Pattern is the template that builds an alias while the alias is empty.
+
+26
+00:01:47,211 --> 00:01:52,913
+The default uses the display text of the item, in lowercase, with hyphens between words.
+
+27
+00:01:52,913 --> 00:01:55,461
+We keep the defaults and click Save.
+
+28
+00:01:59,666 --> 00:02:05,934
+Under Content, Content Items, we choose New, then Article, and type the title Contact Us.
+
+29
+00:02:05,934 --> 00:02:09,035
+The Alias field is further down the page.
+
+30
+00:02:09,035 --> 00:02:13,126
+We leave it empty, because Orchard Core can generate it.
+
+31
+00:02:13,585 --> 00:02:16,413
+We click Publish, and then edit the item again.
+
+32
+00:02:16,413 --> 00:02:20,894
+The Alias field holds contact-us, which Orchard Core built from the title when
+
+33
+00:02:20,894 --> 00:02:22,175
+it saved the item.
+
+34
+00:02:22,628 --> 00:02:25,905
+Let's change the title to Contact and publish again.
+
+35
+00:02:25,905 --> 00:02:31,611
+The alias stays contact-us, because Orchard Core builds an alias only while the field is empty.
+
+36
+00:02:31,611 --> 00:02:33,928
+That is what keeps an alias stable.
+
+37
+00:02:34,379 --> 00:02:38,272
+To generate an alias again, we clear the field and publish.
+
+38
+00:02:38,272 --> 00:02:42,764
+Orchard Core builds the alias from the title Contact, so when we open
+
+39
+00:02:42,764 --> 00:02:45,519
+the item again, the field holds contact.
+
+40
+00:02:49,723 --> 00:02:52,040
+An editor can also type an alias.
+
+41
+00:02:52,040 --> 00:02:55,962
+We create an Article titled Help Center and enter main-menu.
+
+42
+00:02:55,962 --> 00:03:00,656
+When we publish, the editor shows an error and saves nothing, because the
+
+43
+00:03:00,656 --> 00:03:02,973
+Main Menu already has that alias.
+
+44
+00:03:07,189 --> 00:03:13,301
+To stop editors from changing aliases, we edit the Alias part of the Article type again.
+
+45
+00:03:13,301 --> 00:03:18,829
+We choose Alias is generated and input is disabled for Options, and click Save.
+
+46
+00:03:19,289 --> 00:03:21,357
+Let's open the About article.
+
+47
+00:03:21,357 --> 00:03:26,263
+Its Alias field is disabled and empty, because About existed before the part.
+
+48
+00:03:26,263 --> 00:03:31,169
+We click Publish and open the article again, and the Alias field holds about.
+
+49
+00:03:35,369 --> 00:03:40,859
+An alias belongs to one content item on the whole site, whatever its content type.
+
+50
+00:03:40,859 --> 00:03:45,288
+A generated alias that is already taken gets a number at the end.
+
+51
+00:03:45,288 --> 00:03:49,592
+An alias holds up to 735 characters, and finding an item by its
+
+52
+00:03:49,592 --> 00:03:51,589
+alias ignores letter case.
+
+53
+00:03:55,781 --> 00:04:00,093
+The Menu feature depends on Alias, so menus have an alias too.
+
+54
+00:04:00,093 --> 00:04:05,609
+Under Content, Menus, we edit the Main Menu, and its Alias field holds main-menu.
+
+55
+00:04:05,609 --> 00:04:07,321
+We leave it as it is.
+
+56
+00:04:07,776 --> 00:04:11,229
+The layout of the Blog theme asks for the menu by this alias.
+
+57
+00:04:11,229 --> 00:04:14,836
+On the front end, the Home and About links in the navigation bar
+
+58
+00:04:14,836 --> 00:04:16,176
+come from that menu.
+
+59
+00:04:18,176 --> 00:04:22,026
+The Alias part gives a content item a name that stays with it
+
+60
+00:04:22,026 --> 00:04:23,405
+from site to site.
+
+61
+00:04:23,405 --> 00:04:28,462
+Menus, templates, and queries can find the item by that name, instead of by an ID.
+
+62
+00:04:28,462 --> 00:04:29,956
+Thanks for watching.
+
