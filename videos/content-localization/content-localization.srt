@@ -1,0 +1,348 @@
+1
+00:00:01,000 --> 00:00:06,952
+Content Localization lets one page exist in several languages, with each translation stored
+
+2
+00:00:06,952 --> 00:00:09,100
+as a content item of its own.
+
+3
+00:00:09,100 --> 00:00:13,764
+In this video, you add the Localization part to a content type, create
+
+4
+00:00:13,764 --> 00:00:17,630
+translations, manage them, and control who can translate.
+
+5
+00:00:22,230 --> 00:00:26,212
+A multilingual site needs the same page in several languages.
+
+6
+00:00:26,212 --> 00:00:31,560
+With the Content Localization module, each language is a separate content item, with
+
+7
+00:00:31,560 --> 00:00:34,710
+its own content and its own publication status.
+
+8
+00:00:35,460 --> 00:00:38,708
+The Localization part links the items together.
+
+9
+00:00:38,708 --> 00:00:40,363
+It stores two values:
+
+10
+00:00:40,363 --> 00:00:44,837
+the culture of the item, such as French, and a localization set, an
+
+11
+00:00:44,837 --> 00:00:48,760
+identifier that every translation of the same item shares.
+
+12
+00:00:49,510 --> 00:00:53,716
+An item created with the part gets the default culture of the site.
+
+13
+00:00:53,716 --> 00:00:58,787
+Creating a translation copies the item into another supported culture, as a draft.
+
+14
+00:00:58,787 --> 00:01:01,610
+You then translate the copy and publish it.
+
+15
+00:01:05,861 --> 00:01:09,800
+Content Localization is a feature, so you turn it on first.
+
+16
+00:01:09,800 --> 00:01:13,678
+Open Tools, Features, and search for Content Localization.
+
+17
+00:01:13,678 --> 00:01:16,951
+It appears in the Internationalization category.
+
+18
+00:01:17,405 --> 00:01:21,733
+The module builds on the Localization feature, which is already enabled on this
+
+19
+00:01:21,733 --> 00:01:23,871
+site and holds its list of cultures.
+
+20
+00:01:23,871 --> 00:01:27,485
+Click Enable, and the page confirms that the feature was enabled.
+
+21
+00:01:27,945 --> 00:01:31,077
+Next, open Settings, Localization, Cultures.
+
+22
+00:01:31,077 --> 00:01:36,402
+This page lists the supported cultures by their codes, here for English, French
+
+23
+00:01:36,402 --> 00:01:39,911
+and Spanish, and marks one as the Default culture.
+
+24
+00:01:39,911 --> 00:01:42,605
+A separate video covers it in detail.
+
+25
+00:01:46,893 --> 00:01:51,178
+A translation needs a content type that has the Localization part.
+
+26
+00:01:51,178 --> 00:01:56,473
+Open Design, Content Definition, Content Types, and click Edit on the Article type.
+
+27
+00:01:56,926 --> 00:01:58,210
+Click Add Parts.
+
+28
+00:01:58,210 --> 00:02:01,829
+Each part you can attach is listed with its description.
+
+29
+00:02:01,829 --> 00:02:05,156
+Select Localization, then click Add Selected Parts.
+
+30
+00:02:05,644 --> 00:02:11,299
+Localization appears in the Parts list of the Article type, with a message confirming the addition.
+
+31
+00:02:11,299 --> 00:02:13,561
+The part has no settings of its own.
+
+32
+00:02:13,561 --> 00:02:18,194
+Items that already exist receive their culture when you save them in the editor.
+
+33
+00:02:22,378 --> 00:02:27,440
+The Article type already has an item, About, created before the part was added.
+
+34
+00:02:27,440 --> 00:02:31,132
+Open Content, Content Items, and list the Article items.
+
+35
+00:02:31,132 --> 00:02:35,718
+The About row shows neither a culture badge nor a Localizations button.
+
+36
+00:02:36,174 --> 00:02:39,549
+Click Edit, then scroll to the bottom of the editor.
+
+37
+00:02:39,549 --> 00:02:42,575
+A collapsed section shows the Current Culture.
+
+38
+00:02:42,575 --> 00:02:47,114
+Open it, and it asks you to save the item before creating localizations.
+
+39
+00:02:47,579 --> 00:02:48,716
+Click Publish.
+
+40
+00:02:48,716 --> 00:02:52,410
+The About article receives the default culture of the site.
+
+41
+00:02:52,410 --> 00:02:57,639
+Back in the list, a globe badge shows the culture, and a Localizations button appears.
+
+42
+00:03:01,890 --> 00:03:05,929
+Click Edit on About again and open the Current Culture section.
+
+43
+00:03:05,929 --> 00:03:10,671
+It lists the other supported cultures, French and Spanish, each with a plus
+
+44
+00:03:10,671 --> 00:03:13,070
+icon because no translation exists.
+
+45
+00:03:13,533 --> 00:03:15,053
+Click French (France).
+
+46
+00:03:15,053 --> 00:03:19,178
+The module copies the article into that culture as a draft, then opens
+
+47
+00:03:19,178 --> 00:03:23,683
+the copy in the editor with a message that the localized version was created.
+
+48
+00:03:24,149 --> 00:03:28,315
+The copy keeps the English title and subtitle, ready to translate.
+
+49
+00:03:28,315 --> 00:03:32,482
+Its permalink is empty, because the module clears it so that it is
+
+50
+00:03:32,482 --> 00:03:35,259
+generated again from the translated title.
+
+51
+00:03:35,720 --> 00:03:38,061
+Type the French title and subtitle.
+
+52
+00:03:38,061 --> 00:03:42,914
+At the bottom, the Current Culture section shows French (France) for this item,
+
+53
+00:03:42,914 --> 00:03:46,740
+and links to the English item and to the missing Spanish one.
+
+54
+00:03:47,193 --> 00:03:48,301
+Click Publish.
+
+55
+00:03:48,301 --> 00:03:52,071
+A translation is a content item of its own, so it is published
+
+56
+00:03:52,071 --> 00:03:57,393
+separately from the English article, and its permalink is generated from the French title.
+
+57
+00:04:01,585 --> 00:04:06,186
+The Localizations button on a list row shows every other culture.
+
+58
+00:04:06,186 --> 00:04:09,750
+French (France) has a pen icon because it exists.
+
+59
+00:04:09,750 --> 00:04:14,805
+Spanish (Spain) has a plus icon, so click it to create that translation.
+
+60
+00:04:15,258 --> 00:04:20,529
+Enter the Spanish title and subtitle, then click Save Draft instead of Publish.
+
+61
+00:04:20,529 --> 00:04:24,808
+The Spanish translation stays unpublished until you publish it.
+
+62
+00:04:25,272 --> 00:04:28,681
+Back in the list, each translation is a row of its own.
+
+63
+00:04:28,681 --> 00:04:33,095
+The globe badge shows the culture, and the Published or Draft badge shows
+
+64
+00:04:33,095 --> 00:04:34,772
+the status of each item.
+
+65
+00:04:35,228 --> 00:04:39,650
+To see one language, open the Culture drop-down and choose a culture.
+
+66
+00:04:39,650 --> 00:04:44,898
+The list shows only the items in that culture, and All cultures removes the filter.
+
+67
+00:04:49,091 --> 00:04:53,609
+On the site, each published translation is served at its own address.
+
+68
+00:04:53,609 --> 00:04:58,911
+Click View on the English article to open it, with its English title and subtitle.
+
+69
+00:04:59,369 --> 00:05:04,052
+The French translation opens at a different address, generated from its own title,
+
+70
+00:05:04,052 --> 00:05:06,499
+and shows the French title and subtitle.
+
+71
+00:05:06,956 --> 00:05:10,220
+A visitor reaches a translation through its address.
+
+72
+00:05:10,220 --> 00:05:15,173
+Letting visitors switch between languages is the job of the Content Culture Picker
+
+73
+00:05:15,173 --> 00:05:17,706
+feature, which a separate video covers.
+
+74
+00:05:21,902 --> 00:05:24,547
+Two permissions control translation.
+
+75
+00:05:24,547 --> 00:05:30,216
+Under Access Control, Roles, click Edit on the Author role, and search for Localize.
+
+76
+00:05:30,216 --> 00:05:33,492
+They appear in the Content Localization group.
+
+77
+00:05:33,942 --> 00:05:38,162
+Localize content for others lets a role translate any item.
+
+78
+00:05:38,162 --> 00:05:43,745
+Localize own content limits translation to items the user created, and the first
+
+79
+00:05:43,745 --> 00:05:46,082
+permission implies the second.
+
+80
+00:05:46,538 --> 00:05:51,304
+By default, the Author and Contributor roles hold only Localize own content, and
+
+81
+00:05:51,304 --> 00:05:54,130
+the Administrator and Editor roles hold both.
+
+82
+00:05:54,130 --> 00:05:57,678
+A user also needs permission to edit content of that type.
+
+83
+00:05:59,678 --> 00:06:03,515
+Each translation is a content item of its own, tied to the others
+
+84
+00:06:03,515 --> 00:06:05,191
+by the Localization part.
+
+85
+00:06:05,191 --> 00:06:09,515
+Enable the module, add the part to a content type, and create translations
+
+86
+00:06:09,515 --> 00:06:11,352
+from the editor or the list.
+
+87
+00:06:11,352 --> 00:06:12,758
+Thanks for watching.
+
