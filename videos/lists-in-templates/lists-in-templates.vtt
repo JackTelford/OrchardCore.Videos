@@ -1,0 +1,176 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.116
+A list is a content item that holds other content items, such as
+
+00:00:05.116 --> 00:00:06.704
+a blog and its posts.
+
+00:00:06.704 --> 00:00:09.585
+This video shows how templates read a list:
+
+00:00:09.585 --> 00:00:15.230
+the ListPart template, and the three Liquid filters container, list_items, and list_count.
+
+00:00:19.830 --> 00:00:22.519
+A list is a content item with a ListPart.
+
+00:00:22.519 --> 00:00:27.039
+Each item inside the list carries a ContainedPart, which stores the id of
+
+00:00:27.039 --> 00:00:31.730
+its list, the content type of that list, and the position of the item in it.
+
+00:00:32.480 --> 00:00:37.077
+The Lists module adds three Liquid filters that read this relationship:
+
+00:00:37.077 --> 00:00:39.703
+container, list_items, and list_count.
+
+00:00:39.703 --> 00:00:44.240
+They work in any Liquid template, not only in the templates of a list.
+
+00:00:48.440 --> 00:00:52.762
+To display a list, the ListPart shape receives a ListPartViewModel.
+
+00:00:52.762 --> 00:00:58.032
+Its ContentItems property holds one page of published items, and its Pager property
+
+00:00:58.032 --> 00:01:00.460
+holds the links to the other pages.
+
+00:01:01.210 --> 00:01:06.419
+The Blog Theme overrides the template of this shape in Blog-ListPart.liquid.
+
+00:01:06.419 --> 00:01:13.090
+It loops over Model.ContentItems, builds the Summary display of each item, and renders Model.Pager.
+
+00:01:13.090 --> 00:01:17.410
+Because of its name, it applies to the Blog content type only.
+
+00:01:21.610 --> 00:01:26.237
+The container filter takes a content item and returns the list that holds it.
+
+00:01:26.237 --> 00:01:30.139
+In the Blog recipe, the Autoroute pattern of a blog post uses it
+
+00:01:30.139 --> 00:01:33.540
+to start each post's address with the name of its blog.
+
+00:01:34.290 --> 00:01:37.389
+If an item is not in a list, or its list is not
+
+00:01:37.389 --> 00:01:40.371
+published, container returns the item itself.
+
+00:01:40.371 --> 00:01:42.651
+The input must be a content item:
+
+00:01:42.651 --> 00:01:44.990
+anything else raises an exception.
+
+00:01:49.190 --> 00:01:54.735
+The list_items filter returns the content items of a list, and list_count counts them.
+
+00:01:54.735 --> 00:01:58.774
+Give either one a content item, or the content item id of the
+
+00:01:58.774 --> 00:02:00.160
+list as a string.
+
+00:02:00.910 --> 00:02:06.013
+Only published items count, so an item that exists only as a draft is left out.
+
+00:02:06.013 --> 00:02:07.815
+The filters do not page:
+
+00:02:07.815 --> 00:02:12.798
+list_count counts the whole list, and list_items returns all of it, sorted by
+
+00:02:12.798 --> 00:02:15.500
+the order stored in each ContainedPart.
+
+00:02:19.700 --> 00:02:22.491
+Let's use all three in the template for blog posts.
+
+00:02:22.491 --> 00:02:26.408
+The assign tag saves the blog that container returns for the current post,
+
+00:02:26.408 --> 00:02:29.982
+and the template prints its title as a link, followed by its number
+
+00:02:29.982 --> 00:02:31.990
+of published posts from list_count.
+
+00:02:32.740 --> 00:02:37.575
+Then list_items returns the published posts of that blog, assign saves them in
+
+00:02:37.575 --> 00:02:41.259
+a variable, and a for loop prints a link to each one, with
+
+00:02:41.259 --> 00:02:45.000
+display_url for the address and display_text for the title.
+
+00:02:45.750 --> 00:02:48.973
+Add this block at the end of the post template:
+
+00:02:48.973 --> 00:02:55.296
+Content-BlogPost.liquid in a theme, or a template named Content__BlogPost under Design, Templates.
+
+00:02:55.296 --> 00:02:59.735
+A template saved in the admin takes priority over the theme file of
+
+00:02:59.735 --> 00:03:02.410
+the same name, so it must be complete.
+
+00:03:04.023 --> 00:03:10.275
+In the admin, Design, Templates lists the template under its name, Content__BlogPost.
+
+00:03:10.275 --> 00:03:13.573
+It applies to the page of every blog post.
+
+00:03:14.029 --> 00:03:17.790
+On the page of a blog post, the block follows the content.
+
+00:03:17.790 --> 00:03:22.903
+The heading links back to the blog, and list_count reports three published posts,
+
+00:03:22.903 --> 00:03:25.429
+although the blog also holds a draft.
+
+00:03:25.879 --> 00:03:30.045
+Below the count, the loop prints a link to each published post.
+
+00:03:30.045 --> 00:03:35.479
+The draft is missing from the list, because list_items returns published items only.
+
+00:03:39.679 --> 00:03:44.278
+In a Razor view, the Orchard helper offers the same two queries:
+
+00:03:44.278 --> 00:03:47.890
+QueryListItemsAsync and QueryListItemsCountAsync.
+
+00:03:47.890 --> 00:03:50.189
+Both take the id of the list.
+
+00:03:50.939 --> 00:03:55.153
+An optional second argument is a predicate on the content item index.
+
+00:03:55.153 --> 00:03:57.906
+It replaces the default of published items:
+
+00:03:57.906 --> 00:04:01.839
+a predicate on the Latest property of the index includes drafts.
+
+00:04:03.839 --> 00:04:06.040
+That is how templates read a list:
+
+00:04:06.040 --> 00:04:10.387
+the ListPart shape renders one page of items, container finds the list of
+
+00:04:10.387 --> 00:04:15.009
+an item, and list_items and list_count work on every published item of a list.
+
+00:04:15.009 --> 00:04:16.439
+Thanks for watching.
+

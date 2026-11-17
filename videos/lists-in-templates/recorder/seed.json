@@ -1,0 +1,141 @@
+{
+ "steps": [
+  {
+   "name": "Content",
+   "data": [
+    {
+     "ContentItemId": "4harbourpost0000000000001x",
+     "ContentType": "BlogPost",
+     "DisplayText": "Notes from the harbour",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2026-11-11T09:00:00Z",
+     "ModifiedUtc": "2026-11-11T09:00:00Z",
+     "PublishedUtc": "2026-11-11T09:00:00Z",
+     "Author": "admin",
+     "Owner": "admin",
+     "TitlePart": {
+      "Title": "Notes from the harbour"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "__BLOG__",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "AutoroutePart": {
+      "Path": "blog/notes-from-the-harbour"
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Notes for the post Notes from the harbour."
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Boats, tides and early mornings"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4harbourpost0000000000002x",
+     "ContentType": "BlogPost",
+     "DisplayText": "A week in the highlands",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2026-11-12T09:00:00Z",
+     "ModifiedUtc": "2026-11-12T09:00:00Z",
+     "PublishedUtc": "2026-11-12T09:00:00Z",
+     "Author": "admin",
+     "Owner": "admin",
+     "TitlePart": {
+      "Title": "A week in the highlands"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "__BLOG__",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "AutoroutePart": {
+      "Path": "blog/a-week-in-the-highlands"
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Notes for the post A week in the highlands."
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Trails, weather and good boots"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4harbourpost0000000000003x",
+     "ContentType": "BlogPost",
+     "DisplayText": "Market day in the old town",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2026-11-13T09:00:00Z",
+     "ModifiedUtc": "2026-11-13T09:00:00Z",
+     "PublishedUtc": "2026-11-13T09:00:00Z",
+     "Author": "admin",
+     "Owner": "admin",
+     "TitlePart": {
+      "Title": "Market day in the old town"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "__BLOG__",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "AutoroutePart": {
+      "Path": "blog/market-day-in-the-old-town"
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Notes for the post Market day in the old town."
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Stalls, spices and a slow lunch"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4harbourpost0000000000004x",
+     "ContentType": "BlogPost",
+     "DisplayText": "Packing list for the coast",
+     "Latest": true,
+     "Published": false,
+     "CreatedUtc": "2026-11-14T09:00:00Z",
+     "ModifiedUtc": "2026-11-14T09:00:00Z",
+     "Author": "admin",
+     "Owner": "admin",
+     "TitlePart": {
+      "Title": "Packing list for the coast"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "__BLOG__",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "AutoroutePart": {
+      "Path": "blog/packing-list-for-the-coast"
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Notes for the post Packing list for the coast."
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Still being written"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "Templates",
+   "Templates": {
+    "Content__BlogPost": {
+     "Description": "Blog post with the list filters",
+     "Content": "{% zone \"Header\" %}\n    <!-- Page Header -->\n    <!-- Set your background image for this header on the line below. -->\n    {% assign imagePath = Model.ContentItem.Content.BlogPost.Image.Paths.first %}\n    {% if imagePath == nil %}\n        <header class=\"masthead\" style=\"background-image: url('{{ \"~/TheBlogTheme/assets/img/post-bg.jpg\" | href }}')\">\n    {% else %}\n        {% assign anchor = Model.ContentItem.Content.BlogPost.Image.Anchors.first %}\n        <header class=\"masthead\" style=\"background-image: url('{{ imagePath | asset_url | resize_url: profile:\"banner\", anchor: anchor }}')\">\n    {% endif %}\n        <div class=\"container position-relative px-4 px-lg-5\">\n            <div class=\"row gx-4 gx-lg-5 justify-content-center\">\n                <div class=\"col-md-10 col-lg-8 col-xl-7\">\n                    <div class=\"post-heading\">\n                        <h1>{{ Model.ContentItem.DisplayText }}</h1>\n                        <h2 class=\"subheading\">{{ Model.ContentItem.Content.BlogPost.Subtitle.Text }}</h2>\n                        <span class=\"meta\">\n                            {% assign format = \"MMMM dd, yyyy\" | t %}\n                            {% assign dateTime = \"DateTime\" | shape_new: utc: Model.ContentItem.CreatedUtc, format: format | shape_stringify %}\n                            {{ \"Posted by\" | t }} <a href=\"#\">{{ Model.ContentItem.Author }}</a> {{ \"on {0}\" | t: dateTime | raw }}\n                        </span>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </header>\n{% endzone %}\n\n{{ Model.Content.ContentsMetadata | shape_render }}\n{{ Model.Content.MarkdownBodyPart | shape_render }}\n{{ Model.Content.BlogPost-Category | shape_render }}\n{{ Model.Content.BlogPost-Tags | shape_render }}\n\n{% assign blog = Model.ContentItem | container %}\n\n<h3>More in\n    <a href=\"{{ blog | display_url }}\">{{ blog | display_text }}</a>\n</h3>\n<p>{{ blog | list_count }} published posts</p>\n\n{% assign posts = blog | list_items %}\n<ul>\n{% for post in posts %}\n    <li>\n        <a href=\"{{ post | display_url }}\">{{ post | display_text }}</a>\n    </li>\n{% endfor %}\n</ul>"
+    }
+   }
+  }
+ ]
+}
