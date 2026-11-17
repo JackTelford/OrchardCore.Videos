@@ -1,0 +1,203 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.691
+People sign in to an Orchard Core site on its login page.
+
+00:00:04.691 --> 00:00:08.968
+In this video, you see the User Login settings, from Remember me to
+
+00:00:08.968 --> 00:00:13.480
+the editable user details, and how an account gets locked and unlocked.
+
+00:00:18.080 --> 00:00:22.894
+The options for signing in are on the User Login page, under Settings, Security.
+
+00:00:22.894 --> 00:00:27.540
+Its checkboxes change the login page and the details you can edit for a user.
+
+00:00:27.540 --> 00:00:31.570
+Features such as two-factor authentication add a tab of their own.
+
+00:00:32.320 --> 00:00:34.687
+The options fall into four groups:
+
+00:00:34.687 --> 00:00:39.361
+Remember me, the theme of the login page, local password login, and which
+
+00:00:39.361 --> 00:00:41.610
+details of a user can be edited.
+
+00:00:42.360 --> 00:00:44.701
+Account lockout is not one of them.
+
+00:00:44.701 --> 00:00:48.926
+The number of failed attempts and the length of the lock are options
+
+00:00:48.926 --> 00:00:52.808
+of ASP.NET Core Identity, which a developer sets for the site.
+
+00:00:52.808 --> 00:00:55.320
+A separate video covers those options.
+
+00:00:59.561 --> 00:01:01.328
+This is the login page.
+
+00:01:01.328 --> 00:01:06.385
+A visitor enters a Username or email address and a Password, optionally ticks
+
+00:01:06.385 --> 00:01:08.701
+Remember me, and chooses Log in.
+
+00:01:09.187 --> 00:01:12.530
+The options that shape this page are in the admin.
+
+00:01:12.530 --> 00:01:17.247
+In the menu, let's expand Settings, then Security, and choose User Login.
+
+00:01:17.738 --> 00:01:20.696
+The page lists each option as a checkbox.
+
+00:01:20.696 --> 00:01:23.088
+By default, only two are ticked:
+
+00:01:23.088 --> 00:01:28.878
+Allow user to be remembered during login, and Allow user to change their phone number.
+
+00:01:33.178 --> 00:01:37.707
+The option Allow user to be remembered during login shows the Remember me
+
+00:01:37.707 --> 00:01:39.598
+checkbox on the login page.
+
+00:01:39.598 --> 00:01:44.299
+A user who ticks it gets a persistent authentication cookie, which keeps the
+
+00:01:44.299 --> 00:01:46.878
+user signed in across browser sessions.
+
+00:01:47.355 --> 00:01:53.396
+The option Use persistent authentication cookies by default decides whether Remember me starts ticked.
+
+00:01:53.396 --> 00:01:55.465
+Let's tick it, and choose Save.
+
+00:01:56.058 --> 00:01:59.586
+On the login page, Remember me is ticked from the start.
+
+00:01:59.586 --> 00:02:02.488
+Users can clear it before they choose Log in.
+
+00:02:02.944 --> 00:02:07.267
+Let's untick Allow user to be remembered during login, and choose Save.
+
+00:02:07.267 --> 00:02:10.524
+On the login page, the Remember me checkbox is gone.
+
+00:02:11.011 --> 00:02:16.009
+With Remember me gone, the option Use persistent authentication cookies by default decides
+
+00:02:16.009 --> 00:02:19.601
+whether password and external provider sign-ins are persistent.
+
+00:02:23.901 --> 00:02:26.922
+By default, the login page uses the admin theme.
+
+00:02:26.922 --> 00:02:31.229
+Let's tick Use site theme for login page, which requires an active site
+
+00:02:31.229 --> 00:02:32.851
+theme, and choose Save.
+
+00:02:33.511 --> 00:02:37.652
+The login form appears inside the layout of the site theme, with the
+
+00:02:37.652 --> 00:02:40.281
+theme's fonts, button colors, and footer.
+
+00:02:44.581 --> 00:02:49.638
+The option Disable local password login turns off the form for user names and passwords.
+
+00:02:49.638 --> 00:02:53.781
+Its hint asks for at least one administrator with a linked account, one
+
+00:02:53.781 --> 00:02:56.201
+that is linked to an external provider.
+
+00:02:56.670 --> 00:03:01.591
+With an external provider configured, the login page shows only the provider buttons
+
+00:03:01.591 --> 00:03:03.888
+under Use another service to log in.
+
+00:03:03.888 --> 00:03:07.497
+Without one, as on this site, the page would show no form at
+
+00:03:07.497 --> 00:03:09.410
+all, so the option stays off.
+
+00:03:13.642 --> 00:03:18.422
+Let's edit an existing user, jamie.chen, from Access Control, Users.
+
+00:03:18.422 --> 00:03:24.492
+By default, the User name and Email fields are disabled, and Phone Number can be edited.
+
+00:03:25.347 --> 00:03:29.558
+Back on the User Login page, two options make those fields editable:
+
+00:03:29.558 --> 00:03:34.566
+Allow user to change their username, and Allow user to change their email address.
+
+00:03:34.566 --> 00:03:36.387
+Let's tick both, and save.
+
+00:03:36.853 --> 00:03:41.030
+In the editor of the same user, User name and Email are enabled.
+
+00:03:41.030 --> 00:03:45.804
+When you create a user, those fields are always editable, so these options
+
+00:03:45.804 --> 00:03:47.773
+only affect existing users.
+
+00:03:52.073 --> 00:03:56.497
+Let's enter a wrong password for the user jamie.chen on the login page.
+
+00:03:56.497 --> 00:04:01.093
+The page answers Invalid login attempt, and the failed attempt is counted.
+
+00:04:09.179 --> 00:04:11.678
+Every further wrong password counts too.
+
+00:04:11.678 --> 00:04:15.808
+When the limit is reached, the page reports that the account is locked
+
+00:04:15.808 --> 00:04:20.699
+out, and the user cannot sign in until the lock ends or an administrator unlocks it.
+
+00:04:21.154 --> 00:04:26.864
+In the admin, the Users list under Access Control shows jamie.chen with a Locked badge.
+
+00:04:27.358 --> 00:04:31.870
+To unlock the account, open its Actions menu and choose Unlock.
+
+00:04:31.870 --> 00:04:36.578
+The dialog titled Unlock user asks for confirmation, so choose Ok.
+
+00:04:37.113 --> 00:04:42.561
+The message User unlocked successfully appears, the Locked badge is gone, and jamie.chen
+
+00:04:42.561 --> 00:04:45.343
+can sign in again with the right password.
+
+00:04:47.343 --> 00:04:51.517
+The User Login page sets Remember me, the theme of the login page,
+
+00:04:51.517 --> 00:04:55.749
+local password login and which details of a user can be edited, and
+
+00:04:55.749 --> 00:04:58.416
+the Users list unlocks a locked account.
+
+00:04:58.416 --> 00:04:59.923
+Thanks for watching.
+
