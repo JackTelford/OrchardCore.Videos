@@ -1,0 +1,257 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.238
+Orchard Core can act as an identity provider for your applications.
+
+00:00:05.238 --> 00:00:10.578
+One settings page decides which endpoints it offers, which flows applications can use,
+
+00:00:10.578 --> 00:00:13.307
+and which keys and token options it uses.
+
+00:00:13.307 --> 00:00:17.370
+In this video, we'll enable the server and go through that page.
+
+00:00:21.970 --> 00:00:27.761
+With the OpenID Connect Authorization Server feature, client applications can ask your site
+
+00:00:27.761 --> 00:00:30.150
+to sign users in and issue tokens.
+
+00:00:30.150 --> 00:00:34.090
+A client can be a website or a service that calls your APIs.
+
+00:00:34.840 --> 00:00:38.012
+Endpoints are the addresses that applications call.
+
+00:00:38.012 --> 00:00:43.299
+Flows are the ways an application can get a token, and each flow needs certain endpoints.
+
+00:00:43.299 --> 00:00:47.250
+Keys are the signing and encryption certificates the server uses.
+
+00:00:48.000 --> 00:00:50.797
+Applications and scopes have their own pages.
+
+00:00:50.797 --> 00:00:54.745
+An application can use only the flows that you allow on the server
+
+00:00:54.745 --> 00:00:58.200
+settings page, so these settings limit every application.
+
+00:01:02.500 --> 00:01:05.946
+Open Tools, Features, and search for OpenID.
+
+00:01:05.946 --> 00:01:12.080
+The OpenID Connect features are listed together, under the OpenID Connect category.
+
+00:01:12.590 --> 00:01:17.289
+Select Enable in the row of OpenID Connect Authorization Server.
+
+00:01:17.289 --> 00:01:23.800
+Orchard Core also enables the features it depends on, such as OpenID Connect Management UI.
+
+00:01:24.282 --> 00:01:29.508
+The Settings menu has an OpenID Connect section with Authorization Server.
+
+00:01:29.508 --> 00:01:34.342
+Applications and Scopes appear under Access Control, OpenID Connect.
+
+00:01:38.619 --> 00:01:42.142
+Open Settings, OpenID Connect, Authorization Server.
+
+00:01:42.142 --> 00:01:46.515
+A warning at the top says the website might restart when you save,
+
+00:01:46.515 --> 00:01:49.249
+which can make it briefly unresponsive.
+
+00:01:49.785 --> 00:01:52.981
+Until you save, the page shows the defaults.
+
+00:01:52.981 --> 00:01:59.435
+Every endpoint is enabled, and only the authorization code and refresh token flows are allowed.
+
+00:01:59.902 --> 00:02:06.531
+Under Endpoints, each Enable checkbox turns on one endpoint, and its address appears beside it.
+
+00:02:06.531 --> 00:02:13.752
+Enable Token Endpoint is where applications exchange a code, credentials, or a refresh token for tokens.
+
+00:02:14.223 --> 00:02:19.108
+Enable Authorization Endpoint is where users are sent to sign in and, depending
+
+00:02:19.108 --> 00:02:21.866
+on the application, to give their consent.
+
+00:02:21.866 --> 00:02:26.463
+Enable Pushed Authorization Endpoint can be enabled only together with it.
+
+00:02:26.943 --> 00:02:31.046
+Enable End Session Endpoint lets applications sign users out.
+
+00:02:31.046 --> 00:02:34.475
+Require logout confirmation asks users to confirm.
+
+00:02:34.475 --> 00:02:38.883
+When it is cleared, an application that sends a valid hint for the
+
+00:02:38.883 --> 00:02:41.393
+signed-in user can skip the prompt.
+
+00:02:41.937 --> 00:02:47.497
+Enable User Info Endpoint answers only for access tokens that represent users.
+
+00:02:47.497 --> 00:02:55.307
+Enable Introspection Endpoint and Enable Revocation Endpoint add the endpoints for checking and revoking tokens.
+
+00:02:59.588 --> 00:03:03.233
+Under Flows, you choose how applications can get tokens.
+
+00:03:03.233 --> 00:03:07.818
+A flow is shown only while the endpoints and flows it needs are enabled.
+
+00:03:08.344 --> 00:03:09.578
+Let's see that.
+
+00:03:09.578 --> 00:03:14.397
+When we clear Enable Token Endpoint, every flow that needs it disappears and
+
+00:03:14.397 --> 00:03:20.274
+is cleared, while Allow Implicit Flow stays, because it only needs the authorization endpoint.
+
+00:03:20.735 --> 00:03:23.303
+Reloading the page discards that change.
+
+00:03:23.303 --> 00:03:27.713
+Allow Authorization Code Flow is for users who sign in through a browser:
+
+00:03:27.713 --> 00:03:32.235
+they sign in on your site, and the application exchanges a code for tokens.
+
+00:03:32.709 --> 00:03:37.822
+Allow Implicit Flow returns tokens straight from the authorization endpoint.
+
+00:03:37.822 --> 00:03:42.499
+Allow Hybrid Flow returns an authorization code together with tokens.
+
+00:03:42.981 --> 00:03:49.407
+Allow Password Flow lets an application send a user's name and password to the token endpoint.
+
+00:03:49.407 --> 00:03:54.870
+Allow Refresh Token Flow lets an application exchange a refresh token for fresh
+
+00:03:54.870 --> 00:03:59.561
+tokens, and needs the password, authorization code, or hybrid flow.
+
+00:04:00.136 --> 00:04:05.825
+Allow Client Credentials Flow is for applications that act as themselves, with no user.
+
+00:04:05.825 --> 00:04:11.635
+The application authenticates with its own client identifier and secret, and receives the
+
+00:04:11.635 --> 00:04:13.286
+roles assigned to it.
+
+00:04:17.572 --> 00:04:21.115
+Require Proof Key for Code Exchange is a global setting.
+
+00:04:21.115 --> 00:04:26.371
+It applies to every registered application, whether or not the application enables it,
+
+00:04:26.371 --> 00:04:29.742
+so check that your client libraries support it first.
+
+00:04:30.203 --> 00:04:36.474
+Require Pushed Authorization Requests works the same way, and needs the pushed authorization endpoint.
+
+00:04:36.474 --> 00:04:41.293
+Let's select it, clear Enable Pushed Authorization Endpoint, and select Save.
+
+00:04:41.775 --> 00:04:44.980
+The page returns with an error, and nothing is saved:
+
+00:04:44.980 --> 00:04:50.466
+the pushed authorization endpoint must be enabled when enforcing pushed authorization requests.
+
+00:04:50.466 --> 00:04:53.725
+The settings are checked this way every time you save.
+
+00:04:58.025 --> 00:05:00.156
+Advanced Options are optional.
+
+00:05:00.156 --> 00:05:04.419
+Authority is the base address of this site as the identity server.
+
+00:05:04.419 --> 00:05:08.445
+When it is empty, Orchard Core builds it from the site's host.
+
+00:05:08.981 --> 00:05:13.074
+The server uses a signing certificate and an encryption certificate.
+
+00:05:13.074 --> 00:05:17.996
+If you select none, Orchard Core creates self-signed certificates for the site, and
+
+00:05:17.996 --> 00:05:22.421
+creates replacements when the existing ones are within a week of expiring.
+
+00:05:22.928 --> 00:05:28.079
+To use your own, choose a store location for the encryption or the signing certificate.
+
+00:05:28.079 --> 00:05:31.237
+Then choose a store name, and then the certificate.
+
+00:05:31.237 --> 00:05:34.228
+Only certificates with a private key are listed.
+
+00:05:34.746 --> 00:05:40.029
+Disable Rolling Refresh Tokens lets a refresh token be reused until it expires,
+
+00:05:40.029 --> 00:05:43.696
+instead of being marked as redeemed after it is used.
+
+00:05:44.221 --> 00:05:47.847
+Token Format sets the format of access tokens.
+
+00:05:47.847 --> 00:05:51.333
+ASP.NET Core Data Protection is the default.
+
+00:05:51.333 --> 00:05:57.330
+JSON Web Token (JWT) produces standard access tokens that are signed and, unless
+
+00:05:57.330 --> 00:05:59.631
+you turn it off, encrypted.
+
+00:06:00.111 --> 00:06:07.880
+With JSON Web Token (JWT) selected, Disable Access Token Encryption (only for JWT tokens) becomes available.
+
+00:06:07.880 --> 00:06:15.104
+Selecting it leaves the access tokens unencrypted, which lets third-party resource servers use them.
+
+00:06:15.104 --> 00:06:22.191
+Use Reference Access Tokens keeps tokens in the database and returns fixed-size tokens to clients.
+
+00:06:26.449 --> 00:06:28.968
+Let's save a working configuration.
+
+00:06:28.968 --> 00:06:34.251
+We select Allow Client Credentials Flow and Require Proof Key for Code Exchange,
+
+00:06:34.251 --> 00:06:35.909
+and then select Save.
+
+00:06:36.366 --> 00:06:40.799
+A message confirms the update, and the site reloads its configuration.
+
+00:06:40.799 --> 00:06:46.516
+Applications are registered on their own page, which offers only the flows you allowed here.
+
+00:06:48.516 --> 00:06:51.750
+That's the OpenID Connect Authorization Server:
+
+00:06:51.750 --> 00:06:55.229
+endpoints, flows, and keys, set from a single page.
+
+00:06:55.229 --> 00:06:56.816
+Thanks for watching.
+
