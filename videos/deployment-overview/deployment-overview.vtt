@@ -1,0 +1,197 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.390
+A site is often built in one place and run in another.
+
+00:00:04.390 --> 00:00:09.305
+The Deployment module moves configuration and content between Orchard Core sites.
+
+00:00:09.305 --> 00:00:13.711
+In this video, you build a deployment plan, export a package, and import
+
+00:00:13.711 --> 00:00:15.180
+it on a second site.
+
+00:00:19.780 --> 00:00:24.525
+You shape a site on one copy, with content types, settings, and pages.
+
+00:00:24.525 --> 00:00:28.707
+When that work is ready, a second site needs the same result.
+
+00:00:28.707 --> 00:00:34.950
+Repeating every change by hand takes time, and a forgotten setting makes the two sites differ.
+
+00:00:35.700 --> 00:00:38.938
+The Deployment module carries that work in a package.
+
+00:00:38.938 --> 00:00:42.889
+You describe what to include in a deployment plan, run the plan to
+
+00:00:42.889 --> 00:00:46.620
+produce the package, and import the package on the other site.
+
+00:00:47.370 --> 00:00:50.043
+A package is a zip file that holds a recipe.
+
+00:00:50.043 --> 00:00:53.731
+A recipe is a list of steps, and the destination site runs them
+
+00:00:53.731 --> 00:00:56.030
+in order when you import the package.
+
+00:01:00.239 --> 00:01:04.015
+Deployment is a feature, listed under Tools, Features.
+
+00:01:04.015 --> 00:01:07.665
+Let's search for Deployment, which shows as Enabled.
+
+00:01:07.665 --> 00:01:12.007
+The Blog recipe enables it, and on a site where it is disabled,
+
+00:01:12.007 --> 00:01:14.209
+an Enable button turns it on.
+
+00:01:14.668 --> 00:01:19.983
+The Tools, Deployments menu lists Plans, which builds and runs plans, Package Import,
+
+00:01:19.983 --> 00:01:24.305
+which brings in a package, and JSON Import, which runs a recipe that
+
+00:01:24.305 --> 00:01:25.998
+you enter in an editor.
+
+00:01:25.998 --> 00:01:31.898
+Remote Instances and Remote Clients belong to Remote Deployment, which a separate video covers.
+
+00:01:36.109 --> 00:01:37.998
+This is the source site.
+
+00:01:37.998 --> 00:01:41.209
+Under Settings, General, the Page size is 25.
+
+00:01:41.209 --> 00:01:45.994
+A second site, the staging site, uses a different value, so let's move
+
+00:01:45.994 --> 00:01:48.639
+this setting with a deployment plan.
+
+00:01:49.097 --> 00:01:53.941
+The Plans page lists the deployment plans of the site, and this site has none.
+
+00:01:53.941 --> 00:01:58.267
+A plan is a named list of steps, so let's select Add Deployment Plan.
+
+00:01:58.730 --> 00:02:00.125
+A plan needs a name.
+
+00:02:00.125 --> 00:02:04.900
+Let's type Staging Setup and select Create, and the plan opens with no steps in it.
+
+00:02:05.357 --> 00:02:08.039
+Add Step opens the Available Steps list.
+
+00:02:08.039 --> 00:02:13.404
+Categories on the left group the steps, such as Configuration, Content Management, and
+
+00:02:13.404 --> 00:02:16.377
+Deployment, and each card describes its step.
+
+00:02:16.834 --> 00:02:22.274
+Modules that export data add their own steps, so the list depends on the enabled features.
+
+00:02:22.274 --> 00:02:27.204
+Let's choose the Configuration category and select Add on the Site Settings card.
+
+00:02:27.662 --> 00:02:31.509
+The editor lists the site settings, each with a check box.
+
+00:02:31.509 --> 00:02:34.214
+Let's check PageSize and select Create.
+
+00:02:34.214 --> 00:02:38.482
+The plan shows the step, with PageSize as the setting it exports.
+
+00:02:38.937 --> 00:02:41.602
+Execute opens the Available Targets list.
+
+00:02:41.602 --> 00:02:48.007
+The Deployment module provides File Download, and Remote Deployment adds a target for each remote instance.
+
+00:02:48.007 --> 00:02:49.877
+Let's select File Download.
+
+00:02:50.333 --> 00:02:53.759
+The browser downloads a zip file named after the plan.
+
+00:02:53.759 --> 00:02:57.642
+It holds the recipe that the steps of the plan produced, so it
+
+00:02:57.642 --> 00:02:59.983
+is ready to import on another site.
+
+00:03:04.168 --> 00:03:09.618
+This is the staging site, a second Orchard Core site with the Deployment feature enabled.
+
+00:03:09.618 --> 00:03:12.543
+Under Settings, General, its Page size is 10.
+
+00:03:12.543 --> 00:03:14.608
+Let's import the package here.
+
+00:03:15.061 --> 00:03:18.244
+Under Tools, Deployments, let's open Package Import.
+
+00:03:18.244 --> 00:03:22.029
+The Select a file field accepts a zip package or a recipe file,
+
+00:03:22.029 --> 00:03:25.211
+so let's choose the zip file that the plan produced.
+
+00:03:25.665 --> 00:03:29.814
+Selecting Import runs the package right away, and the site runs the steps
+
+00:03:29.814 --> 00:03:31.338
+of the recipe in order.
+
+00:03:31.338 --> 00:03:34.805
+The page then shows the message Deployment package imported.
+
+00:03:35.259 --> 00:03:39.947
+Back under Settings, General, the Page size is 25, the value that the
+
+00:03:39.947 --> 00:03:42.509
+plan exported from the source site.
+
+00:03:46.709 --> 00:03:49.857
+The Deployment module defines three permissions:
+
+00:03:49.857 --> 00:03:55.219
+Manage deployment plans covers creating and editing plans and their steps, Export Data
+
+00:03:55.219 --> 00:03:59.300
+covers running a plan, and Import Data covers both import pages.
+
+00:03:59.300 --> 00:04:03.729
+The Plans page needs the first two, and administrators have all three.
+
+00:04:04.479 --> 00:04:09.099
+When you edit a role, Import Data carries a Security Critical badge.
+
+00:04:09.099 --> 00:04:14.841
+A recipe can change settings, features, content definitions, and content, so grant the
+
+00:04:14.841 --> 00:04:20.459
+permission only to roles you trust, and import only packages from sources you trust.
+
+00:04:22.459 --> 00:04:26.356
+Deployment moves configuration and content between sites:
+
+00:04:26.356 --> 00:04:29.571
+build a plan, export a package, and import it.
+
+00:04:29.571 --> 00:04:34.271
+Separate videos cover plans, imports, and remote deployment in detail.
+
+00:04:34.271 --> 00:04:35.879
+Thanks for watching.
+
