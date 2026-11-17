@@ -2848,7 +2848,7 @@
       "src/docs/reference/modules/AzureAISearch/README.md",
       "src/docs/reference/modules/Queries/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 4.6,
     "words": 690,
     "contentCommit": "",
@@ -2859,7 +2859,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": "External service with no local emulator: the recording plan must use a stand-in endpoint, or the video stays blocked."
+    "notes": "External service with no local emulator: the recording plan must use a stand-in endpoint, or the video stays blocked. | 2026-11-17 blocked: Needs an Azure AI Search service and the index of the video azure-ai-search, which is blocked: Azure AI Search has no local emulator and a stand-in needs the machine's certificate trust store changed."
   },
   {
     "slug": "search-settings",
