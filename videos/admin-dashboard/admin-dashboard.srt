@@ -1,0 +1,280 @@
+1
+00:00:01,000 --> 00:00:04,579
+Every Orchard Core site has a home page in its admin.
+
+2
+00:00:04,579 --> 00:00:09,796
+The Admin Dashboard module replaces it with widgets that you choose and arrange.
+
+3
+00:00:09,796 --> 00:00:15,620
+In this video, we enable the dashboard, add and arrange widgets, and decide who sees them.
+
+4
+00:00:20,220 --> 00:00:22,621
+The dashboard is built from widgets.
+
+5
+00:00:22,621 --> 00:00:26,851
+A widget is a content item, so you create, edit, publish, and delete
+
+6
+00:00:26,851 --> 00:00:29,480
+it in the same way as any other content.
+
+7
+00:00:30,230 --> 00:00:31,992
+The dashboard is a grid.
+
+8
+00:00:31,992 --> 00:00:36,161
+Each widget has a Position, which sets its order, and a Width and
+
+9
+00:00:36,161 --> 00:00:38,393
+a Height, counted in grid cells.
+
+10
+00:00:38,393 --> 00:00:41,270
+On a wide screen, the grid has six columns.
+
+11
+00:00:42,020 --> 00:00:44,704
+The dashboard shows only published widgets.
+
+12
+00:00:44,704 --> 00:00:48,483
+A widget that is only a draft, or that you unpublish, stays out
+
+13
+00:00:48,483 --> 00:00:52,700
+of the dashboard but remains in the editor, so you can finish it first.
+
+14
+00:00:57,000 --> 00:00:59,426
+This is the home page of the admin.
+
+15
+00:00:59,426 --> 00:01:04,753
+Under Welcome to Orchard Core, cards lead to Create content, Customize theme, Manage
+
+16
+00:01:04,753 --> 00:01:06,410
+users, and Learn more.
+
+17
+00:01:06,889 --> 00:01:11,516
+To replace it, open Tools, then Features, and search for Admin Dashboard.
+
+18
+00:01:11,516 --> 00:01:14,619
+The feature is listed under Content Management.
+
+19
+00:01:16,649 --> 00:01:18,236
+Select Enable on its row.
+
+20
+00:01:18,236 --> 00:01:20,949
+A message confirms that the feature is enabled.
+
+21
+00:01:21,404 --> 00:01:24,923
+Select the site name in the top bar to return to the home page.
+
+22
+00:01:24,923 --> 00:01:28,902
+It is titled Dashboard, and a message asks you to click Manage Dashboard
+
+23
+00:01:28,902 --> 00:01:30,024
+to add a widget.
+
+24
+00:01:34,254 --> 00:01:36,949
+Select Manage Dashboard to open the editor.
+
+25
+00:01:36,949 --> 00:01:41,954
+Close Editor leaves it, and Add Widget lists the types of widget that you can create.
+
+26
+00:01:42,405 --> 00:01:48,536
+This site has one widget type, Html Dashboard Widget, whose body holds text or HTML.
+
+27
+00:01:48,536 --> 00:01:50,035
+Let's choose it.
+
+28
+00:01:50,497 --> 00:01:53,516
+Enter a title, and type some text in the body.
+
+29
+00:01:53,516 --> 00:01:56,187
+Let's write a short welcome for editors.
+
+30
+00:01:57,744 --> 00:02:02,376
+Position, Width, and Height set the place and size of the widget.
+
+31
+00:02:02,376 --> 00:02:06,552
+A Position of zero puts it first, a Width of two spans two
+
+32
+00:02:06,552 --> 00:02:09,554
+columns, and a Height of one is one row.
+
+33
+00:02:10,035 --> 00:02:14,153
+Save Draft keeps the widget out of the dashboard until you publish it.
+
+34
+00:02:14,153 --> 00:02:19,085
+Publish adds it to the dashboard and returns to the editor, where the widget appears.
+
+35
+00:02:23,361 --> 00:02:27,783
+The editor shows every widget, each with a drag handle beside its title.
+
+36
+00:02:27,783 --> 00:02:31,014
+Let's drag Office hours by its handle to the front.
+
+37
+00:02:31,014 --> 00:02:32,941
+The other widgets make room.
+
+38
+00:02:33,410 --> 00:02:36,318
+The order is saved as soon as you drop the widget.
+
+39
+00:02:36,318 --> 00:02:41,980
+A message says that the dashboard was successfully updated, and Undo restores the previous arrangement.
+
+40
+00:02:42,440 --> 00:02:47,716
+To resize a widget, drag its right edge, its bottom edge, or its bottom right corner.
+
+41
+00:02:47,716 --> 00:02:50,441
+Let's drag the corner of Style reminders.
+
+42
+00:02:50,441 --> 00:02:52,470
+It snaps to whole grid cells.
+
+43
+00:02:52,972 --> 00:02:54,858
+The size is saved the same way.
+
+44
+00:02:54,858 --> 00:02:58,731
+You can also type the values in the Position, Width, and Height fields
+
+45
+00:02:58,731 --> 00:03:00,362
+of the widget's edit form.
+
+46
+00:03:00,835 --> 00:03:03,330
+Each widget has an Actions menu.
+
+47
+00:03:03,330 --> 00:03:07,795
+For a published widget, it offers Edit, Delete, and Unpublish.
+
+48
+00:03:08,275 --> 00:03:15,115
+A draft, such as Holiday schedule, offers Publish Draft and Discard Draft instead of Unpublish.
+
+49
+00:03:15,590 --> 00:03:17,084
+Select Close Editor.
+
+50
+00:03:17,084 --> 00:03:21,912
+The dashboard shows the published widgets in the order and sizes that you set.
+
+51
+00:03:21,912 --> 00:03:26,050
+Holiday schedule is a draft, so it stays out until you publish it.
+
+52
+00:03:30,250 --> 00:03:32,744
+Two permissions control the dashboard.
+
+53
+00:03:32,744 --> 00:03:36,316
+Access the Admin Dashboard lets a user see the dashboard.
+
+54
+00:03:36,316 --> 00:03:42,270
+Manage the Admin Dashboard adds the Manage Dashboard button, and it includes the access permission.
+
+55
+00:03:43,020 --> 00:03:46,724
+By default, the Administrator role has both permissions.
+
+56
+00:03:46,724 --> 00:03:51,743
+The Editor, Moderator, Author, and Contributor roles can access the dashboard.
+
+57
+00:03:51,743 --> 00:03:57,300
+You change the permissions of these four roles on the Roles page, under Access Control.
+
+58
+00:03:58,050 --> 00:04:01,558
+Access to the dashboard is not enough to see a widget.
+
+59
+00:04:01,558 --> 00:04:07,172
+A user who cannot manage the dashboard also needs permission to view the widget's content.
+
+60
+00:04:07,172 --> 00:04:11,850
+If no widget is left to see, that user gets the welcome home page instead.
+
+61
+00:04:16,050 --> 00:04:18,315
+Widgets come from content types.
+
+62
+00:04:18,315 --> 00:04:23,501
+To make your own, create a content type under Design, Content Definition, Content
+
+63
+00:04:23,501 --> 00:04:26,900
+Types, and enter DashboardWidget as its Stereotype.
+
+64
+00:04:27,650 --> 00:04:29,913
+Add parts such as a title and a body.
+
+65
+00:04:29,913 --> 00:04:33,702
+The type then appears under Add Widget, and a part that stores the
+
+66
+00:04:33,702 --> 00:04:35,860
+position and size is added for you.
+
+67
+00:04:37,860 --> 00:04:39,855
+That's the Admin Dashboard module:
+
+68
+00:04:39,855 --> 00:04:43,896
+a start page of widgets that you arrange for your editors, with permissions
+
+69
+00:04:43,896 --> 00:04:45,492
+that decide who sees what.
+
+70
+00:04:45,492 --> 00:04:46,790
+Thanks for watching.
+
