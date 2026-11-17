@@ -2523,7 +2523,7 @@
     "docs": [
       "src/docs/reference/modules/Placement/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 6.6,
     "words": 986,
     "contentCommit": "",
@@ -2534,7 +2534,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: Needs a placement.json created in src/OrchardCore.Cms.Web and a site restart between takes; the shared build must not be changed and the recorder cannot create files"
   },
   {
     "slug": "placements-admin",
