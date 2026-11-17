@@ -1,0 +1,218 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.482
+A GraphQL query for a content type returns its items, and you decide
+
+00:00:05.482 --> 00:00:08.268
+which ones, in what order, and how many.
+
+00:00:08.268 --> 00:00:12.993
+In this video, you filter with where, sort with orderBy, page with first
+
+00:00:12.993 --> 00:00:15.900
+and skip, and choose versions with status.
+
+00:00:20.500 --> 00:00:26.476
+Each content type that GraphQL exposes becomes a query field with the same five arguments.
+
+00:00:26.476 --> 00:00:29.527
+The content items field type declares them:
+
+00:00:29.527 --> 00:00:35.690
+where filters, orderBy sorts, first and skip page, and status picks the version of each item.
+
+00:00:36.440 --> 00:00:41.040
+A query without arguments returns the published version of each item of the
+
+00:00:41.040 --> 00:00:44.731
+type that the user may view, newest first, up to 100 items.
+
+00:00:44.731 --> 00:00:47.401
+You can change each default in the query.
+
+00:00:47.401 --> 00:00:51.660
+The default number of items can also be changed in the configuration.
+
+00:00:52.410 --> 00:00:55.917
+The field type builds one database query from them.
+
+00:00:55.917 --> 00:01:01.270
+The page is taken last, so first and skip count within the filtered, sorted list.
+
+00:01:05.557 --> 00:01:07.807
+This is GraphiQL, under Tools.
+
+00:01:07.807 --> 00:01:12.371
+The query asks every blog post for its display text, and the result
+
+00:01:12.371 --> 00:01:14.747
+lists all eight published posts.
+
+00:01:15.205 --> 00:01:17.429
+Add the where argument to filter.
+
+00:01:17.429 --> 00:01:20.736
+A condition is a field name plus an operator suffix:
+
+00:01:20.736 --> 00:01:25.012
+here the display text field with the contains suffix, set to the word
+
+00:01:25.012 --> 00:01:27.065
+with, which leaves two titles.
+
+00:01:27.636 --> 00:01:31.545
+A part that provides a filter adds it to where, either as an
+
+00:01:31.545 --> 00:01:34.862
+object named after the part or directly as fields.
+
+00:01:34.862 --> 00:01:40.133
+Autoroute adds its fields directly, so path starts with tutorials returns the three
+
+00:01:40.133 --> 00:01:42.976
+tutorials, and the result shows each path.
+
+00:01:43.434 --> 00:01:49.539
+Conditions combine with OR, AND and NOT, written in capitals, each taking a list.
+
+00:01:49.539 --> 00:01:55.504
+This OR keeps the posts whose display text contains Liquid or contains GraphQL.
+
+00:01:59.704 --> 00:02:03.822
+Each field has an equality condition and a not version.
+
+00:02:03.822 --> 00:02:09.426
+Strings add contains, starts with, ends with and in, each with a not version.
+
+00:02:09.426 --> 00:02:14.153
+Identifiers add in and not in, and dates add in, not in, greater
+
+00:02:14.153 --> 00:02:17.394
+than and less than, with or without equal.
+
+00:02:18.144 --> 00:02:23.700
+Several conditions side by side in the where argument must all hold, as with AND.
+
+00:02:23.700 --> 00:02:29.383
+OR needs at least one condition to hold, and NOT negates the condition it contains.
+
+00:02:29.383 --> 00:02:31.874
+AND, OR and NOT each take a list.
+
+00:02:32.624 --> 00:02:35.885
+Fields of your own parts can be filtered too.
+
+00:02:35.885 --> 00:02:40.936
+Boolean, date, date and time, numeric, text and time fields work when the
+
+00:02:40.936 --> 00:02:46.564
+Content Fields Indexing (SQL) feature is enabled, with the suffixes of their type.
+
+00:02:50.863 --> 00:02:53.999
+Without orderBy, items come newest first.
+
+00:02:53.999 --> 00:02:59.803
+Add orderBy with a field and a direction, ASC or DESC, and the result follows it:
+
+00:02:59.803 --> 00:03:03.873
+display text ascending lists the titles alphabetically.
+
+00:03:04.329 --> 00:03:07.599
+Creation date ascending puts the oldest post first.
+
+00:03:07.599 --> 00:03:11.786
+You can sort by the properties of the content item, such as display
+
+00:03:11.786 --> 00:03:16.949
+text and the created, modified and published dates, but not by the fields of a part.
+
+00:03:21.247 --> 00:03:24.467
+The first argument limits the number of items.
+
+00:03:24.467 --> 00:03:28.927
+With first set to three, the query returns the three newest posts.
+
+00:03:29.383 --> 00:03:32.596
+The skip argument leaves out items from the start.
+
+00:03:32.596 --> 00:03:36.671
+First three with skip three returns the next page, so skip is the
+
+00:03:36.671 --> 00:03:39.483
+page number minus one, times the page size.
+
+00:03:39.934 --> 00:03:43.966
+Skip six leaves two posts, so the last page is shorter.
+
+00:03:43.966 --> 00:03:49.584
+When first is missing or zero, the query returns the default number of results.
+
+00:03:53.832 --> 00:03:57.246
+A content item can have a published version and a draft.
+
+00:03:57.246 --> 00:04:02.257
+The status argument defaults to PUBLISHED, and DRAFT returns the most recent versions
+
+00:04:02.257 --> 00:04:05.452
+that are not published, here the Roadmap notes post.
+
+00:04:05.968 --> 00:04:10.869
+LATEST returns the most recent version of every item, published or draft, so
+
+00:04:10.869 --> 00:04:13.738
+the draft joins the eight published posts.
+
+00:04:13.738 --> 00:04:16.308
+ALL returns every historical version.
+
+00:04:20.557 --> 00:04:22.529
+The arguments work together.
+
+00:04:22.529 --> 00:04:27.052
+This query keeps the posts under guides, sorts them by display text, and
+
+00:04:27.052 --> 00:04:29.198
+returns the second page of two:
+
+00:04:29.198 --> 00:04:32.387
+Headless with GraphQL and Searching your content.
+
+00:04:36.587 --> 00:04:40.882
+Three settings in the GraphQL configuration section control paging.
+
+00:04:40.882 --> 00:04:47.472
+DefaultNumberOfResults applies when first is missing, MaxNumberOfResults is the largest first allowed, and
+
+00:04:47.472 --> 00:04:51.532
+MaxNumberOfResultsValidationMode decides what happens above it.
+
+00:04:51.532 --> 00:04:54.297
+They can also be set for a single tenant.
+
+00:04:55.047 --> 00:04:57.231
+The defaults are 100 and 1,000.
+
+00:04:57.231 --> 00:05:02.366
+Enabled fails validation when first is above the maximum, while Disabled logs the
+
+00:05:02.366 --> 00:05:04.727
+value without rejecting the query.
+
+00:05:04.727 --> 00:05:09.567
+Default means Enabled in the Development environment and Disabled elsewhere.
+
+00:05:11.261 --> 00:05:13.235
+Here the mode is Enabled.
+
+00:05:13.235 --> 00:05:18.456
+Asking for 1001 posts returns a validation error that names the argument and
+
+00:05:18.456 --> 00:05:20.811
+the maximum, 1000, and no data.
+
+00:05:22.811 --> 00:05:28.116
+Filters, ordering, paging and versions are arguments on every content type query.
+
+00:05:28.116 --> 00:05:29.701
+Thanks for watching.
+
