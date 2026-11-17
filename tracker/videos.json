@@ -3035,18 +3035,18 @@
       "src/docs/reference/modules/Queries/README.md",
       "src/docs/reference/modules/SQLIndexing/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 5.7,
     "words": 861,
     "contentCommit": "",
-    "recordedBy": "",
+    "recordedBy": "wipke",
     "recordedOn": "",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: Run SQL Query page is broken in this build: queries-admin-query.js throws 'CodeMirror is not defined' (Views/Admin/Query.cshtml loads the codemirror style but not its script), so the Template and Parameters editors are not CodeMirror and the Monaco results editor stays empty; the rows the narration describes are never shown."
   },
   {
     "slug": "queries-lucene-elasticsearch",
