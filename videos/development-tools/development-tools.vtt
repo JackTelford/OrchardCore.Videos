@@ -1,0 +1,185 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.385
+Building with Orchard Core takes an editor, a few utilities, and a source of packages.
+
+00:00:06.385 --> 00:00:11.303
+This video covers the tools the documentation suggests, how to add the preview
+
+00:00:11.303 --> 00:00:15.810
+package feed, and how to build a local NuGet feed from the source code.
+
+00:00:20.410 --> 00:00:24.801
+You can build with Orchard Core in any tool that edits source files
+
+00:00:24.801 --> 00:00:28.832
+and builds a .NET application, on any platform .NET supports.
+
+00:00:28.832 --> 00:00:35.750
+The documentation names Visual Studio on Windows, the cross-platform Visual Studio Code, and JetBrains Rider.
+
+00:00:36.500 --> 00:00:40.742
+For Visual Studio, the documentation suggests two optional extras:
+
+00:00:40.742 --> 00:00:45.868
+the Lombiq Orchard Visual Studio Extension, which adds utilities such as an error
+
+00:00:45.868 --> 00:00:50.816
+log watcher and a dependency injector, and code snippets from the Orchard Dojo
+
+00:00:50.816 --> 00:00:53.880
+Library for common module and theme scenarios.
+
+00:00:54.630 --> 00:00:59.355
+DB Browser for SQLite opens the SQLite file of a tenant, found in
+
+00:00:59.355 --> 00:01:03.215
+App_Data, Sites, in a folder named after the tenant.
+
+00:01:03.215 --> 00:01:06.410
+By default, setup names it OrchardCore.db.
+
+00:01:06.410 --> 00:01:12.200
+You can browse the tables, run queries, and display the JSON documents formatted.
+
+00:01:12.950 --> 00:01:17.239
+smtp4dev is an SMTP server that runs locally to test email.
+
+00:01:17.239 --> 00:01:22.583
+Install it with dotnet, enable the SMTP Email Provider feature, and enter a
+
+00:01:22.583 --> 00:01:28.587
+sender email address, host name and port number under Settings, Communication, Email.
+
+00:01:28.587 --> 00:01:32.150
+Its web interface lists the emails it processed.
+
+00:01:36.350 --> 00:01:41.705
+Release packages are published to NuGet, built from the code of a release's version tag.
+
+00:01:41.705 --> 00:01:47.517
+Preview packages are published to Cloudsmith by a daily build, when the main branch has changes.
+
+00:01:47.517 --> 00:01:50.650
+The Preview CI workflow can also be run manually.
+
+00:01:51.400 --> 00:01:54.062
+Preview packages hold the development code:
+
+00:01:54.062 --> 00:01:57.810
+they are not the most stable, and can contain breaking changes.
+
+00:01:57.810 --> 00:02:01.613
+Use them to try a fix for a bug you reported, not in production.
+
+00:02:01.613 --> 00:02:06.230
+They are not kept forever, and nothing guarantees how long one stays available.
+
+00:02:06.980 --> 00:02:12.350
+The preview feed is a NuGet source hosted on Cloudsmith, at the first address on screen.
+
+00:02:12.350 --> 00:02:17.606
+It receives the packages of each successful preview build, and restoring packages from
+
+00:02:17.606 --> 00:02:19.320
+it needs no credentials.
+
+00:02:20.070 --> 00:02:27.442
+In Visual Studio, open Tools, NuGet Package Manager, Package Manager Settings, and select Package Sources.
+
+00:02:27.442 --> 00:02:33.630
+Add a source named OrchardCorePreview with the feed address, then choose Update, and OK.
+
+00:02:34.380 --> 00:02:37.497
+A NuGet.config file adds the same source.
+
+00:02:37.497 --> 00:02:41.476
+This one clears the inherited sources, then lists two:
+
+00:02:41.476 --> 00:02:47.510
+nuget.org under the key NuGet, and the preview feed under the key OrchardCorePreview.
+
+00:02:48.260 --> 00:02:51.233
+The .NET CLI adds the source with one command:
+
+00:02:51.233 --> 00:02:55.808
+dotnet nuget add source, followed by the feed address, and the name option
+
+00:02:55.808 --> 00:02:59.010
+with the name you choose, here OrchardCorePreview.
+
+00:02:59.760 --> 00:03:04.870
+To install a preview package from Visual Studio, check Include prerelease in Manage
+
+00:03:04.870 --> 00:03:08.889
+NuGet packages, and select the preview source in Package Source.
+
+00:03:08.889 --> 00:03:13.080
+Preview versions carry the preview suffix, so they are prereleases.
+
+00:03:17.280 --> 00:03:20.550
+To use a fork or a branch of Orchard Core in your own
+
+00:03:20.550 --> 00:03:24.485
+site as packages, create a local NuGet feed from the source code.
+
+00:03:24.485 --> 00:03:26.037
+There are three steps:
+
+00:03:26.037 --> 00:03:30.360
+pack the packages, publish them to a feed, and point your project at it.
+
+00:03:31.110 --> 00:03:34.938
+From the root folder of your fork or branch, run dotnet pack in
+
+00:03:34.938 --> 00:03:38.822
+the Release configuration, with an output folder of your choice.
+
+00:03:38.822 --> 00:03:42.650
+Every package of the source code is written to that one folder.
+
+00:03:43.400 --> 00:03:46.041
+Next, publish the packages to a feed.
+
+00:03:46.041 --> 00:03:50.463
+The documentation uses a local feed, a folder on a server, and the
+
+00:03:50.463 --> 00:03:55.930
+nuget init command, which takes the output folder first and the feed folder second.
+
+00:03:56.680 --> 00:04:02.226
+Then update your NuGet.config file so its package sources point to the feed.
+
+00:04:02.226 --> 00:04:08.990
+This one clears the inherited sources, then lists the local feed, named MyFeed, and nuget.org.
+
+00:04:09.740 --> 00:04:13.337
+Each package takes the version of the source you packed.
+
+00:04:13.337 --> 00:04:20.009
+OrchardCore.Application.Cms.Targets bundles the modules and themes as package references, so one reference to
+
+00:04:20.009 --> 00:04:23.200
+it restores them from your feed, at that version.
+
+00:04:23.950 --> 00:04:25.965
+Reference that version everywhere.
+
+00:04:25.965 --> 00:04:29.793
+A package reference takes it in its Version attribute, and the CMS web
+
+00:04:29.793 --> 00:04:34.427
+application template takes it in its orchard-version option, so a project created from
+
+00:04:34.427 --> 00:04:36.140
+it references your packages.
+
+00:04:38.140 --> 00:04:42.358
+Preview packages and local feeds let you build on the development code, or
+
+00:04:42.358 --> 00:04:44.309
+on your own copy of the source.
+
+00:04:44.309 --> 00:04:45.680
+Thanks for watching.
+
