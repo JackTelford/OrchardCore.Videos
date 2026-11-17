@@ -1,0 +1,312 @@
+1
+00:00:01,000 --> 00:00:05,374
+Every page of an Orchard Core site needs scripts and stylesheets.
+
+2
+00:00:05,374 --> 00:00:11,597
+The Resources module declares them, includes them by name, and renders them in the right place.
+
+3
+00:00:11,597 --> 00:00:17,820
+In this video, we'll declare, include, and render resources, and configure how they are served.
+
+4
+00:00:22,420 --> 00:00:26,296
+A page is assembled from many views, and each one can need a
+
+5
+00:00:26,296 --> 00:00:27,999
+script or a stylesheet.
+
+6
+00:00:27,999 --> 00:00:33,049
+Without coordination, a library loads twice, a script runs before the library it
+
+7
+00:00:33,049 --> 00:00:36,220
+needs, and every view chooses where its tags go.
+
+8
+00:00:36,970 --> 00:00:39,914
+Each request has its own resource manager.
+
+9
+00:00:39,914 --> 00:00:44,208
+You declare a resource once, include it by name from any view or
+
+10
+00:00:44,208 --> 00:00:48,440
+from code, and the layout renders it once, in dependency order.
+
+11
+00:00:52,640 --> 00:00:58,162
+A resource has a name, a type, script or stylesheet, and optionally a version.
+
+12
+00:00:58,162 --> 00:01:04,079
+The Resources module declares libraries such as jQuery, Bootstrap, and Font Awesome.
+
+13
+00:01:04,079 --> 00:01:08,550
+Your module or theme declares its own, in a resource manifest.
+
+14
+00:01:09,300 --> 00:01:12,846
+DefineScript and DefineStyle start a definition.
+
+15
+00:01:12,846 --> 00:01:18,100
+SetUrl takes the minified file and then the debug file, each starting with
+
+16
+00:01:18,100 --> 00:01:20,661
+a tilde for the site's base path.
+
+17
+00:01:20,661 --> 00:01:24,470
+SetVersion, SetDependencies, and SetCdn complete it.
+
+18
+00:01:25,220 --> 00:01:32,297
+A class that implements IConfigureOptions of ResourceManagementOptions adds the manifest to ResourceManifests.
+
+19
+00:01:32,297 --> 00:01:38,520
+Register that class with AddResourceConfiguration, in the Startup class of your module or theme.
+
+20
+00:01:42,720 --> 00:01:45,603
+To include a resource, ask for it by name.
+
+21
+00:01:45,603 --> 00:01:51,070
+Liquid has the script and style tags, and Razor has the script and style tag helpers.
+
+22
+00:01:51,820 --> 00:01:55,064
+Add a version to choose among the declared versions.
+
+23
+00:01:55,064 --> 00:01:59,202
+A major number, such as five, takes the highest match, and without a
+
+24
+00:01:59,202 --> 00:02:01,830
+version the highest declared one is used.
+
+25
+00:02:01,830 --> 00:02:06,360
+An unknown name or version raises an error when the resources are rendered.
+
+26
+00:02:07,110 --> 00:02:09,751
+Dependencies come with the resource:
+
+27
+00:02:09,751 --> 00:02:13,650
+the Bootstrap script, for example, renders Popper first.
+
+28
+00:02:13,650 --> 00:02:18,680
+To require more, add depends on to the tag, naming the resources it needs.
+
+29
+00:02:19,430 --> 00:02:22,488
+The at option chooses where a resource renders.
+
+30
+00:02:22,488 --> 00:02:26,527
+Head hands a script or stylesheet to the layout, Foot hands it a
+
+31
+00:02:26,527 --> 00:02:30,162
+script, and Inline renders the resource where the tag is.
+
+32
+00:02:30,162 --> 00:02:34,720
+Without at, a script renders in place, and a stylesheet goes to the head.
+
+33
+00:02:38,920 --> 00:02:41,937
+The layout renders what the views collected.
+
+34
+00:02:41,937 --> 00:02:48,211
+In the head, resources of type Meta, HeadLink, Stylesheet, and HeadScript, or Header for all four.
+
+35
+00:02:48,211 --> 00:02:51,590
+Before the end of the body, FootScript, or Footer.
+
+36
+00:02:55,790 --> 00:03:00,097
+A tag with only a source includes that file, without declaring a name.
+
+37
+00:03:00,097 --> 00:03:04,120
+Add a name, and it declares a resource that others can depend on.
+
+38
+00:03:04,120 --> 00:03:08,313
+A declared script is required only when you set at, while a declared
+
+39
+00:03:08,313 --> 00:03:10,410
+stylesheet is required at once.
+
+40
+00:03:11,160 --> 00:03:15,853
+For code that lives in the view, use scriptblock and styleblock in Liquid,
+
+41
+00:03:15,853 --> 00:03:18,375
+or script and style with at in Razor.
+
+42
+00:03:18,375 --> 00:03:23,830
+By default, a script block goes to the foot, and a style block follows the stylesheets.
+
+43
+00:03:24,580 --> 00:03:28,940
+Give a block a name, and it renders once, however many views ask.
+
+44
+00:03:28,940 --> 00:03:33,423
+It can also depend on other resources, so a block that needs jQuery
+
+45
+00:03:33,423 --> 00:03:35,020
+is written after it.
+
+46
+00:03:39,220 --> 00:03:42,796
+The link tag registers a link element, such as an icon.
+
+47
+00:03:42,796 --> 00:03:47,310
+HeadLink renders it in the head, with the tilde in its source resolved.
+
+48
+00:03:48,060 --> 00:03:52,154
+The meta tag registers a meta element with a name and content.
+
+49
+00:03:52,154 --> 00:03:56,488
+Two tags with the same name are combined, joined by a separator, a
+
+50
+00:03:56,488 --> 00:03:58,595
+comma and a space by default.
+
+51
+00:03:58,595 --> 00:04:00,040
+Meta renders them.
+
+52
+00:04:04,247 --> 00:04:06,475
+The resource settings are in the admin.
+
+53
+00:04:06,475 --> 00:04:08,157
+Open Settings, then General.
+
+54
+00:04:08,614 --> 00:04:13,754
+On the Resources tab, Settings for scripts and stylesheets holds the options.
+
+55
+00:04:14,216 --> 00:04:20,723
+Use resources cache busting appends a version hash to the address of local scripts and stylesheets.
+
+56
+00:04:20,723 --> 00:04:25,495
+The hash changes with the file, so browsers fetch an edited file again.
+
+57
+00:04:25,495 --> 00:04:27,106
+It is on by default.
+
+58
+00:04:27,565 --> 00:04:33,302
+Use framework CDN (Content Delivery Network) serves registered resources that have a CDN
+
+59
+00:04:33,302 --> 00:04:37,268
+address, such as jQuery, from it instead of the local file.
+
+60
+00:04:37,268 --> 00:04:41,845
+It is off by default, so a site works without an internet connection.
+
+61
+00:04:42,300 --> 00:04:47,426
+Site CDN (Content Delivery Network) base url adds a prefix, such as the
+
+62
+00:04:47,426 --> 00:04:52,686
+address of your own CDN, to the address of local scripts and stylesheets.
+
+63
+00:04:52,686 --> 00:04:56,480
+It is ignored when empty, or when debug mode is on.
+
+64
+00:04:56,936 --> 00:05:01,452
+Resource Debug Mode chooses between debuggable and minified files.
+
+65
+00:05:01,452 --> 00:05:04,276
+By default, it follows the environment:
+
+66
+00:05:04,276 --> 00:05:07,726
+debuggable files everywhere except in Production.
+
+67
+00:05:07,726 --> 00:05:10,926
+The other two options force one or the other.
+
+68
+00:05:11,382 --> 00:05:17,162
+Saving these settings reloads the tenant, so the next request uses the saved values.
+
+69
+00:05:21,362 --> 00:05:23,853
+From code, inject IResourceManager.
+
+70
+00:05:23,853 --> 00:05:28,895
+RegisterResource takes a type and a name, and returns settings you can chain,
+
+71
+00:05:28,895 --> 00:05:31,082
+such as UseVersion and AtFoot.
+
+72
+00:05:31,832 --> 00:05:39,427
+RegisterHeadScript and RegisterFootScript add custom scripts, RegisterMeta adds a meta tag, and AppendMeta
+
+73
+00:05:39,427 --> 00:05:41,462
+adds to an existing one.
+
+74
+00:05:41,462 --> 00:05:47,022
+The interface is in the OrchardCore.ResourceManagement.Abstractions package.
+
+75
+00:05:49,022 --> 00:05:50,970
+That's the Resources module:
+
+76
+00:05:50,970 --> 00:05:55,326
+declare a resource once, include it by name, and let the layout render
+
+77
+00:05:55,326 --> 00:05:57,732
+it once, in order, where you decide.
+
+78
+00:05:57,732 --> 00:05:59,222
+Thanks for watching.
+
