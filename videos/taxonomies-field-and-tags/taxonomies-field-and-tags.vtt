@@ -1,0 +1,233 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.207
+A taxonomy holds the terms you sort content with.
+
+00:00:04.207 --> 00:00:08.931
+A Taxonomy Field attaches them to a content type, so editors can pick them.
+
+00:00:08.931 --> 00:00:13.071
+In this video, you add Category and Tags fields to Blog Post, use
+
+00:00:13.071 --> 00:00:15.520
+both, and see the terms on the site.
+
+00:00:20.120 --> 00:00:25.552
+A taxonomy is a managed vocabulary, and this site has two, Categories and Tags.
+
+00:00:25.552 --> 00:00:29.641
+It is made of terms, and terms can sit inside other terms.
+
+00:00:29.641 --> 00:00:33.348
+A Taxonomy Field lets a content type use a taxonomy:
+
+00:00:33.348 --> 00:00:35.840
+you attach the field to the type.
+
+00:00:36.590 --> 00:00:41.507
+Editors pick terms while they edit an item, and the field offers two editors.
+
+00:00:41.507 --> 00:00:45.950
+The Standard editor shows every term as a checkbox or a radio button.
+
+00:00:45.950 --> 00:00:49.741
+The Tags editor is a box where you type to search, and can
+
+00:00:49.741 --> 00:00:51.400
+create tags as you go.
+
+00:00:52.150 --> 00:00:57.745
+Each field uses one taxonomy, and its settings define the rules for the selection:
+
+00:00:57.745 --> 00:01:00.225
+Required, Unique and Leaves only.
+
+00:01:00.225 --> 00:01:05.947
+The display mode, Standard or Tags, decides how the chosen terms appear on the page.
+
+00:01:05.947 --> 00:01:09.380
+Let's build one field of each kind on Blog Post.
+
+00:01:13.567 --> 00:01:18.144
+Content types are under Design, Content Definition, Content Types.
+
+00:01:18.144 --> 00:01:23.547
+Let's edit Blog Post, which has two fields here, a Subtitle and a Banner Image.
+
+00:01:24.004 --> 00:01:25.773
+Add Field opens a form.
+
+00:01:25.773 --> 00:01:29.861
+The Display Name is what editors see, so let's type Category.
+
+00:01:29.861 --> 00:01:32.424
+The Technical Name fills in from it.
+
+00:01:32.874 --> 00:01:35.367
+Field Type lists the kinds of field.
+
+00:01:35.367 --> 00:01:40.293
+Let's choose Taxonomy Field, and then Save & Configure, which saves the field
+
+00:01:40.293 --> 00:01:42.014
+and opens its settings.
+
+00:01:42.471 --> 00:01:47.920
+Taxonomy is where the field draws its terms from, and Categories is the one to select.
+
+00:01:47.920 --> 00:01:51.770
+The Hint is a line of help that editors see with the field,
+
+00:01:51.770 --> 00:01:53.251
+so let's write one.
+
+00:01:53.709 --> 00:01:57.656
+Required makes a selection mandatory, and it stays off here.
+
+00:01:57.656 --> 00:02:02.441
+Unique allows one term only, and Leaves only restricts the choice to terms
+
+00:02:02.441 --> 00:02:04.474
+with no children below them.
+
+00:02:04.474 --> 00:02:05.969
+Let's turn on both.
+
+00:02:06.430 --> 00:02:08.057
+Below are two questions:
+
+00:02:08.057 --> 00:02:10.282
+What type of editor should be used?
+
+00:02:10.282 --> 00:02:12.832
+What type of display mode should be used?
+
+00:02:12.832 --> 00:02:15.980
+Both stay on Standard, and Save stores the settings.
+
+00:02:16.468 --> 00:02:21.554
+Back on Blog Post, Category is listed as a Taxonomy Field, below the
+
+00:02:21.554 --> 00:02:24.028
+Subtitle and the Banner Image.
+
+00:02:28.253 --> 00:02:32.090
+Back on Blog Post, the Tags field starts the same way:
+
+00:02:32.090 --> 00:02:37.973
+Add Field, the Display Name Tags, the field type Taxonomy Field, and Save & Configure.
+
+00:02:38.442 --> 00:02:42.953
+This time the Taxonomy is Tags, and Required, Unique and Leaves only stay
+
+00:02:42.953 --> 00:02:45.751
+off, so a post can have any number of tags.
+
+00:02:45.751 --> 00:02:50.205
+Placeholder replaces the text Type to search in the Tags editor, and the
+
+00:02:50.205 --> 00:02:52.090
+Standard editor ignores it.
+
+00:02:52.090 --> 00:02:53.632
+Let's leave it empty.
+
+00:02:54.091 --> 00:02:57.098
+Next, let's set the editor question to Tags.
+
+00:02:57.098 --> 00:03:02.631
+One more setting appears, called Open, which lets editors create tags while they type.
+
+00:03:03.083 --> 00:03:07.705
+The hint of Open notes that a tag created this way has only its display text.
+
+00:03:07.705 --> 00:03:09.153
+Let's leave Open on.
+
+00:03:09.622 --> 00:03:14.106
+Let's also set the display mode question to Tags, so the page displays
+
+00:03:14.106 --> 00:03:15.522
+the field as tags.
+
+00:03:15.522 --> 00:03:17.352
+Save stores the settings.
+
+00:03:17.934 --> 00:03:22.506
+Tags is listed with two badges, one for its display mode and one
+
+00:03:22.506 --> 00:03:25.119
+for its editor, both reading Tags.
+
+00:03:25.119 --> 00:03:28.974
+Category has none, because it uses the Standard ones.
+
+00:03:33.274 --> 00:03:35.981
+This list of posts comes from the Blog menu.
+
+00:03:35.981 --> 00:03:39.934
+Edit opens the post A Night Train Across the Alps, and its Category
+
+00:03:39.934 --> 00:03:42.534
+and Tags fields are further down the page.
+
+00:03:43.003 --> 00:03:47.743
+Category shows its Hint, then the terms of the Categories taxonomy as radio
+
+00:03:47.743 --> 00:03:49.849
+buttons, because Unique is on.
+
+00:03:49.849 --> 00:03:52.073
+Trains is indented under Travel.
+
+00:03:52.530 --> 00:03:58.267
+Travel is disabled, because Leaves only restricts the choice to terms with no children.
+
+00:03:58.267 --> 00:03:59.870
+Let's select Trains.
+
+00:04:00.377 --> 00:04:03.405
+Tags is a box with the placeholder Type to search.
+
+00:04:03.405 --> 00:04:07.677
+Let's type the first letters of Exploration, and select it from the list.
+
+00:04:08.167 --> 00:04:11.521
+To create a tag, type a name that is not in the list.
+
+00:04:11.521 --> 00:04:15.897
+Let's type Night Train, and the box offers Press enter to create a tag.
+
+00:04:16.437 --> 00:04:21.649
+Pressing Enter adds Night Train to the Tags taxonomy right away, and selects it.
+
+00:04:21.649 --> 00:04:26.497
+Only users with the Manage taxonomies permission can create tags this way.
+
+00:04:26.986 --> 00:04:30.996
+Publish saves the post with its category and its two tags.
+
+00:04:35.296 --> 00:04:38.916
+Back in the Blog list, View opens the post on the site.
+
+00:04:41.302 --> 00:04:45.327
+Below the text, the category shows as a badge, and each tag as
+
+00:04:45.327 --> 00:04:46.807
+a badge of its own.
+
+00:04:46.807 --> 00:04:51.602
+The field stores the choice, and the theme's templates decide how it looks.
+
+00:04:53.602 --> 00:04:57.638
+A Taxonomy Field attaches the terms of one taxonomy to a content type:
+
+00:04:57.638 --> 00:05:01.834
+the Standard editor shows every term, and the Tags editor lets you search
+
+00:05:01.834 --> 00:05:03.481
+for tags and create them.
+
+00:05:03.481 --> 00:05:04.862
+Thanks for watching.
+
