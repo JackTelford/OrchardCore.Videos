@@ -1,0 +1,47 @@
+WEBVTT
+
+00:00:03.257 --> 00:00:07.140
+The Content Items menu entry opens the Manage Content page.
+
+00:00:07.140 --> 00:00:09.231
+Let's edit the About article.
+
+00:00:09.231 --> 00:00:13.473
+Further down, the WidgetsList section shows a card for each zone:
+
+00:00:13.473 --> 00:00:14.967
+Content and Footer.
+
+00:00:15.417 --> 00:00:19.905
+In the Footer zone, the plus button titled Add Widget opens a list.
+
+00:00:19.905 --> 00:00:24.637
+It holds every content type with the Widget stereotype, sorted by name.
+
+00:00:25.101 --> 00:00:26.664
+Let's choose Paragraph.
+
+00:00:26.664 --> 00:00:29.252
+A card for the widget appears in the zone.
+
+00:00:29.252 --> 00:00:33.241
+Expand it, and write the text that visitors will read in the footer.
+
+00:00:33.729 --> 00:00:37.071
+Let's add a Blockquote to the Content zone the same way.
+
+00:00:37.071 --> 00:00:39.389
+Its only field is Quote, a text area.
+
+00:00:42.228 --> 00:00:46.254
+Let's choose Publish, which saves the widgets together with the article.
+
+00:00:46.254 --> 00:00:50.848
+The widgets are stored in the article itself, so they belong to this article alone.
+
+00:00:51.300 --> 00:00:55.050
+On the About page, the quote is shown in the Content zone, and
+
+00:00:55.050 --> 00:00:57.200
+the paragraph in the Footer zone.
+
