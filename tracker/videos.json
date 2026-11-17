@@ -2820,18 +2820,18 @@
     "docs": [
       "src/docs/reference/modules/AzureAISearch/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 4.9,
     "words": 741,
     "contentCommit": "",
-    "recordedBy": "",
+    "recordedBy": "wipke",
     "recordedOn": "",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": "External service with no local emulator: the recording plan must use a stand-in endpoint, or the video stays blocked."
+    "notes": "External service with no local emulator: the recording plan must use a stand-in endpoint, or the video stays blocked. | 2026-11-17 blocked: Azure AI Search has no local emulator. The plan's stand-in serves HTTPS (the Azure SDK refuses any other scheme) and needs the site's .NET process to trust a self-signed certificate, which means changing the machine's certificate trust store; the screens would show a fake service, not Azure AI Search."
   },
   {
     "slug": "azure-ai-search-queries",
