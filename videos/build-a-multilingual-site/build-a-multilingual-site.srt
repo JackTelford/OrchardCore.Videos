@@ -1,0 +1,400 @@
+1
+00:00:01,000 --> 00:00:03,963
+Visitors expect a site in their own language.
+
+2
+00:00:03,963 --> 00:00:08,959
+In this video, you enable the localization features, choose the languages of the
+
+3
+00:00:08,959 --> 00:00:14,130
+site, translate a page, and add a menu that lets visitors switch between languages.
+
+4
+00:00:18,730 --> 00:00:21,552
+Let's build a small site in two languages.
+
+5
+00:00:21,552 --> 00:00:25,314
+English is the default, and French is the second language.
+
+6
+00:00:25,314 --> 00:00:31,310
+The About page gets a French translation, and a language menu lets visitors switch between them.
+
+7
+00:00:32,060 --> 00:00:34,820
+Three features make a site multilingual.
+
+8
+00:00:34,820 --> 00:00:38,300
+Localization defines the cultures the site supports.
+
+9
+00:00:38,300 --> 00:00:42,620
+A culture is a language, usually with a region, such as English in
+
+10
+00:00:42,620 --> 00:00:46,460
+the United States, and one of the cultures is the default.
+
+11
+00:00:47,210 --> 00:00:52,437
+Content Localization lets a content item have one translation for each culture.
+
+12
+00:00:52,437 --> 00:00:56,864
+Each translation is a content item of its own, with its own title,
+
+13
+00:00:56,864 --> 00:01:01,660
+text, and permalink, and the translations of a page are linked together.
+
+14
+00:01:02,410 --> 00:01:07,176
+Content Culture Picker provides a language menu for the navigation bar of the site.
+
+15
+00:01:07,176 --> 00:01:11,513
+When a visitor chooses a language, the picker takes them to the translation
+
+16
+00:01:11,513 --> 00:01:14,190
+of the page they are reading, if one exists.
+
+17
+00:01:18,490 --> 00:01:20,723
+Let's start with the features.
+
+18
+00:01:20,723 --> 00:01:26,120
+Open Tools, Features, and type localization in the search box to narrow the list.
+
+19
+00:01:26,617 --> 00:01:28,572
+Find Content Culture Picker.
+
+20
+00:01:28,572 --> 00:01:35,416
+Its row lists Content Localization among the features it depends on, and Content Localization needs Localization.
+
+21
+00:01:35,416 --> 00:01:39,097
+Press Enable, and all three features are enabled together.
+
+22
+00:01:39,575 --> 00:01:42,672
+A message confirms that the feature was enabled.
+
+23
+00:01:42,672 --> 00:01:44,737
+Search for localization again:
+
+24
+00:01:44,737 --> 00:01:50,015
+Localization, Content Localization, and Content Culture Picker are all marked Enabled.
+
+25
+00:01:54,315 --> 00:01:57,174
+Open Settings, Localization, Cultures.
+
+26
+00:01:57,174 --> 00:02:02,631
+The table starts with one culture, taken from the computer that runs the site.
+
+27
+00:02:02,631 --> 00:02:06,075
+Here it is en-US, English in the United States.
+
+28
+00:02:06,615 --> 00:02:12,482
+Below the table, choose fr-FR, French in France, in the list of cultures.
+
+29
+00:02:12,482 --> 00:02:16,195
+Press Add culture, and a second row appears.
+
+30
+00:02:16,831 --> 00:02:20,040
+Each row has a radio button in the Default culture column.
+
+31
+00:02:20,040 --> 00:02:24,051
+The selected one is the default, and a translatable content item starts in
+
+32
+00:02:24,051 --> 00:02:25,957
+that culture when you create it.
+
+33
+00:02:25,957 --> 00:02:27,411
+Leave English selected.
+
+34
+00:02:27,880 --> 00:02:28,883
+Press Save.
+
+35
+00:02:28,883 --> 00:02:33,602
+The site restarts so that the settings take effect, and a message says so.
+
+36
+00:02:33,602 --> 00:02:37,260
+After the restart, the site supports English and French.
+
+37
+00:02:41,560 --> 00:02:45,741
+A content type is translatable when it has the Localization part.
+
+38
+00:02:45,741 --> 00:02:47,508
+Let's add it to Article.
+
+39
+00:02:47,508 --> 00:02:52,220
+Open Design, Content Definition, Content Types, and press Edit on Article.
+
+40
+00:02:52,884 --> 00:02:54,969
+Under Parts, press Add Parts.
+
+41
+00:02:54,969 --> 00:02:58,426
+The list shows the parts you can attach to the type.
+
+42
+00:02:58,426 --> 00:03:01,764
+Check Localization, then press Add Selected Parts.
+
+43
+00:03:02,231 --> 00:03:06,565
+A message confirms that the part was added, and Localization appears in the
+
+44
+00:03:06,565 --> 00:03:07,849
+parts of the type.
+
+45
+00:03:07,849 --> 00:03:08,759
+Press Save.
+
+46
+00:03:08,759 --> 00:03:11,541
+A type without this part cannot be translated.
+
+47
+00:03:15,841 --> 00:03:18,084
+Let's translate the About page.
+
+48
+00:03:18,084 --> 00:03:21,601
+Open Content, Content Items, and find the About row.
+
+49
+00:03:22,258 --> 00:03:26,389
+Press Edit, then scroll down to the panel that begins with Current Culture.
+
+50
+00:03:26,389 --> 00:03:28,838
+It names the culture of this content item.
+
+51
+00:03:29,301 --> 00:03:30,555
+Open the panel.
+
+52
+00:03:30,555 --> 00:03:35,988
+It asks you to save the content item before creating localizations, so press Publish.
+
+53
+00:03:35,988 --> 00:03:37,601
+The list opens again.
+
+54
+00:03:40,824 --> 00:03:44,914
+The About row shows a culture badge and a Localizations button.
+
+55
+00:03:44,914 --> 00:03:47,226
+Open Localizations to see French.
+
+56
+00:03:47,226 --> 00:03:50,664
+A plus sign marks a culture that has no translation.
+
+57
+00:03:51,201 --> 00:03:52,358
+Choose French.
+
+58
+00:03:52,358 --> 00:03:56,986
+Orchard Core creates a French copy of the page and opens it in the editor.
+
+59
+00:03:56,986 --> 00:04:01,441
+The panel shows French as the current culture, and lists English with a
+
+60
+00:04:01,441 --> 00:04:03,871
+pencil, a link back to the original.
+
+61
+00:04:04,326 --> 00:04:08,810
+Change the title to À propos, give the page its own permalink, a-propos,
+
+62
+00:04:08,810 --> 00:04:11,626
+and replace the text with a French version.
+
+63
+00:04:19,415 --> 00:04:20,706
+Press Publish.
+
+64
+00:04:20,706 --> 00:04:22,771
+The list shows both pages:
+
+65
+00:04:22,771 --> 00:04:25,611
+About in en-US, and À propos in fr-FR.
+
+66
+00:04:25,611 --> 00:04:30,000
+Each translation is a content item of its own, so you can edit
+
+67
+00:04:30,000 --> 00:04:32,065
+and publish it separately.
+
+68
+00:04:32,521 --> 00:04:35,444
+The list also has a Culture filter.
+
+69
+00:04:35,444 --> 00:04:39,651
+Choose fr-FR, and the list shows only French content.
+
+70
+00:04:43,951 --> 00:04:48,189
+The picker appears in the navigation bar of themes that render it.
+
+71
+00:04:48,189 --> 00:04:51,602
+The Blog Theme does not, and The Default Theme does.
+
+72
+00:04:51,602 --> 00:04:55,781
+Open Design, Themes, and press Make Current on The Default Theme.
+
+73
+00:04:56,252 --> 00:04:58,398
+A message confirms the change.
+
+74
+00:04:58,398 --> 00:05:02,212
+Next, open Settings, Localization, Content Culture Picker.
+
+75
+00:05:02,212 --> 00:05:07,575
+Set Cookie remembers the language a visitor chooses, and Homepage redirect makes the
+
+76
+00:05:07,575 --> 00:05:12,402
+picker try the home page in that language when the page has no translation.
+
+77
+00:05:12,890 --> 00:05:16,579
+Content Culture, next to it, has its own Set Cookie option.
+
+78
+00:05:16,579 --> 00:05:20,948
+When it is on, opening a translated page also remembers the language of
+
+79
+00:05:20,948 --> 00:05:24,410
+that page, for pages that have no culture of their own.
+
+80
+00:05:28,710 --> 00:05:31,632
+Let's visit the site and open the About page.
+
+81
+00:05:31,632 --> 00:05:36,730
+The navigation bar shows a menu with the current language, English (United States).
+
+82
+00:05:37,188 --> 00:05:38,305
+Open the menu.
+
+83
+00:05:38,305 --> 00:05:41,318
+It lists the other languages by their own names.
+
+84
+00:05:41,318 --> 00:05:43,048
+Choose français (France).
+
+85
+00:05:44,315 --> 00:05:49,324
+The picker takes the visitor to the French page, with its own title and text.
+
+86
+00:05:49,324 --> 00:05:53,005
+The menu shows the current language, français (France).
+
+87
+00:05:53,557 --> 00:05:59,217
+Choose English (United States) in the menu to go back to the About page, in English.
+
+88
+00:05:59,689 --> 00:06:02,943
+A page without a translation behaves differently.
+
+89
+00:06:02,943 --> 00:06:08,209
+On the home page, choose français (France), and the visitor stays on the same page.
+
+90
+00:06:12,409 --> 00:06:17,136
+When a visitor chooses a language, the picker first looks for the translation
+
+91
+00:06:17,136 --> 00:06:18,617
+of the current page.
+
+92
+00:06:18,617 --> 00:06:21,749
+If there is one, the visitor goes straight to it.
+
+93
+00:06:22,499 --> 00:06:27,035
+If the page has no translation and Homepage redirect is on, the picker
+
+94
+00:06:27,035 --> 00:06:29,959
+tries the home page in the chosen language.
+
+95
+00:06:30,709 --> 00:06:34,517
+In every other case, the visitor stays on the current page.
+
+96
+00:06:34,517 --> 00:06:38,969
+When Set Cookie is on, the picker still remembers the chosen language.
+
+97
+00:06:40,969 --> 00:06:43,429
+You have a site with two languages:
+
+98
+00:06:43,429 --> 00:06:47,569
+cultures, a translatable type, a translated page, and a picker.
+
+99
+00:06:47,569 --> 00:06:53,569
+The labels of the interface itself come from translation files, which a separate video covers.
+
+100
+00:06:53,569 --> 00:06:55,129
+Thanks for watching.
+
