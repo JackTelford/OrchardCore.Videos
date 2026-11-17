@@ -1,0 +1,23 @@
+WEBVTT
+
+00:00:03.235 --> 00:00:08.882
+On the site, the theme shows the category and the tags of each post as badges.
+
+00:00:08.882 --> 00:00:11.705
+Each badge is a link to a term page.
+
+00:00:12.168 --> 00:00:16.555
+The Travel page lists the content categorized with Travel, newest first.
+
+00:00:16.555 --> 00:00:19.198
+Here it shows the two posts about travel.
+
+00:00:19.650 --> 00:00:24.676
+Term pages are available when a taxonomy has Route contained items checked in
+
+00:00:24.676 --> 00:00:27.947
+its editor, and the theme decides how they look.
+
+00:00:27.947 --> 00:00:30.430
+A separate video covers term pages.
+
