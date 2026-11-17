@@ -1,0 +1,320 @@
+1
+00:00:01,000 --> 00:00:05,244
+An AI assistant can work alongside you on an Orchard Core site.
+
+2
+00:00:05,244 --> 00:00:09,796
+In this video, we'll connect one to the Orchard Core MCP server, add
+
+3
+00:00:09,796 --> 00:00:12,810
+AI Skills, and see what to ask it to build.
+
+4
+00:00:17,410 --> 00:00:20,463
+Orchard Core is a large, modular framework.
+
+5
+00:00:20,463 --> 00:00:25,510
+Instead of searching the documentation by hand, you can ask an AI assistant
+
+6
+00:00:25,510 --> 00:00:32,240
+to scaffold modules, write recipes, generate content type migrations, and explain how a feature works.
+
+7
+00:00:32,990 --> 00:00:37,446
+The key to accurate answers is the official Orchard Core MCP server.
+
+8
+00:00:37,446 --> 00:00:43,106
+It gives the assistant tool-based access to the Orchard Core documentation, so responses
+
+9
+00:00:43,106 --> 00:00:47,080
+reflect how Orchard Core actually works rather than guesses.
+
+10
+00:00:47,830 --> 00:00:49,945
+AI Skills add a second layer:
+
+11
+00:00:49,945 --> 00:00:55,745
+repeatable, Orchard Core specific workflows that guide the assistant through common tasks.
+
+12
+00:00:55,745 --> 00:00:59,250
+We'll connect the server first, then add the skills.
+
+13
+00:01:03,450 --> 00:01:08,829
+Model Context Protocol, or MCP, is an open standard that lets AI assistants
+
+14
+00:01:08,829 --> 00:01:11,685
+call external tools and data sources.
+
+15
+00:01:11,685 --> 00:01:17,662
+The Orchard Core MCP server offers tools that search the Orchard Core documentation,
+
+16
+00:01:17,662 --> 00:01:22,510
+so its answers use the correct APIs, module names, and conventions.
+
+17
+00:01:23,260 --> 00:01:31,271
+The server is hosted at ai.orchardcore.net/mcp, and you point any MCP-capable client at this address.
+
+18
+00:01:31,271 --> 00:01:37,110
+The assistant then gains access to the Orchard Core tools automatically.
+
+19
+00:01:41,310 --> 00:01:46,715
+GitHub Copilot CLI brings a Copilot coding agent to your terminal.
+
+20
+00:01:46,715 --> 00:01:53,020
+Install it with npm, which requires Node.js, then start it by running copilot.
+
+21
+00:01:53,770 --> 00:01:57,154
+Inside Copilot, run the /mcp add command.
+
+22
+00:01:57,154 --> 00:02:04,138
+When prompted, name the server orchardcore, choose the HTTP server type, and enter its URL.
+
+23
+00:02:04,138 --> 00:02:09,898
+Or add the server to the Copilot CLI configuration file, where an asterisk
+
+24
+00:02:09,898 --> 00:02:12,850
+in the tools key allows every tool.
+
+25
+00:02:13,600 --> 00:02:19,702
+On github.com, open your repository's Settings, choose Copilot, then MCP servers, and add
+
+26
+00:02:19,702 --> 00:02:22,592
+the same entry under MCP configuration.
+
+27
+00:02:22,592 --> 00:02:25,289
+GitHub requires the tools key there.
+
+28
+00:02:25,289 --> 00:02:30,620
+The Copilot cloud agent and code review can then call the Orchard Core tools.
+
+29
+00:02:31,370 --> 00:02:36,862
+In Visual Studio Code, create a .mcp.json file at the root of your
+
+30
+00:02:36,862 --> 00:02:39,837
+workspace and add the same entry.
+
+31
+00:02:39,837 --> 00:02:45,940
+Its top-level key is mcpServers, as in the Copilot CLI configuration file.
+
+32
+00:02:46,690 --> 00:02:50,828
+Then open the Chat view, select Open Customizations in the title bar, and
+
+33
+00:02:50,828 --> 00:02:52,190
+check the Tools tab:
+
+34
+00:02:52,190 --> 00:02:55,280
+the tools of the orchardcore server are listed there.
+
+35
+00:02:59,480 --> 00:03:03,057
+Claude Code is a terminal-based AI coding assistant.
+
+36
+00:03:03,057 --> 00:03:07,992
+If running claude reports that the command is not recognized or not found,
+
+37
+00:03:07,992 --> 00:03:14,530
+install it with npm, which requires Node.js, then verify the installation by asking for its version.
+
+38
+00:03:15,280 --> 00:03:17,700
+One command registers the server:
+
+39
+00:03:17,700 --> 00:03:23,843
+claude mcp add, with the transport set to HTTP, the name orchardcore, and the server address.
+
+40
+00:03:23,843 --> 00:03:27,132
+Start a session and ask Orchard Core questions:
+
+41
+00:03:27,132 --> 00:03:32,220
+the assistant calls the server's tools when it needs Orchard Core knowledge.
+
+42
+00:03:32,970 --> 00:03:37,007
+In Claude Desktop, remote servers are added as connectors.
+
+43
+00:03:37,007 --> 00:03:43,820
+Open Settings, choose Connectors, select Add, then Add custom connector, and enter the server address.
+
+44
+00:03:48,020 --> 00:03:52,811
+Cursor reads an MCP configuration file from your project, or a global one
+
+45
+00:03:52,811 --> 00:03:54,692
+from your home directory.
+
+46
+00:03:54,692 --> 00:03:58,270
+Here, the entry holds only the address of the server.
+
+47
+00:03:59,020 --> 00:04:03,378
+Any client that supports remote HTTP servers can connect.
+
+48
+00:04:03,378 --> 00:04:09,050
+Look for an MCP, Model Context Protocol, or Tools or Connectors setting, and
+
+49
+00:04:09,050 --> 00:04:13,200
+register an HTTP server with the Orchard Core address.
+
+50
+00:04:17,400 --> 00:04:23,927
+Beyond the MCP server, AI Skills teach an assistant repeatable, Orchard Core specific workflows.
+
+51
+00:04:23,927 --> 00:04:29,494
+The documentation links a community project that provides a curated set of skills
+
+52
+00:04:29,494 --> 00:04:32,950
+and plugins for building Orchard Core solutions.
+
+53
+00:04:33,700 --> 00:04:38,074
+That project is maintained by the community, and it is not an official
+
+54
+00:04:38,074 --> 00:04:39,628
+part of Orchard Core.
+
+55
+00:04:39,628 --> 00:04:43,657
+You install it as a plugin for Claude Code or the GitHub Copilot
+
+56
+00:04:43,657 --> 00:04:46,880
+CLI, following the instructions in its repository.
+
+57
+00:04:47,630 --> 00:04:48,984
+Use both together.
+
+58
+00:04:48,984 --> 00:04:54,232
+The MCP server keeps the assistant grounded in accurate documentation, while the skills
+
+59
+00:04:54,232 --> 00:04:57,730
+guide it through common Orchard Core tasks step by step.
+
+60
+00:05:01,930 --> 00:05:04,615
+Once connected, ask in natural language.
+
+61
+00:05:04,615 --> 00:05:08,641
+Ask for a module with a Product content type and a price field,
+
+62
+00:05:08,641 --> 00:05:13,310
+or for a recipe that creates a blog content type, a menu, and a home page.
+
+63
+00:05:14,060 --> 00:05:18,516
+For content modeling, ask for a data migration that adds an AutoroutePart and
+
+64
+00:05:18,516 --> 00:05:20,986
+a MarkdownBodyPart to your Article type.
+
+65
+00:05:20,986 --> 00:05:26,247
+Because the assistant can consult the documentation through the server, its suggestions stay
+
+66
+00:05:26,247 --> 00:05:28,770
+aligned with the framework's conventions.
+
+67
+00:05:29,520 --> 00:05:33,481
+Ask it to explain how display drivers and shapes work, and how to
+
+68
+00:05:33,481 --> 00:05:35,713
+customize the rendering of a part.
+
+69
+00:05:35,713 --> 00:05:39,674
+Or ask how to handle a content event, to send a notification when
+
+70
+00:05:39,674 --> 00:05:41,180
+an item is published.
+
+71
+00:05:41,930 --> 00:05:44,751
+Give the assistant context about your project:
+
+72
+00:05:44,751 --> 00:05:50,175
+the modules you have enabled, the content types you use, and your target Orchard Core version.
+
+73
+00:05:50,175 --> 00:05:53,430
+Its answers and generated code then fit your solution.
+
+74
+00:05:54,180 --> 00:05:59,702
+The MCP server provides the Orchard Core knowledge, but you remain responsible for the result.
+
+75
+00:05:59,702 --> 00:06:04,120
+Review generated code and recipes before you run them in your application.
+
+76
+00:06:08,320 --> 00:06:13,504
+To build the application itself, continue with Create a CMS Web application, Recipes
+
+77
+00:06:13,504 --> 00:06:17,940
+and Starter Themes, and Code Generation Templates in the documentation.
+
+78
+00:06:19,940 --> 00:06:24,720
+Connect the Orchard Core MCP server, add AI Skills, give the assistant the
+
+79
+00:06:24,720 --> 00:06:28,126
+context of your project, and review what it writes.
+
+80
+00:06:28,126 --> 00:06:29,680
+Thanks for watching.
+
