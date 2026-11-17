@@ -1,0 +1,324 @@
+1
+00:00:01,000 --> 00:00:04,331
+A module needs data in place before it can work:
+
+2
+00:00:04,331 --> 00:00:07,661
+content types, database tables, starter content.
+
+3
+00:00:07,661 --> 00:00:12,472
+A data migration creates that data and updates it as the module changes.
+
+4
+00:00:12,472 --> 00:00:17,900
+In this video, you write a migration, register it, and watch Orchard Core run one.
+
+5
+00:00:22,500 --> 00:00:25,026
+A module needs data before it works:
+
+6
+00:00:25,026 --> 00:00:28,816
+a content type, a table for an index, or starter content.
+
+7
+00:00:28,816 --> 00:00:33,869
+Every tenant, a separate site inside one Orchard Core application, has its own
+
+8
+00:00:33,869 --> 00:00:38,080
+data, and tenants enable a module's features at different times.
+
+9
+00:00:38,830 --> 00:00:41,936
+A data migration is a class of numbered steps.
+
+10
+00:00:41,936 --> 00:00:45,102
+Each tenant records the version it has reached.
+
+11
+00:00:45,102 --> 00:00:50,180
+When the tenant starts, Orchard Core runs the steps that are missing, in order.
+
+12
+00:00:54,380 --> 00:00:57,696
+Your migration class inherits from DataMigration.
+
+13
+00:00:57,696 --> 00:01:02,218
+Its first step is a method named CreateAsync, which returns a number.
+
+14
+00:01:02,218 --> 00:01:06,740
+Orchard Core stores that number as the version the migration reached.
+
+15
+00:01:07,490 --> 00:01:12,438
+Every later step is named UpdateFrom, followed by the version it starts from.
+
+16
+00:01:12,438 --> 00:01:18,340
+UpdateFrom1Async runs when the stored version is 1, and returns the version it leaves behind.
+
+17
+00:01:19,090 --> 00:01:25,248
+Only public methods named Create, CreateAsync, or UpdateFrom plus a number, with or
+
+18
+00:01:25,248 --> 00:01:27,393
+without Async, are steps.
+
+19
+00:01:27,393 --> 00:01:33,205
+They return int or Task<int>, except CreateAsync, which must return Task<int>.
+
+20
+00:01:33,205 --> 00:01:36,250
+Orchard Core ignores any other method.
+
+21
+00:01:37,000 --> 00:01:42,044
+A tenant with no stored version runs CreateAsync, then the updates that continue
+
+22
+00:01:42,044 --> 00:01:43,980
+from the number it returns.
+
+23
+00:01:43,980 --> 00:01:49,025
+A tenant whose stored version is 1 runs UpdateFrom1Async and the steps after it.
+
+24
+00:01:49,025 --> 00:01:52,720
+A step that already ran never runs again for that tenant.
+
+25
+00:01:53,470 --> 00:01:56,433
+CreateAsync can return a higher number than 1.
+
+26
+00:01:56,433 --> 00:02:01,277
+The Forms module's CreateAsync builds the final content types and returns 5, so
+
+27
+00:02:01,277 --> 00:02:04,754
+a tenant with no stored version skips its four updates.
+
+28
+00:02:04,754 --> 00:02:08,230
+Tenants with an earlier version run the ones they miss.
+
+29
+00:02:12,430 --> 00:02:16,692
+A migration does nothing until a Startup class registers it.
+
+30
+00:02:16,692 --> 00:02:21,600
+In ConfigureServices, call AddDataMigration with your migration class.
+
+31
+00:02:22,350 --> 00:02:26,678
+A migration belongs to the feature of the Startup class that registers it,
+
+32
+00:02:26,678 --> 00:02:29,708
+and runs only on tenants that enable that feature.
+
+33
+00:02:29,708 --> 00:02:33,982
+The Feature attribute on a Startup class names the feature it belongs to.
+
+34
+00:02:33,982 --> 00:02:36,200
+Register each migration class once.
+
+35
+00:02:36,950 --> 00:02:42,804
+Orchard Core creates the migration through dependency injection, so its constructor can ask
+
+36
+00:02:42,804 --> 00:02:44,976
+for any service of the tenant.
+
+37
+00:02:44,976 --> 00:02:49,140
+The Menu module's migration takes IRecipeMigrator and ISession.
+
+38
+00:02:53,392 --> 00:02:55,225
+Let's see a migration run.
+
+39
+00:02:55,225 --> 00:03:00,951
+Under Design, Content Definition, Content Types, searching for Form finds nothing, because the
+
+40
+00:03:00,951 --> 00:03:03,642
+Forms feature isn't enabled on this site.
+
+41
+00:03:04,142 --> 00:03:08,347
+Under Tools, Features, let's search for Forms and select Enable.
+
+42
+00:03:08,347 --> 00:03:11,772
+This is the feature whose migration we saw earlier.
+
+43
+00:03:12,236 --> 00:03:14,947
+Enabling a feature recycles the tenant.
+
+44
+00:03:14,947 --> 00:03:20,307
+As the tenant starts, Orchard Core runs the feature's migration, and a notification
+
+45
+00:03:20,307 --> 00:03:22,896
+reports that the feature was enabled.
+
+46
+00:03:23,368 --> 00:03:29,360
+Back under Content Types, searching for Form finds the Form type that the migration created.
+
+47
+00:03:29,360 --> 00:03:32,968
+The version it reached, 5, is stored for this tenant.
+
+48
+00:03:37,168 --> 00:03:40,136
+Many migrations change content definitions.
+
+49
+00:03:40,136 --> 00:03:46,798
+Inject IContentDefinitionManager, and call AlterTypeDefinitionAsync with a type name to create the type,
+
+50
+00:03:46,798 --> 00:03:49,039
+or to change it when it exists.
+
+51
+00:03:49,039 --> 00:03:52,068
+WithPart attaches a part, such as TitlePart.
+
+52
+00:03:52,818 --> 00:03:55,746
+Inside the lambda, set the type's options.
+
+53
+00:03:55,746 --> 00:04:01,908
+Creatable, Listable, Draftable, Versionable and Securable match checkboxes of the same names on
+
+54
+00:04:01,908 --> 00:04:03,738
+a content type's editor.
+
+55
+00:04:07,938 --> 00:04:10,816
+The base class gives you a SchemaBuilder.
+
+56
+00:04:10,816 --> 00:04:17,797
+CreateMapIndexTableAsync creates the table for an index class, here ProductIndex, with the columns you list.
+
+57
+00:04:17,797 --> 00:04:22,818
+Give every string column a length, so the migration works on every database.
+
+58
+00:04:23,568 --> 00:04:27,037
+AlterIndexTableAsync changes a table that exists.
+
+59
+00:04:27,037 --> 00:04:33,470
+Here it creates a database index on the Category column, which makes fetches by Category faster.
+
+60
+00:04:33,470 --> 00:04:37,318
+A separate video covers writing the index class itself.
+
+61
+00:04:41,518 --> 00:04:44,180
+A migration can also run a recipe.
+
+62
+00:04:44,180 --> 00:04:51,168
+Inject IRecipeMigrator, and call ExecuteAsync with the recipe's file name and the migration itself.
+
+63
+00:04:51,918 --> 00:04:56,906
+Orchard Core reads the file from the Migrations folder in your module's folder.
+
+64
+00:04:56,906 --> 00:05:02,188
+Use a recipe when the change is data, such as content types, workflows and settings.
+
+65
+00:05:06,388 --> 00:05:09,622
+A step can also change data that already exists.
+
+66
+00:05:09,622 --> 00:05:14,713
+The Menu module's migration queries the content items of one type, changes each
+
+67
+00:05:14,713 --> 00:05:17,648
+one, saves it, and returns the next number.
+
+68
+00:05:21,848 --> 00:05:25,622
+Once a migration has run on a tenant, keep its numbers and its
+
+69
+00:05:25,622 --> 00:05:27,398
+earlier steps as they are.
+
+70
+00:05:27,398 --> 00:05:32,227
+A step that ran never runs again, so add another UpdateFrom step for each change.
+
+71
+00:05:32,227 --> 00:05:35,668
+Renumbering can disrupt the migrations of other tenants.
+
+72
+00:05:36,418 --> 00:05:40,965
+Each tenant stores one record that lists every migration class by its full
+
+73
+00:05:40,965 --> 00:05:42,613
+name, with its version.
+
+74
+00:05:42,613 --> 00:05:46,933
+If you rename the class or change its namespace, Orchard Core finds no
+
+75
+00:05:46,933 --> 00:05:49,718
+version for it, and runs CreateAsync again.
+
+76
+00:05:50,468 --> 00:05:56,197
+If a step throws an exception, Orchard Core logs the error, and the tenant starts anyway.
+
+77
+00:05:56,197 --> 00:06:00,478
+When a table or content type you expect is missing, read the log.
+
+78
+00:06:02,478 --> 00:06:04,683
+That's how a data migration works:
+
+79
+00:06:04,683 --> 00:06:08,764
+numbered steps in a class, registered by a Startup class, and run by
+
+80
+00:06:08,764 --> 00:06:11,024
+Orchard Core as each tenant starts.
+
+81
+00:06:11,024 --> 00:06:12,458
+Thanks for watching.
+
