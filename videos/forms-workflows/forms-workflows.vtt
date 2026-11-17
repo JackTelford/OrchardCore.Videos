@@ -1,0 +1,281 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.205
+A form collects a submission, and something has to process it.
+
+00:00:05.205 --> 00:00:10.028
+Here, a Form widget posts to a workflow that validates the fields, sends
+
+00:00:10.028 --> 00:00:15.470
+an email, and returns the visitor to the form with errors, or to a thank-you page.
+
+00:00:20.070 --> 00:00:22.316
+A form has two independent parts:
+
+00:00:22.316 --> 00:00:25.081
+building it, and processing what it posts.
+
+00:00:25.081 --> 00:00:27.270
+The Form widget builds the HTML.
+
+00:00:27.270 --> 00:00:31.590
+Its Action field holds the URL of a workflow that processes the post.
+
+00:00:32.340 --> 00:00:36.138
+The widget renders a form element with your Action and Method.
+
+00:00:36.138 --> 00:00:40.103
+It adds an antiforgery token, and a hidden field with the path of
+
+00:00:40.103 --> 00:00:43.342
+the page, so the workflow can send the visitor back.
+
+00:00:43.342 --> 00:00:45.520
+Both are settings, on by default.
+
+00:00:46.270 --> 00:00:50.040
+A post to that URL reaches the HTTP workflow controller.
+
+00:00:50.040 --> 00:00:54.845
+It decrypts the token to find the workflow and its start activity, checks
+
+00:00:54.845 --> 00:00:59.710
+the antiforgery token when the event asks for it, and starts the workflow.
+
+00:01:00.460 --> 00:01:03.565
+When the workflow ends, the controller answers.
+
+00:01:03.565 --> 00:01:08.837
+It keeps a response an activity wrote, or else redirects to the saved form location.
+
+00:01:08.837 --> 00:01:13.114
+With neither, it returns Accepted with an empty body, so end a form
+
+00:01:13.114 --> 00:01:14.930
+workflow with a redirect.
+
+00:01:19.132 --> 00:01:22.689
+Open Design, Workflows, and select Create Workflow.
+
+00:01:22.689 --> 00:01:27.557
+A workflow only needs a name, so enter Contact Form Workflow, and select
+
+00:01:27.557 --> 00:01:29.742
+Create and open the designer.
+
+00:01:30.201 --> 00:01:33.614
+An empty workflow offers the events that can start it.
+
+00:01:33.614 --> 00:01:35.434
+Choose Http Request Event.
+
+00:01:35.434 --> 00:01:39.927
+The first event you add becomes the start activity, and its settings open
+
+00:01:39.927 --> 00:01:41.861
+at the bottom of the canvas.
+
+00:01:42.333 --> 00:01:45.657
+Set HTTP Method to POST, because a form posts.
+
+00:01:45.657 --> 00:01:49.365
+The URL is already filled in when the settings open.
+
+00:01:49.365 --> 00:01:54.863
+It carries a protected token, so anyone who has the URL can start this workflow.
+
+00:01:55.351 --> 00:02:00.641
+Validate Antiforgery Token is checked by default, and the Form widget sends the
+
+00:02:00.641 --> 00:02:02.695
+token, so leave it checked.
+
+00:02:02.695 --> 00:02:07.301
+Form Location Key stays empty, since this workflow handles one form.
+
+00:02:11.515 --> 00:02:16.049
+Click the Done outcome of the event, and search for Bind Model State Task.
+
+00:02:16.049 --> 00:02:20.244
+It copies every posted field into the model state, so the form shows
+
+00:02:20.244 --> 00:02:22.965
+the visitor's values again after an error.
+
+00:02:23.418 --> 00:02:25.728
+Add Validate Form Field Task.
+
+00:02:25.728 --> 00:02:30.347
+Field Name must match the HTML Name of the input, so enter Name,
+
+00:02:30.347 --> 00:02:33.515
+and set Error Message to Name is required.
+
+00:02:33.515 --> 00:02:37.078
+A value that is empty or only white space fails.
+
+00:02:37.529 --> 00:02:41.437
+From its Done outcome, add a second one with Field Name Email and
+
+00:02:41.437 --> 00:02:43.528
+Error Message Email is required.
+
+00:02:43.528 --> 00:02:46.500
+A failed field adds an error to the model state.
+
+00:02:46.500 --> 00:02:50.683
+The task always follows Done, so the next check runs whether the field
+
+00:02:50.683 --> 00:02:51.949
+was valid or not.
+
+00:02:52.404 --> 00:02:55.500
+After the last check, add Validate Form Task.
+
+00:02:55.500 --> 00:02:57.018
+It has no settings.
+
+00:02:57.018 --> 00:03:01.269
+It reads the model state, and follows Valid when no field has an
+
+00:03:01.269 --> 00:03:03.394
+error, and Invalid otherwise.
+
+00:03:03.853 --> 00:03:07.580
+From Invalid, add Http Redirect To Form Location Task.
+
+00:03:07.580 --> 00:03:11.990
+It makes the path saved from the hidden field the place to return
+
+00:03:11.990 --> 00:03:16.213
+to, and the controller redirects there when the workflow ends.
+
+00:03:20.413 --> 00:03:23.656
+Behind Valid, the workflow reads what was posted.
+
+00:03:23.656 --> 00:03:28.372
+In Liquid, the Form collection of the Request object holds the fields, and
+
+00:03:28.372 --> 00:03:31.851
+in JavaScript, the request form function returns one.
+
+00:03:31.851 --> 00:03:33.973
+Both read the current request.
+
+00:03:35.584 --> 00:03:37.809
+From Valid, add Email Task.
+
+00:03:37.809 --> 00:03:43.744
+Enter the Recipients, and use Liquid in the Subject to include the visitor's name.
+
+00:03:43.744 --> 00:03:50.084
+The bodies take Liquid too, and the HTML body encodes values, so markup arrives as text.
+
+00:03:50.562 --> 00:03:55.797
+From Done, add Http Redirect Task, and set Location to the thank-you page.
+
+00:03:55.797 --> 00:03:58.153
+It writes the redirect itself.
+
+00:03:58.153 --> 00:04:03.584
+The email's Failed outcome has no transition here, but a real workflow should
+
+00:04:03.584 --> 00:04:07.052
+handle it, or the visitor gets an empty answer.
+
+00:04:07.511 --> 00:04:13.254
+The designer saves a draft as you work, but only the published workflow handles requests.
+
+00:04:13.254 --> 00:04:16.941
+Select Publish to make the draft the published version.
+
+00:04:21.136 --> 00:04:23.979
+In Content Items, edit the Contact page.
+
+00:04:23.979 --> 00:04:29.416
+Its Form widget has an Action field, and that field takes the URL of the workflow.
+
+00:04:29.879 --> 00:04:32.017
+Paste the URL into Action.
+
+00:04:32.017 --> 00:04:37.629
+Method stays POST, and Anti Forgery Token and Save Form Location stay checked,
+
+00:04:37.629 --> 00:04:39.699
+so the post carries both.
+
+00:04:40.159 --> 00:04:41.582
+Publish the page.
+
+00:04:41.582 --> 00:04:45.419
+After that, every post of this form starts the workflow.
+
+00:04:49.719 --> 00:04:53.273
+On the page, type only a message, and select Submit.
+
+00:04:53.273 --> 00:04:56.582
+The workflow sends the visitor back to the form.
+
+00:04:56.582 --> 00:05:01.669
+The validation summary lists both errors, and the message stays in its field.
+
+00:05:02.214 --> 00:05:05.717
+Enter a name and an email address, and submit again.
+
+00:05:05.717 --> 00:05:10.064
+The workflow sends the email, and redirects to the thank-you page.
+
+00:05:10.532 --> 00:05:12.847
+In Workflows, select Instances.
+
+00:05:12.847 --> 00:05:17.853
+The newest instance shows the path it followed, and its Journal lists each
+
+00:05:17.853 --> 00:05:21.232
+activity that ran, with its status and outcomes.
+
+00:05:25.432 --> 00:05:29.890
+A redirect would lose the errors, so the Forms module carries them.
+
+00:05:29.890 --> 00:05:34.104
+After every controller action, a filter checks the model state.
+
+00:05:34.104 --> 00:05:38.989
+If the model state isn't valid and the action redirects, the filter stores
+
+00:05:38.989 --> 00:05:42.042
+it in temp data, errors and values together.
+
+00:05:42.792 --> 00:05:46.567
+On the next request, a second filter reads the temp data.
+
+00:05:46.567 --> 00:05:50.522
+If the action returns a view or a page, it merges the stored
+
+00:05:50.522 --> 00:05:55.315
+state into the model state, so the form shows the errors and typed values.
+
+00:05:55.315 --> 00:05:57.292
+Otherwise it discards them.
+
+00:05:58.042 --> 00:06:02.605
+The filters run for every action of a controller derived from Controller, so
+
+00:06:02.605 --> 00:06:05.499
+a form can also post to an action of your own.
+
+00:06:05.499 --> 00:06:08.949
+Add errors to the model state, and redirect to the page.
+
+00:06:08.949 --> 00:06:11.342
+The Form widget only needs an Action.
+
+00:06:13.342 --> 00:06:16.776
+That is how a form hands its submission to a workflow:
+
+00:06:16.776 --> 00:06:21.984
+an HTTP request event, validation tasks, and a redirect that carries the errors back.
+
+00:06:21.984 --> 00:06:23.472
+Thanks for watching.
+
