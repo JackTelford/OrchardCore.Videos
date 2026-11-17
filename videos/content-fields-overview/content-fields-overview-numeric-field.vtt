@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00:03.211 --> 00:00:05.355
+A Numeric Field holds a number.
+
+00:00:05.355 --> 00:00:09.931
+On the Workshop type, let's add a field named Seats, choose Numeric Field
+
+00:00:09.931 --> 00:00:13.581
+as its type, and open the settings with Save & Configure.
+
+00:00:14.033 --> 00:00:19.742
+Scale is the number of digits after the decimal point, and zero accepts whole numbers only.
+
+00:00:19.742 --> 00:00:24.392
+Minimum and Maximum limit the range, and Default value fills the box when
+
+00:00:24.392 --> 00:00:25.863
+you create an item.
+
+00:00:26.332 --> 00:00:30.525
+A workshop room has limited seats, so let's require a value from one
+
+00:00:30.525 --> 00:00:32.565
+to forty, and start at twenty.
+
+00:00:32.565 --> 00:00:34.322
+Save returns to the type.
+

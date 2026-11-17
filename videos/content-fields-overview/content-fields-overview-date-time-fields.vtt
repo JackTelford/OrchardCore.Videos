@@ -1,0 +1,41 @@
+WEBVTT
+
+00:00:03.206 --> 00:00:05.811
+A Date Field holds a day without a time.
+
+00:00:05.811 --> 00:00:10.115
+On the Workshop type, let's add Registration Deadline as a Date Field.
+
+00:00:10.115 --> 00:00:14.476
+Beyond the two lists, its settings are Required and Hint, so let's save
+
+00:00:14.476 --> 00:00:15.496
+it as it is.
+
+00:00:15.954 --> 00:00:18.498
+A Date Time Field holds a day and a time.
+
+00:00:18.498 --> 00:00:22.720
+It stores them in Coordinated Universal Time, and shows them in the time
+
+00:00:22.720 --> 00:00:23.965
+zone of the site.
+
+00:00:23.965 --> 00:00:26.564
+Let's add Starts At, and save it as it is.
+
+00:00:27.022 --> 00:00:30.057
+A Time Field holds a time of day, with no date.
+
+00:00:30.057 --> 00:00:31.602
+Let's add Doors Open.
+
+00:00:31.602 --> 00:00:37.442
+Its settings include a Step, which sets whether the time input accepts seconds and milliseconds.
+
+00:00:37.901 --> 00:00:41.320
+The type lists its six fields in the order they were added, each
+
+00:00:41.320 --> 00:00:43.371
+with its field type beside the name.
+

@@ -1,0 +1,35 @@
+WEBVTT
+
+00:00:03.214 --> 00:00:06.536
+Let's check that the Content Fields feature is on.
+
+00:00:06.536 --> 00:00:09.800
+Under Tools, Features, search for Content Fields.
+
+00:00:09.800 --> 00:00:14.428
+The Enabled badge confirms it, and an Enable button turns the feature on
+
+00:00:14.428 --> 00:00:15.674
+when it is off.
+
+00:00:16.150 --> 00:00:18.678
+Let's add the fields to a content type.
+
+00:00:18.678 --> 00:00:23.790
+Under Design, Content Definition, Content Types, this site has a type named Workshop,
+
+00:00:23.790 --> 00:00:25.756
+and its Edit button opens it.
+
+00:00:25.756 --> 00:00:28.340
+A separate video covers creating a type.
+
+00:00:28.803 --> 00:00:32.841
+The Fields section is empty, and Add Field starts the first one.
+
+00:00:32.841 --> 00:00:35.495
+The Parts list shows only Title for now.
+
+00:00:35.495 --> 00:00:41.263
+The first field creates a part named Workshop, which contains the fields for the current type.
+

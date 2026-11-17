@@ -1,0 +1,296 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.844
+A content type needs places to keep its data, such as a name,
+
+00:00:04.844 --> 00:00:06.852
+a number of seats, or a date.
+
+00:00:06.852 --> 00:00:09.032
+Content fields are those places.
+
+00:00:09.032 --> 00:00:12.761
+In this video you add six kinds of field to a content type,
+
+00:00:12.761 --> 00:00:14.080
+and fill them in.
+
+00:00:18.680 --> 00:00:23.221
+A content type describes one kind of content on your site, such as a workshop.
+
+00:00:23.221 --> 00:00:26.573
+It is built from parts, and the fields you add to a type
+
+00:00:26.573 --> 00:00:29.600
+are kept in a part with the same name as the type.
+
+00:00:30.350 --> 00:00:32.824
+A field holds a named piece of data.
+
+00:00:32.824 --> 00:00:37.596
+Its field type decides what it stores, its settings decide what it accepts,
+
+00:00:37.596 --> 00:00:40.600
+and its editor decides how people fill it in.
+
+00:00:41.350 --> 00:00:45.254
+The Content Fields feature provides the common field types.
+
+00:00:45.254 --> 00:00:47.056
+A Text Field holds text.
+
+00:00:47.056 --> 00:00:51.020
+A Numeric Field holds a number, and can limit it to a range.
+
+00:00:51.770 --> 00:00:54.115
+A Boolean Field holds yes or no.
+
+00:00:54.115 --> 00:00:57.878
+A Date Field, a Date Time Field and a Time Field hold a
+
+00:00:57.878 --> 00:01:00.840
+day, a day with a time, and a time of day.
+
+00:01:05.054 --> 00:01:08.376
+Let's check that the Content Fields feature is on.
+
+00:01:08.376 --> 00:01:11.640
+Under Tools, Features, search for Content Fields.
+
+00:01:11.640 --> 00:01:16.268
+The Enabled badge confirms it, and an Enable button turns the feature on
+
+00:01:16.268 --> 00:01:17.514
+when it is off.
+
+00:01:17.990 --> 00:01:20.518
+Let's add the fields to a content type.
+
+00:01:20.518 --> 00:01:25.630
+Under Design, Content Definition, Content Types, this site has a type named Workshop,
+
+00:01:25.630 --> 00:01:27.596
+and its Edit button opens it.
+
+00:01:27.596 --> 00:01:30.180
+A separate video covers creating a type.
+
+00:01:30.643 --> 00:01:34.681
+The Fields section is empty, and Add Field starts the first one.
+
+00:01:34.681 --> 00:01:37.335
+The Parts list shows only Title for now.
+
+00:01:37.335 --> 00:01:43.103
+The first field creates a part named Workshop, which contains the fields for the current type.
+
+00:01:47.358 --> 00:01:51.332
+On the Workshop type, Add Field opens a form with a Display Name,
+
+00:01:51.332 --> 00:01:53.570
+a Technical Name and a Field Type.
+
+00:01:53.570 --> 00:01:57.209
+The Technical Name follows the Display Name as you type it.
+
+00:01:57.209 --> 00:01:59.168
+Let's call the field Speaker.
+
+00:01:59.627 --> 00:02:03.924
+The Field Type list shows the fields that the enabled features provide.
+
+00:02:03.924 --> 00:02:08.278
+Let's choose Text Field, and then Save & Configure, which adds the field
+
+00:02:08.278 --> 00:02:09.897
+and opens its settings.
+
+00:02:10.395 --> 00:02:16.143
+A Text Field has settings such as Required, Hint, Placeholder, Default value, Minimum
+
+00:02:16.143 --> 00:02:18.164
+length and Maximum length.
+
+00:02:18.164 --> 00:02:23.975
+Two lists below choose the editor and the display mode, which a separate video covers.
+
+00:02:24.439 --> 00:02:29.311
+Let's make the field required, and add a hint that says who leads the workshop.
+
+00:02:29.311 --> 00:02:34.299
+Save returns to the type, where Speaker is listed with the field type Text Field.
+
+00:02:38.510 --> 00:02:40.653
+A Numeric Field holds a number.
+
+00:02:40.653 --> 00:02:45.230
+On the Workshop type, let's add a field named Seats, choose Numeric Field
+
+00:02:45.230 --> 00:02:48.880
+as its type, and open the settings with Save & Configure.
+
+00:02:49.332 --> 00:02:55.041
+Scale is the number of digits after the decimal point, and zero accepts whole numbers only.
+
+00:02:55.041 --> 00:02:59.691
+Minimum and Maximum limit the range, and Default value fills the box when
+
+00:02:59.691 --> 00:03:01.162
+you create an item.
+
+00:03:01.631 --> 00:03:05.824
+A workshop room has limited seats, so let's require a value from one
+
+00:03:05.824 --> 00:03:07.864
+to forty, and start at twenty.
+
+00:03:07.864 --> 00:03:09.621
+Save returns to the type.
+
+00:03:13.886 --> 00:03:18.656
+A Boolean Field holds a yes or no value, which appears as a checkbox.
+
+00:03:18.656 --> 00:03:24.826
+On the Workshop type, let's add Registration Open as a Boolean Field and open its settings.
+
+00:03:25.293 --> 00:03:27.896
+Label is the text beside the checkbox.
+
+00:03:27.896 --> 00:03:32.984
+Default value is true decides whether it starts checked when you create an item.
+
+00:03:32.984 --> 00:03:38.663
+Let's set the label to Participants can register, turn on Default value is true, and save.
+
+00:03:42.869 --> 00:03:45.474
+A Date Field holds a day without a time.
+
+00:03:45.474 --> 00:03:49.778
+On the Workshop type, let's add Registration Deadline as a Date Field.
+
+00:03:49.778 --> 00:03:54.139
+Beyond the two lists, its settings are Required and Hint, so let's save
+
+00:03:54.139 --> 00:03:55.159
+it as it is.
+
+00:03:55.617 --> 00:03:58.161
+A Date Time Field holds a day and a time.
+
+00:03:58.161 --> 00:04:02.383
+It stores them in Coordinated Universal Time, and shows them in the time
+
+00:04:02.383 --> 00:04:03.628
+zone of the site.
+
+00:04:03.628 --> 00:04:06.227
+Let's add Starts At, and save it as it is.
+
+00:04:06.685 --> 00:04:09.719
+A Time Field holds a time of day, with no date.
+
+00:04:09.719 --> 00:04:11.265
+Let's add Doors Open.
+
+00:04:11.265 --> 00:04:17.105
+Its settings include a Step, which sets whether the time input accepts seconds and milliseconds.
+
+00:04:17.564 --> 00:04:20.983
+The type lists its six fields in the order they were added, each
+
+00:04:20.983 --> 00:04:23.034
+with its field type beside the name.
+
+00:04:27.263 --> 00:04:32.195
+Under Content, Content Items, the New menu lists the content types you can create.
+
+00:04:32.195 --> 00:04:33.763
+Let's choose Workshop.
+
+00:04:34.237 --> 00:04:38.223
+The editor for a workshop lists the fields in the order they were
+
+00:04:38.223 --> 00:04:41.142
+added, each with the input that fits its type.
+
+00:04:41.142 --> 00:04:45.240
+A red asterisk marks Speaker and Seats as required, and the hint of
+
+00:04:45.240 --> 00:04:47.317
+Speaker appears with its field.
+
+00:04:47.807 --> 00:04:53.546
+Seats starts at twenty, its default value, with the minimum and the maximum beside the input.
+
+00:04:53.546 --> 00:04:59.517
+The checkbox labeled Participants can register starts checked, because its default value is true.
+
+00:05:00.002 --> 00:05:02.366
+Let's enter a title and the speaker.
+
+00:05:02.366 --> 00:05:06.475
+Then, to see validation at work, let's enter a seat count of fifty,
+
+00:05:06.475 --> 00:05:08.332
+which is above the maximum.
+
+00:05:08.796 --> 00:05:13.948
+The date, the date and time, and the time use the inputs that your browser provides.
+
+00:05:13.948 --> 00:05:18.298
+Let's enter a registration deadline, a start date and time, and a time
+
+00:05:18.298 --> 00:05:19.786
+when the doors open.
+
+00:05:20.276 --> 00:05:23.557
+Publish checks every field against its settings.
+
+00:05:23.557 --> 00:05:29.086
+The Numeric Field refuses fifty, so the editor stays open and shows an error message.
+
+00:05:29.625 --> 00:05:33.293
+Let's change the seat count to twenty-five and publish again.
+
+00:05:33.293 --> 00:05:36.085
+The item is saved, and a message confirms it.
+
+00:05:40.249 --> 00:05:43.443
+The Content Items list shows the workshop you published.
+
+00:05:43.443 --> 00:05:47.101
+View opens it on the site, where the fields print their values in
+
+00:05:47.101 --> 00:05:49.059
+the order they have in the type.
+
+00:05:49.529 --> 00:05:54.050
+By default, these fields print their value alone, without the field name.
+
+00:05:54.050 --> 00:05:58.342
+The Text Field prints its text, the Numeric Field its number, and the
+
+00:05:58.342 --> 00:06:00.689
+Boolean Field prints True or False.
+
+00:06:01.147 --> 00:06:03.398
+The Date Field prints only the day.
+
+00:06:03.398 --> 00:06:06.966
+The Date Time Field prints the day and the time in the time
+
+00:06:06.966 --> 00:06:08.228
+zone of the site.
+
+00:06:08.228 --> 00:06:11.247
+The Time Field prints hours, minutes and seconds.
+
+00:06:13.247 --> 00:06:18.367
+Content fields keep typed values in a content type, such as text, numbers,
+
+00:06:18.367 --> 00:06:24.063
+yes or no, dates and times, with settings for required values, limits and defaults.
+
+00:06:24.063 --> 00:06:25.727
+Thanks for watching.
+
