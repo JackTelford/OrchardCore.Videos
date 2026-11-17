@@ -1,0 +1,268 @@
+1
+00:00:01,000 --> 00:00:04,856
+An API has to know who is calling, and what that caller may do.
+
+2
+00:00:04,856 --> 00:00:10,052
+The OpenID Connect Token Validation feature checks the access tokens that clients send.
+
+3
+00:00:10,052 --> 00:00:13,852
+This video shows how it works, how to configure it, and how to
+
+4
+00:00:13,852 --> 00:00:15,640
+protect your own endpoint.
+
+5
+00:00:20,240 --> 00:00:25,034
+Endpoints that serve other applications authenticate through the API scheme.
+
+6
+00:00:25,034 --> 00:00:29,593
+A client sends its access token with each request, and the scheme passes
+
+7
+00:00:29,593 --> 00:00:31,230
+it to a token handler.
+
+8
+00:00:31,980 --> 00:00:35,036
+The scheme has no token logic of its own.
+
+9
+00:00:35,036 --> 00:00:38,482
+It forwards to the scheme named in its options.
+
+10
+00:00:38,482 --> 00:00:45,440
+When no such scheme is registered, nobody is authenticated, and a challenge answers 401 Unauthorized.
+
+11
+00:00:46,190 --> 00:00:51,637
+Enabling the Token Validation feature points the API scheme at the validation handler.
+
+12
+00:00:51,637 --> 00:00:55,190
+The handler is registered when the settings are valid.
+
+13
+00:00:55,190 --> 00:00:58,210
+A valid token then authenticates the request.
+
+14
+00:01:02,410 --> 00:01:05,514
+Validation has to know who issues the tokens.
+
+15
+00:01:05,514 --> 00:01:11,783
+The settings name either an authorization server tenant or an authority, and exactly one of them.
+
+16
+00:01:11,783 --> 00:01:15,800
+A tenant is a separate site hosted by the same installation.
+
+17
+00:01:16,550 --> 00:01:21,713
+With a tenant, Orchard Core reads the signing and encryption keys straight from
+
+18
+00:01:21,713 --> 00:01:24,871
+that tenant, so it sends no discovery request.
+
+19
+00:01:24,871 --> 00:01:28,090
+The audience is fixed, so you cannot enter one.
+
+20
+00:01:28,840 --> 00:01:34,097
+With an authority, Orchard Core finds the keys by discovery, and the audience
+
+21
+00:01:34,097 --> 00:01:36,313
+your API expects is required.
+
+22
+00:01:36,313 --> 00:01:41,000
+The OpenID Connect Metadata Address overrides the discovery address.
+
+23
+00:01:41,000 --> 00:01:47,460
+Disable token type validation accepts tokens from servers that do not set the access token type.
+
+24
+00:01:48,210 --> 00:01:50,508
+Another tenant adds a requirement.
+
+25
+00:01:50,508 --> 00:01:55,219
+Its server needs a scope that lists this tenant in Additional resources, API
+
+26
+00:01:55,219 --> 00:01:59,184
+audiences, or saving fails with No appropriate scope was found.
+
+27
+00:01:59,184 --> 00:02:03,550
+A tenant whose server uses reference access tokens cannot be selected.
+
+28
+00:02:07,762 --> 00:02:10,474
+Features are under Tools, Features.
+
+29
+00:02:10,474 --> 00:02:18,082
+Search for token validation to find OpenID Connect Token Validation, listed under the OpenID Connect heading.
+
+30
+00:02:18,532 --> 00:02:21,410
+Select Enable, and the row shows Enabled.
+
+31
+00:02:21,410 --> 00:02:27,288
+The feature builds on OpenID Connect Core Services, which the Authorization Server already
+
+32
+00:02:27,288 --> 00:02:28,941
+enabled on this site.
+
+33
+00:02:28,941 --> 00:02:34,391
+Roles other than Administrator need the permission View and edit the OpenID Connect
+
+34
+00:02:34,391 --> 00:02:36,962
+validation settings to use its page.
+
+35
+00:02:41,152 --> 00:02:45,409
+The settings are under Settings, OpenID Connect, Token Validation.
+
+36
+00:02:45,409 --> 00:02:49,962
+A warning at the top says the website might be restarted when you save.
+
+37
+00:02:50,418 --> 00:02:56,096
+This site also runs the OpenID Connect Authorization Server, so Authorization server tenant
+
+38
+00:02:56,096 --> 00:02:59,901
+is already filled in with the name of this tenant, Default.
+
+39
+00:02:59,901 --> 00:03:02,828
+Tokens issued here are validated against it.
+
+40
+00:03:03,303 --> 00:03:06,584
+To name a remote server instead, clear the field.
+
+41
+00:03:06,584 --> 00:03:12,667
+Authority, Audience, and Disable token type validation appear around the OpenID Connect Metadata
+
+42
+00:03:12,667 --> 00:03:14,873
+Address, which is always shown.
+
+43
+00:03:15,332 --> 00:03:19,271
+Enter the address of the server, and save without an audience.
+
+44
+00:03:19,271 --> 00:03:24,832
+The page refuses, with the message An audience must be set when configuring the authority.
+
+45
+00:03:25,296 --> 00:03:29,177
+Enter the audience your API expects, and save again.
+
+46
+00:03:29,177 --> 00:03:34,196
+A message reads OpenID validation configuration successfully updated.
+
+47
+00:03:34,655 --> 00:03:39,736
+Saving checks the form of the values, and sends no request to the remote server.
+
+48
+00:03:39,736 --> 00:03:44,994
+This site also runs the Authorization Server, so Orchard Core applies that server's
+
+49
+00:03:44,994 --> 00:03:47,475
+issuer and keys after the authority.
+
+50
+00:03:47,475 --> 00:03:50,665
+A remote authority belongs on a site without it.
+
+51
+00:03:54,865 --> 00:04:00,895
+Name the API scheme in the Authorize attribute, and the token handler authenticates the request.
+
+52
+00:04:00,895 --> 00:04:05,565
+This class also carries AllowAnonymous, so the action makes the decision.
+
+53
+00:04:06,315 --> 00:04:12,393
+The action asks the authorization service whether the user has the permission the endpoint needs.
+
+54
+00:04:12,393 --> 00:04:16,995
+When the answer is no, it returns ChallengeOrForbid with the API scheme.
+
+55
+00:04:17,745 --> 00:04:21,246
+ChallengeOrForbid answers according to who is calling.
+
+56
+00:04:21,246 --> 00:04:26,788
+Without a valid token, the caller is challenged, and the client is asked to authenticate.
+
+57
+00:04:26,788 --> 00:04:30,755
+With a valid token but no permission, the caller is forbidden.
+
+58
+00:04:34,955 --> 00:04:38,951
+A recipe sets the same values with its validation settings step.
+
+59
+00:04:38,951 --> 00:04:43,918
+Enable the feature first, because a step without a registered handler is skipped.
+
+60
+00:04:43,918 --> 00:04:46,715
+Then set Tenant, or Authority and Audience.
+
+61
+00:04:47,465 --> 00:04:53,036
+The page checks your values when you save, but the recipe step stores what it receives.
+
+62
+00:04:53,036 --> 00:04:58,368
+Invalid values register no handler, so the API scheme authenticates nobody, and the
+
+63
+00:04:58,368 --> 00:04:59,925
+site logs a warning.
+
+64
+00:05:01,925 --> 00:05:04,316
+That is the Token Validation feature:
+
+65
+00:05:04,316 --> 00:05:09,042
+the API scheme gets a handler, and your settings decide whose tokens it trusts.
+
+66
+00:05:09,042 --> 00:05:12,100
+A separate video shows how a client gets a token.
+
+67
+00:05:12,100 --> 00:05:13,545
+Thanks for watching.
+
