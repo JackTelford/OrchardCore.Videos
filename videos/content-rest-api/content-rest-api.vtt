@@ -1,0 +1,227 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.829
+The Contents module exposes content items over HTTP.
+
+00:00:04.829 --> 00:00:11.364
+A client application reads, creates, updates and deletes items as JSON, with an access token.
+
+00:00:11.364 --> 00:00:16.514
+In this video, you authorize a client, call each endpoint, and check the
+
+00:00:16.514 --> 00:00:18.230
+result in the admin.
+
+00:00:22.830 --> 00:00:26.060
+The Content API is part of the Contents module.
+
+00:00:26.060 --> 00:00:28.802
+It works on one content item at a time:
+
+00:00:28.802 --> 00:00:32.398
+you read an item by its ID, save the JSON of an item,
+
+00:00:32.398 --> 00:00:34.470
+or delete an item by its ID.
+
+00:00:35.220 --> 00:00:39.499
+To list or search items, use the GraphQL API instead.
+
+00:00:39.499 --> 00:00:45.300
+The Content API has no list endpoint, and each call handles a single item.
+
+00:00:46.050 --> 00:00:48.014
+An item is a JSON object.
+
+00:00:48.014 --> 00:00:53.525
+ContentItemId and ContentType identify it, each part of the type adds a property,
+
+00:00:53.525 --> 00:00:55.742
+and names are case sensitive.
+
+00:00:55.742 --> 00:01:00.620
+The server sets the status flags and the dates, whatever the body says.
+
+00:01:04.820 --> 00:01:07.462
+The endpoints accept bearer tokens.
+
+00:01:07.462 --> 00:01:13.133
+To issue them from the site itself, enable the OpenID Connect Authorization Server
+
+00:01:13.133 --> 00:01:16.420
+and OpenID Connect Token Validation features.
+
+00:01:16.420 --> 00:01:22.800
+Then, in Settings, OpenID Connect, Authorization Server, check Allow Client Credentials Flow.
+
+00:01:23.550 --> 00:01:29.139
+Then add an application of the type Confidential client that allows the client credentials flow.
+
+00:01:29.139 --> 00:01:32.043
+Select the role under Client Credentials Roles:
+
+00:01:32.043 --> 00:01:35.550
+the permissions of that role decide what the token can do.
+
+00:01:36.300 --> 00:01:40.963
+The application sends its client ID and secret to the token endpoint, and
+
+00:01:40.963 --> 00:01:42.793
+receives an access token.
+
+00:01:42.793 --> 00:01:47.870
+Each call to the Content API then carries that token in an Authorization header.
+
+00:01:52.069 --> 00:01:55.215
+The token carries the roles of the application.
+
+00:01:55.215 --> 00:01:59.962
+In Access Control, Roles, open the role and look for the permission Access
+
+00:01:59.962 --> 00:02:01.505
+content via the api.
+
+00:02:01.505 --> 00:02:03.879
+Without it, every call is refused.
+
+00:02:04.330 --> 00:02:06.984
+The permissions on the item apply too.
+
+00:02:06.984 --> 00:02:12.110
+Publish or unpublish content for others implies Edit content for others, so the
+
+00:02:12.110 --> 00:02:14.160
+Effective column shows both.
+
+00:02:14.160 --> 00:02:18.080
+Delete content for others is separate, and allows deletion.
+
+00:02:19.680 --> 00:02:22.993
+Every call needs Access content via the api.
+
+00:02:22.993 --> 00:02:28.426
+Reading adds View all content, and creating adds Edit content for others and
+
+00:02:28.426 --> 00:02:31.474
+Publish or unpublish content for others.
+
+00:02:31.474 --> 00:02:37.370
+Updating adds Edit content for others, and deleting adds Delete content for others.
+
+00:02:41.570 --> 00:02:46.718
+To create an item, post its JSON to api/content with the access token
+
+00:02:46.718 --> 00:02:50.287
+and a Content-Type header of application/json.
+
+00:02:50.287 --> 00:02:56.190
+ContentType names the type, and each part of the type has a property of its own.
+
+00:02:56.940 --> 00:03:01.292
+The server generates the ContentItemId and publishes the item.
+
+00:03:01.292 --> 00:03:06.092
+When the body has no DisplayText, the server takes it from the title.
+
+00:03:06.092 --> 00:03:10.380
+The response is the stored item as JSON, with the status 200.
+
+00:03:11.130 --> 00:03:16.516
+Set the draft parameter to true, and the item is created without being published.
+
+00:03:16.516 --> 00:03:20.230
+The site does not serve it until someone publishes it.
+
+00:03:24.430 --> 00:03:28.307
+A GET request with the ID of an item returns its JSON.
+
+00:03:28.307 --> 00:03:32.894
+Only the published version is returned, so an item that is only a
+
+00:03:32.894 --> 00:03:35.090
+draft answers 404 Not Found.
+
+00:03:39.290 --> 00:03:44.643
+To update an item, post a body whose ContentItemId is the ID of an existing item.
+
+00:03:44.643 --> 00:03:48.704
+The body is merged into the stored item, and an array in the
+
+00:03:48.704 --> 00:03:50.980
+body replaces the stored array.
+
+00:03:51.730 --> 00:03:56.534
+Unless the draft parameter is true, the item is published with the changes.
+
+00:03:56.534 --> 00:04:01.278
+For a versionable type, draft set to true keeps the published version live
+
+00:04:01.278 --> 00:04:03.590
+and saves the changes as a draft.
+
+00:04:04.340 --> 00:04:07.306
+The response is the version the call saved.
+
+00:04:07.306 --> 00:04:12.450
+With draft set to true, that is the draft, and its Published property is false.
+
+00:04:16.656 --> 00:04:20.648
+The API and the admin manage the same content items.
+
+00:04:20.648 --> 00:04:26.636
+In Content, Content Items, the article created as a draft shows the Draft status.
+
+00:04:27.087 --> 00:04:31.710
+The article updated with the draft parameter shows both Published and Draft:
+
+00:04:31.710 --> 00:04:34.867
+the published version stays live beside its draft.
+
+00:04:39.067 --> 00:04:43.957
+A DELETE request with the ID of an item removes it and returns its JSON.
+
+00:04:43.957 --> 00:04:48.597
+The item is no longer published, and Content Items stops listing it.
+
+00:04:49.347 --> 00:04:52.879
+Delete looks the item up by its published version.
+
+00:04:52.879 --> 00:04:56.978
+An item that is only a draft answers 404 Not Found, like an
+
+00:04:56.978 --> 00:04:58.807
+ID that does not exist.
+
+00:05:03.007 --> 00:05:07.385
+A call that works answers 200 with the item as JSON.
+
+00:05:07.385 --> 00:05:14.858
+A 400 means the body is missing, the ContentType is unknown, or the content fails validation.
+
+00:05:14.858 --> 00:05:20.217
+A 401 means no valid token, and a 403 means a missing permission.
+
+00:05:20.967 --> 00:05:23.965
+A 404 means no published item has that ID.
+
+00:05:23.965 --> 00:05:29.273
+When validation fails, the 400 response carries an errors object that lists the
+
+00:05:29.273 --> 00:05:31.147
+messages by member name.
+
+00:05:31.897 --> 00:05:37.214
+A 401 response has a problem details body with the title Authentication required,
+
+00:05:37.214 --> 00:05:40.637
+and a 403 response has the title Access forbidden.
+
+00:05:42.637 --> 00:05:48.345
+The Content API reads, creates, updates and deletes single content items over HTTP,
+
+00:05:48.345 --> 00:05:52.129
+with an access token and the permissions of its role.
+
+00:05:52.129 --> 00:05:53.797
+Thanks for watching.
+
