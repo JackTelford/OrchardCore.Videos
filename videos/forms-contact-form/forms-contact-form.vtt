@@ -1,0 +1,293 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.774
+Visitors often need a way to write to you.
+
+00:00:03.774 --> 00:00:08.975
+The Forms module builds a contact form from widgets, on any page that holds widgets.
+
+00:00:08.975 --> 00:00:12.904
+In this video, let's enable it, build a form with fields and a
+
+00:00:12.904 --> 00:00:14.580
+button, and publish it.
+
+00:00:19.180 --> 00:00:22.415
+The Forms module provides widgets for building a form.
+
+00:00:22.415 --> 00:00:26.566
+The Form widget is the form itself, and the field widgets go inside it.
+
+00:00:26.566 --> 00:00:30.178
+The Form widget sits on a page that can hold widgets, such as
+
+00:00:30.178 --> 00:00:32.280
+the Page type of the Blog recipe.
+
+00:00:33.030 --> 00:00:37.913
+Input is a single-line field, and its type can be text, email, phone,
+
+00:00:37.913 --> 00:00:39.801
+number, date, and more.
+
+00:00:39.801 --> 00:00:44.424
+Text Area takes longer text, and Select offers a list of choices.
+
+00:00:44.424 --> 00:00:47.810
+Button sends the form when its type is Submit.
+
+00:00:48.560 --> 00:00:53.209
+Every field widget has an HTML Name, the name its value is sent under.
+
+00:00:53.209 --> 00:00:57.798
+Input, Text Area, and Select also have a label setting, which is None
+
+00:00:57.798 --> 00:01:01.040
+until you change it, so a field shows no label.
+
+00:01:05.306 --> 00:01:08.704
+The Forms feature is listed under Tools, Features.
+
+00:01:08.704 --> 00:01:11.616
+Let's search for Forms, and select Enable.
+
+00:01:12.076 --> 00:01:14.203
+A notification confirms it.
+
+00:01:14.203 --> 00:01:19.616
+Forms relies on the Widgets and Flows features, which the Blog recipe enables.
+
+00:01:20.086 --> 00:01:21.754
+The form goes on a page.
+
+00:01:21.754 --> 00:01:26.312
+Under Content, Content Items, the New button lists the types you can create.
+
+00:01:26.312 --> 00:01:27.646
+Let's choose Page.
+
+00:01:28.104 --> 00:01:30.545
+A page has a title and a permalink.
+
+00:01:30.545 --> 00:01:35.071
+Let's enter Contact Us as the title, and leave the permalink empty, so
+
+00:01:35.071 --> 00:01:37.274
+it is generated from the title.
+
+00:01:37.732 --> 00:01:40.631
+Below the permalink is the list of widgets.
+
+00:01:40.631 --> 00:01:44.062
+The plus button, Add Widget, lists the widget types.
+
+00:01:44.062 --> 00:01:45.482
+Let's choose Form.
+
+00:01:45.949 --> 00:01:49.791
+The form's title identifies it in the editor, and the page does not
+
+00:01:49.791 --> 00:01:51.160
+show it to visitors.
+
+00:01:51.160 --> 00:01:52.529
+Let's enter Contact.
+
+00:01:53.004 --> 00:01:56.142
+Action is the address the form submits to.
+
+00:01:56.142 --> 00:02:00.718
+Method is POST or GET, and EncType sets how the data is encoded.
+
+00:02:00.718 --> 00:02:05.294
+Let's leave Action empty and keep the defaults of the other two.
+
+00:02:05.820 --> 00:02:07.875
+Both checkboxes are selected.
+
+00:02:07.875 --> 00:02:12.043
+Anti Forgery Token adds a hidden token to the form, and Save Form
+
+00:02:12.043 --> 00:02:17.150
+Location stores the address of the page, so a workflow can send the visitor back.
+
+00:02:17.618 --> 00:02:19.441
+Let's select Save Draft.
+
+00:02:19.441 --> 00:02:23.088
+A notification confirms that the Page draft was saved.
+
+00:02:27.284 --> 00:02:30.083
+The page is open again, with its Form widget.
+
+00:02:30.083 --> 00:02:33.870
+Fields go inside the form, so the Form widget has a plus button
+
+00:02:33.870 --> 00:02:35.462
+of its own, Add Widget.
+
+00:02:35.462 --> 00:02:36.834
+Let's add an Input.
+
+00:02:37.286 --> 00:02:39.039
+HTML Name is required.
+
+00:02:39.039 --> 00:02:43.859
+It is the name the browser sends the value under, written with letters,
+
+00:02:43.859 --> 00:02:47.866
+digits, hyphens, underscores, periods, or square brackets.
+
+00:02:47.866 --> 00:02:49.306
+Let's enter Name.
+
+00:02:49.757 --> 00:02:51.183
+ID is optional.
+
+00:02:51.183 --> 00:02:55.122
+It sets the ID of the field on the page, and when it
+
+00:02:55.122 --> 00:02:58.857
+is empty, the ID is generated from the HTML Name.
+
+00:02:59.314 --> 00:03:01.554
+Label option is None by default.
+
+00:03:01.554 --> 00:03:06.328
+Standard shows the label text before the field, and Screen Readers hides it
+
+00:03:06.328 --> 00:03:09.099
+visually but keeps it for screen readers.
+
+00:03:09.099 --> 00:03:12.754
+Let's choose Standard, and enter Name as the Label Text.
+
+00:03:13.207 --> 00:03:14.272
+Type is Text.
+
+00:03:14.272 --> 00:03:18.703
+Placeholder Text is what the empty field shows, and Default Value is what
+
+00:03:18.703 --> 00:03:21.340
+the field holds before the visitor types.
+
+00:03:21.340 --> 00:03:24.537
+Let's enter Your full name as the Placeholder Text.
+
+00:03:24.991 --> 00:03:27.706
+A second Input holds the email address.
+
+00:03:27.706 --> 00:03:32.231
+Let's add it with the HTML Name Email, the Label option Standard, the
+
+00:03:32.231 --> 00:03:37.661
+Label Text Email address, the Type Email, and the Placeholder Text name@example.com.
+
+00:03:38.119 --> 00:03:41.429
+Let's select Save Draft to keep the two fields.
+
+00:03:45.729 --> 00:03:48.616
+The page opens again with both inputs.
+
+00:03:48.616 --> 00:03:53.274
+Add Widget, inside the form, lists Select, for a list of choices.
+
+00:03:53.274 --> 00:03:58.064
+Its HTML Name is Topic, its Label option is Standard, and its Label
+
+00:03:58.064 --> 00:04:00.229
+Text is What is this about.
+
+00:04:00.700 --> 00:04:04.021
+The Editor setting decides how the choices appear:
+
+00:04:04.021 --> 00:04:07.698
+as a Dropdown, as Checkbox options, or as Radio options.
+
+00:04:07.698 --> 00:04:09.240
+Let's keep Dropdown.
+
+00:04:09.694 --> 00:04:15.104
+Each option has a text, which visitors read, and a value, which the form sends.
+
+00:04:15.104 --> 00:04:17.013
+Let's add three options:
+
+00:04:17.013 --> 00:04:20.259
+General question, Support request, and Sales.
+
+00:04:20.259 --> 00:04:21.404
+The Default?
+
+00:04:21.404 --> 00:04:26.304
+column picks the option that starts selected, and let's leave it empty.
+
+00:04:26.762 --> 00:04:29.128
+A Text Area holds a longer message.
+
+00:04:29.128 --> 00:04:33.456
+Like the other fields, it has the HTML Name Message, the Label option
+
+00:04:33.456 --> 00:04:36.745
+Standard, and the Placeholder Text How can we help.
+
+00:04:36.745 --> 00:04:39.862
+Rows sets its height in lines, so let's use six.
+
+00:04:40.320 --> 00:04:41.597
+Last, a Button.
+
+00:04:41.597 --> 00:04:45.613
+Like the fields, it needs an HTML Name, so let's enter Send.
+
+00:04:45.613 --> 00:04:49.993
+Text is what visitors read on it, so let's enter Send message, and
+
+00:04:49.993 --> 00:04:52.610
+Type is Submit, which sends the form.
+
+00:04:53.070 --> 00:04:54.627
+Let's select Publish.
+
+00:04:54.627 --> 00:04:57.970
+A notification confirms that the Page was published.
+
+00:05:02.170 --> 00:05:04.680
+The permalink was generated from the title:
+
+00:05:04.680 --> 00:05:05.551
+contact-us.
+
+00:05:05.551 --> 00:05:10.110
+Let's open the page, where the form shows its widgets in the order they were added.
+
+00:05:10.572 --> 00:05:15.590
+Each label comes from its label text, and each empty field shows its placeholder.
+
+00:05:15.590 --> 00:05:19.282
+The Topic field is a dropdown list with the three options.
+
+00:05:19.742 --> 00:05:22.716
+Let's fill the form in with sample values:
+
+00:05:22.716 --> 00:05:26.122
+a name, an email address, a topic, and a message.
+
+00:05:26.593 --> 00:05:30.493
+The Send message button submits the form to the address in the Action
+
+00:05:30.493 --> 00:05:32.209
+field, which is empty here.
+
+00:05:32.209 --> 00:05:37.513
+Pointing it at something that receives the submission is a separate task from building the form.
+
+00:05:39.513 --> 00:05:43.698
+A page, a Form widget, and field widgets make a contact form.
+
+00:05:43.698 --> 00:05:50.319
+Separate videos cover validating what visitors type, and processing each submission with a workflow.
+
+00:05:50.319 --> 00:05:51.943
+Thanks for watching.
+
