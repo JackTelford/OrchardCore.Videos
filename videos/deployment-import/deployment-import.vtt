@@ -1,0 +1,167 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.923
+A deployment package carries configuration and content from one Orchard Core site to another.
+
+00:00:06.923 --> 00:00:10.931
+In this video, you import a package from a zip file, import a
+
+00:00:10.931 --> 00:00:14.820
+recipe from JSON text, and see who is allowed to do either.
+
+00:00:19.420 --> 00:00:23.574
+Every import runs a recipe on the site you are signed in to.
+
+00:00:23.574 --> 00:00:27.790
+A recipe is a list of steps, and each step changes something:
+
+00:00:27.790 --> 00:00:32.070
+the features, the settings, the content types, or the content.
+
+00:00:32.820 --> 00:00:35.401
+A deployment package is a zip file.
+
+00:00:35.401 --> 00:00:39.618
+It holds the recipe, and any other files that the steps need.
+
+00:00:39.618 --> 00:00:44.150
+Deployment plans build packages, and a separate video covers them.
+
+00:00:44.900 --> 00:00:48.295
+The steps run in the order of the recipe, and a step runs
+
+00:00:48.295 --> 00:00:51.852
+only when a feature that handles it is enabled on this site.
+
+00:00:51.852 --> 00:00:55.840
+When the last step has run, the site restarts with the next request.
+
+00:01:00.022 --> 00:01:02.532
+Let's start with Content, Content Items.
+
+00:01:02.532 --> 00:01:07.442
+The list shows the content of this site, and it holds no article called Spring Menu.
+
+00:01:07.896 --> 00:01:11.245
+Next, open Tools, Deployments, Package Import.
+
+00:01:11.245 --> 00:01:17.426
+The page is titled Import Deployment Package, and it has one field, labeled Select a file.
+
+00:01:17.878 --> 00:01:21.731
+The field accepts a zip file, or a recipe file in JSON format.
+
+00:01:21.731 --> 00:01:25.754
+Let's choose a package that adds one article to the site, and the
+
+00:01:25.754 --> 00:01:28.248
+name of the file appears in the field.
+
+00:01:28.702 --> 00:01:29.837
+Select Import.
+
+00:01:29.837 --> 00:01:32.107
+The page answers with the message:
+
+00:01:32.107 --> 00:01:34.037
+Deployment package imported.
+
+00:01:34.037 --> 00:01:38.179
+The package is extracted and its recipe runs at once, step by step,
+
+00:01:38.179 --> 00:01:40.052
+in the order of the recipe.
+
+00:01:40.509 --> 00:01:43.921
+To check the result, open Content, Content Items again.
+
+00:01:43.921 --> 00:01:47.781
+The article from the package, Spring Menu, is at the top of the
+
+00:01:47.781 --> 00:01:50.299
+list on the page titled Manage Content.
+
+00:01:54.501 --> 00:01:58.750
+JSON Import takes the recipe as text instead of a file.
+
+00:01:58.750 --> 00:02:01.745
+Open Tools, Deployments, JSON Import.
+
+00:02:01.745 --> 00:02:06.761
+The page has one field, an editor labeled JSON, with line numbers.
+
+00:02:07.214 --> 00:02:09.420
+Paste a recipe into the editor.
+
+00:02:09.420 --> 00:02:11.267
+This recipe has one step:
+
+00:02:11.267 --> 00:02:14.724
+it sets the name of the site to Maple Street Bakery.
+
+00:02:15.187 --> 00:02:16.427
+Select Import.
+
+00:02:16.427 --> 00:02:18.908
+The page answers with the message:
+
+00:02:18.908 --> 00:02:21.078
+Recipe imported successfully!
+
+00:02:21.078 --> 00:02:25.047
+The recipe has run at once, and the editor is empty again.
+
+00:02:25.502 --> 00:02:28.428
+To check the result, open Settings, General.
+
+00:02:28.428 --> 00:02:32.992
+The Site name field shows the name from the recipe, Maple Street Bakery.
+
+00:02:37.192 --> 00:02:40.075
+Both pages run the recipe in the same way.
+
+00:02:40.075 --> 00:02:43.498
+A zip file can carry the files that its steps need.
+
+00:02:43.498 --> 00:02:48.422
+A recipe file, and the text you paste in JSON Import, carry the recipe only.
+
+00:02:52.622 --> 00:02:55.470
+If a step fails, the import stops at that step.
+
+00:02:55.470 --> 00:02:59.662
+The steps before it have already run, and the steps after it do not run.
+
+00:02:59.662 --> 00:03:01.220
+Package Import reports:
+
+00:03:01.220 --> 00:03:05.842
+The import failed with the following errors, followed by what the step reported.
+
+00:03:10.042 --> 00:03:14.692
+Importing a recipe can change features, settings, content types, and content.
+
+00:03:14.692 --> 00:03:19.398
+Import Data, the permission that allows it, is marked Security Critical in the
+
+00:03:19.398 --> 00:03:23.432
+permissions of a role, and only administrators have it by default.
+
+00:03:24.182 --> 00:03:29.916
+Package Import and JSON Import appear in the menu only for users who have Import Data.
+
+00:03:29.916 --> 00:03:34.716
+Grant Import Data only to roles you trust, and import only packages and
+
+00:03:34.716 --> 00:03:37.022
+recipes from sources you trust.
+
+00:03:39.022 --> 00:03:41.465
+That's how you run a recipe on your site:
+
+00:03:41.465 --> 00:03:45.780
+from a zip package with Package Import, or from pasted text with JSON Import.
+
+00:03:45.780 --> 00:03:47.132
+Thanks for watching.
+

@@ -4844,12 +4844,12 @@
     "docs": [
       "src/docs/reference/modules/Deployment/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 3.6,
     "words": 542,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
