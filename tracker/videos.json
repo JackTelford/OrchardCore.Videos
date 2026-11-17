@@ -3119,7 +3119,7 @@
       "src/docs/reference/modules/SQLIndexing/README.md",
       "src/docs/reference/modules/ContentFields/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 4.7,
     "words": 707,
     "contentCommit": "",
@@ -3130,7 +3130,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: 04-sql needs the Run SQL Query page, which is broken on Orchard Core main (Views/Admin/Query.cshtml:30 loads the codemirror style but no codemirror script, so the Template editor stays a plain text area and the Monaco result editor never starts: no results are shown); recording it needs a patched Orchard Core"
   },
   {
     "slug": "workflows-overview",
