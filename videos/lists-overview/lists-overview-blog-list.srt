@@ -1,0 +1,36 @@
+1
+00:00:03,226 --> 00:00:07,171
+A site set up with the Blog recipe has the Lists feature enabled,
+
+2
+00:00:07,171 --> 00:00:08,783
+and its Blog is a list.
+
+3
+00:00:08,783 --> 00:00:11,006
+Let's open Blog in the admin menu.
+
+4
+00:00:11,465 --> 00:00:13,590
+This is the page of the list.
+
+5
+00:00:13,590 --> 00:00:18,446
+Edit Blog changes the list itself, and Create Blog Post adds a post to it.
+
+6
+00:00:18,446 --> 00:00:20,995
+The posts it holds are listed below.
+
+7
+00:00:21,489 --> 00:00:23,978
+Each post is a content item of its own.
+
+8
+00:00:23,978 --> 00:00:27,905
+It remembers the blog it was created in, and this page shows only
+
+9
+00:00:27,905 --> 00:00:29,509
+the posts of that blog.
+
