@@ -1,0 +1,254 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.393
+A media field stores the path of a file in the media library, not its address.
+
+00:00:06.393 --> 00:00:11.145
+In this video, you will turn those paths into URLs, resize images on
+
+00:00:11.145 --> 00:00:17.180
+demand, and render images and links with Liquid filters, Razor helpers, and tag helpers.
+
+00:00:21.780 --> 00:00:24.980
+A template turns that path into a public URL.
+
+00:00:24.980 --> 00:00:29.184
+The URL is the media request path, with the URL prefix of the
+
+00:00:29.184 --> 00:00:33.200
+tenant and the CDN base URL added when the site uses them.
+
+00:00:33.950 --> 00:00:38.154
+A resized URL adds commands to the query string, such as the width,
+
+00:00:38.154 --> 00:00:40.342
+the height, and the resize mode.
+
+00:00:40.342 --> 00:00:44.948
+The Media module resizes the image when the browser requests it, and keeps
+
+00:00:44.948 --> 00:00:47.770
+the result in a cache for the next request.
+
+00:00:48.520 --> 00:00:53.183
+By default, the Media module signs the commands with a token that is
+
+00:00:53.183 --> 00:00:54.884
+unique to the tenant.
+
+00:00:54.884 --> 00:00:58.476
+Templates add the token for you, so any size works.
+
+00:00:58.476 --> 00:01:02.320
+A URL without a token only accepts the supported sizes.
+
+00:01:06.520 --> 00:01:10.110
+The asset_url filter turns a path into a URL.
+
+00:01:10.110 --> 00:01:15.249
+The img_tag filter writes an img element from a URL, and each named
+
+00:01:15.249 --> 00:01:17.783
+argument becomes an attribute.
+
+00:01:17.783 --> 00:01:24.470
+An underscore in an argument name becomes a dash, so data_order is written as data-order.
+
+00:01:25.220 --> 00:01:29.040
+The resize_url filter adds resize commands to a URL.
+
+00:01:29.040 --> 00:01:30.686
+Name each argument:
+
+00:01:30.686 --> 00:01:32.662
+width, height, and mode.
+
+00:01:32.662 --> 00:01:37.271
+Without a mode, max fits the image inside the size and keeps its
+
+00:01:37.271 --> 00:01:40.630
+proportions, even when you pass only a width.
+
+00:01:41.380 --> 00:01:44.584
+Crop fills the size and cuts what falls outside.
+
+00:01:44.584 --> 00:01:49.568
+Pad fits the image inside the size and fills the rest with a background color.
+
+00:01:49.568 --> 00:01:52.950
+Stretch fills the size and ignores the proportions.
+
+00:01:53.700 --> 00:01:58.125
+Set the pad color with bgcolor, as a hexadecimal value.
+
+00:01:58.125 --> 00:02:01.461
+Quality applies to JPEG and WebP images.
+
+00:02:01.461 --> 00:02:07.119
+Format accepts GIF, JPEG, PNG, and WebP, and without it, the image keeps
+
+00:02:07.119 --> 00:02:09.730
+the format of its source file.
+
+00:02:10.480 --> 00:02:15.037
+When the field settings Allow media text and Allow anchors are on, the
+
+00:02:15.037 --> 00:02:18.274
+field stores a text and an anchor for each file.
+
+00:02:18.274 --> 00:02:22.711
+Use the text as the alt attribute, and pass the anchor to resize_url
+
+00:02:22.711 --> 00:02:24.450
+to center a crop on it.
+
+00:02:28.667 --> 00:02:32.355
+A media profile stores resize commands under a name.
+
+00:02:32.355 --> 00:02:37.887
+The Profiles page, under Media, lists the profiles of the site, with their hints.
+
+00:02:38.356 --> 00:02:39.986
+Let's open thumbnail.
+
+00:02:39.986 --> 00:02:44.272
+Its Width and Height are 160, its Resize Mode is Crop, and Format
+
+00:02:44.272 --> 00:02:46.566
+and Quality keep their defaults.
+
+00:02:47.023 --> 00:02:50.108
+A template refers to a profile by its name alone.
+
+00:02:50.108 --> 00:02:54.651
+The Liquid filters, the Razor helpers, and the tag helpers each accept that
+
+00:02:54.651 --> 00:02:57.343
+name, and the slides that follow show how.
+
+00:02:58.943 --> 00:03:02.378
+In Liquid, pass the name with the profile argument.
+
+00:03:02.378 --> 00:03:08.043
+Any other argument you name, such as mode, overrides the value that the profile defines.
+
+00:03:12.243 --> 00:03:16.322
+In a Razor view, the Orchard property gives you the helpers.
+
+00:03:16.322 --> 00:03:20.895
+AssetUrl maps a path to a URL, and IsImageFile checks the extension.
+
+00:03:20.895 --> 00:03:25.591
+The display template of the media field uses both to choose between an
+
+00:03:25.591 --> 00:03:27.383
+img element and a link.
+
+00:03:28.133 --> 00:03:35.735
+AssetUrl takes the resize options of the Liquid filter, and appendVersion, as named parameters:
+
+00:03:35.735 --> 00:03:41.003
+width, height, resizeMode, quality, format, anchor, and bgColor.
+
+00:03:41.003 --> 00:03:43.939
+Resize mode and format are enums:
+
+00:03:43.939 --> 00:03:48.153
+add a using for OrchardCore.Media.Core.Processing.
+
+00:03:48.903 --> 00:03:54.886
+For a media profile, call AssetProfileUrlAsync with the profile name, and await it.
+
+00:03:54.886 --> 00:03:58.045
+Optional parameters override the profile.
+
+00:03:58.045 --> 00:04:02.683
+Resizing applies when you pass a width, a height, or a profile.
+
+00:04:06.883 --> 00:04:12.948
+To use the tag helpers, reference the OrchardCore.Media package and register them in
+
+00:04:12.948 --> 00:04:14.835
+the view imports file.
+
+00:04:14.835 --> 00:04:19.013
+On an img element, asset-src sets src from a media path.
+
+00:04:19.013 --> 00:04:21.573
+On a link, asset-href sets href.
+
+00:04:22.323 --> 00:04:29.610
+The resize attributes are img-width, img-height, img-resize-mode, img-quality, and img-format.
+
+00:04:29.610 --> 00:04:34.055
+They apply when a width, a height, or a profile is set.
+
+00:04:34.055 --> 00:04:38.063
+For a pad, img-bgcolor sets the background color.
+
+00:04:38.813 --> 00:04:43.753
+Use img-profile for a media profile, and the other attributes override it.
+
+00:04:43.753 --> 00:04:46.038
+Pass an anchor with img-anchor.
+
+00:04:46.038 --> 00:04:50.113
+Add asp-append-version to put a hash of the file in the URL.
+
+00:04:54.325 --> 00:04:59.319
+This page shows one image five times, with different resize arguments.
+
+00:04:59.319 --> 00:05:05.365
+Under each image, the page prints the URL that the filter returned, without its token.
+
+00:05:05.818 --> 00:05:07.604
+Max keeps the proportions.
+
+00:05:07.604 --> 00:05:09.167
+Crop fills the square.
+
+00:05:09.167 --> 00:05:14.748
+Pad adds bars in the background color, and stretch squeezes the whole picture into the square.
+
+00:05:15.212 --> 00:05:18.163
+The last image uses the thumbnail profile.
+
+00:05:18.163 --> 00:05:22.528
+The other four ask for 200 pixels, which is not a supported size,
+
+00:05:22.528 --> 00:05:26.032
+and they work because the token signs the commands.
+
+00:05:30.232 --> 00:05:34.288
+Each syntax can append a version, a hash of the source file:
+
+00:05:34.288 --> 00:05:39.511
+the append_version filter, the appendVersion parameter, and asp-append-version.
+
+00:05:39.511 --> 00:05:43.997
+When the file is replaced, the URL changes, and so does the resized
+
+00:05:43.997 --> 00:05:45.472
+file in the cache.
+
+00:05:46.222 --> 00:05:52.345
+To resize with another library, implement I Image Processing Engine, and replace its registration.
+
+00:05:52.345 --> 00:05:57.586
+The Media module validates the request first, so the engine receives typed commands
+
+00:05:57.586 --> 00:05:59.882
+and never reads the query string.
+
+00:06:01.882 --> 00:06:04.052
+That's media in templates:
+
+00:06:04.052 --> 00:06:09.476
+asset URLs for paths, signed resize URLs for images, and profiles by name,
+
+00:06:09.476 --> 00:06:12.189
+in Liquid, Razor, and tag helpers.
+
+00:06:12.189 --> 00:06:13.952
+Thanks for watching.
+
