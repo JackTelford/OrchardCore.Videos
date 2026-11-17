@@ -1,0 +1,203 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.145
+Every API needs documentation that stays true to the code.
+
+00:00:05.145 --> 00:00:10.455
+The OpenApi module describes the HTTP endpoints of your site, and shows them
+
+00:00:10.455 --> 00:00:12.981
+in Swagger UI, ReDoc, and Scalar.
+
+00:00:12.981 --> 00:00:18.810
+In this video, you enable the explorers, open them, and document your own endpoints.
+
+00:00:23.410 --> 00:00:28.925
+The OpenApi module builds an OpenAPI document from the endpoints your site exposes:
+
+00:00:28.925 --> 00:00:33.944
+the controllers and minimal API endpoints of the features you have enabled.
+
+00:00:33.944 --> 00:00:38.220
+It serves the document as JSON, so other tools can read it too.
+
+00:00:38.970 --> 00:00:41.363
+Three explorers read that document:
+
+00:00:41.363 --> 00:00:43.464
+Swagger UI, ReDoc, and Scalar.
+
+00:00:43.464 --> 00:00:47.316
+Each one is a feature of its own that depends on OpenApi, so
+
+00:00:47.316 --> 00:00:49.650
+you enable only the ones you want.
+
+00:00:50.400 --> 00:00:54.375
+Each explorer has its own address on your site:
+
+00:00:54.375 --> 00:01:00.000
+/swagger for Swagger UI, /redoc for ReDoc, and /scalar/v1 for Scalar.
+
+00:01:04.195 --> 00:01:07.799
+Open Tools, Features, and search for OpenApi.
+
+00:01:07.799 --> 00:01:11.121
+Four features appear in the Api category:
+
+00:01:11.121 --> 00:01:14.585
+OpenApi, and one feature for each explorer.
+
+00:01:15.058 --> 00:01:23.643
+Select OpenApi ReDoc UI, OpenApi Scalar UI, and OpenApi Swagger UI, then choose Bulk Actions, Enable.
+
+00:01:23.643 --> 00:01:28.618
+The OpenApi feature they depend on is enabled with them.
+
+00:01:29.082 --> 00:01:31.559
+The page reloads with a confirmation.
+
+00:01:31.559 --> 00:01:35.302
+Search again, and all four features show the Enabled badge.
+
+00:01:39.502 --> 00:01:41.448
+The explorers are protected.
+
+00:01:41.448 --> 00:01:45.339
+A visitor who is not signed in is redirected to the admin, and
+
+00:01:45.339 --> 00:01:50.547
+a signed-in user without the ViewOpenApiContent permission gets a forbidden response.
+
+00:01:50.547 --> 00:01:53.522
+Administrators have the permission by default.
+
+00:01:54.272 --> 00:01:58.901
+Endpoints on the Api scheme accept bearer tokens, not cookies.
+
+00:01:58.901 --> 00:02:04.347
+So Swagger UI and Scalar get a token silently, using an authorization code
+
+00:02:04.347 --> 00:02:08.704
+flow with PKCE against the tenant's OpenID Connect server.
+
+00:02:08.704 --> 00:02:12.652
+ReDoc only reads the document, so it needs no token.
+
+00:02:13.402 --> 00:02:19.765
+The recipe OpenAPI Documentation, Bearer/PKCE, under Tools, Recipes, sets this up.
+
+00:02:19.765 --> 00:02:27.067
+It enables the OpenID Connect server, management, and token validation features, requires PKCE,
+
+00:02:27.067 --> 00:02:31.622
+and registers a public client with the client ID openapi.
+
+00:02:32.372 --> 00:02:36.735
+The redirect URI of the client starts with localhost on port 5001.
+
+00:02:36.735 --> 00:02:41.159
+Replace that origin with the origin of your site, and keep the path
+
+00:02:41.159 --> 00:02:42.552
+exactly as it is.
+
+00:02:43.302 --> 00:02:47.291
+The token stays in memory and never reaches web storage.
+
+00:02:47.291 --> 00:02:52.759
+The page attaches it only to same-origin requests whose path contains /api/, so
+
+00:02:52.759 --> 00:02:56.362
+a server listed in the document never receives it.
+
+00:03:00.578 --> 00:03:06.410
+At /swagger, Swagger UI lists the operations of the enabled features, grouped by tag.
+
+00:03:06.410 --> 00:03:09.678
+Each one shows its HTTP method and its route.
+
+00:03:10.137 --> 00:03:13.955
+Select an operation to see its parameters and responses.
+
+00:03:13.955 --> 00:03:16.787
+This one reads a content item by its id.
+
+00:03:17.241 --> 00:03:22.613
+Select Try it out, enter the id of a content item, and execute the request.
+
+00:03:22.613 --> 00:03:28.781
+The page adds the bearer token itself, and the response shows the content item as JSON.
+
+00:03:33.017 --> 00:03:38.372
+At /redoc, ReDoc shows the same operations as read-only documentation.
+
+00:03:38.372 --> 00:03:42.037
+It cannot send requests, so it needs no token.
+
+00:03:42.508 --> 00:03:48.096
+At /scalar/v1, Scalar presents the same operations as an API reference.
+
+00:03:48.096 --> 00:03:54.918
+Like Swagger UI, it sends requests from the page with a token that it acquires silently.
+
+00:03:59.133 --> 00:04:04.836
+Under Settings, OpenApi, the page lists the three explorers, each with an Enabled
+
+00:04:04.836 --> 00:04:08.835
+or Disabled badge, and the address of each enabled one.
+
+00:04:08.835 --> 00:04:12.833
+You turn the explorers on and off on the Features page.
+
+00:04:13.290 --> 00:04:18.277
+Allow anonymous access to the API schema is off by default.
+
+00:04:18.277 --> 00:04:23.417
+Turn it on, and tools such as NSwag can fetch the JSON schema
+
+00:04:23.417 --> 00:04:27.790
+at /swagger/v1/swagger.json without authentication.
+
+00:04:28.242 --> 00:04:29.687
+Save the settings.
+
+00:04:29.687 --> 00:04:34.262
+Saving restarts the tenant, so the change applies to the next request.
+
+00:04:38.462 --> 00:04:44.608
+To document your own endpoint, write a controller with the ApiController attribute and
+
+00:04:44.608 --> 00:04:46.879
+a route that contains /api/.
+
+00:04:46.879 --> 00:04:51.421
+Authorize it with the Api scheme, so it accepts bearer tokens.
+
+00:04:51.421 --> 00:04:55.362
+The module discovers it, and every explorer lists it.
+
+00:04:56.112 --> 00:05:01.308
+Add the ProducesResponseType attribute to an action for each response it can return.
+
+00:05:01.308 --> 00:05:04.772
+The explorers list those responses with the operation.
+
+00:05:05.522 --> 00:05:08.157
+Minimal API endpoints are listed too.
+
+00:05:08.157 --> 00:05:13.182
+Name an endpoint with EndpointName or WithName, and NSwag uses that name for
+
+00:05:13.182 --> 00:05:16.062
+the method of the C# client it generates.
+
+00:05:18.062 --> 00:05:20.251
+That is the OpenApi module:
+
+00:05:20.251 --> 00:05:25.888
+one OpenAPI document of your endpoints, shown in Swagger UI, ReDoc, and Scalar.
+
+00:05:25.888 --> 00:05:27.612
+Thanks for watching.
+
