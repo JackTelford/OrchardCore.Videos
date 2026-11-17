@@ -1,0 +1,208 @@
+1
+00:00:01,000 --> 00:00:06,243
+Pages, stylesheets, scripts and JSON responses are text, and text compresses well.
+
+2
+00:00:06,243 --> 00:00:11,069
+The Response Compression module makes a tenant, one site of an Orchard Core
+
+3
+00:00:11,069 --> 00:00:13,571
+application, compress its responses.
+
+4
+00:00:13,571 --> 00:00:18,040
+You will see how to enable it, what it registers, and when to use it.
+
+5
+00:00:22,640 --> 00:00:27,345
+A client lists the formats it can unpack in the Accept-Encoding request header.
+
+6
+00:00:27,345 --> 00:00:32,216
+When the server compresses a response, it names the format in the Content-Encoding
+
+7
+00:00:32,216 --> 00:00:35,260
+response header, and the client unpacks the body.
+
+8
+00:00:36,010 --> 00:00:41,551
+Text such as HTML, CSS, JavaScript, JSON and XML benefits from compression.
+
+9
+00:00:41,551 --> 00:00:47,640
+Files that are already compressed, such as PNG images, gain little, and compressing
+
+10
+00:00:47,640 --> 00:00:51,060
+them again costs the server processing time.
+
+11
+00:00:55,312 --> 00:00:58,186
+In the admin menu, open Tools, then Features.
+
+12
+00:00:58,186 --> 00:01:00,553
+The page lists features by category.
+
+13
+00:01:00,553 --> 00:01:05,342
+Let's search for Response Compression, which is in the Infrastructure category.
+
+14
+00:01:05,819 --> 00:01:10,932
+The row shows the name of the feature, its identifier, and a Disabled badge.
+
+15
+00:01:10,932 --> 00:01:12,179
+Select Enable.
+
+16
+00:01:12,654 --> 00:01:16,628
+The page confirms that the feature Response Compression was enabled.
+
+17
+00:01:16,628 --> 00:01:22,374
+The tenant is rebuilt on its next request, and its pipeline then includes the compression middleware.
+
+18
+00:01:22,858 --> 00:01:25,931
+The row shows an Enabled badge and a Disable button.
+
+19
+00:01:25,931 --> 00:01:30,328
+The feature belongs to this tenant, so each tenant that needs compression has
+
+20
+00:01:30,328 --> 00:01:32,288
+the feature enabled separately.
+
+21
+00:01:36,488 --> 00:01:41,308
+A setup or deployment recipe enables the feature with the Feature step.
+
+22
+00:01:41,308 --> 00:01:46,878
+List the identifier under enable, and the recipe turns the feature on when it runs.
+
+23
+00:01:51,078 --> 00:01:55,010
+The module registers its work in one Startup class.
+
+24
+00:01:55,010 --> 00:02:01,355
+In ConfigureServices, it calls AddResponseCompression and sets EnableForHttps to true.
+
+25
+00:02:01,355 --> 00:02:06,942
+It lists no providers, so the defaults of ASP.NET Core apply, which include
+
+26
+00:02:06,942 --> 00:02:09,218
+Zstandard, Brotli and gzip.
+
+27
+00:02:09,968 --> 00:02:12,293
+Configure calls UseResponseCompression.
+
+28
+00:02:12,293 --> 00:02:16,168
+The Order is minus five, below the default of zero, so the middleware
+
+29
+00:02:16,168 --> 00:02:20,300
+sits early in the tenant pipeline, ahead of the middleware of modules that
+
+30
+00:02:20,300 --> 00:02:21,798
+keep the default order.
+
+31
+00:02:22,548 --> 00:02:29,710
+The middleware compresses a response when the request's Accept-Encoding names a supported format,
+
+32
+00:02:29,710 --> 00:02:33,394
+and the response's content type is on its list.
+
+33
+00:02:33,394 --> 00:02:40,138
+By default, the list includes HTML, CSS, JavaScript, JSON, XML, plain text and WebAssembly.
+
+34
+00:02:40,888 --> 00:02:45,367
+In the default web project, UseStaticFiles runs before UseOrchardCore.
+
+35
+00:02:45,367 --> 00:02:50,553
+Files it serves from the project's wwwroot folder never reach the tenant pipeline,
+
+36
+00:02:50,553 --> 00:02:53,205
+so this feature does not compress them.
+
+37
+00:02:53,205 --> 00:02:58,508
+Files of modules and themes are served inside the pipeline, so it can compress them.
+
+38
+00:03:02,708 --> 00:03:08,946
+To check the result, send a request that accepts one format, and print the response headers.
+
+39
+00:03:08,946 --> 00:03:15,501
+Accept-Encoding gzip returns Content-Encoding gzip, and Accept-Encoding br, the name of Brotli in
+
+40
+00:03:15,501 --> 00:03:18,428
+the header, returns Content-Encoding br.
+
+41
+00:03:19,178 --> 00:03:24,231
+A request without an Accept-Encoding header gets an uncompressed response.
+
+42
+00:03:24,231 --> 00:03:31,557
+When a client lists several formats without weights, the middleware prefers Zstandard, then Brotli, then gzip.
+
+43
+00:03:31,557 --> 00:03:35,598
+A web server in front of the application can compress too.
+
+44
+00:03:39,798 --> 00:03:45,102
+Compression is usually more efficient in a reverse proxy or web server, such
+
+45
+00:03:45,102 --> 00:03:46,977
+as IIS, Nginx or a CDN.
+
+46
+00:03:46,977 --> 00:03:53,768
+Use the module when no such layer compresses, for example when the application is exposed directly.
+
+47
+00:03:54,518 --> 00:04:00,058
+The module sets EnableForHttps to true, so HTTPS responses are compressed too.
+
+48
+00:04:00,058 --> 00:04:07,377
+Compressing dynamically generated, secured responses can expose an application to attacks such as BREACH.
+
+49
+00:04:07,377 --> 00:04:10,938
+Enable the feature only if you accept that risk.
+
+50
+00:04:12,938 --> 00:04:18,305
+The Response Compression module adds ASP.NET Core response compression to a tenant with
+
+51
+00:04:18,305 --> 00:04:21,998
+one feature, so weigh the HTTPS risk before you enable it.
+
+52
+00:04:21,998 --> 00:04:23,498
+Thanks for watching.
+
