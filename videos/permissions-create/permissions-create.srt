@@ -1,0 +1,268 @@
+1
+00:00:01,000 --> 00:00:04,757
+Permissions decide who can do what in an Orchard Core site.
+
+2
+00:00:04,757 --> 00:00:09,150
+In this video, you declare permissions in your own module, see how the
+
+3
+00:00:09,150 --> 00:00:13,890
+roles editor shows them, and check them in a controller, a view, and a menu.
+
+4
+00:00:18,490 --> 00:00:22,762
+A permission is a name that stands for one right, such as ManageWidgets.
+
+5
+00:00:22,762 --> 00:00:26,542
+A role holds a set of permission names, and a user receives the
+
+6
+00:00:26,542 --> 00:00:29,390
+permissions of every role the user belongs to.
+
+7
+00:00:30,140 --> 00:00:32,828
+Some roles apply without an assignment.
+
+8
+00:00:32,828 --> 00:00:39,398
+The Anonymous role applies to every visitor, and the Authenticated role applies to every signed-in user.
+
+9
+00:00:39,398 --> 00:00:43,340
+Users in the Administrator role pass every permission check.
+
+10
+00:00:44,090 --> 00:00:45,841
+Your module has three jobs.
+
+11
+00:00:45,841 --> 00:00:50,882
+Declare the permission, provide it to Orchard Core, and check it where the code needs it.
+
+12
+00:00:50,882 --> 00:00:53,110
+The next chapters follow that order.
+
+13
+00:00:57,310 --> 00:01:01,650
+Declare each permission once, as a static field of a static class.
+
+14
+00:01:01,650 --> 00:01:08,160
+A Permission takes a name and a description, and the description comes from LocalizationSource.Create.
+
+15
+00:01:08,910 --> 00:01:12,827
+The name must be unique across every module, ignoring case.
+
+16
+00:01:12,827 --> 00:01:15,660
+Roles store that name, so keep it stable.
+
+17
+00:01:15,660 --> 00:01:19,999
+A duplicate is logged as an error at startup, and the roles editor
+
+18
+00:01:19,999 --> 00:01:22,590
+shows Duplicate Permissions Detected.
+
+19
+00:01:23,340 --> 00:01:29,297
+Passing the declaring type, here MyPermissions, gives the description a translation context.
+
+20
+00:01:29,297 --> 00:01:33,796
+The roles editor translates it with PO files, using the full name of
+
+21
+00:01:33,796 --> 00:01:35,680
+that type as the context.
+
+22
+00:01:36,430 --> 00:01:42,228
+A permission can be security critical, for a right that lets a user elevate other permissions.
+
+23
+00:01:42,228 --> 00:01:46,750
+The roles editor marks such a permission with a Security Critical badge.
+
+24
+00:01:47,500 --> 00:01:50,536
+A permission can also be implied by others.
+
+25
+00:01:50,536 --> 00:01:57,290
+ViewWidgets lists ManageWidgets, so a user who holds ManageWidgets also passes a check for ViewWidgets.
+
+26
+00:01:58,040 --> 00:02:01,792
+To group permissions under a heading of your own, set Category.
+
+27
+00:02:01,792 --> 00:02:06,850
+Without it, the roles editor uses the name of the feature that provides the permission.
+
+28
+00:02:11,050 --> 00:02:15,828
+A class that implements IPermissionProvider lists the permissions of the module.
+
+29
+00:02:15,828 --> 00:02:20,050
+GetPermissionsAsync returns every permission that the module declares.
+
+30
+00:02:20,800 --> 00:02:25,865
+GetDefaultStereotypes names roles and the permissions each one receives by default.
+
+31
+00:02:25,865 --> 00:02:29,791
+A role with one of these names is granted them when the feature
+
+32
+00:02:29,791 --> 00:02:32,750
+is first enabled, or when the role is created.
+
+33
+00:02:33,500 --> 00:02:37,774
+Stereotypes only add permissions to a role and never remove any.
+
+34
+00:02:37,774 --> 00:02:42,903
+Built-in modules usually list the Administrator role too, but users in it pass
+
+35
+00:02:42,903 --> 00:02:45,040
+every check without an entry.
+
+36
+00:02:45,790 --> 00:02:49,337
+Register the provider in Startup with AddPermissionProvider.
+
+37
+00:02:49,337 --> 00:02:54,013
+When the module's feature is enabled, the roles editor lists its permissions, and
+
+38
+00:02:54,013 --> 00:02:55,410
+roles can hold them.
+
+39
+00:02:56,160 --> 00:02:58,837
+A recipe can grant the permission by name too.
+
+40
+00:02:58,837 --> 00:03:03,008
+In the Roles step, the default behavior replaces the permissions of a role,
+
+41
+00:03:03,008 --> 00:03:05,531
+so use Add to keep the ones it already has.
+
+42
+00:03:05,531 --> 00:03:08,260
+The step also sets the description of the role.
+
+43
+00:03:12,493 --> 00:03:18,110
+The roles editor, under Access Control, Roles, lists the permissions of every enabled feature.
+
+44
+00:03:18,110 --> 00:03:20,020
+Let's open the Manager role.
+
+45
+00:03:20,020 --> 00:03:24,513
+The Roles module declares its own permissions with the code you have seen.
+
+46
+00:03:24,996 --> 00:03:30,137
+Permissions are grouped by the feature that provides them, shown by name and identifier.
+
+47
+00:03:30,137 --> 00:03:35,606
+Each row shows the description from the code, and the Search permissions box filters the rows.
+
+48
+00:03:36,075 --> 00:03:39,147
+Manage Roles carries the Security Critical badge.
+
+49
+00:03:39,147 --> 00:03:42,385
+This role is allowed it, so the Allow box is ticked.
+
+50
+00:03:42,837 --> 00:03:47,911
+View Roles is not ticked under Allow, but it is Effective, because Manage Roles implies it.
+
+51
+00:03:47,911 --> 00:03:50,997
+That is the ImpliedBy list of the permission at work.
+
+52
+00:03:51,450 --> 00:03:54,376
+The Administrator role has no boxes to tick.
+
+53
+00:03:54,376 --> 00:04:00,930
+Its editor says that this system role provides comprehensive access by granting all available permissions.
+
+54
+00:04:05,130 --> 00:04:11,790
+In a controller, inject IAuthorizationService and call AuthorizeAsync with the user and the permission.
+
+55
+00:04:11,790 --> 00:04:15,090
+When the check fails, the action returns Forbid.
+
+56
+00:04:15,840 --> 00:04:19,685
+The check succeeds when a role that applies to the user holds the
+
+57
+00:04:19,685 --> 00:04:22,392
+permission, or a permission that implies it.
+
+58
+00:04:22,392 --> 00:04:25,750
+For users in the Administrator role, it always succeeds.
+
+59
+00:04:26,500 --> 00:04:30,068
+A view injects the same service to decide what to show.
+
+60
+00:04:30,068 --> 00:04:35,274
+The Roles module hides its Add Role button from users who do not hold Manage Roles.
+
+61
+00:04:35,274 --> 00:04:38,550
+Its controller checks permissions in every action.
+
+62
+00:04:39,300 --> 00:04:42,912
+A menu item takes a permission through the Permission method.
+
+63
+00:04:42,912 --> 00:04:47,009
+The navigation removes the item, and its child items, for users who do
+
+64
+00:04:47,009 --> 00:04:48,680
+not hold that permission.
+
+65
+00:04:50,680 --> 00:04:54,667
+You declare a permission with a name and a description, provide it through
+
+66
+00:04:54,667 --> 00:04:59,054
+IPermissionProvider, see it in the roles editor, and check it with AuthorizeAsync.
+
+67
+00:04:59,054 --> 00:05:00,350
+Thanks for watching.
+
