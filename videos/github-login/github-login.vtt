@@ -1,0 +1,164 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.190
+People who have a GitHub account can use it to sign in to
+
+00:00:04.190 --> 00:00:05.659
+your Orchard Core site.
+
+00:00:05.659 --> 00:00:09.305
+In this video, you register an app on GitHub, enter its details in
+
+00:00:09.305 --> 00:00:12.040
+the admin, and see the result on the login page.
+
+00:00:16.640 --> 00:00:21.591
+A visitor chooses GitHub on the login page, and the browser goes to GitHub.
+
+00:00:21.591 --> 00:00:26.480
+The person signs in there, and GitHub sends the browser back to your site.
+
+00:00:27.230 --> 00:00:31.217
+To connect the two, your site needs a Client ID, a client secret,
+
+00:00:31.217 --> 00:00:32.677
+and a callback path.
+
+00:00:32.677 --> 00:00:36.327
+The first two belong to an app that you register on GitHub.
+
+00:00:36.327 --> 00:00:39.640
+The callback path is where GitHub returns the person.
+
+00:00:43.840 --> 00:00:49.216
+On GitHub, open the Developer applications settings and create an OAuth app.
+
+00:00:49.216 --> 00:00:54.461
+In the app's details, set the Authorization Callback URL to the address of
+
+00:00:54.461 --> 00:00:57.280
+your site followed by /signin-github.
+
+00:00:58.030 --> 00:01:00.795
+The app has a Client ID and a client secret.
+
+00:01:00.795 --> 00:01:04.610
+Keep both at hand, because you enter them in Orchard Core next.
+
+00:01:08.813 --> 00:01:11.399
+Features is under Tools in the admin menu.
+
+00:01:11.399 --> 00:01:13.178
+Let's search it for GitHub.
+
+00:01:13.178 --> 00:01:17.813
+The GitHub Authentication feature authenticates users with their GitHub account.
+
+00:01:18.321 --> 00:01:24.026
+The row lists External Authentication as a dependency, so that feature is enabled with it.
+
+00:01:24.026 --> 00:01:25.571
+Let's select Enable.
+
+00:01:29.579 --> 00:01:35.049
+The row shows the Enabled status, and the Enable button is replaced by a Disable button.
+
+00:01:35.049 --> 00:01:37.959
+GitHub Authentication is ready to configure.
+
+00:01:42.259 --> 00:01:45.878
+Let's open Settings, Security, Authentication, GitHub.
+
+00:01:45.878 --> 00:01:51.429
+A notice at the top warns that the website might restart when you save these settings.
+
+00:01:51.896 --> 00:01:53.489
+Client ID is required.
+
+00:01:53.489 --> 00:01:57.300
+Let's enter the Client ID of the GitHub app; this one is made
+
+00:01:57.300 --> 00:01:58.836
+up for the recording.
+
+00:01:59.478 --> 00:02:04.003
+Client secret hides what you type, and the site keeps the value protected.
+
+00:02:04.003 --> 00:02:07.058
+Let's enter the secret of the app, also made up.
+
+00:02:07.511 --> 00:02:12.317
+CallbackPath is the path where GitHub returns the person to your site.
+
+00:02:12.317 --> 00:02:16.681
+Leave it empty to use /signin-github, the path you gave GitHub.
+
+00:02:17.146 --> 00:02:21.825
+The Store tokens check box keeps the external authentication tokens for reuse.
+
+00:02:21.825 --> 00:02:24.276
+Leave it cleared unless you need them.
+
+00:02:24.731 --> 00:02:26.015
+Let's select Save.
+
+00:02:26.015 --> 00:02:30.459
+The site confirms that the settings were updated, and the Client secret field
+
+00:02:30.459 --> 00:02:32.601
+says the value is securely stored.
+
+00:02:36.901 --> 00:02:39.784
+A signed-out visitor opens the login page.
+
+00:02:39.784 --> 00:02:43.989
+Next to the Log in form, a section titled Use another service to
+
+00:02:43.989 --> 00:02:45.611
+log in offers GitHub.
+
+00:02:46.116 --> 00:02:51.035
+The GitHub button appears only when a Client ID and a client secret are saved.
+
+00:02:51.035 --> 00:02:53.787
+Selecting it sends the browser to GitHub.
+
+00:02:53.787 --> 00:02:58.646
+This video stops there, because the next screens belong to a real GitHub app.
+
+00:03:02.846 --> 00:03:06.857
+When GitHub sends the person back, the site looks for a user linked
+
+00:03:06.857 --> 00:03:09.659
+to that GitHub account and signs the user in.
+
+00:03:09.659 --> 00:03:13.615
+If the email address from GitHub belongs to a local user, the site
+
+00:03:13.615 --> 00:03:16.746
+asks for that user's password to link the accounts.
+
+00:03:17.496 --> 00:03:22.007
+A person with no account fills in a registration form, is registered at
+
+00:03:22.007 --> 00:03:27.747
+once when no information is required, or is told that registration is disabled for the site.
+
+00:03:27.747 --> 00:03:33.956
+The external authentication settings of the Users module control this; a separate video covers them.
+
+00:03:34.706 --> 00:03:39.553
+A signed-in user can also link GitHub to the existing account, from External
+
+00:03:39.553 --> 00:03:41.326
+Logins in the user menu.
+
+00:03:43.326 --> 00:03:48.145
+GitHub Authentication adds a GitHub button to the login page once the Client
+
+00:03:48.145 --> 00:03:50.319
+ID and client secret are saved.
+
+00:03:50.319 --> 00:03:51.846
+Thanks for watching.
+
