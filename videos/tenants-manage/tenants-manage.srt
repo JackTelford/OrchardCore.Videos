@@ -1,0 +1,328 @@
+1
+00:00:01,000 --> 00:00:04,870
+Once tenants exist, you manage them from one list.
+
+2
+00:00:04,870 --> 00:00:11,920
+In this video, you edit, disable, enable, reload and remove tenants, and change several at once.
+
+3
+00:00:16,533 --> 00:00:22,113
+Tenants are managed from the Default tenant, by a user with the Manage tenants permission.
+
+4
+00:00:22,113 --> 00:00:24,379
+Open Multi-Tenancy, then Tenants.
+
+5
+00:00:24,379 --> 00:00:28,332
+Each row shows the name of a tenant, with badges for its state
+
+6
+00:00:28,332 --> 00:00:31,993
+and, when they are set, its database provider and recipe.
+
+7
+00:00:32,444 --> 00:00:36,181
+At the end of each row are the actions the tenant allows.
+
+8
+00:00:36,181 --> 00:00:41,164
+A running tenant offers Edit, View, Disable and Reload, plus Features when the
+
+9
+00:00:41,164 --> 00:00:43,122
+Features module is enabled.
+
+10
+00:00:43,122 --> 00:00:45,376
+The Default tenant offers fewer:
+
+11
+00:00:45,376 --> 00:00:49,054
+it has no Disable button, because it cannot be disabled.
+
+12
+00:00:49,515 --> 00:00:53,055
+The search box finds tenants by name, host or prefix.
+
+13
+00:00:53,055 --> 00:00:57,075
+Let's search for harbor, and the list narrows to that tenant.
+
+14
+00:00:57,538 --> 00:01:02,483
+The State filter shows only running, disabled or uninitialized tenants.
+
+15
+00:01:02,483 --> 00:01:04,602
+Let's choose Uninitialized:
+
+16
+00:01:04,602 --> 00:01:07,878
+Pilot is the tenant that has not been set up.
+
+17
+00:01:12,078 --> 00:01:15,607
+Every tenant has a state, shown as a badge in its row.
+
+18
+00:01:15,607 --> 00:01:18,371
+Running means the tenant serves its site.
+
+19
+00:01:18,371 --> 00:01:22,018
+Uninitialized means it exists, but nobody has set it up.
+
+20
+00:01:22,768 --> 00:01:27,243
+Disabled means the tenant is switched off, with its settings and data kept.
+
+21
+00:01:27,243 --> 00:01:30,448
+Initializing appears while a tenant is being set up.
+
+22
+00:01:31,198 --> 00:01:33,957
+The actions of a row follow its state.
+
+23
+00:01:33,957 --> 00:01:39,161
+Disable and View belong to running tenants, Enable to disabled ones, Setup to
+
+24
+00:01:39,161 --> 00:01:44,178
+tenants that are not set up, and Remove to disabled or not set up tenants.
+
+25
+00:01:48,383 --> 00:01:51,549
+To change a tenant, select Edit in its row.
+
+26
+00:01:51,549 --> 00:01:52,970
+Let's edit Acme.
+
+27
+00:01:52,970 --> 00:01:58,203
+The Edit Tenant page shows its name, which is read-only, then Category, Url
+
+28
+00:01:58,203 --> 00:02:00,723
+Prefix, Description and Hostname.
+
+29
+00:02:01,174 --> 00:02:06,030
+The Url Prefix and the Hostname decide which requests reach the tenant, so
+
+30
+00:02:06,030 --> 00:02:07,730
+change them with care.
+
+31
+00:02:07,730 --> 00:02:10,704
+Several domains can be separated by commas.
+
+32
+00:02:11,157 --> 00:02:14,899
+Category and Description help you tell tenants apart.
+
+33
+00:02:14,899 --> 00:02:20,227
+Let's type the category Customers, and the description Acme Bakery storefront.
+
+34
+00:02:20,683 --> 00:02:21,730
+Select Save.
+
+35
+00:02:21,730 --> 00:02:25,916
+The tenant is reloaded with the settings you saved, and the row of
+
+36
+00:02:25,916 --> 00:02:28,823
+Acme shows the category and the description.
+
+37
+00:02:29,297 --> 00:02:33,158
+While a tenant is not set up, its Edit page also offers the
+
+38
+00:02:33,158 --> 00:02:36,188
+recipe and database settings that Setup uses.
+
+39
+00:02:36,188 --> 00:02:37,376
+Here is Pilot.
+
+40
+00:02:37,376 --> 00:02:40,287
+A tenant that is set up does not show them.
+
+41
+00:02:44,533 --> 00:02:47,940
+To switch a tenant off, select Disable in its row.
+
+42
+00:02:47,940 --> 00:02:49,583
+Let's disable Harbor.
+
+43
+00:02:49,583 --> 00:02:51,713
+A dialog asks you to confirm.
+
+44
+00:02:52,172 --> 00:02:53,062
+Select Ok.
+
+45
+00:02:53,062 --> 00:02:55,620
+The state of Harbor changes to Disabled.
+
+46
+00:02:55,620 --> 00:03:00,402
+The tenant stops serving its site, while its settings and data stay as they are.
+
+47
+00:03:00,861 --> 00:03:04,598
+Its row offers Enable instead of View and Disable.
+
+48
+00:03:04,598 --> 00:03:10,138
+Remove also appears, because this site allows removal, and only a disabled or
+
+49
+00:03:10,138 --> 00:03:12,741
+not set up tenant can be removed.
+
+50
+00:03:13,199 --> 00:03:15,840
+Select Enable to switch Harbor on again.
+
+51
+00:03:15,840 --> 00:03:17,218
+No dialog appears.
+
+52
+00:03:17,218 --> 00:03:21,409
+The state returns to Running, and the tenant serves its site again.
+
+53
+00:03:25,648 --> 00:03:30,034
+Reload makes one tenant start again, while the application keeps running.
+
+54
+00:03:30,034 --> 00:03:34,698
+Its settings are read again, and the next request builds the tenant with them.
+
+55
+00:03:35,154 --> 00:03:36,769
+Let's reload Harbor.
+
+56
+00:03:36,769 --> 00:03:38,695
+Select Reload in its row.
+
+57
+00:03:38,695 --> 00:03:41,056
+No dialog and no message appear:
+
+58
+00:03:41,056 --> 00:03:42,734
+the list opens again.
+
+59
+00:03:43,225 --> 00:03:47,611
+Use Reload after you change settings outside the admin screens.
+
+60
+00:03:47,611 --> 00:03:53,205
+Saving the Edit Tenant page already reloads the tenant, so it needs no extra step.
+
+61
+00:03:57,426 --> 00:04:01,392
+To change several tenants at once, tick their checkboxes.
+
+62
+00:04:01,392 --> 00:04:03,722
+Let's select Juniper and Maple.
+
+63
+00:04:03,722 --> 00:04:09,326
+With two or more selected, the toolbar shows how many, and an Actions menu appears.
+
+64
+00:04:09,793 --> 00:04:12,904
+The Actions menu offers Disable and Enable.
+
+65
+00:04:12,904 --> 00:04:17,030
+Choose Disable, and confirm the Bulk Action dialog with Ok.
+
+66
+00:04:17,030 --> 00:04:19,443
+Both tenants change to Disabled.
+
+67
+00:04:19,931 --> 00:04:24,460
+Disable applies to running tenants and Enable to disabled tenants.
+
+68
+00:04:24,460 --> 00:04:30,751
+Any other selected tenant is skipped with a warning, and the Default tenant is never disabled.
+
+69
+00:04:34,951 --> 00:04:37,254
+Removing a tenant is off by default.
+
+70
+00:04:37,254 --> 00:04:42,246
+Whoever runs the application allows it in the configuration, and the documentation of
+
+71
+00:04:42,246 --> 00:04:44,331
+the Tenants module explains how.
+
+72
+00:04:45,081 --> 00:04:49,500
+Even then, only a tenant that is disabled or not set up can be removed.
+
+73
+00:04:49,500 --> 00:04:54,322
+Removing it deletes its settings, its files and its database content for good.
+
+74
+00:04:54,322 --> 00:04:56,791
+The Default tenant cannot be removed.
+
+75
+00:04:58,432 --> 00:05:01,831
+Maple is disabled, so its row offers Remove.
+
+76
+00:05:01,831 --> 00:05:06,182
+Select it, and a dialog titled Remove asks you to confirm.
+
+77
+00:05:06,634 --> 00:05:07,494
+Select Ok.
+
+78
+00:05:07,494 --> 00:05:11,419
+A message says that the tenant Maple was removed, and points to the
+
+79
+00:05:11,419 --> 00:05:13,355
+log file for more information.
+
+80
+00:05:13,355 --> 00:05:15,774
+The row of Maple is gone from the list.
+
+81
+00:05:17,774 --> 00:05:22,708
+You can edit, disable, enable, reload and remove tenants from one list.
+
+82
+00:05:22,708 --> 00:05:24,374
+Thanks for watching.
+
