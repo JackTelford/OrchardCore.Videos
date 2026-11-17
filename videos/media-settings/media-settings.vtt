@@ -1,0 +1,221 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.959
+The Media module keeps the files of your site.
+
+00:00:03.959 --> 00:00:08.568
+Its settings control which file types are accepted, how large an upload can
+
+00:00:08.568 --> 00:00:12.096
+be, and how the Media Library signs in to the Media API.
+
+00:00:12.096 --> 00:00:13.860
+Let's see where they are.
+
+00:00:18.460 --> 00:00:21.613
+The Media module lets a site tune many behaviors:
+
+00:00:21.613 --> 00:00:26.429
+the accepted file types, the largest upload, how long browsers keep files, and
+
+00:00:26.429 --> 00:00:28.091
+where files are stored.
+
+00:00:28.091 --> 00:00:32.620
+These values are set in the configuration of the site, outside the admin.
+
+00:00:33.370 --> 00:00:37.534
+The Options and API pages under Settings, Media show them.
+
+00:00:37.534 --> 00:00:42.609
+Options is read-only, and API holds the one setting you can change here:
+
+00:00:42.609 --> 00:00:46.123
+how the Media Library signs in to the Media API.
+
+00:00:46.123 --> 00:00:48.660
+Each page has its own permission.
+
+00:00:52.860 --> 00:00:55.592
+Every upload is checked against two lists:
+
+00:00:55.592 --> 00:00:59.633
+a type in the allowed list is accepted from anyone who may upload
+
+00:00:59.633 --> 00:01:04.073
+media, and a type in the restricted list also needs an extra permission.
+
+00:01:04.073 --> 00:01:06.350
+A type in neither list is refused.
+
+00:01:08.007 --> 00:01:10.380
+Let's open Settings, Media, Options.
+
+00:01:10.380 --> 00:01:15.750
+A note at the top says where these values are configured, and links to the documentation.
+
+00:01:15.750 --> 00:01:18.067
+Nothing on this page can be edited.
+
+00:01:18.604 --> 00:01:22.352
+Supported sizes are the widths and heights you can pick from the Width
+
+00:01:22.352 --> 00:01:25.064
+and Height lists when you create a media profile.
+
+00:01:25.541 --> 00:01:28.832
+Restricted file extensions names the risky types:
+
+00:01:28.832 --> 00:01:31.405
+style sheets, scripts and SVG images.
+
+00:01:31.405 --> 00:01:37.090
+The hint names the permission you need, Upload media file extensions requiring additional
+
+00:01:37.090 --> 00:01:40.441
+permission, on top of the usual media permissions.
+
+00:01:40.892 --> 00:01:45.658
+Allowed file extensions lists the other types a media uploader may add:
+
+00:01:45.658 --> 00:01:48.567
+here, images, documents, audio and video.
+
+00:01:48.567 --> 00:01:53.952
+The two lists cannot overlap, and a list you configure replaces the default list.
+
+00:01:55.622 --> 00:01:59.740
+You grant that permission to a role, under Access Control, Roles.
+
+00:01:59.740 --> 00:02:05.482
+Searching a role's permissions for it shows a Security Critical badge, so grant it with care.
+
+00:02:07.118 --> 00:02:09.657
+Let's try the rules in Media, Library.
+
+00:02:09.657 --> 00:02:12.541
+We choose Upload files and pick a text file.
+
+00:02:12.541 --> 00:02:16.926
+Its extension is in neither list, so the Media Library refuses it with
+
+00:02:16.926 --> 00:02:19.118
+a Validation error notification.
+
+00:02:19.619 --> 00:02:21.925
+An SVG image is a restricted type.
+
+00:02:21.925 --> 00:02:26.421
+This user holds the permission, so the upload goes through, and the file
+
+00:02:26.421 --> 00:02:27.919
+appears in the list.
+
+00:02:32.144 --> 00:02:36.962
+Max browser cache days is how many days a browser may keep a media file.
+
+00:02:36.962 --> 00:02:41.717
+Max secure files browser cache days does the same for secure files, and
+
+00:02:41.717 --> 00:02:43.447
+zero means no caching.
+
+00:02:43.447 --> 00:02:47.214
+Max cache days is how long a resized image stays valid.
+
+00:02:47.679 --> 00:02:52.341
+Max file size is the largest upload, in bytes, and a larger file
+
+00:02:52.341 --> 00:02:55.139
+is refused before the upload starts.
+
+00:02:55.139 --> 00:03:02.199
+Max upload chunk size and Temporary file lifetime control chunked uploads and their temporary files.
+
+00:03:02.656 --> 00:03:08.057
+Cdn base url, when set, is placed in front of the path when images are served.
+
+00:03:08.057 --> 00:03:12.944
+Assets request path and Assets path say where media is served from and
+
+00:03:12.944 --> 00:03:15.066
+where its files are stored.
+
+00:03:15.520 --> 00:03:19.042
+Thumbnails disabled says whether the grid view is turned off.
+
+00:03:19.042 --> 00:03:21.669
+Storage provider names where files are kept.
+
+00:03:21.669 --> 00:03:24.875
+The last four rows show a check or a cross for what the
+
+00:03:24.875 --> 00:03:27.450
+storage supports and which features are on.
+
+00:03:31.627 --> 00:03:33.821
+Next, Settings, Media, API.
+
+00:03:33.821 --> 00:03:37.544
+The page has one option, Media API authentication.
+
+00:03:37.544 --> 00:03:42.398
+The hint says it controls how the Media Gallery, which is the Media
+
+00:03:42.398 --> 00:03:47.517
+Library screen, uploads and real-time updates sign in to the Media API.
+
+00:03:47.975 --> 00:03:49.672
+Cookie is the default.
+
+00:03:49.672 --> 00:03:54.581
+It uses your admin session, so the Media Library works with no extra setup.
+
+00:03:54.581 --> 00:03:58.035
+Exactly one scheme is active at a time, never both.
+
+00:03:58.496 --> 00:04:00.987
+Let's choose Bearer, without saving.
+
+00:04:00.987 --> 00:04:06.207
+It uses OAuth2 bearer tokens and needs the OpenID Connect Token Validation feature
+
+00:04:06.207 --> 00:04:07.986
+and a registered client.
+
+00:04:07.986 --> 00:04:12.494
+Without that setup, the Media Library cannot sign in, and it tells you
+
+00:04:12.494 --> 00:04:15.756
+to check OpenID Connect or switch back to Cookie.
+
+00:04:16.255 --> 00:04:20.340
+We set it back to Cookie and select Save, and a notification says
+
+00:04:20.340 --> 00:04:22.699
+Site settings updated successfully.
+
+00:04:22.699 --> 00:04:25.805
+Saving a different scheme makes the site reload.
+
+00:04:27.395 --> 00:04:31.817
+To prepare Bearer, open Tools, Recipes and search for Media API.
+
+00:04:31.817 --> 00:04:37.503
+The Bearer recipe switches the scheme, enables the OpenID Connect features it needs,
+
+00:04:37.503 --> 00:04:39.335
+and registers a client.
+
+00:04:39.335 --> 00:04:44.895
+Its description says to replace the local address with your own before you run it.
+
+00:04:46.895 --> 00:04:51.095
+The Options page shows how your site handles files, and the API page
+
+00:04:51.095 --> 00:04:53.649
+chooses how the Media Library signs in.
+
+00:04:53.649 --> 00:04:55.125
+Thanks for watching.
+
