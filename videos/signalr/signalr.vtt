@@ -1,0 +1,206 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.850
+Some pages need to change while they are open.
+
+00:00:03.850 --> 00:00:08.125
+The SignalR module gives every module of an Orchard Core site one shared
+
+00:00:08.125 --> 00:00:13.497
+way to host hubs, and the Redis and Azure backplanes carry their messages between instances.
+
+00:00:13.497 --> 00:00:15.470
+This video shows how it works.
+
+00:00:20.070 --> 00:00:24.226
+SignalR keeps a connection open between the browser and the server, so the
+
+00:00:24.226 --> 00:00:27.394
+server can send a message the moment something changes.
+
+00:00:27.394 --> 00:00:30.355
+A hub is the class that receives these connections.
+
+00:00:30.355 --> 00:00:33.680
+The Media Library and the Workflows designer each use one.
+
+00:00:34.430 --> 00:00:39.958
+The SignalR module registers SignalR once for the tenant, and provides the JavaScript
+
+00:00:39.958 --> 00:00:42.206
+client as the signalr resource.
+
+00:00:42.206 --> 00:00:48.038
+Backplanes relay messages between instances, and come in separate Redis and Azure modules.
+
+00:00:48.038 --> 00:00:52.290
+A module that hosts a hub maps it and sets its own access rules.
+
+00:00:56.528 --> 00:00:59.254
+In Tools, Features, search for SignalR.
+
+00:00:59.254 --> 00:01:05.068
+The SignalR module provides the SignalR feature, while SignalR Redis Backplane and SignalR
+
+00:01:05.068 --> 00:01:08.641
+Azure Backplane each come from a module of their own.
+
+00:01:08.641 --> 00:01:11.548
+Media SignalR comes from the Media module.
+
+00:01:12.027 --> 00:01:14.232
+SignalR has no pages of its own.
+
+00:01:14.232 --> 00:01:16.669
+A feature that hosts a hub needs it.
+
+00:01:16.669 --> 00:01:21.718
+Both backplanes depend on SignalR, and the Redis backplane also depends on Redis,
+
+00:01:21.718 --> 00:01:23.807
+as the dependency badges show.
+
+00:01:24.350 --> 00:01:26.703
+Let's enable SignalR Redis Backplane.
+
+00:01:26.703 --> 00:01:30.972
+Enabling a feature also enables the features it depends on, and the page
+
+00:01:30.972 --> 00:01:33.490
+confirms that the backplane was enabled.
+
+00:01:37.730 --> 00:01:42.537
+When Media SignalR is enabled, the Media Library connects to a hub.
+
+00:01:42.537 --> 00:01:47.280
+Here are two tabs of Media, Library, both showing the same folder.
+
+00:01:47.746 --> 00:01:52.020
+In the second tab, let's open the menu of a file, choose Rename,
+
+00:01:52.020 --> 00:01:54.706
+type another file name, and select Ok.
+
+00:01:55.945 --> 00:01:59.623
+Back in the first tab, the list shows the renamed file, and the
+
+00:01:59.623 --> 00:02:01.115
+page was not reloaded.
+
+00:02:01.115 --> 00:02:04.900
+The Media module sent a message to the hub, and the library asked
+
+00:02:04.900 --> 00:02:06.765
+for the folder's files again.
+
+00:02:10.965 --> 00:02:13.432
+A hub is a class that derives from Hub.
+
+00:02:13.432 --> 00:02:17.982
+The Workflows hub carries the Authorize attribute with a policy name, and its
+
+00:02:17.982 --> 00:02:22.915
+module registers that policy so that it requires the permission to manage workflows.
+
+00:02:23.665 --> 00:02:28.809
+Media SignalR lists the SignalR feature as a dependency in its manifest.
+
+00:02:28.809 --> 00:02:35.403
+Workflows uses RequireFeatures, which runs its real-time startup only when SignalR is enabled.
+
+00:02:35.403 --> 00:02:39.095
+In both, the startup class maps the hub to a path.
+
+00:02:39.845 --> 00:02:44.376
+Options for one hub are configured with HubOptions of that hub's type, such
+
+00:02:44.376 --> 00:02:46.221
+as the keep-alive interval.
+
+00:02:46.221 --> 00:02:49.465
+Options for every hub use HubOptions without a type.
+
+00:02:53.665 --> 00:02:55.983
+Clients call the public methods of a hub.
+
+00:02:55.983 --> 00:03:00.371
+The media hub's SubscribePath method checks the user's permission for a folder, and
+
+00:03:00.371 --> 00:03:03.625
+then adds the connection to a group named after that folder.
+
+00:03:04.375 --> 00:03:07.431
+Code outside the hub sends through the hub context.
+
+00:03:07.431 --> 00:03:11.666
+This media event handler sends a MediaChanged message to the group of the
+
+00:03:11.666 --> 00:03:15.365
+parent folder, so only browsers showing that folder receive it.
+
+00:03:19.565 --> 00:03:24.980
+In a server-rendered view, load the client with a script tag that names the signalr resource.
+
+00:03:24.980 --> 00:03:29.247
+A script that opens a connection declares that it depends on signalr, so
+
+00:03:29.247 --> 00:03:31.325
+the client is on the page first.
+
+00:03:32.075 --> 00:03:36.271
+A bundled app, such as the Media gallery, includes the client in its
+
+00:03:36.271 --> 00:03:39.049
+own bundle and does not load this resource.
+
+00:03:39.049 --> 00:03:44.265
+The gallery connects to the media hub and calls SubscribePath for the folder it shows.
+
+00:03:48.465 --> 00:03:52.186
+A hub keeps its connections in the memory of one instance.
+
+00:03:52.186 --> 00:03:56.720
+With two instances behind a load balancer, a message sent on one reaches
+
+00:03:56.720 --> 00:04:01.545
+only the browsers connected to it, unless a backplane relays it to the other.
+
+00:04:02.295 --> 00:04:06.502
+The Redis backplane reuses the connection string of the Redis module.
+
+00:04:06.502 --> 00:04:11.381
+Each tenant's messages use their own channel prefix, made of the instance prefix,
+
+00:04:11.381 --> 00:04:15.475
+the tenant name and SignalR, so tenants can share one Redis server.
+
+00:04:16.225 --> 00:04:20.372
+The Azure SignalR Service backplane has its own connection string.
+
+00:04:20.372 --> 00:04:25.670
+The optional application name separates deployments that share one service, and a hash
+
+00:04:25.670 --> 00:04:28.895
+of the tenant name is added to keep tenants apart.
+
+00:04:29.645 --> 00:04:31.967
+Enable one backplane per tenant.
+
+00:04:31.967 --> 00:04:37.282
+If both are enabled and configured, one of them logs an error and stays inactive.
+
+00:04:37.282 --> 00:04:43.635
+A backplane without its connection string stays inactive too, and SignalR keeps working in memory.
+
+00:04:45.635 --> 00:04:50.244
+The SignalR module registers SignalR once for the tenant, and the Redis and
+
+00:04:50.244 --> 00:04:53.658
+Azure backplanes carry hub messages between instances.
+
+00:04:53.658 --> 00:04:57.356
+Your modules map their hubs and set their own access rules.
+
+00:04:57.356 --> 00:04:58.835
+Thanks for watching.
+
