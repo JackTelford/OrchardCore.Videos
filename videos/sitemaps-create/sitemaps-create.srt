@@ -1,0 +1,372 @@
+1
+00:00:01,000 --> 00:00:05,636
+A sitemap lists the pages of your site in a form that search engines read.
+
+2
+00:00:05,636 --> 00:00:09,171
+The Sitemaps module builds that list from your content.
+
+3
+00:00:09,171 --> 00:00:14,270
+In this video, you create a sitemap, choose its content, and control single pages.
+
+4
+00:00:18,870 --> 00:00:23,474
+A sitemap is an XML document that lists the addresses of your pages.
+
+5
+00:00:23,474 --> 00:00:28,015
+Each entry can also carry the date the page last changed, how often
+
+6
+00:00:28,015 --> 00:00:31,810
+it changes, and its priority compared with other pages.
+
+7
+00:00:32,560 --> 00:00:36,855
+In Orchard Core, a sitemap has a name, a permalink that ends in
+
+8
+00:00:36,855 --> 00:00:39,034
+.xml, and an Enabled setting.
+
+9
+00:00:39,034 --> 00:00:44,200
+Browsing to the permalink shows the sitemap, which is built from its sources.
+
+10
+00:00:44,950 --> 00:00:47,569
+A source decides what the sitemap lists.
+
+11
+00:00:47,569 --> 00:00:52,353
+Sitemap Content Types lists the content items of the content types you choose.
+
+12
+00:00:52,353 --> 00:00:55,940
+Sitemap Custom Path lists a single address that you type.
+
+13
+00:01:00,155 --> 00:01:03,074
+Sitemaps is a feature that you enable.
+
+14
+00:01:03,074 --> 00:01:08,845
+Open Tools, Features, search for Sitemaps, and enable the feature named Sitemaps.
+
+15
+00:01:09,302 --> 00:01:13,591
+Its pages appear under Tools, Search Engine Optimization:
+
+16
+00:01:13,591 --> 00:01:17,131
+Sitemaps, Sitemap Indexes, and Sitemaps Cache.
+
+17
+00:01:17,131 --> 00:01:18,492
+Open Sitemaps.
+
+18
+00:01:18,950 --> 00:01:22,605
+A warning says the Base url setting is empty.
+
+19
+00:01:22,605 --> 00:01:28,410
+Every address in a sitemap starts with the Base url, so a sitemap needs it.
+
+20
+00:01:28,868 --> 00:01:30,861
+Open Settings, General.
+
+21
+00:01:30,861 --> 00:01:34,915
+Enter the address of your site in Base url, and save.
+
+22
+00:01:34,915 --> 00:01:37,938
+Sitemaps use it to build each address.
+
+23
+00:01:42,221 --> 00:01:44,813
+On the Sitemaps page, choose Add Sitemap.
+
+24
+00:01:44,813 --> 00:01:45,806
+Type a Name.
+
+25
+00:01:45,806 --> 00:01:47,791
+Let's call this sitemap Pages.
+
+26
+00:01:48,262 --> 00:01:53,620
+Permalink is the address where the sitemap is served, after the Base url.
+
+27
+00:01:53,620 --> 00:01:58,842
+Leave it empty, and the module builds it from the name, ending in .xml.
+
+28
+00:01:59,309 --> 00:02:00,677
+Enabled is checked.
+
+29
+00:02:00,677 --> 00:02:04,835
+If you uncheck it, the module stops serving the sitemap, but keeps it.
+
+30
+00:02:04,835 --> 00:02:05,929
+Choose Create.
+
+31
+00:02:06,452 --> 00:02:09,896
+The sitemap appears in the list with an Enabled badge.
+
+32
+00:02:09,896 --> 00:02:14,775
+Its buttons manage the sources, view the sitemap, edit its name, permalink, and
+
+33
+00:02:14,775 --> 00:02:16,842
+Enabled setting, or delete it.
+
+34
+00:02:21,082 --> 00:02:24,269
+A sitemap lists nothing until it has a source.
+
+35
+00:02:24,269 --> 00:02:27,272
+Choose Manage Sources, and then Add Source.
+
+36
+00:02:27,724 --> 00:02:32,693
+Available Sources offers Sitemap Content Types and Sitemap Custom Path.
+
+37
+00:02:32,693 --> 00:02:35,404
+Choose Add on Sitemap Content Types.
+
+38
+00:02:35,881 --> 00:02:38,203
+Index All Content Types is checked.
+
+39
+00:02:38,203 --> 00:02:42,962
+The sitemap then lists every published content item whose content type has the
+
+40
+00:02:42,962 --> 00:02:46,701
+Autoroute part, because Autoroute gives an item its address.
+
+41
+00:02:47,155 --> 00:02:51,261
+Change Frequency and Priority are the defaults for these entries.
+
+42
+00:02:51,261 --> 00:02:55,423
+Priority runs from zero to one, and ranks a page against the other
+
+43
+00:02:55,423 --> 00:02:56,869
+pages of your site.
+
+44
+00:02:56,869 --> 00:02:58,025
+Choose Create.
+
+45
+00:02:58,487 --> 00:03:01,058
+The source is listed with the badge All.
+
+46
+00:03:01,058 --> 00:03:04,747
+The sitemap serves an entry for each of those content items.
+
+47
+00:03:08,998 --> 00:03:10,089
+Choose View.
+
+48
+00:03:10,089 --> 00:03:14,328
+The sitemap opens in another tab, at its permalink on your site.
+
+49
+00:03:14,818 --> 00:03:19,221
+Each content item has an entry with its address and, when it has
+
+50
+00:03:19,221 --> 00:03:21,359
+one, its last modified date.
+
+51
+00:03:21,359 --> 00:03:25,448
+The change frequency and the priority come from the source.
+
+52
+00:03:29,654 --> 00:03:34,122
+To list only some types, go back to Manage Sources, choose Edit on
+
+53
+00:03:34,122 --> 00:03:37,474
+the source, and uncheck Index All Content Types.
+
+54
+00:03:37,929 --> 00:03:40,022
+A list of content types appears.
+
+55
+00:03:40,022 --> 00:03:43,327
+Only content types with the Autoroute part are listed.
+
+56
+00:03:43,327 --> 00:03:45,199
+Check Article and Blog Post.
+
+57
+00:03:45,655 --> 00:03:49,894
+Each checked type has its own Change Frequency and Priority.
+
+58
+00:03:49,894 --> 00:03:54,839
+Set Blog Post to Weekly with a higher priority, and Article to Monthly.
+
+59
+00:03:54,839 --> 00:03:56,315
+Then choose Save.
+
+60
+00:03:56,767 --> 00:03:59,866
+The source shows a badge for each selected type.
+
+61
+00:03:59,866 --> 00:04:05,147
+Viewing the sitemap again lists only articles and blog posts, with the values you set.
+
+62
+00:04:09,338 --> 00:04:13,358
+The Tags page of this site is not in the sitemap, because the
+
+63
+00:04:13,358 --> 00:04:15,998
+source selects only two content types.
+
+64
+00:04:15,998 --> 00:04:19,658
+Choose Add Source, and then Add on Sitemap Custom Path.
+
+65
+00:04:20,113 --> 00:04:21,978
+Type tags as the Path.
+
+66
+00:04:21,978 --> 00:04:25,643
+The hint shows the format, with no leading slash.
+
+67
+00:04:25,643 --> 00:04:30,173
+A path cannot contain spaces, dots, or most other punctuation.
+
+68
+00:04:30,626 --> 00:04:34,090
+Set Change Frequency to Monthly, and choose Create.
+
+69
+00:04:34,090 --> 00:04:38,646
+The source is listed with its path and the label Sitemap Custom Path.
+
+70
+00:04:39,101 --> 00:04:44,211
+Viewing the sitemap shows the Tags address next to the articles and blog posts.
+
+71
+00:04:48,414 --> 00:04:52,903
+To control a single page, add the Sitemap part to its content type.
+
+72
+00:04:52,903 --> 00:04:56,408
+A part adds its settings to every item of the type.
+
+73
+00:04:56,408 --> 00:05:00,774
+Open Design, Content Definition, Content Types, and edit Article.
+
+74
+00:05:01,225 --> 00:05:05,357
+Choose Add Parts, check Sitemap, and choose Add Selected Parts.
+
+75
+00:05:05,357 --> 00:05:08,291
+Content items are listed without this part.
+
+76
+00:05:08,291 --> 00:05:11,525
+It lets a single item be excluded or configured.
+
+77
+00:05:11,978 --> 00:05:15,660
+Open Content, Content Items, and edit the About article.
+
+78
+00:05:15,660 --> 00:05:18,392
+The Sitemap settings are on the SEO tab.
+
+79
+00:05:18,392 --> 00:05:21,718
+Check Override sitemap configuration to show them.
+
+80
+00:05:22,174 --> 00:05:25,954
+Exclude removes this item from the sitemaps that list it.
+
+81
+00:05:25,954 --> 00:05:30,934
+Change Frequency and Priority replace the source's values for this item only.
+
+82
+00:05:30,934 --> 00:05:33,334
+Check Exclude, and choose Publish.
+
+83
+00:05:33,794 --> 00:05:37,403
+Publishing makes the sitemap build again on its next view.
+
+84
+00:05:37,403 --> 00:05:39,263
+View it, and About is gone.
+
+85
+00:05:39,263 --> 00:05:43,944
+Items that do not override the configuration keep the values of their source.
+
+86
+00:05:48,144 --> 00:05:52,396
+When the SEO feature is enabled, the site serves a robots file.
+
+87
+00:05:52,396 --> 00:05:56,094
+If the site has no robots file of its own and the Base
+
+88
+00:05:56,094 --> 00:06:01,394
+url is set, the module can list your enabled sitemaps and sitemap indexes in it.
+
+89
+00:06:02,144 --> 00:06:06,097
+It does so once Include all sitemaps is checked and saved.
+
+90
+00:06:06,097 --> 00:06:11,472
+You find that setting under Settings, Search, Search Engine Optimization, Robots.
+
+91
+00:06:11,472 --> 00:06:14,314
+A separate video covers the robots file.
+
+92
+00:06:16,314 --> 00:06:20,581
+You created a sitemap, chose what it lists, and controlled single pages.
+
+93
+00:06:20,581 --> 00:06:22,004
+Thanks for watching.
+
