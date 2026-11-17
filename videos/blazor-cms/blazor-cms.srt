@@ -1,0 +1,400 @@
+1
+00:00:01,000 --> 00:00:04,994
+Orchard Core manages the content, and Blazor draws the pages.
+
+2
+00:00:04,994 --> 00:00:08,928
+In this video, we build a Blazor Server front end in a Razor
+
+3
+00:00:08,928 --> 00:00:13,935
+class library, serve it from Orchard Core, render content items, add a tenant,
+
+4
+00:00:13,935 --> 00:00:16,260
+and make a component interactive.
+
+5
+00:00:20,860 --> 00:00:25,258
+Editors write and publish content in the Orchard Core admin.
+
+6
+00:00:25,258 --> 00:00:28,924
+A Blazor front end turns that content into pages.
+
+7
+00:00:28,924 --> 00:00:34,921
+Both run in one ASP.NET Core application, so components read content through Orchard
+
+8
+00:00:34,921 --> 00:00:37,920
+Core services, not through an HTTP API.
+
+9
+00:00:38,670 --> 00:00:42,107
+The Blazor app lives in a Razor class library.
+
+10
+00:00:42,107 --> 00:00:48,916
+The web project references the library, and Program.cs maps it into the pipeline of every tenant.
+
+11
+00:00:48,916 --> 00:00:54,270
+The library holds the App component, the router, the layout, and the pages.
+
+12
+00:00:58,570 --> 00:01:01,705
+The site is set up with the Headless site recipe.
+
+13
+00:01:01,705 --> 00:01:04,953
+A recipe is a list of steps that Orchard Core runs.
+
+14
+00:01:04,953 --> 00:01:10,025
+Under Tools, Deployments, JSON Import, you paste a recipe that creates the Markdown
+
+15
+00:01:10,025 --> 00:01:13,160
+Page content type and an item, and select Import.
+
+16
+00:01:13,632 --> 00:01:20,332
+Under Content, Content Items, the item is listed with its title and its type, MarkdownPage.
+
+17
+00:01:20,332 --> 00:01:25,582
+A Markdown Page has a title, an alias, and a body written in Markdown.
+
+18
+00:01:26,043 --> 00:01:27,633
+Let's open the item.
+
+19
+00:01:27,633 --> 00:01:29,590
+Its alias is orchard-core.
+
+20
+00:01:29,590 --> 00:01:33,994
+The Blazor front end finds the item by this alias, and renders its
+
+21
+00:01:33,994 --> 00:01:35,523
+title and its body.
+
+22
+00:01:39,723 --> 00:01:44,593
+Blazor components go in a Razor class library, because Razor components are not
+
+23
+00:01:44,593 --> 00:01:46,885
+supported in Orchard Core modules.
+
+24
+00:01:46,885 --> 00:01:51,469
+Create the library, reference it from the web project, and add a framework
+
+25
+00:01:51,469 --> 00:01:53,303
+reference to ASP.NET Core.
+
+26
+00:01:54,053 --> 00:01:56,189
+App.razor is the root component.
+
+27
+00:01:56,189 --> 00:02:01,023
+It links the Bootstrap style sheet from the Orchard Core Resources module, loads
+
+28
+00:02:01,023 --> 00:02:04,284
+the Blazor script, and renders the Routes component.
+
+29
+00:02:04,284 --> 00:02:08,163
+Routes holds the router, with MainLayout as the default layout.
+
+30
+00:02:08,913 --> 00:02:14,295
+MainLayout shows the navigation menu in a sidebar, and each page in the content area.
+
+31
+00:02:14,295 --> 00:02:16,070
+NavMenu holds the links.
+
+32
+00:02:16,070 --> 00:02:20,742
+The Home page listens on slash home, because Orchard Core also listens on
+
+33
+00:02:20,742 --> 00:02:24,173
+the root path, for example to show the Setup screen.
+
+34
+00:02:28,373 --> 00:02:34,510
+In Program.cs, the project template leaves a commented block for the Orchard Specific Pipeline.
+
+35
+00:02:34,510 --> 00:02:38,217
+Fill it with two callbacks of the Orchard Core builder.
+
+36
+00:02:38,217 --> 00:02:43,443
+ConfigureServices registers Razor components with interactive server components.
+
+37
+00:02:44,193 --> 00:02:49,431
+Configure adds static files and anti-forgery, and maps the App component with the
+
+38
+00:02:49,431 --> 00:02:51,658
+interactive server render mode.
+
+39
+00:02:51,658 --> 00:02:56,475
+Orchard Core runs both callbacks for each tenant, so every tenant gets its
+
+40
+00:02:56,475 --> 00:02:58,883
+own Blazor services and endpoints.
+
+41
+00:03:03,083 --> 00:03:06,182
+The Content page takes an alias from its route.
+
+42
+00:03:06,182 --> 00:03:14,718
+It injects IContentHandleManager, IContentManager, and ISiteService, which come with one package reference to OrchardCore.ContentManagement.
+
+43
+00:03:14,718 --> 00:03:18,343
+The site service gives the site name for the page title.
+
+44
+00:03:19,093 --> 00:03:24,679
+The handle manager turns the alias prefix and the alias into a content item ID.
+
+45
+00:03:24,679 --> 00:03:30,593
+The content manager loads the published version, and the Body aspect gives its HTML.
+
+46
+00:03:30,593 --> 00:03:35,193
+An unknown alias gives no item, and the aspect call then throws.
+
+47
+00:03:35,943 --> 00:03:40,961
+The markup shows Loading until the item exists, then the title and the body.
+
+48
+00:03:40,961 --> 00:03:45,917
+MarkupString writes the HTML as it is, and the Markdown body part sanitizes
+
+49
+00:03:45,917 --> 00:03:49,283
+it by default, through its Sanitize Html setting.
+
+50
+00:03:50,033 --> 00:03:55,555
+StreamRendering sends the page right away, with Loading, and streams the content in
+
+51
+00:03:55,555 --> 00:03:57,354
+when the work finishes.
+
+52
+00:03:57,354 --> 00:04:03,063
+The guide adds a half-second delay in OnInitializedAsync to mimic a long-running task.
+
+53
+00:04:04,763 --> 00:04:05,963
+Let's run the site.
+
+54
+00:04:05,963 --> 00:04:09,515
+The sidebar and the Home page come from the Razor class library, and
+
+55
+00:04:09,515 --> 00:04:11,003
+Orchard Core serves them.
+
+56
+00:04:11,505 --> 00:04:14,214
+Select Orchard Core in the sidebar.
+
+57
+00:04:14,214 --> 00:04:18,640
+The page loads the item by its alias, and shows its title and
+
+58
+00:04:18,640 --> 00:04:21,085
+its Markdown, rendered as HTML.
+
+59
+00:04:25,385 --> 00:04:30,457
+A tenant is a separate site with its own content, served by the same application.
+
+60
+00:04:30,457 --> 00:04:35,238
+Tenants are managed from the default tenant, where the feature is available.
+
+61
+00:04:35,238 --> 00:04:40,485
+Under Tools, Features, search for Tenants, and select Enable on the Tenants feature.
+
+62
+00:04:40,943 --> 00:04:44,658
+Under Multi-Tenancy, Tenants, select Add Tenant.
+
+63
+00:04:44,658 --> 00:04:49,267
+Enter FirstTenant as the Name and tenant01 as the Url Prefix.
+
+64
+00:04:49,267 --> 00:04:54,083
+Choose Headless site as the Recipe, so the tenant is set up like
+
+65
+00:04:54,083 --> 00:04:56,973
+the default site, and select Create.
+
+66
+00:04:58,953 --> 00:05:03,417
+The tenant is listed as Uninitialized, with a Setup button.
+
+67
+00:05:03,417 --> 00:05:08,363
+Setup opens the Setup screen of the tenant, at its own URL prefix.
+
+68
+00:05:09,963 --> 00:05:13,401
+On the Setup screen, the recipe is already chosen:
+
+69
+00:05:13,401 --> 00:05:18,068
+enter a site name and the super user details, and select Finish Setup.
+
+70
+00:05:18,068 --> 00:05:21,998
+Then sign in to the tenant, and use JSON Import to add the
+
+71
+00:05:21,998 --> 00:05:25,253
+Markdown Page type and an item for this tenant.
+
+72
+00:05:29,453 --> 00:05:32,757
+A tenant with a URL prefix lives under a subpath.
+
+73
+00:05:32,757 --> 00:05:36,783
+Orchard Core adds the prefix to the PathBase of each request.
+
+74
+00:05:36,783 --> 00:05:41,470
+With the default base tag, relative links resolve from the root, so they
+
+75
+00:05:41,470 --> 00:05:43,513
+point at the default tenant.
+
+76
+00:05:44,263 --> 00:05:51,594
+So App.razor injects NavigationManager, and sets the base tag to its BaseUri in OnParametersSet.
+
+77
+00:05:51,594 --> 00:05:57,633
+For a tenant, the base URI includes the URL prefix, and every link follows it.
+
+78
+00:05:58,383 --> 00:06:00,734
+Other sources give the prefix too:
+
+79
+00:06:00,734 --> 00:06:06,553
+the PathBase of the HttpContext request, the RequestUrlPrefix of the tenant's shell settings,
+
+80
+00:06:06,553 --> 00:06:11,255
+through ShellScope, and the Base url site setting, read with ISiteService.
+
+81
+00:06:11,255 --> 00:06:14,723
+That setting is empty unless you set it in the admin.
+
+82
+00:06:16,423 --> 00:06:18,733
+Browse to the tenant at tenant01.
+
+83
+00:06:18,733 --> 00:06:24,123
+Its pages come from the same library, and the sidebar links keep the tenant's prefix.
+
+84
+00:06:24,596 --> 00:06:26,067
+Select Orchard Core.
+
+85
+00:06:26,067 --> 00:06:30,196
+The page shows the item of this tenant, with its own title, because
+
+86
+00:06:30,196 --> 00:06:32,516
+each tenant stores its own content.
+
+87
+00:06:36,716 --> 00:06:39,072
+The pages are rendered on the server.
+
+88
+00:06:39,072 --> 00:06:42,635
+To react to a click, a component declares an event handler.
+
+89
+00:06:42,635 --> 00:06:48,116
+This InteractiveButton shows a button, and a Clicked method that stores the time of the click.
+
+90
+00:06:48,866 --> 00:06:54,816
+The page sets the InteractiveServer render mode on the component, which makes it interactive.
+
+91
+00:06:54,816 --> 00:07:00,886
+That mode relies on the interactive server services and render mode that Program.cs registered.
+
+92
+00:07:02,586 --> 00:07:04,741
+Let's open the page and select Test.
+
+93
+00:07:04,741 --> 00:07:09,256
+The text shows the time of the click, so the component reacted through the server.
+
+94
+00:07:10,856 --> 00:07:15,417
+To see the connection, open the network tab of the browser's developer tools,
+
+95
+00:07:15,417 --> 00:07:18,055
+filter on WebSocket, and refresh the page.
+
+96
+00:07:18,055 --> 00:07:22,616
+The connection to the server appears, and each click sends a message over it.
+
+97
+00:07:24,616 --> 00:07:27,862
+That is a Blazor Server front end for Orchard Core:
+
+98
+00:07:27,862 --> 00:07:32,988
+components in a Razor class library, content read through Orchard Core services, and
+
+99
+00:07:32,988 --> 00:07:35,665
+one application that serves every tenant.
+
+100
+00:07:35,665 --> 00:07:37,146
+Thanks for watching.
+
