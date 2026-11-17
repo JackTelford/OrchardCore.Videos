@@ -1,0 +1,185 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.286
+Text messages from an Orchard Core site go through an SMS provider.
+
+00:00:05.286 --> 00:00:10.101
+In this video, you enable the SMS feature, choose the default provider, send
+
+00:00:10.101 --> 00:00:15.210
+a test message, and set up the Twilio and Azure Communication Services providers.
+
+00:00:19.810 --> 00:00:25.005
+The SMS feature sends text messages through a provider, the service that delivers them.
+
+00:00:25.005 --> 00:00:29.697
+Log writes messages to the application log, Twilio sends them through a Twilio
+
+00:00:29.697 --> 00:00:33.830
+account, and Azure Communication Services through an Azure resource.
+
+00:00:34.580 --> 00:00:36.701
+One provider is the default.
+
+00:00:36.701 --> 00:00:43.000
+Workflow tasks, notifications, and two-factor sign-in codes that go by text message all use it.
+
+00:00:43.750 --> 00:00:49.336
+You choose the default under Settings, Communication, SMS, and check a provider under
+
+00:00:49.336 --> 00:00:51.239
+Tools, Testing, SMS Test.
+
+00:00:51.239 --> 00:00:57.807
+Both pages need the Manage SMS Settings permission, and the settings page also needs Manage settings.
+
+00:00:57.807 --> 00:00:59.710
+Administrators have both.
+
+00:01:03.961 --> 00:01:07.223
+Let's open Tools, Features, and search for SMS.
+
+00:01:07.223 --> 00:01:12.701
+The SMS feature is in the Communication category, with an Enable button on its row.
+
+00:01:13.172 --> 00:01:14.381
+Select Enable.
+
+00:01:14.381 --> 00:01:19.155
+A message confirms that the feature was enabled, and the admin menu gains
+
+00:01:19.155 --> 00:01:21.572
+SMS under Settings, Communication.
+
+00:01:25.778 --> 00:01:28.399
+Open Settings, Communication, SMS.
+
+00:01:28.399 --> 00:01:32.462
+The Providers tab has one setting, Default SMS provider.
+
+00:01:32.462 --> 00:01:36.198
+Its list holds only the providers that are enabled.
+
+00:01:36.651 --> 00:01:40.522
+The list shows only Log, because no other provider is enabled.
+
+00:01:40.522 --> 00:01:45.020
+The site offers Log only in a development environment, and it writes each
+
+00:01:45.020 --> 00:01:48.379
+message to the application log instead of sending it.
+
+00:01:48.379 --> 00:01:49.631
+Let's select it.
+
+00:01:50.091 --> 00:01:51.045
+Select Save.
+
+00:01:51.045 --> 00:01:54.911
+The page confirms that the site settings were updated successfully.
+
+00:01:59.112 --> 00:02:01.251
+Open Tools, Testing, SMS Test.
+
+00:02:01.251 --> 00:02:05.589
+A test goes through the provider you pick in the Provider list, not
+
+00:02:05.589 --> 00:02:09.452
+through the default one, and Phone Number is the recipient.
+
+00:02:09.914 --> 00:02:13.929
+Select Log, then enter a phone number with its country code, as the
+
+00:02:13.929 --> 00:02:15.689
+hint under the field says.
+
+00:02:15.689 --> 00:02:17.284
+This number is made up.
+
+00:02:17.752 --> 00:02:18.701
+Select Send.
+
+00:02:18.701 --> 00:02:22.708
+The page reports that the test SMS message has been successfully sent.
+
+00:02:22.708 --> 00:02:27.031
+With the Log provider, that means the message was written to the application
+
+00:02:27.031 --> 00:02:28.982
+log, and nothing was delivered.
+
+00:02:33.185 --> 00:02:38.132
+To use Twilio, open the SMS settings again and select the Twilio tab.
+
+00:02:38.132 --> 00:02:44.465
+Select Enable Twilio Provider, and Twilio Account Info appears with three required fields.
+
+00:02:44.929 --> 00:02:49.427
+Phone Number is the number that sends the messages, with its country code.
+
+00:02:49.427 --> 00:02:53.699
+Account SID and Auth Token are the details of your Twilio account, and
+
+00:02:53.699 --> 00:02:55.836
+the token is hidden as you type.
+
+00:02:55.836 --> 00:02:57.579
+These values are made up.
+
+00:02:58.033 --> 00:03:01.113
+Select Save, and the page confirms the update.
+
+00:03:01.113 --> 00:03:05.260
+The Auth Token field is empty again, but the text inside it says
+
+00:03:05.260 --> 00:03:07.334
+the value is securely stored:
+
+00:03:07.334 --> 00:03:11.303
+enter a new value to update it, or leave it blank to keep it.
+
+00:03:11.760 --> 00:03:14.197
+Let's send a test message with Twilio.
+
+00:03:14.197 --> 00:03:17.909
+The values are made up, so the page reports that the test SMS
+
+00:03:17.909 --> 00:03:19.516
+message failed to send.
+
+00:03:19.516 --> 00:03:23.450
+With real values, success means that Twilio accepted the message.
+
+00:03:27.684 --> 00:03:31.527
+Azure Communication Services has a feature of its own.
+
+00:03:31.527 --> 00:03:37.228
+In Tools, Features, let's enable Azure Communication Services SMS, which adds a tab
+
+00:03:37.228 --> 00:03:38.894
+to the SMS settings.
+
+00:03:39.379 --> 00:03:44.179
+On the Azure Communication Services tab, select Enable, enter the Phone Number that
+
+00:03:44.179 --> 00:03:49.087
+sends the messages and the Connection String of your Azure resource, and select Save.
+
+00:03:49.087 --> 00:03:50.759
+These values are made up.
+
+00:03:53.553 --> 00:03:58.794
+Azure joins Twilio and Log in the Default SMS provider list on the Providers tab.
+
+00:03:58.794 --> 00:04:03.613
+To send the site's messages through one of them, select it there and save.
+
+00:04:05.613 --> 00:04:09.980
+Once a default provider is chosen, the features that send text messages use
+
+00:04:09.980 --> 00:04:13.862
+it, and the SMS Test page checks a provider before you rely on it.
+
+00:04:13.862 --> 00:04:15.263
+Thanks for watching.
+
