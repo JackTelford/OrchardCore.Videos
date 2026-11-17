@@ -1,0 +1,352 @@
+1
+00:00:01,000 --> 00:00:05,761
+Orchard Core stores most of its data as JSON documents, and an index
+
+2
+00:00:05,761 --> 00:00:07,948
+is what lets you query them.
+
+3
+00:00:07,948 --> 00:00:12,967
+In this video, you define a YesSql index, register it, create its table,
+
+4
+00:00:12,967 --> 00:00:15,090
+and query it with ISession.
+
+5
+00:00:19,690 --> 00:00:24,490
+Orchard Core does not use an ORM such as Entity Framework.
+
+6
+00:00:24,490 --> 00:00:31,540
+Content items, users, settings, and workflows are saved with YesSql, a document database
+
+7
+00:00:31,540 --> 00:00:34,765
+interface over a relational database:
+
+8
+00:00:34,765 --> 00:00:38,290
+SQL Server, SQLite, MySQL, or PostgreSQL.
+
+9
+00:00:39,040 --> 00:00:44,380
+YesSql serializes an object to JSON and stores it as a row of a document table.
+
+10
+00:00:44,380 --> 00:00:48,401
+There is no schema to migrate, so adding a part or a field
+
+11
+00:00:48,401 --> 00:00:52,170
+to a content type never requires a database migration.
+
+12
+00:00:52,920 --> 00:00:57,360
+The limit is that SQL cannot query inside a JSON document efficiently.
+
+13
+00:00:57,360 --> 00:00:58,821
+An index solves it:
+
+14
+00:00:58,821 --> 00:01:03,086
+a plain class with the properties you want to query, kept by YesSql
+
+15
+00:01:03,086 --> 00:01:04,780
+in a regular SQL table.
+
+16
+00:01:05,530 --> 00:01:11,230
+When a document is created, updated, or deleted, YesSql recomputes its index rows
+
+17
+00:01:11,230 --> 00:01:13,195
+in the same transaction.
+
+18
+00:01:13,195 --> 00:01:16,602
+A property you query must be part of an index.
+
+19
+00:01:16,602 --> 00:01:19,550
+Everything else stays only in the JSON.
+
+20
+00:01:23,750 --> 00:01:27,254
+A map index is a class that inherits from MapIndex.
+
+21
+00:01:27,254 --> 00:01:30,329
+Its properties are the columns you query on.
+
+22
+00:01:30,329 --> 00:01:35,370
+ProductIndex has a Sku, a Price, and the Published flag of the content item.
+
+23
+00:01:36,120 --> 00:01:40,239
+An IndexProvider describes how to map a document type to index rows.
+
+24
+00:01:40,239 --> 00:01:44,693
+In Describe, For names the index, When selects the content items that have
+
+25
+00:01:44,693 --> 00:01:47,810
+a ProductPart, and Map builds a row from the part.
+
+26
+00:01:48,560 --> 00:01:53,189
+Each version of a content item is its own document, so ProductIndex has
+
+27
+00:01:53,189 --> 00:01:54,992
+a row for every version.
+
+28
+00:01:54,992 --> 00:01:59,020
+The Published flag lets a query choose the published version.
+
+29
+00:01:59,770 --> 00:02:03,664
+Map can return null, and the document then has no row.
+
+30
+00:02:03,664 --> 00:02:07,233
+AliasPartIndex does this when the alias is empty.
+
+31
+00:02:07,233 --> 00:02:12,750
+It is a map index too, with rows only for content items that have an AliasPart.
+
+32
+00:02:16,950 --> 00:02:22,801
+In the Startup class of your module, AddIndexProvider registers the provider as a singleton.
+
+33
+00:02:22,801 --> 00:02:31,040
+A provider that needs scoped services implements IScopedIndexProvider, and AddScopedIndexProvider registers it at the session level.
+
+34
+00:02:31,790 --> 00:02:35,024
+The index table comes from a data migration.
+
+35
+00:02:35,024 --> 00:02:39,357
+CreateMapIndexTableAsync declares a column for each property.
+
+36
+00:02:39,357 --> 00:02:45,372
+The documentation on data migrations advises setting the length of every string column,
+
+37
+00:02:45,372 --> 00:02:46,860
+as Sku does here.
+
+38
+00:02:47,610 --> 00:02:53,714
+AlterIndexTableAsync with CreateIndex adds a database index on DocumentId and the columns you
+
+39
+00:02:53,714 --> 00:02:56,612
+filter on, which speeds up those queries.
+
+40
+00:02:56,612 --> 00:03:00,374
+Orchard Core runs the migration when the tenant starts.
+
+41
+00:03:00,374 --> 00:03:03,210
+A separate video covers data migrations.
+
+42
+00:03:07,410 --> 00:03:08,690
+Inject ISession and call Query with the document type and the index type.
+
+43
+00:03:08,690 --> 00:03:09,970
+The predicate filters the index table with SQL, and YesSql then loads and
+
+44
+00:03:09,970 --> 00:03:10,650
+deserializes the matching documents.
+
+45
+00:03:11,400 --> 00:03:13,608
+The session is a unit of work:
+
+46
+00:03:13,608 --> 00:03:19,678
+SaveAsync and Delete are buffered, and SaveChangesAsync runs the commands in one transaction.
+
+47
+00:03:19,678 --> 00:03:23,848
+Orchard Core calls it when the shell scope of the tenant ends.
+
+48
+00:03:23,848 --> 00:03:27,650
+A session from any other scope is not committed for you.
+
+49
+00:03:28,400 --> 00:03:31,548
+To combine indexes, call With on the query.
+
+50
+00:03:31,548 --> 00:03:39,130
+Orchard Core's user picker filters users through UserByRoleNameIndex and UserIndex, and takes 50 of the matches.
+
+51
+00:03:39,880 --> 00:03:45,611
+For content items, prefer IContentManager, which handles loading, versions, and handlers.
+
+52
+00:03:45,611 --> 00:03:49,170
+Use ISession when you need to query your own indexes.
+
+53
+00:03:53,370 --> 00:03:58,195
+A reduce index aggregates a group of documents, like a SQL GROUP BY.
+
+54
+00:03:58,195 --> 00:04:01,782
+UserByRoleNameIndex holds a RoleName and a Count.
+
+55
+00:04:01,782 --> 00:04:05,955
+Map emits a row for each role of a user, and Group chooses
+
+56
+00:04:05,955 --> 00:04:07,650
+RoleName as the key.
+
+57
+00:04:08,400 --> 00:04:11,838
+Reduce adds the counts of a group into one row.
+
+58
+00:04:11,838 --> 00:04:17,677
+Delete subtracts the counts of the removed rows, and returns null when none is left.
+
+59
+00:04:17,677 --> 00:04:21,050
+CreateReduceIndexTableAsync creates its table.
+
+60
+00:04:25,301 --> 00:04:29,674
+The SQL Queries feature adds Run SQL Query, under Search, Queries.
+
+61
+00:04:29,674 --> 00:04:33,925
+It runs SQL against the database of the site, and adds the table
+
+62
+00:04:33,925 --> 00:04:36,051
+prefix of the tenant for you.
+
+63
+00:04:36,538 --> 00:04:39,863
+A link on this page queries all content items.
+
+64
+00:04:39,863 --> 00:04:45,169
+It selects every row of ContentItemIndex, the table that YesSql keeps in step
+
+65
+00:04:45,169 --> 00:04:47,598
+with the content item documents.
+
+66
+00:04:48,074 --> 00:04:50,547
+Each result is a row of the index.
+
+67
+00:04:50,547 --> 00:04:56,112
+It holds the columns of ContentItemIndex, including a DocumentId that points back to
+
+68
+00:04:56,112 --> 00:04:58,894
+the document the row was computed from.
+
+69
+00:04:59,384 --> 00:05:02,879
+A reduce index row does not point to one document:
+
+70
+00:05:02,879 --> 00:05:05,125
+it aggregates a group of them.
+
+71
+00:05:05,125 --> 00:05:10,804
+In UserByRoleNameIndex, each row is a role, with the Count of the users that have it.
+
+72
+00:05:15,004 --> 00:05:18,326
+A map index can hold several records for a document.
+
+73
+00:05:18,326 --> 00:05:22,450
+A query that joins it must then group its matches by document, and
+
+74
+00:05:22,450 --> 00:05:25,944
+a page has to read every match before it can be sorted.
+
+75
+00:05:26,694 --> 00:05:32,579
+SingleRecordPerDocument declares that the map returns at most one record per document.
+
+76
+00:05:32,579 --> 00:05:37,120
+A query that joins only such indexes is not grouped, and saving a
+
+77
+00:05:37,120 --> 00:05:40,254
+document throws if the map returns several.
+
+78
+00:05:41,004 --> 00:05:46,835
+ExclusiveToDocumentType declares that only documents of the provider's type have records in the
+
+79
+00:05:46,835 --> 00:05:51,568
+index, so a count reads the index tables without joining the document table.
+
+80
+00:05:51,568 --> 00:05:53,704
+ContentItemIndex declares both.
+
+81
+00:05:54,454 --> 00:05:59,843
+NoIndexOptimizations opts a query out of these optimizations, as Orchard Core does for
+
+82
+00:05:59,843 --> 00:06:02,303
+a text search in the content picker.
+
+83
+00:06:02,303 --> 00:06:07,633
+SkipDeduplication skips the grouping when a query joins an index with several records
+
+84
+00:06:07,633 --> 00:06:09,214
+but matches only one.
+
+85
+00:06:11,214 --> 00:06:13,064
+That's a YesSql index:
+
+86
+00:06:13,064 --> 00:06:17,357
+a class, a provider, a table, and a query through ISession.
+
+87
+00:06:17,357 --> 00:06:22,047
+The documentation page, How YesSql works, goes through each step.
+
+88
+00:06:22,047 --> 00:06:23,764
+Thanks for watching.
+
