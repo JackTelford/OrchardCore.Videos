@@ -1,0 +1,212 @@
+1
+00:00:01,000 --> 00:00:04,696
+When someone types the address of your site, the home page is the
+
+2
+00:00:04,696 --> 00:00:06,102
+first thing they see.
+
+3
+00:00:06,102 --> 00:00:09,694
+In this video, you choose which page that is, and you change it
+
+4
+00:00:09,694 --> 00:00:11,100
+whenever you need to.
+
+5
+00:00:15,700 --> 00:00:19,091
+The home page is the page a visitor sees at the address of
+
+6
+00:00:19,091 --> 00:00:21,157
+your site, with nothing after it.
+
+7
+00:00:21,157 --> 00:00:25,660
+The Home Route feature sends every visit to that address to the page you chose.
+
+8
+00:00:26,410 --> 00:00:31,035
+The Autoroute feature gives content items their own address, called a permalink.
+
+9
+00:00:31,035 --> 00:00:34,638
+It also adds a Set as homepage checkbox to the editor, so you
+
+10
+00:00:34,638 --> 00:00:37,380
+choose the home page from the content itself.
+
+11
+00:00:38,130 --> 00:00:43,221
+A content type, such as Article, defines what an item contains and is built from parts.
+
+12
+00:00:43,221 --> 00:00:47,163
+A type offers the checkbox when it has the Autoroute part and that
+
+13
+00:00:47,163 --> 00:00:50,119
+part's Show homepage options setting is checked.
+
+14
+00:00:50,119 --> 00:00:53,130
+Your role also needs the Set homepage permission.
+
+15
+00:00:57,316 --> 00:01:00,684
+Let's open Tools, Features, and search for Home Route.
+
+16
+00:01:00,684 --> 00:01:05,343
+This feature, in the Infrastructure category, opens the page you chose as the
+
+17
+00:01:05,343 --> 00:01:08,936
+home page whenever someone visits the address of the site.
+
+18
+00:01:09,418 --> 00:01:13,066
+Autoroute, in the Navigation category, depends on Home Route.
+
+19
+00:01:13,066 --> 00:01:16,932
+Both are enabled on this site, and Autoroute is the one that adds
+
+20
+00:01:16,932 --> 00:01:18,728
+the checkbox to the editor.
+
+21
+00:01:22,933 --> 00:01:25,945
+Only some content types offer the checkbox.
+
+22
+00:01:25,945 --> 00:01:31,233
+Let's open Design, Content Definition, Content Types, and edit the Article type.
+
+23
+00:01:31,686 --> 00:01:34,904
+Among its parts, Autoroute has its own Edit button.
+
+24
+00:01:34,904 --> 00:01:38,406
+The settings of this part include Show homepage options.
+
+25
+00:01:38,869 --> 00:01:42,230
+Show homepage options is already checked for Article.
+
+26
+00:01:42,230 --> 00:01:47,357
+Its hint says the checkbox is only visible to users with the appropriate permission.
+
+27
+00:01:47,357 --> 00:01:50,889
+A separate video covers the other settings of this part.
+
+28
+00:01:55,118 --> 00:01:57,533
+On this site, the home page is the Blog.
+
+29
+00:01:57,533 --> 00:02:00,158
+Let's make an article the home page instead.
+
+30
+00:02:00,611 --> 00:02:07,431
+Let's open Content, Content Items, and edit the article called Welcome to Juniper Lane Studio.
+
+31
+00:02:07,896 --> 00:02:12,669
+Under the Permalink field, the editor shows the Set as homepage checkbox.
+
+32
+00:02:12,669 --> 00:02:16,656
+Its hint says the change applies once the item is published.
+
+33
+00:02:17,145 --> 00:02:20,220
+Let's check Set as homepage, and select Publish.
+
+34
+00:02:20,220 --> 00:02:23,695
+A message confirms that the Article has been published.
+
+35
+00:02:24,156 --> 00:02:26,291
+Let's visit the address of the site.
+
+36
+00:02:26,291 --> 00:02:28,476
+The home page is the Welcome article.
+
+37
+00:02:28,936 --> 00:02:32,802
+In the editor of the article, a note replaces the checkbox:
+
+38
+00:02:32,802 --> 00:02:35,656
+This content item is the current homepage.
+
+39
+00:02:39,911 --> 00:02:43,660
+To choose another page, edit that item the same way.
+
+40
+00:02:43,660 --> 00:02:48,121
+Let's open the Blog, check Set as homepage, and select Publish.
+
+41
+00:02:48,578 --> 00:02:52,318
+At the address of the site, the Blog is the home page again.
+
+42
+00:02:52,318 --> 00:02:56,908
+A site has one home page, so the Welcome article no longer holds that role.
+
+43
+00:02:57,371 --> 00:03:01,785
+In the editor of the Welcome article, the Set as homepage checkbox is
+
+44
+00:03:01,785 --> 00:03:04,021
+back, ready for the next change.
+
+45
+00:03:08,253 --> 00:03:11,789
+The checkbox also needs the Set homepage permission.
+
+46
+00:03:11,789 --> 00:03:14,655
+The Administrator role has it by default.
+
+47
+00:03:14,655 --> 00:03:18,983
+For another role, open Access Control, Roles, and edit that role.
+
+48
+00:03:19,485 --> 00:03:23,812
+Let's edit the Editor role and search the permissions for homepage.
+
+49
+00:03:23,812 --> 00:03:29,205
+Set homepage is listed under Autoroute, and the Allow checkbox grants it to the role.
+
+50
+00:03:31,205 --> 00:03:34,061
+Choosing the home page takes one checkbox:
+
+51
+00:03:34,061 --> 00:03:39,296
+Set as homepage, in the editor of the content item that visitors should see first.
+
+52
+00:03:39,296 --> 00:03:43,818
+Home Route opens that page for every visit to the address of the site.
+
+53
+00:03:43,818 --> 00:03:45,365
+Thanks for watching.
+
