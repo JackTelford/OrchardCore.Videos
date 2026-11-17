@@ -1,0 +1,332 @@
+1
+00:00:01,000 --> 00:00:05,056
+Orchard Core modules send messages through three services:
+
+2
+00:00:05,056 --> 00:00:07,338
+email, SMS, and notifications.
+
+3
+00:00:07,338 --> 00:00:11,837
+In this video, you inject each service in your own module, send a
+
+4
+00:00:11,837 --> 00:00:16,020
+message, check the result, and register a notification type.
+
+5
+00:00:20,620 --> 00:00:25,841
+The Email module provides I Email Service, the SMS module provides I SMS
+
+6
+00:00:25,841 --> 00:00:30,928
+Service, and the Notifications module provides I Notification Service.
+
+7
+00:00:30,928 --> 00:00:34,610
+You inject the one you need, and call Send Async.
+
+8
+00:00:35,360 --> 00:00:37,464
+Email and SMS return a Result.
+
+9
+00:00:37,464 --> 00:00:40,738
+Check Succeeded, and read Errors when it is false.
+
+10
+00:00:40,738 --> 00:00:46,057
+A notification returns a Notification Send Result, which counts the methods that sent
+
+11
+00:00:46,057 --> 00:00:48,220
+it and the methods that failed.
+
+12
+00:00:48,970 --> 00:00:53,949
+Declare the features your module uses in its manifest, and the Features page
+
+13
+00:00:53,949 --> 00:00:56,681
+enables them together with your module.
+
+14
+00:00:56,681 --> 00:01:03,420
+Email Notifications and SMS Notifications are separate features, and each one adds a notification method.
+
+15
+00:01:07,620 --> 00:01:11,434
+Inject I Email Service in the class that sends the message.
+
+16
+00:01:11,434 --> 00:01:16,069
+The Email module registers it, so the constructor is all your code needs.
+
+17
+00:01:16,069 --> 00:01:19,120
+The site settings select the default provider.
+
+18
+00:01:19,870 --> 00:01:22,159
+Create a Mail Message.
+
+19
+00:01:22,159 --> 00:01:29,025
+To, Cc, and Bcc take one or more addresses, separated by commas or semicolons.
+
+20
+00:01:29,025 --> 00:01:33,930
+Set a Subject, and an Html Body, a Text Body, or both.
+
+21
+00:01:34,680 --> 00:01:38,384
+Send Async returns a Result, so check Succeeded.
+
+22
+00:01:38,384 --> 00:01:41,676
+The service validates every address first.
+
+23
+00:01:41,676 --> 00:01:46,545
+It requires at least one recipient in To, Cc, or Bcc, and reports
+
+24
+00:01:46,545 --> 00:01:49,220
+problems as errors in the result.
+
+25
+00:01:49,970 --> 00:01:55,283
+Pass the technical name of a provider, such as SMTP, to skip the default provider.
+
+26
+00:01:55,283 --> 00:01:58,603
+A name that no provider uses throws an exception.
+
+27
+00:01:58,603 --> 00:02:02,950
+A shorter overload takes the recipient, the subject, and the body.
+
+28
+00:02:07,150 --> 00:02:09,287
+I SMS Service works the same way.
+
+29
+00:02:09,287 --> 00:02:13,561
+Create an SMS Message with the phone number in To, including the country
+
+30
+00:02:13,561 --> 00:02:15,370
+code, and the text in Body.
+
+31
+00:02:15,370 --> 00:02:16,630
+From is optional:
+
+32
+00:02:16,630 --> 00:02:19,370
+the provider uses its own number when empty.
+
+33
+00:02:20,120 --> 00:02:22,655
+I SMS Service has no provider argument.
+
+34
+00:02:22,655 --> 00:02:26,543
+It uses the default SMS provider that the site settings select.
+
+35
+00:02:26,543 --> 00:02:29,980
+A shorter overload takes the phone number and the text.
+
+36
+00:02:30,730 --> 00:02:32,810
+Providers validate differently.
+
+37
+00:02:32,810 --> 00:02:37,981
+The Azure Communication Services provider returns a failed result for a missing number
+
+38
+00:02:37,981 --> 00:02:41,297
+or body, but the Twilio provider throws an exception.
+
+39
+00:02:41,297 --> 00:02:44,220
+Check the number and the body before you send.
+
+40
+00:02:44,970 --> 00:02:49,573
+While you develop, the Log provider writes each message to the application log
+
+41
+00:02:49,573 --> 00:02:51,107
+instead of sending it.
+
+42
+00:02:51,107 --> 00:02:55,491
+It is registered only in the Development environment, and you select it as
+
+43
+00:02:55,491 --> 00:02:57,190
+the default SMS provider.
+
+44
+00:03:01,390 --> 00:03:05,910
+A notification is stored in the notification center of a user, then sent
+
+45
+00:03:05,910 --> 00:03:09,098
+with each notification method that user receives.
+
+46
+00:03:09,098 --> 00:03:13,270
+Inject I Notification Service, and pass the user as a User object.
+
+47
+00:03:14,020 --> 00:03:16,473
+Build a Notification Message.
+
+48
+00:03:16,473 --> 00:03:21,378
+The Subject is plain text, and the Summary can hold Html markup.
+
+49
+00:03:21,378 --> 00:03:26,214
+Email and SMS send the Text Body, and email sends the Html Body
+
+50
+00:03:26,214 --> 00:03:31,540
+instead when Is Html Preferred is true and the Html Body is not empty.
+
+51
+00:03:32,290 --> 00:03:39,401
+Send Async returns a Notification Send Result, whose Notification property is the stored notification.
+
+52
+00:03:39,401 --> 00:03:45,458
+Status is Success, Partially Successful, Failed, or None when no method was available.
+
+53
+00:03:45,458 --> 00:03:47,960
+Errors says why a method failed.
+
+54
+00:03:48,710 --> 00:03:53,593
+Which methods run depends on the enabled features and the preferences of the user.
+
+55
+00:03:53,593 --> 00:03:57,810
+A method that cannot reach the user, such as email without an address,
+
+56
+00:03:57,810 --> 00:04:01,860
+fails alone, and the notification stays in the notification center.
+
+57
+00:04:02,610 --> 00:04:05,486
+Do not confuse notifications with I Notifier.
+
+58
+00:04:05,486 --> 00:04:09,434
+I Notifier shows a short message in the page the user sees next,
+
+59
+00:04:09,434 --> 00:04:11,803
+such as a confirmation after a save.
+
+60
+00:04:11,803 --> 00:04:14,510
+It is not kept in the notification center.
+
+61
+00:04:18,710 --> 00:04:21,690
+A type names the notifications of your module.
+
+62
+00:04:21,690 --> 00:04:27,363
+Register it in your startup with Add Notification Type, a technical name, and a display name.
+
+63
+00:04:27,363 --> 00:04:31,890
+Keep the technical name in a constant, since each notification stores it.
+
+64
+00:04:32,640 --> 00:04:38,325
+The display name labels the notifications and fills the Type filter of the notification center.
+
+65
+00:04:38,325 --> 00:04:42,828
+It also appears in the preferences of each user when a notification method
+
+66
+00:04:42,828 --> 00:04:47,500
+is enabled, and Disabled Methods turns a method off by default for this type.
+
+67
+00:04:48,250 --> 00:04:52,834
+On the message, set the Type, a Reference Id for the record the
+
+68
+00:04:52,834 --> 00:04:57,817
+notification is about, and a Url that opens when the user selects it.
+
+69
+00:04:57,817 --> 00:05:02,600
+The type is limited to 64 characters, and the reference id to 255.
+
+70
+00:05:03,350 --> 00:05:06,999
+When the record changes, inject I Notification Manager.
+
+71
+00:05:06,999 --> 00:05:11,425
+Delete, mark as read, or list the notifications with a filter on the
+
+72
+00:05:11,425 --> 00:05:13,997
+user, the type, and the reference id.
+
+73
+00:05:13,997 --> 00:05:16,330
+At least one of them is required.
+
+74
+00:05:20,530 --> 00:05:25,006
+To add a provider, implement I Email Provider or I SMS Provider, and
+
+75
+00:05:25,006 --> 00:05:27,425
+register it with a technical name.
+
+76
+00:05:27,425 --> 00:05:32,626
+An enabled provider appears in the default provider list, and email also accepts
+
+77
+00:05:32,626 --> 00:05:34,380
+its name in Send Async.
+
+78
+00:05:35,130 --> 00:05:39,499
+A notification method implements I Notification Method Provider.
+
+79
+00:05:39,499 --> 00:05:44,867
+Register it as a scoped service, and it appears in the preferences of each user.
+
+80
+00:05:44,867 --> 00:05:50,110
+To follow each email as it is sent or fails, implement I Email Service Events.
+
+81
+00:05:52,110 --> 00:05:55,851
+That's how a module sends email, SMS, and notifications:
+
+82
+00:05:55,851 --> 00:06:01,101
+inject the service, check its result, and register a type for your notifications.
+
+83
+00:06:01,101 --> 00:06:02,670
+Thanks for watching.
+
