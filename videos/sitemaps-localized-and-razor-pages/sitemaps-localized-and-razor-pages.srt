@@ -1,0 +1,228 @@
+1
+00:00:01,000 --> 00:00:04,862
+Search engines read a sitemap to find the pages of your site.
+
+2
+00:00:04,862 --> 00:00:07,860
+This video covers two features for developers:
+
+3
+00:00:07,860 --> 00:00:13,798
+Localized Content Item Sitemaps, which adds language alternates, and Sitemaps for Decoupled Razor
+
+4
+00:00:13,798 --> 00:00:17,660
+Pages, which lists content that your own Razor Pages display.
+
+5
+00:00:22,260 --> 00:00:27,836
+For each content item, the Sitemap Content Types source of a sitemap needs two answers:
+
+6
+00:00:27,836 --> 00:00:30,774
+is its type routeable, and what is its URL.
+
+7
+00:00:30,774 --> 00:00:35,750
+Providers give both answers, and a coordinator asks them one after the other.
+
+8
+00:00:36,500 --> 00:00:39,879
+A provider implements IRouteableContentTypeProvider.
+
+9
+00:00:39,879 --> 00:00:44,539
+It lists the content types it can route, and returns the route of an item.
+
+10
+00:00:44,539 --> 00:00:50,830
+Autoroute supplies one for types with an Autoroute part, and the Razor Pages feature supplies another.
+
+11
+00:00:55,030 --> 00:00:58,586
+The feature depends on Content Localization and Sitemaps.
+
+12
+00:00:58,586 --> 00:01:00,392
+It registers two services:
+
+13
+00:01:00,392 --> 00:01:05,247
+a metadata provider that adds the language alternates, and a query provider that
+
+14
+00:01:05,247 --> 00:01:10,440
+replaces the default IContentItemsQueryProvider, which selects the items of a sitemap.
+
+15
+00:01:11,190 --> 00:01:17,826
+For each URL, the metadata provider looks among the queried items for the same localization set.
+
+16
+00:01:17,826 --> 00:01:23,096
+It skips a localization excluded by its Sitemap Part, and adds an alternate
+
+17
+00:01:23,096 --> 00:01:27,130
+link with the culture as hreflang and the route as href.
+
+18
+00:01:28,830 --> 00:01:38,751
+In Tools, Features, the feature is listed as Localized Content Item Sitemaps, with the identifier OrchardCore.ContentLocalization.Sitemaps.
+
+19
+00:01:38,751 --> 00:01:43,540
+Searching for sitemaps lists it with the other sitemap features.
+
+20
+00:01:45,240 --> 00:01:46,841
+Let's open the sitemap.
+
+21
+00:01:46,841 --> 00:01:50,429
+Each address starts with the Base url of the site settings.
+
+22
+00:01:50,429 --> 00:01:54,900
+The English article lists an alternate link for English and one for French,
+
+23
+00:01:54,900 --> 00:01:57,550
+and the French article lists the same two.
+
+24
+00:01:58,023 --> 00:02:03,671
+The root element declares the xhtml namespace, because the metadata provider supplies it.
+
+25
+00:02:03,671 --> 00:02:08,487
+The links are written once per localization, so a page and its translations
+
+26
+00:02:08,487 --> 00:02:10,093
+all list one another.
+
+27
+00:02:14,293 --> 00:02:18,739
+The Autoroute provider only knows content types with an Autoroute part.
+
+28
+00:02:18,739 --> 00:02:23,473
+A decoupled site routes its content with Razor Pages instead, so those items
+
+29
+00:02:23,473 --> 00:02:25,436
+have no URL for the sitemap.
+
+30
+00:02:25,436 --> 00:02:29,363
+The Sitemaps for Decoupled Razor Pages feature fills that gap.
+
+31
+00:02:30,113 --> 00:02:33,793
+Configure SitemapsRazorPagesOptions in Program.cs.
+
+32
+00:02:33,793 --> 00:02:39,773
+ConfigureContentType takes the name of the content type, and PageName names the Razor
+
+33
+00:02:39,773 --> 00:02:41,613
+Page that displays it.
+
+34
+00:02:42,363 --> 00:02:45,462
+RouteValues builds the link to the page for each item.
+
+35
+00:02:45,462 --> 00:02:48,717
+It must include the area of the page, which for a page of
+
+36
+00:02:48,717 --> 00:02:52,333
+your web project is the name of the project, and the values that
+
+37
+00:02:52,333 --> 00:02:54,193
+the route of the page expects.
+
+38
+00:02:54,943 --> 00:02:59,679
+For each item, the provider calls RouteValues and asks the URL helper for
+
+39
+00:02:59,679 --> 00:03:01,297
+the link to the page.
+
+40
+00:03:01,297 --> 00:03:07,233
+A content type without an option returns no route, so the coordinator asks the next provider.
+
+41
+00:03:08,933 --> 00:03:14,593
+Let's open the Sitemap Content Types source of the sitemap, and clear Index All Content Types.
+
+42
+00:03:14,593 --> 00:03:19,404
+Select Content Types lists Decoupled Blog Post next to Article, although it has
+
+43
+00:03:19,404 --> 00:03:23,933
+no Autoroute part, because the Razor Pages provider lists it as routeable.
+
+44
+00:03:25,633 --> 00:03:29,830
+In the sitemap, each post has the address that the Razor Pages provider
+
+45
+00:03:29,830 --> 00:03:32,665
+built from the page name and the route values.
+
+46
+00:03:32,665 --> 00:03:36,863
+The type has no Localization part, so a post carries no language links.
+
+47
+00:03:41,063 --> 00:03:45,572
+To route content another way, write your own provider and register it in
+
+48
+00:03:45,572 --> 00:03:49,272
+the services of your module, as the Autoroute module does.
+
+49
+00:03:49,272 --> 00:03:52,683
+The Sitemap Content Types source uses every provider.
+
+50
+00:03:53,433 --> 00:03:57,060
+List the types you route, and return the route of an item, starting
+
+51
+00:03:57,060 --> 00:03:58,253
+with the Base url.
+
+52
+00:03:58,253 --> 00:04:01,731
+Return null for a type you do not route, so that the coordinator
+
+53
+00:04:01,731 --> 00:04:03,173
+asks the next provider.
+
+54
+00:04:05,173 --> 00:04:09,025
+Both features build on the extension points of the Sitemaps module:
+
+55
+00:04:09,025 --> 00:04:14,250
+providers that route content types, query providers that select items, and metadata providers
+
+56
+00:04:14,250 --> 00:04:15,780
+that complete each URL.
+
+57
+00:04:15,780 --> 00:04:17,153
+Thanks for watching.
+
