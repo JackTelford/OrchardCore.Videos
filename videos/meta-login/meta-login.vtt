@@ -1,0 +1,215 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.894
+Meta Login lets people sign in to your Orchard Core site with their Facebook account.
+
+00:00:05.894 --> 00:00:09.658
+In this video, you see what you need from Meta, the two settings
+
+00:00:09.658 --> 00:00:13.530
+pages in the admin, and the button that appears on the login page.
+
+00:00:18.130 --> 00:00:20.937
+Meta Login hands the sign-in over to Meta.
+
+00:00:20.937 --> 00:00:25.030
+A visitor selects a button on your login page, signs in at Meta,
+
+00:00:25.030 --> 00:00:29.650
+and Meta sends the visitor back to your site, which finishes the sign-in.
+
+00:00:30.400 --> 00:00:34.156
+Create an app for your site on the Meta for developers site.
+
+00:00:34.156 --> 00:00:38.481
+Under Basic Settings, the app shows the two values Orchard Core needs:
+
+00:00:38.481 --> 00:00:41.440
+the application ID and the application secret.
+
+00:00:42.190 --> 00:00:46.363
+In the same app, enable the Meta Login product for web apps, and
+
+00:00:46.363 --> 00:00:48.212
+set a valid redirect URI.
+
+00:00:48.212 --> 00:00:53.160
+Its path must match the callback path of your site, which is /signin-facebook
+
+00:00:53.160 --> 00:00:54.770
+unless you change it.
+
+00:00:59.002 --> 00:01:02.552
+Let's open Tools, Features, and search for Meta Login.
+
+00:01:02.552 --> 00:01:06.693
+The result sits in the Meta category, and its description reads:
+
+00:01:06.693 --> 00:01:08.822
+Authenticates users from Meta.
+
+00:01:09.280 --> 00:01:13.791
+Meta Login depends on Meta Core Components, which holds the app settings, and
+
+00:01:13.791 --> 00:01:18.084
+on External Authentication, which handles the visitor's return from Meta.
+
+00:01:18.084 --> 00:01:20.800
+Select Enable, and both are enabled with it.
+
+00:01:21.269 --> 00:01:22.691
+A message reads:
+
+00:01:22.691 --> 00:01:25.340
+The feature Meta Login was enabled.
+
+00:01:25.340 --> 00:01:29.089
+The Meta Login row offers Disable instead of Enable.
+
+00:01:33.303 --> 00:01:36.147
+Let's open Settings, Integrations, Meta App.
+
+00:01:36.147 --> 00:01:40.697
+The heading is Meta Integration, and a notice warns that the website might
+
+00:01:40.697 --> 00:01:43.313
+be restarted when you save the settings.
+
+00:01:43.777 --> 00:01:46.224
+Application Identifier is required.
+
+00:01:46.224 --> 00:01:49.209
+Enter the application ID from your Meta app.
+
+00:01:49.209 --> 00:01:51.477
+This video uses a made-up value.
+
+00:01:52.024 --> 00:01:54.710
+Secret Key takes the application secret.
+
+00:01:54.710 --> 00:01:58.854
+On a site without the Secrets feature, it is a password field, so
+
+00:01:58.854 --> 00:02:03.524
+the value is hidden as you type, and the site stores it in protected form.
+
+00:02:04.008 --> 00:02:09.288
+The other fields configure the Meta JavaScript SDK for the front end of your site.
+
+00:02:09.288 --> 00:02:13.368
+Meta Login does not use them, so you can leave their defaults.
+
+00:02:13.819 --> 00:02:14.867
+Select Save.
+
+00:02:14.867 --> 00:02:19.234
+A message confirms the update, and the Secret Key field says that its
+
+00:02:19.234 --> 00:02:21.039
+value is securely stored.
+
+00:02:25.257 --> 00:02:28.721
+Let's open Settings, Security, Authentication, Meta.
+
+00:02:28.721 --> 00:02:32.901
+The heading is Login Settings, and a note at the bottom links to
+
+00:02:32.901 --> 00:02:38.097
+the Meta Integration settings, which must be configured to use the Login Feature.
+
+00:02:38.559 --> 00:02:43.385
+CallbackPath is the path where Meta returns the visitor to your site.
+
+00:02:43.385 --> 00:02:48.725
+Leave it empty to use the default, /signin-facebook, and give Meta a redirect
+
+00:02:48.725 --> 00:02:51.299
+URI that matches the path you use.
+
+00:02:51.761 --> 00:02:55.509
+Store tokens keeps the external authentication tokens for reuse.
+
+00:02:55.509 --> 00:02:58.937
+Leave it cleared unless something on your site needs them.
+
+00:02:58.937 --> 00:03:03.061
+With both options at their defaults, you do not need to save this page.
+
+00:03:07.340 --> 00:03:09.886
+Let's open the login page of the site.
+
+00:03:09.886 --> 00:03:13.416
+Beside the usual Log in form, a second section appears:
+
+00:03:13.416 --> 00:03:15.500
+Use another service to log in.
+
+00:03:15.957 --> 00:03:19.617
+It holds one button, labeled Facebook rather than Meta.
+
+00:03:19.617 --> 00:03:24.237
+The button appears once the application ID and the secret key are saved
+
+00:03:24.237 --> 00:03:26.157
+and Meta Login is enabled.
+
+00:03:26.643 --> 00:03:30.417
+Selecting the button sends the browser to Meta to sign in.
+
+00:03:30.417 --> 00:03:34.663
+This video stops here, because the application values are made up.
+
+00:03:38.863 --> 00:03:42.957
+When Meta sends a visitor back, the site looks for a user already
+
+00:03:42.957 --> 00:03:44.918
+linked to that Meta account.
+
+00:03:44.918 --> 00:03:48.724
+If it finds one, it signs that user in, unless a login check
+
+00:03:48.724 --> 00:03:51.203
+stops it, such as a disabled account.
+
+00:03:51.953 --> 00:03:55.939
+If no user is linked, but the email address from Meta matches a
+
+00:03:55.939 --> 00:03:58.885
+local user, the site shows Link your account.
+
+00:03:58.885 --> 00:04:03.333
+The visitor enters the local password, and the two accounts are linked.
+
+00:04:04.083 --> 00:04:07.015
+Otherwise the site registers the visitor.
+
+00:04:07.015 --> 00:04:12.255
+A registration page asks for details, unless the three options that begin with
+
+00:04:12.255 --> 00:04:14.127
+Do not are all selected.
+
+00:04:14.127 --> 00:04:19.803
+If Disable new external registration is selected, the visitor sees a message instead.
+
+00:04:20.553 --> 00:04:24.809
+A signed-in user can link a Facebook account, or remove a linked one,
+
+00:04:24.809 --> 00:04:27.306
+from External Logins in the user menu.
+
+00:04:27.306 --> 00:04:32.073
+The options shared by every external provider are covered in a separate video.
+
+00:04:34.073 --> 00:04:38.037
+With the feature enabled and the application ID and secret key of a
+
+00:04:38.037 --> 00:04:42.272
+Meta app saved under Meta App, the login page offers Facebook as another
+
+00:04:42.272 --> 00:04:43.412
+way to sign in.
+
+00:04:43.412 --> 00:04:44.823
+Thanks for watching.
+
