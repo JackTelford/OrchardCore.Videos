@@ -1,0 +1,396 @@
+1
+00:00:01,000 --> 00:00:04,718
+Someone asks for the content of your site in a spreadsheet.
+
+2
+00:00:04,718 --> 00:00:08,894
+In this video, we design a data pipeline that reads the blog posts,
+
+3
+00:00:08,894 --> 00:00:13,070
+writes them to a CSV file, and saves the file in the media library.
+
+4
+00:00:17,670 --> 00:00:20,034
+A data pipeline is a chain of steps.
+
+5
+00:00:20,034 --> 00:00:23,974
+A source step reads rows from a data source, such as the content
+
+6
+00:00:23,974 --> 00:00:27,970
+items of a content type, the users of the site, or a saved query.
+
+7
+00:00:28,720 --> 00:00:31,027
+Transform steps change the rows:
+
+8
+00:00:31,027 --> 00:00:33,759
+they filter, sort, group and join them.
+
+9
+00:00:33,759 --> 00:00:39,830
+This pipeline needs none, because the source itself can choose its fields and filter its rows.
+
+10
+00:00:40,580 --> 00:00:45,039
+A file step writes the rows to a CSV file, an Excel workbook,
+
+11
+00:00:45,039 --> 00:00:46,703
+JSON or JSON Lines.
+
+12
+00:00:46,703 --> 00:00:49,897
+A destination step then delivers the file.
+
+13
+00:00:49,897 --> 00:00:54,090
+Here, it saves the file in a folder of the media library.
+
+14
+00:00:58,301 --> 00:01:03,641
+With the Data Pipelines feature enabled, the Tools menu has a Data Pipelines entry.
+
+15
+00:01:03,641 --> 00:01:08,561
+Pipelines lists the pipelines of the site, and Run History lists their runs.
+
+16
+00:01:08,561 --> 00:01:10,181
+Let's open Pipelines.
+
+17
+00:01:10,693 --> 00:01:12,332
+The list is empty.
+
+18
+00:01:12,332 --> 00:01:18,273
+Let's select Add Pipeline, type Blog posts export as the name, and select Create.
+
+19
+00:01:18,723 --> 00:01:20,262
+The designer opens.
+
+20
+00:01:20,262 --> 00:01:26,050
+The toolbox on the left groups the steps as Sources, Transforms, Files and Destinations.
+
+21
+00:01:26,050 --> 00:01:30,421
+The canvas holds the pipeline, and the panel on the right has the
+
+22
+00:01:30,421 --> 00:01:32,883
+Pipeline, Issues and History tabs.
+
+23
+00:01:33,341 --> 00:01:38,312
+The Pipeline tab also holds a description, which the list of pipelines shows.
+
+24
+00:01:38,312 --> 00:01:40,828
+Let's write what this pipeline does.
+
+25
+00:01:40,828 --> 00:01:45,561
+The designer saves a draft as you work, and the toolbar says Draft saved.
+
+26
+00:01:49,861 --> 00:01:52,358
+Every pipeline starts with a source.
+
+27
+00:01:52,358 --> 00:01:54,558
+Let's select Add a data source.
+
+28
+00:01:54,558 --> 00:01:58,720
+The dialog lists the data sets you may read, and its left column
+
+29
+00:01:58,720 --> 00:02:00,742
+filters them by data source:
+
+30
+00:02:00,742 --> 00:02:03,061
+Content items, Queries and Users.
+
+31
+00:02:03,517 --> 00:02:05,829
+Each content type is a data set.
+
+32
+00:02:05,829 --> 00:02:09,417
+Let's type blog in the Filter box, and add Blog Post.
+
+33
+00:02:09,886 --> 00:02:14,374
+The Read a data source step appears on the canvas, and its settings
+
+34
+00:02:14,374 --> 00:02:16,219
+open in the panel below.
+
+35
+00:02:16,219 --> 00:02:19,416
+The data set is Blog Post, from Content items.
+
+36
+00:02:19,880 --> 00:02:22,617
+Fields to read chooses the columns.
+
+37
+00:02:22,617 --> 00:02:26,155
+Let's keep Title, Subtitle, Author and Created.
+
+38
+00:02:26,155 --> 00:02:29,960
+With no field selected, the step reads every field.
+
+39
+00:02:30,435 --> 00:02:32,950
+Filters keep only the rows that match.
+
+40
+00:02:32,950 --> 00:02:36,494
+Let's select Add a filter, and set Published equals Yes.
+
+41
+00:02:36,494 --> 00:02:39,295
+Posts that are drafts stay out of the file.
+
+42
+00:02:39,748 --> 00:02:43,763
+In the Data tab, Preview runs the pipeline up to this step on
+
+43
+00:02:43,763 --> 00:02:45,381
+a sample of the rows.
+
+44
+00:02:45,381 --> 00:02:48,558
+It shows six rows, one for each published post.
+
+45
+00:02:52,807 --> 00:02:55,932
+Select the Rows port at the right edge of the step.
+
+46
+00:02:55,932 --> 00:02:58,508
+A list offers the steps that accept rows.
+
+47
+00:02:58,508 --> 00:03:00,317
+Let's choose Create a file.
+
+48
+00:03:00,798 --> 00:03:04,175
+The Format is CSV, comma separated values, by default.
+
+49
+00:03:04,175 --> 00:03:08,847
+The File name is written without its extension, so let's type blog-posts, and
+
+50
+00:03:08,847 --> 00:03:11,548
+the step adds the extension of the format.
+
+51
+00:03:12,115 --> 00:03:14,535
+Start with a row of column names is on.
+
+52
+00:03:14,535 --> 00:03:18,406
+Let's also turn on Name the columns with the labels of the fields,
+
+53
+00:03:18,406 --> 00:03:22,815
+so the first row uses labels such as Title and Created, not technical names.
+
+54
+00:03:23,388 --> 00:03:26,304
+A comma separates the values by default.
+
+55
+00:03:26,304 --> 00:03:30,488
+For tab-separated values, type tab in the CSV delimiter box.
+
+56
+00:03:30,950 --> 00:03:34,458
+The Data tab previews the file this step creates:
+
+57
+00:03:34,458 --> 00:03:37,775
+its name, its type, its size and its six rows.
+
+58
+00:03:37,775 --> 00:03:39,880
+A preview delivers nothing.
+
+59
+00:03:44,180 --> 00:03:48,023
+Select the Files port of the file step, and the list offers the
+
+60
+00:03:48,023 --> 00:03:49,694
+steps that accept files.
+
+61
+00:03:49,694 --> 00:03:52,200
+Let's choose Save to the media library.
+
+62
+00:03:52,691 --> 00:03:56,647
+Folder is the folder of the media library that receives the file.
+
+63
+00:03:56,647 --> 00:03:58,039
+Let's type exports.
+
+64
+00:03:58,039 --> 00:04:00,491
+Left empty, the file goes to the root.
+
+65
+00:04:00,983 --> 00:04:03,799
+The warning is about other formats.
+
+66
+00:04:03,799 --> 00:04:09,431
+By default, the media library accepts CSV files and Excel workbooks, but not
+
+67
+00:04:09,431 --> 00:04:11,903
+JSON, JSON Lines or zip files.
+
+68
+00:04:12,368 --> 00:04:17,582
+Replace a file with the same name is on, so each run overwrites the previous file.
+
+69
+00:04:17,582 --> 00:04:21,848
+Without it, the file is saved under a name with a number appended.
+
+70
+00:04:22,308 --> 00:04:25,654
+The Data tab shows what the step would receive:
+
+71
+00:04:25,654 --> 00:04:26,601
+the file.
+
+72
+00:04:26,601 --> 00:04:32,218
+Destinations are never executed by a preview, so the media library stays untouched.
+
+73
+00:04:36,518 --> 00:04:40,098
+The Issues tab lists what must be fixed before the pipeline can be
+
+74
+00:04:40,098 --> 00:04:42,186
+published, and what deserves a look.
+
+75
+00:04:42,186 --> 00:04:43,528
+It reports no issues.
+
+76
+00:04:43,997 --> 00:04:47,604
+A run executes the published version, never the draft.
+
+77
+00:04:47,604 --> 00:04:49,227
+Let's select Publish.
+
+78
+00:04:49,227 --> 00:04:53,617
+A message confirms it, and the toolbar shows the published version.
+
+79
+00:04:57,817 --> 00:05:02,111
+A published pipeline runs with the access of the user who published it.
+
+80
+00:05:02,111 --> 00:05:05,737
+It reads and writes only what that user may read and write.
+
+81
+00:05:06,487 --> 00:05:13,174
+That is why the Manage data pipelines permission, which covers designing and publishing, is security critical.
+
+82
+00:05:13,174 --> 00:05:19,227
+Run data pipelines allows running them, and View data pipelines and their runs allows viewing them.
+
+83
+00:05:23,470 --> 00:05:24,807
+Let's select Run.
+
+84
+00:05:24,807 --> 00:05:28,239
+The run is queued, and it executes in the background.
+
+85
+00:05:28,239 --> 00:05:30,740
+The History tab opens and follows it.
+
+86
+00:05:31,209 --> 00:05:34,237
+When the run ends, its status is Succeeded.
+
+87
+00:05:34,237 --> 00:05:39,058
+The read step shows six rows, and the last two steps show one file each.
+
+88
+00:05:39,058 --> 00:05:42,149
+Deliveries records where the file was saved.
+
+89
+00:05:42,614 --> 00:05:45,081
+Select Open the run for the full page.
+
+90
+00:05:45,081 --> 00:05:49,119
+It lists the status of each step, what was delivered, and the log.
+
+91
+00:05:49,119 --> 00:05:52,764
+The Run History link there lists the runs of this pipeline.
+
+92
+00:05:57,028 --> 00:06:00,886
+Let's open Media, Library, and select the exports folder.
+
+93
+00:06:00,886 --> 00:06:04,008
+The CSV file is here, with the name we typed.
+
+94
+00:06:04,494 --> 00:06:06,544
+Each run replaces the file.
+
+95
+00:06:06,544 --> 00:06:11,454
+Open it in a spreadsheet application, and each published post is one row.
+
+96
+00:06:13,454 --> 00:06:17,738
+A source, a file and a destination are enough to export content in
+
+97
+00:06:17,738 --> 00:06:19,642
+a format other tools read.
+
+98
+00:06:19,642 --> 00:06:25,057
+Separate videos cover running pipelines on a schedule, and delivering files by email.
+
+99
+00:06:25,057 --> 00:06:26,604
+Thanks for watching.
+
