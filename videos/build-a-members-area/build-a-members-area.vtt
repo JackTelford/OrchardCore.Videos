@@ -1,0 +1,308 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.202
+A members area is a part of your site that only approved, signed-in people can open.
+
+00:00:06.202 --> 00:00:10.537
+In this video, you let visitors register, give them a role, and limit
+
+00:00:10.537 --> 00:00:12.040
+a page to that role.
+
+00:00:16.640 --> 00:00:18.708
+A members area has three parts:
+
+00:00:18.708 --> 00:00:23.628
+registration lets visitors create their own accounts, a role groups the people who
+
+00:00:23.628 --> 00:00:28.380
+share the same access, and permissions decide which content each role can open.
+
+00:00:29.130 --> 00:00:31.555
+Two of the system roles matter here.
+
+00:00:31.555 --> 00:00:37.618
+Anonymous covers visitors who are not signed in, and its permissions also apply to signed-in users.
+
+00:00:37.618 --> 00:00:40.390
+Authenticated covers every signed-in user.
+
+00:00:41.140 --> 00:00:46.194
+Both roles start with the permission View all content, so every page is public.
+
+00:00:46.194 --> 00:00:50.712
+To limit a page, you remove that permission from both roles, and grant
+
+00:00:50.712 --> 00:00:54.220
+the page's type to a role you create, such as Member.
+
+00:00:54.970 --> 00:00:57.007
+The video follows four stages.
+
+00:00:57.007 --> 00:01:01.478
+You enable registration, make a content type securable so it gets its own
+
+00:01:01.478 --> 00:01:06.119
+permissions, create the Member role, close that type to visitors, and try it
+
+00:01:06.119 --> 00:01:07.930
+with a page and a sign-up.
+
+00:01:12.230 --> 00:01:14.861
+Registration is a feature of its own.
+
+00:01:14.861 --> 00:01:19.940
+Open Tools, Features, search for registration, and enable Users Registration.
+
+00:01:19.940 --> 00:01:24.040
+The page reloads with a message that the feature was enabled.
+
+00:01:24.498 --> 00:01:29.792
+The feature adds a page under Settings, Security, Registration, with three options.
+
+00:01:29.792 --> 00:01:34.730
+Users must verify their email address makes people confirm it by email, which
+
+00:01:34.730 --> 00:01:37.288
+requires a configured email provider.
+
+00:01:37.760 --> 00:01:41.936
+Use site theme for registration page shows the form in your site theme.
+
+00:01:41.936 --> 00:01:46.383
+Users must be approved before they can log in leaves each registered account
+
+00:01:46.383 --> 00:01:49.040
+disabled until an administrator enables it.
+
+00:01:49.495 --> 00:01:53.500
+For a members area, approval keeps the decision in your hands.
+
+00:01:53.500 --> 00:01:58.271
+Let's select Users must be approved before they can log in, and click Save.
+
+00:01:58.271 --> 00:02:02.335
+Visitors reach the Register page from a link on the login page.
+
+00:02:06.635 --> 00:02:10.175
+A page is members-only because of its content type.
+
+00:02:10.175 --> 00:02:16.821
+Under Design, Content Definition, Content Types, this site has two page types, Page and Members Page.
+
+00:02:16.821 --> 00:02:18.685
+Let's edit Members Page.
+
+00:02:19.195 --> 00:02:23.781
+Securable determines whether a content type can have custom permissions.
+
+00:02:23.781 --> 00:02:25.663
+Page is already securable.
+
+00:02:25.663 --> 00:02:29.603
+Members Page is not, so it has no permissions of its own, and
+
+00:02:29.603 --> 00:02:33.425
+View all content opens its pages for everyone who holds it.
+
+00:02:33.879 --> 00:02:36.260
+Let's select Securable, and click Save.
+
+00:02:36.260 --> 00:02:40.440
+The content type gets its own permissions, which the role editor lists in
+
+00:02:40.440 --> 00:02:41.869
+a group of their own.
+
+00:02:46.169 --> 00:02:50.192
+Open Access Control, Roles, which lists the roles of the site.
+
+00:02:50.192 --> 00:02:54.097
+The system roles carry a System badge and cannot be deleted.
+
+00:02:54.097 --> 00:02:55.339
+Click Add Role.
+
+00:02:55.798 --> 00:03:00.478
+Enter Member as the name, add a description, and click Save & Configure.
+
+00:03:00.478 --> 00:03:03.598
+The role is created, and its permissions open.
+
+00:03:04.052 --> 00:03:06.709
+The editor lists every permission as a row.
+
+00:03:06.709 --> 00:03:10.939
+Search for Members Page, and the permissions of the type appear in their
+
+00:03:10.939 --> 00:03:14.302
+own group, with an Allow column and an Effective column.
+
+00:03:14.772 --> 00:03:19.243
+Select View Members Page by others in the Allow column, and click Save.
+
+00:03:19.243 --> 00:03:21.682
+Members can open pages of this type.
+
+00:03:25.982 --> 00:03:31.657
+Anonymous and Authenticated both hold View all content, which opens every page.
+
+00:03:31.657 --> 00:03:34.862
+Edit Anonymous first, and search for view.
+
+00:03:35.313 --> 00:03:40.325
+A type that is not securable has no permission of its own to grant back.
+
+00:03:40.325 --> 00:03:45.787
+Make every type that visitors read securable before you clear View all content.
+
+00:03:45.787 --> 00:03:47.843
+Page is already securable.
+
+00:03:48.341 --> 00:03:52.961
+Clear View all content, select View Page by others so visitors keep the
+
+00:03:52.961 --> 00:03:55.061
+public pages, and click Save.
+
+00:03:55.546 --> 00:03:59.788
+Edit Authenticated next, clear View all content, and click Save.
+
+00:03:59.788 --> 00:04:03.304
+Signed-in users keep reading Page through Anonymous.
+
+00:04:03.304 --> 00:04:08.395
+Members Page opens for the Member role, for administrators, and for roles that
+
+00:04:08.395 --> 00:04:11.486
+hold Edit content for others, such as Editor.
+
+00:04:15.786 --> 00:04:19.764
+Pages of this type are created like any other content.
+
+00:04:19.764 --> 00:04:24.406
+Open Content, Content Items, click New, and choose Members Page.
+
+00:04:24.867 --> 00:04:28.944
+Enter the title Members Lounge, and the permalink members-lounge.
+
+00:04:28.944 --> 00:04:33.077
+Add a line of text for members, so the page has something to show.
+
+00:04:33.531 --> 00:04:34.655
+Click Publish.
+
+00:04:34.655 --> 00:04:36.960
+The page has no setting of its own.
+
+00:04:36.960 --> 00:04:41.064
+It is members-only because its type is, and every page of that type
+
+00:04:41.064 --> 00:04:43.031
+follows the same permissions.
+
+00:04:47.331 --> 00:04:52.119
+A visitor reads the public home page, which anyone can open without signing
+
+00:04:52.119 --> 00:04:55.251
+in, and follows its link to the members lounge.
+
+00:04:55.714 --> 00:05:00.097
+The visitor cannot view the page, so the site asks them to log in.
+
+00:05:00.097 --> 00:05:03.324
+The login page links to Register as a new user.
+
+00:05:03.777 --> 00:05:08.927
+The form asks for a username, an email address, and a password, entered twice.
+
+00:05:08.927 --> 00:05:13.157
+Let's enter the details of a future member, and click Register.
+
+00:05:17.633 --> 00:05:23.523
+Because approval is on, the account is created but cannot be used until it is approved.
+
+00:05:23.523 --> 00:05:26.943
+A page titled User Registration Pending says so.
+
+00:05:31.243 --> 00:05:34.768
+As an administrator, open Access Control, Users.
+
+00:05:34.768 --> 00:05:38.033
+The account is listed with a Disabled badge.
+
+00:05:38.491 --> 00:05:42.940
+Open the account's Actions menu, choose Enable, and confirm with Ok.
+
+00:05:42.940 --> 00:05:49.071
+The list reloads with a message that the account was enabled, and the Disabled badge disappears.
+
+00:05:49.524 --> 00:05:55.497
+Registration does not assign a role, so click Edit, select Member under Roles, and click Save.
+
+00:05:55.497 --> 00:05:58.184
+The account belongs to the Member role.
+
+00:05:58.635 --> 00:06:02.165
+Other sign-ups wait in the same list until you enable them.
+
+00:06:02.165 --> 00:06:06.075
+To stop someone signing in later, choose Disable in the same menu.
+
+00:06:10.375 --> 00:06:14.558
+The member opens the members lounge from the home page, and logs in
+
+00:06:14.558 --> 00:06:17.995
+with the username and password chosen at registration.
+
+00:06:17.995 --> 00:06:22.235
+The login page asks for a username or email address, and a password.
+
+00:06:22.689 --> 00:06:26.663
+After logging in, the site returns to the page the member asked for,
+
+00:06:26.663 --> 00:06:28.542
+and the members lounge opens.
+
+00:06:28.542 --> 00:06:31.979
+Visitors who are not signed in are sent to the login page.
+
+00:06:32.430 --> 00:06:35.277
+The public pages stay open to everyone.
+
+00:06:35.277 --> 00:06:40.210
+Only the pages of a type that you secure and restrict ask for a sign-in.
+
+00:06:44.410 --> 00:06:48.370
+Visitors can also sign in with an account they already have.
+
+00:06:48.370 --> 00:06:54.130
+Google Authentication, GitHub Authentication and Meta Login are features of their own, and
+
+00:06:54.130 --> 00:06:57.970
+each adds a page under Settings, Security, Authentication.
+
+00:06:57.970 --> 00:07:00.610
+A separate video covers each provider.
+
+00:07:01.360 --> 00:07:08.587
+With Users Registration enabled, accounts created this way follow the same Registration settings, including approval.
+
+00:07:08.587 --> 00:07:13.522
+Once one of these features is enabled, the Registration page gains an External
+
+00:07:13.522 --> 00:07:19.220
+Authentication tab, where Disable new external registration closes sign-ups from providers.
+
+00:07:21.220 --> 00:07:26.005
+A members area combines registration, a role, and a securable content type.
+
+00:07:26.005 --> 00:07:31.026
+Remove View all content from Anonymous and Authenticated, grant the type to the
+
+00:07:31.026 --> 00:07:33.625
+Member role, and approve each sign-up.
+
+00:07:33.625 --> 00:07:35.160
+Thanks for watching.
+
