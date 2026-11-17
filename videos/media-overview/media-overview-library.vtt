@@ -1,0 +1,50 @@
+WEBVTT
+
+00:00:03.230 --> 00:00:07.359
+The Library page shows the folders of the site on the left, starting
+
+00:00:07.359 --> 00:00:09.590
+with the root folder, named Files.
+
+00:00:10.076 --> 00:00:14.090
+On the right, a table lists the files of the selected folder, with
+
+00:00:14.090 --> 00:00:17.826
+their name, the date they were last modified, and their size.
+
+00:00:18.283 --> 00:00:21.697
+The toolbar above the table has a button with a grid icon.
+
+00:00:21.697 --> 00:00:25.590
+It switches the table to a grid of thumbnails, so you can recognize
+
+00:00:25.590 --> 00:00:26.923
+images at a glance.
+
+00:00:27.382 --> 00:00:29.544
+Press it again to return to the table.
+
+00:00:29.544 --> 00:00:33.722
+The search box narrows the list to the files whose name contains what you type.
+
+00:00:34.194 --> 00:00:38.593
+Upload files adds files to the selected folder, and you can also drop
+
+00:00:38.593 --> 00:00:40.118
+files onto the page.
+
+00:00:40.118 --> 00:00:44.634
+A file needs an allowed extension and must not exceed the maximum size.
+
+00:00:45.101 --> 00:00:52.081
+The menu at the end of each row offers Rename, Move, Copy, View, Download and Delete.
+
+00:00:52.548 --> 00:00:54.680
+Each folder has a menu too.
+
+00:00:54.680 --> 00:00:59.527
+Create a subfolder adds a folder inside it, and Delete is offered for
+
+00:00:59.527 --> 00:01:01.788
+every folder except the root.
+
