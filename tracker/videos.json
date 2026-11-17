@@ -2205,7 +2205,7 @@
       "src/docs/reference/modules/AdminMenu/README.md",
       "src/docs/reference/modules/Localize/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 5.2,
     "words": 782,
     "contentCommit": "",
@@ -2216,7 +2216,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: 2026-11-17 blocked: needs a theme project (MyAdminTheme) compiled into the Orchard Core source checkout and referenced from OrchardCore.Cms.Web.csproj; the shared site build C:/Code/oc-video-site must not be changed and no separate checkout/build is available in the recording batches. The two recordings (05-enable, 06-result) show that theme on the Themes page."
   },
   {
     "slug": "liquid-basics",
