@@ -1,0 +1,224 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.362
+Admin Templates lets you change how parts of the Orchard Core admin are
+
+00:00:05.362 --> 00:00:09.385
+drawn, using Liquid templates that you write in the admin itself.
+
+00:00:09.385 --> 00:00:13.691
+In this video, we enable the feature, replace the Visit Site link, and
+
+00:00:13.691 --> 00:00:16.240
+see how templates travel with a recipe.
+
+00:00:20.840 --> 00:00:22.849
+The admin is drawn by shapes.
+
+00:00:22.849 --> 00:00:27.212
+To change one, you normally override its view in a custom admin theme,
+
+00:00:27.212 --> 00:00:30.370
+which means changing code and deploying the site.
+
+00:00:31.120 --> 00:00:34.795
+The Admin Templates feature moves that change into the admin.
+
+00:00:34.795 --> 00:00:38.854
+You write a Liquid template, name it after a shape, and Orchard Core
+
+00:00:38.854 --> 00:00:42.090
+stores it in the database and uses it on admin pages.
+
+00:00:42.840 --> 00:00:47.193
+Admin Templates apply only to the admin, and the Templates feature does the
+
+00:00:47.193 --> 00:00:48.751
+same for the front end.
+
+00:00:48.751 --> 00:00:52.459
+A template wins over a view file of the same name, and deleting
+
+00:00:52.459 --> 00:00:54.340
+it brings the view file back.
+
+00:00:58.540 --> 00:01:00.847
+A template is named after a shape.
+
+00:01:00.847 --> 00:01:05.404
+The name is the shape type or an alternate, where double underscores take
+
+00:01:05.404 --> 00:01:08.173
+the place of the dash in a view file name.
+
+00:01:08.173 --> 00:01:10.250
+In Liquid, the shape is Model.
+
+00:01:11.000 --> 00:01:15.872
+The documentation overrides these admin shapes with Admin Templates.
+
+00:01:15.872 --> 00:01:22.324
+AdminBranding draws the logo and site name, VisitSiteNavbarItem the Visit Site link, Message
+
+00:01:22.324 --> 00:01:27.460
+one notification, and NotifyMessages the container of the notifications.
+
+00:01:31.693 --> 00:01:36.954
+Admin Templates is a feature of the Templates module, so it has to be enabled first.
+
+00:01:36.954 --> 00:01:40.403
+Open Tools, Features, and search for admin templates.
+
+00:01:40.859 --> 00:01:45.642
+The feature is listed under Development, with Templates as its dependency.
+
+00:01:45.642 --> 00:01:46.837
+Select Enable.
+
+00:01:46.837 --> 00:01:51.799
+A notification confirms it, and any feature it depends on is enabled with it.
+
+00:01:52.253 --> 00:01:56.143
+The Design menu has an Admin Templates entry beside Templates.
+
+00:01:56.143 --> 00:01:56.944
+Open it.
+
+00:01:56.944 --> 00:02:01.063
+The list is empty, and says there are no templates for the moment.
+
+00:02:05.260 --> 00:02:06.746
+Select Add Template.
+
+00:02:06.746 --> 00:02:10.348
+The form asks for a Name, a Description, and the Content.
+
+00:02:10.348 --> 00:02:14.520
+Unlike the form of the Templates feature, it has no Preview button.
+
+00:02:14.974 --> 00:02:16.867
+The name is the shape type.
+
+00:02:16.867 --> 00:02:21.513
+Enter VisitSiteNavbarItem, the shape of the Visit Site link in the top bar,
+
+00:02:21.513 --> 00:02:23.234
+and a short description.
+
+00:02:23.688 --> 00:02:25.940
+Content is an editor for Liquid.
+
+00:02:25.940 --> 00:02:27.600
+We enter the template:
+
+00:02:27.600 --> 00:02:32.638
+the absolute URL filter builds the link, and the t filter translates the label.
+
+00:02:33.107 --> 00:02:37.246
+It draws the same link as the original, with the words Visit Site
+
+00:02:37.246 --> 00:02:38.878
+added beside the icon.
+
+00:02:38.878 --> 00:02:44.007
+A template replaces the whole shape, so it has to draw everything the shape shows.
+
+00:02:44.476 --> 00:02:45.455
+Select Save.
+
+00:02:45.455 --> 00:02:50.023
+A notification confirms that the template has been created, and the list shows
+
+00:02:50.023 --> 00:02:53.666
+it with its description, an Edit button, and a Delete button.
+
+00:02:54.124 --> 00:02:55.606
+Look at the top bar:
+
+00:02:55.606 --> 00:02:58.685
+the Visit Site link shows its icon and its text.
+
+00:02:58.685 --> 00:03:03.074
+The template applies to every page of the admin, such as Content Items.
+
+00:03:07.291 --> 00:03:10.941
+Edit opens the same form with the saved name and Liquid.
+
+00:03:10.941 --> 00:03:14.180
+Change the text beside the icon, and select Save.
+
+00:03:14.180 --> 00:03:16.241
+The top bar shows the change.
+
+00:03:16.697 --> 00:03:18.956
+Delete asks for confirmation.
+
+00:03:18.956 --> 00:03:23.281
+Confirm it, and a notification says the template was deleted.
+
+00:03:23.281 --> 00:03:25.217
+The list is empty again.
+
+00:03:25.671 --> 00:03:31.141
+The original view was never touched, so the top bar shows the icon alone again.
+
+00:03:35.341 --> 00:03:39.141
+A recipe creates admin templates with the AdminTemplates step.
+
+00:03:39.141 --> 00:03:43.836
+Each property is a template name, holding its Description and its Content, and
+
+00:03:43.836 --> 00:03:46.741
+the content can point to a file of the recipe.
+
+00:03:47.491 --> 00:03:52.723
+In a deployment plan, the All Admin Templates step exports every admin template.
+
+00:03:52.723 --> 00:03:57.286
+With Export templates as files, each one is written to a Liquid file,
+
+00:03:57.286 --> 00:04:00.571
+and the plan's AdminTemplates step points to it.
+
+00:04:04.771 --> 00:04:08.471
+Save checks that the name and the content are filled in, and that
+
+00:04:08.471 --> 00:04:10.659
+no other template has the same name.
+
+00:04:10.659 --> 00:04:14.671
+If the Liquid cannot be parsed, the shape shows the parser's error text
+
+00:04:14.671 --> 00:04:17.901
+instead of your markup, so test each template on a page.
+
+00:04:18.651 --> 00:04:20.296
+Two permissions apply:
+
+00:04:20.296 --> 00:04:26.346
+Manage admin templates, granted to Administrator by default, and Manage Liquid templates, granted
+
+00:04:26.346 --> 00:04:28.342
+to Administrator and Editor.
+
+00:04:28.342 --> 00:04:31.631
+Both are security critical, and a user needs both.
+
+00:04:32.381 --> 00:04:35.883
+A multi-tenant host can keep the feature away from a tenant.
+
+00:04:35.883 --> 00:04:40.340
+A feature profile with an Exclude rule for the Admin Templates feature removes
+
+00:04:40.340 --> 00:04:44.001
+it from the features available to tenants that use the profile.
+
+00:04:46.001 --> 00:04:49.783
+Admin Templates keeps changes to the admin inside the admin:
+
+00:04:49.783 --> 00:04:55.742
+Liquid templates named after shapes, stored in the database, and moved between sites with recipes.
+
+00:04:55.742 --> 00:04:57.231
+Thanks for watching.
+
