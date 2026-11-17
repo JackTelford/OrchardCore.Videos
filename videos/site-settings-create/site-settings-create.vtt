@@ -1,0 +1,248 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.112
+Every Orchard Core site keeps its settings in one place, and your module
+
+00:00:05.112 --> 00:00:06.852
+can add a group of its own.
+
+00:00:06.852 --> 00:00:11.017
+In this video, we follow the Debugging group of the Settings module, from
+
+00:00:11.017 --> 00:00:14.180
+its class and editor to its permission and menu entry.
+
+00:00:18.780 --> 00:00:23.238
+The Settings module keeps one site settings document for each tenant.
+
+00:00:23.238 --> 00:00:28.232
+It holds the site name, the time zone, the page size, and a bag of properties.
+
+00:00:28.232 --> 00:00:31.620
+Each module saves a section of its own in that bag.
+
+00:00:32.370 --> 00:00:36.214
+A section is a plain class, saved under the name of the class.
+
+00:00:36.214 --> 00:00:38.249
+The admin shows it as a group:
+
+00:00:38.249 --> 00:00:42.376
+a page under Settings whose address ends with the group identifier.
+
+00:00:42.376 --> 00:00:46.050
+A display driver builds its editor and updates the section.
+
+00:00:46.800 --> 00:00:50.091
+To add a group, your module provides four things:
+
+00:00:50.091 --> 00:00:54.040
+a settings class, an editor, a permission, and a menu entry.
+
+00:00:54.040 --> 00:00:57.450
+The Debugging group has all four, so let's read it.
+
+00:00:57.450 --> 00:01:01.100
+Your module follows the same steps, with its own names.
+
+00:01:05.300 --> 00:01:09.741
+The settings class is a plain class with a parameterless constructor.
+
+00:01:09.741 --> 00:01:13.590
+DebugSettings has one property, WriteShapeDebugInformation.
+
+00:01:13.590 --> 00:01:18.860
+Its properties are saved as JSON in the site settings, under the name of the class.
+
+00:01:19.610 --> 00:01:23.759
+The editor binds its form to a view model, a separate small class.
+
+00:01:23.759 --> 00:01:27.965
+Here it matches the settings class, but a view model can hold more,
+
+00:01:27.965 --> 00:01:31.250
+such as the list of choices that a drop-down shows.
+
+00:01:35.450 --> 00:01:39.286
+A display driver builds the editor and updates the section.
+
+00:01:39.286 --> 00:01:46.130
+Derive it from SiteDisplayDriver of your settings class, and return the group identifier from SettingsGroupId.
+
+00:01:46.130 --> 00:01:49.730
+The base class ignores every request for another group.
+
+00:01:50.480 --> 00:01:54.516
+In the edit method, return null when the user lacks the permission.
+
+00:01:54.516 --> 00:01:59.381
+Otherwise create the shape DebugSettings_Edit from the view model, place it in the
+
+00:01:59.381 --> 00:02:02.698
+Content zone, and attach it to the group with OnGroup.
+
+00:02:02.698 --> 00:02:05.960
+Without OnGroup, the page of a group skips the shape.
+
+00:02:06.710 --> 00:02:09.532
+The update method checks the permission again.
+
+00:02:09.532 --> 00:02:13.440
+It binds the posted form to the view model with the prefix, copies
+
+00:02:13.440 --> 00:02:16.860
+the values into the settings, and returns the edit shape.
+
+00:02:17.610 --> 00:02:21.789
+The base class stores the section in the site settings only when the
+
+00:02:21.789 --> 00:02:23.314
+model state is valid.
+
+00:02:23.314 --> 00:02:27.888
+To reject a value, add a model error with the prefix and the property name.
+
+00:02:27.888 --> 00:02:31.050
+Nothing is saved, and the form shows your message.
+
+00:02:31.800 --> 00:02:35.632
+The view is a Razor file named after the shape type, with the
+
+00:02:35.632 --> 00:02:37.633
+underscore turned into a dot.
+
+00:02:37.633 --> 00:02:41.694
+Its input binds to the view model, and the label goes through the
+
+00:02:41.694 --> 00:02:44.210
+localizer, T, so it can be translated.
+
+00:02:48.410 --> 00:02:52.413
+In the startup class, register the driver with AddSiteDisplayDriver.
+
+00:02:52.413 --> 00:02:57.443
+Then register the permission of the group with AddSiteSettingsPermission, so a user who
+
+00:02:57.443 --> 00:03:01.662
+holds that permission can open the group without holding ManageSettings.
+
+00:03:01.662 --> 00:03:05.070
+The same class adds the permission provider and the menu.
+
+00:03:05.820 --> 00:03:11.508
+ManageDebuggingSettings names ManageSettings as the permission that implies it, so a role that
+
+00:03:11.508 --> 00:03:14.580
+holds the broader permission holds this one too.
+
+00:03:15.330 --> 00:03:19.789
+The permission provider lists the permission, so roles can receive it, and grants
+
+00:03:19.789 --> 00:03:22.146
+it to the Administrator role by default.
+
+00:03:22.146 --> 00:03:24.760
+A separate video covers permissions in depth.
+
+00:03:25.510 --> 00:03:30.666
+The menu merges items that share a caption, so your module adds its entry under Settings.
+
+00:03:30.666 --> 00:03:34.900
+The action is Index on the Admin controller of the Settings module, with
+
+00:03:34.900 --> 00:03:37.288
+the group identifier as a route value.
+
+00:03:37.288 --> 00:03:40.490
+The permission hides the entry from users without it.
+
+00:03:44.677 --> 00:03:46.730
+Let's see the result in the admin.
+
+00:03:46.730 --> 00:03:50.732
+We open Settings in the menu, and the list of groups includes Debugging,
+
+00:03:50.732 --> 00:03:52.527
+the entry from the menu code.
+
+00:03:52.990 --> 00:03:54.755
+Debugging opens the group.
+
+00:03:54.755 --> 00:03:57.514
+The page holds the one field the shape adds:
+
+00:03:57.514 --> 00:04:02.810
+a check box labeled Write shape debug information, with its hint below, and a Save button.
+
+00:04:03.274 --> 00:04:04.550
+Let's tick the box.
+
+00:04:04.550 --> 00:04:08.430
+The Settings module adds the Save button to every group, so your group
+
+00:04:08.430 --> 00:04:10.114
+needs no button of its own.
+
+00:04:10.565 --> 00:04:11.885
+Let's select Save.
+
+00:04:11.885 --> 00:04:17.273
+The controller saves the site settings, adds the message Site settings updated successfully,
+
+00:04:17.273 --> 00:04:19.362
+and redirects to the same group.
+
+00:04:19.362 --> 00:04:23.265
+The box stays ticked, because the editor reads the saved section.
+
+00:04:27.465 --> 00:04:30.446
+To read a group from code, use ISiteService.
+
+00:04:30.446 --> 00:04:37.062
+This class calls GetSettings for DebugSettings and copies the value into the options for shape rendering.
+
+00:04:37.062 --> 00:04:44.095
+Asynchronous code calls GetSettingsAsync, and both return an instance with default values when nothing is saved.
+
+00:04:44.845 --> 00:04:50.082
+When the editor saves a different value, the driver calls RequestUpdate for those options.
+
+00:04:50.082 --> 00:04:54.447
+The startup class registers a change token source for the options type, so
+
+00:04:54.447 --> 00:04:57.065
+they are built again with the saved value.
+
+00:04:57.815 --> 00:05:00.908
+In Liquid, the Site object reads the site settings.
+
+00:05:00.908 --> 00:05:05.031
+Its Properties are empty unless you list the names of your sections in
+
+00:05:05.031 --> 00:05:08.395
+the PermittedSiteProperties option of the configuration.
+
+00:05:09.145 --> 00:05:11.034
+A recipe can import a group.
+
+00:05:11.034 --> 00:05:14.978
+The Settings step saves any key it does not recognize in the same
+
+00:05:14.978 --> 00:05:18.367
+bag, so a key named after your class sets your section.
+
+00:05:18.367 --> 00:05:23.255
+AddSiteSettingsPropertyDeploymentStep registers a deployment step that exports it.
+
+00:05:25.255 --> 00:05:29.782
+A site settings group is a settings class, an editor, a permission, and
+
+00:05:29.782 --> 00:05:32.486
+a menu entry, registered in your module.
+
+00:05:32.486 --> 00:05:34.837
+Read the values with ISiteService.
+
+00:05:34.837 --> 00:05:36.365
+Thanks for watching.
+
