@@ -1,0 +1,324 @@
+1
+00:00:01,000 --> 00:00:06,755
+A module shows text in menus, forms, messages and notifications, and translators need
+
+2
+00:00:06,755 --> 00:00:09,348
+to find every one of those strings.
+
+3
+00:00:09,348 --> 00:00:16,620
+In this video, we'll declare strings with localizers, handle plurals, and extract a template for translators.
+
+4
+00:00:21,220 --> 00:00:26,266
+In Orchard Core, the English text you write in code is the key of its translation.
+
+5
+00:00:26,266 --> 00:00:30,279
+A translation is found by that text and its context, the type or
+
+6
+00:00:30,279 --> 00:00:31,885
+view that asks for it.
+
+7
+00:00:31,885 --> 00:00:35,210
+Without a translation, the text is shown as written.
+
+8
+00:00:35,960 --> 00:00:38,458
+A module registers nothing for this.
+
+9
+00:00:38,458 --> 00:00:41,968
+It asks for a localizer through dependency injection.
+
+10
+00:00:41,968 --> 00:00:47,500
+Until the Localization feature is enabled, every localizer returns its text as written.
+
+11
+00:00:51,700 --> 00:00:56,758
+In a service, a controller or a driver, inject an IStringLocalizer of your
+
+12
+00:00:56,758 --> 00:00:59,792
+own type, usually kept in a field named S.
+
+13
+00:00:59,792 --> 00:01:04,660
+Index it with the English text, and pass any format arguments after it.
+
+14
+00:01:05,410 --> 00:01:11,566
+An IHtmlLocalizer, usually named H, is for messages that carry HTML, and it
+
+15
+00:01:11,566 --> 00:01:14,226
+encodes its format arguments.
+
+16
+00:01:14,226 --> 00:01:21,370
+In Razor views, T is an IViewLocalizer, and in Liquid the t filter localizes through it.
+
+17
+00:01:25,570 --> 00:01:29,452
+The context of a localizer is the full name of its type.
+
+18
+00:01:29,452 --> 00:01:35,714
+Text from an IStringLocalizer of MyService has the context MyNamespace.MyService, which is the
+
+19
+00:01:35,714 --> 00:01:38,720
+message context of its entry in a PO file.
+
+20
+00:01:39,470 --> 00:01:43,841
+In a view, the context is the module ID, then Views, then the
+
+21
+00:01:43,841 --> 00:01:46,777
+path of the view without its extension.
+
+22
+00:01:46,777 --> 00:01:52,910
+The Welcome view in the Views folder of MyModule has the context MyModule.Views.Welcome.
+
+23
+00:01:53,660 --> 00:01:57,950
+When no entry has the context, an entry without a context is used.
+
+24
+00:01:57,950 --> 00:02:04,147
+To share one context between several types, create the localizer from the IStringLocalizerFactory,
+
+25
+00:02:04,147 --> 00:02:07,960
+with a type, or with a context name and an empty location.
+
+26
+00:02:12,160 --> 00:02:16,468
+The Plural extension takes a count, a singular form and a plural form.
+
+27
+00:02:16,468 --> 00:02:21,626
+The count fills placeholder zero, and any arguments you add start at placeholder one.
+
+28
+00:02:21,626 --> 00:02:25,650
+This call from the Features module lists the features it enabled.
+
+29
+00:02:26,400 --> 00:02:30,270
+A translation lists one string for each form of its language.
+
+30
+00:02:30,270 --> 00:02:34,428
+The Plural-Forms header of the PO file, or else the plural rule of
+
+31
+00:02:34,428 --> 00:02:37,200
+the culture, selects the form for a count.
+
+32
+00:02:37,950 --> 00:02:42,454
+Do not hardcode the number in the text, because languages count differently.
+
+33
+00:02:42,454 --> 00:02:46,409
+To show the count, put placeholder zero in both forms, so that the
+
+34
+00:02:46,409 --> 00:02:48,990
+translation decides where the count goes.
+
+35
+00:02:50,603 --> 00:02:52,971
+Orchard Core uses Plural itself.
+
+36
+00:02:52,971 --> 00:02:57,832
+On the Manage Content page, which the Content Items menu item opens, the
+
+37
+00:02:57,832 --> 00:03:03,753
+summary above the rows counts the items, and with several items it shows the plural form.
+
+38
+00:03:04,215 --> 00:03:08,585
+Let's type About in the search box, and press Enter to filter the list.
+
+39
+00:03:09,043 --> 00:03:12,717
+One item matches, so the summary shows the singular form.
+
+40
+00:03:12,717 --> 00:03:17,733
+Both counts in the summary come from Plural, with the count in placeholder zero.
+
+41
+00:03:21,933 --> 00:03:26,748
+Some text is declared where no localizer exists, such as the description of
+
+42
+00:03:26,748 --> 00:03:28,948
+a permission in a static field.
+
+43
+00:03:28,948 --> 00:03:34,179
+LocalizationSource keeps the English text together with the type that owns it, and
+
+44
+00:03:34,179 --> 00:03:36,913
+translates, formats and encodes nothing.
+
+45
+00:03:37,663 --> 00:03:40,192
+Translate it where it is displayed.
+
+46
+00:03:40,192 --> 00:03:47,162
+The Localize extension of an IStringLocalizerFactory, or of an IHtmlLocalizerFactory, creates the localizer
+
+47
+00:03:47,162 --> 00:03:51,603
+of the source's type and looks the text up in the current culture.
+
+48
+00:03:52,353 --> 00:03:58,997
+Text that several modules share, such as Settings, is declared once in CommonLocalizationSources,
+
+49
+00:03:58,997 --> 00:04:00,997
+so it is translated once.
+
+50
+00:04:00,997 --> 00:04:06,803
+A module keeps its other sources in an internal static class named after the module.
+
+51
+00:04:11,003 --> 00:04:12,996
+Translators see only the text.
+
+52
+00:04:12,996 --> 00:04:17,425
+Explain it with the Note extension, name each format argument with the Arg
+
+53
+00:04:17,425 --> 00:04:22,076
+helper, or put a comment starting with TRANSLATORS on the line above the call.
+
+54
+00:04:22,076 --> 00:04:24,733
+None of these changes anything at runtime.
+
+55
+00:04:25,483 --> 00:04:32,111
+Analyzers in the OrchardCore.Abstractions package check localizer calls as you type, and in every build.
+
+56
+00:04:32,111 --> 00:04:36,811
+A key that is not a constant, or a LocalizationSource without a context,
+
+57
+00:04:36,811 --> 00:04:39,523
+cannot be extracted, so it is reported.
+
+58
+00:04:43,723 --> 00:04:47,149
+Translators work from a template, not from your code.
+
+59
+00:04:47,149 --> 00:04:53,130
+Add the OrchardCore.Localization.Build package to each project whose strings should be extracted.
+
+60
+00:04:53,130 --> 00:04:57,833
+Referencing it only from the application does not cover the other projects.
+
+61
+00:04:58,583 --> 00:05:02,824
+A normal build only embeds the template that is already checked in.
+
+62
+00:05:02,824 --> 00:05:07,994
+To write it, run the UpdateLocalizationCatalog target on one project, or build with
+
+63
+00:05:07,994 --> 00:05:13,803
+UpdateLocalizationCatalogs set to true to update every project you build that has the package.
+
+64
+00:05:14,553 --> 00:05:19,622
+The template is a POT file named after the assembly, next to the project file.
+
+65
+00:05:19,622 --> 00:05:24,692
+Each entry has its context, its English text, your notes and format arguments,
+
+66
+00:05:24,692 --> 00:05:26,563
+and an empty translation.
+
+67
+00:05:26,563 --> 00:05:28,373
+Commit it with the code.
+
+68
+00:05:29,123 --> 00:05:36,154
+Extraction reads C# localizer calls and LocalizationSource declarations, Razor views, and Liquid files
+
+69
+00:05:36,154 --> 00:05:39,083
+where the t filter gets a literal text.
+
+70
+00:05:39,083 --> 00:05:43,835
+A call it cannot resolve is reported with an OCLOC code, instead of
+
+71
+00:05:43,835 --> 00:05:45,853
+becoming a guessed entry.
+
+72
+00:05:46,603 --> 00:05:51,249
+A helper that only forwards the keys of its callers is not a declaration.
+
+73
+00:05:51,249 --> 00:05:57,953
+Mark it with the SkipLocalizationExtraction attribute, and extraction ignores the localizer calls inside it.
+
+74
+00:05:58,703 --> 00:06:04,970
+To gather the templates for a platform such as Crowdin, build with LocalizationCatalogOutputPath
+
+75
+00:06:04,970 --> 00:06:06,445
+set to one folder.
+
+76
+00:06:06,445 --> 00:06:10,992
+Each template lands in a subfolder named after its target framework.
+
+77
+00:06:10,992 --> 00:06:17,013
+Upload them as source files, and download the translated PO files into a supported location.
+
+78
+00:06:19,013 --> 00:06:24,718
+Declare strings with localizers, plurals and sources, add notes where translators need them,
+
+79
+00:06:24,718 --> 00:06:27,047
+and extract the template for them.
+
+80
+00:06:27,047 --> 00:06:30,889
+A separate video covers installing and writing the PO files.
+
+81
+00:06:30,889 --> 00:06:32,403
+Thanks for watching.
+
