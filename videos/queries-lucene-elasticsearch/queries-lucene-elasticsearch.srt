@@ -1,0 +1,276 @@
+1
+00:00:01,000 --> 00:00:05,910
+A Lucene or Elasticsearch index answers search questions written as JSON.
+
+2
+00:00:05,910 --> 00:00:10,448
+In this video, you run one of those questions, give it a parameter,
+
+3
+00:00:10,448 --> 00:00:15,420
+save it as a named query, and see where Elasticsearch differs from Lucene.
+
+4
+00:00:20,020 --> 00:00:23,238
+You search an index by sending it a JSON query.
+
+5
+00:00:23,238 --> 00:00:28,096
+When several templates and scripts each carry a copy, every change must be
+
+6
+00:00:28,096 --> 00:00:29,736
+made in each of them.
+
+7
+00:00:29,736 --> 00:00:33,440
+A saved query keeps one copy on the site, under a name.
+
+8
+00:00:34,190 --> 00:00:37,950
+Lucene runs inside your site and needs no other service.
+
+9
+00:00:37,950 --> 00:00:41,832
+Elasticsearch runs on a server that your site connects to.
+
+10
+00:00:41,832 --> 00:00:46,381
+Each adds a query source to the Queries module, with the same fields:
+
+11
+00:00:46,381 --> 00:00:49,050
+Index, Return Content Items and Query.
+
+12
+00:00:53,277 --> 00:00:57,875
+In the admin menu, Search, Queries lists All Queries, and a Run page
+
+13
+00:00:57,875 --> 00:00:59,614
+for each query source.
+
+14
+00:00:59,614 --> 00:01:01,727
+Let's open Run Lucene Query.
+
+15
+00:01:02,200 --> 00:01:05,080
+Choose an index that already exists on the site.
+
+16
+00:01:05,080 --> 00:01:09,400
+The editor starts with a Match All query that asks for up to ten documents.
+
+17
+00:01:09,868 --> 00:01:14,226
+Run Query lists the stored fields of each matching document in a table.
+
+18
+00:01:14,226 --> 00:01:18,698
+Above the table, the page shows the number of matches and the time taken.
+
+19
+00:01:22,898 --> 00:01:28,400
+This query finds published blog posts and sorts them by creation date, descending.
+
+20
+00:01:28,400 --> 00:01:34,278
+A bool query combines two term conditions, and size limits how many documents come back.
+
+21
+00:01:35,028 --> 00:01:39,366
+A query is a Liquid template, so a parameter can replace a value.
+
+22
+00:01:39,366 --> 00:01:44,438
+Here limit sets size, and default supplies three when the caller passes none.
+
+23
+00:01:46,078 --> 00:01:50,162
+On Run Lucene Query, enter the template and click Run Query.
+
+24
+00:01:50,162 --> 00:01:55,298
+With no parameters, the default applies, and the table lists three documents.
+
+25
+00:01:55,749 --> 00:01:58,572
+The Parameters box takes a JSON object.
+
+26
+00:01:58,572 --> 00:02:01,771
+Enter a limit of two and run the query again:
+
+27
+00:02:01,771 --> 00:02:04,029
+the table lists two documents.
+
+28
+00:02:08,239 --> 00:02:13,754
+Save Query appears when the query returns documents and the Queries feature is enabled.
+
+29
+00:02:13,754 --> 00:02:18,559
+Click it to open the Lucene query editor, with the query already filled in.
+
+30
+00:02:19,018 --> 00:02:23,145
+Name is the technical name that callers use to run the query.
+
+31
+00:02:23,145 --> 00:02:27,518
+It takes the letters A to Z and digits, and starts with a letter.
+
+32
+00:02:27,975 --> 00:02:31,960
+Index is not carried over from the Run page, so choose Search again.
+
+33
+00:02:31,960 --> 00:02:36,537
+Return Content Items makes the query return the content items that the matching
+
+34
+00:02:36,537 --> 00:02:40,145
+documents refer to, instead of the fields of those documents.
+
+35
+00:02:40,598 --> 00:02:41,658
+Click Save.
+
+36
+00:02:41,658 --> 00:02:45,709
+The Queries list shows the query with a Lucene query badge.
+
+37
+00:02:45,709 --> 00:02:51,568
+Run opens Run Lucene Query with this template and index, and runs it with no parameters.
+
+38
+00:02:55,768 --> 00:03:00,865
+Unchecked, a Lucene query returns the stored fields of each document, and an
+
+39
+00:03:00,865 --> 00:03:03,973
+Elasticsearch query returns the source data.
+
+40
+00:03:03,973 --> 00:03:07,888
+The Run pages always show documents, never content items.
+
+41
+00:03:08,638 --> 00:03:12,881
+Checked, the query loads the content items by the version ID that each
+
+42
+00:03:12,881 --> 00:03:16,008
+match carries, in the order of the search results.
+
+43
+00:03:16,008 --> 00:03:20,474
+Elasticsearch reads that ID from the source data, so its index needs Store
+
+44
+00:03:20,474 --> 00:03:22,818
+Source Data, which is on by default.
+
+45
+00:03:27,018 --> 00:03:30,294
+Elasticsearch needs a connection to a server.
+
+46
+00:03:30,294 --> 00:03:36,395
+Set Url and Ports in the OrchardCore, Search, Elasticsearch section of the configuration.
+
+47
+00:03:36,395 --> 00:03:41,918
+The Run Elasticsearch Query menu entry appears only when Url is a valid address.
+
+48
+00:03:42,668 --> 00:03:45,576
+The same question differs a little between the two.
+
+49
+00:03:45,576 --> 00:03:49,708
+The Elasticsearch form of the query uses a boolean for Published, and gives
+
+50
+00:03:49,708 --> 00:03:51,238
+the sort order directly.
+
+51
+00:03:52,856 --> 00:03:58,422
+On Run Elasticsearch Query, choose an Elasticsearch index, enter the Elasticsearch form of
+
+52
+00:03:58,422 --> 00:04:00,567
+the query, and click Run Query.
+
+53
+00:04:00,567 --> 00:04:03,756
+The table shows the source data of each document.
+
+54
+00:04:04,232 --> 00:04:10,130
+Save Query opens the Elasticsearch query editor, which has the same fields as the Lucene one.
+
+55
+00:04:10,130 --> 00:04:11,382
+Name the query.
+
+56
+00:04:11,835 --> 00:04:15,430
+Choose the index, check Return Content Items, and save.
+
+57
+00:04:15,430 --> 00:04:20,321
+The Queries list shows the Elasticsearch query next to the Lucene query, each
+
+58
+00:04:20,321 --> 00:04:22,325
+with a badge for its source.
+
+59
+00:04:26,525 --> 00:04:30,378
+A recipe creates the same query with the Queries step.
+
+60
+00:04:30,378 --> 00:04:36,415
+Each entry gives the Source, Name, Index, Template and ReturnContentItems for the query.
+
+61
+00:04:37,165 --> 00:04:41,305
+Among the recipes of the Blog theme are Blog - Lucene Query and
+
+62
+00:04:41,305 --> 00:04:43,285
+Blog - Elasticsearch Query.
+
+63
+00:04:43,285 --> 00:04:49,405
+Each replaces the RecentBlogPosts query with a search query, and reads its Template from a file.
+
+64
+00:04:50,155 --> 00:04:51,812
+Schema is optional.
+
+65
+00:04:51,812 --> 00:04:56,518
+The GraphQL API reads it to learn what the query returns, and for
+
+66
+00:04:56,518 --> 00:05:01,025
+content items it names the type, such as ContentItem/BlogPost.
+
+67
+00:05:03,025 --> 00:05:07,021
+A saved query gives a search question a name, a template and parameters,
+
+68
+00:05:07,021 --> 00:05:09,993
+and a separate video covers running it by that name.
+
+69
+00:05:09,993 --> 00:05:11,325
+Thanks for watching.
+
