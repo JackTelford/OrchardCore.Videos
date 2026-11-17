@@ -1,0 +1,23 @@
+WEBVTT
+
+00:00:03.212 --> 00:00:05.252
+Let's start in Tools, Features.
+
+00:00:05.252 --> 00:00:06.850
+Search for Audit Trail.
+
+00:00:06.850 --> 00:00:11.592
+It is listed in the Security category, with a short description of what it does.
+
+00:00:12.048 --> 00:00:14.156
+Click Enable on the Audit Trail row.
+
+00:00:14.156 --> 00:00:17.468
+A message confirms that the feature Audit Trail was enabled.
+
+00:00:17.930 --> 00:00:22.206
+With the feature enabled, the admin menu has two Audit Trail entries:
+
+00:00:22.206 --> 00:00:26.880
+one under Tools, for the log, and one under Settings, for its configuration.
+

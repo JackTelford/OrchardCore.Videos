@@ -1,0 +1,35 @@
+WEBVTT
+
+00:00:03.215 --> 00:00:05.135
+Open Settings, Audit Trail.
+
+00:00:05.135 --> 00:00:09.381
+The Events tab lists every event the module can record, each with a
+
+00:00:09.381 --> 00:00:11.533
+description and an Enabled box.
+
+00:00:11.533 --> 00:00:14.325
+The Content events are enabled by default.
+
+00:00:14.779 --> 00:00:19.689
+The Trimming tab sets the Retention period, which is 10 days unless you change it.
+
+00:00:19.689 --> 00:00:22.479
+A daily task deletes events older than that.
+
+00:00:22.934 --> 00:00:26.915
+On the Content tab, Allowed content types lists your content types.
+
+00:00:26.915 --> 00:00:28.006
+Check Article.
+
+00:00:28.006 --> 00:00:31.714
+Until you check a type, no content events are recorded for it.
+
+00:00:32.170 --> 00:00:33.049
+Click Save.
+
+00:00:33.049 --> 00:00:36.200
+A message confirms that the site settings were updated.
+

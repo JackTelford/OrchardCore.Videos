@@ -1,0 +1,16 @@
+1
+00:00:03,208 --> 00:00:07,507
+To see the history of one item, open Content, Content Items.
+
+2
+00:00:07,507 --> 00:00:12,068
+In the row of the Article, open Actions, and choose Audit Trail.
+
+3
+00:00:12,550 --> 00:00:15,399
+The page lists only the events of that item.
+
+4
+00:00:15,399 --> 00:00:20,130
+The Category list is replaced by an Events list, which filters by event name.
+

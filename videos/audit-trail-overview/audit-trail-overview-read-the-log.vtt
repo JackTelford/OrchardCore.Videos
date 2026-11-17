@@ -1,0 +1,53 @@
+WEBVTT
+
+00:00:03.214 --> 00:00:05.042
+Open Tools, Audit Trail.
+
+00:00:05.042 --> 00:00:08.150
+Each row is one event, with the newest first.
+
+00:00:08.150 --> 00:00:12.843
+Its badges give the event name, the category, how long ago it happened,
+
+00:00:12.843 --> 00:00:14.854
+and the user who caused it.
+
+00:00:15.335 --> 00:00:19.060
+The text next to the badges names the version and the item.
+
+00:00:19.060 --> 00:00:22.784
+The version links to the item as it was then, and the title
+
+00:00:22.784 --> 00:00:24.675
+links to the item's editor.
+
+00:00:25.151 --> 00:00:28.504
+At the end of each row, View opens the item as it was
+
+00:00:28.504 --> 00:00:31.688
+at that version, and Details opens the full event.
+
+00:00:31.688 --> 00:00:36.576
+Published events whose version is no longer the latest, and Removed events, also
+
+00:00:36.576 --> 00:00:38.111
+get a Restore button.
+
+00:00:38.579 --> 00:00:42.286
+To narrow the list, use the Date and Category lists.
+
+00:00:42.286 --> 00:00:45.481
+The Sort list changes the order of the rows.
+
+00:00:45.481 --> 00:00:49.379
+Date offers ranges such as Last 24 hours and This week.
+
+00:00:49.844 --> 00:00:54.053
+Type a user name in the Search box to see one person's events.
+
+00:00:54.053 --> 00:00:58.077
+Searching for jamie keeps only the events that user caused.
+
+00:00:58.077 --> 00:01:03.834
+The Filters button opens a menu with Filter syntax, which lists the other search terms.
+

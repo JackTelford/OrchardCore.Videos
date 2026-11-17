@@ -1,0 +1,32 @@
+1
+00:00:03,254 --> 00:00:05,415
+Click Details on the first row.
+
+2
+00:00:05,415 --> 00:00:09,154
+The Audit Trail Event page opens with an Event Info table:
+
+3
+00:00:09,154 --> 00:00:12,834
+the category, the event name, who triggered it, and when.
+
+4
+00:00:13,311 --> 00:00:18,533
+Under it, Content Item Info shows the Content Item Id, the content type,
+
+5
+00:00:18,533 --> 00:00:23,151
+the display text, the version, and any comment the editor left.
+
+6
+00:00:23,622 --> 00:00:27,175
+A Diff tab on this page compares the item with the way the
+
+7
+00:00:27,175 --> 00:00:29,784
+previous event for that item recorded it.
+
+8
+00:00:29,784 --> 00:00:33,392
+A separate video shows how to compare and restore versions.
+
