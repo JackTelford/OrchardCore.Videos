@@ -1,0 +1,266 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.698
+Orchard Core can be the content back end of a front end built with any technology.
+
+00:00:06.698 --> 00:00:10.583
+This video connects three modules that make that work:
+
+00:00:10.583 --> 00:00:15.051
+GraphQL to read the content, CORS to let a browser call it, and
+
+00:00:15.051 --> 00:00:17.900
+OpenID Connect to identify the caller.
+
+00:00:22.500 --> 00:00:26.786
+In a headless setup, editors work in the Orchard Core admin, and a
+
+00:00:26.786 --> 00:00:30.655
+separate application reads the published content over HTTP.
+
+00:00:30.655 --> 00:00:33.095
+That application is your front end:
+
+00:00:33.095 --> 00:00:37.500
+a single-page app, a mobile app, or a site built with any framework.
+
+00:00:38.250 --> 00:00:39.990
+Three questions come up:
+
+00:00:39.990 --> 00:00:44.224
+how the app reads the content, how the browser allows the call, and
+
+00:00:44.224 --> 00:00:46.254
+how the app proves who it is.
+
+00:00:46.254 --> 00:00:50.082
+GraphQL, CORS, and OpenID Connect answer them in that order.
+
+00:00:50.082 --> 00:00:52.460
+Each module has a video of its own.
+
+00:00:56.760 --> 00:00:59.388
+Let's start with reading the content.
+
+00:00:59.388 --> 00:01:03.117
+In the features list, search for GraphQL and enable it.
+
+00:01:03.117 --> 00:01:08.740
+The module serves queries at one endpoint, and adds a GraphiQL page to the Tools menu.
+
+00:01:09.193 --> 00:01:14.084
+A front end that isn't signed in is an anonymous visitor, and anonymous
+
+00:01:14.084 --> 00:01:16.879
+visitors can't run queries by default.
+
+00:01:16.879 --> 00:01:21.453
+Open the Anonymous role, allow Execute GraphQL, and save the role.
+
+00:01:21.906 --> 00:01:24.478
+Open Tools, GraphiQL to try a query.
+
+00:01:24.478 --> 00:01:28.766
+This one asks for the display text of every published blog post.
+
+00:01:28.766 --> 00:01:33.666
+Run it, and the result lists the posts that the caller is allowed to view.
+
+00:01:35.266 --> 00:01:38.228
+A front end sends the same query over HTTP.
+
+00:01:38.228 --> 00:01:42.156
+A POST request carries it in a JSON body, and a GET request
+
+00:01:42.156 --> 00:01:44.393
+carries it in the query string.
+
+00:01:44.393 --> 00:01:48.926
+The response is JSON, with the data, and the errors if there are any.
+
+00:01:49.676 --> 00:01:53.701
+A caller with an access token adds it in the Authorization header.
+
+00:01:53.701 --> 00:01:57.670
+A front end that sends no sign-in is an anonymous visitor, so the
+
+00:01:57.670 --> 00:02:00.186
+Anonymous role decides what comes back.
+
+00:02:04.486 --> 00:02:08.877
+Here is a front end on its own address, which makes it a different origin.
+
+00:02:08.877 --> 00:02:13.268
+When it loads the posts, the browser blocks the call, because Orchard Core
+
+00:02:13.268 --> 00:02:16.506
+has not said that this origin may read its responses.
+
+00:02:16.998 --> 00:02:20.192
+CORS Configuration is a feature of its own.
+
+00:02:20.192 --> 00:02:25.538
+Let's enable it, and open Settings, Security, Cross-Origin Resource Sharing.
+
+00:02:26.006 --> 00:02:29.105
+Select Add a policy, and name it Frontend.
+
+00:02:29.105 --> 00:02:34.917
+Select Set as default policy, so the CORS middleware applies that policy by default.
+
+00:02:34.917 --> 00:02:38.986
+This app sends no cookies, so turn off Allow credentials.
+
+00:02:39.447 --> 00:02:43.156
+Under Allowed origins, add the origin of the front end:
+
+00:02:43.156 --> 00:02:46.500
+the scheme, the host, and the port, with no path.
+
+00:02:46.500 --> 00:02:51.790
+Methods and headers stay open here, and you can narrow them to what the app uses.
+
+00:02:51.790 --> 00:02:53.127
+Save the policy.
+
+00:02:53.578 --> 00:02:56.395
+The policy is saved, and the tenant reloads.
+
+00:02:56.395 --> 00:03:00.395
+Back in the front end, loading the posts works, and the titles of
+
+00:03:00.395 --> 00:03:02.648
+the blog posts appear on the page.
+
+00:03:04.248 --> 00:03:09.065
+To test a policy without a browser, send the preflight request yourself with curl.
+
+00:03:09.065 --> 00:03:13.170
+It is an OPTIONS request that carries the origin, the method, and the
+
+00:03:13.170 --> 00:03:14.867
+headers the app will use.
+
+00:03:14.867 --> 00:03:17.878
+The response headers show what the policy allows.
+
+00:03:18.628 --> 00:03:21.604
+Remember that CORS is enforced by browsers.
+
+00:03:21.604 --> 00:03:27.071
+It is not authentication, and it does not restrict server-to-server clients, so keep
+
+00:03:27.071 --> 00:03:29.440
+sign-in and permissions in place.
+
+00:03:29.440 --> 00:03:33.388
+Allow only the origins, methods, and headers the app needs.
+
+00:03:37.688 --> 00:03:40.669
+Some content is for signed-in users only.
+
+00:03:40.669 --> 00:03:47.012
+The OpenID Connect Authorization Server feature issues access tokens, and OpenID Connect Token
+
+00:03:47.012 --> 00:03:49.676
+Validation lets the API accept them.
+
+00:03:49.676 --> 00:03:51.198
+Let's enable both.
+
+00:03:51.663 --> 00:03:57.642
+Under Settings, OpenID Connect, Authorization Server, the endpoints are enabled, and the Authorization
+
+00:03:57.642 --> 00:04:00.244
+Code and Refresh Token flows are allowed.
+
+00:04:00.244 --> 00:04:03.953
+These values are the defaults, and the server runs with them.
+
+00:04:04.413 --> 00:04:11.135
+Under Access Control, OpenID Connect, Applications, select New application to register the front end.
+
+00:04:11.135 --> 00:04:16.286
+Enter a Display Name, choose Public client, because a browser app can't keep
+
+00:04:16.286 --> 00:04:18.673
+a secret, and enter a Client Id.
+
+00:04:19.135 --> 00:04:21.890
+Select Allow Authorization Code Flow.
+
+00:04:21.890 --> 00:04:26.887
+In Redirect Uris, enter the address where the app receives the code, and
+
+00:04:26.887 --> 00:04:30.026
+select Require Proof Key for Code Exchange.
+
+00:04:30.026 --> 00:04:35.215
+Choose the scopes the app may request, such as profile and roles, and save.
+
+00:04:35.667 --> 00:04:38.192
+Token Validation completes the setup.
+
+00:04:38.192 --> 00:04:43.008
+When the authorization server runs on the same tenant, validation uses it by
+
+00:04:43.008 --> 00:04:46.766
+default, so the API accepts the tokens this server issues.
+
+00:04:46.766 --> 00:04:50.407
+Another tenant or a remote authority can be set instead.
+
+00:04:52.007 --> 00:04:56.815
+In the authorization code flow, the app sends the visitor to the authorization
+
+00:04:56.815 --> 00:05:02.480
+endpoint, where they sign in to Orchard Core and, with Explicit consent, approve the request.
+
+00:05:02.480 --> 00:05:05.857
+The app then receives a code at its redirect address.
+
+00:05:06.607 --> 00:05:11.188
+The app exchanges the code at the token endpoint, with its proof key,
+
+00:05:11.188 --> 00:05:13.326
+and receives an access token.
+
+00:05:13.326 --> 00:05:17.846
+The token request is cross-origin too, so the CORS policy covers it.
+
+00:05:17.846 --> 00:05:22.427
+The app sends the token in the Authorization header of each API call.
+
+00:05:26.627 --> 00:05:29.778
+A recipe applies the same setup to another site.
+
+00:05:29.778 --> 00:05:35.322
+Start with the feature step, because steps for features that are not enabled are skipped.
+
+00:05:35.322 --> 00:05:38.881
+In a CORS policy, list the allowed methods and headers:
+
+00:05:38.881 --> 00:05:40.807
+an empty list permits none.
+
+00:05:41.557 --> 00:05:43.728
+The OpenID Connect steps follow.
+
+00:05:43.728 --> 00:05:48.698
+The validation settings name the tenant that runs the server, and the application
+
+00:05:48.698 --> 00:05:53.897
+step registers the public client with its flow, its redirect address, and its scopes.
+
+00:05:55.897 --> 00:06:01.397
+Orchard Core keeps the content and the rules, and your front end decides how it looks.
+
+00:06:01.397 --> 00:06:06.000
+GraphQL reads the content, CORS lets the browser ask for it, and OpenID
+
+00:06:06.000 --> 00:06:07.973
+Connect says who is asking.
+
+00:06:07.973 --> 00:06:09.527
+Thanks for watching.
+
