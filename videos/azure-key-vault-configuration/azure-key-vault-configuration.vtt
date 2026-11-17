@@ -1,0 +1,146 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:08.303
+Connection strings, storage keys and other settings often sit in appsettings.json files or environment variables.
+
+00:00:08.303 --> 00:00:13.273
+The Azure Key Vault configuration provider reads them from a vault instead.
+
+00:00:13.273 --> 00:00:18.060
+In this video, you add it to an Orchard Core host and name your secrets.
+
+00:00:22.660 --> 00:00:26.514
+A database connection string or a storage key is a secret.
+
+00:00:26.514 --> 00:00:31.391
+It is often kept in an appsettings.json file or in an environment variable,
+
+00:00:31.391 --> 00:00:33.920
+on every machine that runs the site.
+
+00:00:34.670 --> 00:00:41.078
+The Azure Key Vault configuration provider adds the secrets of a vault to the application configuration.
+
+00:00:41.078 --> 00:00:45.738
+Orchard Core reads them the same way as the values of appsettings.json, so
+
+00:00:45.738 --> 00:00:49.000
+the settings of its modules can live in the vault.
+
+00:00:49.750 --> 00:00:53.223
+The provider is a library for the host, not a module:
+
+00:00:53.223 --> 00:00:56.754
+you enable nothing in the admin, and it has no screen.
+
+00:00:56.754 --> 00:01:02.228
+The Secrets module has its own Azure Key Vault store, for secrets created in the admin.
+
+00:01:02.228 --> 00:01:04.170
+That is a separate feature.
+
+00:01:08.370 --> 00:01:14.464
+Add a reference to the OrchardCore.Configuration.KeyVault package in your web project.
+
+00:01:14.464 --> 00:01:23.010
+Then, in Program.cs, call AddOrchardCoreAzureKeyVault on the configuration of the builder, before the application is built.
+
+00:01:23.760 --> 00:01:27.919
+The method also extends the host builder and the web host builder, so
+
+00:01:27.919 --> 00:01:31.246
+it fits the Generic Host that the documentation shows.
+
+00:01:31.246 --> 00:01:34.130
+All three accept an optional token credential.
+
+00:01:38.330 --> 00:01:42.592
+The vault is configured under OrchardCore, KeyVault, Azure.
+
+00:01:42.592 --> 00:01:47.706
+KeyVaultName is the name of the vault, and VaultURI is its full address.
+
+00:01:47.706 --> 00:01:51.050
+When you set both, VaultURI takes precedence.
+
+00:01:51.800 --> 00:01:56.156
+On the configuration of the builder, the call reads these settings from the
+
+00:01:56.156 --> 00:02:02.017
+sources registered before it, such as appsettings.json or environment variables, and not from a tenant.
+
+00:02:02.017 --> 00:02:07.180
+With neither a name nor an address, it throws an exception that names the missing setting.
+
+00:02:07.930 --> 00:02:13.899
+ReloadInterval is the number of seconds to wait between attempts at polling the vault for changes.
+
+00:02:13.899 --> 00:02:16.310
+Leave it empty to disable reloading.
+
+00:02:17.060 --> 00:02:22.682
+The provider is added where you call the method, after the sources registered before it.
+
+00:02:22.682 --> 00:02:27.646
+A value in the vault replaces the same key in the project's appsettings.json.
+
+00:02:27.646 --> 00:02:32.730
+How Orchard Core combines the other sources is the subject of a separate video.
+
+00:02:36.930 --> 00:02:43.689
+Called without an argument, the method creates a DefaultAzureCredential, with interactive credentials included.
+
+00:02:43.689 --> 00:02:49.870
+The documentation describes it as appropriate for most scenarios where the application runs in Azure.
+
+00:02:50.620 --> 00:02:54.632
+To use another credential, pass a TokenCredential to the method.
+
+00:02:54.632 --> 00:02:59.102
+The identity behind it must be allowed to read the secrets of the vault.
+
+00:02:59.102 --> 00:03:05.520
+On a development machine, the documentation describes signing in from Visual Studio or Visual Studio Code.
+
+00:03:09.720 --> 00:03:13.462
+Azure Key Vault does not allow a colon or an underscore in the
+
+00:03:13.462 --> 00:03:16.763
+name of a secret, so the provider translates the name.
+
+00:03:16.763 --> 00:03:20.780
+Two hyphens become a colon, and three hyphens become an underscore.
+
+00:03:21.530 --> 00:03:25.230
+The first name on screen is the documentation's example:
+
+00:03:25.230 --> 00:03:29.944
+its parts, joined by two hyphens, become the path of a configuration key.
+
+00:03:29.944 --> 00:03:34.420
+Three hyphens give an underscore, and a single hyphen stays a hyphen.
+
+00:03:35.170 --> 00:03:40.267
+Without a tenant name, the value applies to every tenant, as in the first name.
+
+00:03:40.267 --> 00:03:45.843
+With a tenant name after OrchardCore, as in the second, it applies to that tenant only.
+
+00:03:45.843 --> 00:03:50.460
+This follows the layout of the OrchardCore section of appsettings.json.
+
+00:03:54.660 --> 00:03:59.333
+In short, create the secrets in the vault, with hyphens in their names.
+
+00:03:59.333 --> 00:04:04.856
+Reference the package, call the method in the host, and set KeyVaultName or VaultURI.
+
+00:04:04.856 --> 00:04:08.680
+And let the identity that runs the site read the secrets.
+
+00:04:10.680 --> 00:04:15.446
+The Azure Key Vault configuration provider keeps your settings out of your files.
+
+00:04:15.446 --> 00:04:16.870
+Thanks for watching.
+
