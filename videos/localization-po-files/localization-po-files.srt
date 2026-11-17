@@ -1,0 +1,300 @@
+1
+00:00:01,000 --> 00:00:05,143
+Orchard Core reads the translations of its interface from PO files.
+
+2
+00:00:05,143 --> 00:00:09,456
+In this video you install the community French files, enable them on a
+
+3
+00:00:09,456 --> 00:00:13,940
+site, see where PO files are read from, and write PO entries of your own.
+
+4
+00:00:18,540 --> 00:00:23,325
+A PO file, short for Portable Object, is a plain text file with
+
+5
+00:00:23,325 --> 00:00:26,169
+one entry for each translated text.
+
+6
+00:00:26,169 --> 00:00:31,301
+An entry holds a context in msgctxt, the original text in msgid, and
+
+7
+00:00:31,301 --> 00:00:33,520
+its translation in msgstr.
+
+8
+00:00:34,270 --> 00:00:38,001
+The name of the file, or of its folder, is the culture:
+
+9
+00:00:38,001 --> 00:00:42,160
+a language such as fr, or a language and region such as fr-CA.
+
+10
+00:00:42,160 --> 00:00:46,747
+Orchard Core loads the files of the culture of the request, and shows
+
+11
+00:00:46,747 --> 00:00:49,560
+the original text without a translation.
+
+12
+00:00:53,760 --> 00:01:00,137
+The community translates Orchard Core on Crowdin, and anyone can add a language or improve one.
+
+13
+00:01:00,137 --> 00:01:06,829
+In the Orchard Core project, select French, then Download or Upload, and then Download translations.
+
+14
+00:01:06,829 --> 00:01:09,860
+The browser saves a zip file named fr.zip.
+
+15
+00:01:10,610 --> 00:01:17,484
+Create a folder named Localization in the root of your site, and extract fr.zip into it.
+
+16
+00:01:17,484 --> 00:01:22,750
+The result is a folder named fr, with one PO file for each module.
+
+17
+00:01:23,500 --> 00:01:28,396
+The CMS application targets publish the Localization folder with the site.
+
+18
+00:01:28,396 --> 00:01:32,740
+Other projects include the folder as content in the project file.
+
+19
+00:01:32,740 --> 00:01:38,125
+With Docker, keep PO files in Localization, not App_Data, because a volume mounted
+
+20
+00:01:38,125 --> 00:01:41,430
+on App_Data hides the files it already contains.
+
+21
+00:01:45,647 --> 00:01:49,040
+To use the files, enable the Localization feature.
+
+22
+00:01:49,040 --> 00:01:52,797
+Let's open Tools, Features, and search for Localization.
+
+23
+00:01:53,249 --> 00:01:57,233
+Localization is listed under the Internationalization category.
+
+24
+00:01:57,233 --> 00:01:59,369
+Let's select its Enable button.
+
+25
+00:01:59,826 --> 00:02:03,681
+The feature adds a Localization group to the Settings menu.
+
+26
+00:02:03,681 --> 00:02:06,646
+Let's open Settings, Localization, Cultures.
+
+27
+00:02:07,098 --> 00:02:09,814
+The table lists the cultures of the site.
+
+28
+00:02:09,814 --> 00:02:14,438
+Let's choose French in the list, select Add culture, and then select Save.
+
+29
+00:02:14,889 --> 00:02:18,249
+Saving restarts the site, and a notice confirms it:
+
+30
+00:02:18,249 --> 00:02:22,139
+The site has been restarted for the settings to take effect.
+
+31
+00:02:26,339 --> 00:02:30,582
+To test a culture, add ?culture=fr to the address of a page.
+
+32
+00:02:30,582 --> 00:02:35,081
+The culture has to be one of the supported cultures of the site.
+
+33
+00:02:35,081 --> 00:02:37,909
+Let's open the Features page this way.
+
+34
+00:02:39,503 --> 00:02:43,642
+This recording uses a small French file with entries for a few texts
+
+35
+00:02:43,642 --> 00:02:45,152
+of the Features page.
+
+36
+00:02:45,152 --> 00:02:49,683
+The title, the search box, the Bulk Actions button, the Enable buttons, and
+
+37
+00:02:49,683 --> 00:02:52,033
+the count of features are in French.
+
+38
+00:02:52,695 --> 00:02:56,355
+The menu on the left stays in English, because the file has no
+
+39
+00:02:56,355 --> 00:02:57,754
+entry for its texts.
+
+40
+00:02:57,754 --> 00:03:01,575
+Orchard Core shows the original text for a text without an entry.
+
+41
+00:03:02,028 --> 00:03:08,248
+A browser configured with French as its language gets the same translations, without the query string.
+
+42
+00:03:12,448 --> 00:03:17,176
+Orchard Core searches several places for a file named after the culture:
+
+43
+00:03:17,176 --> 00:03:21,721
+the Localization folder of each module and theme, of the site, and of
+
+44
+00:03:21,721 --> 00:03:26,388
+each tenant, a separate site in the application, under App_Data, Sites.
+
+45
+00:03:27,138 --> 00:03:29,579
+Files can also be split by module.
+
+46
+00:03:29,579 --> 00:03:35,559
+The community download uses a folder named after the culture, with one file for each module.
+
+47
+00:03:35,559 --> 00:03:38,488
+A folder named after the module works too.
+
+48
+00:03:39,238 --> 00:03:42,249
+All the files found for a culture are merged.
+
+49
+00:03:42,249 --> 00:03:46,383
+When two files define the same entry, the later one wins, in the
+
+50
+00:03:46,383 --> 00:03:47,859
+order of this list.
+
+51
+00:03:47,859 --> 00:03:53,468
+The culture folder loads last, so its entries replace those of the site and tenant files.
+
+52
+00:03:54,218 --> 00:03:57,502
+A file serves only the culture in its path.
+
+53
+00:03:57,502 --> 00:04:02,662
+For a regional culture such as fr-CA, write fr-CA files, or select Fall
+
+54
+00:04:02,662 --> 00:04:08,358
+back to parent culture(s), so that missing texts are looked up in the fr files.
+
+55
+00:04:12,558 --> 00:04:18,133
+In a file such as Localization/fr.po, you write entries for your own texts.
+
+56
+00:04:18,133 --> 00:04:22,607
+For a service, the context is the full name of the type the
+
+57
+00:04:22,607 --> 00:04:26,668
+localizer is created for, here MyNamespace.MyService.
+
+58
+00:04:27,418 --> 00:04:31,915
+For a view, the context is the path of the view, starting at
+
+59
+00:04:31,915 --> 00:04:36,071
+the module folder, with dots and without the extension.
+
+60
+00:04:36,071 --> 00:04:40,908
+The Features page uses OrchardCore.Features.Views.Admin.Features.
+
+61
+00:04:41,658 --> 00:04:46,754
+An entry without a context applies wherever a text has no entry of its own context:
+
+62
+00:04:46,754 --> 00:04:52,021
+Orchard Core looks for the entry with the context first, and then for the one without.
+
+63
+00:04:52,021 --> 00:04:54,998
+An entry with an empty translation is ignored.
+
+64
+00:04:55,748 --> 00:05:00,067
+To translate a single tenant, put the file in the Localization folder of
+
+65
+00:05:00,067 --> 00:05:02,336
+that tenant, under App_Data, Sites.
+
+66
+00:05:02,336 --> 00:05:04,496
+The other tenants do not read it.
+
+67
+00:05:04,496 --> 00:05:08,814
+Its entries are merged with the other files, and the culture folder wins
+
+68
+00:05:08,814 --> 00:05:10,198
+for the same entry.
+
+69
+00:05:10,948 --> 00:05:15,380
+Keep the numbered placeholders of the original text in the translation.
+
+70
+00:05:15,380 --> 00:05:21,308
+After you edit a PO file, restart the application, because translations are loaded once and kept.
+
+71
+00:05:21,308 --> 00:05:23,668
+Plural forms have a separate video.
+
+72
+00:05:25,668 --> 00:05:29,503
+PO files are plain text named after a culture, so you install the
+
+73
+00:05:29,503 --> 00:05:33,608
+community files, add your own entries for the texts they do not cover,
+
+74
+00:05:33,608 --> 00:05:35,444
+and restart the application.
+
+75
+00:05:35,444 --> 00:05:36,848
+Thanks for watching.
+
