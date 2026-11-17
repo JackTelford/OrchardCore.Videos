@@ -1,0 +1,176 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.155
+Authored HTML and Markdown are stored as written, and Orchard Core cleans the
+
+00:00:06.155 --> 00:00:08.328
+HTML each time it renders it.
+
+00:00:08.328 --> 00:00:13.048
+This video covers where the HTML Sanitizer applies, how to turn it off
+
+00:00:13.048 --> 00:00:16.650
+for a part, and how to use and configure it in code.
+
+00:00:21.250 --> 00:00:24.762
+Authors write HTML, or Markdown that becomes HTML.
+
+00:00:24.762 --> 00:00:29.591
+That markup can hold a script element, an event handler attribute, or a
+
+00:00:29.591 --> 00:00:32.037
+link whose address runs a script.
+
+00:00:32.037 --> 00:00:37.430
+Shown as it is, it runs in the visitor's browser, which is cross-site scripting.
+
+00:00:38.180 --> 00:00:44.136
+The HTML Sanitizer cleans the final rendered HTML, each time the content is displayed.
+
+00:00:44.136 --> 00:00:47.244
+What the author wrote is stored unchanged.
+
+00:00:47.244 --> 00:00:53.200
+In this example, the script element is removed from the page, and the paragraph stays.
+
+00:00:53.950 --> 00:00:55.415
+The order matters.
+
+00:00:55.415 --> 00:01:00.541
+A Markdown body is converted to HTML first, then shortcodes are processed, and
+
+00:01:00.541 --> 00:01:02.372
+the sanitizer runs last.
+
+00:01:02.372 --> 00:01:05.850
+So markup that a shortcode produces is cleaned too.
+
+00:01:06.600 --> 00:01:15.512
+By default, it applies to the HtmlBodyPart, the HtmlField, the HtmlMenuItemPart, the MarkdownBodyPart, and the MarkdownField.
+
+00:01:15.512 --> 00:01:20.819
+For the body parts and fields, one setting covers both the rendered page
+
+00:01:20.819 --> 00:01:23.540
+and the HTML that GraphQL returns.
+
+00:01:24.290 --> 00:01:27.043
+The sanitizer also checks addresses.
+
+00:01:27.043 --> 00:01:32.746
+When you save a LinkField, a LinkMenuItemPart, or an HtmlMenuItemPart, the URL is
+
+00:01:32.746 --> 00:01:38.645
+placed in a link and sanitized, and rejected as invalid if the sanitizer changes it.
+
+00:01:38.645 --> 00:01:42.840
+Link and HTML menu items are checked again when displayed.
+
+00:01:47.022 --> 00:01:52.785
+The Content Types page, under Design, Content Definition, lists the content types.
+
+00:01:52.785 --> 00:01:54.750
+Select Edit for Article.
+
+00:01:54.750 --> 00:01:59.072
+Its Parts list includes HtmlBody, so select Edit next to it.
+
+00:01:59.544 --> 00:02:02.862
+Sanitize Html is checked, which is the default.
+
+00:02:02.862 --> 00:02:07.808
+Its hint says the HTML is sanitized, for example by removing script tags.
+
+00:02:07.808 --> 00:02:12.566
+Clearing the box turns sanitization off for this part of this type, so
+
+00:02:12.566 --> 00:02:15.884
+leave it checked unless you trust every author.
+
+00:02:16.345 --> 00:02:20.292
+The Blog Post type has the same setting on its MarkdownBody part.
+
+00:02:20.292 --> 00:02:24.795
+There, the hint says it is the HTML output from Markdown that is sanitized.
+
+00:02:28.995 --> 00:02:31.881
+The sanitizer is available to your own code too.
+
+00:02:31.881 --> 00:02:35.034
+Call it for any HTML you write to a page that did not
+
+00:02:35.034 --> 00:02:37.814
+pass through a part or field with the setting.
+
+00:02:37.814 --> 00:02:39.845
+There are three ways to call it.
+
+00:02:40.595 --> 00:02:47.416
+In a Razor view, Orchard.SanitizeHtml takes a string of HTML and returns it sanitized.
+
+00:02:47.416 --> 00:02:54.015
+It returns IHtmlContent, so Razor writes it as markup instead of encoding it again.
+
+00:02:54.765 --> 00:03:00.234
+In a Liquid template, the sanitize_html filter does the same, and the raw
+
+00:03:00.234 --> 00:03:03.072
+filter writes the result as markup.
+
+00:03:03.072 --> 00:03:07.365
+The markdownify filter always sanitizes what it returns.
+
+00:03:08.115 --> 00:03:14.222
+In your own classes, take an IHtmlSanitizerService in the constructor and call Sanitize.
+
+00:03:14.222 --> 00:03:17.665
+The Html and Markdown modules call it this way.
+
+00:03:21.865 --> 00:03:24.691
+AddOrchardCms registers the sanitizer.
+
+00:03:24.691 --> 00:03:29.445
+On top of the defaults of its library, Orchard Core allows the class
+
+00:03:29.445 --> 00:03:35.805
+attribute, allows the mailto and tel schemes, and removes the form tag from the allowed tags.
+
+00:03:36.555 --> 00:03:41.880
+To change the rules, call ConfigureHtmlSanitizer on the tenant services, with an action
+
+00:03:41.880 --> 00:03:43.827
+that receives the sanitizer.
+
+00:03:43.827 --> 00:03:45.946
+This one allows the ftp scheme.
+
+00:03:45.946 --> 00:03:49.611
+You can call it more than once, and the actions run in the
+
+00:03:49.611 --> 00:03:51.215
+order they were added.
+
+00:03:51.965 --> 00:03:56.765
+The link checks use the same sanitizer, so they accept the schemes you allow here.
+
+00:03:57.515 --> 00:04:02.404
+Sanitized results are cached for fragments up to 64K characters, and a tenant
+
+00:04:02.404 --> 00:04:05.055
+never receives another tenant's result.
+
+00:04:05.055 --> 00:04:11.653
+So whatever you configure with ConfigureHtmlSanitizer, including the sanitizer event handlers, must return
+
+00:04:11.653 --> 00:04:14.245
+the same result for the same fragment.
+
+00:04:16.245 --> 00:04:18.103
+That's the HTML Sanitizer:
+
+00:04:18.103 --> 00:04:23.735
+authored content is stored as written, cleaned when it is rendered, and configured in code.
+
+00:04:23.735 --> 00:04:25.245
+Thanks for watching.
+
