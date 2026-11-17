@@ -1,0 +1,364 @@
+1
+00:00:01,000 --> 00:00:04,122
+Liquid is a template language of Orchard Core.
+
+2
+00:00:04,122 --> 00:00:09,525
+Themes, content and settings use it to print values, change them and make decisions.
+
+3
+00:00:09,525 --> 00:00:14,028
+In this video, you learn the syntax, the objects, the filters and the
+
+4
+00:00:14,028 --> 00:00:16,550
+tags, and the options of the parser.
+
+5
+00:00:21,150 --> 00:00:26,779
+Themes and modules keep Liquid templates in files with the .liquid extension, in a Views folder.
+
+6
+00:00:26,779 --> 00:00:30,974
+The Blog theme has a layout template for the whole page, and templates
+
+7
+00:00:30,974 --> 00:00:34,230
+for some of its content types, such as the blog post.
+
+8
+00:00:34,980 --> 00:00:39,285
+The Templates module lets you write the same kind of template in the admin.
+
+9
+00:00:39,285 --> 00:00:43,218
+The Liquid part and the Liquid field keep Liquid in content, and the
+
+10
+00:00:43,218 --> 00:00:48,160
+Autoroute part builds URLs from a Liquid pattern, as the Blog recipe does for articles.
+
+11
+00:00:48,910 --> 00:00:53,309
+Editing a Liquid part or a Liquid field needs the Manage Liquid templates
+
+12
+00:00:53,309 --> 00:00:56,372
+permission, which is marked as security-critical.
+
+13
+00:00:56,372 --> 00:01:00,047
+Writing a template in the admin also needs Manage templates.
+
+14
+00:01:00,047 --> 00:01:03,500
+The Administrator and Editor roles have both by default.
+
+15
+00:01:07,700 --> 00:01:11,870
+Two curly braces print a value, such as the title of a content item.
+
+16
+00:01:11,870 --> 00:01:15,928
+A pipe sends the value through a filter, which can take arguments.
+
+17
+00:01:15,928 --> 00:01:19,817
+A tag opens with a curly brace and a percent sign, and controls
+
+18
+00:01:19,817 --> 00:01:21,620
+what the template renders.
+
+19
+00:01:22,370 --> 00:01:24,541
+A dot reads a property of an object.
+
+20
+00:01:24,541 --> 00:01:28,263
+In this blog post template, the title is a property of the content
+
+21
+00:01:28,263 --> 00:01:32,450
+item, and the subtitle is read through the part and the field that hold it.
+
+22
+00:01:33,200 --> 00:01:36,969
+A template encodes what it prints as HTML by default.
+
+23
+00:01:36,969 --> 00:01:40,227
+To write markup as it is, add the raw filter.
+
+24
+00:01:40,227 --> 00:01:44,890
+To clean the markup first, run the sanitize_html filter before raw.
+
+25
+00:01:49,089 --> 00:01:51,256
+Let's open a blog post on the site.
+
+26
+00:01:51,256 --> 00:01:55,327
+The Blog theme draws this page with its Liquid templates, so the values
+
+27
+00:01:55,327 --> 00:01:57,125
+on it come from expressions.
+
+28
+00:01:57,125 --> 00:02:02,359
+The chapters after this one explain the objects, filters and tags that those expressions use.
+
+29
+00:02:02,810 --> 00:02:06,705
+In the navigation bar, the name of the site is the SiteName property
+
+30
+00:02:06,705 --> 00:02:08,021
+of the Site object.
+
+31
+00:02:08,021 --> 00:02:11,810
+The link around it goes to the home page, through the href filter.
+
+32
+00:02:12,275 --> 00:02:15,605
+The large title is the DisplayText of the content item.
+
+33
+00:02:15,605 --> 00:02:19,045
+The line under it is the Subtitle field of the blog post.
+
+34
+00:02:19,495 --> 00:02:23,176
+Under the subtitle, Posted by is a text that the t filter looks
+
+35
+00:02:23,176 --> 00:02:25,950
+up in the translations of the current culture.
+
+36
+00:02:25,950 --> 00:02:29,045
+The name after it is the Author of the content item.
+
+37
+00:02:33,245 --> 00:02:38,484
+The Model object is the shape being displayed, the view model of the template.
+
+38
+00:02:38,484 --> 00:02:43,848
+On a content page, its ContentItem property is the content item, with properties
+
+39
+00:02:43,848 --> 00:02:47,715
+such as DisplayText, ContentType, CreatedUtc and Author.
+
+40
+00:02:48,465 --> 00:02:53,440
+The Content property of a content item holds its parts and fields as a document.
+
+41
+00:02:53,440 --> 00:02:57,142
+The fields that you add to a content type sit under a part
+
+42
+00:02:57,142 --> 00:03:01,885
+named after the type, so the subtitle is BlogPost, then Subtitle, then Text.
+
+43
+00:03:02,635 --> 00:03:11,015
+The Liquid Core Services feature, which is always enabled, provides Culture, Request, Environment, HttpContext and TrackingConsent.
+
+44
+00:03:11,015 --> 00:03:15,908
+Culture has the name and direction of the current culture, and Request has
+
+45
+00:03:15,908 --> 00:03:18,905
+the path, the query string and the headers.
+
+46
+00:03:19,655 --> 00:03:21,820
+Other features add objects.
+
+47
+00:03:21,820 --> 00:03:27,855
+Settings adds Site, with SiteName and PageSize, and Contents adds Content, which loads
+
+48
+00:03:27,855 --> 00:03:30,741
+content items by identifier or handle.
+
+49
+00:03:30,741 --> 00:03:35,989
+Users adds User, whose Identity holds the name of the signed-in user, when
+
+50
+00:03:35,989 --> 00:03:38,875
+the Liquid feature is enabled as well.
+
+51
+00:03:43,075 --> 00:03:47,821
+A filter changes the value on its left, and filters chain from left to right.
+
+52
+00:03:47,821 --> 00:03:51,996
+This pattern from the Blog recipe takes the title of a content item
+
+53
+00:03:51,996 --> 00:03:54,455
+and turns it into a segment of a URL.
+
+54
+00:03:55,205 --> 00:04:02,255
+Standard Liquid filters, such as date, upcase and default, are available everywhere.
+
+55
+00:04:02,255 --> 00:04:08,052
+The Liquid module adds filters of its own, such as t, slugify, href,
+
+56
+00:04:08,052 --> 00:04:11,185
+absolute_url, local, utc and json.
+
+57
+00:04:11,935 --> 00:04:16,816
+The t filter translates a text with the current culture, and its arguments
+
+58
+00:04:16,816 --> 00:04:19,073
+fill the numbered placeholders.
+
+59
+00:04:19,073 --> 00:04:23,282
+The href filter turns a virtual path into a URL for the tenant,
+
+60
+00:04:23,282 --> 00:04:26,455
+and absolute_url adds the scheme and the host.
+
+61
+00:04:27,205 --> 00:04:29,923
+Dates in content items are stored in UTC.
+
+62
+00:04:29,923 --> 00:04:33,335
+The local filter converts one to the local time zone:
+
+63
+00:04:33,335 --> 00:04:36,978
+the time zone of the site, or the one of a signed-in user
+
+64
+00:04:36,978 --> 00:04:39,117
+when User Time Zone is enabled.
+
+65
+00:04:39,117 --> 00:04:41,315
+The utc filter converts it back.
+
+66
+00:04:42,065 --> 00:04:45,677
+Other features add the filters for what they own.
+
+67
+00:04:45,677 --> 00:04:48,895
+Contents adds display_text and display_url.
+
+68
+00:04:48,895 --> 00:04:54,805
+Users adds has_permission, is_in_role and user_email, which work on the User object.
+
+69
+00:04:55,555 --> 00:04:59,243
+A filter exists only while its feature is enabled.
+
+70
+00:04:59,243 --> 00:05:04,249
+The shortcode filter needs Shortcodes, and markdownify needs Markdown.
+
+71
+00:05:04,249 --> 00:05:08,135
+A separate video covers writing a filter of your own.
+
+72
+00:05:12,335 --> 00:05:14,772
+Standard Liquid tags handle the logic.
+
+73
+00:05:14,772 --> 00:05:19,093
+The blog post template assigns the first image path to a variable, tests
+
+74
+00:05:19,093 --> 00:05:22,416
+whether it is nil, and chooses which header to render.
+
+75
+00:05:22,416 --> 00:05:25,075
+The for tag repeats a block for each item.
+
+76
+00:05:25,825 --> 00:05:28,721
+Liquid Core Services adds tags of its own.
+
+77
+00:05:28,721 --> 00:05:33,728
+The form tag calls the ASP.NET Core form tag helper, and the antiforgerytoken
+
+78
+00:05:33,728 --> 00:05:36,865
+tag writes the hidden field that a form needs.
+
+79
+00:05:36,865 --> 00:05:40,605
+The helper and block tags call a tag helper by its name.
+
+80
+00:05:41,355 --> 00:05:46,828
+The cache tag keeps the output of its block when Dynamic Cache is enabled.
+
+81
+00:05:46,828 --> 00:05:51,754
+The Resources module adds script, style, link, meta and resources.
+
+82
+00:05:51,754 --> 00:05:56,475
+A separate video covers the tags for layouts, shapes and zones.
+
+83
+00:06:00,675 --> 00:06:05,181
+The parser belongs to Liquid Core Services, a feature that is always enabled.
+
+84
+00:06:05,181 --> 00:06:09,143
+Three options of the parser are read from the Liquid section of the
+
+85
+00:06:09,143 --> 00:06:12,075
+configuration, and all three are off by default.
+
+86
+00:06:12,825 --> 00:06:17,911
+In the appsettings file, under OrchardCore and Liquid, set an option to true.
+
+87
+00:06:17,911 --> 00:06:25,570
+AllowParentheses allows parentheses in templates, AllowLiquidTag turns on the liquid tag, and AllowTrailingQuestionMark
+
+88
+00:06:25,570 --> 00:06:28,205
+lets a name end with a question mark.
+
+89
+00:06:30,205 --> 00:06:35,330
+Liquid reads values from objects, changes them with filters and controls the output
+
+90
+00:06:35,330 --> 00:06:38,498
+with tags, and each enabled feature adds its own.
+
+91
+00:06:38,498 --> 00:06:39,995
+Thanks for watching.
+
