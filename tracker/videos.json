@@ -2497,7 +2497,7 @@
     "docs": [
       "src/docs/reference/modules/DisplayManagement/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 5.4,
     "words": 806,
     "contentCommit": "",
@@ -2508,7 +2508,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: Needs Liquid template files added to the theme folder between takes; the shared build must not be changed and database templates would not match the narration about files"
   },
   {
     "slug": "placement-files",
@@ -5912,11 +5912,11 @@
       "src/docs/reference/modules/AutoSetup/README.md",
       "src/docs/reference/modules/BackgroundTasks/README.md"
     ],
-    "status": "content-ready",
+    "status": "recording",
     "estimatedMinutes": 6.1,
     "words": 910,
     "contentCommit": "",
-    "recordedBy": "",
+    "recordedBy": "wipke",
     "recordedOn": "",
     "reviewedBy": "",
     "pullRequest": "",
