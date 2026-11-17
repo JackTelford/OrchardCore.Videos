@@ -3808,18 +3808,18 @@
     "docs": [
       "src/docs/reference/modules/Security/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 5.1,
     "words": 767,
     "contentCommit": "",
-    "recordedBy": "",
+    "recordedBy": "wipke",
     "recordedOn": "",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: Orchard Core main bug: PermissionsPolicySettings.Edit.cshtml uses <script asp-src> but the Security module _ViewImports lacks the ResourceManagement tag helper, so the script is rendered literally and selecting Self never shows the allowed-origins box (perm-3 cannot be recorded faithfully)"
   },
   {
     "slug": "security-cors",
