@@ -1,0 +1,203 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:07.322
+Orchard Core sends email for account confirmations, password resets, notifications, and workflows.
+
+00:00:07.322 --> 00:00:11.943
+Let's enable the SMTP provider, connect the site to a mail server, and
+
+00:00:11.943 --> 00:00:14.800
+send a test email to check that it works.
+
+00:00:19.400 --> 00:00:22.583
+Several parts of an Orchard Core site send email.
+
+00:00:22.583 --> 00:00:27.908
+Users confirm their address and reset their password by email, notifications can reach
+
+00:00:27.908 --> 00:00:32.480
+an inbox, and a workflow can send a message with its Email Task activity.
+
+00:00:33.230 --> 00:00:38.827
+The Email feature holds the settings, the Default provider, and the Email Test page.
+
+00:00:38.827 --> 00:00:40.942
+A provider does the sending:
+
+00:00:40.942 --> 00:00:46.664
+the SMTP Email Provider sends through an SMTP server, and Azure Communication Services
+
+00:00:46.664 --> 00:00:49.960
+Email, covered in a separate video, is another.
+
+00:00:50.710 --> 00:00:55.857
+The Email settings and the Email Test page need the Manage Email Settings permission.
+
+00:00:55.857 --> 00:00:59.760
+The Administrator role has it, so the admin user can open both.
+
+00:01:00.510 --> 00:01:05.224
+Let's enable the SMTP provider, configure it, and send a test email.
+
+00:01:05.224 --> 00:01:11.020
+A local test mail server shows the message arriving, so nothing reaches a real inbox.
+
+00:01:15.320 --> 00:01:18.511
+Features are managed under Tools, Features.
+
+00:01:18.511 --> 00:01:23.070
+Let's open the Tools menu, choose Features, and search for SMTP.
+
+00:01:26.099 --> 00:01:29.828
+SMTP Email Provider is in the Communication category.
+
+00:01:29.828 --> 00:01:35.769
+It lists Email as a dependency, so enabling the provider also enables the Email feature.
+
+00:01:36.260 --> 00:01:37.763
+Let's select Enable.
+
+00:01:37.763 --> 00:01:42.040
+A message confirms that the SMTP Email Provider feature was enabled.
+
+00:01:42.601 --> 00:01:48.909
+Searching for email lists the Email feature and the SMTP Email Provider, and both are enabled.
+
+00:01:48.909 --> 00:01:52.631
+Email adds the settings page and the Email Test page.
+
+00:01:56.931 --> 00:02:00.637
+The settings are under Settings, Communication, Email.
+
+00:02:00.637 --> 00:02:05.951
+The Providers tab opens first, with a warning that no email provider is enabled.
+
+00:02:08.524 --> 00:02:12.513
+The SMTP tab holds the settings of the SMTP provider.
+
+00:02:12.513 --> 00:02:16.704
+Let's check Enable SMTP Provider, and its fields appear.
+
+00:02:17.162 --> 00:02:19.583
+Sender email address is required.
+
+00:02:19.583 --> 00:02:24.424
+It is the sender of every message, unless a message sets its own sender.
+
+00:02:24.424 --> 00:02:26.782
+Let's enter noreply@example.com.
+
+00:02:27.245 --> 00:02:31.857
+Delivery method is Network, which sends each message to a mail server.
+
+00:02:31.857 --> 00:02:37.137
+The other choice, Specified pickup directory, saves each message as a file, which
+
+00:02:37.137 --> 00:02:39.625
+helps while developing and testing.
+
+00:02:40.122 --> 00:02:45.398
+Under Network delivery options, Host name is the address of the SMTP server,
+
+00:02:45.398 --> 00:02:48.486
+and Port number is the port it listens on.
+
+00:02:48.486 --> 00:02:51.832
+The test server is on localhost, at port 2525.
+
+00:02:52.288 --> 00:02:56.610
+Encryption method to use offers None, SSL/TLS, and STARTTLS.
+
+00:02:56.610 --> 00:03:01.193
+The test server accepts plain connections, so let's choose None.
+
+00:03:01.193 --> 00:03:06.038
+Auto Select Encryption method would choose it from the port instead.
+
+00:03:06.515 --> 00:03:11.427
+Require credentials adds the Use Windows authentication option, and the User name and
+
+00:03:11.427 --> 00:03:14.557
+Password fields, for servers that ask for a sign-in.
+
+00:03:14.557 --> 00:03:17.795
+The test server does not, so let's leave it unchecked.
+
+00:03:21.317 --> 00:03:22.706
+Let's select Save.
+
+00:03:22.706 --> 00:03:27.628
+The page reloads on the Providers tab, with a confirmation message, and Default
+
+00:03:27.628 --> 00:03:30.987
+provider shows Simple Mail Transfer Protocol (SMTP).
+
+00:03:31.531 --> 00:03:36.107
+Orchard Core selected it for us, because no default provider was set.
+
+00:03:36.107 --> 00:03:41.231
+With several providers, this list chooses which one sends messages by default.
+
+00:03:45.531 --> 00:03:49.636
+The Email Test page is under Tools, Testing, Email Test.
+
+00:03:49.636 --> 00:03:53.211
+Provider is already set to the default provider.
+
+00:03:55.263 --> 00:03:59.651
+In To, let's enter the recipient, jamie.chen@example.com.
+
+00:03:59.651 --> 00:04:01.392
+Sender is optional:
+
+00:04:01.392 --> 00:04:07.453
+when it is empty, the message uses the sender email address of the SMTP settings.
+
+00:04:07.913 --> 00:04:11.259
+Cc, Bcc, and Reply To are optional as well.
+
+00:04:11.259 --> 00:04:15.903
+Subject and Body are required, so let's write a short message.
+
+00:04:21.383 --> 00:04:22.671
+Let's select Send.
+
+00:04:22.671 --> 00:04:25.355
+The page confirms the result with a message:
+
+00:04:25.355 --> 00:04:27.073
+Message sent successfully.
+
+00:04:31.321 --> 00:04:34.359
+Let's switch to the inbox of the test mail server.
+
+00:04:34.359 --> 00:04:39.241
+It lists the message the site sent, with the sender, the recipient, and the subject.
+
+00:04:39.825 --> 00:04:41.367
+Let's open the message.
+
+00:04:41.367 --> 00:04:45.356
+The sender is the address from the SMTP settings, and the subject and
+
+00:04:45.356 --> 00:04:48.175
+the text are the ones from the Email Test page.
+
+00:04:52.375 --> 00:04:56.376
+When a message cannot be sent, the Email Test page lists the error.
+
+00:04:56.376 --> 00:05:01.145
+Check the host name, the port number, the encryption method, the credentials, and
+
+00:05:01.145 --> 00:05:03.995
+the email addresses, then send the test again.
+
+00:05:05.995 --> 00:05:10.434
+Enable the SMTP Email Provider, configure your mail server, and check it with
+
+00:05:10.434 --> 00:05:11.824
+the Email Test page.
+
+00:05:11.824 --> 00:05:13.215
+Thanks for watching.
+
