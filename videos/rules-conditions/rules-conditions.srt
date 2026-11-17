@@ -1,0 +1,324 @@
+1
+00:00:01,000 --> 00:00:04,164
+A widget in a layer appears on a page only when the rule
+
+2
+00:00:04,164 --> 00:00:05,593
+of that layer is true.
+
+3
+00:00:05,593 --> 00:00:09,421
+This video shows the conditions a rule can hold, how to combine them,
+
+4
+00:00:09,421 --> 00:00:11,820
+and how to check the result on your site.
+
+5
+00:00:16,420 --> 00:00:20,336
+Each widget on the Widgets and Layers page belongs to a layer, and
+
+6
+00:00:20,336 --> 00:00:21,968
+each layer has one rule.
+
+7
+00:00:21,968 --> 00:00:25,667
+Each time the site displays a page, it checks the rule of each
+
+8
+00:00:25,667 --> 00:00:27,244
+layer that has widgets.
+
+9
+00:00:27,244 --> 00:00:30,290
+If the rule is true, its published widgets appear.
+
+10
+00:00:31,040 --> 00:00:35,357
+A rule is a list of conditions, and every condition in the list
+
+11
+00:00:35,357 --> 00:00:38,047
+must be true for the rule to be true.
+
+12
+00:00:38,047 --> 00:00:43,740
+A rule without conditions is never true, so a layer without conditions shows nothing.
+
+13
+00:00:47,940 --> 00:00:50,183
+Some conditions look at the page.
+
+14
+00:00:50,183 --> 00:00:54,613
+Homepage tests for the home page, Url compares the path of the address,
+
+15
+00:00:54,613 --> 00:01:00,250
+Content type compares the type of content on show, and Culture compares the current culture.
+
+16
+00:01:01,000 --> 00:01:03,013
+Others look at the visitor.
+
+17
+00:01:03,013 --> 00:01:07,709
+Is authenticated is true for a signed-in user, Is anonymous is true for
+
+18
+00:01:07,709 --> 00:01:12,710
+everyone else, and Role compares the roles of the user with a name you type.
+
+19
+00:01:13,460 --> 00:01:17,804
+Boolean is fixed to true or false, so a Boolean set to true
+
+20
+00:01:17,804 --> 00:01:19,675
+is true on every page.
+
+21
+00:01:19,675 --> 00:01:24,754
+Javascript runs a script that must return true or false, for cases the
+
+22
+00:01:24,754 --> 00:01:27,160
+other conditions do not cover.
+
+23
+00:01:27,910 --> 00:01:31,445
+Two conditions are groups that hold other conditions.
+
+24
+00:01:31,445 --> 00:01:35,518
+All is true when every condition inside it is true, and Any is
+
+25
+00:01:35,518 --> 00:01:38,214
+true when at least one of them is true.
+
+26
+00:01:38,214 --> 00:01:41,090
+A group with nothing inside is never true.
+
+27
+00:01:41,840 --> 00:01:46,454
+Url, Content type, Culture and Role compare with an operation:
+
+28
+00:01:46,454 --> 00:01:51,679
+Equals, Starts with, Ends with, Contains, or the Does not form of each.
+
+29
+00:01:51,679 --> 00:01:54,800
+Comparisons ignore upper and lower case.
+
+30
+00:01:59,030 --> 00:02:01,253
+Open the Design menu, then Widgets.
+
+31
+00:02:01,253 --> 00:02:06,295
+The Widgets and Layers page shows the zones with their widgets, and the list of layers.
+
+32
+00:02:06,295 --> 00:02:10,360
+Let's edit the Welcome layer, which has one widget and no conditions.
+
+33
+00:02:10,810 --> 00:02:11,906
+Select Edit.
+
+34
+00:02:11,906 --> 00:02:16,716
+The Rules section is empty, and the page asks for at least one condition.
+
+35
+00:02:16,716 --> 00:02:20,674
+Until you add one, the rule is never true, so the widget of
+
+36
+00:02:20,674 --> 00:02:23,170
+this layer is hidden on every page.
+
+37
+00:02:27,433 --> 00:02:30,135
+Select Add above the list of conditions.
+
+38
+00:02:30,135 --> 00:02:34,834
+The Available Rules dialog shows every condition as a card, and the Filter
+
+39
+00:02:34,834 --> 00:02:36,419
+box narrows the list.
+
+40
+00:02:36,419 --> 00:02:41,353
+The layer should show on two different pages, so let's find the Any condition.
+
+41
+00:02:41,814 --> 00:02:44,476
+Select Add on the Any condition card.
+
+42
+00:02:44,476 --> 00:02:49,491
+Name the group Home or About, so the rule reads clearly, and select Create.
+
+43
+00:02:49,491 --> 00:02:53,144
+The group joins the rule, and it holds no conditions.
+
+44
+00:02:57,338 --> 00:03:01,165
+Select Add on the group itself, not the one above the list, so
+
+45
+00:03:01,165 --> 00:03:03,979
+the condition you add goes inside the group.
+
+46
+00:03:03,979 --> 00:03:08,088
+Filter for homepage, and select Add on the Homepage condition card.
+
+47
+00:03:08,554 --> 00:03:12,088
+The editor offers Is homepage and Is not homepage.
+
+48
+00:03:12,088 --> 00:03:17,074
+Is homepage is already selected, which is what we need, so select Create.
+
+49
+00:03:17,533 --> 00:03:21,572
+Select Add on the group again, and choose the Url condition card.
+
+50
+00:03:21,572 --> 00:03:24,473
+Its editor asks for an operation and a value.
+
+51
+00:03:24,940 --> 00:03:30,799
+Choose Starts with as the operation, type /about as the value, and select Create.
+
+52
+00:03:30,799 --> 00:03:36,120
+The condition is true for any page whose address path begins with /about.
+
+53
+00:03:36,607 --> 00:03:41,287
+The group lists both conditions, and it needs only one of them to be true.
+
+54
+00:03:45,527 --> 00:03:47,109
+Let's look at the site.
+
+55
+00:03:47,109 --> 00:03:51,966
+Each condition was saved when we selected Create, so the layer needs no other save.
+
+56
+00:03:51,966 --> 00:03:57,477
+On the home page, the Welcome note appears, because the home page meets the Homepage condition.
+
+57
+00:03:57,943 --> 00:03:59,808
+Select About in the menu.
+
+58
+00:03:59,808 --> 00:04:04,923
+The note appears here too, because the address of this page starts with /about.
+
+59
+00:04:05,402 --> 00:04:07,328
+Open one of the blog posts.
+
+60
+00:04:07,328 --> 00:04:11,940
+Its address matches neither condition, so the group is false, the rule is
+
+61
+00:04:11,940 --> 00:04:14,042
+false, and the note is hidden.
+
+62
+00:04:18,257 --> 00:04:22,052
+Back in the layer, select Add above the list of conditions.
+
+63
+00:04:22,052 --> 00:04:27,597
+This time, choose the Is authenticated condition card, which is true for signed-in users.
+
+64
+00:04:28,073 --> 00:04:31,338
+This condition has no settings, so select Create.
+
+65
+00:04:31,338 --> 00:04:34,603
+It is added to the rule itself, beside the group.
+
+66
+00:04:35,057 --> 00:04:38,697
+Conditions placed directly in the rule must all be true.
+
+67
+00:04:38,697 --> 00:04:43,041
+The group must match and the visitor must be signed in, so anonymous
+
+68
+00:04:43,041 --> 00:04:45,037
+visitors never see the note.
+
+69
+00:04:49,237 --> 00:04:52,270
+Each condition has an Edit button and a Delete button.
+
+70
+00:04:52,270 --> 00:04:55,658
+You can also drag a condition by its row to change its order,
+
+71
+00:04:55,658 --> 00:04:59,197
+or to move it into another group that already holds a condition.
+
+72
+00:04:59,947 --> 00:05:04,716
+The Content type condition only knows about content that the page shows in full.
+
+73
+00:05:04,716 --> 00:05:08,487
+It ignores widgets, so it cannot test the content of a widget.
+
+74
+00:05:09,237 --> 00:05:14,977
+To change rules, a user needs the Manage layers permission, which administrators have by default.
+
+75
+00:05:15,727 --> 00:05:18,619
+The Rules module has no screen of its own.
+
+76
+00:05:18,619 --> 00:05:23,740
+Enabling Layers in Tools, Features enables Rules with it, and the Layers module
+
+77
+00:05:23,740 --> 00:05:25,427
+shows the rule editor.
+
+78
+00:05:27,427 --> 00:05:30,676
+A rule is a list of conditions that must all be true, and
+
+79
+00:05:30,676 --> 00:05:33,049
+the All and Any groups let you mix them.
+
+80
+00:05:33,049 --> 00:05:36,866
+Build rules on the edit page of a layer, and check them on the site.
+
+81
+00:05:36,866 --> 00:05:38,207
+Thanks for watching.
+

@@ -1,0 +1,40 @@
+{
+  "steps": [
+    {
+      "name": "Layers",
+      "Layers": [
+        {
+          "Name": "Welcome",
+          "Description": "A note for the pages a visitor starts from.",
+          "LayerRule": {
+            "Conditions": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "content",
+      "data": [
+        {
+          "ContentItemId": "4n3v6q8w2r5t7y9k1m0p3x5zbc",
+          "ContentType": "Paragraph",
+          "DisplayText": "Welcome note",
+          "Latest": true,
+          "Published": true,
+          "Author": "admin",
+          "LayerMetadata": {
+            "Layer": "Welcome",
+            "Zone": "Content",
+            "RenderTitle": true,
+            "Position": 1
+          },
+          "Paragraph": {
+            "Content": {
+              "Html": "<p>First time here? The About page tells you who writes this blog.</p>"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
