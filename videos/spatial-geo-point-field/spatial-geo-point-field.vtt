@@ -1,0 +1,182 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.616
+Some content belongs on a map, such as a shop, an office, or a venue.
+
+00:00:05.616 --> 00:00:09.616
+The Geo Point field stores that location on a content item.
+
+00:00:09.616 --> 00:00:14.970
+In this video, you enable the Spatial feature, add the field, and set a location.
+
+00:00:19.570 --> 00:00:22.497
+A shop, an office, or a venue has a place.
+
+00:00:22.497 --> 00:00:26.826
+A Geo Point field keeps that place on the content item itself, as
+
+00:00:26.826 --> 00:00:30.180
+numbers that an editor can type or pick on a map.
+
+00:00:30.930 --> 00:00:33.207
+The field stores two numbers:
+
+00:00:33.207 --> 00:00:35.354
+a latitude and a longitude.
+
+00:00:35.354 --> 00:00:40.169
+The Latitude box takes values from minus 90 to 90, and the Longitude
+
+00:00:40.169 --> 00:00:42.251
+box from minus 180 to 180.
+
+00:00:42.251 --> 00:00:45.830
+Both can stay empty unless the field is required.
+
+00:00:46.580 --> 00:00:48.790
+The editor comes in two forms.
+
+00:00:48.790 --> 00:00:53.334
+Standard shows the two boxes, and Leaflet editor adds a map, where a
+
+00:00:53.334 --> 00:00:55.237
+click fills in the boxes.
+
+00:00:55.237 --> 00:01:00.640
+The map background comes from OpenStreetMap, so the browser needs internet access.
+
+00:01:04.850 --> 00:01:08.108
+Let's open Tools, Features, and search for Spatial.
+
+00:01:08.108 --> 00:01:11.308
+Its row lists the features it depends on directly:
+
+00:01:11.308 --> 00:01:13.080
+Content Types and Lucene.
+
+00:01:13.540 --> 00:01:14.913
+Let's select Enable.
+
+00:01:14.913 --> 00:01:18.185
+A message confirms that the feature Spatial was enabled.
+
+00:01:18.185 --> 00:01:21.510
+Lucene is enabled with it, because Spatial depends on it.
+
+00:01:25.744 --> 00:01:29.250
+Let's open Design, Content Definition, Content Types.
+
+00:01:29.250 --> 00:01:33.884
+We add the field to the Page content type, so we select Edit on its row.
+
+00:01:34.344 --> 00:01:36.794
+Under Fields, we select Add Field.
+
+00:01:36.794 --> 00:01:41.876
+We type Location as the Display Name, and the Technical Name follows from it.
+
+00:01:41.876 --> 00:01:45.244
+Then we choose Geo Point Field as the Field Type.
+
+00:01:45.724 --> 00:01:47.683
+We select Save & Configure.
+
+00:01:47.683 --> 00:01:53.622
+The field's settings include Required, which makes both coordinates mandatory, and Hint, which
+
+00:01:53.622 --> 00:01:57.244
+shows help text under the Latitude and Longitude boxes.
+
+00:01:57.702 --> 00:02:02.180
+Each box is labeled only Latitude or Longitude, so a hint tells editors
+
+00:02:02.180 --> 00:02:04.332
+which location the field holds.
+
+00:02:04.332 --> 00:02:06.892
+Let's check Required and write a hint.
+
+00:02:07.349 --> 00:02:12.594
+Further down the settings page, the editor list offers Standard, with two number
+
+00:02:12.594 --> 00:02:15.643
+boxes, and Leaflet editor, which adds a map.
+
+00:02:15.643 --> 00:02:18.509
+We choose Leaflet editor and select Save.
+
+00:02:18.971 --> 00:02:23.165
+Back on the Page content type, the Location field is listed as a
+
+00:02:23.165 --> 00:02:26.701
+Geo Point Field, with a Leaflet badge for its editor.
+
+00:02:30.951 --> 00:02:35.410
+Let's open Content, Content Items, select New, and choose Page.
+
+00:02:35.410 --> 00:02:37.671
+We type Find Us as the title.
+
+00:02:39.838 --> 00:02:42.420
+We scroll down below the page content.
+
+00:02:42.420 --> 00:02:46.528
+The field shows a Latitude box, a Longitude box, and a map, with
+
+00:02:46.528 --> 00:02:48.288
+the hint under each box.
+
+00:02:48.831 --> 00:02:51.139
+Clicking the map chooses a place.
+
+00:02:51.139 --> 00:02:55.164
+The boxes fill in with six decimal places, and a marker with a
+
+00:02:55.164 --> 00:02:56.821
+popup shows the point.
+
+00:02:57.355 --> 00:03:01.838
+To be exact, we type the values ourselves, and the marker follows what we type.
+
+00:03:01.838 --> 00:03:04.265
+Let's enter the coordinates of our shop.
+
+00:03:04.764 --> 00:03:06.072
+We select Publish.
+
+00:03:06.072 --> 00:03:10.544
+A message confirms that your Page has been published, and the list shows it.
+
+00:03:14.844 --> 00:03:17.208
+We select Edit on the Find Us row.
+
+00:03:17.208 --> 00:03:22.884
+Because the field has values, the map opens centered on the saved location, with a marker.
+
+00:03:23.350 --> 00:03:25.803
+Back in the list, we select View.
+
+00:03:25.803 --> 00:03:28.445
+The site shows the location as text:
+
+00:03:28.445 --> 00:03:33.290
+the latitude, a comma, and the longitude, each with six decimal places.
+
+00:03:37.490 --> 00:03:42.140
+The location is stored with the content item and shown on the site as text.
+
+00:03:42.140 --> 00:03:46.561
+When the content type belongs to a Lucene index and the field's setting
+
+00:03:46.561 --> 00:03:52.130
+Include this element in the index is checked, developers can search by area or by distance.
+
+00:03:54.130 --> 00:03:58.309
+The Geo Point field keeps a location with a content item, entered as
+
+00:03:58.309 --> 00:04:00.511
+two numbers or by clicking a map.
+
+00:04:00.511 --> 00:04:01.980
+Thanks for watching.
+
