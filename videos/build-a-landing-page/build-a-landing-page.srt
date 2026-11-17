@@ -1,0 +1,360 @@
+1
+00:00:01,000 --> 00:00:04,137
+A landing page presents one offer on one page.
+
+2
+00:00:04,137 --> 00:00:08,541
+In this video, you build one from blocks with the Flows module, and
+
+3
+00:00:08,541 --> 00:00:12,040
+then use a layer to show a widget only on that page.
+
+4
+00:00:12,040 --> 00:00:15,660
+Along the way, you meet widgets, zones and conditions.
+
+5
+00:00:20,260 --> 00:00:24,136
+The Flows module adds a Flow to a content type, such as a page.
+
+6
+00:00:24,136 --> 00:00:27,956
+A Flow holds the blocks of that one page, and you arrange them
+
+7
+00:00:27,956 --> 00:00:29,360
+in the page editor.
+
+8
+00:00:30,110 --> 00:00:31,831
+Each block is a widget:
+
+9
+00:00:31,831 --> 00:00:35,749
+a content item whose content type has the Widget stereotype.
+
+10
+00:00:35,749 --> 00:00:40,081
+Widgets can also go into zones, the named places of a theme layout,
+
+11
+00:00:40,081 --> 00:00:42,040
+such as Content and Footer.
+
+12
+00:00:42,790 --> 00:00:46,024
+The Layers module decides where those widgets show.
+
+13
+00:00:46,024 --> 00:00:49,541
+A layer has a name and a rule, and its widgets appear on
+
+14
+00:00:49,541 --> 00:00:51,810
+every page where the rule is true.
+
+15
+00:00:56,110 --> 00:00:59,423
+In the admin menu, open Content, Content Items.
+
+16
+00:00:59,423 --> 00:01:01,174
+Select New, then Page.
+
+17
+00:01:01,174 --> 00:01:07,800
+Enter the title Spring Workshop and the permalink spring-workshop, which is the address of the page.
+
+18
+00:01:08,270 --> 00:01:12,359
+Below the permalink, the Flow holds the blocks of the page.
+
+19
+00:01:12,359 --> 00:01:17,328
+Select the plus button, Add Widget, to list the widget types of the site:
+
+20
+00:01:17,328 --> 00:01:21,040
+Blockquote, Container, Image, Paragraph and Raw Html.
+
+21
+00:01:21,504 --> 00:01:25,753
+Choose Paragraph, and type the opening text of the page in Content.
+
+22
+00:01:25,753 --> 00:01:29,014
+The card has its own size menu and alignment menu.
+
+23
+00:01:29,475 --> 00:01:31,965
+The size menu shows 100%.
+
+24
+00:01:31,965 --> 00:01:36,865
+Choose 50%, and the card narrows to half of the editor.
+
+25
+00:01:37,359 --> 00:01:42,231
+Add a second block, a Blockquote, and type a customer quote in Quote.
+
+26
+00:01:42,231 --> 00:01:47,559
+Set its size to 50% as well, then open the alignment menu and choose Center.
+
+27
+00:01:54,019 --> 00:01:58,028
+Drag the Blockquote card by its handle to the left of the Paragraph card.
+
+28
+00:01:58,028 --> 00:02:01,479
+The order of the cards is the order of the blocks on the page.
+
+29
+00:02:01,930 --> 00:02:03,205
+Select Publish.
+
+30
+00:02:03,205 --> 00:02:07,090
+A notification confirms that your Page has been published.
+
+31
+00:02:07,541 --> 00:02:09,383
+Open the address of the page.
+
+32
+00:02:09,383 --> 00:02:12,854
+The title is in the page header, and the two blocks sit side
+
+33
+00:02:12,854 --> 00:02:15,221
+by side below it, with the quote first.
+
+34
+00:02:19,521 --> 00:02:21,010
+Open Design, Widgets.
+
+35
+00:02:21,010 --> 00:02:24,815
+The Widgets and Layers page lists the zones on the left and the
+
+36
+00:02:24,815 --> 00:02:26,248
+layers on the right.
+
+37
+00:02:26,248 --> 00:02:31,541
+This site was set up with the Blog recipe, which provides two layers, Always and Homepage.
+
+38
+00:02:31,992 --> 00:02:33,827
+Select Edit on Always.
+
+39
+00:02:33,827 --> 00:02:39,527
+Its rule is one Boolean condition set to true, so its widgets show on every page.
+
+40
+00:02:39,527 --> 00:02:43,392
+The Homepage layer uses a Homepage condition instead.
+
+41
+00:02:43,843 --> 00:02:47,803
+Back on the Widgets and Layers page, select Add under Layers.
+
+42
+00:02:47,803 --> 00:02:52,293
+Enter the name Workshop, write a short description, and select Create.
+
+43
+00:02:52,746 --> 00:02:56,963
+The layer is saved, and its page asks for at least one condition.
+
+44
+00:02:56,963 --> 00:03:00,468
+Without a condition, a layer never shows its widgets.
+
+45
+00:03:00,468 --> 00:03:03,616
+Select Add to open the list of available rules.
+
+46
+00:03:04,079 --> 00:03:08,760
+The Available Rules dialog lists a card for each condition, such as Boolean
+
+47
+00:03:08,760 --> 00:03:15,291
+condition, Content type condition, Culture condition, Homepage condition, Role condition and Url condition.
+
+48
+00:03:15,291 --> 00:03:18,239
+The Filter box narrows the cards as you type.
+
+49
+00:03:18,815 --> 00:03:22,885
+Type Url in the Filter box, and choose the Url condition.
+
+50
+00:03:22,885 --> 00:03:28,375
+Keep the operation Equals, enter the value /spring-workshop, and select Create.
+
+51
+00:03:28,375 --> 00:03:30,765
+The condition is saved at once.
+
+52
+00:03:31,293 --> 00:03:33,309
+The rule lists its condition.
+
+53
+00:03:33,309 --> 00:03:37,167
+When a rule has several conditions, all of them must be true.
+
+54
+00:03:37,167 --> 00:03:40,103
+A separate video covers the other conditions.
+
+55
+00:03:44,403 --> 00:03:46,071
+Open Settings, Zones.
+
+56
+00:03:46,071 --> 00:03:51,135
+Available zones for Layers holds a comma separated list, and the Blog recipe
+
+57
+00:03:51,135 --> 00:03:53,543
+fills it with Content and Footer.
+
+58
+00:03:53,998 --> 00:03:57,657
+The hint under the field reminds you that the theme layout has to
+
+59
+00:03:57,657 --> 00:04:01,058
+render each zone, because zones do not render automatically.
+
+60
+00:04:05,358 --> 00:04:09,023
+Back on Design, Widgets, each zone has an Add Widget button.
+
+61
+00:04:09,023 --> 00:04:13,132
+The Footer zone already holds the footer widget of the Always layer.
+
+62
+00:04:13,132 --> 00:04:16,298
+Open Add Widget in that zone, and choose Paragraph.
+
+63
+00:04:17,336 --> 00:04:22,473
+Enter a title, and check Render title so that the title appears with the widget.
+
+64
+00:04:22,473 --> 00:04:24,921
+In The layer list, select Workshop.
+
+65
+00:04:24,921 --> 00:04:28,206
+The layer controls the visibility of this widget.
+
+66
+00:04:31,905 --> 00:04:35,311
+Type a short message in Content, and select Publish.
+
+67
+00:04:35,311 --> 00:04:38,248
+Only a published widget appears on the site.
+
+68
+00:04:38,248 --> 00:04:40,185
+A draft stays in the admin.
+
+69
+00:04:40,652 --> 00:04:44,414
+The widget is listed in the Footer zone, tagged with its layer.
+
+70
+00:04:44,414 --> 00:04:49,102
+Check Workshop in the layer list, and the widgets of that layer are highlighted.
+
+71
+00:04:49,671 --> 00:04:53,939
+Drag the widget above the Footer widget to change the order in the zone.
+
+72
+00:04:53,939 --> 00:04:57,331
+The position is saved at once, and an Undo link appears.
+
+73
+00:05:01,631 --> 00:05:03,162
+Open the landing page.
+
+74
+00:05:03,162 --> 00:05:07,538
+The footer shows the widget of the Workshop layer, with its title, because
+
+75
+00:05:07,538 --> 00:05:09,671
+the rule is true at this address.
+
+76
+00:05:10,160 --> 00:05:11,418
+Open the homepage.
+
+77
+00:05:11,418 --> 00:05:15,141
+The rule is false there, so the widget does not appear, while the
+
+78
+00:05:15,141 --> 00:05:17,500
+footer widget of the Always layer does.
+
+79
+00:05:17,955 --> 00:05:22,919
+Every widget of the Workshop layer follows this rule, in whichever zone it sits.
+
+80
+00:05:22,919 --> 00:05:27,075
+To show a widget on other pages, create a layer with its own rule.
+
+81
+00:05:31,275 --> 00:05:34,231
+Use a Flow for content that belongs to one page.
+
+82
+00:05:34,231 --> 00:05:37,954
+Its blocks are stored in the page and edited with it, like the
+
+83
+00:05:37,954 --> 00:05:40,035
+two blocks of the workshop page.
+
+84
+00:05:40,785 --> 00:05:43,835
+Use a layer for content that appears on many pages.
+
+85
+00:05:43,835 --> 00:05:48,383
+Its widgets are separate content items, edited from the Widgets page, and shown
+
+86
+00:05:48,383 --> 00:05:50,095
+wherever the rule is true.
+
+87
+00:05:52,095 --> 00:05:53,561
+That's a landing page:
+
+88
+00:05:53,561 --> 00:05:56,966
+a Flow arranges the blocks of one page, and a layer shows a
+
+89
+00:05:56,966 --> 00:05:59,113
+widget only where its rule is true.
+
+90
+00:05:59,113 --> 00:06:00,475
+Thanks for watching.
+
