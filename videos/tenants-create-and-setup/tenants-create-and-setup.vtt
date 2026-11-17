@@ -1,0 +1,263 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.741
+A tenant is a separate site that runs inside the same Orchard Core application.
+
+00:00:05.741 --> 00:00:09.925
+In this video you add a tenant from the administration of the Default
+
+00:00:09.925 --> 00:00:15.280
+tenant, the first site of the application, finish its setup, and open the site it creates.
+
+00:00:19.880 --> 00:00:22.067
+Adding a tenant takes two stages.
+
+00:00:22.067 --> 00:00:23.526
+First you create it:
+
+00:00:23.526 --> 00:00:27.732
+the Default tenant saves the name, the address and the presets of the
+
+00:00:27.732 --> 00:00:31.210
+tenant, and the tenant waits in the Uninitialized state.
+
+00:00:31.960 --> 00:00:33.258
+Then you set it up.
+
+00:00:33.258 --> 00:00:36.581
+The Setup screen asks for the name of the site and a super
+
+00:00:36.581 --> 00:00:39.437
+user, prepares the database, and runs the recipe.
+
+00:00:39.437 --> 00:00:41.150
+The tenant ends up Running.
+
+00:00:41.900 --> 00:00:45.432
+The Tenants feature is available on the Default tenant only.
+
+00:00:45.432 --> 00:00:51.640
+Its Multi-Tenancy menu appears for users with the Manage tenants permission, which the Administrator role has.
+
+00:00:55.876 --> 00:01:01.000
+In the administration of the Default tenant, open Multi-Tenancy, Tenants.
+
+00:01:01.000 --> 00:01:03.660
+The list holds one tenant, Default.
+
+00:01:03.660 --> 00:01:05.216
+Select Add Tenant.
+
+00:01:05.667 --> 00:01:08.584
+The Create Tenant form starts with the Name.
+
+00:01:08.584 --> 00:01:09.809
+Type Maplewood.
+
+00:01:09.809 --> 00:01:15.527
+The name identifies the tenant, it can't contain spaces, and it can't be changed afterwards.
+
+00:01:15.981 --> 00:01:19.131
+Category and Description are for your own use.
+
+00:01:19.131 --> 00:01:23.130
+The list shows both, and a Category filter narrows the list.
+
+00:01:23.130 --> 00:01:26.281
+Let's enter Customers and a short description.
+
+00:01:26.746 --> 00:01:31.330
+Url Prefix and Hostname decide which requests reach the tenant.
+
+00:01:31.330 --> 00:01:35.981
+A prefix adds a segment to the address, and a hostname gives the
+
+00:01:35.981 --> 00:01:37.841
+tenant its own domain.
+
+00:01:37.841 --> 00:01:40.166
+Type maplewood as the prefix.
+
+00:01:40.621 --> 00:01:44.827
+Two tenants can't share the same combination of prefix and hostname.
+
+00:01:44.827 --> 00:01:49.261
+The Default tenant has neither, so Maplewood needs at least one of them.
+
+00:01:49.728 --> 00:01:52.005
+Recipe lists the setup recipes.
+
+00:01:52.005 --> 00:01:57.236
+Choose Blog to preset the choice, so the Setup screen doesn't ask for a recipe.
+
+00:01:57.236 --> 00:02:01.298
+Left on Select a recipe, whoever sets up the tenant chooses.
+
+00:02:01.750 --> 00:02:05.548
+Database Presets say where the tenant keeps its data.
+
+00:02:05.548 --> 00:02:10.698
+With Sql Server, MySql or Postgres, you can enter a Connection string, and
+
+00:02:10.698 --> 00:02:14.110
+a Table Prefix lets tenants share one database.
+
+00:02:14.568 --> 00:02:19.455
+Sqlite needs neither, so the Connection string, Table Prefix and Table Schema fields
+
+00:02:19.455 --> 00:02:21.355
+disappear when you choose it.
+
+00:02:21.355 --> 00:02:25.047
+You can also leave the type on None, and then the Setup screen
+
+00:02:25.047 --> 00:02:26.568
+asks for the database.
+
+00:02:27.019 --> 00:02:30.164
+Create saves the tenant and returns to the list.
+
+00:02:30.164 --> 00:02:34.649
+Create & Setup saves it and opens its Setup screen straight away, which
+
+00:02:34.649 --> 00:02:36.279
+a later chapter shows.
+
+00:02:40.499 --> 00:02:46.505
+Maplewood appears with its category, its description, the Sqlite database, the Blog recipe
+
+00:02:46.505 --> 00:02:48.632
+and the state Uninitialized.
+
+00:02:48.632 --> 00:02:53.199
+Uninitialized means the tenant is saved, but its setup has not run.
+
+00:02:53.725 --> 00:02:57.444
+Setup and the name of the tenant both open its Setup screen.
+
+00:02:57.444 --> 00:03:01.276
+Their link carries a token that is valid for 24 hours, and the
+
+00:03:01.276 --> 00:03:03.980
+Setup screen answers Not Found without it.
+
+00:03:03.980 --> 00:03:06.685
+Loading the list again makes a fresh link.
+
+00:03:10.985 --> 00:03:12.997
+Select Setup in the Maplewood row.
+
+00:03:12.997 --> 00:03:15.914
+The first question is What is the name of your site?
+
+00:03:15.914 --> 00:03:17.322
+Type Maplewood Bakery:
+
+00:03:17.322 --> 00:03:19.485
+it is the default title of the pages.
+
+00:03:19.971 --> 00:03:26.135
+This screen has no Recipe and no database questions, because the tenant already has those presets.
+
+00:03:26.135 --> 00:03:30.461
+Without them, the screen would ask for the recipe and the database.
+
+00:03:30.927 --> 00:03:35.478
+Default Time Zone sets how dates and times are displayed and edited in the site.
+
+00:03:35.478 --> 00:03:39.447
+It starts as the time zone of the server, and you can choose another.
+
+00:03:39.912 --> 00:03:44.517
+The Super User is the first user of the tenant, and has all the rights.
+
+00:03:44.517 --> 00:03:49.003
+Enter a User Name, an Email and a Password, and confirm the password.
+
+00:03:49.003 --> 00:03:52.412
+Use this user only for setup and disaster recovery.
+
+00:03:52.882 --> 00:03:55.665
+The Finish Setup button starts the work.
+
+00:03:55.665 --> 00:04:00.324
+Setup prepares the database and runs the recipe, and while it runs, the
+
+00:04:00.324 --> 00:04:04.862
+tenant is Initializing and answers requests with Service Unavailable.
+
+00:04:05.338 --> 00:04:07.033
+Let's select Finish Setup.
+
+00:04:07.033 --> 00:04:10.739
+When Setup is done, the browser opens the home page of the site.
+
+00:04:10.739 --> 00:04:14.075
+It is a blog with a sample post, and the name you entered
+
+00:04:14.075 --> 00:04:15.398
+appears at the top.
+
+00:04:19.665 --> 00:04:25.034
+In the list, Maplewood is Running, and its row offers View, Disable, Reload
+
+00:04:25.034 --> 00:04:27.420
+and Features instead of Setup.
+
+00:04:27.420 --> 00:04:31.065
+A separate video covers managing running tenants.
+
+00:04:31.518 --> 00:04:32.628
+Select View.
+
+00:04:32.628 --> 00:04:34.849
+The site opens in another tab.
+
+00:04:34.849 --> 00:04:39.291
+A tenant is a separate site with its own content, theme and users,
+
+00:04:39.291 --> 00:04:42.438
+although it runs inside the same application.
+
+00:04:42.898 --> 00:04:47.811
+Open the Admin address of Maplewood, which is its prefix followed by Admin.
+
+00:04:47.811 --> 00:04:52.299
+It leads to a sign-in page, because Setup creates the super user but
+
+00:04:52.299 --> 00:04:54.058
+doesn't sign anyone in.
+
+00:04:58.258 --> 00:05:03.000
+Create & Setup saves the tenant and goes straight to its Setup screen,
+
+00:05:03.000 --> 00:05:04.809
+so the list is skipped.
+
+00:05:04.809 --> 00:05:10.548
+Let's add Riverside with a prefix, the Blog recipe and Sqlite, the same way as before.
+
+00:05:11.012 --> 00:05:12.692
+Select Create & Setup.
+
+00:05:12.692 --> 00:05:17.312
+The tenant is saved, and its Setup screen opens straight away, with the
+
+00:05:17.312 --> 00:05:19.412
+token already in the address.
+
+00:05:19.412 --> 00:05:23.132
+It is the same screen, so the setup continues as before.
+
+00:05:25.132 --> 00:05:27.045
+Adding a tenant takes two stages:
+
+00:05:27.045 --> 00:05:30.282
+you create it from the Default tenant, then you set it up on
+
+00:05:30.282 --> 00:05:31.607
+its own Setup screen.
+
+00:05:31.607 --> 00:05:32.882
+Thanks for watching.
+
