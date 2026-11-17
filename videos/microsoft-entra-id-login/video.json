@@ -50,5 +50,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Microsoft.Authentication.AzureAD"
-  }
+  },
+  "length": "6:18"
 }

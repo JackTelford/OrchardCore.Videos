@@ -1,0 +1,348 @@
+1
+00:00:01,000 --> 00:00:06,612
+Many organizations keep their people in Microsoft Entra ID, also known as Azure Active Directory.
+
+2
+00:00:06,612 --> 00:00:10,863
+The Microsoft Entra ID feature lets those people sign in to your Orchard
+
+3
+00:00:10,863 --> 00:00:12,715
+Core site with that account.
+
+4
+00:00:12,715 --> 00:00:15,930
+Let's connect the two and look at the sign-in button.
+
+5
+00:00:20,530 --> 00:00:25,297
+With this feature, people enter their credentials at Microsoft, not on your site.
+
+6
+00:00:25,297 --> 00:00:29,352
+The login page shows a button, and selecting it sends the browser to
+
+7
+00:00:29,352 --> 00:00:31,160
+the Microsoft sign-in page.
+
+8
+00:00:31,910 --> 00:00:37,235
+Microsoft then sends the browser back to a path on your site, the callback path.
+
+9
+00:00:37,235 --> 00:00:42,250
+From what Microsoft reports, Orchard Core decides which user the person is.
+
+10
+00:00:46,450 --> 00:00:51,048
+In the Azure portal, open App registrations and select New registration.
+
+11
+00:00:51,048 --> 00:00:55,115
+Name the app, choose the account types, and add a redirect URI:
+
+12
+00:00:55,115 --> 00:00:58,710
+the address of your site followed by the callback path.
+
+13
+00:00:59,460 --> 00:01:04,742
+When the app exists, the portal shows two values that Orchard Core needs:
+
+14
+00:01:04,742 --> 00:01:09,020
+the Application (client) ID and the Directory (tenant) ID.
+
+15
+00:01:09,020 --> 00:01:10,090
+Copy both.
+
+16
+00:01:10,840 --> 00:01:16,940
+Under Authentication, in the section for implicit grant and hybrid flows, enable Access
+
+17
+00:01:16,940 --> 00:01:18,711
+tokens and ID tokens.
+
+18
+00:01:18,711 --> 00:01:21,860
+The reference documentation asks for both.
+
+19
+00:01:22,610 --> 00:01:28,652
+Under Token configuration, select Add optional claim, choose the ID token type, and
+
+20
+00:01:28,652 --> 00:01:30,418
+add the email claim.
+
+21
+00:01:30,418 --> 00:01:36,460
+Without it, Orchard Core cannot match a login to an existing user by email address.
+
+22
+00:01:40,660 --> 00:01:44,984
+The audience you choose in the portal and the tenant ID you enter
+
+23
+00:01:44,984 --> 00:01:47,055
+in Orchard Core go together.
+
+24
+00:01:47,055 --> 00:01:52,780
+The Directory (tenant) ID of your own directory allows only its user and guest accounts.
+
+25
+00:01:53,530 --> 00:01:59,553
+The word organizations allows work or school accounts from any Microsoft Entra directory.
+
+26
+00:01:59,553 --> 00:02:03,040
+The word common adds personal Microsoft accounts.
+
+27
+00:02:03,040 --> 00:02:06,590
+Both widen the audience, so choose them with care.
+
+28
+00:02:10,811 --> 00:02:15,231
+In the admin, open Tools, Features, and search for Entra ID.
+
+29
+00:02:15,231 --> 00:02:23,871
+The feature is called Microsoft Entra ID (Azure Active Directory) Authentication, in the Microsoft Authentication category.
+
+30
+00:02:24,322 --> 00:02:25,436
+Select Enable.
+
+31
+00:02:25,436 --> 00:02:30,616
+Orchard Core also enables External Authentication, which this feature depends on, and a
+
+32
+00:02:30,616 --> 00:02:33,512
+message confirms that the feature was enabled.
+
+33
+00:02:37,716 --> 00:02:42,154
+Open Settings, Security, Authentication, Microsoft Entra ID.
+
+34
+00:02:42,154 --> 00:02:49,886
+A notice warns that the website might be restarted upon saving the settings, with temporary unresponsiveness.
+
+35
+00:02:50,343 --> 00:02:53,226
+Display Name is the text of the sign-in button.
+
+36
+00:02:53,226 --> 00:02:58,068
+A name that mentions your organization and Microsoft, such as Maple Works Microsoft
+
+37
+00:02:58,068 --> 00:03:00,733
+account, tells people which account to use.
+
+38
+00:03:01,196 --> 00:03:07,350
+AppId takes the Application (client) ID, and TenantId takes the Directory (tenant) ID,
+
+39
+00:03:07,350 --> 00:03:09,558
+both from the Azure portal.
+
+40
+00:03:09,558 --> 00:03:12,701
+The values in this recording are made up.
+
+41
+00:03:12,701 --> 00:03:16,246
+These two fields and Display Name are required.
+
+42
+00:03:16,723 --> 00:03:18,484
+CallbackPath is optional.
+
+43
+00:03:18,484 --> 00:03:22,291
+Leave it empty to use the default path shown in the field, or
+
+44
+00:03:22,291 --> 00:03:24,791
+enter a path that starts with a slash.
+
+45
+00:03:24,791 --> 00:03:28,313
+It must match the redirect URI registered in the portal.
+
+46
+00:03:28,791 --> 00:03:33,033
+Store tokens keeps the external authentication tokens for reuse.
+
+47
+00:03:33,033 --> 00:03:35,821
+It is optional, and we leave it cleared.
+
+48
+00:03:36,287 --> 00:03:37,430
+Select Save.
+
+49
+00:03:37,430 --> 00:03:44,347
+The message Site settings updated successfully appears, and the site may restart to apply the settings.
+
+50
+00:03:48,647 --> 00:03:51,656
+Signed out, the login page shows two sections.
+
+51
+00:03:51,656 --> 00:03:54,145
+The local Log in form is on the left.
+
+52
+00:03:54,145 --> 00:03:58,079
+On the right, Use another service to log in has a button named
+
+53
+00:03:58,079 --> 00:03:59,757
+after the Display Name.
+
+54
+00:04:00,235 --> 00:04:05,565
+The button appears only when the feature is enabled and Display Name, AppId
+
+55
+00:04:05,565 --> 00:04:07,605
+and TenantId are all set.
+
+56
+00:04:08,065 --> 00:04:12,179
+Selecting the button sends the browser to Microsoft to sign in.
+
+57
+00:04:12,179 --> 00:04:17,665
+We stop here, because completing the sign-in needs a real account in a real directory.
+
+58
+00:04:21,865 --> 00:04:26,319
+When Microsoft sends the person back, Orchard Core first looks for a user
+
+59
+00:04:26,319 --> 00:04:28,969
+already linked to that Microsoft account.
+
+60
+00:04:28,969 --> 00:04:32,521
+If there is one, the person is signed in as that user, as
+
+61
+00:04:32,521 --> 00:04:35,115
+long as that user is allowed to sign in.
+
+62
+00:04:35,865 --> 00:04:39,446
+If no user is linked, Orchard Core looks for a user with the
+
+63
+00:04:39,446 --> 00:04:41,779
+email address that Microsoft reports.
+
+64
+00:04:41,779 --> 00:04:46,663
+The person sees Link your account, enters that account's local password, and selects
+
+65
+00:04:46,663 --> 00:04:48,345
+Register to link the two.
+
+66
+00:04:49,095 --> 00:04:53,558
+If no user matches, a local account is created, with the details the
+
+67
+00:04:53,558 --> 00:04:56,273
+external registration settings ask for.
+
+68
+00:04:56,273 --> 00:05:01,400
+If those settings disable new registrations, the person sees a message that New
+
+69
+00:05:01,400 --> 00:05:04,235
+registrations are disabled for this site.
+
+70
+00:05:04,985 --> 00:05:08,034
+Existing users can also link their account later.
+
+71
+00:05:08,034 --> 00:05:12,469
+When an external provider is enabled, the user menu has an External Logins
+
+72
+00:05:12,469 --> 00:05:15,685
+page, where they add another service to log in with.
+
+73
+00:05:16,435 --> 00:05:21,582
+Options that apply to every external provider live in two places, User Login
+
+74
+00:05:21,582 --> 00:05:24,658
+and Registration, under Settings, Security.
+
+75
+00:05:24,658 --> 00:05:26,855
+A separate video covers them.
+
+76
+00:05:31,055 --> 00:05:34,949
+The Orchard Core guide for Microsoft Entra ID adds roles.
+
+77
+00:05:34,949 --> 00:05:39,461
+You create a security group in Entra ID for each Orchard Core role,
+
+78
+00:05:39,461 --> 00:05:44,715
+and in the app registration you add the groups claim under Token configuration.
+
+79
+00:05:45,465 --> 00:05:49,414
+In Orchard Core, the User Login option Use a script to set user
+
+80
+00:05:49,414 --> 00:05:54,279
+roles, user claims and user properties based on external provider claims runs a
+
+81
+00:05:54,279 --> 00:05:57,027
+script that can map those groups to roles.
+
+82
+00:05:57,027 --> 00:06:00,175
+The guide on docs.orchardcore.net has the script.
+
+83
+00:06:02,175 --> 00:06:07,002
+Microsoft Entra ID sign-in connects an app registration in Azure to the login
+
+84
+00:06:07,002 --> 00:06:08,398
+page of your site.
+
+85
+00:06:08,398 --> 00:06:13,283
+Register the app, enable the feature, enter the AppId and TenantId, and people
+
+86
+00:06:13,283 --> 00:06:15,493
+sign in with their work account.
+
+87
+00:06:15,493 --> 00:06:17,005
+Thanks for watching.
+
