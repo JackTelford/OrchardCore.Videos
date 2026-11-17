@@ -1,0 +1,220 @@
+1
+00:00:01,000 --> 00:00:05,671
+When a visitor follows a broken link, or a signed-in user lacks permission
+
+2
+00:00:05,671 --> 00:00:08,415
+for a page, the site shows an error page.
+
+3
+00:00:08,415 --> 00:00:12,093
+The Orchard Diagnostics feature draws it from a template.
+
+4
+00:00:12,093 --> 00:00:15,830
+In this video, you replace the Not Found page in two ways.
+
+5
+00:00:20,430 --> 00:00:24,449
+When a request ends with an error status, such as 404, the Orchard
+
+6
+00:00:24,449 --> 00:00:28,523
+Diagnostics feature runs the request again against the Error route.
+
+7
+00:00:28,523 --> 00:00:31,370
+The status code is the last part of the path.
+
+8
+00:00:32,120 --> 00:00:36,405
+The Error action builds a shape of type HttpError.
+
+9
+00:00:36,405 --> 00:00:42,526
+For a 404, it adds two alternates, which are more specific template names:
+
+10
+00:00:42,526 --> 00:00:49,260
+HttpError__404 for the number, and HttpError__NotFound for the name of the status.
+
+11
+00:00:50,010 --> 00:00:57,127
+The module has a view for BadRequest, Unauthorized, Forbidden, NotFound and TooManyRequests.
+
+12
+00:00:57,127 --> 00:01:03,299
+Every other status uses the fallback view, HttpError, unless you add a template
+
+13
+00:01:03,299 --> 00:01:06,930
+for it, such as HttpError__MethodNotAllowed.
+
+14
+00:01:11,159 --> 00:01:13,646
+Let's request a page that does not exist.
+
+15
+00:01:13,646 --> 00:01:17,880
+The site answers with the Not Found page of the Diagnostics feature, drawn
+
+16
+00:01:17,880 --> 00:01:20,209
+inside the layout of the active theme.
+
+17
+00:01:20,684 --> 00:01:25,156
+To preview another status, open the Error route with its code.
+
+18
+00:01:25,156 --> 00:01:27,918
+For 403, the Forbidden page appears.
+
+19
+00:01:27,918 --> 00:01:31,864
+The Users module uses this page when access is denied.
+
+20
+00:01:32,327 --> 00:01:38,069
+A status without its own view, such as 405, shows the fallback view, which reads:
+
+21
+00:01:38,069 --> 00:01:41,567
+An error occurred while executing this request.
+
+22
+00:01:45,767 --> 00:01:52,909
+To replace the page in a theme, add a view named HttpError-NotFound.cshtml to its Views folder.
+
+23
+00:01:52,909 --> 00:01:58,777
+The hyphen in the file name stands for the two underscores of the shape name.
+
+24
+00:01:59,527 --> 00:02:04,419
+A Liquid view takes the same place, when the Liquid feature is enabled.
+
+25
+00:02:04,419 --> 00:02:09,120
+Name it HttpError-NotFound.liquid, and write the markup with Liquid.
+
+26
+00:02:09,120 --> 00:02:13,947
+The t filter passes the text to localization, so it can be translated.
+
+27
+00:02:14,697 --> 00:02:17,406
+The fallback view is HttpError.
+
+28
+00:02:17,406 --> 00:02:24,360
+Its model, HttpErrorShapeViewModel, holds the Code and the HttpStatusCode of the request.
+
+29
+00:02:24,360 --> 00:02:29,117
+Both are empty when an unhandled exception led to the page.
+
+30
+00:02:33,334 --> 00:02:37,569
+You can also replace the page from the admin, without changing a theme.
+
+31
+00:02:37,569 --> 00:02:42,794
+With the Templates feature enabled, open Design, then Templates, and select Add Template.
+
+32
+00:02:43,267 --> 00:02:48,990
+The name of a template is the name of the shape, so let's type HttpError__NotFound.
+
+33
+00:02:48,990 --> 00:02:52,077
+The Content field takes a Liquid template.
+
+34
+00:02:52,527 --> 00:02:56,227
+Let's write a heading, and pass its text through the t filter so
+
+35
+00:02:56,227 --> 00:02:57,654
+it can be translated.
+
+36
+00:02:57,654 --> 00:03:00,877
+Then select Save, and the template appears in the list.
+
+37
+00:03:01,337 --> 00:03:03,565
+Let's request the missing page again.
+
+38
+00:03:03,565 --> 00:03:06,517
+It shows your heading in place of the built-in one.
+
+39
+00:03:08,117 --> 00:03:12,131
+The Templates recipe step creates templates when a recipe runs.
+
+40
+00:03:12,131 --> 00:03:15,854
+It maps each template name to its Description and Content.
+
+41
+00:03:15,854 --> 00:03:21,147
+The All Templates deployment step exports the templates of a site in the same format.
+
+42
+00:03:25,347 --> 00:03:29,475
+For a status, the names are tried in a fixed order:
+
+43
+00:03:29,475 --> 00:03:33,965
+the name of the status, then the number, then HttpError.
+
+44
+00:03:33,965 --> 00:03:39,903
+The built-in views use the names, so for 404 a template named HttpError__404
+
+45
+00:03:39,903 --> 00:03:42,727
+never replaces the built-in page.
+
+46
+00:03:43,477 --> 00:03:47,471
+For each name, a template written in the admin wins over a view
+
+47
+00:03:47,471 --> 00:03:51,927
+in the theme, and a view in the theme wins over the view of the module.
+
+48
+00:03:52,677 --> 00:03:56,565
+A path that ends in a known file extension, such as a missing
+
+49
+00:03:56,565 --> 00:04:00,337
+image, keeps its plain error status and gets no error page.
+
+50
+00:04:01,087 --> 00:04:06,110
+When the site does not run in the Development environment, an unhandled exception
+
+51
+00:04:06,110 --> 00:04:11,248
+goes to the Error route with no status code, and the HttpError view draws the page.
+
+52
+00:04:11,248 --> 00:04:14,307
+In Development, that handler is not registered.
+
+53
+00:04:16,307 --> 00:04:19,952
+Error pages are shapes, so a view in your theme or a template
+
+54
+00:04:19,952 --> 00:04:22,073
+in the admin changes any of them.
+
+55
+00:04:22,073 --> 00:04:23,487
+Thanks for watching.
+
