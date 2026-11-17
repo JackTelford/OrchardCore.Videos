@@ -4017,7 +4017,7 @@
     "docs": [
       "src/docs/reference/modules/Secrets/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 4.5,
     "words": 673,
     "contentCommit": "",
@@ -4028,7 +4028,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": "External service with no local emulator for Key Vault: plan a stand-in or keep it blocked."
+    "notes": "External service with no local emulator for Key Vault: plan a stand-in or keep it blocked. | 2026-11-17 blocked: needs a throwaway host project (a copy of Cms.Web whose Program.cs registers the Azure SecretClient) plus the Azure Key Vault Emulator in Docker with a trusted certificate; the shared build has no SecretClient, so the Azure Key Vault store cannot be enabled on it"
   },
   {
     "slug": "secrets-in-your-module",
