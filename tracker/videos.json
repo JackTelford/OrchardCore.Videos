@@ -5854,12 +5854,12 @@
     "docs": [
       "src/docs/reference/modules/BackgroundTasks/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 5.9,
     "words": 888,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
