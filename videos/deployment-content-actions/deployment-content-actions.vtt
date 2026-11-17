@@ -1,0 +1,215 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.478
+Moving content to another Orchard Core site can start on the content items list.
+
+00:00:04.478 --> 00:00:06.420
+Three actions there export a content item:
+
+00:00:06.420 --> 00:00:09.089
+download it as JSON, add it to a deployment plan, or send it
+
+00:00:09.089 --> 00:00:10.262
+to a deployment target.
+
+00:00:10.262 --> 00:00:11.920
+Let's enable them and try each one.
+
+00:00:16.520 --> 00:00:21.227
+Three features add actions to the Actions menu of a content item.
+
+00:00:21.227 --> 00:00:26.067
+View Or Download Content As JSON shows the item as a JSON document,
+
+00:00:26.067 --> 00:00:27.990
+and saves it as a file.
+
+00:00:28.740 --> 00:00:33.732
+Add Content To Deployment Plan puts a Content Item step in a plan you choose.
+
+00:00:33.732 --> 00:00:36.800
+Each time the plan runs, it exports the item.
+
+00:00:37.550 --> 00:00:42.370
+Export Content To Deployment Target sends the items you select once, through a
+
+00:00:42.370 --> 00:00:44.379
+target such as File Download.
+
+00:00:44.379 --> 00:00:47.650
+It uses one plan, which you choose in the settings.
+
+00:00:48.400 --> 00:00:52.119
+The actions appear for users with the Export Data permission.
+
+00:00:52.119 --> 00:00:55.339
+Adding to a plan also needs Manage deployment plans.
+
+00:00:55.339 --> 00:00:57.060
+Administrators have both.
+
+00:01:01.274 --> 00:01:05.707
+Let's open Tools, Features, and search for content items list.
+
+00:01:05.707 --> 00:01:07.467
+Three features match:
+
+00:01:07.467 --> 00:01:12.812
+View Or Download Content As JSON, Add Content To Deployment Plan, and Export
+
+00:01:12.812 --> 00:01:15.094
+Content To Deployment Target.
+
+00:01:15.578 --> 00:01:22.135
+Each lists Deployment among its dependencies, and enabling a feature enables its dependencies too.
+
+00:01:22.135 --> 00:01:26.358
+Let's select the three, open Bulk Actions, and choose Enable.
+
+00:01:26.853 --> 00:01:31.654
+When the page reloads, each of the three rows shows the Enabled badge.
+
+00:01:31.654 --> 00:01:36.643
+The export action also uses a deployment plan, which the settings choose.
+
+00:01:40.934 --> 00:01:46.996
+On the content items list, let's open the Actions menu of Apple Harvest Schedule.
+
+00:01:46.996 --> 00:01:53.754
+After a divider, below Unpublish, Delete and Clone, come View as JSON and Download as JSON.
+
+00:01:54.210 --> 00:01:58.357
+View as JSON opens the item in a text editor, under the title
+
+00:01:58.357 --> 00:02:00.028
+View As JSON Article.
+
+00:02:00.028 --> 00:02:04.360
+The editor shows the content item with all its parts and fields.
+
+00:02:04.815 --> 00:02:09.607
+Download saves the document as a file named after the item's identifier.
+
+00:02:09.607 --> 00:02:11.635
+Cancel returns to the list.
+
+00:02:12.098 --> 00:02:17.888
+On the list, Download as JSON saves the same document directly, and the menu closes.
+
+00:02:17.888 --> 00:02:21.748
+Both options export the published version of the item.
+
+00:02:26.010 --> 00:02:28.667
+Let's add Apple Harvest Schedule to a plan.
+
+00:02:28.667 --> 00:02:32.030
+Open its Actions menu and choose Add to Deployment Plan.
+
+00:02:32.495 --> 00:02:37.363
+The Available Deployment Plans dialog has a card for every plan on the site.
+
+00:02:37.363 --> 00:02:39.915
+Let's select Orchard Harvest Content.
+
+00:02:40.403 --> 00:02:42.853
+The list reloads with a notification:
+
+00:02:42.853 --> 00:02:46.043
+Content added successfully to the deployment plan.
+
+00:02:46.502 --> 00:02:52.312
+Let's open Tools, Deployments, Plans, and choose Manage Steps for Orchard Harvest Content.
+
+00:02:54.686 --> 00:02:58.881
+The plan has a Content Item step that shows the title of the article.
+
+00:02:58.881 --> 00:03:03.523
+The step stores only the item's identifier, so each run exports the published
+
+00:03:03.523 --> 00:03:05.146
+version at that moment.
+
+00:03:06.800 --> 00:03:10.034
+To add several items, select their checkboxes.
+
+00:03:10.034 --> 00:03:14.761
+When two or more are selected, an Actions menu appears above the list.
+
+00:03:14.761 --> 00:03:17.000
+Choose Add to deployment plan.
+
+00:03:17.466 --> 00:03:21.041
+A confirmation dialog asks about the bulk action.
+
+00:03:21.041 --> 00:03:25.266
+Select Ok, then select the plan in the dialog that follows.
+
+00:03:25.806 --> 00:03:27.864
+The same notification appears.
+
+00:03:27.864 --> 00:03:30.722
+Let's open the plan again with Manage Steps:
+
+00:03:30.722 --> 00:03:33.866
+each selected item has its own Content Item step.
+
+00:03:38.087 --> 00:03:41.411
+Enabling the export feature creates a plan for it.
+
+00:03:41.411 --> 00:03:48.117
+Let's open Tools, Deployments, Plans, and choose Manage Steps for Export content to deployment plan target.
+
+00:03:48.591 --> 00:03:52.098
+Its only step is Export Content To Deployment Target.
+
+00:03:52.098 --> 00:03:56.081
+It stands for the items you select in the content items list.
+
+00:03:56.554 --> 00:03:59.354
+Then open Settings, Deployment Targets.
+
+00:03:59.354 --> 00:04:02.963
+Deployment Plan lists the plans that have this step.
+
+00:04:02.963 --> 00:04:08.314
+Choose it and select Save; without such a plan, the page asks you to create one.
+
+00:04:12.614 --> 00:04:17.128
+Once the plan is chosen, the Actions menu offers Export to Deployment Target.
+
+00:04:17.128 --> 00:04:19.794
+Let's choose it for Apple Harvest Schedule.
+
+00:04:20.299 --> 00:04:24.539
+The Available Targets dialog lists each target with a description.
+
+00:04:24.539 --> 00:04:30.192
+File Download downloads a plan locally, and a configured remote instance appears here too.
+
+00:04:30.192 --> 00:04:33.019
+A separate video covers remote deployment.
+
+00:04:33.481 --> 00:04:35.197
+Let's select File Download.
+
+00:04:35.197 --> 00:04:39.981
+The site runs the plan with this item, and the browser saves a zip deployment package.
+
+00:04:41.632 --> 00:04:48.902
+For several items, select two or more checkboxes, open Actions, and choose Export to deployment target.
+
+00:04:50.260 --> 00:04:53.151
+Confirm with Ok, and select File Download.
+
+00:04:53.151 --> 00:04:55.800
+The package holds every selected item.
+
+00:04:57.800 --> 00:05:02.635
+Download as JSON saves one item, Add to Deployment Plan keeps it in
+
+00:05:02.635 --> 00:05:06.808
+a plan, and Export to Deployment Target sends items once.
+
+00:05:06.808 --> 00:05:08.530
+Thanks for watching.
+
