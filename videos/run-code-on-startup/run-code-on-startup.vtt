@@ -1,0 +1,176 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.907
+Some code has to run when a tenant starts, such as warming a
+
+00:00:04.907 --> 00:00:08.164
+cache, checking a folder, or writing a log entry.
+
+00:00:08.164 --> 00:00:11.361
+Orchard Core modules do this with tenant events.
+
+00:00:11.361 --> 00:00:15.860
+In this video, you write a handler, register it, and see when it runs.
+
+00:00:20.460 --> 00:00:24.894
+An Orchard Core application hosts one or more sites, called tenants.
+
+00:00:24.894 --> 00:00:29.748
+A module's Startup class registers services and middleware for each tenant.
+
+00:00:29.748 --> 00:00:33.224
+To run your own code at key moments in the life of a
+
+00:00:33.224 --> 00:00:36.040
+tenant, you write a tenant event handler.
+
+00:00:36.790 --> 00:00:42.238
+Orchard Core itself uses handlers to run data migrations, preload the site settings,
+
+00:00:42.238 --> 00:00:48.050
+create the storage container of Azure media, and empty a temporary folder of media fields.
+
+00:00:48.800 --> 00:00:54.220
+By default, tenants are loaded lazily, so no handler runs when the application starts.
+
+00:00:54.220 --> 00:00:58.933
+A tenant activates when it handles its first request, and its handlers run
+
+00:00:58.933 --> 00:01:01.230
+before that request is processed.
+
+00:01:05.430 --> 00:01:08.528
+A handler implements IModularTenantEvents.
+
+00:01:08.528 --> 00:01:10.206
+It has five methods:
+
+00:01:10.206 --> 00:01:17.435
+ActivatingAsync and ActivatedAsync when the tenant starts, TerminatingAsync and TerminatedAsync when it is
+
+00:01:17.435 --> 00:01:22.470
+released, for example on a reload, and RemovingAsync when it is removed.
+
+00:01:23.220 --> 00:01:26.288
+Inherit from ModularTenantEvents instead.
+
+00:01:26.288 --> 00:01:32.292
+It implements every method as an empty one, so you override only the methods you need.
+
+00:01:32.292 --> 00:01:35.360
+Here, ActivatingAsync writes a log entry.
+
+00:01:36.110 --> 00:01:40.217
+Orchard Core creates the handler from the services of the tenant.
+
+00:01:40.217 --> 00:01:44.845
+The constructor can ask for any service the tenant registers, such as this
+
+00:01:44.845 --> 00:01:47.680
+logger, or the ShellSettings of the tenant.
+
+00:01:51.880 --> 00:01:58.837
+In ConfigureServices of your module's Startup class, register the handler as a scoped IModularTenantEvents.
+
+00:01:58.837 --> 00:02:04.009
+Orchard Core calls every handler registered this way, so a module can register
+
+00:02:04.009 --> 00:02:05.610
+as many as it needs.
+
+00:02:09.810 --> 00:02:14.942
+Orchard Core calls ActivatingAsync on every handler in the order of registration, which
+
+00:02:14.942 --> 00:02:17.702
+follows the dependency graph of the modules.
+
+00:02:17.702 --> 00:02:21.620
+A module's handlers run after those of the modules it depends on.
+
+00:02:22.370 --> 00:02:25.994
+Then it calls ActivatedAsync in the reverse order.
+
+00:02:25.994 --> 00:02:30.847
+So when any ActivatedAsync runs, every ActivatingAsync has completed.
+
+00:02:30.847 --> 00:02:38.160
+TerminatingAsync follows the order of registration, while TerminatedAsync and RemovingAsync run in reverse.
+
+00:02:38.910 --> 00:02:40.778
+Orchard Core uses both.
+
+00:02:40.778 --> 00:02:44.964
+The handler that runs data migrations uses ActivatingAsync.
+
+00:02:44.964 --> 00:02:52.950
+The handler that preloads the site settings uses ActivatedAsync, which runs after every ActivatingAsync has completed.
+
+00:02:57.150 --> 00:03:01.727
+Run the application from a terminal, and send the first request to the tenant.
+
+00:03:01.727 --> 00:03:03.797
+The console shows the log entry:
+
+00:03:03.797 --> 00:03:08.210
+the category is the handler's class, and the message is the text it logged.
+
+00:03:08.960 --> 00:03:13.942
+A second request logs nothing more, because the tenant is already activated.
+
+00:03:13.942 --> 00:03:18.498
+The handlers run again after a feature is enabled or disabled, or the
+
+00:03:18.498 --> 00:03:24.270
+tenant is reloaded, since Orchard Core then builds the tenant again for its next request.
+
+00:03:28.470 --> 00:03:34.540
+TerminatingAsync and TerminatedAsync run when the tenant is released, for example when it
+
+00:03:34.540 --> 00:03:38.310
+reloads, once the work already using it has finished.
+
+00:03:39.060 --> 00:03:45.352
+When a disabled tenant is removed, Orchard Core calls RemovingAsync on every handler, in reverse order.
+
+00:03:45.352 --> 00:03:49.912
+A handler uses it to remove what the tenant created outside its database,
+
+00:03:49.912 --> 00:03:52.740
+such as the storage container of its media.
+
+00:03:53.490 --> 00:03:56.404
+The method receives a ShellRemovingContext.
+
+00:03:56.404 --> 00:04:02.350
+A handler that fails sets its ErrorMessage, and Orchard Core stops calling the other handlers.
+
+00:04:06.550 --> 00:04:11.866
+The first request waits for the handlers, and an exception in one fails that request.
+
+00:04:11.866 --> 00:04:14.904
+Activation is tried again on the next request.
+
+00:04:14.904 --> 00:04:19.754
+Some of Orchard Core's handlers catch errors that should not stop the tenant,
+
+00:04:19.754 --> 00:04:21.740
+and log them, like this one.
+
+00:04:22.490 --> 00:04:26.956
+An Uninitialized tenant has no database session, and several of Orchard Core's handlers
+
+00:04:26.956 --> 00:04:29.933
+check the state of the tenant before they do their work.
+
+00:04:29.933 --> 00:04:32.670
+This one cleans up only when the tenant is Running.
+
+00:04:34.670 --> 00:04:39.522
+Implement the interface, register the class in your Startup class, and Orchard Core
+
+00:04:39.522 --> 00:04:42.902
+runs your code as a tenant starts, stops, or is removed.
+
+00:04:42.902 --> 00:04:44.320
+Thanks for watching.
+
