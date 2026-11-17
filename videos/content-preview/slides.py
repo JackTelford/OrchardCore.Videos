@@ -23,7 +23,7 @@ PERMISSIONS = [
 ]
 
 LIMITS = [
-    ("1", "Same browser, same address", "The editor and the preview window stay on one site."),
+    ("1", "Same browser, same address", "The editor and the preview tab stay on one site."),
     ("2", "Keep the editor open", "The preview stops updating when the editor closes."),
     ("3", "Do not share preview links", "A link identifies temporary content that may be unpublished."),
 ]

@@ -140,7 +140,7 @@ The template text, used by `create-5`, is exactly (two spaces per level, line fe
 - `create-6`
   - Actions: `HighlightAsync(button.save)`, `HighlightAsync(a.action-bar-secondary)` (the link labeled **Preview**,
     which opens the preview page in a new tab: do not click it), hold 2 seconds, `ClearHighlightsAsync()`.
-  - On screen at the end: the action bar at the bottom of the page with **Save** and **Preview** (rings cleared or
+  - On screen at the end: the action bar at the bottom of the page with **Save**, **Cancel** and **Preview** (rings cleared or
     visible), the editor with the template above.
   - Source: `Create.cshtml:53` (Save) and `:69` (Preview, a link to the `Index` action of the `Preview` controller).
 - `create-7`

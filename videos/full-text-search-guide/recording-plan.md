@@ -238,10 +238,12 @@ Start page: `/Admin` (the dashboard), from snapshot S5.
 - `rebuild-1`: Click **Search**, then **Indexes** in the admin menu (`/Admin/indexing`). On the row **posts**, click the
   **Actions** drop-down (`button.actions` inside `.item[data-filter-value='posts']`; the default list layout shows the
   Edit and Delete buttons and an **Actions** drop-down; `OrchardCore.Admin/Views/AdminListActions.cshtml:30-32`). Click
-  **Rebuild** in the menu (`OrchardCore.Indexing/Views/IndexProfile.ActionsMenuItems.SummaryAdmin.cshtml:32`).
-  *On screen at the end*: the dialog **Rebuild Index** with the text "Your index will be rebuilt, which might alter some
-  services during the process. Continue?" and the buttons **Yes** and **No** (same file, line 28 and following).
-- `rebuild-2`: Click **Yes** (`ClickAndWaitForNavigationAsync`). *On screen at the end of the narration*: the Indexes
+  **Rebuild** in the menu (`OrchardCore.Indexing/Views/IndexProfile.ActionsMenuItems.SummaryAdmin.cshtml:32`) with
+  `ClickAndWaitForNavigationAsync`. The link has `data-url-af="UnsafeUrl"` only, with no `RemoveUrl` and no
+  `data-unsafe-url`, so the admin theme posts it at once, with no dialog
+  (`OrchardCore.Themes/TheAdmin/Assets/js/TheAdmin/TheAdmin.ts:155-180`). If a dialog does appear on the running site,
+  click **Yes** and say so in the narration.
+- `rebuild-2`: *On screen at the end of the narration*: the Indexes
   list with the green message "An index has been rebuilt successfully. The synchronizing process was triggered in the
   background." (`OrchardCore.Indexing/Controllers/AdminController.cs`, `Rebuild`). Then, at the very end of the step,
   wait off camera with `scene.OffCameraAsync(...)` until the index holds the subtitle: poll

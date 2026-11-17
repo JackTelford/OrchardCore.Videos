@@ -164,7 +164,7 @@
             },
             {
               "id": "settings-2",
-              "text": "Further down, Use framework CDN is not selected, so the site loads scripts and stylesheets, such as jQuery, from its own files. That works without an internet connection. The documentation recommends selecting it after setup."
+              "text": "On the Resources tab, Use framework CDN is not selected, so the site loads scripts and stylesheets, such as jQuery, from its own files. That works without an internet connection."
             }
           ]
         }

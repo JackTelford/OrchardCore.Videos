@@ -116,9 +116,10 @@ The row shows the badges `Lucene` and `Content`.
   Delete** (`OrchardCore.Indexing/Views/IndexProfile.ActionsMenuItems.SummaryAdmin.cshtml`,
   `OrchardCore.Lucene/Views/LuceneIndexProfile.ActionsMenuItems.SummaryAdmin.cshtml:11`).
 - Click **Reset** in the menu (`a.dropdown-item` whose text is exactly `Reset`,
-  `IndexProfile.ActionsMenuItems.SummaryAdmin.cshtml:23`). A confirmation dialog titled **Reset Index** asks "This will
-  restart the indexing of all content items. Continue?" (`:18-19`). Pause 1500 ms so it can be read, then click **Yes**
-  (`:20`) with `WaitForNavigationAsync`.
+  `IndexProfile.ActionsMenuItems.SummaryAdmin.cshtml:23`) with `WaitForNavigationAsync`. The link has
+  `data-url-af="UnsafeUrl"` only, with no `RemoveUrl` and no `data-unsafe-url`, so the admin theme posts it at once,
+  with no dialog (`OrchardCore.Themes/TheAdmin/Assets/js/TheAdmin/TheAdmin.ts:155-180`). If a dialog does appear on the
+  running site, click **Yes** and say so in the narration.
 - Visible when the narration ends: the **Indexes** page with the notification "An index has been reset successfully. The
   synchronizing process was triggered in the background." (`OrchardCore.Indexing/Controllers/AdminController.cs:420`).
 

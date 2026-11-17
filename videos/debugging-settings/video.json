@@ -1,5 +1,5 @@
 {
-  "title": "Debugging Settings: Show Errors While You Build a Site | Orchard Core",
+  "title": "Debugging Settings: Find the Template Behind Any Part of a Page | Orchard Core",
   "description": "While you build a site, you often need to know which template drew a part of a page, and the page itself does not say.\n\nThe Debugging settings of Orchard Core have one option, Write shape debug information. When it is on, Orchard Core writes an HTML comment before and after each shape it renders, and the comments name the shape type and what drew it.\n\nIn this video:\n• How pages are built from shapes and the templates that draw them\n• Turning on Write shape debug information under Settings, Debugging\n• Reading the comments in the source of a page\n• Turning the option off again\n• The permissions that open the page, and Resource Debug Mode on the General page",
   "hashtags": [
     "OrchardCore",

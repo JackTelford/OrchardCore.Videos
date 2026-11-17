@@ -2,7 +2,7 @@
 
 **YouTube:** not published yet · **Length:** 3:26 · **Feature:** [OrchardCore.ContentPreview](https://docs.orchardcore.net/en/latest/reference/modules/ContentPreview/)
 
-This video shows the two previews of a content item. Preview, in the editor, opens a separate window that follows the
+This video shows the two previews of a content item. Preview, in the editor, opens a separate tab that follows the
 form while you type, without saving anything. Preview Draft, in the content items list, opens the saved draft as a
 page of the site. It also covers enabling the feature in Tools, Features, the permission that allows previewing, the
 limits of live preview, and the Preview part, which sends the preview through a page of the site. The title, description,

@@ -17,8 +17,8 @@ with the line of the label. The video is read-only: no clip saves anything on th
   - the front end theme is TheBlogTheme and the admin theme is TheAdmin (`blog.recipe.json:83`).
 - **Features to enable before recording**: none. The recipe enables Content Types, Content Fields, Media, Html,
   Markdown, Taxonomies, Title, Autoroute, Menu, Flows and Widgets (`blog.recipe.json:31` to `80`). Open
-  Configuration > Features once and check that **Content Types** is enabled.
-- **Settings**: leave every setting at its default. In particular leave Configuration > Settings > Admin as it is: the
+  Tools > Features once and check that **Content Types** is enabled.
+- **Settings**: leave every setting at its default. In particular leave Settings > Admin as it is: the
   lists must use the List layout and the Buttons layout for the row actions, which are the defaults
   (`src/OrchardCore/OrchardCore.Admin.Abstractions/AdminListOptions.cs:30` and `:36`). The step entries below describe
   buttons beside each row.
