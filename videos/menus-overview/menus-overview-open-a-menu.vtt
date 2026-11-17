@@ -1,0 +1,38 @@
+WEBVTT
+
+00:00:03.300 --> 00:00:05.625
+This is the front end of a site.
+
+00:00:05.625 --> 00:00:08.805
+In the navigation bar, a menu lists two items:
+
+00:00:08.805 --> 00:00:10.090
+Home and About.
+
+00:00:10.591 --> 00:00:13.881
+In the admin, let's open Content, then Menus.
+
+00:00:13.881 --> 00:00:19.428
+If your site does not show Menus, enable the Menu feature under Tools, Features.
+
+00:00:19.428 --> 00:00:22.331
+The list shows one menu, the Main Menu.
+
+00:00:22.824 --> 00:00:25.009
+Let's select Edit on the Main Menu.
+
+00:00:25.009 --> 00:00:28.314
+Title is the name of the menu in the admin, and Alias is
+
+00:00:28.314 --> 00:00:30.552
+the name a theme uses to ask for it.
+
+00:00:30.552 --> 00:00:33.004
+This theme asks for the alias main-menu.
+
+00:00:33.461 --> 00:00:39.106
+Below, the items are listed in order, each with Edit, Add, and Delete buttons.
+
+00:00:39.106 --> 00:00:43.541
+Add Menu Item starts an item at the first level of the menu.
+
