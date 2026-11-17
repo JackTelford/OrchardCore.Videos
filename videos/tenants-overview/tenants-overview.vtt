@@ -1,0 +1,194 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.641
+An Orchard Core application can host many separate websites.
+
+00:00:04.641 --> 00:00:06.131
+Each one is a tenant.
+
+00:00:06.131 --> 00:00:09.937
+In this video, you will learn what a tenant is, how the Tenants
+
+00:00:09.937 --> 00:00:14.130
+module is organized, and how to read the list of tenants in the admin.
+
+00:00:18.730 --> 00:00:22.115
+A tenant is one website hosted by the application.
+
+00:00:22.115 --> 00:00:27.132
+Tenants keep their content, themes, and users apart, each in its own database
+
+00:00:27.132 --> 00:00:29.851
+or its own tables of a shared database.
+
+00:00:29.851 --> 00:00:32.390
+A single deployment serves them all.
+
+00:00:33.140 --> 00:00:35.937
+Every application has a tenant named Default.
+
+00:00:35.937 --> 00:00:40.435
+It is the first tenant you set up, and the only one that manages the others:
+
+00:00:40.435 --> 00:00:43.617
+the Tenants pages exist on the Default tenant alone.
+
+00:00:43.617 --> 00:00:46.030
+The Default tenant cannot be disabled.
+
+00:00:46.780 --> 00:00:51.383
+A request reaches a tenant through its host name, its URL prefix, or both.
+
+00:00:51.383 --> 00:00:55.180
+One tenant can answer on a host name of its own, and another
+
+00:00:55.180 --> 00:00:59.380
+under the first segment of the path, such as a prefix named bakery.
+
+00:01:00.130 --> 00:01:02.496
+A tenant is in one state at a time.
+
+00:01:02.496 --> 00:01:06.824
+Uninitialized means it exists but is not set up, and Running means it
+
+00:01:06.824 --> 00:01:08.960
+is set up and answers requests.
+
+00:01:08.960 --> 00:01:13.230
+Disabled means it is set up but stopped, and Enable starts it again.
+
+00:01:17.430 --> 00:01:20.211
+The Tenants module groups several features.
+
+00:01:20.211 --> 00:01:26.170
+The one named Tenants adds the Multi-Tenancy menu, where you manage the tenants of the application.
+
+00:01:26.920 --> 00:01:31.461
+Tenant Feature Profiles limits the features that each tenant can use.
+
+00:01:31.461 --> 00:01:38.424
+Distributed Tenants keeps tenant states in sync, and needs a distributed cache and a stateless configuration.
+
+00:01:38.424 --> 00:01:42.420
+Like Tenants, both are available only on the Default tenant.
+
+00:01:43.170 --> 00:01:47.666
+Static File Provider serves static files from a folder of each tenant, so
+
+00:01:47.666 --> 00:01:50.625
+two tenants can have files with the same name.
+
+00:01:50.625 --> 00:01:54.040
+You enable it on each tenant that needs its own files.
+
+00:01:54.790 --> 00:02:02.455
+Managing tenants requires the Manage tenants permission, and managing feature profiles requires Manage tenant feature profiles.
+
+00:02:02.455 --> 00:02:05.970
+The Administrator role has both permissions by default.
+
+00:02:10.163 --> 00:02:14.851
+Let's open Tools, then Features, on the Default tenant, and search for tenants.
+
+00:02:14.851 --> 00:02:19.043
+The features of the module are among the results, grouped by category.
+
+00:02:19.503 --> 00:02:22.734
+Tenants is listed under the Infrastructure category.
+
+00:02:22.734 --> 00:02:24.183
+Let's select Enable.
+
+00:02:24.651 --> 00:02:28.997
+The page confirms that the feature was enabled, and the admin menu shows
+
+00:02:28.997 --> 00:02:31.951
+a Multi-Tenancy section with Tenants inside it.
+
+00:02:36.160 --> 00:02:40.449
+Multi-Tenancy, Tenants lists every tenant of the application.
+
+00:02:40.449 --> 00:02:45.250
+Each row shows the tenant's name, with badges for its state and, when
+
+00:02:45.250 --> 00:02:49.347
+they are set, its category, database provider, and recipe.
+
+00:02:49.347 --> 00:02:53.060
+The description and host name, if any, appear below.
+
+00:02:53.519 --> 00:02:57.960
+The search box finds tenants by name, host name, or URL prefix.
+
+00:02:57.960 --> 00:03:02.337
+The Category, State, and Sort menus narrow and order the list.
+
+00:03:02.337 --> 00:03:06.649
+Selecting a state badge shows only the tenants in that state.
+
+00:03:07.149 --> 00:03:11.460
+To act on several tenants at once, select their checkboxes.
+
+00:03:11.460 --> 00:03:16.699
+The Actions menu then offers Disable and Enable for the selected tenants.
+
+00:03:20.966 --> 00:03:24.345
+The buttons of a row depend on the state of the tenant.
+
+00:03:24.345 --> 00:03:27.225
+The Default tenant has Edit, View, and Reload.
+
+00:03:27.225 --> 00:03:31.546
+It has no Disable button, because the Default tenant cannot be disabled.
+
+00:03:32.043 --> 00:03:36.011
+A Running tenant such as Bakery adds Disable and Features.
+
+00:03:36.011 --> 00:03:40.661
+Features manages the features of that tenant from the Default tenant.
+
+00:03:40.661 --> 00:03:46.613
+View opens the site of the tenant, which the same application serves under its URL prefix.
+
+00:03:47.079 --> 00:03:52.749
+A Disabled tenant such as Studio has Enable instead of View, Disable, and Features.
+
+00:03:52.749 --> 00:03:58.802
+An Uninitialized tenant such as Workshop has Setup instead, which opens its setup screen.
+
+00:03:58.802 --> 00:04:04.409
+Remove appears only for these two states, and only when tenant removal is allowed.
+
+00:04:08.609 --> 00:04:10.647
+Add Tenant opens the form.
+
+00:04:10.647 --> 00:04:14.786
+The Name identifies the tenant and cannot be changed later.
+
+00:04:14.786 --> 00:04:20.389
+Category and Description are shown in the list, and the category is also a filter.
+
+00:04:20.844 --> 00:04:25.395
+Url Prefix and Hostname decide which requests the tenant answers.
+
+00:04:25.395 --> 00:04:29.947
+The prefix is a single path segment, and no two tenants can share
+
+00:04:29.947 --> 00:04:31.934
+the same host and prefix.
+
+00:04:32.394 --> 00:04:37.107
+The Recipe and database settings preset the setup screen of the tenant.
+
+00:04:37.107 --> 00:04:42.921
+Create saves the tenant as Uninitialized, and Create & Setup also opens its setup screen.
+
+00:04:42.921 --> 00:04:45.614
+Cancel leaves the form without saving.
+
+00:04:47.614 --> 00:04:53.758
+Tenants let one application host many separate sites, and you manage them from the Default tenant.
+
+00:04:53.758 --> 00:04:55.294
+Thanks for watching.
+

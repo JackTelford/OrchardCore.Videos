@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00:03.267 --> 00:00:06.646
+The buttons of a row depend on the state of the tenant.
+
+00:00:06.646 --> 00:00:09.526
+The Default tenant has Edit, View, and Reload.
+
+00:00:09.526 --> 00:00:13.847
+It has no Disable button, because the Default tenant cannot be disabled.
+
+00:00:14.344 --> 00:00:18.312
+A Running tenant such as Bakery adds Disable and Features.
+
+00:00:18.312 --> 00:00:22.962
+Features manages the features of that tenant from the Default tenant.
+
+00:00:22.962 --> 00:00:28.914
+View opens the site of the tenant, which the same application serves under its URL prefix.
+
+00:00:29.379 --> 00:00:35.050
+A Disabled tenant such as Studio has Enable instead of View, Disable, and Features.
+
+00:00:35.050 --> 00:00:41.103
+An Uninitialized tenant such as Workshop has Setup instead, which opens its setup screen.
+
+00:00:41.103 --> 00:00:46.709
+Remove appears only for these two states, and only when tenant removal is allowed.
+

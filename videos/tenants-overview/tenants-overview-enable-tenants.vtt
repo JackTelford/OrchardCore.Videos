@@ -1,0 +1,20 @@
+WEBVTT
+
+00:00:03.193 --> 00:00:07.881
+Let's open Tools, then Features, on the Default tenant, and search for tenants.
+
+00:00:07.881 --> 00:00:12.073
+The features of the module are among the results, grouped by category.
+
+00:00:12.533 --> 00:00:15.764
+Tenants is listed under the Infrastructure category.
+
+00:00:15.764 --> 00:00:17.213
+Let's select Enable.
+
+00:00:17.681 --> 00:00:22.027
+The page confirms that the feature was enabled, and the admin menu shows
+
+00:00:22.027 --> 00:00:24.981
+a Multi-Tenancy section with Tenants inside it.
+

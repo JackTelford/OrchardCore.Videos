@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00:03.200 --> 00:00:05.238
+Add Tenant opens the form.
+
+00:00:05.238 --> 00:00:09.377
+The Name identifies the tenant and cannot be changed later.
+
+00:00:09.377 --> 00:00:14.980
+Category and Description are shown in the list, and the category is also a filter.
+
+00:00:15.435 --> 00:00:19.986
+Url Prefix and Hostname decide which requests the tenant answers.
+
+00:00:19.986 --> 00:00:24.538
+The prefix is a single path segment, and no two tenants can share
+
+00:00:24.538 --> 00:00:26.525
+the same host and prefix.
+
+00:00:26.986 --> 00:00:31.698
+The Recipe and database settings preset the setup screen of the tenant.
+
+00:00:31.698 --> 00:00:37.513
+Create saves the tenant as Uninitialized, and Create & Setup also opens its setup screen.
+
+00:00:37.513 --> 00:00:40.206
+Cancel leaves the form without saving.
+

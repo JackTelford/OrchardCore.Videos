@@ -1,0 +1,36 @@
+1
+00:00:03,209 --> 00:00:07,499
+Multi-Tenancy, Tenants lists every tenant of the application.
+
+2
+00:00:07,499 --> 00:00:12,300
+Each row shows the tenant's name, with badges for its state and, when
+
+3
+00:00:12,300 --> 00:00:16,397
+they are set, its category, database provider, and recipe.
+
+4
+00:00:16,397 --> 00:00:20,109
+The description and host name, if any, appear below.
+
+5
+00:00:20,568 --> 00:00:25,009
+The search box finds tenants by name, host name, or URL prefix.
+
+6
+00:00:25,009 --> 00:00:29,386
+The Category, State, and Sort menus narrow and order the list.
+
+7
+00:00:29,386 --> 00:00:33,698
+Selecting a state badge shows only the tenants in that state.
+
+8
+00:00:34,199 --> 00:00:38,509
+To act on several tenants at once, select their checkboxes.
+
+9
+00:00:38,509 --> 00:00:43,749
+The Actions menu then offers Disable and Enable for the selected tenants.
+
