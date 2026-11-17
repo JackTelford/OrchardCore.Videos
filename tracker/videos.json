@@ -1212,12 +1212,12 @@
     "docs": [
       "src/docs/reference/modules/Taxonomies/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 5.0,
     "words": 757,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
