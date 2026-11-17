@@ -66,7 +66,7 @@
             },
             {
               "id": "enable-2",
-              "text": "Feeds is listed under the Content category. Click Enable, and a message confirms that the feature Feeds was enabled."
+              "text": "Feeds is listed under the Content category. Click Enable. The site restarts its features, and the Feeds row then shows the Enabled badge and a Disable button."
             },
             {
               "id": "enable-3",
