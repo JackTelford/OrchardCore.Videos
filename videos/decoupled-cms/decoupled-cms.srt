@@ -1,0 +1,364 @@
+1
+00:00:01,000 --> 00:00:07,119
+In a decoupled site, Orchard Core manages the content, and your own Razor Pages render it.
+
+2
+00:00:07,119 --> 00:00:11,772
+In this video, you add Orchard Core to a Razor Pages project, model
+
+3
+00:00:11,772 --> 00:00:15,660
+a blog post, load it in a page, and preview your edits.
+
+4
+00:00:20,260 --> 00:00:25,318
+Decoupled is a development model where the front end and the administration run
+
+5
+00:00:25,318 --> 00:00:30,317
+in the same web application, and only the administration is driven by the CMS.
+
+6
+00:00:30,317 --> 00:00:34,780
+Orchard Core authors the content, and your code decides how it looks.
+
+7
+00:00:35,530 --> 00:00:41,717
+You write ASP.NET Razor Pages or controllers, and load content items from Orchard Core.
+
+8
+00:00:41,717 --> 00:00:48,237
+This video uses Razor Pages, and much of it applies to an existing ASP.NET Core application.
+
+9
+00:00:48,237 --> 00:00:51,630
+A separate video covers a headless front end.
+
+10
+00:00:52,380 --> 00:00:53,787
+Three terms matter:
+
+11
+00:00:53,787 --> 00:00:57,952
+a content type defines the properties of your content, like a class.
+
+12
+00:00:57,952 --> 00:01:01,273
+A content part is a building block you add to a type.
+
+13
+00:01:01,273 --> 00:01:05,720
+A content item is a versioned document based on a type, like an instance.
+
+14
+00:01:09,920 --> 00:01:17,383
+Create a project with the dotnet new webapp command, and add the OrchardCore.Application.Cms.Core.Targets package.
+
+15
+00:01:17,383 --> 00:01:20,368
+It holds the minimum for a decoupled site:
+
+16
+00:01:20,368 --> 00:01:26,960
+the administration theme TheAdmin, the Blank site and Headless site recipes, and no front-end theme.
+
+17
+00:01:27,710 --> 00:01:32,471
+The bare minimum Program.cs calls AddOrchardCms on the services.
+
+18
+00:01:32,471 --> 00:01:38,320
+Then it calls UseStaticFiles and UseOrchardCore on the application, and runs it.
+
+19
+00:01:39,070 --> 00:01:43,840
+Remove the lines the template added for Razor Pages and routing:
+
+20
+00:01:43,840 --> 00:01:51,268
+AddRazorPages, UseRouting, UseAuthorization and MapRazorPages, with its error handling and HTTPS lines.
+
+21
+00:01:51,268 --> 00:01:55,220
+Orchard Core sets up Razor Pages and routing itself.
+
+22
+00:01:59,463 --> 00:02:03,672
+Start the application, and the Setup screen asks a few questions.
+
+23
+00:02:03,672 --> 00:02:08,533
+Enter a name for the site, which is used as the default title of your pages.
+
+24
+00:02:08,987 --> 00:02:11,735
+In the Recipe list, choose Blank site.
+
+25
+00:02:11,735 --> 00:02:18,417
+It enables the content management features and sets no front-end theme, which suits a decoupled site.
+
+26
+00:02:18,883 --> 00:02:24,251
+Pick a Default Time Zone, which sets how dates and times are displayed and edited.
+
+27
+00:02:24,251 --> 00:02:28,400
+The database type is Sqlite, which needs no connection string.
+
+28
+00:02:28,400 --> 00:02:32,853
+Then enter a user name, an email and a password for the Super User.
+
+29
+00:02:33,603 --> 00:02:34,934
+Click Finish Setup.
+
+30
+00:02:34,934 --> 00:02:38,929
+After a few seconds, the site displays the home page of the template.
+
+31
+00:02:38,929 --> 00:02:43,563
+By default, the data of the site is stored in the App_Data folder of the project.
+
+32
+00:02:47,798 --> 00:02:52,952
+In the administration, open Design, then Content Definition, then Content Types.
+
+33
+00:02:52,952 --> 00:02:56,608
+This is where you define the content types of the site.
+
+34
+00:02:57,115 --> 00:02:58,893
+Click Create new type.
+
+35
+00:02:58,893 --> 00:03:04,420
+Enter Blog Post as the Display Name, and the Technical Name fills in as BlogPost.
+
+36
+00:03:04,420 --> 00:03:05,945
+Then click Create.
+
+37
+00:03:06,412 --> 00:03:09,670
+Content parts are the building blocks of a type.
+
+38
+00:03:09,670 --> 00:03:13,712
+Select Title and MarkdownBody, then click Add Selected Parts.
+
+39
+00:03:14,239 --> 00:03:16,004
+The type lists its parts.
+
+40
+00:03:16,004 --> 00:03:21,869
+Title provides a title for the content item, and MarkdownBody provides a Markdown formatted body.
+
+41
+00:03:26,169 --> 00:03:30,485
+Open Content, then Content Items, and click New Blog Post.
+
+42
+00:03:30,485 --> 00:03:34,329
+The editor shows the Title and MarkdownBody fields.
+
+43
+00:03:34,809 --> 00:03:38,311
+Enter a title and some Markdown, and click Publish.
+
+44
+00:03:38,311 --> 00:03:43,349
+A notification confirms it, and the Content Items list shows your blog post.
+
+45
+00:03:47,549 --> 00:03:53,415
+Add BlogPost.cshtml to the Pages folder, with a route that takes an identifier.
+
+46
+00:03:53,415 --> 00:03:57,694
+Inject IOrchardHelper, and call GetContentItemByIdAsync.
+
+47
+00:03:57,694 --> 00:04:03,699
+It returns the published version of the content item, or null when there is none.
+
+48
+00:04:04,449 --> 00:04:09,045
+The identifier of a content item stays the same across its versions.
+
+49
+00:04:09,045 --> 00:04:13,269
+Copy it from the address of the edit page, after ContentItems.
+
+50
+00:04:13,269 --> 00:04:16,189
+The DisplayText property holds the title.
+
+51
+00:04:16,939 --> 00:04:21,533
+The properties that each type defines are in Content, a dynamic document.
+
+52
+00:04:21,533 --> 00:04:27,873
+ConsoleLog writes the content item to the browser console, and writes null in a production environment.
+
+53
+00:04:27,873 --> 00:04:30,839
+MarkdownBodyPart holds the Markdown property.
+
+54
+00:04:31,589 --> 00:04:38,083
+Read the Markdown from the Content property, and convert it to HTML with MarkdownToHtmlAsync.
+
+55
+00:04:38,083 --> 00:04:41,429
+The conversion sanitizes the HTML by default.
+
+56
+00:04:43,047 --> 00:04:46,155
+Open the page with the identifier of your blog post.
+
+57
+00:04:46,155 --> 00:04:49,477
+It shows the title, and the body rendered from Markdown.
+
+58
+00:04:53,707 --> 00:04:56,882
+An identifier is not friendly in an address.
+
+59
+00:04:56,882 --> 00:05:01,326
+The Alias part lets a content item have a readable text instead.
+
+60
+00:05:01,326 --> 00:05:06,977
+On the Blog Post type, click Add Parts, select Alias, and click Add Selected Parts.
+
+61
+00:05:07,480 --> 00:05:09,088
+Edit the blog post.
+
+62
+00:05:09,088 --> 00:05:11,080
+The Alias field is there:
+
+63
+00:05:11,080 --> 00:05:14,680
+type an alias, such as pruning, and click Publish.
+
+64
+00:05:16,280 --> 00:05:21,858
+In the page, take a slug in the route, and call GetContentItemByHandleAsync with
+
+65
+00:05:21,858 --> 00:05:25,230
+a handle made of alias, a colon, and the slug.
+
+66
+00:05:26,930 --> 00:05:32,310
+Open the page with the alias, and the same blog post appears at a readable address.
+
+67
+00:05:33,908 --> 00:05:36,710
+The Alias part can also generate the alias.
+
+68
+00:05:36,710 --> 00:05:38,539
+Edit the part on the type:
+
+69
+00:05:38,539 --> 00:05:42,942
+its Pattern is a Liquid template, and by default it applies the slugify
+
+70
+00:05:42,942 --> 00:05:44,828
+filter to the display text.
+
+71
+00:05:45,314 --> 00:05:49,342
+Edit the blog post, clear the Alias field, and click Publish.
+
+72
+00:05:49,342 --> 00:05:53,610
+The field says to leave it empty to re-generate it, and the alias
+
+73
+00:05:53,610 --> 00:05:55,774
+becomes the slug of the title.
+
+74
+00:06:00,030 --> 00:06:04,191
+Editors click Preview to see the content item as they edit it.
+
+75
+00:06:04,191 --> 00:06:09,270
+Without more setup, Orchard Core renders a generic page, not your Razor Page.
+
+76
+00:06:09,739 --> 00:06:13,527
+To use your page, add the Preview part to the type, and edit it.
+
+77
+00:06:13,527 --> 00:06:17,748
+Its Pattern is a Liquid template that produces the address of your page:
+
+78
+00:06:17,748 --> 00:06:21,049
+the blog post route, followed by the alias of the item.
+
+79
+00:06:21,049 --> 00:06:22,239
+Then click Save.
+
+80
+00:06:27,873 --> 00:06:31,698
+Click Preview again, and the window renders your Razor Page.
+
+81
+00:06:31,698 --> 00:06:36,161
+Change the title in the editor, and the preview updates a moment later,
+
+82
+00:06:36,161 --> 00:06:40,333
+because your page loads the edited item in place of the saved one.
+
+83
+00:06:41,933 --> 00:06:44,828
+A page can also tell when it renders a preview.
+
+84
+00:06:44,828 --> 00:06:50,345
+Orchard Core marks the request with ContentPreviewFeature, and its Previewing property is true,
+
+85
+00:06:50,345 --> 00:06:52,803
+so the page can show hints for editors.
+
+86
+00:06:57,003 --> 00:07:01,099
+You added Orchard Core to a Razor Pages project, set it up with
+
+87
+00:07:01,099 --> 00:07:04,244
+the Blank site recipe, and modeled a blog post.
+
+88
+00:07:04,244 --> 00:07:08,874
+Your pages load content items by identifier or by alias, and the Preview
+
+89
+00:07:08,874 --> 00:07:11,663
+part points the preview at your own page.
+
+90
+00:07:13,663 --> 00:07:19,370
+Orchard Core stores and edits the content, and your Razor Pages decide how it appears.
+
+91
+00:07:19,370 --> 00:07:20,983
+Thanks for watching.
+
