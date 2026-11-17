@@ -1,0 +1,269 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.283
+A module is how you add your own code to Orchard Core.
+
+00:00:04.283 --> 00:00:08.607
+In this video, you create a module from the project template, describe it
+
+00:00:08.607 --> 00:00:13.860
+in its manifest, reference it from your web project, and enable it from the Features page.
+
+00:00:18.460 --> 00:00:23.906
+A module is a .NET class library that Orchard Core loads into your web application.
+
+00:00:23.906 --> 00:00:29.720
+It can contain services, controllers, views, and static files such as scripts and styles.
+
+00:00:30.470 --> 00:00:32.778
+A manifest describes the module:
+
+00:00:32.778 --> 00:00:35.815
+its name, its description, and its category.
+
+00:00:35.815 --> 00:00:39.520
+The Features page shows these when it lists the module.
+
+00:00:40.270 --> 00:00:43.012
+A module provides one or more features.
+
+00:00:43.012 --> 00:00:48.555
+Each tenant, meaning each site your application hosts, enables the features it needs.
+
+00:00:48.555 --> 00:00:52.820
+The code of a feature runs only for the tenants that enabled it.
+
+00:00:53.570 --> 00:00:57.917
+The modules that come with Orchard Core, such as Features, are built the
+
+00:00:57.917 --> 00:01:00.815
+same way, with a manifest and a Startup class.
+
+00:01:00.815 --> 00:01:02.710
+Your module works like them.
+
+00:01:06.910 --> 00:01:11.650
+Install the Orchard Core project templates once, with dotnet new install.
+
+00:01:11.650 --> 00:01:15.070
+The package is called OrchardCore.ProjectTemplates.
+
+00:01:15.820 --> 00:01:20.480
+Then dotnet new creates the module from the CMS module template, and the
+
+00:01:20.480 --> 00:01:22.213
+dash n option names it.
+
+00:01:22.213 --> 00:01:27.650
+Following the documentation, the name is the module name followed by dot OrchardCore.
+
+00:01:28.400 --> 00:01:31.369
+Four parts of the generated project matter.
+
+00:01:31.369 --> 00:01:36.520
+The project file marks it as a module, Manifest.cs describes it, and Startup.cs
+
+00:01:36.520 --> 00:01:38.943
+registers its routes and services.
+
+00:01:38.943 --> 00:01:41.670
+A controller and a view give it a page.
+
+00:01:42.420 --> 00:01:47.426
+The project file uses the Razor SDK, which precompiles the views of the module.
+
+00:01:47.426 --> 00:01:52.549
+It references the Orchard Core Module Targets package, and that reference is what
+
+00:01:52.549 --> 00:01:55.670
+makes the class library an Orchard Core module.
+
+00:01:56.420 --> 00:02:00.829
+In Startup.cs, the Startup class inherits from StartupBase.
+
+00:02:00.829 --> 00:02:06.594
+Its Configure method maps the address Home/Index to the Home controller, in the
+
+00:02:06.594 --> 00:02:08.900
+area named after the module.
+
+00:02:09.650 --> 00:02:12.918
+The Index action of the Home controller returns a view.
+
+00:02:12.918 --> 00:02:16.830
+Open the Index view in the Views, Home folder, and replace its text
+
+00:02:16.830 --> 00:02:19.080
+with a heading that greets visitors.
+
+00:02:23.280 --> 00:02:26.928
+The manifest is an assembly attribute in Manifest.cs.
+
+00:02:26.928 --> 00:02:31.565
+Name is the label the Features page shows, so change it to Greetings.
+
+00:02:31.565 --> 00:02:34.100
+Description appears under the name.
+
+00:02:34.850 --> 00:02:39.301
+Category sets the group the module is listed in, here Samples.
+
+00:02:39.301 --> 00:02:44.930
+Author, Website, and Version record who made the module and which version it is.
+
+00:02:45.680 --> 00:02:48.788
+Name changes the label, not the identity.
+
+00:02:48.788 --> 00:02:55.400
+The feature id stays the name of the assembly, Greetings.OrchardCore, and recipes use that id.
+
+00:02:56.150 --> 00:03:00.327
+Dependencies lists the ids of the features your module needs.
+
+00:03:00.327 --> 00:03:06.250
+Enabling the module enables them too, and the Features page shows them beside the module.
+
+00:03:07.000 --> 00:03:11.614
+A separate video covers writing the same metadata in the project file instead
+
+00:03:11.614 --> 00:03:13.170
+of in a manifest file.
+
+00:03:17.370 --> 00:03:21.502
+If you do not have a site, the CMS web application template creates
+
+00:03:21.502 --> 00:03:23.031
+a web project for it.
+
+00:03:23.031 --> 00:03:26.710
+Its project file references Orchard Core through a package.
+
+00:03:27.460 --> 00:03:31.697
+The web project registers Orchard Core in Program.cs.
+
+00:03:31.697 --> 00:03:38.160
+AddOrchardCms adds its services, and UseOrchardCore adds it to the request pipeline.
+
+00:03:38.910 --> 00:03:41.990
+This project must reference the module project.
+
+00:03:41.990 --> 00:03:47.919
+In Visual Studio, right-click Dependencies, choose Add Project Reference, and select the module.
+
+00:03:47.919 --> 00:03:51.290
+The project file then holds a ProjectReference item.
+
+00:03:52.040 --> 00:03:56.672
+When the web project builds, Orchard Core records the name of each referenced
+
+00:03:56.672 --> 00:03:58.291
+module in its assembly.
+
+00:03:58.291 --> 00:04:03.370
+At startup, it loads the recorded modules, and that is why the reference is required.
+
+00:04:04.120 --> 00:04:07.642
+Run the site with dotnet run, which builds it first.
+
+00:04:07.642 --> 00:04:10.860
+After any change to the manifest, run it again.
+
+00:04:15.113 --> 00:04:17.755
+With the site running, open the admin.
+
+00:04:17.755 --> 00:04:20.818
+In the admin menu, open Tools, then Features.
+
+00:04:20.818 --> 00:04:25.623
+The page lists the features of the installed modules, grouped by category.
+
+00:04:26.074 --> 00:04:28.165
+Type Greetings in the Search box.
+
+00:04:28.165 --> 00:04:32.401
+The search matches the name, the feature id, and the description, and the
+
+00:04:32.401 --> 00:04:34.064
+list narrows as you type.
+
+00:04:34.521 --> 00:04:39.278
+The module is listed in the Samples group, the category from the manifest.
+
+00:04:39.278 --> 00:04:43.975
+The row shows the name, the feature id that recipes use, the description,
+
+00:04:43.975 --> 00:04:45.581
+and a Disabled badge.
+
+00:04:46.043 --> 00:04:47.243
+Select Enable.
+
+00:04:47.243 --> 00:04:51.563
+The page reloads and shows a message that the feature was enabled.
+
+00:04:52.080 --> 00:04:53.942
+Search for Greetings again.
+
+00:04:53.942 --> 00:04:57.720
+The row shows an Enabled badge, and its button reads Disable.
+
+00:04:58.186 --> 00:05:01.566
+Enabling a feature changes the current tenant only.
+
+00:05:01.566 --> 00:05:06.486
+Another tenant of the same application keeps its own set of enabled features.
+
+00:05:10.774 --> 00:05:15.194
+With the feature enabled, the Startup class of the module runs for this
+
+00:05:15.194 --> 00:05:17.376
+tenant, and its route is active.
+
+00:05:17.376 --> 00:05:18.984
+Let's open Home/Index.
+
+00:05:19.447 --> 00:05:22.752
+The page shows the heading from the view of the module, inside the
+
+00:05:22.752 --> 00:05:24.267
+layout of the site's theme.
+
+00:05:28.467 --> 00:05:33.372
+To enable the module automatically, add a Feature step to a recipe, such
+
+00:05:33.372 --> 00:05:35.762
+as a setup or deployment recipe.
+
+00:05:35.762 --> 00:05:40.101
+Its enable list holds feature ids, and the id of this module is
+
+00:05:40.101 --> 00:05:43.057
+its assembly name, Greetings.OrchardCore.
+
+00:05:47.257 --> 00:05:51.467
+If the module does not appear on the Features page, check two things.
+
+00:05:51.467 --> 00:05:56.408
+The module project must reference the Orchard Core Module Targets package, and the
+
+00:05:56.408 --> 00:05:59.327
+web project must reference the module project.
+
+00:06:00.077 --> 00:06:01.645
+Then run the site again.
+
+00:06:01.645 --> 00:06:06.036
+Orchard Core records the referenced modules when the web project builds, so an
+
+00:06:06.036 --> 00:06:09.747
+added reference or a changed manifest takes effect after a build.
+
+00:06:11.747 --> 00:06:17.068
+A module is a project that references the Module Targets package, describes itself
+
+00:06:17.068 --> 00:06:20.515
+in a manifest, and is enabled from Tools, Features.
+
+00:06:20.515 --> 00:06:22.087
+Thanks for watching.
+
