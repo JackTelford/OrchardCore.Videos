@@ -1,0 +1,280 @@
+1
+00:00:01,000 --> 00:00:05,961
+Orchard Core builds pages from shapes, and creating a shape takes code that
+
+2
+00:00:05,961 --> 00:00:07,859
+reads properties by name.
+
+3
+00:00:07,859 --> 00:00:15,392
+The OrchardCore.SourceGenerators project writes that code when you build, and warns about shape and feature mistakes.
+
+4
+00:00:15,392 --> 00:00:19,740
+In this video, we'll go through each generator and each analyzer.
+
+5
+00:00:24,340 --> 00:00:26,497
+A shape holds the data to display.
+
+6
+00:00:26,497 --> 00:00:30,918
+Without generated code, Orchard Core fills a shape from an object by reading
+
+7
+00:00:30,918 --> 00:00:35,662
+its properties through reflection, and creates a strongly typed shape from a proxy
+
+8
+00:00:35,662 --> 00:00:38,520
+class that derives from your model, at runtime.
+
+9
+00:00:39,270 --> 00:00:43,703
+The OrchardCore.SourceGenerators project moves that work to build time.
+
+10
+00:00:43,703 --> 00:00:49,056
+Its generators write the code for argument classes, anonymous objects and typed shapes,
+
+11
+00:00:49,056 --> 00:00:52,280
+and its analyzers report warnings while you build.
+
+12
+00:00:56,480 --> 00:00:59,465
+Start with a class that holds the arguments.
+
+13
+00:00:59,465 --> 00:01:05,673
+Mark it with GenerateArguments, and declare it partial, because the generator adds the other half.
+
+14
+00:01:05,673 --> 00:01:10,210
+This is NavigationArguments, from the menu filter of the Admin module.
+
+15
+00:01:10,960 --> 00:01:14,904
+The generated half derives from PropertyBasedNamedEnumerable.
+
+16
+00:01:14,904 --> 00:01:19,553
+It keeps the property names in an array, reports their count, and returns
+
+17
+00:01:19,553 --> 00:01:23,497
+each value from a switch on the index, so the class reads its
+
+18
+00:01:23,497 --> 00:01:26,440
+own properties directly, without reflection.
+
+19
+00:01:27,190 --> 00:01:32,379
+Pass an instance to Arguments.From, and it returns the instance itself, because the
+
+20
+00:01:32,379 --> 00:01:34,827
+class already provides named values.
+
+21
+00:01:34,827 --> 00:01:39,433
+The menu filter creates the Navigation shape this way, with the menu name
+
+22
+00:01:39,433 --> 00:01:40,890
+and the route data.
+
+23
+00:01:41,640 --> 00:01:44,211
+Four rules follow from the generated code.
+
+24
+00:01:44,211 --> 00:01:48,711
+The class is partial, its public instance properties with a getter are listed,
+
+25
+00:01:48,711 --> 00:01:52,943
+properties inherited from a base class are left out, and the class cannot
+
+26
+00:01:52,943 --> 00:01:54,550
+name another base class.
+
+27
+00:01:58,750 --> 00:02:03,166
+An anonymous object has no name to mark, so another generator uses an
+
+28
+00:02:03,166 --> 00:02:06,641
+interceptor, a generated method that replaces a call.
+
+29
+00:02:06,641 --> 00:02:11,940
+This method from the navigation code passes one to Arguments.From, and the generator
+
+30
+00:02:11,940 --> 00:02:14,060
+finds that call at build time.
+
+31
+00:02:14,810 --> 00:02:17,570
+The generated method replaces that call.
+
+32
+00:02:17,570 --> 00:02:22,430
+It casts the object back to its anonymous type through type inference, then
+
+33
+00:02:22,430 --> 00:02:27,770
+reads each property directly and passes the values and the names to Arguments.From.
+
+34
+00:02:28,520 --> 00:02:33,839
+An object without generated code takes the reflection path, which caches the property
+
+35
+00:02:33,839 --> 00:02:35,418
+lookup for each type.
+
+36
+00:02:35,418 --> 00:02:40,328
+The interceptor skips an anonymous object that has no public property, and one
+
+37
+00:02:40,328 --> 00:02:43,660
+with a property that is itself an anonymous object.
+
+38
+00:02:47,860 --> 00:02:53,665
+A display driver creates a strongly typed shape with Initialize and a view model class.
+
+39
+00:02:53,665 --> 00:02:58,222
+This driver, from the Settings module, uses DebugSettingsViewModel.
+
+40
+00:02:58,222 --> 00:03:03,840
+Without generated code, the shape is a proxy class that derives from the view model.
+
+41
+00:03:04,590 --> 00:03:09,953
+The shape generator finds Initialize calls in display drivers and CreateAsync calls on
+
+42
+00:03:09,953 --> 00:03:12,693
+the shape factory that name a model type.
+
+43
+00:03:12,693 --> 00:03:17,066
+For each model, it writes a class that derives from it and implements
+
+44
+00:03:17,066 --> 00:03:21,030
+IShape and IPositioned, and intercepts the calls to create it.
+
+45
+00:03:21,780 --> 00:03:26,644
+When you own the model, mark a partial class with GenerateShape instead.
+
+46
+00:03:26,644 --> 00:03:32,131
+The generator implements IShape and IPositioned on the class itself, so that model
+
+47
+00:03:32,131 --> 00:03:35,062
+needs neither an interceptor nor a proxy.
+
+48
+00:03:35,062 --> 00:03:38,990
+NavigationItemViewModel uses Metadata in its constructor.
+
+49
+00:03:43,190 --> 00:03:48,761
+The OCSG001 analyzer reports a warning when a sealed model that does not
+
+50
+00:03:48,761 --> 00:03:55,688
+implement IShape is passed to Initialize, or to a CreateAsync overload that builds a proxy.
+
+51
+00:03:55,688 --> 00:04:01,330
+To fix it, remove sealed, implement IShape, or use View, Copy or Dynamic.
+
+52
+00:04:02,080 --> 00:04:05,640
+The OCSG002 analyzer checks the Feature attribute.
+
+53
+00:04:05,640 --> 00:04:10,155
+A marked class is used only when that feature is enabled, and the
+
+54
+00:04:10,155 --> 00:04:13,016
+feature must belong to the same module.
+
+55
+00:04:13,016 --> 00:04:17,530
+A name from another module is not found, so the class joins every
+
+56
+00:04:17,530 --> 00:04:19,310
+feature of its module.
+
+57
+00:04:23,510 --> 00:04:28,740
+In the Orchard Core solution, the shared build properties turn the generators on
+
+58
+00:04:28,740 --> 00:04:31,842
+for the framework, module and theme projects.
+
+59
+00:04:31,842 --> 00:04:40,600
+They reference OrchardCore.SourceGenerators as an analyzer, and add the namespace of the generated interceptors to InterceptorsNamespaces.
+
+60
+00:04:41,350 --> 00:04:46,666
+A project gets generated code only when it references the generators as an analyzer.
+
+61
+00:04:46,666 --> 00:04:52,218
+Without that reference, a class marked with GenerateArguments has no generated half, and
+
+62
+00:04:52,218 --> 00:04:56,470
+Arguments.From falls back to reading its properties by reflection.
+
+63
+00:05:00,670 --> 00:05:06,288
+Use a named class with GenerateArguments for arguments you reuse, and Arguments.From with
+
+64
+00:05:06,288 --> 00:05:09,363
+an anonymous object for a value you pass once.
+
+65
+00:05:09,363 --> 00:05:14,271
+Mark a view model you own with GenerateShape, and let the generator intercept
+
+66
+00:05:14,271 --> 00:05:17,110
+Initialize and CreateAsync for the others.
+
+67
+00:05:19,110 --> 00:05:24,477
+A named class with GenerateArguments, an anonymous object passed to Arguments.From, and a
+
+68
+00:05:24,477 --> 00:05:27,867
+typed shape each move work from runtime to build time.
+
+69
+00:05:27,867 --> 00:05:33,121
+The Source Generators page of the documentation covers the first two and the analyzers.
+
+70
+00:05:33,121 --> 00:05:34,590
+Thanks for watching.
+
