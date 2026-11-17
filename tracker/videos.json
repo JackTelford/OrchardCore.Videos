@@ -2740,12 +2740,12 @@
     "docs": [
       "src/docs/reference/modules/Indexing/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 5.2,
     "words": 782,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
