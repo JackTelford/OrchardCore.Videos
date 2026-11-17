@@ -1,0 +1,242 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.379
+A modular ASP.NET Core MVC application is made of a web application and modules.
+
+00:00:06.379 --> 00:00:10.694
+In this video, you create both with the Orchard Core templates.
+
+00:00:10.694 --> 00:00:16.011
+The web application supplies the layout, and the module answers requests at its
+
+00:00:16.011 --> 00:00:18.450
+own address and at the home page.
+
+00:00:23.050 --> 00:00:25.797
+You build two projects and connect them.
+
+00:00:25.797 --> 00:00:29.918
+The web application hosts Orchard Core and supplies the layout.
+
+00:00:29.918 --> 00:00:34.398
+The module holds a controller, an action, and a view, and answers the
+
+00:00:34.398 --> 00:00:36.130
+requests that reach it.
+
+00:00:36.880 --> 00:00:42.661
+The package of the web application brings the modular framework and ASP.NET Core
+
+00:00:42.661 --> 00:00:45.283
+MVC, and none of the CMS modules.
+
+00:00:45.283 --> 00:00:51.400
+The application runs the modules it references, so the module is what gives it pages.
+
+00:00:52.150 --> 00:01:01.752
+Orchard Core's repository includes a similar sample, with the OrchardCore.Mvc.Web application and the OrchardCore.Mvc.HelloWorld module.
+
+00:01:01.752 --> 00:01:07.770
+You need the .NET SDK, a text editor, and a terminal where you run dotnet commands.
+
+00:01:11.970 --> 00:01:15.990
+Orchard Core provides code generation templates for dotnet new.
+
+00:01:15.990 --> 00:01:20.185
+Install them first, from the OrchardCore.ProjectTemplates package.
+
+00:01:20.185 --> 00:01:25.720
+The documentation page also shows how to install the templates of the development branch.
+
+00:01:26.470 --> 00:01:31.134
+In an empty folder that will hold both projects, the first command creates
+
+00:01:31.134 --> 00:01:35.216
+the web application, from the Orchard Core Mvc Web App template.
+
+00:01:35.216 --> 00:01:39.530
+The name you pass becomes the name of the project and of its folder.
+
+00:01:40.280 --> 00:01:46.025
+The second command creates the module, from the Orchard Core Mvc Module template.
+
+00:01:46.025 --> 00:01:51.440
+The two projects sit side by side, each in a folder named after its project.
+
+00:01:52.190 --> 00:01:55.190
+The web application has to reference the module.
+
+00:01:55.190 --> 00:02:00.191
+The dotnet add reference command adds the project reference, and Orchard Core relies
+
+00:02:00.191 --> 00:02:02.580
+on that reference to find the module.
+
+00:02:03.330 --> 00:02:10.589
+Optionally, add a solution file that references both projects, to open them together in Visual Studio.
+
+00:02:10.589 --> 00:02:16.100
+The dotnet new sln command creates it, and dotnet sln add adds each project.
+
+00:02:20.300 --> 00:02:26.187
+In the web application, Program.cs registers Orchard Core with AddOrchardCore.
+
+00:02:26.187 --> 00:02:32.355
+AddMvc adds ASP.NET Core MVC with support for modules, and UseOrchardCore adds the
+
+00:02:32.355 --> 00:02:36.140
+Orchard Core middleware to the request pipeline.
+
+00:02:36.890 --> 00:02:42.247
+The project file references the OrchardCore.Application.Mvc.Targets package.
+
+00:02:42.247 --> 00:02:47.017
+A view start file sets the layout of the application, and the views
+
+00:02:47.017 --> 00:02:49.630
+of the module use that layout too.
+
+00:02:53.830 --> 00:02:58.502
+The project file of the module uses the Razor SDK, which Orchard Core
+
+00:02:58.502 --> 00:03:02.302
+requires on a module so that its views are precompiled.
+
+00:03:02.302 --> 00:03:07.970
+The OrchardCore.Module.Targets package turns the project into an Orchard Core module.
+
+00:03:08.720 --> 00:03:13.038
+Manifest.cs describes the module with the Module attribute:
+
+00:03:13.038 --> 00:03:17.289
+name, author, website, version, description, and category.
+
+00:03:17.289 --> 00:03:23.600
+The template sets the name, the description, and the category to the name of the project.
+
+00:03:24.350 --> 00:03:27.731
+HomeController is a regular MVC controller.
+
+00:03:27.731 --> 00:03:32.974
+Its Index action returns the view, and the Index view, in Views, Home,
+
+00:03:32.974 --> 00:03:34.974
+holds one line of text:
+
+00:03:34.974 --> 00:03:38.010
+Hello from OrchardCore.Mvc.HelloWorld.
+
+00:03:38.760 --> 00:03:43.706
+Startup derives from StartupBase, which Orchard Core uses to initialize a module.
+
+00:03:43.706 --> 00:03:49.049
+ConfigureServices registers the services of the module, and Configure builds its part of
+
+00:03:49.049 --> 00:03:51.437
+the request pipeline and its routes.
+
+00:03:51.437 --> 00:03:53.540
+The template leaves both empty.
+
+00:03:57.740 --> 00:04:03.559
+When the module builds, the OrchardCore.Module.Targets package marks its assembly as an Orchard
+
+00:04:03.559 --> 00:04:07.650
+Core module, and embeds the files of the module in that assembly.
+
+00:04:08.400 --> 00:04:12.564
+When the web application builds, it records the names of the modules it
+
+00:04:12.564 --> 00:04:15.592
+references, whether they are projects or packages.
+
+00:04:15.592 --> 00:04:20.350
+At startup, Orchard Core reads that list, which is how it learns about the module.
+
+00:04:21.100 --> 00:04:25.847
+The application runs a single tenant, which is one site, with every feature
+
+00:04:25.847 --> 00:04:27.664
+of those modules enabled.
+
+00:04:27.664 --> 00:04:31.590
+There is no setup screen, and the module needs no activation.
+
+00:04:35.790 --> 00:04:40.694
+From the folder that holds both projects, dotnet run starts the web application.
+
+00:04:40.694 --> 00:04:43.660
+The console shows the addresses it listens on.
+
+00:04:45.307 --> 00:04:48.226
+Let's browse to the address of the module:
+
+00:04:48.226 --> 00:04:51.449
+its identifier, the controller, and the action.
+
+00:04:51.449 --> 00:04:54.977
+The page says Hello from OrchardCore.Mvc.HelloWorld.
+
+00:04:55.440 --> 00:04:59.543
+The navigation bar and the footer come from the layout of the web application.
+
+00:04:59.543 --> 00:05:02.570
+The text between them comes from the view of the module.
+
+00:05:06.770 --> 00:05:10.921
+By default, a module serves each action at an address made of the
+
+00:05:10.921 --> 00:05:14.955
+area, the controller, the action, and an optional last segment.
+
+00:05:14.955 --> 00:05:17.702
+The area is the identifier of the module:
+
+00:05:17.702 --> 00:05:22.320
+the name of its project, unless the manifest sets a different identifier.
+
+00:05:23.070 --> 00:05:27.347
+To answer requests for the home page, register a route in the Configure
+
+00:05:27.347 --> 00:05:29.236
+method of the Startup class.
+
+00:05:29.236 --> 00:05:34.401
+MapAreaControllerRoute takes a name, the area name, an empty pattern, and defaults that
+
+00:05:34.401 --> 00:05:37.400
+select the Home controller and its Index action.
+
+00:05:38.150 --> 00:05:42.640
+Then change the Index view so that it shows a heading with the text Hello World.
+
+00:05:43.390 --> 00:05:48.812
+Routes are registered when Orchard Core builds the pipeline of the tenant, on its first request.
+
+00:05:48.812 --> 00:05:53.118
+Each Startup class runs its Configure method then, which is why you restart
+
+00:05:53.118 --> 00:05:55.510
+the application after changing a route.
+
+00:05:57.210 --> 00:06:00.563
+After a restart, let's browse to the root address.
+
+00:06:00.563 --> 00:06:05.830
+The home page shows Hello World, with the layout of the web application around it.
+
+00:06:06.289 --> 00:06:08.501
+The default address answers as well.
+
+00:06:08.501 --> 00:06:12.769
+The route of the module adds to the default route, and does not replace it.
+
+00:06:14.769 --> 00:06:19.552
+A modular MVC application is a web application that hosts Orchard Core and
+
+00:06:19.552 --> 00:06:24.514
+supplies the layout, plus modules that supply controllers, views, and routes.
+
+00:06:24.514 --> 00:06:26.069
+Thanks for watching.
+
