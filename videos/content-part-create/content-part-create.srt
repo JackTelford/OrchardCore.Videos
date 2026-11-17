@@ -1,0 +1,392 @@
+1
+00:00:01,000 --> 00:00:05,354
+A content part adds data, an editor, and a display to the content
+
+2
+00:00:05,354 --> 00:00:06,704
+items of a type.
+
+3
+00:00:06,704 --> 00:00:09,464
+This video covers the pieces of a part:
+
+4
+00:00:09,464 --> 00:00:13,941
+its class, its display driver, its templates, and its registration.
+
+5
+00:00:13,941 --> 00:00:17,130
+The example is the Title part of Orchard Core.
+
+6
+00:00:21,730 --> 00:00:25,537
+A content part groups the data for one purpose, such as a title,
+
+7
+00:00:25,537 --> 00:00:27,984
+with the screens that edit and show it.
+
+8
+00:00:27,984 --> 00:00:32,770
+You attach parts to a content type, and every content item of that type gets them.
+
+9
+00:00:33,520 --> 00:00:35,110
+A part has four pieces.
+
+10
+00:00:35,110 --> 00:00:39,166
+A class holds its data, a display driver builds the shapes that edit
+
+11
+00:00:39,166 --> 00:00:43,826
+and show it, templates render those shapes, and a registration and a definition
+
+12
+00:00:43,826 --> 00:00:45,470
+make the part available.
+
+13
+00:00:46,220 --> 00:00:48,278
+The driver never writes HTML.
+
+14
+00:00:48,278 --> 00:00:52,745
+It creates shapes, which are objects that hold the data to display and
+
+15
+00:00:52,745 --> 00:00:55,450
+the information about how to display it.
+
+16
+00:00:55,450 --> 00:00:59,800
+Orchard Core then finds the template for each shape, and renders it.
+
+17
+00:01:04,000 --> 00:01:08,707
+The class derives from ContentPart, and its public properties hold the data.
+
+18
+00:01:08,707 --> 00:01:11,003
+TitlePart has one property, Title.
+
+19
+00:01:11,003 --> 00:01:16,170
+Orchard Core saves the properties with the content item, under the name of the part.
+
+20
+00:01:16,920 --> 00:01:20,957
+The view model is a plain class that carries what the templates need.
+
+21
+00:01:20,957 --> 00:01:25,478
+TitlePartViewModel has the Title, and also the content item, the part, and the
+
+22
+00:01:25,478 --> 00:01:29,300
+settings, marked BindNever so that model binding never sets them.
+
+23
+00:01:30,050 --> 00:01:35,606
+A migration calls AlterPartDefinitionAsync to define the part by the name of its class.
+
+24
+00:01:35,606 --> 00:01:41,222
+Attachable lists it among the parts you can add to a content type, with its description.
+
+25
+00:01:41,222 --> 00:01:43,970
+A separate video covers data migrations.
+
+26
+00:01:48,170 --> 00:01:54,482
+The display driver derives from ContentPartDisplayDriver, with the part as its type argument.
+
+27
+00:01:54,482 --> 00:01:59,200
+The constructor receives a string localizer, for the error messages.
+
+28
+00:01:59,200 --> 00:02:01,751
+The work happens in three methods:
+
+29
+00:02:01,751 --> 00:02:04,110
+Display, Edit, and UpdateAsync.
+
+30
+00:02:04,860 --> 00:02:08,681
+Display returns a display result that builds one shape.
+
+31
+00:02:08,681 --> 00:02:12,816
+Initialize creates a strongly typed shape from a view model.
+
+32
+00:02:12,816 --> 00:02:17,890
+The lambda fills in its properties, and the part is passed in as its state.
+
+33
+00:02:18,640 --> 00:02:24,024
+GetDisplayShapeType names the shape TitlePart, and adds the display mode of the part,
+
+34
+00:02:24,024 --> 00:02:25,207
+if it has one.
+
+35
+00:02:25,207 --> 00:02:27,692
+Location places the shape in a zone:
+
+36
+00:02:27,692 --> 00:02:32,130
+the Title part uses Header, for the Detail and Summary display types.
+
+37
+00:02:32,880 --> 00:02:37,018
+A driver can return null to display nothing, as the Title part does
+
+38
+00:02:37,018 --> 00:02:40,985
+when there is no title, or when its Render Title setting is off.
+
+39
+00:02:40,985 --> 00:02:46,200
+A shape with no location isn't displayed either, unless a placement rule gives it one.
+
+40
+00:02:46,950 --> 00:02:53,062
+Edit builds the shape of the editor from the content item, and GetEditorShapeType names it TitlePart_Edit.
+
+41
+00:02:53,062 --> 00:02:56,937
+It sets no location, because the editor shape of a part goes into
+
+42
+00:02:56,937 --> 00:02:59,120
+the shape of that part by default.
+
+43
+00:02:59,870 --> 00:03:02,481
+UpdateAsync runs when the form is posted.
+
+44
+00:03:02,481 --> 00:03:06,036
+TryUpdateModelAsync copies the posted value into the part.
+
+45
+00:03:06,036 --> 00:03:09,868
+The prefix, which is the name of the part, keeps its form field
+
+46
+00:03:09,868 --> 00:03:12,590
+names apart from the fields of other parts.
+
+47
+00:03:13,340 --> 00:03:15,058
+The driver then validates.
+
+48
+00:03:15,058 --> 00:03:18,977
+An error added to the model state keeps the content item from being
+
+49
+00:03:18,977 --> 00:03:21,876
+saved, and the editor is built again to show it.
+
+50
+00:03:21,876 --> 00:03:26,440
+The base class stores the part back in the content item, so the driver doesn't.
+
+51
+00:03:30,640 --> 00:03:34,179
+A Razor file in the Views folder of the module is the template
+
+52
+00:03:34,179 --> 00:03:35,324
+of a shape type.
+
+53
+00:03:35,324 --> 00:03:38,760
+Dots in a file name stand for underscores in the shape type.
+
+54
+00:03:38,760 --> 00:03:43,600
+The Title part has templates for the display, the Summary display type, and the editor.
+
+55
+00:03:44,350 --> 00:03:47,649
+The display template is Razor over the view model:
+
+56
+00:03:47,649 --> 00:03:48,945
+here, a heading.
+
+57
+00:03:48,945 --> 00:03:53,481
+The editor template binds an input to the Title property, and shows the
+
+58
+00:03:53,481 --> 00:03:56,250
+validation message that UpdateAsync adds.
+
+59
+00:03:57,000 --> 00:04:01,333
+The Summary template, for the Summary display type, renders the title as a
+
+60
+00:04:01,333 --> 00:04:04,800
+link to the content item, with the display-for tag helper.
+
+61
+00:04:09,000 --> 00:04:12,790
+In the Startup class, AddContentPart registers the part.
+
+62
+00:04:12,790 --> 00:04:18,659
+UseDisplayDriver connects the driver to every display mode and editor, and AddHandler adds
+
+63
+00:04:18,659 --> 00:04:21,777
+a handler for the events of the content item.
+
+64
+00:04:21,777 --> 00:04:24,650
+AddDataMigration registers the migration.
+
+65
+00:04:28,950 --> 00:04:30,459
+Let's use the part.
+
+66
+00:04:30,459 --> 00:04:36,255
+Under Design, Content Definition, Content Types, choose Create new type, enter Workshop as
+
+67
+00:04:36,255 --> 00:04:38,790
+the Display Name, and choose Create.
+
+68
+00:04:39,273 --> 00:04:41,829
+The next page lists the parts you can add.
+
+69
+00:04:41,829 --> 00:04:45,131
+Title is there, with the description from its migration.
+
+70
+00:04:45,131 --> 00:04:48,273
+Add & Configure adds the part and opens its settings.
+
+71
+00:04:48,846 --> 00:04:53,910
+Under Behavior option, choose Title is editable and required, and choose Save.
+
+72
+00:04:53,910 --> 00:04:59,216
+This setting belongs to the Title part, and its driver reads it when it validates.
+
+73
+00:05:03,516 --> 00:05:07,210
+Under Content, Content Items, New Workshop opens the editor.
+
+74
+00:05:07,210 --> 00:05:12,806
+The Title field comes from the editor template, rendered from the shape that the driver built.
+
+75
+00:05:13,294 --> 00:05:15,828
+Choose Publish with the field empty.
+
+76
+00:05:15,828 --> 00:05:21,802
+UpdateAsync adds an error, the item isn't saved, and the editor shows again with the message:
+
+77
+00:05:21,802 --> 00:05:23,974
+A value is required for Title.
+
+78
+00:05:24,503 --> 00:05:27,694
+Enter a title, Pruning Apple Trees, and choose Publish.
+
+79
+00:05:27,694 --> 00:05:31,513
+The part is saved with the content item, and the page confirms that
+
+80
+00:05:31,513 --> 00:05:33,553
+your Workshop has been published.
+
+81
+00:05:34,015 --> 00:05:35,795
+Choose View to open the page.
+
+82
+00:05:35,795 --> 00:05:39,713
+The Display method placed the shape in the Header zone, and the display
+
+83
+00:05:39,713 --> 00:05:42,105
+template rendered the title as a heading.
+
+84
+00:05:42,583 --> 00:05:44,632
+Back in the list, choose Edit.
+
+85
+00:05:44,632 --> 00:05:49,412
+The editor shows the saved title, because UpdateAsync copied it to the display
+
+86
+00:05:49,412 --> 00:05:52,883
+text of the content item, and Edit reads it from there.
+
+87
+00:05:57,083 --> 00:06:00,669
+A part can have settings for each content type, as the Title part
+
+88
+00:06:00,669 --> 00:06:02,688
+does with its own settings driver.
+
+89
+00:06:02,688 --> 00:06:06,274
+A handler reacts to events of the content item, as the handler of
+
+90
+00:06:06,274 --> 00:06:09,303
+the Title part does to generate titles from a pattern.
+
+91
+00:06:10,053 --> 00:06:12,660
+The locations in a driver are defaults.
+
+92
+00:06:12,660 --> 00:06:16,368
+A placement file can move or hide a shape, and a theme can
+
+93
+00:06:16,368 --> 00:06:19,033
+replace a template for one content type.
+
+94
+00:06:19,033 --> 00:06:22,103
+Separate videos cover placement and alternates.
+
+95
+00:06:24,103 --> 00:06:28,246
+A part is a class, a display driver, its templates, and a registration
+
+96
+00:06:28,246 --> 00:06:32,225
+with a definition, and together they put your own part in the admin
+
+97
+00:06:32,225 --> 00:06:34,786
+and on your site, as the Title part does.
+
+98
+00:06:34,786 --> 00:06:36,203
+Thanks for watching.
+
