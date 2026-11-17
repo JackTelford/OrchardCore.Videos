@@ -1,0 +1,239 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.064
+Data pipelines read their rows from data sources.
+
+00:00:04.064 --> 00:00:07.908
+Your own module can add one, so that its records appear next to
+
+00:00:07.908 --> 00:00:10.582
+the content items and the users of a site.
+
+00:00:10.582 --> 00:00:13.980
+This video builds a data source for a help desk module.
+
+00:00:18.580 --> 00:00:23.178
+A data source connects one place where data lives, such as the content
+
+00:00:23.178 --> 00:00:27.051
+items of a site, its users, or the records of your module.
+
+00:00:27.051 --> 00:00:30.560
+It has a technical name, a label, and a description.
+
+00:00:31.310 --> 00:00:33.919
+A data source exposes data sets.
+
+00:00:33.919 --> 00:00:39.205
+A data set is one table, such as the content items of one content type.
+
+00:00:39.205 --> 00:00:42.637
+Its fields have a name, a label, and a type:
+
+00:00:42.637 --> 00:00:46.550
+Text, Integer, Decimal, Boolean, Date, or DateTime.
+
+00:00:47.300 --> 00:00:51.033
+Rows are read one batch at a time, 500 by default, so a
+
+00:00:51.033 --> 00:00:55.807
+consumer can read any number of rows without holding them all in memory.
+
+00:00:55.807 --> 00:01:00.520
+And data is read for a user, who sees only the data sets they may read.
+
+00:01:04.820 --> 00:01:08.764
+The Data Pipelines designer is one consumer of data sources.
+
+00:01:08.764 --> 00:01:12.886
+Its Add a data source button opens a dialog that lists the data
+
+00:01:12.886 --> 00:01:16.770
+sets of every registered data source, for the current user.
+
+00:01:17.253 --> 00:01:21.032
+Let's choose the Users data source in the list on the left, to
+
+00:01:21.032 --> 00:01:22.421
+see only its cards.
+
+00:01:22.421 --> 00:01:26.366
+Each card is a data set, with its label, its description, and the
+
+00:01:26.366 --> 00:01:28.033
+name of its data source.
+
+00:01:28.486 --> 00:01:33.371
+The Users data source is registered the same way you will register yours.
+
+00:01:33.371 --> 00:01:37.205
+It lists its data sets only to users who may view users.
+
+00:01:37.205 --> 00:01:40.606
+Add puts a Read a data source step on the canvas.
+
+00:01:41.059 --> 00:01:43.780
+The Fields tab shows what the step produces.
+
+00:01:43.780 --> 00:01:48.839
+Each field has its label from the schema, its technical name in brackets, and its type.
+
+00:01:49.297 --> 00:01:53.612
+On the Data tab, Preview reads the first rows through the data source,
+
+00:01:53.612 --> 00:01:55.429
+for the user who previews.
+
+00:01:55.429 --> 00:01:59.517
+Each column header is a field label, with the field type under it.
+
+00:02:03.717 --> 00:02:08.599
+A module that adds a data source depends on the Data Pipelines Core feature.
+
+00:02:08.599 --> 00:02:14.017
+That feature is enabled only as a dependency, so enabling your module enables it too.
+
+00:02:14.767 --> 00:02:20.336
+The simplest data source derives from RecordDataSource and declares IDataSource.
+
+00:02:20.336 --> 00:02:25.840
+The static Name, DisplayName, and Description describe it, and each data set is
+
+00:02:25.840 --> 00:02:29.337
+a RecordDataSet over a .NET type, here a ticket.
+
+00:02:30.087 --> 00:02:33.653
+In the data set, AddField declares each field in order:
+
+00:02:33.653 --> 00:02:38.097
+its technical name, its label, its type, and a function that reads the
+
+00:02:38.097 --> 00:02:39.618
+value from a record.
+
+00:02:39.618 --> 00:02:43.477
+Saved pipelines store these names, so they must stay stable.
+
+00:02:44.227 --> 00:02:47.849
+IsIdentifier marks a field that identifies a record.
+
+00:02:47.849 --> 00:02:53.658
+IsKeyFilterable promises that the data set can read only the records of a list of keys.
+
+00:02:53.658 --> 00:02:59.467
+And References names the data set the values identify, so consumers can suggest a join.
+
+00:03:00.217 --> 00:03:05.208
+CanReadAsync tells whether the user of the context may read the data set.
+
+00:03:05.208 --> 00:03:10.199
+The data source lists, describes, and reads only the data sets that pass.
+
+00:03:10.199 --> 00:03:14.117
+A published pipeline reads as the user who published it.
+
+00:03:14.867 --> 00:03:19.200
+LoadAsync streams the records in a stable order, one page at a time,
+
+00:03:19.200 --> 00:03:21.719
+so any number of records can be read.
+
+00:03:21.719 --> 00:03:26.697
+The base class reads only the fields and the number of rows the query asks for.
+
+00:03:27.447 --> 00:03:32.158
+DataConditions reads the conditions a store can apply while it loads, such as
+
+00:03:32.158 --> 00:03:34.486
+a list of keys or a range of dates.
+
+00:03:34.486 --> 00:03:39.027
+The consumer filters again, so a condition can be ignored, except the keys
+
+00:03:39.027 --> 00:03:40.957
+of an IsKeyFilterable field.
+
+00:03:45.157 --> 00:03:51.446
+Register the data source with AddDataSource, in a startup that requires the Data Pipelines Core feature.
+
+00:03:51.446 --> 00:03:56.077
+A data source is a scoped service, and two data sources can't share a name.
+
+00:03:56.827 --> 00:04:00.666
+Once your module is enabled, its data sets appear to the users who
+
+00:04:00.666 --> 00:04:04.452
+may read them, in the dialog you saw and in every other consumer.
+
+00:04:04.452 --> 00:04:08.237
+If the feature that provides it is disabled, a step that reads it
+
+00:04:08.237 --> 00:04:10.317
+reports that it is not available.
+
+00:04:14.517 --> 00:04:19.076
+When data doesn't come as records, implement IDataSource yourself.
+
+00:04:19.076 --> 00:04:25.027
+GetDataSetsAsync lists the data sets the user may read, and GetSchemaAsync describes one
+
+00:04:25.027 --> 00:04:26.927
+of them with its fields.
+
+00:04:27.677 --> 00:04:30.439
+GetSchemaAsync is the security boundary.
+
+00:04:30.439 --> 00:04:34.462
+It returns null for a data set that doesn't exist or that the
+
+00:04:34.462 --> 00:04:39.627
+user may not read, and consumers read a data set only after it returns a schema.
+
+00:04:40.377 --> 00:04:42.392
+ReadAsync yields batches.
+
+00:04:42.392 --> 00:04:46.942
+A batch holds the fields and the rows, with one value per field,
+
+00:04:46.942 --> 00:04:51.102
+in order, using the .NET type that matches the field type.
+
+00:04:51.102 --> 00:04:56.237
+It checks the access of the user again, and yields nothing when it fails.
+
+00:05:00.437 --> 00:05:05.501
+A data source that reads changes from a queue should remove them only once delivered.
+
+00:05:05.501 --> 00:05:07.338
+A step passes a ConsumerId.
+
+00:05:07.338 --> 00:05:11.456
+OnSucceeded adds an action that runs only if the step read every row
+
+00:05:11.456 --> 00:05:15.297
+and the run succeeds, so a failed run's changes are read again.
+
+00:05:16.047 --> 00:05:20.604
+A data source that can group and aggregate in its own store implements
+
+00:05:20.604 --> 00:05:25.520
+IDataAggregateSource, and answers null to any query it can't answer exactly.
+
+00:05:25.520 --> 00:05:30.737
+The documentation of Data Sources also covers file formats and formula functions.
+
+00:05:32.737 --> 00:05:34.247
+That is a data source:
+
+00:05:34.247 --> 00:05:38.886
+a data set that declares its fields and who may read them, and one registration.
+
+00:05:38.886 --> 00:05:43.094
+Every consumer of data sources can then read your module's data, for the
+
+00:05:43.094 --> 00:05:44.604
+users who may read it.
+
+00:05:44.604 --> 00:05:46.007
+Thanks for watching.
+
