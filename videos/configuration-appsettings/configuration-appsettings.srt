@@ -1,0 +1,348 @@
+1
+00:00:01,000 --> 00:00:06,029
+Orchard Core reads its settings from files, environment variables and the command line,
+
+2
+00:00:06,029 --> 00:00:08,787
+and every tenant can add settings of its own.
+
+3
+00:00:08,787 --> 00:00:13,384
+In this video, we'll see where configuration comes from, which source wins, and
+
+4
+00:00:13,384 --> 00:00:15,060
+how to configure tenants.
+
+5
+00:00:19,660 --> 00:00:23,799
+ASP.NET Core has one configuration for the whole application.
+
+6
+00:00:23,799 --> 00:00:30,348
+Orchard Core adds IShellConfiguration, which extends IConfiguration, so each tenant reads the shared
+
+7
+00:00:30,348 --> 00:00:33,560
+settings with its own settings layered on top.
+
+8
+00:00:34,310 --> 00:00:39,741
+All the configuration of Orchard Core sits under one section named OrchardCore.
+
+9
+00:00:39,741 --> 00:00:42,616
+Modules nest their settings by service:
+
+10
+00:00:42,616 --> 00:00:47,343
+the Azure settings of the Media module are in Media, then Azure, and
+
+11
+00:00:47,343 --> 00:00:50,410
+the SMTP settings are in Email, then Smtp.
+
+12
+00:00:51,160 --> 00:00:54,875
+Section names carry no OrchardCore underscore prefix.
+
+13
+00:00:54,875 --> 00:01:00,480
+Deprecated names such as OrchardCore_Media_Azure are read as well, and when a value
+
+14
+00:01:00,480 --> 00:01:03,818
+is set under both names, the current name wins.
+
+15
+00:01:03,818 --> 00:01:08,100
+An array under the current name replaces the deprecated array.
+
+16
+00:01:08,850 --> 00:01:13,467
+Only modules that read a section are configured by it, so check the
+
+17
+00:01:13,467 --> 00:01:16,566
+documentation of a module for its settings.
+
+18
+00:01:16,566 --> 00:01:22,890
+The appsettings.json file of the Orchard Core CMS web project lists many sections as comments.
+
+19
+00:01:27,090 --> 00:01:30,505
+Environment variables follow the same paths.
+
+20
+00:01:30,505 --> 00:01:37,883
+A double underscore replaces each colon, so OrchardCore__Media__MaxFileSize sets the maximum file size
+
+21
+00:01:37,883 --> 00:01:40,820
+of the Media module for every tenant.
+
+22
+00:01:41,570 --> 00:01:47,016
+Put a tenant name right after OrchardCore, and the value applies to that tenant only:
+
+23
+00:01:47,016 --> 00:01:49,829
+Default, or the name of any other tenant.
+
+24
+00:01:49,829 --> 00:01:54,438
+A tenant's value wins over the shared one, except for settings the host
+
+25
+00:01:54,438 --> 00:01:57,550
+reads for all tenants, like BackgroundService.
+
+26
+00:01:58,300 --> 00:02:01,333
+Hosting platforms use the same variables:
+
+27
+00:02:01,333 --> 00:02:07,141
+Azure App Settings reach the site as environment variables, on Windows and on Linux.
+
+28
+00:02:07,141 --> 00:02:13,400
+A pipeline can also transform the appsettings.json file with values from its own variables.
+
+29
+00:02:17,600 --> 00:02:23,855
+ASP.NET Core loads appsettings.json first, then the file of the current environment, such
+
+30
+00:02:23,855 --> 00:02:29,650
+as appsettings.Development.json, then user secrets in the Development environment.
+
+31
+00:02:30,400 --> 00:02:35,425
+Next, Orchard Core adds the appsettings.json file of the App_Data folder, then the
+
+32
+00:02:35,425 --> 00:02:39,765
+file of the current environment, such as appsettings.Development.json.
+
+33
+00:02:39,765 --> 00:02:42,620
+They override the files of the host project.
+
+34
+00:02:43,370 --> 00:02:47,102
+Environment variables and command-line arguments come after.
+
+35
+00:02:47,102 --> 00:02:51,964
+ASP.NET Core loads them before the App_Data files, and Orchard Core applies them
+
+36
+00:02:51,964 --> 00:02:55,470
+again at this point, so they win over every file so far.
+
+37
+00:02:56,220 --> 00:02:58,767
+Last come the settings of the tenant:
+
+38
+00:02:58,767 --> 00:03:04,809
+its own section under OrchardCore, then the appsettings.json file in its own folder of App_Data.
+
+39
+00:03:04,809 --> 00:03:08,600
+A later source wins, so a tenant value beats a shared one.
+
+40
+00:03:09,350 --> 00:03:13,129
+By default the App_Data folder sits in the application folder.
+
+41
+00:03:13,129 --> 00:03:18,241
+The ORCHARD_APP_DATA environment variable moves it, to a relative or an absolute path,
+
+42
+00:03:18,241 --> 00:03:21,520
+and Orchard Core creates the folder if it is missing.
+
+43
+00:03:25,720 --> 00:03:29,929
+To configure a tenant before it exists, add a section named for the
+
+44
+00:03:29,929 --> 00:03:33,504
+tenant under OrchardCore, with a State of Uninitialized.
+
+45
+00:03:33,504 --> 00:03:38,174
+Its URL prefix routes requests to the tenant, and its database provider and
+
+46
+00:03:38,174 --> 00:03:40,480
+recipe are used when it is set up.
+
+47
+00:03:41,230 --> 00:03:46,653
+Orchard Core treats any section under OrchardCore that has a valid State as a tenant.
+
+48
+00:03:46,653 --> 00:03:51,123
+A section without a State only adds configuration, as we'll see for a
+
+49
+00:03:51,123 --> 00:03:53,090
+tenant that already exists.
+
+50
+00:03:54,744 --> 00:04:00,714
+With the Tenants feature enabled, the list under Multi-Tenancy, Tenants shows MyTenant, although
+
+51
+00:04:00,714 --> 00:04:02,470
+nobody created it there.
+
+52
+00:04:02,470 --> 00:04:05,103
+Its badges come from the configuration:
+
+53
+00:04:05,103 --> 00:04:09,844
+the Sqlite database provider, the SaaS recipe, and the state Uninitialized.
+
+54
+00:04:10,316 --> 00:04:12,730
+Setup opens the tenant's own address.
+
+55
+00:04:12,730 --> 00:04:16,547
+The screen asks for the site name, the time zone and the Super
+
+56
+00:04:16,547 --> 00:04:21,936
+User, but not for a recipe or a database, because the configuration already provides them.
+
+57
+00:04:23,536 --> 00:04:29,081
+Once a tenant exists, a section with its name, and no State, sets its configuration.
+
+58
+00:04:29,081 --> 00:04:34,626
+This one sets the maximum file size of the Media module for the Default tenant only.
+
+59
+00:04:35,376 --> 00:04:40,508
+A tenant section shares its path with the module sections under OrchardCore.
+
+60
+00:04:40,508 --> 00:04:45,076
+Never name a tenant after a module section, such as Media or Email.
+
+61
+00:04:45,826 --> 00:04:51,650
+Each tenant can also have its own appsettings.json file, in a folder named for the tenant.
+
+62
+00:04:51,650 --> 00:04:56,199
+Its keys sit at the root, without an OrchardCore section, and no file
+
+63
+00:04:56,199 --> 00:04:58,686
+for a specific environment is read.
+
+64
+00:04:59,436 --> 00:05:04,156
+Orchard Core writes this file during setup, and keeps only the values that
+
+65
+00:05:04,156 --> 00:05:06,988
+differ from the application configuration.
+
+66
+00:05:06,988 --> 00:05:11,412
+The State and the URL of the tenant are saved apart, in tenants.json,
+
+67
+00:05:11,412 --> 00:05:12,946
+under the same rule.
+
+68
+00:05:17,146 --> 00:05:22,687
+To give every tenant the same database, set the DatabaseProvider and the ConnectionString
+
+69
+00:05:22,687 --> 00:05:25,661
+once, at the root of the OrchardCore section.
+
+70
+00:05:25,661 --> 00:05:31,376
+A Default section can give the Default tenant its own TablePrefix, keeping its tables apart.
+
+71
+00:05:32,126 --> 00:05:38,437
+Under Tenants, TablePrefixPattern and SchemaPattern generate the table prefix and schema of each
+
+72
+00:05:38,437 --> 00:05:43,757
+tenant created in the admin or the API, from a template such as the tenant name.
+
+73
+00:05:43,757 --> 00:05:49,696
+The values must be valid SQL identifiers, and RequireTablePrefix makes a prefix mandatory.
+
+74
+00:05:50,446 --> 00:05:54,715
+These settings apply to SQL Server, MySQL and PostgreSQL.
+
+75
+00:05:54,715 --> 00:05:58,442
+SQLite does not use the shared connection string:
+
+76
+00:05:58,442 --> 00:06:01,626
+it keeps a database file for each tenant.
+
+77
+00:06:05,826 --> 00:06:12,001
+In your own module, a Startup class receives IShellConfiguration, and binds a section
+
+78
+00:06:12,001 --> 00:06:13,765
+to an options class.
+
+79
+00:06:13,765 --> 00:06:20,346
+The Tenants module binds Tenants, and also accepts the deprecated name OrchardCore_Tenants.
+
+80
+00:06:21,096 --> 00:06:27,460
+For your own sections, skip the prefix and nest by service, such as MyService and MyProvider.
+
+81
+00:06:27,460 --> 00:06:30,866
+The environment variable names then stay short.
+
+82
+00:06:31,616 --> 00:06:34,393
+A module can also describe its sections.
+
+83
+00:06:34,393 --> 00:06:39,945
+Ship a ConfigurationSchema.json file in the package, with a targets file that declares
+
+84
+00:06:39,945 --> 00:06:45,196
+it, and Visual Studio suggests and validates those settings in appsettings files.
+
+85
+00:06:47,196 --> 00:06:49,614
+That's configuration in Orchard Core:
+
+86
+00:06:49,614 --> 00:06:55,235
+sections under OrchardCore, files and environment variables, and tenant values layered on top.
+
+87
+00:06:55,235 --> 00:06:56,696
+Thanks for watching.
+
