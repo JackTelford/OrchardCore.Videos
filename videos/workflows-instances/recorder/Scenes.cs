@@ -80,7 +80,7 @@ public static class Scenes
             await WaitTextAsync(page, "was enabled");
         }
 
-        var json = await File.ReadAllTextAsync(Path.Combine(Root, "seed.json"));
+        var json = Seed.Json;
         await page.GotoAsync(BaseUrl + "/Admin/DeploymentPlan/Import/Json");
         await page.WaitForFunctionAsync("() => !!document.querySelector('.CodeMirror')");
         await page.EvaluateAsync("j => document.querySelector('.CodeMirror').CodeMirror.setValue(j)", json);

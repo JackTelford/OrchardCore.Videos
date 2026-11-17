@@ -1,3 +1,9 @@
+namespace Recorder;
+
+/// <summary>The workflows that PrepareAsync imports (the JSON of the recording plan).</summary>
+internal static class Seed
+{
+    public const string Json = """
 {
   "name": "workflow-instances-video-seed",
   "displayName": "Workflow instances video: seed",
@@ -163,4 +169,6 @@
       ]
     }
   ]
+}
+""";
 }
