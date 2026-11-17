@@ -1,0 +1,252 @@
+1
+00:00:01,000 --> 00:00:04,478
+By default, every tenant is offered the same features.
+
+2
+00:00:04,478 --> 00:00:09,985
+Tenant feature profiles let the Default tenant decide which features a tenant is offered.
+
+3
+00:00:09,985 --> 00:00:14,970
+In this video, we create a profile, assign it to a tenant, and check the result.
+
+4
+00:00:19,570 --> 00:00:24,144
+Without a profile, the Features page of every tenant lists the same features,
+
+5
+00:00:24,144 --> 00:00:27,174
+apart from those reserved for the Default tenant.
+
+6
+00:00:27,174 --> 00:00:32,960
+The administrator of a tenant can enable these features, including ones you would rather not offer.
+
+7
+00:00:33,710 --> 00:00:38,276
+A feature profile is a named list of rules, created on the Default tenant.
+
+8
+00:00:38,276 --> 00:00:42,615
+When you assign a profile to a tenant, its rules decide which features
+
+9
+00:00:42,615 --> 00:00:44,270
+that tenant is offered.
+
+10
+00:00:45,020 --> 00:00:50,907
+Several tenants can share one profile, and a tenant without a profile is not restricted.
+
+11
+00:00:50,907 --> 00:00:53,850
+Only the Default tenant manages profiles.
+
+12
+00:00:58,050 --> 00:01:03,076
+Each rule has a Rule, which is Exclude or Include, and an Expression.
+
+13
+00:01:03,076 --> 00:01:09,710
+The Expression is matched against feature IDs, and it can use wildcards, such as an asterisk.
+
+14
+00:01:10,460 --> 00:01:15,720
+Rules apply in the order listed, and the last rule that matches a feature decides.
+
+15
+00:01:15,720 --> 00:01:20,621
+Here, the Include rule brings the SMTP Email Provider back after the Exclude
+
+16
+00:01:20,621 --> 00:01:23,012
+rule removed every Email provider.
+
+17
+00:01:23,012 --> 00:01:26,180
+A feature that no rule matches stays available.
+
+18
+00:01:26,930 --> 00:01:31,745
+A feature is also unavailable when a feature it depends on is excluded.
+
+19
+00:01:31,745 --> 00:01:40,250
+Excluding Workflows therefore removes HTTP Workflows Activities, Timer Workflows Activities, and Session Workflows Activities too.
+
+20
+00:01:44,456 --> 00:01:48,590
+Feature profiles belong to the Default tenant, so we start there.
+
+21
+00:01:48,590 --> 00:01:52,666
+Under Tools, Features, let's search for Tenant Feature Profiles.
+
+22
+00:01:53,141 --> 00:01:58,090
+Each row shows the name of a feature and, beside it, the feature ID.
+
+23
+00:01:58,090 --> 00:02:01,301
+The rules of a profile refer to these IDs.
+
+24
+00:02:01,761 --> 00:02:02,981
+Select Enable.
+
+25
+00:02:02,981 --> 00:02:07,619
+A notice confirms it, and Multi-Tenancy gets a Feature Profiles entry.
+
+26
+00:02:07,619 --> 00:02:13,111
+The Administrator role has the Manage tenant feature profiles permission by default.
+
+27
+00:02:17,384 --> 00:02:20,505
+Open Multi-Tenancy, then Feature Profiles.
+
+28
+00:02:20,505 --> 00:02:23,822
+The list is empty, because no profile exists.
+
+29
+00:02:23,822 --> 00:02:27,204
+Select Add Feature Profile to start a new one.
+
+30
+00:02:27,662 --> 00:02:31,452
+Name is how the profile appears in the list, on the Tenants page,
+
+31
+00:02:31,452 --> 00:02:34,174
+and in the Feature profile field of a tenant.
+
+32
+00:02:34,174 --> 00:02:35,722
+We call it Basic sites.
+
+33
+00:02:36,188 --> 00:02:38,993
+Rules is an editor for the list of rules.
+
+34
+00:02:38,993 --> 00:02:43,768
+The hint below it shows an example, an Exclude rule for OrchardCore.Flows.
+
+35
+00:02:44,220 --> 00:02:45,797
+We add three rules.
+
+36
+00:02:45,797 --> 00:02:48,762
+The first excludes the Workflows feature.
+
+37
+00:02:48,762 --> 00:02:53,810
+The second uses an asterisk to exclude every Email provider, and the third
+
+38
+00:02:53,810 --> 00:02:56,650
+includes the SMTP Email Provider again.
+
+39
+00:02:57,108 --> 00:02:58,187
+Select Save.
+
+40
+00:02:58,187 --> 00:03:02,263
+The profile appears in the list, with Edit and Delete buttons.
+
+41
+00:03:02,263 --> 00:03:06,038
+As the list grows, the Search box finds profiles by name.
+
+42
+00:03:06,496 --> 00:03:09,238
+To change a profile later, select Edit.
+
+43
+00:03:09,238 --> 00:03:14,296
+The form is the same, with the current rules, and Cancel returns to the list.
+
+44
+00:03:18,489 --> 00:03:23,555
+The Tenants page lists every tenant, and a separate video covers creating them.
+
+45
+00:03:23,555 --> 00:03:27,369
+Let's select Edit on Bluebird, a tenant without a profile.
+
+46
+00:03:27,872 --> 00:03:33,018
+The Feature profile field appears when at least one profile exists, and the
+
+47
+00:03:33,018 --> 00:03:35,495
+Create Tenant page offers it too.
+
+48
+00:03:35,495 --> 00:03:37,782
+Select Basic sites, then Save.
+
+49
+00:03:38,276 --> 00:03:43,601
+Back on the Tenants page, a badge with the profile name marks the row of Bluebird.
+
+50
+00:03:43,601 --> 00:03:47,896
+Maplewood has no profile badge, because no profile applies to it.
+
+51
+00:03:52,108 --> 00:03:54,320
+Let's compare the Features pages.
+
+52
+00:03:54,320 --> 00:03:59,766
+On the Default tenant, a search for OrchardCore.Workflows lists Workflows and the features
+
+53
+00:03:59,766 --> 00:04:01,128
+that depend on it.
+
+54
+00:04:01,595 --> 00:04:06,657
+Next, the Features button on the Tenants page opens the Features page of Bluebird.
+
+55
+00:04:06,657 --> 00:04:11,145
+The same search finds nothing, so this tenant cannot enable any of them.
+
+56
+00:04:11,612 --> 00:04:20,213
+Searching for OrchardCore.Email lists Email and SMTP Email Provider, but not Azure Communication Services Email.
+
+57
+00:04:20,213 --> 00:04:25,462
+The wildcard rule excluded it, and the Include rule restored SMTP.
+
+58
+00:04:25,917 --> 00:04:30,647
+Maplewood has no profile, so its Features page still lists Workflows.
+
+59
+00:04:30,647 --> 00:04:34,367
+A profile only affects the tenants it is assigned to.
+
+60
+00:04:36,367 --> 00:04:39,167
+A feature profile limits what a tenant is offered.
+
+61
+00:04:39,167 --> 00:04:42,617
+Create it on the Default tenant, assign it to a tenant, and the
+
+62
+00:04:42,617 --> 00:04:45,267
+Features page of that tenant follows its rules.
+
+63
+00:04:45,267 --> 00:04:46,567
+Thanks for watching.
+
