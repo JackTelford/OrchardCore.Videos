@@ -1,0 +1,185 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.812
+A pipeline can run when you ask it to, or on a schedule.
+
+00:00:04.812 --> 00:00:09.361
+In this video, we schedule a pipeline with a workflow, and then read
+
+00:00:09.361 --> 00:00:13.910
+the run history to see what each run did and why one of them failed.
+
+00:00:18.510 --> 00:00:23.124
+A run executes the published version of a pipeline, never its draft.
+
+00:00:23.124 --> 00:00:27.800
+It is queued and executes in the background, so no page waits for it.
+
+00:00:28.550 --> 00:00:33.796
+A run reads and writes data with the access of the user who published the pipeline.
+
+00:00:33.796 --> 00:00:37.745
+Only one run of a pipeline executes at a time, and the others
+
+00:00:37.745 --> 00:00:39.160
+wait in the queue.
+
+00:00:39.910 --> 00:00:42.574
+A pipeline has no schedule of its own.
+
+00:00:42.574 --> 00:00:44.390
+A workflow provides one:
+
+00:00:44.390 --> 00:00:49.536
+a Timer Event starts the workflow, and a Run Data Pipeline Task queues the run.
+
+00:00:49.536 --> 00:00:54.500
+These activities need the Workflows and Timer Workflows Activities features.
+
+00:00:58.800 --> 00:01:04.869
+Under Tools, Data Pipelines, Pipelines, each pipeline shows its published version and the
+
+00:01:04.869 --> 00:01:06.721
+status of its last run.
+
+00:01:06.721 --> 00:01:11.640
+A pipeline that was never published, or that is disabled, can't be run.
+
+00:01:12.181 --> 00:01:17.208
+From the Actions menu of Blog posts export, we start a run, and confirm with Run.
+
+00:01:17.208 --> 00:01:21.831
+The same menu has Run history, which lists the runs of this pipeline only.
+
+00:01:22.643 --> 00:01:25.973
+The run is queued and executes in the background.
+
+00:01:25.973 --> 00:01:30.758
+Its page shows the status, here Succeeded, the version that ran, and when
+
+00:01:30.758 --> 00:01:33.423
+the run was queued, started and ended.
+
+00:01:37.651 --> 00:01:39.094
+Let's schedule it.
+
+00:01:39.094 --> 00:01:44.745
+Under Design, Workflows, we choose Create Workflow, name the workflow Nightly blog posts
+
+00:01:44.745 --> 00:01:47.991
+export, and choose Create and open the designer.
+
+00:01:48.449 --> 00:01:53.144
+A workflow starts with an event, and the designer offers the common ones.
+
+00:01:53.144 --> 00:01:58.789
+We choose Timer Event, which runs the workflow repeatedly according to a CRON expression.
+
+00:01:59.267 --> 00:02:05.047
+In the CRON Expression field, we enter a schedule for two in the morning, every day.
+
+00:02:05.047 --> 00:02:09.927
+A CRON expression uses UTC by default, so we check Use site time zone.
+
+00:02:10.388 --> 00:02:14.201
+Pointing at the Done outcome of the Timer Event shows a plus.
+
+00:02:14.201 --> 00:02:18.070
+We click it, search for Run Data Pipeline Task, and choose it.
+
+00:02:18.070 --> 00:02:20.688
+The designer adds it, already connected.
+
+00:02:21.138 --> 00:02:24.068
+In Data pipeline, we choose Blog posts export.
+
+00:02:24.068 --> 00:02:27.899
+We also check Skip when a run is already queued or running, so
+
+00:02:27.899 --> 00:02:30.378
+that runs do not pile up in the queue.
+
+00:02:30.844 --> 00:02:34.373
+Publish turns the draft into the published workflow.
+
+00:02:34.373 --> 00:02:38.693
+From then on, the workflow queues a run every night, and each run
+
+00:02:38.693 --> 00:02:40.944
+is recorded in the run history.
+
+00:02:45.162 --> 00:02:50.608
+Under Tools, Data Pipelines, Run History, the runs of every pipeline are listed,
+
+00:02:50.608 --> 00:02:52.381
+the most recent first.
+
+00:02:52.381 --> 00:02:57.066
+Each run shows its status, the version that ran, when it was queued,
+
+00:02:57.066 --> 00:02:59.852
+how long it took, and what started it.
+
+00:03:00.307 --> 00:03:04.155
+The last badge, with the play icon, says what started the run:
+
+00:03:04.155 --> 00:03:08.285
+Manual, followed by a user name, for a run started from the Actions
+
+00:03:08.285 --> 00:03:11.567
+menu, and Workflow for a run that a workflow queued.
+
+00:03:12.024 --> 00:03:16.360
+Search by pipeline narrows the list by pipeline name, and the Status menu
+
+00:03:16.360 --> 00:03:17.841
+narrows it by status.
+
+00:03:17.841 --> 00:03:19.104
+We choose Failed.
+
+00:03:20.713 --> 00:03:23.191
+We open the failed run with Details.
+
+00:03:23.191 --> 00:03:27.498
+Its page shows the status and the version, when the run was queued,
+
+00:03:27.498 --> 00:03:30.743
+started and ended, and the error that stopped it.
+
+00:03:31.194 --> 00:03:37.394
+The Steps table lists each step with its status, rows read and written, files, and warnings.
+
+00:03:37.394 --> 00:03:42.265
+This run stopped before its first step began, so every step is Pending.
+
+00:03:42.265 --> 00:03:46.504
+The Log repeats the error in red, after the name of the step.
+
+00:03:46.965 --> 00:03:50.731
+On the page of a run that succeeded, the Steps table shows the
+
+00:03:50.731 --> 00:03:54.995
+rows and files of each step, and Delivered lists what the run produced,
+
+00:03:54.995 --> 00:03:58.705
+such as a file saved to the media library, with a link to it.
+
+00:04:02.905 --> 00:04:06.288
+In the Actions menu of a run, Cancel the run stops it at
+
+00:04:06.288 --> 00:04:09.888
+once if it is queued, or at its next batch if it is running.
+
+00:04:09.888 --> 00:04:12.561
+It needs the Run data pipelines permission.
+
+00:04:12.561 --> 00:04:15.725
+By default, runs are deleted 30 days after they end.
+
+00:04:17.725 --> 00:04:22.721
+A schedule is one workflow away, and every run leaves a record you can read.
+
+00:04:22.721 --> 00:04:24.305
+Thanks for watching.
+
