@@ -1,0 +1,280 @@
+1
+00:00:01,000 --> 00:00:03,507
+Your site does work in the background:
+
+2
+00:00:03,507 --> 00:00:07,667
+it clears caches, publishes scheduled content and removes old data.
+
+3
+00:00:07,667 --> 00:00:13,080
+The Background Tasks module shows that work, changes when it runs, and runs it on demand.
+
+4
+00:00:13,080 --> 00:00:14,220
+Let's see how.
+
+5
+00:00:18,820 --> 00:00:21,941
+A site does work that no visitor asks for.
+
+6
+00:00:21,941 --> 00:00:28,768
+It clears caches, publishes content on schedule, removes old data and keeps search indexes current.
+
+7
+00:00:28,768 --> 00:00:34,229
+Modules register this work as background tasks, and the tasks run even without
+
+8
+00:00:34,229 --> 00:00:36,440
+the Background Tasks module.
+
+9
+00:00:37,190 --> 00:00:41,141
+The Background Tasks module adds a page to see and control them.
+
+10
+00:00:41,141 --> 00:00:45,092
+You see what ran and what runs next, change a schedule, switch a
+
+11
+00:00:45,092 --> 00:00:47,180
+task off, and run it on demand.
+
+12
+00:00:47,180 --> 00:00:52,260
+Access needs the Manage background tasks permission, held by the Administrator role.
+
+13
+00:00:56,454 --> 00:01:00,625
+Let's open Tools, Features, and search for Background Tasks.
+
+14
+00:01:00,625 --> 00:01:03,280
+The module is in the Tasks category.
+
+15
+00:01:03,280 --> 00:01:04,544
+Select Enable.
+
+16
+00:01:04,997 --> 00:01:10,443
+A message confirms the feature is enabled, and Background Tasks appears in the Tools menu.
+
+17
+00:01:10,443 --> 00:01:11,577
+Let's open it.
+
+18
+00:01:15,814 --> 00:01:20,595
+Each background task of the site has a row with its title and description.
+
+19
+00:01:20,595 --> 00:01:25,794
+Badges show whether the task is enabled, when it last ran, and when it runs next.
+
+20
+00:01:26,261 --> 00:01:30,417
+The Last run badge shows a check mark when the run succeeded, how
+
+21
+00:01:30,417 --> 00:01:33,169
+long ago it started and how long it took.
+
+22
+00:01:33,169 --> 00:01:35,451
+A task that never ran says never.
+
+23
+00:01:35,926 --> 00:01:38,919
+The List and Grid buttons switch the layout.
+
+24
+00:01:38,919 --> 00:01:43,826
+The Grid layout shows the last run and the next run in columns of their own.
+
+25
+00:01:44,303 --> 00:01:48,099
+Search filters the tasks by title or description.
+
+26
+00:01:48,099 --> 00:01:54,243
+The Status filter offers Enabled, Disabled, Running or queued, and Last run failed.
+
+27
+00:01:58,502 --> 00:02:01,811
+Select the title of a task to open its details.
+
+28
+00:02:01,811 --> 00:02:06,619
+The Execution card gives the status, the last run with its duration and
+
+29
+00:02:06,619 --> 00:02:10,552
+trigger, the next run, and the completed and failed runs.
+
+30
+00:02:11,066 --> 00:02:17,076
+The Settings card shows the schedule, the enabled state, and whether the task is atomic.
+
+31
+00:02:17,076 --> 00:02:23,406
+Recent runs lists the most recent runs with their start, duration, trigger, result and error.
+
+32
+00:02:27,616 --> 00:02:30,181
+To change when a task runs, select Edit.
+
+33
+00:02:30,181 --> 00:02:33,749
+The Properties tab holds the description and the schedule.
+
+34
+00:02:33,749 --> 00:02:35,366
+The title is read-only.
+
+35
+00:02:35,825 --> 00:02:40,538
+The schedule is a cron expression, which follows the time zone of the site.
+
+36
+00:02:40,538 --> 00:02:45,715
+Text that is not a cron expression, such as every night, is rejected when you save.
+
+37
+00:02:46,176 --> 00:02:49,817
+Reset Schedule puts the default schedule back in the field.
+
+38
+00:02:49,817 --> 00:02:53,179
+Let's enter a valid cron expression instead, and save.
+
+39
+00:02:53,179 --> 00:02:55,756
+A message confirms the task was updated.
+
+40
+00:02:56,210 --> 00:03:00,558
+The background service applies the saved schedule at its next check, and the
+
+41
+00:03:00,558 --> 00:03:02,520
+Next run badge then follows it.
+
+42
+00:03:02,986 --> 00:03:07,661
+Use Tenant Pipeline lets the task generate URLs in the background.
+
+43
+00:03:07,661 --> 00:03:12,920
+The Advanced tab sets a lock timeout and expiration, in milliseconds, for a
+
+44
+00:03:12,920 --> 00:03:16,166
+distributed lock feature such as Redis Lock.
+
+45
+00:03:20,388 --> 00:03:24,582
+To run a task right away, open its Actions menu and run it from there.
+
+46
+00:03:24,582 --> 00:03:26,900
+The task runs whatever its schedule.
+
+47
+00:03:26,900 --> 00:03:30,488
+A message confirms the task is queued and will run shortly.
+
+48
+00:03:30,944 --> 00:03:34,293
+The row follows the run without reloading the page.
+
+49
+00:03:34,293 --> 00:03:38,524
+Usually within a few seconds, the Last run badge shows the result.
+
+50
+00:03:38,988 --> 00:03:42,583
+A disabled task can be run on demand too, which lets you check
+
+51
+00:03:42,583 --> 00:03:44,168
+it before you enable it.
+
+52
+00:03:44,168 --> 00:03:46,018
+Its schedule is not affected.
+
+53
+00:03:46,470 --> 00:03:49,461
+To run several tasks together, select them.
+
+54
+00:03:49,461 --> 00:03:53,856
+The Actions menu of the list then offers Enable, Disable and a run
+
+55
+00:03:53,856 --> 00:03:55,810
+action, after you confirm.
+
+56
+00:04:00,000 --> 00:04:04,609
+Disable stops a task from running on its schedule, once the background service
+
+57
+00:04:04,609 --> 00:04:06,035
+picks up the change.
+
+58
+00:04:06,035 --> 00:04:10,370
+The badge changes to Disabled, and the Next run badge says not scheduled.
+
+59
+00:04:10,824 --> 00:04:13,634
+Enable puts the task back on its schedule.
+
+60
+00:04:13,634 --> 00:04:17,204
+A disabled task keeps its settings, so nothing is lost.
+
+61
+00:04:21,404 --> 00:04:25,487
+When a run fails, the Last run badge turns red, a Failed runs
+
+62
+00:04:25,487 --> 00:04:30,666
+badge counts the failures, and the error message appears under the description.
+
+63
+00:04:30,666 --> 00:04:34,504
+The details page adds the full error and its stack trace.
+
+64
+00:04:35,254 --> 00:04:39,784
+Each server keeps the execution state in memory, so a restart clears it.
+
+65
+00:04:39,784 --> 00:04:43,617
+In a web farm, a server shows only its own runs, which calls
+
+66
+00:04:43,617 --> 00:04:48,264
+for session affinity, and running a task on demand affects only the server
+
+67
+00:04:48,264 --> 00:04:50,064
+that handled the request.
+
+68
+00:04:52,064 --> 00:04:54,302
+That's the Background Tasks module:
+
+69
+00:04:54,302 --> 00:04:58,615
+see what ran, change a schedule, switch a task off, and run it on demand.
+
+70
+00:04:58,615 --> 00:05:00,034
+Thanks for watching.
+
