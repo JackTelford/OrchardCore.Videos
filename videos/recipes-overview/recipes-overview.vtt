@@ -1,0 +1,203 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.275
+Setting up a site by hand takes many clicks, and a second site
+
+00:00:05.275 --> 00:00:06.973
+takes them all again.
+
+00:00:06.973 --> 00:00:10.054
+A recipe does that work from a single file.
+
+00:00:10.054 --> 00:00:14.455
+This video shows what a recipe is, where recipes run, how to run
+
+00:00:14.455 --> 00:00:16.530
+one, and who is allowed to.
+
+00:00:21.130 --> 00:00:25.411
+A recipe is a file that lists steps, and Orchard Core runs them
+
+00:00:25.411 --> 00:00:27.583
+in the order they are listed.
+
+00:00:27.583 --> 00:00:33.850
+A step can enable features, set the themes, create roles, define content types, or add content.
+
+00:00:34.600 --> 00:00:38.104
+Because a recipe is a file, you can keep it, share it, and
+
+00:00:38.104 --> 00:00:39.692
+run it on another site.
+
+00:00:39.692 --> 00:00:43.470
+The same steps run each time, so sites that use the same recipe
+
+00:00:43.470 --> 00:00:45.660
+start from the same configuration.
+
+00:00:46.410 --> 00:00:50.019
+A recipe can carry a display name, a description, and tags.
+
+00:00:50.019 --> 00:00:53.628
+These are what you see when you choose a recipe, so you can
+
+00:00:53.628 --> 00:00:55.960
+tell what it does before you run it.
+
+00:00:56.710 --> 00:00:58.997
+Recipes run in several places.
+
+00:00:58.997 --> 00:01:03.634
+The Setup screen runs the recipe you choose when it creates a site.
+
+00:01:03.634 --> 00:01:09.542
+Tools, Recipes runs the recipes that modules and themes provide, and Tools, Deployments
+
+00:01:09.542 --> 00:01:12.020
+imports a recipe that you supply.
+
+00:01:16.236 --> 00:01:19.825
+The Setup screen of a site that is not installed asks for a
+
+00:01:19.825 --> 00:01:22.199
+Recipe, next to the name of the site.
+
+00:01:22.199 --> 00:01:26.726
+The recipe decides which features, themes, and content the site starts with.
+
+00:01:27.179 --> 00:01:28.730
+Let's open the list.
+
+00:01:28.730 --> 00:01:33.144
+Each entry shows the name of a recipe and a description, for example
+
+00:01:33.144 --> 00:01:35.649
+Blank site, Blog, and Headless site.
+
+00:01:36.200 --> 00:01:39.405
+Select Blog, and the button shows your choice.
+
+00:01:39.405 --> 00:01:44.890
+When you finish the setup, Orchard Core runs that recipe while it creates the site.
+
+00:01:49.125 --> 00:01:52.428
+On a site that is installed, open Tools, Recipes.
+
+00:01:52.428 --> 00:01:57.351
+The page lists the recipes of the modules and themes available to your site.
+
+00:01:57.351 --> 00:02:02.035
+The search box narrows the list as you type, so let's search for Lucene.
+
+00:02:02.511 --> 00:02:07.163
+Recipes are listed in groups, each under a heading such as The Blog Theme.
+
+00:02:07.163 --> 00:02:11.293
+Each row shows the name of a recipe and its description, with its
+
+00:02:11.293 --> 00:02:14.201
+tags as badges, and a Run button at the end.
+
+00:02:14.654 --> 00:02:18.102
+The search matches the names of recipes and of groups.
+
+00:02:18.102 --> 00:02:22.182
+A search for blog lists recipes such as Blog - Lucene Search, but
+
+00:02:22.182 --> 00:02:26.550
+not the Blog recipe of the Setup screen, because setup recipes are not
+
+00:02:26.550 --> 00:02:28.044
+listed on this page.
+
+00:02:32.273 --> 00:02:36.570
+On the Recipes page, let's run the Admin Dashboard Widget Sample recipe.
+
+00:02:36.570 --> 00:02:41.198
+Its description says that it provides a sample Admin Dashboard Widget, and the
+
+00:02:41.198 --> 00:02:44.173
+Admin Dashboard feature is enabled on this site.
+
+00:02:44.639 --> 00:02:45.579
+Select Run.
+
+00:02:45.579 --> 00:02:49.726
+Orchard Core asks you to confirm, because a recipe changes your site:
+
+00:02:49.726 --> 00:02:52.269
+Are you sure you want to run the recipe?
+
+00:02:52.759 --> 00:02:53.727
+Select Yes.
+
+00:02:53.727 --> 00:02:58.280
+The page reloads with a message that the recipe has been run successfully.
+
+00:02:58.280 --> 00:03:01.979
+Orchard Core also reloads the site once the recipe has run.
+
+00:03:02.433 --> 00:03:05.516
+Open the Dashboard, the home page of the admin.
+
+00:03:05.516 --> 00:03:09.821
+It shows a widget named Orchard Core, with links to the Orchard Core
+
+00:03:09.821 --> 00:03:12.613
+site, documentation, repository, and chat.
+
+00:03:14.213 --> 00:03:17.104
+If a step fails, the recipe stops at that step.
+
+00:03:17.104 --> 00:03:21.086
+The page shows an error that names the recipe, and the steps before
+
+00:03:21.086 --> 00:03:23.213
+the failing one have already run.
+
+00:03:23.963 --> 00:03:26.610
+A recipe runs all of its steps each time.
+
+00:03:26.610 --> 00:03:31.286
+Running the Admin Dashboard Widget Sample a second time adds a second widget,
+
+00:03:31.286 --> 00:03:35.003
+so run a recipe again only when you want its steps repeated.
+
+00:03:39.225 --> 00:03:44.546
+A recipe can enable features, create roles, and change settings, so the Recipes
+
+00:03:44.546 --> 00:03:46.675
+page has its own permission.
+
+00:03:46.675 --> 00:03:50.745
+Let's open Access Control, Roles, and edit the Editor role.
+
+00:03:51.195 --> 00:03:53.531
+In Search permissions, type recipes.
+
+00:03:53.531 --> 00:03:59.092
+The Recipes group holds Manage Recipes, marked Security Critical, because the permission could
+
+00:03:59.092 --> 00:04:01.705
+let a user raise their other permissions.
+
+00:04:02.178 --> 00:04:08.139
+The Editor role does not have this permission, and by default only the Administrator role does.
+
+00:04:08.139 --> 00:04:12.329
+Give it to another role with extreme care, and only to people you
+
+00:04:12.329 --> 00:04:15.398
+trust to run every recipe on the Recipes page.
+
+00:04:17.398 --> 00:04:19.003
+That's how recipes work:
+
+00:04:19.003 --> 00:04:22.747
+a file of steps that sets up a site, or changes an existing one.
+
+00:04:22.747 --> 00:04:24.138
+Thanks for watching.
+
