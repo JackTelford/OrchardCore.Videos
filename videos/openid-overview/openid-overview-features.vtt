@@ -1,0 +1,44 @@
+WEBVTT
+
+00:00:03.205 --> 00:00:06.931
+The module's features are on the Features page, under Tools.
+
+00:00:06.931 --> 00:00:08.625
+Let's search for OpenID.
+
+00:00:09.093 --> 00:00:12.954
+The results are grouped under the category OpenID Connect.
+
+00:00:12.954 --> 00:00:18.623
+The list hides OpenID Connect Core Services, which other features turn on automatically.
+
+00:00:19.088 --> 00:00:24.458
+OpenID Connect Authorization Server makes your site an identity provider.
+
+00:00:24.458 --> 00:00:28.468
+It signs people in and issues tokens to applications.
+
+00:00:28.929 --> 00:00:32.528
+OpenID Connect Client Integration works the other way around.
+
+00:00:32.528 --> 00:00:37.309
+It lets people sign in to your site with an account from another identity provider.
+
+00:00:37.759 --> 00:00:43.425
+OpenID Connect Management UI adds the pages for managing applications and scopes.
+
+00:00:43.425 --> 00:00:48.699
+The authorization server depends on it, so enabling the server turns it on.
+
+00:00:49.156 --> 00:00:55.432
+OpenID Connect Secrets lets the server use signing and encryption keys that are stored as secrets.
+
+00:00:55.432 --> 00:00:57.846
+It depends on the Secrets feature.
+
+00:00:58.297 --> 00:01:03.718
+OpenID Connect Token Validation checks tokens, whether this site issued them or another
+
+00:01:03.718 --> 00:01:08.497
+trusted identity provider did, so that the API of your site can accept them.
+

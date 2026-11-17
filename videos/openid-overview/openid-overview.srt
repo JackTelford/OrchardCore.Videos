@@ -1,0 +1,284 @@
+1
+00:00:01,000 --> 00:00:03,608
+Sign in once, and use many applications.
+
+2
+00:00:03,608 --> 00:00:08,143
+With the OpenID Connect module, your Orchard Core site can be the identity
+
+3
+00:00:08,143 --> 00:00:10,184
+provider that signs people in.
+
+4
+00:00:10,184 --> 00:00:15,060
+This video explains how it works, and shows where its features are in the admin.
+
+5
+00:00:19,660 --> 00:00:23,626
+A company may run a website, a mobile app and a partner portal.
+
+6
+00:00:23,626 --> 00:00:27,994
+If each one keeps its own accounts and passwords, people sign in again
+
+7
+00:00:27,994 --> 00:00:31,730
+and again, and you must manage access in every application.
+
+8
+00:00:32,480 --> 00:00:34,656
+An identity provider fixes this.
+
+9
+00:00:34,656 --> 00:00:37,347
+It is the one place where people sign in.
+
+10
+00:00:37,347 --> 00:00:42,272
+Each application sends people there, and receives tokens that say who the person
+
+11
+00:00:42,272 --> 00:00:44,620
+is and what the application may do.
+
+12
+00:00:45,370 --> 00:00:50,679
+The OpenID Connect module turns your Orchard Core site into that identity provider.
+
+13
+00:00:50,679 --> 00:00:55,929
+People sign in with their Orchard Core user accounts, and applications that follow
+
+14
+00:00:55,929 --> 00:00:59,270
+the OpenID Connect and OAuth standards can use it.
+
+15
+00:01:03,470 --> 00:01:05,463
+Here is how a sign-in works.
+
+16
+00:01:05,463 --> 00:01:10,620
+An application, such as a mobile app, sends the person to Orchard Core to sign in.
+
+17
+00:01:11,370 --> 00:01:15,553
+If the person is not signed in, Orchard Core shows its login page.
+
+18
+00:01:15,553 --> 00:01:19,968
+It can then ask whether to grant the application access, and lists the
+
+19
+00:01:19,968 --> 00:01:24,790
+scopes requested, which are named kinds of access, such as the email address.
+
+20
+00:01:25,540 --> 00:01:30,776
+When the person agrees, Orchard Core sends them back to the application with a code.
+
+21
+00:01:30,776 --> 00:01:35,430
+The application exchanges that code for tokens, including an access token.
+
+22
+00:01:36,180 --> 00:01:40,922
+The application sends the access token with each request to an API.
+
+23
+00:01:40,922 --> 00:01:44,104
+The API checks the token before it answers.
+
+24
+00:01:44,104 --> 00:01:50,340
+For the API of your own site, the OpenID Connect Token Validation feature does this check.
+
+25
+00:01:51,090 --> 00:01:53,430
+Orchard Core can play three roles.
+
+26
+00:01:53,430 --> 00:01:58,111
+It can be the identity provider that issues tokens, the API that validates
+
+27
+00:01:58,111 --> 00:02:02,850
+them, or the client that signs people in through another identity provider.
+
+28
+00:02:07,055 --> 00:02:10,781
+The module's features are on the Features page, under Tools.
+
+29
+00:02:10,781 --> 00:02:12,475
+Let's search for OpenID.
+
+30
+00:02:12,943 --> 00:02:16,804
+The results are grouped under the category OpenID Connect.
+
+31
+00:02:16,804 --> 00:02:22,473
+The list hides OpenID Connect Core Services, which other features turn on automatically.
+
+32
+00:02:22,938 --> 00:02:28,308
+OpenID Connect Authorization Server makes your site an identity provider.
+
+33
+00:02:28,308 --> 00:02:32,318
+It signs people in and issues tokens to applications.
+
+34
+00:02:32,779 --> 00:02:36,378
+OpenID Connect Client Integration works the other way around.
+
+35
+00:02:36,378 --> 00:02:41,159
+It lets people sign in to your site with an account from another identity provider.
+
+36
+00:02:41,609 --> 00:02:47,275
+OpenID Connect Management UI adds the pages for managing applications and scopes.
+
+37
+00:02:47,275 --> 00:02:52,549
+The authorization server depends on it, so enabling the server turns it on.
+
+38
+00:02:53,006 --> 00:02:59,282
+OpenID Connect Secrets lets the server use signing and encryption keys that are stored as secrets.
+
+39
+00:02:59,282 --> 00:03:01,696
+It depends on the Secrets feature.
+
+40
+00:03:02,147 --> 00:03:07,568
+OpenID Connect Token Validation checks tokens, whether this site issued them or another
+
+41
+00:03:07,568 --> 00:03:12,347
+trusted identity provider did, so that the API of your site can accept them.
+
+42
+00:03:16,560 --> 00:03:19,432
+Let's enable the authorization server.
+
+43
+00:03:19,432 --> 00:03:25,698
+Its row lists two dependencies, OpenID Connect Core Services and OpenID Connect Management
+
+44
+00:03:25,698 --> 00:03:28,440
+UI, which are enabled along with it.
+
+45
+00:03:28,903 --> 00:03:30,432
+Let's click Enable.
+
+46
+00:03:30,432 --> 00:03:36,243
+A notification confirms that the feature OpenID Connect Authorization Server was enabled.
+
+47
+00:03:36,697 --> 00:03:42,092
+Back on the list, the authorization server and the Management UI show Enabled.
+
+48
+00:03:42,092 --> 00:03:45,111
+Core Services is enabled too, but hidden.
+
+49
+00:03:45,111 --> 00:03:50,957
+Client Integration, Secrets and Token Validation stay disabled until you enable them.
+
+50
+00:03:55,168 --> 00:03:58,859
+Enabling a feature adds its pages to the admin menu.
+
+51
+00:03:58,859 --> 00:04:04,268
+The server's settings are under Settings, OpenID Connect, Authorization Server.
+
+52
+00:04:04,728 --> 00:04:09,597
+A warning at the top says that saving these settings might restart the website.
+
+53
+00:04:09,597 --> 00:04:15,268
+The settings follow in groups, starting with Endpoints, the addresses that applications call.
+
+54
+00:04:15,720 --> 00:04:18,885
+Flows are the ways an application can get tokens.
+
+55
+00:04:18,885 --> 00:04:23,488
+By default, the Authorization Code Flow and the Refresh Token Flow are on,
+
+56
+00:04:23,488 --> 00:04:25,560
+and every endpoint is enabled.
+
+57
+00:04:26,017 --> 00:04:31,931
+Further down are the groups Proof Key for Code Exchange and Pushed Authorization Requests.
+
+58
+00:04:31,931 --> 00:04:37,107
+The last group, Advanced Options, is marked as intended for advanced use only.
+
+59
+00:04:37,568 --> 00:04:42,219
+Applications are under Access Control, OpenID Connect, Applications.
+
+60
+00:04:42,219 --> 00:04:47,309
+An application is a program that is registered to ask this site for tokens.
+
+61
+00:04:47,309 --> 00:04:49,948
+The list is empty until you add one.
+
+62
+00:04:50,406 --> 00:04:52,388
+Scopes are in the same menu.
+
+63
+00:04:52,388 --> 00:04:56,412
+A scope names a kind of access that an application can request.
+
+64
+00:04:56,412 --> 00:04:59,386
+The list has Email, Phone, Profile and Roles.
+
+65
+00:05:00,986 --> 00:05:05,767
+Each feature adds its own pages to the admin menu when it is enabled.
+
+66
+00:05:05,767 --> 00:05:12,970
+Under Settings, OpenID Connect, these are Authorization Server, Token Validation and Authentication Client.
+
+67
+00:05:12,970 --> 00:05:17,496
+Applications and Scopes are under Access Control, OpenID Connect.
+
+68
+00:05:19,496 --> 00:05:21,817
+That's the OpenID Connect module:
+
+69
+00:05:21,817 --> 00:05:25,745
+Orchard Core as the identity provider for your applications.
+
+70
+00:05:25,745 --> 00:05:32,708
+Separate videos cover the server settings, applications and scopes, the client, and token validation in detail.
+
+71
+00:05:32,708 --> 00:05:34,256
+Thanks for watching.
+

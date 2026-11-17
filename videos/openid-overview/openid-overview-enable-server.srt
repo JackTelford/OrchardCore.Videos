@@ -1,0 +1,32 @@
+1
+00:00:03,213 --> 00:00:06,085
+Let's enable the authorization server.
+
+2
+00:00:06,085 --> 00:00:12,351
+Its row lists two dependencies, OpenID Connect Core Services and OpenID Connect Management
+
+3
+00:00:12,351 --> 00:00:15,093
+UI, which are enabled along with it.
+
+4
+00:00:15,556 --> 00:00:17,085
+Let's click Enable.
+
+5
+00:00:17,085 --> 00:00:22,896
+A notification confirms that the feature OpenID Connect Authorization Server was enabled.
+
+6
+00:00:23,350 --> 00:00:28,745
+Back on the list, the authorization server and the Management UI show Enabled.
+
+7
+00:00:28,745 --> 00:00:31,764
+Core Services is enabled too, but hidden.
+
+8
+00:00:31,764 --> 00:00:37,610
+Client Integration, Secrets and Token Validation stay disabled until you enable them.
+

@@ -1,0 +1,56 @@
+WEBVTT
+
+00:00:03.212 --> 00:00:06.903
+Enabling a feature adds its pages to the admin menu.
+
+00:00:06.903 --> 00:00:12.312
+The server's settings are under Settings, OpenID Connect, Authorization Server.
+
+00:00:12.772 --> 00:00:17.641
+A warning at the top says that saving these settings might restart the website.
+
+00:00:17.641 --> 00:00:23.312
+The settings follow in groups, starting with Endpoints, the addresses that applications call.
+
+00:00:23.763 --> 00:00:26.928
+Flows are the ways an application can get tokens.
+
+00:00:26.928 --> 00:00:31.532
+By default, the Authorization Code Flow and the Refresh Token Flow are on,
+
+00:00:31.532 --> 00:00:33.603
+and every endpoint is enabled.
+
+00:00:34.060 --> 00:00:39.975
+Further down are the groups Proof Key for Code Exchange and Pushed Authorization Requests.
+
+00:00:39.975 --> 00:00:45.150
+The last group, Advanced Options, is marked as intended for advanced use only.
+
+00:00:45.612 --> 00:00:50.262
+Applications are under Access Control, OpenID Connect, Applications.
+
+00:00:50.262 --> 00:00:55.352
+An application is a program that is registered to ask this site for tokens.
+
+00:00:55.352 --> 00:00:57.992
+The list is empty until you add one.
+
+00:00:58.449 --> 00:01:00.432
+Scopes are in the same menu.
+
+00:01:00.432 --> 00:01:04.455
+A scope names a kind of access that an application can request.
+
+00:01:04.455 --> 00:01:07.429
+The list has Email, Phone, Profile and Roles.
+
+00:01:09.029 --> 00:01:13.810
+Each feature adds its own pages to the admin menu when it is enabled.
+
+00:01:13.810 --> 00:01:21.013
+Under Settings, OpenID Connect, these are Authorization Server, Token Validation and Authentication Client.
+
+00:01:21.013 --> 00:01:25.539
+Applications and Scopes are under Access Control, OpenID Connect.
+
