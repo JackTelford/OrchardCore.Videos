@@ -1,0 +1,224 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.002
+The X (Twitter) module connects your site to X in two ways.
+
+00:00:05.002 --> 00:00:09.435
+Visitors can sign in with their X account, and a workflow can post
+
+00:00:09.435 --> 00:00:12.329
+to X when something happens on your site.
+
+00:00:12.329 --> 00:00:14.730
+In this video, we'll set up both.
+
+00:00:19.330 --> 00:00:21.549
+The module has two features.
+
+00:00:21.549 --> 00:00:26.769
+X (Twitter) Integration stores the keys of your X app, and, when Workflows
+
+00:00:26.769 --> 00:00:30.359
+is enabled, adds a workflow task that posts to X.
+
+00:00:30.359 --> 00:00:34.470
+Sign in with X (Twitter) adds a button to the login page.
+
+00:00:35.220 --> 00:00:39.530
+Both rely on an app that you create on the X developer platform.
+
+00:00:39.530 --> 00:00:44.147
+Its Keys and tokens tab provides the four values the module asks for:
+
+00:00:44.147 --> 00:00:49.380
+the API key, the API secret key, the Access Token, and the Access Token Secret.
+
+00:00:53.602 --> 00:00:57.315
+Let's open Tools, Features, and search for Twitter.
+
+00:00:57.315 --> 00:01:02.072
+The module has two features, listed under the X (Twitter) category.
+
+00:01:02.530 --> 00:01:10.019
+Sign in with X (Twitter) lists X (Twitter) Integration and External Authentication as its dependencies.
+
+00:01:10.019 --> 00:01:11.530
+Let's enable it.
+
+00:01:11.986 --> 00:01:18.134
+Enabling a feature also enables its dependencies, so both X (Twitter) features show Enabled.
+
+00:01:18.134 --> 00:01:21.396
+Their settings pages are in the Settings menu.
+
+00:01:25.594 --> 00:01:28.526
+Open Settings, Integrations, X (Twitter).
+
+00:01:28.526 --> 00:01:32.955
+As the warning at the top of the page says, saving these settings
+
+00:01:32.955 --> 00:01:34.764
+might restart the site.
+
+00:01:35.240 --> 00:01:39.265
+Enter the API key and the Access Token from the Keys and tokens
+
+00:01:39.265 --> 00:01:40.549
+tab of your app.
+
+00:01:40.549 --> 00:01:42.940
+Both fields are marked as required.
+
+00:01:43.404 --> 00:01:48.414
+The API secret key and the Access Token Secret are password fields, so
+
+00:01:48.414 --> 00:01:50.524
+their values show as dots.
+
+00:01:50.524 --> 00:01:51.644
+Enter both:
+
+00:01:51.644 --> 00:01:56.654
+with any of the four values missing, the login page shows no X button.
+
+00:01:57.108 --> 00:01:58.052
+Select Save.
+
+00:01:58.052 --> 00:02:02.142
+The page confirms that the site settings are updated, and the two secret
+
+00:02:02.142 --> 00:02:05.078
+fields tell you that the value is securely stored.
+
+00:02:05.529 --> 00:02:09.855
+If the Secrets feature is enabled, each secret field can instead use a
+
+00:02:09.855 --> 00:02:12.132
+secret kept in the Secrets module.
+
+00:02:12.132 --> 00:02:14.579
+A separate video covers that feature.
+
+00:02:18.775 --> 00:02:23.351
+Open Settings, Security, Authentication, Sign In with X (Twitter).
+
+00:02:23.351 --> 00:02:28.755
+The keys come from the integration settings, so this page has only two options.
+
+00:02:29.217 --> 00:02:34.531
+The CallbackPath is where X returns visitors to your site after they sign in.
+
+00:02:34.531 --> 00:02:38.948
+Enter /signin-x, and set the callback URL of your X app to your
+
+00:02:38.948 --> 00:02:41.957
+site's address followed by the same path.
+
+00:02:42.416 --> 00:02:48.279
+Store tokens saves the external authentication tokens for reuse, and we leave it cleared.
+
+00:02:48.279 --> 00:02:52.476
+Select Save, and the site might restart to apply the settings.
+
+00:02:56.680 --> 00:02:58.500
+Let's open the login page.
+
+00:02:58.500 --> 00:03:02.653
+Next to the usual Log in form, a section titled Use another service
+
+00:03:02.653 --> 00:03:05.270
+to log in offers the X (Twitter) button.
+
+00:03:05.729 --> 00:03:09.456
+Selecting the button sends the visitor to X to sign in.
+
+00:03:09.456 --> 00:03:13.549
+X then returns the visitor to the callback path of your site.
+
+00:03:17.749 --> 00:03:21.826
+When X returns a visitor, the site looks for an account already linked
+
+00:03:21.826 --> 00:03:23.113
+to that X account.
+
+00:03:23.113 --> 00:03:26.600
+If it finds one and that account is allowed to sign in, the
+
+00:03:26.600 --> 00:03:28.049
+visitor is signed in.
+
+00:03:28.799 --> 00:03:33.245
+Otherwise, if X provides an email that matches a local account, the page
+
+00:03:33.245 --> 00:03:36.493
+Link your account asks for that account's password.
+
+00:03:36.493 --> 00:03:41.224
+If not, the page Create a new account opens, unless the external registration
+
+00:03:41.224 --> 00:03:45.499
+settings disable new registrations or create accounts without asking.
+
+00:03:46.249 --> 00:03:50.604
+A signed-in user can also add X to an account later, from External
+
+00:03:50.604 --> 00:03:52.419
+Logins in the user menu.
+
+00:03:56.614 --> 00:04:00.956
+The module adds a task to Workflows, which is enabled on this site.
+
+00:04:00.956 --> 00:04:06.368
+Let's open Design, Workflows, select Create Workflow, enter a name, and select Create
+
+00:04:06.368 --> 00:04:08.034
+and open the designer.
+
+00:04:08.498 --> 00:04:11.694
+An empty workflow offers the events to start with.
+
+00:04:11.694 --> 00:04:16.658
+We pick Content Published Event, and the designer marks it as the start activity.
+
+00:04:17.113 --> 00:04:21.526
+In its settings, Content Types limits the event to the types you choose.
+
+00:04:21.526 --> 00:04:25.373
+We pick Blog Post, so other content does not run the workflow.
+
+00:04:25.833 --> 00:04:31.553
+Point at the Done outcome until a plus appears, select it, and search for Twitter.
+
+00:04:31.553 --> 00:04:38.313
+Update X (Twitter) Status Task is listed under Social, and the designer adds it already connected.
+
+00:04:38.788 --> 00:04:44.243
+Its settings include Template for updating X (Twitter) status, the text of the post.
+
+00:04:44.243 --> 00:04:48.789
+The field is required, so the activity shows an issue until you enter
+
+00:04:48.789 --> 00:04:50.668
+text and leave the field.
+
+00:04:51.119 --> 00:04:53.120
+The task has two outcomes.
+
+00:04:53.120 --> 00:04:58.559
+Done follows when X accepts the post, and Failed follows when X returns an error.
+
+00:04:59.014 --> 00:05:03.610
+The designer keeps your changes as a draft, and a draft does not run.
+
+00:05:03.610 --> 00:05:08.634
+Select Publish, and from then on publishing a Blog Post sends the text to X.
+
+00:05:10.634 --> 00:05:14.415
+With the keys of your X app saved, visitors can sign in with
+
+00:05:14.415 --> 00:05:16.535
+X, and workflows can post to X.
+
+00:05:16.535 --> 00:05:18.024
+Thanks for watching.
+
