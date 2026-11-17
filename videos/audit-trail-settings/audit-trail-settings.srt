@@ -1,0 +1,272 @@
+1
+00:00:01,000 --> 00:00:05,223
+The Audit Trail module keeps a log of changes and events in the back end.
+
+2
+00:00:05,223 --> 00:00:09,500
+Its settings decide which events are recorded, how long they are kept, and
+
+3
+00:00:09,500 --> 00:00:11,264
+what is stored about users.
+
+4
+00:00:11,264 --> 00:00:13,670
+In this video, you set up each of them.
+
+5
+00:00:18,270 --> 00:00:22,492
+Audit Trail and Users Audit Trail are two separate features.
+
+6
+00:00:22,492 --> 00:00:28,760
+Enable both under Tools, Features, and their settings pages become available under Settings.
+
+7
+00:00:29,510 --> 00:00:33,657
+Settings, Audit Trail has an Events tab and a Trimming tab, and a
+
+8
+00:00:33,657 --> 00:00:36,869
+Content tab when the Contents feature is enabled.
+
+9
+00:00:36,869 --> 00:00:42,300
+Settings, Security, User Audit Trail is a separate page for what is stored about users.
+
+10
+00:00:46,517 --> 00:00:48,854
+Let's open Settings, Audit Trail.
+
+11
+00:00:48,854 --> 00:00:53,770
+The Events tab lists every event the module can record, grouped by category,
+
+12
+00:00:53,770 --> 00:00:57,007
+each with a description and an Enabled checkbox.
+
+13
+00:00:57,478 --> 00:01:00,744
+The Content category covers content items:
+
+14
+00:01:00,744 --> 00:01:05,914
+created, saved, published, unpublished, removed, cloned, and restored.
+
+15
+00:01:05,914 --> 00:01:10,608
+The User category covers sign-ins and changes to user accounts.
+
+16
+00:01:11,078 --> 00:01:13,701
+Each category has a Select all checkbox.
+
+17
+00:01:13,701 --> 00:01:18,206
+Login failed is the one built-in event that starts switched off, so let's
+
+18
+00:01:18,206 --> 00:01:21,058
+select it to record failed sign-in attempts.
+
+19
+00:01:21,518 --> 00:01:26,697
+Below the table, Allow client IP address adds the address each event came from.
+
+20
+00:01:26,697 --> 00:01:31,268
+An IP address can be personal data, so check the rules for your site.
+
+21
+00:01:31,268 --> 00:01:32,608
+Let's select it.
+
+22
+00:01:33,063 --> 00:01:35,574
+Content events need one more choice.
+
+23
+00:01:35,574 --> 00:01:40,537
+On the Content tab, Allowed content types starts with nothing selected, so no
+
+24
+00:01:40,537 --> 00:01:44,363
+content events are recorded until you select at least one.
+
+25
+00:01:44,856 --> 00:01:46,250
+Let's select Page.
+
+26
+00:01:46,250 --> 00:01:50,198
+An event is recorded only when it is enabled on the Events tab
+
+27
+00:01:50,198 --> 00:01:53,856
+and, for content, when its content type is selected here.
+
+28
+00:01:54,316 --> 00:01:55,452
+Select Save.
+
+29
+00:01:55,452 --> 00:02:00,056
+The message Site settings updated successfully confirms the change.
+
+30
+00:02:04,250 --> 00:02:06,878
+Events add up, so the module trims them.
+
+31
+00:02:06,878 --> 00:02:08,820
+Let's open the Trimming tab.
+
+32
+00:02:08,820 --> 00:02:13,560
+Retention period is the number of days an event is kept, and it starts at 10.
+
+33
+00:02:14,019 --> 00:02:18,549
+A background task deletes the events older than the retention period.
+
+34
+00:02:18,549 --> 00:02:23,019
+By default, it runs once a day, and Last run shows when it last ran.
+
+35
+00:02:23,469 --> 00:02:26,332
+Let's keep events for 90 days instead.
+
+36
+00:02:26,332 --> 00:02:28,609
+Select the field and type 90.
+
+37
+00:02:29,071 --> 00:02:33,057
+To keep events indefinitely, you would select Disable trimming task.
+
+38
+00:02:33,057 --> 00:02:35,481
+Let's leave it cleared and select Save.
+
+39
+00:02:39,681 --> 00:02:43,771
+For each property of a user, you choose how its value is stored.
+
+40
+00:02:43,771 --> 00:02:45,466
+Store keeps it as text.
+
+41
+00:02:45,466 --> 00:02:51,251
+PartialAsteriskRedactor keeps the first and last character and hides the rest with asterisks.
+
+42
+00:02:52,001 --> 00:02:58,759
+ErasingRedactor stores an empty value, which shows that the property had a value without revealing it.
+
+43
+00:02:58,759 --> 00:03:03,891
+HmacRedactor stores a hash, a scrambled form that cannot be turned back into
+
+44
+00:03:03,891 --> 00:03:07,771
+the value, and is offered only when a key is configured.
+
+45
+00:03:09,380 --> 00:03:13,976
+Settings, Security, User Audit Trail lists User Properties to Store.
+
+46
+00:03:13,976 --> 00:03:18,385
+By default, a user event stores the user's name and ID, and these
+
+47
+00:03:18,385 --> 00:03:22,360
+settings add a User Snapshot of the properties you choose.
+
+48
+00:03:22,811 --> 00:03:27,120
+Each property of a user has its own drop-down, and every one starts
+
+49
+00:03:27,120 --> 00:03:30,190
+empty, which means the property is not stored.
+
+50
+00:03:30,190 --> 00:03:34,381
+The password hash, reset token and user tokens are never offered.
+
+51
+00:03:34,844 --> 00:03:37,973
+Let's choose PartialAsteriskRedactor for Email.
+
+52
+00:03:37,973 --> 00:03:41,634
+Then select Save, and the page reloads with your choice.
+
+53
+00:03:42,095 --> 00:03:47,351
+With properties chosen, a snapshot is saved when a user is created, updated,
+
+54
+00:03:47,351 --> 00:03:49,786
+enabled, disabled, or confirmed.
+
+55
+00:03:49,786 --> 00:03:54,145
+It appears as User Snapshot on the Details page of that event.
+
+56
+00:03:54,607 --> 00:03:58,413
+When a user is deleted, the snapshots of that user are removed from
+
+57
+00:03:58,413 --> 00:04:00,707
+the earlier events of the Audit Trail.
+
+58
+00:04:04,932 --> 00:04:09,226
+Under Tools, Audit Trail, the list shows what these settings produce.
+
+59
+00:04:09,226 --> 00:04:13,406
+Someone tried to sign in with an unknown user name, and that failed
+
+60
+00:04:13,406 --> 00:04:17,242
+attempt appears as a Login failed event in the User category.
+
+61
+00:04:17,744 --> 00:04:23,372
+Entries recorded after you allowed the client IP address carry a badge with that address.
+
+62
+00:04:23,372 --> 00:04:27,874
+A published Page appears too, because Page is an allowed content type.
+
+63
+00:04:28,340 --> 00:04:31,094
+Select Details on the Login failed entry.
+
+64
+00:04:31,094 --> 00:04:35,724
+Event Info lists the category, the event name, who triggered it and when,
+
+65
+00:04:35,724 --> 00:04:37,600
+and the Client IP address.
+
+66
+00:04:39,600 --> 00:04:42,002
+Three settings shape the Audit Trail:
+
+67
+00:04:42,002 --> 00:04:46,807
+which events it records, how long it keeps them, and what it stores about users.
+
+68
+00:04:46,807 --> 00:04:48,260
+Thanks for watching.
+
