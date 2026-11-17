@@ -1,0 +1,188 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.873
+A saved template changes how your site renders.
+
+00:00:03.873 --> 00:00:07.939
+The Preview button of the Templates module shows a template on a real
+
+00:00:07.939 --> 00:00:09.565
+page before you save it.
+
+00:00:09.565 --> 00:00:12.980
+This video covers using it, how it works, and its limits.
+
+00:00:17.580 --> 00:00:20.978
+A template of the Templates module is matched by name.
+
+00:00:20.978 --> 00:00:25.509
+Name it after a shape or one of its alternates, such as Content__BlogPost,
+
+00:00:25.509 --> 00:00:30.040
+and once it is saved it is used instead of a template file with that name.
+
+00:00:30.790 --> 00:00:34.617
+The Preview button renders a page of your site with the template as
+
+00:00:34.617 --> 00:00:36.189
+it stands in the editor.
+
+00:00:36.189 --> 00:00:40.750
+Nothing is saved, so visitors keep seeing the saved version until you press Save.
+
+00:00:44.960 --> 00:00:49.999
+The Templates page is under Design, Templates in the admin menu, and lists
+
+00:00:49.999 --> 00:00:51.763
+each template by name.
+
+00:00:51.763 --> 00:00:57.370
+On this site, Content__BlogPost is the template that draws the page of a blog post.
+
+00:00:57.832 --> 00:00:58.874
+Let's open it.
+
+00:00:58.874 --> 00:01:03.094
+The editor has fields for the Name, the Description, and the Content, which
+
+00:01:03.094 --> 00:01:04.500
+is written in Liquid.
+
+00:01:04.500 --> 00:01:08.303
+This template puts the words Posted by above the title of the post,
+
+00:01:08.303 --> 00:01:11.012
+then renders the content of the post below it.
+
+00:01:11.493 --> 00:01:15.174
+The action bar at the bottom of the page has a Preview button,
+
+00:01:15.174 --> 00:01:16.689
+after Save and Cancel.
+
+00:01:16.689 --> 00:01:20.803
+It opens the preview in its own browser tab, so the editor stays open.
+
+00:01:21.268 --> 00:01:26.318
+The preview tab opens on the home page of your site, which here is the blog.
+
+00:01:26.318 --> 00:01:28.659
+It lists the posts as summaries.
+
+00:01:28.659 --> 00:01:33.524
+The theme draws each summary with its own, more specific template, so the
+
+00:01:33.524 --> 00:01:37.158
+Content__BlogPost template does not change this page.
+
+00:01:41.416 --> 00:01:45.179
+To try the template on another page, follow a link in the preview.
+
+00:01:45.179 --> 00:01:46.800
+Let's open the blog post.
+
+00:01:46.800 --> 00:01:50.876
+The saved template renders it, with the words Posted by above the title.
+
+00:01:51.338 --> 00:01:55.770
+Back in the editor tab, let's finish the byline by typing the editorial
+
+00:01:55.770 --> 00:01:57.324
+team after Posted by.
+
+00:01:57.324 --> 00:02:01.008
+Each change goes to the preview tab, and nothing is saved.
+
+00:02:01.480 --> 00:02:05.823
+The preview tab renders the blog post again, with the finished byline.
+
+00:02:05.823 --> 00:02:11.250
+It remembers the page you opened, and renders that page after every change in the editor.
+
+00:02:11.739 --> 00:02:14.197
+When the result is right, press Save.
+
+00:02:14.197 --> 00:02:17.569
+The template is stored, and the Templates list opens.
+
+00:02:18.028 --> 00:02:23.212
+The preview tab shows Preview Disconnected, because the editor page it followed has gone.
+
+00:02:23.212 --> 00:02:27.578
+The saved template applies to the site, and you can close the preview tab.
+
+00:02:31.778 --> 00:02:36.694
+Whenever the content changes, the editor tab stores the name and the content
+
+00:02:36.694 --> 00:02:39.032
+of the template in local storage.
+
+00:02:39.032 --> 00:02:43.588
+The preview tab shares that storage, so it is told about every change.
+
+00:02:44.338 --> 00:02:48.447
+The preview tab posts the name, the content and the page address to
+
+00:02:48.447 --> 00:02:51.261
+the Render action of the Preview controller.
+
+00:02:51.261 --> 00:02:55.708
+The action keeps the template in the HTTP context, then builds the Detail
+
+00:02:55.708 --> 00:02:57.678
+display of that content item.
+
+00:02:58.428 --> 00:03:02.687
+The PreviewTemplatesProvider reads the template from the HTTP context.
+
+00:03:02.687 --> 00:03:08.122
+The TemplatesShapeBindingResolver checks it first for every shape, so the template from the
+
+00:03:08.122 --> 00:03:11.148
+editor wins over a saved one with the same name.
+
+00:03:15.348 --> 00:03:17.633
+The preview needs two permissions:
+
+00:03:17.633 --> 00:03:20.546
+Manage templates and Manage Liquid templates.
+
+00:03:20.546 --> 00:03:24.088
+The Administrator and Editor roles have both by default.
+
+00:03:24.838 --> 00:03:28.922
+The preview renders the home page when it is a content item, or
+
+00:03:28.922 --> 00:03:33.597
+any published content item that has an address from the Autoroute module.
+
+00:03:33.597 --> 00:03:38.568
+For any other address, it shows Preview Error with a status code, such as 404.
+
+00:03:39.318 --> 00:03:43.434
+A preview template applies to every shape on the page with its name,
+
+00:03:43.434 --> 00:03:46.326
+unless a more specific template matches first.
+
+00:03:46.326 --> 00:03:50.331
+To try a template for summaries, open a page that lists them, such
+
+00:03:50.331 --> 00:03:52.278
+as the home page of the blog.
+
+00:03:53.028 --> 00:03:56.201
+The Edit Admin Template page has no Preview button.
+
+00:03:56.201 --> 00:03:58.928
+Admin templates are not previewed this way.
+
+00:04:00.928 --> 00:04:04.742
+The Preview button renders a page of your site with the template as
+
+00:04:04.742 --> 00:04:08.190
+typed in the editor, and saves nothing until you press Save.
+
+00:04:08.190 --> 00:04:09.548
+Thanks for watching.
+
