@@ -1,0 +1,227 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.686
+When you write a theme in Razor, its views reach Orchard Core in two ways.
+
+00:00:05.686 --> 00:00:10.664
+The Orchard helper adds methods that load content, build URLs and convert text,
+
+00:00:10.664 --> 00:00:13.593
+and tag helpers render shapes and resources.
+
+00:00:13.593 --> 00:00:16.170
+This video shows what each one offers.
+
+00:00:20.770 --> 00:00:24.973
+In a Razor view, Orchard is a property of the view's base class.
+
+00:00:24.973 --> 00:00:29.417
+A theme sets that base class once, with an inherits directive in its
+
+00:00:29.417 --> 00:00:33.680
+view imports file, and every view of the theme gets the property.
+
+00:00:34.430 --> 00:00:38.494
+A view that doesn't use that base class, such as a Razor Page,
+
+00:00:38.494 --> 00:00:41.721
+injects I Orchard Helper under the name Orchard.
+
+00:00:41.721 --> 00:00:45.785
+A controller or a service takes it as a constructor parameter.
+
+00:00:45.785 --> 00:00:49.430
+The interface has one member, the current HTTP context.
+
+00:00:50.180 --> 00:00:56.432
+The helpers are extension methods, and each module defines those of its own features:
+
+00:00:56.432 --> 00:01:02.959
+Contents, Alias, Autoroute, Media, Markdown, Queries, Lists and Taxonomies, among others.
+
+00:01:02.959 --> 00:01:08.730
+In a theme, add a reference to the module or package whose method isn't found.
+
+00:01:09.480 --> 00:01:14.155
+Many helpers also call services that their module registers, so the module's feature
+
+00:01:14.155 --> 00:01:16.232
+has to be enabled on the site too.
+
+00:01:16.232 --> 00:01:20.180
+The reference makes the method compile, and the feature makes it work.
+
+00:01:24.380 --> 00:01:28.914
+Four helpers load one content item from what you know of it:
+
+00:01:28.914 --> 00:01:31.388
+its id, alias, slug or handle.
+
+00:01:31.388 --> 00:01:37.227
+A handle combines a prefix, such as alias, slug or contentitemid, with a value.
+
+00:01:37.227 --> 00:01:40.800
+Each helper returns null when nothing matches.
+
+00:01:41.550 --> 00:01:44.864
+These helpers return the published version by default.
+
+00:01:44.864 --> 00:01:49.337
+The alias and slug helpers take a Boolean flag for the most recent version.
+
+00:01:49.337 --> 00:01:53.479
+The handle and id helpers take Version Options, which can ask for the
+
+00:01:53.479 --> 00:01:56.020
+most recent version, draft or published.
+
+00:01:56.770 --> 00:02:01.921
+To list items, Get Recent Content Items By Content Type Async returns the
+
+00:02:01.921 --> 00:02:05.964
+published items of a type, newest first, ten by default.
+
+00:02:05.964 --> 00:02:12.420
+For any other condition, Query Content Items Async takes a query over the content item index.
+
+00:02:13.170 --> 00:02:17.283
+To render an item, call Display Async with the item and a display
+
+00:02:17.283 --> 00:02:18.905
+type, such as Summary.
+
+00:02:18.905 --> 00:02:22.381
+It returns rendered markup, which the view writes out.
+
+00:02:22.381 --> 00:02:27.362
+Where Model is dynamic, the view casts the item first, because extension methods
+
+00:02:27.362 --> 00:02:29.390
+can't take dynamic arguments.
+
+00:02:30.140 --> 00:02:35.633
+Display Async extends the interface behind the view's Orchard property, not I Orchard
+
+00:02:35.633 --> 00:02:39.255
+Helper itself, so an injected helper doesn't offer it.
+
+00:02:39.255 --> 00:02:43.964
+Its display type defaults to an empty string, which means Detail, and it
+
+00:02:43.964 --> 00:02:46.680
+takes an optional group id and updater.
+
+00:02:50.880 --> 00:02:55.771
+Culture Name and Culture Dir return the name and direction of the current culture.
+
+00:02:55.771 --> 00:02:58.050
+Is Right To Left returns a Boolean.
+
+00:02:58.050 --> 00:03:01.997
+A layout uses them to set the language and direction of the page,
+
+00:03:01.997 --> 00:03:03.720
+and to pick a stylesheet.
+
+00:03:04.470 --> 00:03:09.827
+Asset Url turns a media library path into its public URL, with optional
+
+00:03:09.827 --> 00:03:12.332
+width, height and resize mode.
+
+00:03:12.332 --> 00:03:15.184
+Is Image File checks the extension.
+
+00:03:15.184 --> 00:03:19.985
+Resource Url adds the CDN base URL to a resource path, when one
+
+00:03:19.985 --> 00:03:22.420
+is set and debug mode is off.
+
+00:03:23.170 --> 00:03:25.567
+Four helpers work on text.
+
+00:03:25.567 --> 00:03:31.484
+Liquid To HTML Async, Markdown To HTML Async and Shortcodes To HTML Async
+
+00:03:31.484 --> 00:03:36.203
+render a string as markup, and Sanitize Html cleans HTML.
+
+00:03:36.203 --> 00:03:42.270
+Markdown To HTML Async sanitizes its result unless you pass sanitize false.
+
+00:03:43.020 --> 00:03:49.190
+For data, Content Query Async runs a saved query by name and returns its content items.
+
+00:03:49.190 --> 00:03:54.100
+Query List Items Async returns the items of a list, and Get Taxonomy
+
+00:03:54.100 --> 00:03:58.280
+Term Async finds a term from its taxonomy and its own id.
+
+00:04:02.480 --> 00:04:07.789
+A tag helper is an HTML-like element that runs on the server while the view renders.
+
+00:04:07.789 --> 00:04:11.742
+A theme turns each set on with an add Tag Helper directive in
+
+00:04:11.742 --> 00:04:16.520
+its view imports file, and references the project or package that holds it.
+
+00:04:17.270 --> 00:04:20.234
+The shape element renders a shape by its type.
+
+00:04:20.234 --> 00:04:24.339
+The menu element renders a menu by its alias, and the content item
+
+00:04:24.339 --> 00:04:27.246
+element renders a content item by its handle.
+
+00:04:27.246 --> 00:04:32.320
+Other attributes become shape properties, and the prop prefix keeps a value's type.
+
+00:04:33.070 --> 00:04:36.951
+The zone element adds its content to a named zone of the layout,
+
+00:04:36.951 --> 00:04:39.279
+and renders nothing where it stands.
+
+00:04:39.279 --> 00:04:43.049
+Here a view adds a heading to the Title zone, which the layout
+
+00:04:43.049 --> 00:04:46.320
+of the admin theme renders with Render Section Async.
+
+00:04:47.070 --> 00:04:51.770
+A script or style with an asp-name attribute registers a named resource.
+
+00:04:51.770 --> 00:04:56.108
+A script's at attribute picks Head or Foot; a style renders in the
+
+00:04:56.108 --> 00:04:57.976
+head unless at is Inline.
+
+00:04:57.976 --> 00:05:00.446
+The resources element renders them:
+
+00:05:00.446 --> 00:05:03.820
+Header in the head, Foot Script at the body's end.
+
+00:05:04.570 --> 00:05:08.697
+The Media module adds attributes to the image element:
+
+00:05:08.697 --> 00:05:16.676
+asset-src resolves a media library path, and img-width, img-height and img-resize-mode request a resized copy.
+
+00:05:16.676 --> 00:05:20.940
+Separate videos cover resources and media in more depth.
+
+00:05:22.940 --> 00:05:26.462
+Those are the Orchard helper and the tag helpers of a theme, and
+
+00:05:26.462 --> 00:05:29.532
+the documentation pages of their modules list the rest.
+
+00:05:29.532 --> 00:05:30.840
+Thanks for watching.
+
