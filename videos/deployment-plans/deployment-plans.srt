@@ -1,0 +1,328 @@
+1
+00:00:01,000 --> 00:00:05,980
+A deployment plan is a saved list of steps that decides what a package holds.
+
+2
+00:00:05,980 --> 00:00:10,060
+In this video, you create a plan, add and order its steps, and
+
+3
+00:00:10,060 --> 00:00:12,520
+execute it to download the package.
+
+4
+00:00:17,120 --> 00:00:20,639
+A deployment plan is a named, ordered list of steps.
+
+5
+00:00:20,639 --> 00:00:24,885
+Most steps add one kind of data to the package, such as content,
+
+6
+00:00:24,885 --> 00:00:27,130
+content definitions, or a file.
+
+7
+00:00:27,880 --> 00:00:31,088
+The steps you can add come from the enabled features.
+
+8
+00:00:31,088 --> 00:00:35,765
+When you execute a plan, its steps run from top to bottom and build one package.
+
+9
+00:00:35,765 --> 00:00:40,550
+If a step's feature is disabled, the plan keeps the step and marks it unavailable.
+
+10
+00:00:44,765 --> 00:00:47,218
+Let's open Tools, Deployments, Plans.
+
+11
+00:00:47,218 --> 00:00:51,439
+The page lists the plans of this site, and Add Deployment Plan opens
+
+12
+00:00:51,439 --> 00:00:53,265
+the form that creates one.
+
+13
+00:00:54,264 --> 00:00:57,852
+A plan needs only a name, and the name must be unique.
+
+14
+00:00:57,852 --> 00:01:00,604
+We type Spring Launch and select Create.
+
+15
+00:01:01,074 --> 00:01:03,077
+Orchard Core opens the plan.
+
+16
+00:01:03,077 --> 00:01:06,965
+Execute and Add Step are at the top, and a message says that
+
+17
+00:01:06,965 --> 00:01:08,614
+the plan has no steps.
+
+18
+00:01:12,861 --> 00:01:14,474
+Let's select Add Step.
+
+19
+00:01:14,474 --> 00:01:19,947
+Available Steps lists every step you can add, and Filter narrows the cards by their text.
+
+20
+00:01:19,947 --> 00:01:23,231
+The categories on the left group the steps by area.
+
+21
+00:01:23,690 --> 00:01:25,400
+Let's open Security.
+
+22
+00:01:25,400 --> 00:01:30,136
+It holds steps such as All Roles and All Users, which export every
+
+23
+00:01:30,136 --> 00:01:33,360
+role or every user, with nothing to choose.
+
+24
+00:01:33,819 --> 00:01:38,499
+Back under All, we type content in Filter and add Content, which exports
+
+25
+00:01:38,499 --> 00:01:41,379
+the items of the content types you choose.
+
+26
+00:01:41,851 --> 00:01:43,293
+We check Blog Post.
+
+27
+00:01:43,293 --> 00:01:47,387
+The step exports only the published items of the types you check.
+
+28
+00:01:47,387 --> 00:01:52,634
+Export As Setup recipe stays unchecked, because it loses references to content items,
+
+29
+00:01:52,634 --> 00:01:54,191
+and we select Create.
+
+30
+00:01:54,644 --> 00:01:56,959
+Let's add Update Content Definitions.
+
+31
+00:01:56,959 --> 00:02:00,997
+It exports the definition of a content type, so the site that imports
+
+32
+00:02:00,997 --> 00:02:03,904
+the package receives the Blog Post type as well.
+
+33
+00:02:04,393 --> 00:02:10,661
+The first checkbox, Include all content types and parts definitions, exports every definition.
+
+34
+00:02:10,661 --> 00:02:13,669
+We check Blog Post only and select Create.
+
+35
+00:02:13,669 --> 00:02:17,493
+The plan lists each step with a summary of its choices.
+
+36
+00:02:21,784 --> 00:02:27,915
+A note under Update Content Definitions says that definitions belong before any content step.
+
+37
+00:02:27,915 --> 00:02:31,384
+Let's drag its handle, at the left, above Content.
+
+38
+00:02:31,851 --> 00:02:34,624
+The order is saved when you drop the step.
+
+39
+00:02:34,624 --> 00:02:39,941
+When the plan is executed, the steps run in this order, so the definitions come first.
+
+40
+00:02:40,397 --> 00:02:43,660
+Edit reopens a step with its current choices.
+
+41
+00:02:43,660 --> 00:02:48,267
+Let's select Edit on Content, check Page as well, and select Save.
+
+42
+00:02:48,267 --> 00:02:51,147
+The step keeps Blog Post and adds Page.
+
+43
+00:02:51,615 --> 00:02:55,531
+Delete, on a row or in the editor, removes a step from the
+
+44
+00:02:55,531 --> 00:02:57,305
+plan after you confirm.
+
+45
+00:03:01,528 --> 00:03:04,771
+Let's select Add Step and the Deployment category.
+
+46
+00:03:04,771 --> 00:03:07,956
+It holds the four steps of the Deployment module:
+
+47
+00:03:07,956 --> 00:03:11,778
+Custom File, Deployment Plans, JSON Recipe, and Recipe File.
+
+48
+00:03:12,242 --> 00:03:15,328
+Custom File adds a file to the package.
+
+49
+00:03:15,328 --> 00:03:21,569
+Deployment Plans exports the definitions of plans, so another site can recreate them.
+
+50
+00:03:21,569 --> 00:03:25,752
+JSON Recipe adds a recipe step that you write yourself.
+
+51
+00:03:26,206 --> 00:03:27,724
+We add Custom File.
+
+52
+00:03:27,724 --> 00:03:32,582
+File Name is the path of the file in the package, and it must be relative.
+
+53
+00:03:32,582 --> 00:03:37,076
+File Content is its text, so we type a short note and select Create.
+
+54
+00:03:37,528 --> 00:03:43,851
+Recipe File sets the name, description, author, and other details of the recipe in the package.
+
+55
+00:03:43,851 --> 00:03:48,170
+File Download reads the first Recipe File step of a plan, so we
+
+56
+00:03:48,170 --> 00:03:50,298
+add one and name the recipe.
+
+57
+00:03:54,532 --> 00:03:55,960
+Let's select Execute.
+
+58
+00:03:55,960 --> 00:03:58,868
+Available Targets lists where the package can go.
+
+59
+00:03:58,868 --> 00:04:03,573
+File Download downloads it to your computer, and features such as Remote Deployment
+
+60
+00:04:03,573 --> 00:04:05,212
+add targets of their own.
+
+61
+00:04:05,663 --> 00:04:08,914
+The Select button on File Download runs the plan.
+
+62
+00:04:08,914 --> 00:04:13,583
+Orchard Core runs its steps from top to bottom, and the browser downloads
+
+63
+00:04:13,583 --> 00:04:15,829
+a zip file named after the plan.
+
+64
+00:04:15,829 --> 00:04:20,203
+If the export fails, an error message appears and nothing downloads.
+
+65
+00:04:20,654 --> 00:04:24,300
+Cancel closes Available Targets and leaves the plan as it was.
+
+66
+00:04:24,300 --> 00:04:28,590
+Execute it again whenever you need a package, and the Content step exports
+
+67
+00:04:28,590 --> 00:04:31,164
+the items that are published at that time.
+
+68
+00:04:32,764 --> 00:04:36,596
+The zip holds a recipe, which a site runs when it imports the
+
+69
+00:04:36,596 --> 00:04:39,742
+package, and the files of your Custom File steps.
+
+70
+00:04:39,742 --> 00:04:44,204
+Steps such as Content add their data to the recipe, in the plan's order.
+
+71
+00:04:44,204 --> 00:04:47,064
+A separate video covers importing a package.
+
+72
+00:04:51,288 --> 00:04:54,936
+Back on Plans, the search box filters plans by name.
+
+73
+00:04:54,936 --> 00:04:57,074
+Each plan has three buttons:
+
+74
+00:04:57,074 --> 00:05:01,728
+Manage Steps opens the plan, Edit renames it, and Delete removes it.
+
+75
+00:05:02,199 --> 00:05:04,243
+Let's select Edit on this plan.
+
+76
+00:05:04,243 --> 00:05:08,939
+We type another name and select Save, and the list returns with a confirmation.
+
+77
+00:05:10,539 --> 00:05:12,755
+Two permissions control plans.
+
+78
+00:05:12,755 --> 00:05:18,050
+Manage deployment plans lets you create, edit, and delete plans and their steps,
+
+79
+00:05:18,050 --> 00:05:20,882
+and Export Data lets you execute a plan.
+
+80
+00:05:20,882 --> 00:05:24,699
+Administrators have both, and the Plans page needs both.
+
+81
+00:05:26,699 --> 00:05:31,008
+A deployment plan lets you choose what a package holds, and in what order.
+
+82
+00:05:31,008 --> 00:05:32,409
+Thanks for watching.
+
