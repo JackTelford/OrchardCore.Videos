@@ -9,14 +9,7 @@ confirmations of 1 to 4 fails, the narration of the steps named there must chang
    `NumericFieldSettings` of `src/OrchardCore/OrchardCore.ContentFields.Core/Settings/NumericFieldSettings.cs`. Confirm that
    both JSON Imports succeed, that **Design > Content Definition > Content Types** lists **Product**, that its Price is
    required, and that the Data Pipelines feature is enabled (**Tools > Data Pipelines** appears in the admin menu).
-2. **The row without a price is rejected.** Source: a CSV cell that is empty is read as no value
-   (`src/OrchardCore/OrchardCore.DataSources.Core/Files/CsvDataFileFormat.cs`, `row[index] = record[index].Length == 0 ? null : ...`),
-   it is written to the item as an empty `Price` (`ContentDataColumns.WriteValue`), and `NumericFieldHandler.ValidatingAsync`
-   (`src/OrchardCore.Modules/OrchardCore.ContentFields/Handlers/NumericFieldHandler.cs`) fails a required field without a
-   value ("A value is required for Price."), so `SaveContentItemsStep` counts the row as rejected. Confirm that the first run
-   delivers exactly "Created 4 and updated 0 'Product' content items; skipped 0 and rejected 1 rows." (steps `run-3`) and the
-   second run "Created 0 and updated 4 'Product' content items; skipped 0 and rejected 1 rows." (steps `again-2`). Confirm
-   that the run still ends with the status "Succeeded" and a warning in the log.
+2. **No row is rejected (changed after the first recording).** On the site of the recording, a required field (the Price, then the Category) rejected every row that had to create an item, while updating existing items checked the required field as expected. So the Product type has no required field, the file has five complete rows, and the runs deliver "Created 5 ... rejected 0" then "Created 0 and updated 5 ... rejected 0".
 3. **Matching on the display text.** Source: with **Match on** = Display text, the key is the value of the **Name** field, an
    item is looked up by the display text of its latest version, and a created item gets that display text
    (`SaveContentItemsStep.SaveAsync`, `FindAsync`). Confirm in the Content Items list that the four items are named after

@@ -74,7 +74,7 @@
             },
             {
               "id": "read-5",
-              "text": "The Data tab previews the rows. After a click on Preview, the five rows of the file appear, with the columns Name, Price and Category, all of the type Text. The last row has no price."
+              "text": "The Data tab previews the rows. After a click on Preview, the five rows of the file appear, with the columns Name, Price and Category, all of the type Text."
             }
           ]
         }
@@ -140,7 +140,7 @@
             },
             {
               "id": "run-3",
-              "text": "A click on Open the run shows the page of the run. Under Delivered, the pipeline reports the result: four content items created, none updated, and one row rejected. The rejected row is the one without a price, which the Product type requires."
+              "text": "A click on Open the run shows the page of the run. Under Delivered, the pipeline reports the result: five content items created, none updated, and no row rejected."
             }
           ]
         }
@@ -157,7 +157,7 @@
           "steps": [
             {
               "id": "check-1",
-              "text": "Under Content, Content Items, the list filtered on the Product type shows the four products of the run, each one named after its row."
+              "text": "Under Content, Content Items, the list filtered on the Product type shows the five products of the run, each one named after its row."
             },
             {
               "id": "check-2",
@@ -165,11 +165,11 @@
             },
             {
               "id": "again-1",
-              "text": "To import again, we go back to the list of pipelines. The Actions menu of the pipeline starts a run after a confirmation."
+              "text": "To import again, we go back to the list of pipelines. The Actions menu of the pipeline has an item that starts a run at once."
             },
             {
               "id": "again-2",
-              "text": "This time every title already exists, so the four products are updated and none is created. Matching on the display text is what prevents duplicates. The row without a price is rejected again."
+              "text": "This time every title already exists, so the five products are updated and none is created. Matching on the display text is what prevents duplicates."
             }
           ]
         }

@@ -1,0 +1,227 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.026
+Data pipelines can turn the rows of a file into content items.
+
+00:00:05.026 --> 00:00:08.933
+In this video, you import a list of products from a CSV file
+
+00:00:08.933 --> 00:00:13.255
+in the media library, check the result, and run the import a second
+
+00:00:13.255 --> 00:00:15.090
+time to update the items.
+
+00:00:19.690 --> 00:00:21.835
+An import needs three things:
+
+00:00:21.835 --> 00:00:26.310
+a file in the media library, a content type that receives the rows,
+
+00:00:26.310 --> 00:00:29.988
+and a pipeline that reads the file and saves each row.
+
+00:00:29.988 --> 00:00:33.420
+The formats include CSV files and Excel workbooks.
+
+00:00:34.170 --> 00:00:36.995
+The pipeline of an import has two steps.
+
+00:00:36.995 --> 00:00:40.128
+Read a media file reads the rows of the file.
+
+00:00:40.128 --> 00:00:44.980
+Save content items creates or updates one content item for each row, with
+
+00:00:44.980 --> 00:00:46.700
+the values you choose.
+
+00:00:47.450 --> 00:00:51.230
+Save content items treats a row in one of three ways.
+
+00:00:51.230 --> 00:00:55.842
+It updates the item a row matches or creates one, it creates items
+
+00:00:55.842 --> 00:01:00.390
+and skips matches, or it only updates and rejects the other rows.
+
+00:01:04.690 --> 00:01:08.882
+You find the pipelines under Tools, Data Pipelines, Pipelines.
+
+00:01:08.882 --> 00:01:12.150
+The list is empty, so let's click Add Pipeline.
+
+00:01:12.601 --> 00:01:14.558
+A pipeline starts with a name.
+
+00:01:14.558 --> 00:01:17.331
+Let's type Import products, and click Create.
+
+00:01:17.331 --> 00:01:18.961
+The designer opens next.
+
+00:01:19.418 --> 00:01:22.722
+An empty pipeline offers the sources to start with.
+
+00:01:22.722 --> 00:01:26.663
+Let's choose Read a media file, which reads the rows of a file
+
+00:01:26.663 --> 00:01:28.228
+in the media library.
+
+00:01:28.689 --> 00:01:32.672
+In the File box, we enter the path of the file in the media library:
+
+00:01:32.672 --> 00:01:35.256
+the imports folder, and the products file.
+
+00:01:35.256 --> 00:01:40.209
+The format comes from the extension, and the first row holds the names of the columns.
+
+00:01:40.677 --> 00:01:42.872
+The Data tab previews the rows.
+
+00:01:42.872 --> 00:01:47.023
+After a click on Preview, the five rows of the file appear, with
+
+00:01:47.023 --> 00:01:50.877
+the columns Name, Price and Category, all of the type Text.
+
+00:01:55.147 --> 00:01:57.984
+Next, we add the step that saves the rows.
+
+00:01:57.984 --> 00:02:01.649
+A click on the output dot of Read a media file lists the
+
+00:02:01.649 --> 00:02:05.727
+steps that can come after it, and we choose Save content items.
+
+00:02:06.196 --> 00:02:09.823
+The Content type list holds the content types of the site.
+
+00:02:09.823 --> 00:02:13.790
+Let's choose Product, which has a title, a Price and a Category.
+
+00:02:13.790 --> 00:02:18.776
+The user who publishes the pipeline must be allowed to edit and publish its items.
+
+00:02:19.227 --> 00:02:22.471
+Once a type is chosen, the other settings appear.
+
+00:02:22.471 --> 00:02:26.540
+Rows decides what happens to each row, and we keep the default:
+
+00:02:26.540 --> 00:02:29.547
+update the item a row matches, or create one.
+
+00:02:30.009 --> 00:02:32.952
+Match on tells how a row finds its item:
+
+00:02:32.952 --> 00:02:37.238
+by content item id, or by display text, which is how the item
+
+00:02:37.238 --> 00:02:38.773
+is named in lists.
+
+00:02:38.773 --> 00:02:43.379
+The file has no ids, so we choose Display text and the field Name.
+
+00:02:43.836 --> 00:02:48.996
+Values connects the fields of the rows to the parts and fields of the items.
+
+00:02:48.996 --> 00:02:50.821
+Let's add three values:
+
+00:02:50.821 --> 00:02:55.666
+Name goes to Title, Price goes to Price, and Category goes to Category.
+
+00:02:59.935 --> 00:03:05.625
+Publish the items stays checked, so the items are published rather than saved as drafts.
+
+00:03:05.625 --> 00:03:07.986
+Items per save keeps its default.
+
+00:03:07.986 --> 00:03:11.315
+The Issues tab shows that nothing is left to fix.
+
+00:03:11.778 --> 00:03:16.432
+The Data tab of Save content items previews what the step would receive.
+
+00:03:16.432 --> 00:03:20.728
+A preview never runs a destination, so no content item is created.
+
+00:03:24.971 --> 00:03:28.844
+Runs use the published version of a pipeline, so let's click Publish.
+
+00:03:28.844 --> 00:03:32.821
+A published pipeline runs with the access of the user who published it.
+
+00:03:33.282 --> 00:03:34.566
+Let's click Run.
+
+00:03:34.566 --> 00:03:40.052
+The History tab lists the run, and its status changes to Succeeded when the import ends.
+
+00:03:40.504 --> 00:03:43.899
+A click on Open the run shows the page of the run.
+
+00:03:43.899 --> 00:03:47.232
+Under Delivered, the pipeline reports the result:
+
+00:03:47.232 --> 00:03:51.354
+five content items created, none updated, and no row rejected.
+
+00:03:55.564 --> 00:04:00.267
+Under Content, Content Items, the list filtered on the Product type shows the
+
+00:04:00.267 --> 00:04:03.724
+five products of the run, each one named after its row.
+
+00:04:04.174 --> 00:04:08.030
+Opening one of them shows its price and its category, taken from the
+
+00:04:08.030 --> 00:04:09.384
+columns of the file.
+
+00:04:09.840 --> 00:04:13.298
+To import again, we go back to the list of pipelines.
+
+00:04:13.298 --> 00:04:17.810
+The Actions menu of the pipeline has an item that starts a run at once.
+
+00:04:18.267 --> 00:04:24.171
+This time every title already exists, so the five products are updated and none is created.
+
+00:04:24.171 --> 00:04:28.007
+Matching on the display text is what prevents duplicates.
+
+00:04:32.207 --> 00:04:36.964
+Each item is validated before it is saved, as the editor would validate it.
+
+00:04:36.964 --> 00:04:41.663
+A row that fails leaves through the Rejected output of Save content items,
+
+00:04:41.663 --> 00:04:44.307
+with the reason in a field named Error.
+
+00:04:45.057 --> 00:04:49.452
+To keep those rows, connect Rejected to Create a file, and then to
+
+00:04:49.452 --> 00:04:51.406
+Save to the media library.
+
+00:04:51.406 --> 00:04:55.679
+The result is a CSV file of the rejected rows and their reasons,
+
+00:04:55.679 --> 00:04:57.877
+ready to fix and import again.
+
+00:04:59.877 --> 00:05:03.746
+A data pipeline reads the rows of a file, saves them as content
+
+00:05:03.746 --> 00:05:06.719
+items, and updates those items on the next run.
+
+00:05:06.719 --> 00:05:08.177
+Thanks for watching.
+

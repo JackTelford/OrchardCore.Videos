@@ -18,8 +18,8 @@ confirm on a running site is in OPEN-QUESTIONS.md.
    5010, provisioned by Auto Setup: the Blog recipe, the site name Orchard Core, the time zone America/Los_Angeles, the user
    admin with the email admin@example.com, and a password chosen outside git.
 2. Seed the site, outside any capture. The recording plan gives the exact recipes and the file: enable the Data Pipelines
-   feature, create the Product content type (a title, a required Price and a Category) with a JSON Import, and put a CSV file
-   of five products, the last one without a price, in the imports folder of the media library. Then sign the recorder in
+   feature, create the Product content type (a title, a Price and a Category) with a JSON Import, and put a CSV file
+   of five products, each with a price and a category, in the imports folder of the media library. Then sign the recorder in
    with the user admin and the password, and copy the data folder of the site aside as the snapshot named seeded.
 3. Narrate the video, then record the four clips in this order, because each one starts from the site the previous one left:
    02-read, 03-save, 04-run, 05-check. Restore the snapshot that precedes a clip before recording it again (seeded for

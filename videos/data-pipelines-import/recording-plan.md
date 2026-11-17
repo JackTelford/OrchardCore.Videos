@@ -44,7 +44,7 @@ How to record `data-pipelines-import` without having to decide anything. Selecto
    ```
 
 2. **Create the Product content type**, the same way (**Tools > Deployments > JSON Import**). A Product has a title and a
-   Product part with a required Price (two decimals, at least 0) and a Category:
+   Product part with a Price (two decimals, at least 0) and a Category (nothing is required: on this build a required field rejects every row that creates an item, see OPEN-QUESTIONS.md):
 
    ```json
    {
@@ -74,7 +74,7 @@ How to record `data-pipelines-import` without having to decide anything. Selecto
                  "Name": "Price",
                  "Settings": {
                    "ContentPartFieldSettings": { "DisplayName": "Price", "Position": "0" },
-                   "NumericFieldSettings": { "Required": true, "Scale": 2, "Minimum": 0 }
+                   "NumericFieldSettings": { "Required": false, "Scale": 2, "Minimum": 0 }
                  }
                },
                {
@@ -97,7 +97,7 @@ How to record `data-pipelines-import` without having to decide anything. Selecto
 
 3. **Put the file in the media library**: create `imports/products.csv` in the media folder of the tenant, which is
    `<ORCHARD_APP_DATA>/Sites/Default/Media/imports/products.csv` (UTF-8, any line ending). The exact content, five rows
-   under the header, the last one without a price:
+   under the header, every row complete:
 
    ```text
    Name,Price,Category
@@ -105,7 +105,7 @@ How to record `data-pipelines-import` without having to decide anything. Selecto
    Standing desk,329.00,Furniture
    Task chair,189.50,Furniture
    Ceramic mug,12.00,Kitchen
-   Wall shelf,,Furniture
+   Wall shelf,45.00,Furniture
    ```
 
    Alternative with the same result: in **Media > Library**, create the folder `imports` and upload the file into it by
@@ -126,8 +126,8 @@ The clips depend on each other: each starts from the site the previous one left.
 |---|---|---|---|
 | `02-read` | `seeded` | Creates the pipeline "Import products" with its first step (a draft). | `after-02` |
 | `03-save` | `after-02` | Adds the Save content items step and its settings to the draft. | `after-03` |
-| `04-run` | `after-03` | Publishes the pipeline, runs it: four Product items, one run. | `after-04` |
-| `05-check` | `after-04` | Runs the pipeline a second time: four items updated, a second run. | none |
+| `04-run` | `after-03` | Publishes the pipeline, runs it: five Product items, one run. | `after-04` |
+| `05-check` | `after-04` | Runs the pipeline a second time: five items updated, a second run. | none |
 
 To record a clip again, stop the site, restore the snapshot it starts from (`seeded` for `02-read`), start the site, and
 sign in with the saved `state.json`. To record everything again, restore `seeded`.
@@ -180,8 +180,7 @@ Starts on `/Admin/DataPipelines`, opened with `OpenAsync` (not recorded): the pa
   `DP/Views/ReadMediaFile.Fields.Edit.cshtml:4`, `:13`, `:16`, `:29`.
 - `read-5`: `ClickAsync` on `[data-cy='step-tab-data']` (**Data**), then on `[data-cy='preview-run']` (**Preview**); wait
   until `[data-cy='preview-tab'] tbody tr` counts 5 rows. *On screen at the end*: the table with the columns **Name**,
-  **Price** and **Category**, each with the type **Text**, five rows, and in the last row (Wall shelf) the text `null` in the
-  Price column; all five rows must be visible without scrolling the page (resize the step panel before the capture if not).
+  **Price** and **Category**, each with the type **Text**, five rows, and the last row (Wall shelf) complete; all five rows must be visible without scrolling the page (resize the step panel before the capture if not).
   Labels: `DPD/panel/StepPanel.vue:97` ("Settings", "Data", "Fields"); `DPD/panel/PreviewTab.vue:56`
   ("Preview"); `DPD/preview/previewTable.ts:24` ("Text") and `:51` ("null").
 
@@ -260,13 +259,13 @@ panel on **Pipeline**. The toolbar shows **Publish** enabled and **Run** disable
   ("Succeeded").
 - `run-3`: `ClickAndWaitForNavigationAsync` on `[data-cy='run-page']` (**Open the run**); wait until the page title reads "Run of
   Import products" and the badge "Succeeded" is visible; `ScrollAsync` so that the **Delivered** list is on screen and
-  `HighlightAsync` on its item. *On screen at the end*: the run page, the heading **Delivered**, and the item "Created 4 and
-  updated 0 'Product' content items; skipped 0 and rejected 1 rows." followed by "Save content items"; the **Steps** table
+  `HighlightAsync` on its item. *On screen at the end*: the run page, the heading **Delivered**, and the item "Created 5 and
+  updated 0 'Product' content items; skipped 0 and rejected 0 rows." followed by "Save content items"; the **Steps** table
   and, under **Log**, the warning "1 rows couldn't be saved." may be visible too. Labels: `DPD/panel/RunsTab.vue:126` (Open
   the run); `DP/Views/Admin/Run.cshtml:9` (title), `:98` (Delivered), `:119` (Log); the delivery text is
   `DP/Steps/Contents/SaveContentItemsStep.cs:174`, the log line `:171`.
 
-Leaves the site with the pipeline published (version 1), a successful run, and four Product items. Do not delete any of them.
+Leaves the site with the pipeline published (version 1), a successful run, and five Product items. Do not delete any of them.
 
 ## 6. Clip `05-check` (chapter 05, "Check the result")
 
@@ -274,22 +273,21 @@ Starts on `/Admin/Contents/ContentItems/Product`, opened with `OpenAsync` (not r
 (click `button.leftbar-compactor` if it is compact) on **Content** (`src/OrchardCore.Modules/OrchardCore.Contents/AdminMenu.cs:65-68`; the entry **Content Items** leads to
 the same list without the type filter, so it may not be marked as the current item on this address).
 
-- `check-1`: `HoldAsync(2)`, then `HighlightAsync` on the list of items for about 3 seconds. *On screen at the end*: four
-  items, "Reading lamp", "Standing desk", "Task chair" and "Ceramic mug" (not "Wall shelf"), all of the type Product.
+- `check-1`: `HoldAsync(2)`, then `HighlightAsync` on the list of items for about 3 seconds. *On screen at the end*: five
+  items, "Reading lamp", "Standing desk", "Task chair", "Ceramic mug" and "Wall shelf", all of the type Product.
 - `check-2`: `ClickAndWaitForNavigationAsync` on the link "Task chair" (the title of the row); wait until the editor of the
   item is shown with an input holding `Task chair`. *On screen at the end*: the editor of "Task chair" with its **Title**, its
   **Price** (189.5 or 189.50) and its **Category** (`Furniture`) visible without scrolling; scroll just enough if not. Labels:
   the field names are the display names of the seed in section 1.
 - `again-1`: `NavigateAsync("/Admin/DataPipelines")`; wait until the row "Import products" shows the badge "Version 1" and a
   last run badge starting "Succeeded". Then `ClickAsync` on the **Actions** button of the row (`button.actions`), and on the item
-  "Run now" of its menu (`a.dropdown-item` with that text); a confirmation dialog titled "Run now" asks "Run the pipeline
-  'Import products' now?"; `ClickAsync` on its **Run** button (the button with the class `btn-primary` of the dialog).
-  *On screen at the end*: the confirmation has been accepted and the browser is loading the run page. Labels:
+  "Run now" of its menu (`a.dropdown-item` with that text); on this build the item starts the run at once, with no dialog visible in the recording.
+  *On screen at the end*: the browser is loading the run page. Labels:
   `DP/Views/Admin/Index.cshtml:85-92` (**Actions**, "Run now", the dialog), `DP/Controllers/AdminController.cs` (`RunNow`).
 - `again-2`: wait for the run page (`/Admin/DataPipelines/Run/...`); the page refreshes itself every 3 seconds while the run is
   not over (`DP/Views/Admin/Run.cshtml:18`), so wrap the wait for the badge "Succeeded" in `OffCameraAsync`; `ScrollAsync` so
   that **Delivered** is on screen, `HighlightAsync` on its item. *On screen at the end*: the run page, status "Succeeded", and
-  the item "Created 0 and updated 4 'Product' content items; skipped 0 and rejected 1 rows." under **Delivered**.
+  the item "Created 0 and updated 5 'Product' content items; skipped 0 and rejected 0 rows." under **Delivered**.
 
 ## 7. Slides
 
