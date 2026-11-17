@@ -1,0 +1,24 @@
+1
+00:00:03,235 --> 00:00:05,986
+Data Pipelines is a feature of the site.
+
+2
+00:00:05,986 --> 00:00:09,095
+Let's open Tools, Features, and search for it.
+
+3
+00:00:09,553 --> 00:00:15,677
+Enabling Data Pipelines also enables Data Pipelines Core, which provides the data sources
+
+4
+00:00:15,677 --> 00:00:17,418
+and the file formats.
+
+5
+00:00:17,418 --> 00:00:21,995
+The Tools menu then has a Data Pipelines section, with two pages:
+
+6
+00:00:21,995 --> 00:00:24,123
+Pipelines, and Run History.
+

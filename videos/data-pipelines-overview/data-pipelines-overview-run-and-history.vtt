@@ -1,0 +1,56 @@
+WEBVTT
+
+00:00:03.217 --> 00:00:05.891
+The designer saves the draft as you work.
+
+00:00:05.891 --> 00:00:09.534
+The Issues tab lists what must be fixed before publishing.
+
+00:00:09.534 --> 00:00:13.347
+Publish creates the first version, which is the one runs use.
+
+00:00:13.807 --> 00:00:15.865
+Run starts the published version.
+
+00:00:15.865 --> 00:00:19.770
+The run is queued and executes in the background, with the access of
+
+00:00:19.770 --> 00:00:21.987
+the user who published the pipeline.
+
+00:00:22.446 --> 00:00:24.682
+The History tab lists the runs.
+
+00:00:24.682 --> 00:00:29.035
+With a run selected, each step on the canvas shows its status, and
+
+00:00:29.035 --> 00:00:31.756
+the number of rows or files it handled.
+
+00:00:32.215 --> 00:00:34.291
+Open the run shows its page:
+
+00:00:34.291 --> 00:00:38.262
+each step with its status and its rows in and out, what the
+
+00:00:38.262 --> 00:00:40.277
+run delivered, and its log.
+
+00:00:40.277 --> 00:00:43.515
+Here, it saved a CSV file to the media library.
+
+00:00:43.966 --> 00:00:48.777
+The Run History page lists the runs, the most recent first, with their
+
+00:00:48.777 --> 00:00:52.195
+status, version, duration, and who started them.
+
+00:00:52.195 --> 00:00:55.106
+A link shows the runs of every pipeline.
+
+00:00:55.563 --> 00:01:00.860
+On the Pipelines page, the pipeline shows its version and the status of its last run.
+
+00:01:00.860 --> 00:01:05.283
+Its Actions menu can run it again, open its Run history, or delete it.
+

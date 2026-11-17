@@ -1,0 +1,32 @@
+1
+00:00:03,300 --> 00:00:07,529
+The Pipelines page lists the pipelines of the site, and it is empty.
+
+2
+00:00:07,529 --> 00:00:10,500
+Add Pipeline opens the form for the first one.
+
+3
+00:00:10,966 --> 00:00:12,735
+A pipeline needs a name.
+
+4
+00:00:12,735 --> 00:00:15,507
+Let's type Blog posts, and select Create.
+
+5
+00:00:15,507 --> 00:00:17,276
+The designer opens next.
+
+6
+00:00:17,727 --> 00:00:24,299
+The designer has Steps on the left, grouped as Sources, Transforms, Files and Destinations.
+
+7
+00:00:24,299 --> 00:00:28,364
+The canvas is empty and offers to start with a source.
+
+8
+00:00:28,364 --> 00:00:33,107
+On the right, a panel has the Pipeline, Issues and History tabs.
+
