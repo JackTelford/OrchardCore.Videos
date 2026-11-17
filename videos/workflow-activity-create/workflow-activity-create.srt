@@ -1,0 +1,360 @@
+1
+00:00:01,000 --> 00:00:05,635
+Every step of a workflow is an activity, and your module can add its own.
+
+2
+00:00:05,635 --> 00:00:10,269
+Let's read the Notify Task activity of the Workflows module part by part:
+
+3
+00:00:10,269 --> 00:00:13,789
+its class, its editor, its views and its registration.
+
+4
+00:00:13,789 --> 00:00:16,840
+Then let's find them in the workflow designer.
+
+5
+00:00:21,440 --> 00:00:25,205
+A workflow is a set of activities connected to each other.
+
+6
+00:00:25,205 --> 00:00:27,675
+A task does some work and continues.
+
+7
+00:00:27,675 --> 00:00:33,440
+An event halts the workflow until something happens, and only an event can start a workflow.
+
+8
+00:00:34,190 --> 00:00:38,317
+Each activity returns outcomes, which are named exits such as Done.
+
+9
+00:00:38,317 --> 00:00:42,841
+The designer draws a port for each outcome, and a transition connects that
+
+10
+00:00:42,841 --> 00:00:44,650
+port to the next activity.
+
+11
+00:00:45,400 --> 00:00:50,002
+A task with settings needs an activity class, a display driver with its
+
+12
+00:00:50,002 --> 00:00:53,708
+view model, three views, and one call that registers it.
+
+13
+00:00:53,708 --> 00:00:58,430
+The Notify Task of the Workflows module has every part, so let's read it.
+
+14
+00:01:02,630 --> 00:01:08,628
+NotifyTask derives from TaskActivity, passing its own type, which sets the activity's Name
+
+15
+00:01:08,628 --> 00:01:10,128
+to the class name.
+
+16
+00:01:10,128 --> 00:01:14,002
+Workflow definitions refer to the activity by that name.
+
+17
+00:01:14,002 --> 00:01:22,500
+IActivityDescription declares the display name and the category as localization sources, which DisplayText and Category translate.
+
+18
+00:01:23,250 --> 00:01:26,978
+The constructor asks for the services the activity needs.
+
+19
+00:01:26,978 --> 00:01:33,369
+Activities are created with constructor injection, so NotifyTask receives the notifier, the expression
+
+20
+00:01:33,369 --> 00:01:35,440
+evaluator and the localizers.
+
+21
+00:01:36,190 --> 00:01:41,376
+Settings are properties that read and write through GetProperty and SetProperty.
+
+22
+00:01:41,376 --> 00:01:47,407
+The values are stored by property name in the activity's Properties, which the workflow saves.
+
+23
+00:01:47,407 --> 00:01:52,050
+Message is a WorkflowExpression, evaluated each time the activity runs.
+
+24
+00:01:52,800 --> 00:01:56,356
+GetPossibleOutcomes lists the outcomes, here only Done.
+
+25
+00:01:56,356 --> 00:01:58,279
+ExecuteAsync does the work:
+
+26
+00:01:58,279 --> 00:02:03,351
+it evaluates the message, adds the notification, and returns the outcome by name.
+
+27
+00:02:03,351 --> 00:02:06,790
+The workflow follows the transitions of that outcome.
+
+28
+00:02:10,990 --> 00:02:17,145
+The display driver derives from ActivityDisplayDriver, with the activity and a view model.
+
+29
+00:02:17,145 --> 00:02:24,133
+EditActivity copies the settings into the view model, and UpdateActivity copies the posted values back.
+
+30
+00:02:24,133 --> 00:02:25,800
+Message is required.
+
+31
+00:02:26,550 --> 00:02:30,873
+The base class builds three shapes named after the activity class:
+
+32
+00:02:30,873 --> 00:02:32,855
+Thumbnail, Design and Edit.
+
+33
+00:02:32,855 --> 00:02:37,418
+You write one Razor view for each, and the Workflows module keeps them
+
+34
+00:02:37,418 --> 00:02:39,700
+in the Items folder under Views.
+
+35
+00:02:40,450 --> 00:02:44,641
+The Thumbnail view is the card of the activity in the Activities pane:
+
+36
+00:02:44,641 --> 00:02:46,405
+a title and a description.
+
+37
+00:02:46,405 --> 00:02:50,320
+The designer replaces the icon at the start of the title with the
+
+38
+00:02:50,320 --> 00:02:52,140
+icon from the registration.
+
+39
+00:02:52,890 --> 00:02:56,628
+The Design view is the body of the activity on the canvas.
+
+40
+00:02:56,628 --> 00:03:00,949
+It shows the notification type as a title, unless the Title field is
+
+41
+00:03:00,949 --> 00:03:03,110
+set, and the message in quotes.
+
+42
+00:03:03,860 --> 00:03:06,878
+The Edit view holds only your own settings:
+
+43
+00:03:06,878 --> 00:03:09,589
+a label, an input and a hint for each.
+
+44
+00:03:09,589 --> 00:03:13,531
+The module adds a Title field before it and, for a task, a
+
+45
+00:03:13,531 --> 00:03:15,810
+When it fails section after it.
+
+46
+00:03:20,010 --> 00:03:23,951
+A setting that takes an expression in a choice of syntaxes uses a
+
+47
+00:03:23,951 --> 00:03:26,616
+WorkflowExpressionInput in its view model.
+
+48
+00:03:26,616 --> 00:03:32,611
+The driver reads it back with the WorkflowExpressionInputValidator, which reports a missing expression
+
+49
+00:03:32,611 --> 00:03:34,720
+or a syntax that is not allowed.
+
+50
+00:03:35,470 --> 00:03:42,811
+In the Edit view, CreateWorkflowExpressionEditorAsync builds the WorkflowExpressionEditor shape from the bound property.
+
+51
+00:03:42,811 --> 00:03:47,880
+It shows the syntax and the expression together, with the label and hint you set.
+
+52
+00:03:52,080 --> 00:03:59,428
+AddActivity registers the activity and its display driver, in the ConfigureServices method of a Startup class.
+
+53
+00:03:59,428 --> 00:04:02,469
+The optional icon is a Font Awesome class.
+
+54
+00:04:02,469 --> 00:04:07,220
+Without one, the designer uses the category's icon, or a generic one.
+
+55
+00:04:07,970 --> 00:04:14,036
+Your module's feature depends on OrchardCore.Workflows, as the Timers feature does, and registers
+
+56
+00:04:14,036 --> 00:04:16,156
+its activities in its Startup.
+
+57
+00:04:16,156 --> 00:04:21,574
+A module that works without workflows marks a Startup with RequireFeatures instead, as
+
+58
+00:04:21,574 --> 00:04:23,400
+the Contents module does.
+
+59
+00:04:27,640 --> 00:04:31,265
+Let's find the three views in the workflow designer.
+
+60
+00:04:31,265 --> 00:04:38,078
+Under Design, Workflows, we open Notify editors, a workflow that starts with a Content Published Event.
+
+61
+00:04:38,078 --> 00:04:42,140
+A separate video covers building workflows in the designer.
+
+62
+00:04:42,603 --> 00:04:45,549
+In the Activities pane, let's search for notify.
+
+63
+00:04:45,549 --> 00:04:49,533
+Under UI, the category from the class, the card shows the bell icon
+
+64
+00:04:49,533 --> 00:04:53,953
+from the registration, and the title and description of the Thumbnail view.
+
+65
+00:04:54,406 --> 00:04:56,351
+Let's add it after the event.
+
+66
+00:04:56,351 --> 00:05:00,799
+Clicking the Done port opens a list of activities, and picking Notify Task
+
+67
+00:05:00,799 --> 00:05:03,356
+adds it to the right, already connected.
+
+68
+00:05:03,862 --> 00:05:07,371
+The header shows the display text, Notify Task.
+
+69
+00:05:07,371 --> 00:05:09,623
+The body is the Design view:
+
+70
+00:05:09,623 --> 00:05:14,523
+a Success Notification title, and the message in quotes, left empty.
+
+71
+00:05:14,523 --> 00:05:18,762
+The node also shows an issue, because Message is required.
+
+72
+00:05:19,246 --> 00:05:24,063
+The designer opens the settings of an added activity at the bottom of the canvas.
+
+73
+00:05:24,063 --> 00:05:25,613
+That is the Edit view:
+
+74
+00:05:25,613 --> 00:05:30,153
+Notification Type and Message, with the Title field before them and the When
+
+75
+00:05:30,153 --> 00:05:32,036
+it fails section after them.
+
+76
+00:05:32,505 --> 00:05:35,373
+Let's choose Information and type a message.
+
+77
+00:05:35,373 --> 00:05:40,020
+When the field loses focus, the designer applies the change, and the Design
+
+78
+00:05:40,020 --> 00:05:43,405
+view shows Information Notification with the message.
+
+79
+00:05:47,605 --> 00:05:53,668
+An event derives from EventActivity instead, as this one from the Data Pipelines module does.
+
+80
+00:05:53,668 --> 00:05:58,996
+The base class's Execute method halts the workflow, and the event's Resume method
+
+81
+00:05:58,996 --> 00:06:01,078
+runs when the event arrives.
+
+82
+00:06:01,078 --> 00:06:05,365
+EventActivity isn't generic, so the event overrides Name itself.
+
+83
+00:06:06,115 --> 00:06:11,860
+Your code triggers the event by calling TriggerEventAsync on IWorkflowManager, with the activity's
+
+84
+00:06:11,860 --> 00:06:13,794
+name and an input dictionary.
+
+85
+00:06:13,794 --> 00:06:18,214
+The call starts the workflows that begin with the event, and resumes those
+
+86
+00:06:18,214 --> 00:06:19,485
+that wait for it.
+
+87
+00:06:21,485 --> 00:06:25,666
+A task activity is a class, a display driver with a view model,
+
+88
+00:06:25,666 --> 00:06:28,030
+three views and one registration.
+
+89
+00:06:28,030 --> 00:06:31,909
+An event follows the same shape and waits to be triggered.
+
+90
+00:06:31,909 --> 00:06:33,485
+Thanks for watching.
+
