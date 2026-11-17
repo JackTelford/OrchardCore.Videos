@@ -1,0 +1,227 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.843
+Notifications tell users that something happened on the site.
+
+00:00:04.843 --> 00:00:09.603
+This video shows how they reach the notification center, how a workflow sends
+
+00:00:09.603 --> 00:00:13.790
+them, and how each user chooses to receive them by email or by SMS.
+
+00:00:18.390 --> 00:00:21.850
+Every notification is stored for the user it is meant for.
+
+00:00:21.850 --> 00:00:25.905
+Users read their notifications in the admin, from the bell in the top
+
+00:00:25.905 --> 00:00:28.230
+bar and from the notification center.
+
+00:00:28.980 --> 00:00:34.350
+A notification can also be sent by email or by SMS, through notification methods.
+
+00:00:34.350 --> 00:00:37.930
+Each user decides which of the methods they receive.
+
+00:00:38.680 --> 00:00:43.701
+Workflows send notifications without any code, and a module can send them for
+
+00:00:43.701 --> 00:00:45.395
+the events it handles.
+
+00:00:45.395 --> 00:00:48.420
+Each user sees only their own notifications.
+
+00:00:52.720 --> 00:00:57.256
+Three features in the Notifications category provide notifications.
+
+00:00:57.256 --> 00:01:01.170
+Let's open Tools, Features, and search for notifications.
+
+00:01:01.634 --> 00:01:04.973
+Notifications provides the notification center.
+
+00:01:04.973 --> 00:01:10.455
+Email Notifications and SMS Notifications are the two methods, and they depend on
+
+00:01:10.455 --> 00:01:12.534
+the Email and SMS features.
+
+00:01:12.994 --> 00:01:16.024
+Let's select the three features and enable them.
+
+00:01:16.024 --> 00:01:19.334
+Once they are enabled, a bell appears in the top bar.
+
+00:01:23.634 --> 00:01:28.415
+With the Workflows feature enabled, a workflow can send notifications.
+
+00:01:28.415 --> 00:01:34.894
+Let's open Design, Workflows, and the workflow named Notify the editors when a page is published.
+
+00:01:35.359 --> 00:01:39.474
+It starts with the Content Published event, limited to pages.
+
+00:01:39.474 --> 00:01:44.939
+When a page is published, the workflow continues to the Notify Specific Users task.
+
+00:01:45.394 --> 00:01:48.331
+Double-click the task to open its settings.
+
+00:01:48.331 --> 00:01:53.186
+User names takes a comma-separated list of the users to notify, and Subject
+
+00:01:53.186 --> 00:01:55.524
+is the title of the notification.
+
+00:01:55.975 --> 00:02:01.657
+Summary is a short description, and Text Body and HTML Body hold the message.
+
+00:02:01.657 --> 00:02:03.847
+URL and Type are optional.
+
+00:02:03.847 --> 00:02:07.475
+Most fields accept Liquid, a template language.
+
+00:02:07.927 --> 00:02:10.624
+The toolbox lists the tasks you can add.
+
+00:02:10.624 --> 00:02:13.204
+Searching for notifications finds two:
+
+00:02:13.204 --> 00:02:19.067
+Notify Specific Users, and Notify Content Owner, which notifies the owner of the content item.
+
+00:02:19.530 --> 00:02:24.320
+To run the workflow, let's publish a draft page from Content, Content Items.
+
+00:02:24.320 --> 00:02:29.110
+The Content Published event starts the workflow, and the users are notified.
+
+00:02:33.410 --> 00:02:38.136
+The bell in the top bar counts the notifications you have not read, in a badge.
+
+00:02:38.136 --> 00:02:41.640
+Users need the Manage notifications permission to see it.
+
+00:02:42.098 --> 00:02:45.327
+Open the bell to see the unread notifications.
+
+00:02:45.327 --> 00:02:49.488
+Each one shows its subject, its summary, and when it arrived.
+
+00:02:49.953 --> 00:02:54.703
+At the bottom of the menu, Notification Center opens the full list.
+
+00:02:59.003 --> 00:03:03.725
+The notification center lists all your notifications, the most recent first.
+
+00:03:03.725 --> 00:03:07.353
+Unread ones are highlighted, and their subjects are bold.
+
+00:03:07.814 --> 00:03:12.680
+Each row shows the subject, the summary, and when the notification arrived.
+
+00:03:12.680 --> 00:03:15.684
+Mark as read marks one notification as read.
+
+00:03:16.139 --> 00:03:20.044
+The search box finds text in the summary and the text body.
+
+00:03:20.044 --> 00:03:25.329
+Show filters the list to Read or Unread notifications, and Sort changes the order.
+
+00:03:25.785 --> 00:03:30.350
+Actions, View opens a notification on its own page, with its text, and
+
+00:03:30.350 --> 00:03:31.732
+marks it as read.
+
+00:03:31.732 --> 00:03:34.735
+Mark as unread and Delete are at the bottom.
+
+00:03:35.197 --> 00:03:39.338
+To work on several notifications, select their check boxes.
+
+00:03:39.338 --> 00:03:44.627
+Actions then offers Mark as read, Mark as unread, and Remove for all of them.
+
+00:03:45.079 --> 00:03:49.752
+Mark All as Read, next to the search box, marks every notification as
+
+00:03:49.752 --> 00:03:51.559
+read after you confirm.
+
+00:03:55.859 --> 00:04:00.030
+Each user chooses how they receive notifications on their own profile.
+
+00:04:00.030 --> 00:04:02.719
+Let's open the user menu, and then Profile.
+
+00:04:03.174 --> 00:04:08.175
+Notification Methods lists Email Notifications and SMS Notifications.
+
+00:04:08.175 --> 00:04:12.844
+A checked method sends a copy of every notification to the user.
+
+00:04:13.300 --> 00:04:16.340
+Let's clear SMS Notifications and select Save.
+
+00:04:16.340 --> 00:04:22.420
+The user keeps receiving notifications by email, and the notification center always receives them.
+
+00:04:22.883 --> 00:04:27.883
+Email Notifications sends to the Email field of the user, and SMS Notifications
+
+00:04:27.883 --> 00:04:29.765
+to the Phone Number field.
+
+00:04:29.765 --> 00:04:33.765
+When a field is empty, that method fails for the user, and the
+
+00:04:33.765 --> 00:04:36.823
+notification stays in the notification center.
+
+00:04:41.023 --> 00:04:46.694
+Email Notifications sends through the Email service, so a provider must be configured
+
+00:04:46.694 --> 00:04:49.374
+under Settings, Communication, Email.
+
+00:04:49.374 --> 00:04:53.674
+The email carries the Text Body, or the HTML Body when Use HTML
+
+00:04:53.674 --> 00:04:57.413
+Body when possible is checked and an HTML Body is set.
+
+00:04:58.163 --> 00:05:03.789
+SMS Notifications sends through the SMS service, so choose the Default SMS provider
+
+00:05:03.789 --> 00:05:06.381
+under Settings, Communication, SMS.
+
+00:05:06.381 --> 00:05:09.542
+The text message carries only the Text Body.
+
+00:05:09.542 --> 00:05:12.133
+Separate videos cover each service.
+
+00:05:12.883 --> 00:05:16.848
+The notification always stays in the notification center.
+
+00:05:16.848 --> 00:05:21.316
+A notification task of a workflow ends with Done when an email or
+
+00:05:21.316 --> 00:05:25.281
+SMS was sent, with Failed when none was, and with Failed:
+
+00:05:25.281 --> 00:05:28.553
+no user found when it finds no user to notify.
+
+00:05:30.553 --> 00:05:36.920
+Notifications reach users in the notification center, and by email and SMS as each user chooses.
+
+00:05:36.920 --> 00:05:38.543
+Thanks for watching.
+
