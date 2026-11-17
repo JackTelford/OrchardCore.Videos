@@ -1,0 +1,209 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.602
+A content part is a group of fields that you define once and
+
+00:00:04.602 --> 00:00:06.239
+attach to content types.
+
+00:00:06.239 --> 00:00:10.223
+In this video, you create a Postal Address part and attach it twice
+
+00:00:10.223 --> 00:00:13.770
+to a Customer type, once for billing and once for shipping.
+
+00:00:18.370 --> 00:00:20.357
+A content type is made of parts.
+
+00:00:20.357 --> 00:00:22.343
+A part adds something to a type:
+
+00:00:22.343 --> 00:00:26.003
+the Title part adds a title, and a part that you create yourself
+
+00:00:26.003 --> 00:00:27.990
+adds the fields that you choose.
+
+00:00:28.740 --> 00:00:32.669
+You define a part once, and any content type can attach it, as
+
+00:00:32.669 --> 00:00:34.807
+long as the part is Attachable.
+
+00:00:34.807 --> 00:00:39.141
+A part marked Reusable can also be attached several times to the same
+
+00:00:39.141 --> 00:00:41.510
+type, each time under its own name.
+
+00:00:42.260 --> 00:00:44.926
+A postal address is a typical example:
+
+00:00:44.926 --> 00:00:47.410
+a street, a city and a postal code.
+
+00:00:47.410 --> 00:00:51.529
+A customer needs one address for billing and one for shipping.
+
+00:00:51.529 --> 00:00:55.770
+Both can come from the same part, and each keeps its own values.
+
+00:01:00.036 --> 00:01:04.278
+In the admin menu, open Design, Content Definition, Content Parts.
+
+00:01:04.278 --> 00:01:07.518
+This page lists the parts that you can configure.
+
+00:01:07.518 --> 00:01:09.226
+Select Create new part.
+
+00:01:11.159 --> 00:01:16.070
+A part starts with a name, which cannot contain spaces or special characters.
+
+00:01:16.070 --> 00:01:20.449
+We type PostalAddress, with the two words joined, and select Create.
+
+00:01:20.903 --> 00:01:24.807
+A message confirms that the content part has been created, and the editor
+
+00:01:24.807 --> 00:01:25.993
+of the part opens.
+
+00:01:30.196 --> 00:01:33.355
+The Technical Name is fixed once the part exists.
+
+00:01:33.355 --> 00:01:37.491
+The Display Name is what screens show, so we enter Postal Address.
+
+00:01:37.491 --> 00:01:41.856
+The Description appears next to the part when you attach it to a type.
+
+00:01:42.316 --> 00:01:45.595
+Attachable lets you attach the part to content types.
+
+00:01:45.595 --> 00:01:49.706
+A part that you create starts out attachable, so the box is checked.
+
+00:01:50.158 --> 00:01:54.605
+Reusable lets you attach the part more than once to the same type.
+
+00:01:54.605 --> 00:01:57.138
+We check Reusable, and select Save.
+
+00:01:57.594 --> 00:02:01.438
+A message confirms that the settings of the part are saved, and the
+
+00:02:01.438 --> 00:02:03.544
+page title shows the display name.
+
+00:02:07.807 --> 00:02:09.525
+The part has no fields.
+
+00:02:09.525 --> 00:02:14.267
+The Fields section lists them, and Add Field opens the form to create one.
+
+00:02:14.756 --> 00:02:19.032
+We enter Street as the Display Name, and the Technical Name follows.
+
+00:02:19.032 --> 00:02:22.096
+We choose the Text Field type, and select Save.
+
+00:02:23.838 --> 00:02:27.994
+The page returns to the part, with Street listed next to its type.
+
+00:02:27.994 --> 00:02:30.938
+We add City in the same way, as a Text Field.
+
+00:02:34.159 --> 00:02:36.097
+Last, we add Postal Code.
+
+00:02:36.097 --> 00:02:41.599
+The part holds three fields, and every type that attaches the part gets all three.
+
+00:02:45.811 --> 00:02:48.177
+Next, we attach the part to a type.
+
+00:02:48.177 --> 00:02:52.792
+On the Content Types page, Customer is a content type that already exists,
+
+00:02:52.792 --> 00:02:54.177
+with a Title part.
+
+00:02:54.177 --> 00:02:56.081
+We select Edit on Customer.
+
+00:02:56.539 --> 00:02:59.562
+The Parts section lists what the type is made of.
+
+00:02:59.562 --> 00:03:03.026
+Add Parts attaches an attachable part under its own name.
+
+00:03:03.026 --> 00:03:07.149
+Add Named Part attaches a reusable part under a name that you choose.
+
+00:03:07.602 --> 00:03:09.706
+Let's select Add Named Part.
+
+00:03:09.706 --> 00:03:15.832
+The page lists the parts that are both attachable and reusable, and we choose Postal Address.
+
+00:03:16.296 --> 00:03:21.015
+We enter Billing Address as the Display Name, and the Technical Name follows.
+
+00:03:21.015 --> 00:03:23.516
+We add a description, and select Save.
+
+00:03:23.976 --> 00:03:27.269
+Billing Address is listed among the parts of the type.
+
+00:03:27.269 --> 00:03:31.550
+We add the Postal Address part once more, this time as Shipping Address,
+
+00:03:31.550 --> 00:03:33.526
+with a description of its own.
+
+00:03:33.980 --> 00:03:37.495
+The type has two named parts that share one definition.
+
+00:03:37.495 --> 00:03:41.470
+A field added to the Postal Address part later appears in both.
+
+00:03:45.679 --> 00:03:50.699
+On the Content Types page, Create New Customer opens the editor for a customer.
+
+00:03:51.156 --> 00:03:57.124
+Besides the Title, the editor has a group named Billing Address and another named Shipping Address.
+
+00:03:57.124 --> 00:04:02.126
+Each group shows its description, and the three fields of the Postal Address part.
+
+00:04:02.587 --> 00:04:07.767
+We enter a title, then the street, city and postal code of the billing address.
+
+00:04:08.218 --> 00:04:10.711
+The shipping address gets different values.
+
+00:04:10.711 --> 00:04:13.559
+Each name is a part of its own on the type, so the
+
+00:04:13.559 --> 00:04:15.898
+two groups keep their values separately.
+
+00:04:16.351 --> 00:04:17.620
+We select Publish.
+
+00:04:17.620 --> 00:04:22.113
+A message confirms that the customer has been published, and both addresses are
+
+00:04:22.113 --> 00:04:23.911
+saved with the content item.
+
+00:04:25.911 --> 00:04:29.973
+A content part groups fields that you define once, and Add Named Part
+
+00:04:29.973 --> 00:04:33.602
+attaches a reusable part to a type as many times as you need.
+
+00:04:33.602 --> 00:04:35.011
+Thanks for watching.
+
