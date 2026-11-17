@@ -3861,18 +3861,18 @@
     "docs": [
       "src/docs/reference/modules/ReCaptcha/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 4.5,
     "words": 674,
     "contentCommit": "",
-    "recordedBy": "",
+    "recordedBy": "wipke",
     "recordedOn": "",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": "External service: use Google's published reCAPTCHA test keys, which always pass."
+    "notes": "External service: use Google's published reCAPTCHA test keys, which always pass. | 2026-11-17 blocked: Needs Google's live reCAPTCHA service (script in the browser, verification call from the site) with Google's public test keys: no local emulator exists and the recording brief blocks outbound calls; decide whether to allow the public test keys"
   },
   {
     "slug": "security-rate-limits",
