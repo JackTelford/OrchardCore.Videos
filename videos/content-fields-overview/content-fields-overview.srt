@@ -104,7 +104,7 @@ The Fields section is empty, and Add Field starts the first one.
 
 27
 00:01:34,681 --> 00:01:37,335
-The Parts list shows only Title for now.
+The Parts list shows only Title at first.
 
 28
 00:01:37,335 --> 00:01:43,103
