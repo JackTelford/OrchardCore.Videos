@@ -1,0 +1,332 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.003
+A blog is a list of posts that visitors can browse by category
+
+00:00:05.003 --> 00:00:08.241
+and by tag, with a menu to find their way around.
+
+00:00:08.241 --> 00:00:11.479
+In this video, you build one with The Blog Theme:
+
+00:00:11.479 --> 00:00:14.540
+a category, a post with tags, and a menu item.
+
+00:00:19.140 --> 00:00:22.049
+The Blog recipe sets up a site for a blog.
+
+00:00:22.049 --> 00:00:26.654
+It creates the content types, a blog with a first post, the Categories
+
+00:00:26.654 --> 00:00:31.260
+and Tags taxonomies, and a Main Menu, and it activates The Blog Theme.
+
+00:00:32.010 --> 00:00:33.649
+The Blog is a list.
+
+00:00:33.649 --> 00:00:38.434
+It contains Blog Posts, shown with the most recent first, and it is
+
+00:00:38.434 --> 00:00:40.532
+the home page of the site.
+
+00:00:40.532 --> 00:00:44.990
+Each post has a title, a subtitle, a banner image, and a body.
+
+00:00:45.740 --> 00:00:49.476
+A taxonomy is a set of terms that you attach to content.
+
+00:00:49.476 --> 00:00:54.297
+A post can have one category, chosen from the Categories taxonomy, and any
+
+00:00:54.297 --> 00:00:57.370
+number of tags, taken from the Tags taxonomy.
+
+00:00:57.370 --> 00:00:59.780
+Both appear as badges on the post.
+
+00:01:00.530 --> 00:01:04.492
+You add a category, write a post, see where its tags are kept,
+
+00:01:04.492 --> 00:01:06.764
+and add an item to the Main Menu.
+
+00:01:06.764 --> 00:01:09.327
+Along the way, you meet the permalink:
+
+00:01:09.327 --> 00:01:12.240
+the address that each page gets on the site.
+
+00:01:16.444 --> 00:01:19.959
+This is the home page of the site, and it is the Blog.
+
+00:01:19.959 --> 00:01:22.830
+The banner shows its title and description.
+
+00:01:22.830 --> 00:01:27.049
+Below come the posts, each with a subtitle, an author, a date, and
+
+00:01:27.049 --> 00:01:29.334
+badges for its category and tags.
+
+00:01:29.797 --> 00:01:33.882
+At the top right, the Main Menu holds two items, Home and About.
+
+00:01:33.882 --> 00:01:36.567
+The name of the site stands on the left.
+
+00:01:37.026 --> 00:01:41.502
+Opening a post shows its banner image, title, subtitle, and body.
+
+00:01:41.502 --> 00:01:45.726
+Under the text, the category and each tag link to a page that
+
+00:01:45.726 --> 00:01:47.806
+lists the posts they share.
+
+00:01:48.259 --> 00:01:52.328
+In the admin, the Blog item of the menu opens the Blog and
+
+00:01:52.328 --> 00:01:54.108
+the list of its posts.
+
+00:01:54.108 --> 00:01:59.639
+Create Blog Post adds a post to this blog, and Edit Blog changes the blog itself.
+
+00:02:00.099 --> 00:02:02.807
+Edit Blog shows how the blog is addressed.
+
+00:02:02.807 --> 00:02:06.754
+Its Permalink is blog, and a note says that this content item is
+
+00:02:06.754 --> 00:02:10.589
+the current homepage, which is why the site opens on the blog.
+
+00:02:11.043 --> 00:02:14.448
+The footer at the bottom of every page is a widget.
+
+00:02:14.448 --> 00:02:18.091
+In the admin, Design, Widgets opens Widgets and Layers:
+
+00:02:18.091 --> 00:02:22.273
+the Footer zone holds it, and its badge names the layer, Always.
+
+00:02:26.477 --> 00:02:29.361
+Categories are the terms of a taxonomy.
+
+00:02:29.361 --> 00:02:34.232
+In the admin menu, Content, Taxonomy lists the taxonomies of the site.
+
+00:02:34.232 --> 00:02:36.027
+Let's edit Categories.
+
+00:02:36.490 --> 00:02:39.363
+The editor lists the terms of the taxonomy:
+
+00:02:39.363 --> 00:02:40.477
+here, Travel.
+
+00:02:40.477 --> 00:02:44.816
+Add Category creates a category at the top level, and the Add button
+
+00:02:44.816 --> 00:02:47.630
+of a term creates a subcategory inside it.
+
+00:02:48.086 --> 00:02:49.576
+Let's add Photography.
+
+00:02:49.576 --> 00:02:51.916
+The title is the name of the category.
+
+00:02:51.916 --> 00:02:56.436
+The Permalink is the end of the address of its page, so let's type photography.
+
+00:02:56.891 --> 00:02:58.899
+The Icon field is required.
+
+00:02:58.899 --> 00:03:02.853
+It opens a picker, and the icon appears next to the name of
+
+00:03:02.853 --> 00:03:04.740
+the category on the site.
+
+00:03:04.740 --> 00:03:09.181
+On this page, Publish adds the category to a draft of the taxonomy.
+
+00:03:09.643 --> 00:03:15.149
+A draft is not visible to visitors, so the taxonomy needs a Publish of its own.
+
+00:03:15.149 --> 00:03:18.453
+After that, the category is part of the site.
+
+00:03:22.651 --> 00:03:26.346
+From the Blog, Create Blog Post opens the editor of a post.
+
+00:03:26.346 --> 00:03:29.586
+Let's type the title and leave the Permalink empty:
+
+00:03:29.586 --> 00:03:34.191
+the address is built from the blog and the title, unless you type your own.
+
+00:03:34.654 --> 00:03:39.778
+The body is written in Markdown, which is plain text with simple marks for formatting.
+
+00:03:39.778 --> 00:03:41.394
+Let's write a sentence.
+
+00:03:41.855 --> 00:03:44.371
+The Subtitle shows under the title.
+
+00:03:44.371 --> 00:03:48.177
+For the Banner Image, Add media opens the media library:
+
+00:03:48.177 --> 00:03:50.325
+select an image and click OK.
+
+00:03:51.654 --> 00:03:53.504
+Tags searches as you type.
+
+00:03:53.504 --> 00:03:56.801
+Type to search the tags that exist, and select one.
+
+00:03:56.801 --> 00:03:58.594
+Let's select Exploration.
+
+00:03:59.069 --> 00:04:03.479
+When no tag matches, the field offers Press enter to create a tag.
+
+00:04:03.479 --> 00:04:05.929
+Let's type Lisbon and press Enter:
+
+00:04:05.929 --> 00:04:10.399
+the tag is created in the Tags taxonomy and selected for this post.
+
+00:04:10.873 --> 00:04:15.470
+Category lists the categories of the taxonomy, and a post can have one.
+
+00:04:15.470 --> 00:04:18.933
+Only a category without subcategories can be chosen.
+
+00:04:18.933 --> 00:04:20.783
+Let's choose Photography.
+
+00:04:21.248 --> 00:04:25.158
+Publish saves the post and returns to the Blog, with a message that
+
+00:04:25.158 --> 00:04:26.658
+the post is published.
+
+00:04:26.658 --> 00:04:28.854
+The list shows the post at the top.
+
+00:04:28.854 --> 00:04:31.638
+Save Draft would keep it hidden from visitors.
+
+00:04:32.097 --> 00:04:36.096
+On the site, the post comes first on the home page, with badges
+
+00:04:36.096 --> 00:04:38.762
+for Photography, Exploration and Lisbon.
+
+00:04:38.762 --> 00:04:42.297
+Opening it shows the banner, the subtitle and the text.
+
+00:04:46.496 --> 00:04:48.699
+Each tag links to a page of its own.
+
+00:04:48.699 --> 00:04:52.686
+Lisbon lists the posts that have this tag, which is the post we wrote.
+
+00:04:53.145 --> 00:04:56.082
+Tags are the terms of the Tags taxonomy.
+
+00:04:56.082 --> 00:05:01.189
+In the admin, Content, Taxonomy lists it, and its editor holds Lisbon next
+
+00:05:01.189 --> 00:05:02.721
+to the other tags.
+
+00:05:02.721 --> 00:05:06.105
+A tag created from a post is published at once.
+
+00:05:06.568 --> 00:05:08.826
+Add Tag creates a tag here as well.
+
+00:05:08.826 --> 00:05:12.461
+The tag field of a post creates tags only for users who have
+
+00:05:12.461 --> 00:05:14.608
+the Manage taxonomies permission.
+
+00:05:18.815 --> 00:05:22.723
+Main Menu in the admin menu opens the editor of the menu.
+
+00:05:22.723 --> 00:05:25.080
+Its Alias field holds main-menu:
+
+00:05:25.080 --> 00:05:29.545
+The Blog Theme finds the menu by this alias, so keep it unchanged.
+
+00:05:29.999 --> 00:05:34.123
+Below, the editor lists the items, Home and About.
+
+00:05:34.123 --> 00:05:38.689
+Add Menu Item opens a dialog named Available Menu Items.
+
+00:05:39.151 --> 00:05:40.937
+It offers three types.
+
+00:05:40.937 --> 00:05:45.339
+A Link Menu Item links to a custom address, a Content Menu Item
+
+00:05:45.339 --> 00:05:49.549
+links to a content item, and an Html Menu Item uses HTML for
+
+00:05:49.549 --> 00:05:51.271
+the text of the link.
+
+00:05:51.727 --> 00:05:53.732
+Let's add a Link Menu Item.
+
+00:05:53.732 --> 00:05:58.047
+The Name is the text visitors see, and the Url is where it leads.
+
+00:05:58.047 --> 00:06:01.207
+Photography leads to the page of the category.
+
+00:06:01.664 --> 00:06:05.748
+Publish adds the item to a draft of the menu, and the editor
+
+00:06:05.748 --> 00:06:07.976
+lists it after Home and About.
+
+00:06:07.976 --> 00:06:13.544
+As with a taxonomy, visitors see the change only after the menu itself is published.
+
+00:06:14.003 --> 00:06:15.590
+Let's publish the menu.
+
+00:06:15.590 --> 00:06:19.476
+Dragging an item changes its order, and the Add button of an item
+
+00:06:19.476 --> 00:06:23.143
+adds an item inside it, which the theme shows as a drop-down.
+
+00:06:23.615 --> 00:06:26.800
+On the site, the menu shows Photography after About.
+
+00:06:26.800 --> 00:06:31.195
+Clicking it opens the page of the category, which lists the post we wrote.
+
+00:06:33.195 --> 00:06:35.015
+A blog needs a few parts:
+
+00:06:35.015 --> 00:06:39.302
+a Blog with its posts, categories and tags to organize them, a Main
+
+00:06:39.302 --> 00:06:42.708
+Menu to move around, and a permalink for every page.
+
+00:06:42.708 --> 00:06:44.235
+Thanks for watching.
+
