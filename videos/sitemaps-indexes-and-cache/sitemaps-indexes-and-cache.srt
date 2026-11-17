@@ -1,0 +1,240 @@
+1
+00:00:01,000 --> 00:00:03,912
+A large site often needs more than one sitemap.
+
+2
+00:00:03,912 --> 00:00:07,922
+In this video, you combine sitemaps in a sitemap index, look at the
+
+3
+00:00:07,922 --> 00:00:13,580
+Sitemaps Cache where Orchard Core stores them, and enable the cleanup that keeps that cache tidy.
+
+4
+00:00:18,180 --> 00:00:22,175
+Search engines limit how large one sitemap can be, so a big site
+
+5
+00:00:22,175 --> 00:00:24,801
+spreads its pages over several sitemaps.
+
+6
+00:00:24,801 --> 00:00:28,968
+You can split them by content type, or with the Limit Items option,
+
+7
+00:00:28,968 --> 00:00:30,680
+which has Skip and Take.
+
+8
+00:00:31,430 --> 00:00:34,489
+A sitemap index is a sitemap of sitemaps.
+
+9
+00:00:34,489 --> 00:00:39,435
+It lists the address of each sitemap it contains, with a last modified
+
+10
+00:00:39,435 --> 00:00:42,950
+date, so a search engine needs only one address.
+
+11
+00:00:47,250 --> 00:00:51,360
+Two sitemaps already exist on this site, Posts and Articles.
+
+12
+00:00:51,360 --> 00:00:54,785
+Creating sitemaps is covered in a separate video.
+
+13
+00:00:54,785 --> 00:00:57,400
+Let's combine these two in an index.
+
+14
+00:00:57,915 --> 00:01:04,341
+Under Tools, Search Engine Optimization, Sitemap Indexes lists your indexes, and the list is empty.
+
+15
+00:01:04,341 --> 00:01:06,605
+Let's choose Add Sitemap Index.
+
+16
+00:01:07,066 --> 00:01:08,800
+Name the index Main.
+
+17
+00:01:08,800 --> 00:01:13,469
+The Permalink is its address, it is required, and it must end in
+
+18
+00:01:13,469 --> 00:01:15,737
+.xml, so we use sitemap.xml.
+
+19
+00:01:15,737 --> 00:01:20,006
+The text before it is the Base url from Settings, General.
+
+20
+00:01:20,458 --> 00:01:23,402
+Check Enabled, so the index is served.
+
+21
+00:01:23,402 --> 00:01:27,215
+Under Contained Sitemaps, check Articles and Posts.
+
+22
+00:01:27,215 --> 00:01:30,828
+An index contains sitemaps, never other indexes.
+
+23
+00:01:31,284 --> 00:01:33,055
+Save creates the index.
+
+24
+00:01:33,055 --> 00:01:37,755
+The list shows Main as Enabled, with the buttons View, Edit and Delete.
+
+25
+00:01:37,755 --> 00:01:42,394
+Edit lets you change its name, permalink and contained sitemaps later.
+
+26
+00:01:46,694 --> 00:01:49,153
+View opens the index in another tab.
+
+27
+00:01:49,153 --> 00:01:53,777
+For each contained sitemap, it gives an address and a last modified date,
+
+28
+00:01:53,777 --> 00:01:56,704
+and a search engine follows those addresses.
+
+29
+00:01:57,157 --> 00:01:59,923
+Each address leads to one sitemap.
+
+30
+00:01:59,923 --> 00:02:07,667
+Posts lists each published blog post, with its address, last modified date, change frequency and priority.
+
+31
+00:02:08,140 --> 00:02:14,528
+With the SEO feature enabled, Settings, Search, Search Engine Optimization, Robots has a
+
+32
+00:02:14,528 --> 00:02:17,043
+checkbox, Include all sitemaps.
+
+33
+00:02:17,043 --> 00:02:19,761
+Keep it checked and save the page.
+
+34
+00:02:19,761 --> 00:02:25,130
+With a Base url set, your sitemaps are then added to the robots.txt file.
+
+35
+00:02:25,677 --> 00:02:30,991
+The robots.txt file names an enabled index instead of each sitemap inside it,
+
+36
+00:02:30,991 --> 00:02:35,537
+so crawlers learn about every sitemap in the index from one line.
+
+37
+00:02:39,737 --> 00:02:43,949
+Building a sitemap takes work, so Orchard Core builds it the first time
+
+38
+00:02:43,949 --> 00:02:46,738
+someone requests it, and stores it as a file.
+
+39
+00:02:46,738 --> 00:02:50,347
+The file name is the sitemap name followed by an identifier.
+
+40
+00:02:51,097 --> 00:02:55,974
+Saving a sitemap, or publishing content that it lists, changes its identifier.
+
+41
+00:02:55,974 --> 00:03:00,329
+The next request builds it again under a different file name, and the
+
+42
+00:03:00,329 --> 00:03:02,477
+old file stays on disk, unused.
+
+43
+00:03:06,777 --> 00:03:13,075
+Under Tools, Search Engine Optimization, Sitemaps Cache lists every cached file by its file name.
+
+44
+00:03:13,075 --> 00:03:17,477
+Here are the index, the Articles sitemap, and two files for Posts.
+
+45
+00:03:17,953 --> 00:03:22,580
+Publishing a blog post changes the identifier of the Posts sitemap, so one
+
+46
+00:03:22,580 --> 00:03:24,952
+of its two files is no longer used.
+
+47
+00:03:24,952 --> 00:03:28,133
+Only a purge, or the cleanup feature, deletes it.
+
+48
+00:03:28,689 --> 00:03:31,889
+Purge on a row deletes that file, after you confirm.
+
+49
+00:03:31,889 --> 00:03:34,979
+Let's purge the Posts file that is no longer used.
+
+50
+00:03:35,445 --> 00:03:39,121
+Purge All deletes every cached file, after you confirm.
+
+51
+00:03:39,121 --> 00:03:40,447
+Nothing is lost:
+
+52
+00:03:40,447 --> 00:03:44,305
+each sitemap is built again the next time it is requested.
+
+53
+00:03:48,605 --> 00:03:52,902
+Instead of purging by hand, enable the Sitemaps Cleanup feature.
+
+54
+00:03:52,902 --> 00:03:58,305
+Under Tools, Features, search for sitemaps, and choose Enable on Sitemaps Cleanup.
+
+55
+00:03:58,781 --> 00:04:05,945
+With the Background Tasks feature enabled, Tools, Background Tasks lists a task named Sitemap Cache Cleaner.
+
+56
+00:04:05,945 --> 00:04:10,721
+By default it runs every five minutes, and deletes cache files that no
+
+57
+00:04:10,721 --> 00:04:12,481
+sitemap or index uses.
+
+58
+00:04:14,481 --> 00:04:18,800
+A sitemap index gives search engines one address for all your sitemaps, and
+
+59
+00:04:18,800 --> 00:04:23,705
+the Sitemaps Cache holds their files until you purge them or the cleanup removes them.
+
+60
+00:04:23,705 --> 00:04:25,091
+Thanks for watching.
+
