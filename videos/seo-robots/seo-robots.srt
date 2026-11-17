@@ -1,0 +1,212 @@
+1
+00:00:01,000 --> 00:00:06,647
+A robots.txt file tells search engine robots which parts of your site they may visit.
+
+2
+00:00:06,647 --> 00:00:09,688
+Orchard Core builds the file from settings.
+
+3
+00:00:09,688 --> 00:00:14,466
+In this video, you'll enable the SEO feature, see the default file, and
+
+4
+00:00:14,466 --> 00:00:17,010
+change it from the Robots settings.
+
+5
+00:00:21,610 --> 00:00:27,123
+Search engines send programs, called web robots or crawlers, to visit your pages.
+
+6
+00:00:27,123 --> 00:00:32,065
+A robots.txt file at the root of your site gives those robots directives
+
+7
+00:00:32,065 --> 00:00:35,360
+about which parts of the site they may access.
+
+8
+00:00:36,110 --> 00:00:38,511
+Orchard Core can generate this file.
+
+9
+00:00:38,511 --> 00:00:43,543
+The SEO feature provides the Robots settings, which decide what the file contains,
+
+10
+00:00:43,543 --> 00:00:45,830
+so you do not edit a file by hand.
+
+11
+00:00:46,580 --> 00:00:49,035
+The Robots settings have three parts:
+
+12
+00:00:49,035 --> 00:00:53,088
+a rule that addresses all robots, a rule that asks robots to stay
+
+13
+00:00:53,088 --> 00:00:56,970
+out of the admin pages, and a text area for rules of your own.
+
+14
+00:01:01,267 --> 00:01:04,618
+The Robots settings belong to the SEO feature.
+
+15
+00:01:04,618 --> 00:01:08,807
+Let's open Tools, Features, and type SEO in the search box.
+
+16
+00:01:09,281 --> 00:01:12,009
+SEO is listed under Content Management.
+
+17
+00:01:12,009 --> 00:01:17,039
+Let's select Enable, and a message confirms that the SEO feature was enabled.
+
+18
+00:01:17,039 --> 00:01:23,341
+The same feature also provides SEO meta features for content items, which a separate video covers.
+
+19
+00:01:27,602 --> 00:01:33,172
+With the feature enabled, the site serves a robots.txt file at its root.
+
+20
+00:01:33,172 --> 00:01:36,242
+Let's open robots.txt in the browser.
+
+21
+00:01:36,742 --> 00:01:38,622
+The file holds two lines.
+
+22
+00:01:38,622 --> 00:01:44,384
+The first addresses every robot, and the second asks robots not to visit the admin pages.
+
+23
+00:01:44,384 --> 00:01:47,902
+These are the default values of the Robots settings.
+
+24
+00:01:52,139 --> 00:01:56,885
+Let's open Settings, Search, Search Engine Optimization, and then Robots.
+
+25
+00:01:56,885 --> 00:01:59,889
+The page has two checkboxes and a text area.
+
+26
+00:02:00,359 --> 00:02:04,468
+The first checkbox, Add a rule to allow all web robots, adds the
+
+27
+00:02:04,468 --> 00:02:06,170
+line shown in its hint.
+
+28
+00:02:06,170 --> 00:02:07,989
+It is checked by default.
+
+29
+00:02:08,449 --> 00:02:12,353
+The second checkbox, Add a rule to disallow web robots to the admin
+
+30
+00:02:12,353 --> 00:02:15,562
+routes, adds the line in its hint for your admin path.
+
+31
+00:02:15,562 --> 00:02:19,252
+It is checked by default too, and a cleared box leaves its line
+
+32
+00:02:19,252 --> 00:02:20,429
+out of the file.
+
+33
+00:02:21,009 --> 00:02:25,494
+Additional rules is a text area for any other lines you want in the file.
+
+34
+00:02:25,494 --> 00:02:30,319
+Let's type a rule that asks robots to skip a section of the site called drafts.
+
+35
+00:02:30,816 --> 00:02:32,276
+Let's select Save.
+
+36
+00:02:32,276 --> 00:02:36,836
+The message, Site settings updated successfully, confirms the change.
+
+37
+00:02:37,297 --> 00:02:39,499
+Let's open robots.txt again.
+
+38
+00:02:39,499 --> 00:02:42,866
+Your rule appears after the two default lines.
+
+39
+00:02:42,866 --> 00:02:46,947
+The file is public, so anyone can read the rules you add.
+
+40
+00:02:51,147 --> 00:02:55,739
+When the Sitemaps feature is enabled too, the Robots page also shows a
+
+41
+00:02:55,739 --> 00:02:58,276
+checkbox named Include all sitemaps.
+
+42
+00:02:58,276 --> 00:03:01,177
+A separate video covers creating sitemaps.
+
+43
+00:03:01,927 --> 00:03:06,711
+After you save, and while Include all sitemaps is checked, Sitemap lines list
+
+44
+00:03:06,711 --> 00:03:11,438
+your enabled sitemap indexes and any enabled sitemap that is not inside one.
+
+45
+00:03:11,438 --> 00:03:15,531
+The lines are built from the Base url in the General settings, so
+
+46
+00:03:15,531 --> 00:03:16,857
+fill it in first.
+
+47
+00:03:17,607 --> 00:03:21,909
+If the static files of your site already include a robots.txt file, the
+
+48
+00:03:21,909 --> 00:03:25,095
+site serves that file instead of the generated one.
+
+49
+00:03:25,095 --> 00:03:29,230
+The Robots page can then show a warning that the settings below have
+
+50
+00:03:29,230 --> 00:03:31,577
+no effect until the file is removed.
+
+51
+00:03:33,577 --> 00:03:37,458
+The Robots settings let you decide what search engines are asked to crawl,
+
+52
+00:03:37,458 --> 00:03:38,865
+without editing a file.
+
+53
+00:03:38,865 --> 00:03:40,127
+Thanks for watching.
+
