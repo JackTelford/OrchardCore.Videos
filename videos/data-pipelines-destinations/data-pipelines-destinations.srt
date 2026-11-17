@@ -1,0 +1,352 @@
+1
+00:00:01,000 --> 00:00:04,918
+A pipeline that creates a file has done half of its job.
+
+2
+00:00:04,918 --> 00:00:07,192
+The file has to reach someone.
+
+3
+00:00:07,192 --> 00:00:11,047
+In this video, you add four destinations to a pipeline:
+
+4
+00:00:11,047 --> 00:00:15,280
+a download link, an email, an FTP server, and an SFTP server.
+
+5
+00:00:19,880 --> 00:00:22,905
+A destination is the last step of a pipeline.
+
+6
+00:00:22,905 --> 00:00:27,354
+The destinations in this video receive the files that a Create a file
+
+7
+00:00:27,354 --> 00:00:30,795
+step or a Zip files step produces, and deliver them.
+
+8
+00:00:30,795 --> 00:00:35,600
+One output can feed several destinations, and each one receives every file.
+
+9
+00:00:36,350 --> 00:00:42,552
+These are four; others include saving to the media library and sending to a web API.
+
+10
+00:00:42,552 --> 00:00:48,822
+Share a download link and Send by email need the Email feature and an email provider.
+
+11
+00:00:48,822 --> 00:00:53,990
+The upload steps need Data Pipelines - FTP and Data Pipelines - SFTP.
+
+12
+00:00:58,198 --> 00:01:01,719
+Let's open Tools, Features, and search for pipelines.
+
+13
+00:01:01,719 --> 00:01:05,836
+Data Pipelines is enabled, but the two upload features are not.
+
+14
+00:01:05,836 --> 00:01:09,118
+They add the steps that upload files to a server.
+
+15
+00:01:09,583 --> 00:01:13,712
+Let's select both features, open Bulk Actions, and choose Enable.
+
+16
+00:01:13,712 --> 00:01:17,143
+A message confirms that the two features are enabled.
+
+17
+00:01:21,389 --> 00:01:26,356
+Let's open Tools, Data Pipelines, Pipelines, and edit Blog posts export.
+
+18
+00:01:26,356 --> 00:01:30,814
+This pipeline reads the blog posts and writes them to a CSV file
+
+19
+00:01:30,814 --> 00:01:32,979
+with the Create a file step.
+
+20
+00:01:33,431 --> 00:01:35,927
+Let's click the output of Create a file.
+
+21
+00:01:35,927 --> 00:01:40,864
+The list that opens, Add a step after Files, offers the steps that can receive files.
+
+22
+00:01:40,864 --> 00:01:44,281
+Let's search for share, and choose Share a download link.
+
+23
+00:01:44,742 --> 00:01:49,987
+Recipients are users of the site, by user name or email, separated by commas.
+
+24
+00:01:49,987 --> 00:01:53,779
+Each one with an email address gets the link by email.
+
+25
+00:01:53,779 --> 00:01:56,812
+A name that matches no user stops the run.
+
+26
+00:01:57,290 --> 00:01:59,964
+Days the link works is 7 by default.
+
+27
+00:01:59,964 --> 00:02:05,185
+Maximum downloads counts the uses of all recipients together, and 0 means no
+
+28
+00:02:05,185 --> 00:02:07,094
+limit, so let's allow 3.
+
+29
+00:02:07,094 --> 00:02:10,150
+Email subject and Message shape the email.
+
+30
+00:02:14,434 --> 00:02:18,567
+Next, let's right-click Create a file and choose Add a step after it.
+
+31
+00:02:18,567 --> 00:02:21,874
+Then let's search for email, and choose Send by email.
+
+32
+00:02:22,336 --> 00:02:27,789
+To takes email addresses separated by commas or semicolons, and Cc and Bcc
+
+33
+00:02:27,789 --> 00:02:29,425
+work the same way.
+
+34
+00:02:29,425 --> 00:02:33,446
+Unlike the download link, these can be any addresses.
+
+35
+00:02:33,899 --> 00:02:36,568
+Subject and Body are the text of the email.
+
+36
+00:02:36,568 --> 00:02:40,109
+They can use the name of the pipeline, the date of the run,
+
+37
+00:02:40,109 --> 00:02:42,397
+and the names of the attached files.
+
+38
+00:02:42,397 --> 00:02:45,829
+The body is plain text unless you check The body is HTML.
+
+39
+00:02:46,302 --> 00:02:52,397
+Maximum size (MB) caps the attachments, because most mail servers refuse large emails.
+
+40
+00:02:52,397 --> 00:02:55,511
+The step fails when the files weigh more.
+
+41
+00:02:55,511 --> 00:02:59,552
+By default, it sends nothing when it receives no files.
+
+42
+00:03:03,852 --> 00:03:08,656
+Let's add another step after Create a file, and choose Upload to an FTP server.
+
+43
+00:03:08,656 --> 00:03:12,555
+It asks for the Host, the Port, the User name, and the Password
+
+44
+00:03:12,555 --> 00:03:14,532
+of the account on the server.
+
+45
+00:03:21,637 --> 00:03:26,070
+Encryption starts on a TLS option, which a real server should keep.
+
+46
+00:03:26,070 --> 00:03:30,929
+This test server has no certificate, so let's choose None (plain FTP), and
+
+47
+00:03:30,929 --> 00:03:35,727
+the editor warns that the credentials and the files travel in clear text.
+
+48
+00:03:36,669 --> 00:03:41,233
+Remote folder is created when it doesn't exist, and an empty one means
+
+49
+00:03:41,233 --> 00:03:43,395
+the folder the user starts in.
+
+50
+00:03:43,395 --> 00:03:48,499
+Replace existing files is checked, so a file with the same name is overwritten.
+
+51
+00:03:48,995 --> 00:03:52,937
+Passwords are encrypted, and the editor never shows them again.
+
+52
+00:03:52,937 --> 00:03:56,822
+The card on the canvas shows where the files go, and marks the
+
+53
+00:03:56,822 --> 00:03:58,765
+connection as not encrypted.
+
+54
+00:04:02,992 --> 00:04:06,872
+Let's add the last destination, Upload to an SFTP server.
+
+55
+00:04:06,872 --> 00:04:10,753
+It asks for the same Host, Port, User name, and Password.
+
+56
+00:04:10,753 --> 00:04:15,003
+A Private key can replace the password, or be used with it when
+
+57
+00:04:15,003 --> 00:04:16,912
+the server asks for both.
+
+58
+00:04:17,372 --> 00:04:21,953
+Host key fingerprint makes the step refuse a server that presents another key.
+
+59
+00:04:21,953 --> 00:04:25,442
+Without it, the host is not verified, and the log of a run
+
+60
+00:04:25,442 --> 00:04:27,678
+shows the fingerprint to copy here.
+
+61
+00:04:27,678 --> 00:04:30,622
+Let's paste the fingerprint of this test server.
+
+62
+00:04:31,091 --> 00:04:35,149
+Remote folder works as it does for FTP, and an empty one means
+
+63
+00:04:35,149 --> 00:04:37,178
+the home folder of the user.
+
+64
+00:04:37,178 --> 00:04:42,131
+With the upload set up, the canvas shows four destinations, each connected to
+
+65
+00:04:42,131 --> 00:04:43,861
+the Create a file step.
+
+66
+00:04:48,074 --> 00:04:52,467
+Changes are saved as a draft, and runs use only the published version.
+
+67
+00:04:52,467 --> 00:04:54,027
+Let's select Publish.
+
+68
+00:04:54,027 --> 00:04:59,171
+The plain FTP connection raises a warning, so the designer asks for a confirmation:
+
+69
+00:04:59,171 --> 00:05:00,384
+Publish anyway.
+
+70
+00:05:00,835 --> 00:05:04,889
+A published pipeline runs with the access of the user who published it,
+
+71
+00:05:04,889 --> 00:05:07,259
+so publishing vouches for what it does.
+
+72
+00:05:07,259 --> 00:05:11,155
+Let's select Run, and wait while the run executes in the background.
+
+73
+00:05:11,687 --> 00:05:14,207
+In the History tab, the run succeeded.
+
+74
+00:05:14,207 --> 00:05:17,013
+Deliveries lists what each destination did:
+
+75
+00:05:17,013 --> 00:05:21,481
+the link shared with its recipient, the email, and the two uploads, with
+
+76
+00:05:21,481 --> 00:05:23,257
+the address of each file.
+
+77
+00:05:23,708 --> 00:05:28,901
+Log keeps the messages of the run, including the warning about the FTP connection.
+
+78
+00:05:28,901 --> 00:05:33,503
+Open the run shows the same deliveries under Delivered, and the rows and
+
+79
+00:05:33,503 --> 00:05:35,038
+files of every step.
+
+80
+00:05:39,225 --> 00:05:41,382
+Let's open Tools, Shared Links.
+
+81
+00:05:41,382 --> 00:05:45,698
+The list shows the link as Active, with its kind, its recipient, the
+
+82
+00:05:45,698 --> 00:05:49,955
+pipeline that shared it, and how many of its three uses it has had.
+
+83
+00:05:50,432 --> 00:05:53,022
+The link itself is only in the email:
+
+84
+00:05:53,022 --> 00:05:54,889
+the admin never shows it.
+
+85
+00:05:54,889 --> 00:06:00,732
+In Actions, Revoke the link stops it from working before it expires, and Delete removes it.
+
+86
+00:06:02,732 --> 00:06:07,468
+Add a destination after Create a file, and a pipeline delivers its files
+
+87
+00:06:07,468 --> 00:06:11,353
+as a secure link, an email, or an upload to a file server.
+
+88
+00:06:11,353 --> 00:06:12,932
+Thanks for watching.
+
