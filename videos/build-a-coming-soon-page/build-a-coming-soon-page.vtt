@@ -1,0 +1,173 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.315
+A site under construction needs a page for the visitors who arrive early.
+
+00:00:05.315 --> 00:00:09.411
+Let's set up a Coming Soon page, change its message, see how sign-ups
+
+00:00:09.411 --> 00:00:12.470
+work, and learn how to replace the page at launch.
+
+00:00:17.070 --> 00:00:19.660
+A site that is not ready has an address.
+
+00:00:19.660 --> 00:00:23.771
+A visitor who arrives early finds nothing useful, and has no way to
+
+00:00:23.771 --> 00:00:26.980
+leave an email address to hear when the site opens.
+
+00:00:27.730 --> 00:00:31.102
+The Coming Soon recipe starts the site with one page:
+
+00:00:31.102 --> 00:00:34.817
+a title, a message with a launch date, a field for an email
+
+00:00:34.817 --> 00:00:37.160
+address, and links to social sites.
+
+00:00:37.160 --> 00:00:39.560
+The page uses The Coming Soon Theme.
+
+00:00:43.860 --> 00:00:47.278
+The Setup screen asks for the name of the site, and for a
+
+00:00:47.278 --> 00:00:50.045
+recipe, which is a ready-made starting point.
+
+00:00:50.045 --> 00:00:54.060
+Let's type a name, then open the Recipe list and choose Coming Soon.
+
+00:00:54.537 --> 00:00:58.786
+This recipe makes The Coming Soon Theme the theme of the site, and
+
+00:00:58.786 --> 00:01:01.206
+the Coming Soon page its home page.
+
+00:01:01.206 --> 00:01:04.807
+After the remaining questions, you select Finish Setup.
+
+00:01:09.107 --> 00:01:12.900
+After setup, the home page of the site is the Coming Soon page.
+
+00:01:12.900 --> 00:01:16.528
+It shows a title, a message with a target launch date in the
+
+00:01:16.528 --> 00:01:19.717
+month after setup, and a field for an email address.
+
+00:01:20.196 --> 00:01:25.600
+The button carries the text Notify Me!, which the theme draws in capital letters.
+
+00:01:25.600 --> 00:01:29.700
+On a wide screen, social icons sit at the side, and each one
+
+00:01:29.700 --> 00:01:31.439
+links to another site.
+
+00:01:31.439 --> 00:01:36.346
+Below the form, a notice says that ReCaptcha settings are not configured.
+
+00:01:40.646 --> 00:01:44.086
+To change the page, open Content, Content Items.
+
+00:01:44.086 --> 00:01:48.036
+The Coming Soon page is listed there, and Edit opens it.
+
+00:01:48.498 --> 00:01:50.949
+The editor lists the parts of the page:
+
+00:01:50.949 --> 00:01:55.252
+Title is the heading, and under Permalink a notice says that this content
+
+00:01:55.252 --> 00:01:57.158
+item is the current homepage.
+
+00:01:57.158 --> 00:02:01.679
+The form fields below include Action, the address that receives a sign-up, so
+
+00:02:01.679 --> 00:02:03.258
+leave them as they are.
+
+00:02:03.721 --> 00:02:09.554
+Under Flow, the Register widget holds the message, the Placeholder field and the Button field.
+
+00:02:09.554 --> 00:02:14.571
+Let's write our own message and button label, and leave InputFieldName as it is.
+
+00:02:15.035 --> 00:02:18.235
+Social Icons lists the icons shown on the page.
+
+00:02:18.235 --> 00:02:21.556
+Each one has an Icon Class and a Social Site Url.
+
+00:02:21.556 --> 00:02:24.515
+Let's point the first icon to our own page.
+
+00:02:24.969 --> 00:02:26.765
+Publish applies the changes.
+
+00:02:26.765 --> 00:02:30.779
+The home page of the site then shows our message and our button label.
+
+00:02:34.979 --> 00:02:39.189
+When a visitor selects the button, the form sends the email address to
+
+00:02:39.189 --> 00:02:43.399
+a workflow, a series of steps that Orchard Core runs for each sign-up.
+
+00:02:44.149 --> 00:02:49.094
+The workflow checks that an address was entered, runs the reCaptcha check, creates
+
+00:02:49.094 --> 00:02:53.757
+a user with that address, sends a confirmation email, and returns the visitor
+
+00:02:53.757 --> 00:02:55.049
+to the home page.
+
+00:02:56.749 --> 00:03:03.088
+Under Settings, Security, reCaptcha, enter the Site Key and the Secret Key that Google gives you.
+
+00:03:03.088 --> 00:03:08.319
+Once both are saved, the page shows the reCaptcha check in place of the notice.
+
+00:03:09.919 --> 00:03:13.467
+The confirmation email needs an email provider.
+
+00:03:13.467 --> 00:03:19.559
+Enable one under Tools, Features, and set it up under Settings, Communication, Email.
+
+00:03:19.559 --> 00:03:23.909
+Each sign-up appears as a user under Access Control, Users.
+
+00:03:28.109 --> 00:03:32.576
+When the real site is ready, open the item that is to be your home page.
+
+00:03:32.576 --> 00:03:36.355
+Under its Permalink, check Set as homepage, then publish it.
+
+00:03:36.355 --> 00:03:40.821
+The item needs a permalink, and its content type must have Show homepage
+
+00:03:40.821 --> 00:03:43.569
+options checked in its Autoroute settings.
+
+00:03:45.269 --> 00:03:46.982
+Then open Design, Themes.
+
+00:03:46.982 --> 00:03:50.519
+The Coming Soon Theme is marked as the current Site theme.
+
+00:03:50.519 --> 00:03:53.889
+Select Make Current on the theme of your finished site.
+
+00:03:55.889 --> 00:04:00.093
+A Coming Soon page tells early visitors when to return and collects their
+
+00:04:00.093 --> 00:04:04.296
+email addresses, until a home page and a theme of your choice replace it.
+
+00:04:04.296 --> 00:04:05.679
+Thanks for watching.
+
