@@ -1,0 +1,251 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.244
+OpenTelemetry collects the traces, metrics and logs of an Orchard Core application, and
+
+00:00:06.244 --> 00:00:09.119
+tags them with the tenant that produced them.
+
+00:00:09.119 --> 00:00:13.574
+In this video, you enable it, read its telemetry in the Aspire dashboard,
+
+00:00:13.574 --> 00:00:15.660
+and configure what it collects.
+
+00:00:20.260 --> 00:00:29.070
+OpenTelemetry collects traces, metrics and logs from Orchard Core, ASP.NET Core, HttpClient and the .NET runtime.
+
+00:00:29.070 --> 00:00:34.771
+It exports them over OTLP to any compatible backend, such as the Aspire
+
+00:00:34.771 --> 00:00:37.880
+dashboard, Grafana or Azure Monitor.
+
+00:00:38.630 --> 00:00:43.944
+Spans, log records and HTTP server metrics carry the name of their tenant
+
+00:00:43.944 --> 00:00:47.105
+in the orchardcore.tenant.name attribute.
+
+00:00:47.105 --> 00:00:54.033
+Resource attributes, such as service.instance.id, identify each instance, so tenants and web farm
+
+00:00:54.033 --> 00:00:56.320
+instances can be told apart.
+
+00:00:57.070 --> 00:01:00.434
+Unlike a module feature, it isn't enabled per tenant.
+
+00:01:00.434 --> 00:01:04.824
+Its listeners are global to the process, a request is traced before its
+
+00:01:04.824 --> 00:01:09.214
+tenant is known, a rebuilt tenant would reset its metrics, and the host
+
+00:01:09.214 --> 00:01:11.210
+decides where telemetry goes.
+
+00:01:15.410 --> 00:01:22.218
+Reference the OrchardCore.OpenTelemetry package, and call AddOpenTelemetry on the Orchard Core builder.
+
+00:01:22.218 --> 00:01:25.840
+Telemetry is collected even when nothing exports it.
+
+00:01:25.840 --> 00:01:30.150
+An optional callback adds other exporters and instrumentations.
+
+00:01:30.900 --> 00:01:37.639
+The OrchardCore.Cms.Web application exports telemetry only when an endpoint is configured, so it
+
+00:01:37.639 --> 00:01:41.669
+checks HasOtlpEndpoint before calling AddOpenTelemetry.
+
+00:01:41.669 --> 00:01:44.840
+Without an endpoint, nothing is collected.
+
+00:01:45.590 --> 00:01:49.939
+You set the endpoint of the OTLP receiver in the Otlp section of
+
+00:01:49.939 --> 00:01:59.010
+the OrchardCore OpenTelemetry configuration, or with the standard OTEL_EXPORTER_OTLP_ENDPOINT value, for example as an environment variable.
+
+00:02:03.210 --> 00:02:08.702
+For this video, the application sends its telemetry to the Aspire dashboard, with
+
+00:02:08.702 --> 00:02:11.164
+web-1 as its service instance ID.
+
+00:02:11.164 --> 00:02:12.932
+It serves two tenants:
+
+00:02:12.932 --> 00:02:16.720
+Default, and Marketing under the marketing URL prefix.
+
+00:02:18.376 --> 00:02:20.254
+Let's open the Default tenant.
+
+00:02:20.254 --> 00:02:23.488
+Its home page is served at the root of the site, and the
+
+00:02:23.488 --> 00:02:25.626
+request is traced like every other.
+
+00:02:26.108 --> 00:02:29.301
+The Marketing tenant answers under its own prefix.
+
+00:02:29.301 --> 00:02:34.034
+The same application serves both tenants, and each request is tagged with the
+
+00:02:34.034 --> 00:02:35.688
+tenant that handled it.
+
+00:02:39.899 --> 00:02:44.333
+In the dashboard, the traces list the requests of both tenants, and the
+
+00:02:44.333 --> 00:02:46.694
+work Orchard Core does around them.
+
+00:02:46.694 --> 00:02:51.129
+Their resource is the application, named by its service.name attribute.
+
+00:02:51.584 --> 00:02:57.590
+The spans carry the tenant name, so let's filter the traces on the orchardcore.tenant.name attribute.
+
+00:02:57.590 --> 00:03:01.800
+We choose the value Marketing, and apply the filter, to keep only the
+
+00:03:01.800 --> 00:03:04.494
+requests that the Marketing tenant served.
+
+00:03:04.949 --> 00:03:07.306
+Opening a request shows its spans.
+
+00:03:07.306 --> 00:03:13.199
+The span of the request itself holds the orchardcore.tenant.name attribute, which Orchard Core
+
+00:03:13.199 --> 00:03:15.969
+adds once the request has been processed.
+
+00:03:16.432 --> 00:03:18.806
+Orchard Core adds spans of its own.
+
+00:03:18.806 --> 00:03:22.801
+This trace shows the recipe that set up the tenant, with a span
+
+00:03:22.801 --> 00:03:25.290
+for the recipe and one for each step.
+
+00:03:25.290 --> 00:03:30.212
+Building and activating a tenant, and running a background task, get spans too.
+
+00:03:30.667 --> 00:03:35.111
+A Render shape span appears for a shape slower than the slow shape threshold.
+
+00:03:35.111 --> 00:03:38.644
+Here the threshold is zero, so every shape of the page has a
+
+00:03:38.644 --> 00:03:42.017
+span, with the template or shape method that rendered it.
+
+00:03:46.207 --> 00:03:51.431
+In the metrics, http.server.request.duration records how long requests take.
+
+00:03:51.431 --> 00:03:58.377
+It carries the orchardcore.tenant.name attribute, so the Default and Marketing tenants can be compared.
+
+00:03:58.849 --> 00:04:04.341
+The OrchardCore meter adds orchardcore.tenants, the number of tenants by state, and the
+
+00:04:04.341 --> 00:04:07.412
+durations of building and activating a tenant.
+
+00:04:07.412 --> 00:04:11.309
+The System.Runtime meter reports the health of the instance.
+
+00:04:15.609 --> 00:04:21.369
+The structured logs show the records written through ILogger, with their attributes and scopes.
+
+00:04:21.369 --> 00:04:27.301
+Records written while a tenant handles a request carry the orchardcore.tenant.name attribute, here
+
+00:04:27.301 --> 00:04:29.069
+with the value Marketing.
+
+00:04:29.538 --> 00:04:34.993
+The log levels of the application's Logging configuration apply to these records.
+
+00:04:34.993 --> 00:04:40.699
+Setting Enabled to false in the Logging options of OpenTelemetry stops the collection
+
+00:04:40.699 --> 00:04:44.336
+of logs only, and leaves traces and metrics running.
+
+00:04:44.336 --> 00:04:46.718
+A separate video covers logging.
+
+00:04:50.918 --> 00:04:55.296
+The options are read from the OrchardCore OpenTelemetry section.
+
+00:04:55.296 --> 00:05:00.486
+ServiceName and ServiceInstanceId identify the application and this instance.
+
+00:05:00.486 --> 00:05:06.301
+SamplingRatio keeps a fraction of the traces, SlowShapeThreshold sets when a shape gets
+
+00:05:06.301 --> 00:05:09.928
+a span, and IncludeTenantName tags the HTTP metrics.
+
+00:05:10.678 --> 00:05:16.090
+OpenTelemetry collects only the activity sources and meters it is told about.
+
+00:05:16.090 --> 00:05:22.153
+Add YesSql to the Tracing Sources and Metrics Meters settings to see database commands.
+
+00:05:22.153 --> 00:05:26.978
+A session running many commands reveals an N plus one query pattern.
+
+00:05:27.728 --> 00:05:32.896
+To find slow templates, add the OrchardCore.DisplayManagement source and meter.
+
+00:05:32.896 --> 00:05:37.395
+Every rendered shape then gets a span, nested like the shapes, and a
+
+00:05:37.395 --> 00:05:41.408
+histogram records the rendering duration of each shape type.
+
+00:05:42.158 --> 00:05:47.686
+For a hosted backend such as Grafana Cloud, the protocol is http/protobuf, and
+
+00:05:47.686 --> 00:05:50.319
+the headers carry the credentials.
+
+00:05:50.319 --> 00:05:53.938
+Setting Enabled to false turns all telemetry off.
+
+00:05:58.138 --> 00:06:03.964
+When the application already configures OpenTelemetry, for example with the service defaults of
+
+00:06:03.964 --> 00:06:10.077
+an Aspire solution, call AddOrchardCoreInstrumentation on the tracing, metrics and logging builders.
+
+00:06:10.077 --> 00:06:12.038
+Add it before the exporters.
+
+00:06:12.788 --> 00:06:19.879
+A module emits its own spans with the OrchardCoreTelemetry ActivitySource, from OrchardCore.Abstractions.
+
+00:06:19.879 --> 00:06:25.244
+RecordException marks a failed operation, and a span started in a tenant scope
+
+00:06:25.244 --> 00:06:27.288
+is tagged with its tenant.
+
+00:06:29.288 --> 00:06:34.168
+OpenTelemetry tags the traces, metrics and logs of an Orchard Core application with
+
+00:06:34.168 --> 00:06:37.513
+their tenant, and sends them to the backend you choose.
+
+00:06:37.513 --> 00:06:38.938
+Thanks for watching.
+
