@@ -1,0 +1,220 @@
+1
+00:00:01,000 --> 00:00:06,754
+Load balancers, container platforms, and uptime monitors ask whether a site is running.
+
+2
+00:00:06,754 --> 00:00:12,445
+The Health Checks module answers them with an endpoint in each tenant that enables it.
+
+3
+00:00:12,445 --> 00:00:17,209
+In this video, we'll enable it, add checks, read the responses, and see
+
+4
+00:00:17,209 --> 00:00:18,570
+who may call it.
+
+5
+00:00:23,170 --> 00:00:26,587
+Each of these hosts sends a probe request to the site.
+
+6
+00:00:26,587 --> 00:00:31,085
+ASP.NET Core has health checks to answer it, and the Health Checks module
+
+7
+00:00:31,085 --> 00:00:34,160
+exposes them through an endpoint of each tenant.
+
+8
+00:00:34,910 --> 00:00:39,960
+The module registers the endpoint and a response writer, but no check of its own.
+
+9
+00:00:39,960 --> 00:00:44,313
+With no check registered, the endpoint reports the tenant as healthy.
+
+10
+00:00:44,313 --> 00:00:47,680
+It has no administration pages and no site settings.
+
+11
+00:00:48,430 --> 00:00:52,190
+Only a tenant that enables the feature exposes the endpoint.
+
+12
+00:00:52,190 --> 00:00:55,894
+A probe uses the host and the URL prefix of that tenant, in
+
+13
+00:00:55,894 --> 00:00:59,540
+front of the route, as the three addresses on screen show.
+
+14
+00:01:03,811 --> 00:01:05,025
+Let's enable it.
+
+15
+00:01:05,025 --> 00:01:09,162
+Under Tools, Features, we search for Health Checks and select Enable.
+
+16
+00:01:09,162 --> 00:01:12,141
+A message confirms that the feature was enabled.
+
+17
+00:01:12,634 --> 00:01:15,272
+The endpoint answers at /health/live.
+
+18
+00:01:15,272 --> 00:01:16,498
+Let's open it.
+
+19
+00:01:16,498 --> 00:01:20,914
+The page shows Healthy, because no feature has registered a check.
+
+20
+00:01:25,114 --> 00:01:28,165
+Features of Orchard Core can contribute checks.
+
+21
+00:01:28,165 --> 00:01:34,094
+Redis Health Check pings the Redis server, and SMS Health Check validates the Twilio credentials.
+
+22
+00:01:34,094 --> 00:01:38,814
+Each is registered only when its feature and Health Checks are both enabled.
+
+23
+00:01:39,564 --> 00:01:42,466
+A check of your own implements IHealthCheck.
+
+24
+00:01:42,466 --> 00:01:49,024
+Its CheckHealthAsync method returns a Healthy, Degraded, or Unhealthy result, with an optional description.
+
+25
+00:01:49,774 --> 00:01:54,158
+A startup class registers it with AddHealthChecks and AddCheck.
+
+26
+00:01:54,158 --> 00:01:58,859
+RequireFeatures loads that class only when Health Checks is enabled.
+
+27
+00:01:58,859 --> 00:02:05,784
+Alternatively, make Health Checks a dependency of your feature, so enabling yours enables the endpoint.
+
+28
+00:02:09,984 --> 00:02:12,718
+By default the response is compact:
+
+29
+00:02:12,718 --> 00:02:15,452
+the aggregate status as plain text.
+
+30
+00:02:15,452 --> 00:02:21,520
+Healthy and Degraded return 200 OK, and Unhealthy returns 503 Service Unavailable, so
+
+31
+00:02:21,520 --> 00:02:24,454
+a monitor can rely on the status code.
+
+32
+00:02:25,204 --> 00:02:29,424
+With ShowDetails set to true, the response is JSON:
+
+33
+00:02:29,424 --> 00:02:35,717
+the status, the duration, and the name, status, and description of every check.
+
+34
+00:02:35,717 --> 00:02:41,714
+All three statuses return 200 OK, so the monitor reads the Status property.
+
+35
+00:02:42,464 --> 00:02:46,481
+The Url setting is the route, and ShowDetails picks the response.
+
+36
+00:02:46,481 --> 00:02:51,629
+Set them in the Health Checks configuration section or in environment variables, with
+
+37
+00:02:51,629 --> 00:02:54,571
+a tenant name in the key to target one tenant.
+
+38
+00:02:54,571 --> 00:02:58,304
+Reload the tenant or restart the application after a change.
+
+39
+00:03:02,553 --> 00:03:08,097
+To see a check report a problem, let's enable the Redis feature without configuring a server.
+
+40
+00:03:08,097 --> 00:03:11,793
+Its Redis Health Check is registered, and it cannot connect.
+
+41
+00:03:12,246 --> 00:03:15,951
+Opening /health/live again shows Unhealthy.
+
+42
+00:03:15,951 --> 00:03:22,756
+The status code is 503 Service Unavailable, which is how a monitor sees the failure.
+
+43
+00:03:24,419 --> 00:03:29,119
+With ShowDetails set to true, the same address returns JSON.
+
+44
+00:03:29,119 --> 00:03:35,955
+The Status is Unhealthy, and the Redis Health Check entry describes the failed connection.
+
+45
+00:03:35,955 --> 00:03:39,159
+The HTTP status is 200 OK all the same.
+
+46
+00:03:43,359 --> 00:03:50,210
+The endpoint does not require authentication, and detailed descriptions can reveal the names of your dependencies.
+
+47
+00:03:50,210 --> 00:03:54,891
+Restrict the endpoint to trusted monitors with a network policy or a reverse
+
+48
+00:03:54,891 --> 00:03:57,859
+proxy, and enable ShowDetails only after that.
+
+49
+00:03:58,609 --> 00:04:03,723
+One endpoint runs every registered check, and the module does not use tags
+
+50
+00:04:03,723 --> 00:04:06,407
+to separate liveness from readiness.
+
+51
+00:04:06,407 --> 00:04:09,987
+For that, add filtered endpoints in your own code.
+
+52
+00:04:09,987 --> 00:04:13,949
+A Rate Limits endpoint policy can limit repeated probes.
+
+53
+00:04:15,949 --> 00:04:20,590
+The Health Checks module gives each tenant that enables it one endpoint that
+
+54
+00:04:20,590 --> 00:04:24,608
+runs every registered check, so your monitor can read the result.
+
+55
+00:04:24,608 --> 00:04:26,079
+Thanks for watching.
+
