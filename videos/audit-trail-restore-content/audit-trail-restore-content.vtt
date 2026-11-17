@@ -1,0 +1,212 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.417
+The Audit Trail keeps a copy of a content item each time it
+
+00:00:04.417 --> 00:00:06.940
+changes, for the content types you choose.
+
+00:00:06.940 --> 00:00:10.778
+In this video, you open an earlier version, compare it with the one
+
+00:00:10.778 --> 00:00:14.300
+before it, and restore an earlier version and a deleted item.
+
+00:00:18.900 --> 00:00:23.550
+The Audit Trail records an event each time a content item is created,
+
+00:00:23.550 --> 00:00:27.580
+saved, published, unpublished, removed, cloned or restored.
+
+00:00:27.580 --> 00:00:31.424
+Each event keeps a full copy of the item as it was, with
+
+00:00:31.424 --> 00:00:33.160
+the user and the time.
+
+00:00:33.910 --> 00:00:37.379
+From a copy, you can view the item as it was and compare
+
+00:00:37.379 --> 00:00:39.674
+it with the previous recorded copy.
+
+00:00:39.674 --> 00:00:43.647
+Where a Restore button appears, you can restore it as a draft, so
+
+00:00:43.647 --> 00:00:47.060
+the published page stays the same until you publish it.
+
+00:00:47.810 --> 00:00:51.359
+Only the content types you choose in the settings are recorded.
+
+00:00:51.359 --> 00:00:55.576
+Events are removed after the retention period, which is ten days by default,
+
+00:00:55.576 --> 00:00:57.788
+unless you disable the trimming task.
+
+00:00:57.788 --> 00:01:02.160
+Restore appears on Published and Removed events, except for the latest version.
+
+00:01:02.910 --> 00:01:06.350
+Opening the Audit Trail needs the View audit trail permission.
+
+00:01:06.350 --> 00:01:10.498
+Viewing a version needs permission to edit the item, and restoring a version
+
+00:01:10.498 --> 00:01:12.370
+needs permission to publish it.
+
+00:01:16.608 --> 00:01:22.293
+With the Audit Trail feature enabled, open Settings, Audit Trail, and select the Content tab.
+
+00:01:22.293 --> 00:01:27.462
+Under Allowed content types, you choose which content types the Audit Trail records.
+
+00:01:27.462 --> 00:01:31.368
+Until you choose at least one, no content events are recorded.
+
+00:01:31.843 --> 00:01:33.890
+Select Article, and click Save.
+
+00:01:33.890 --> 00:01:37.098
+Changes to articles are recorded from this point on.
+
+00:01:37.098 --> 00:01:39.643
+Changes made earlier are not in the log.
+
+00:01:43.855 --> 00:01:47.935
+In Content, Content Items, each item has an Actions menu.
+
+00:01:47.935 --> 00:01:53.505
+For the article Harvest Festival Cancelled, open Actions and choose Audit Trail.
+
+00:01:53.979 --> 00:01:57.629
+The list shows the events of this one item, newest first.
+
+00:01:57.629 --> 00:02:02.379
+Each line gives the event, its category, when it happened, who triggered it,
+
+00:02:02.379 --> 00:02:04.349
+and the version it concerns.
+
+00:02:08.599 --> 00:02:12.179
+Find the line of an earlier Published event, and click View.
+
+00:02:13.187 --> 00:02:18.240
+The article opens in a read-only editor, filled with the values it had in that version.
+
+00:02:18.240 --> 00:02:22.477
+The page title names the content type, the title and the version number.
+
+00:02:26.713 --> 00:02:30.582
+Back in the list, click Details on the newest Published line.
+
+00:02:30.582 --> 00:02:35.029
+The page shows who triggered the event and when, then the type, display
+
+00:02:35.029 --> 00:02:37.513
+text and version of the content item.
+
+00:02:37.965 --> 00:02:39.406
+Select the Diff tab.
+
+00:02:39.406 --> 00:02:44.284
+The left side holds the previous recorded copy, and the right side holds this one.
+
+00:02:44.284 --> 00:02:48.165
+Changed lines are shaded red on the left and green on the right.
+
+00:02:48.616 --> 00:02:51.848
+Choose Unified to read both copies in one column.
+
+00:02:51.848 --> 00:02:56.373
+Some lines, such as the modified time, differ in every version, so look
+
+00:02:56.373 --> 00:02:58.254
+for the fields you edited:
+
+00:02:58.254 --> 00:03:00.546
+here, the title and the subtitle.
+
+00:03:04.740 --> 00:03:08.022
+To undo the change, go back to the list and click Restore on
+
+00:03:08.022 --> 00:03:10.856
+the line of the earlier Published version you want.
+
+00:03:10.856 --> 00:03:13.790
+The line of the newest version has no Restore button.
+
+00:03:14.247 --> 00:03:19.405
+A dialog titled Restore to Version asks you to confirm the version number.
+
+00:03:19.405 --> 00:03:20.437
+Click Yes.
+
+00:03:20.890 --> 00:03:25.595
+The Audit Trail reports that the article has been restored, and a Restored
+
+00:03:25.595 --> 00:03:27.183
+event heads the list.
+
+00:03:27.183 --> 00:03:31.830
+The published page is unchanged, because the restored version is a draft.
+
+00:03:32.285 --> 00:03:37.016
+In Content Items, the article shows both a Published and a Draft status.
+
+00:03:37.016 --> 00:03:42.535
+Open Actions and choose Publish Draft to make the restored version the published one.
+
+00:03:46.722 --> 00:03:51.048
+Suppose the article Summer Parking Notice is deleted by mistake.
+
+00:03:51.048 --> 00:03:55.806
+In Content Items, open Actions, choose Delete, and click Ok to confirm.
+
+00:03:55.806 --> 00:03:58.462
+The article disappears from the list.
+
+00:03:58.966 --> 00:04:00.523
+Its history remains.
+
+00:04:00.523 --> 00:04:02.319
+Open Tools, Audit Trail:
+
+00:04:02.319 --> 00:04:06.870
+the deletion is recorded as a Removed event, and the event still holds
+
+00:04:06.870 --> 00:04:08.546
+a copy of the article.
+
+00:04:09.006 --> 00:04:11.287
+Click Restore on the Removed line.
+
+00:04:11.287 --> 00:04:14.024
+The dialog is titled Restore content item.
+
+00:04:14.024 --> 00:04:14.936
+Click Yes.
+
+00:04:15.390 --> 00:04:19.826
+The article returns to Content Items with the Draft status only, because a
+
+00:04:19.826 --> 00:04:24.206
+restore creates a draft and a deleted item has no published version left.
+
+00:04:24.206 --> 00:04:27.200
+Choose Publish Draft to put it back on the site.
+
+00:04:29.200 --> 00:04:31.340
+That's the Audit Trail for content:
+
+00:04:31.340 --> 00:04:35.723
+you can view and compare recorded versions, and restore a published version or
+
+00:04:35.723 --> 00:04:37.393
+a deleted item as a draft.
+
+00:04:37.393 --> 00:04:38.750
+Thanks for watching.
+
