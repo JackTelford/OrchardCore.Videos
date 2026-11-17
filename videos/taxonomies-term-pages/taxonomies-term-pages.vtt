@@ -1,0 +1,185 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.568
+A taxonomy sorts content into terms.
+
+00:00:03.568 --> 00:00:07.419
+A term page gives a term an address of its own, and lists
+
+00:00:07.419 --> 00:00:09.253
+the content that has it.
+
+00:00:09.253 --> 00:00:13.960
+In this video, we browse term pages and see what gives a term its page.
+
+00:00:18.560 --> 00:00:22.916
+Each term, such as a category of a blog, can have a page of its own.
+
+00:00:22.916 --> 00:00:27.390
+Visitors use these pages to browse your content by category or by tag.
+
+00:00:28.140 --> 00:00:32.567
+The address of a term page is the permalink of the taxonomy, followed
+
+00:00:32.567 --> 00:00:34.632
+by the permalink of the term.
+
+00:00:34.632 --> 00:00:39.590
+For the term Travel in the taxonomy Categories, it is categories, then travel.
+
+00:00:40.340 --> 00:00:45.149
+The page lists the content items that have the term selected in a taxonomy field.
+
+00:00:45.149 --> 00:00:48.797
+An item that has only a child term selected is not listed on
+
+00:00:48.797 --> 00:00:50.400
+the page of the parent.
+
+00:00:54.611 --> 00:00:56.806
+Here is the home page of a blog.
+
+00:00:56.806 --> 00:01:01.197
+Under each post, its category and its tags appear as badges, and every
+
+00:01:01.197 --> 00:01:03.681
+badge links to the page of that term.
+
+00:01:04.143 --> 00:01:06.353
+Let's select the Travel badge.
+
+00:01:06.353 --> 00:01:12.063
+The page that opens is the term page of Travel, at the address categories, then travel.
+
+00:01:12.526 --> 00:01:14.798
+The heading is the name of the term.
+
+00:01:14.798 --> 00:01:19.179
+Below it, the posts that have Travel selected appear newest first, each one
+
+00:01:19.179 --> 00:01:22.316
+as its summary, the way it appears on the home page.
+
+00:01:22.767 --> 00:01:24.316
+Tags work the same way.
+
+00:01:24.316 --> 00:01:28.001
+Selecting the Space badge of a post opens the term page of that
+
+00:01:28.001 --> 00:01:30.137
+tag, with the posts that carry it.
+
+00:01:30.603 --> 00:01:34.082
+A taxonomy has a page too, at its own permalink.
+
+00:01:34.082 --> 00:01:39.301
+For the Tags taxonomy, it lists the terms, and each term links to its page.
+
+00:01:39.301 --> 00:01:40.783
+Let's open Earth.
+
+00:01:41.237 --> 00:01:44.541
+The Earth page lists the three posts that have this tag.
+
+00:01:44.541 --> 00:01:48.271
+A post with several tags, such as the oldest one, appears on the
+
+00:01:48.271 --> 00:01:49.497
+page of each tag.
+
+00:01:53.723 --> 00:01:58.041
+A term has a page only when its taxonomy is set up to route it.
+
+00:01:58.041 --> 00:02:02.483
+In Content, Content Items, search for Categories and select Edit.
+
+00:02:02.943 --> 00:02:05.970
+The Permalink of the taxonomy is categories.
+
+00:02:05.970 --> 00:02:09.663
+It is the first part of the address of every term page.
+
+00:02:10.117 --> 00:02:12.451
+Route contained items is checked.
+
+00:02:12.451 --> 00:02:16.223
+It gives each term of the taxonomy an address of its own.
+
+00:02:16.223 --> 00:02:18.737
+Without it, the terms have no pages.
+
+00:02:19.191 --> 00:02:22.265
+Scrolling down, each term has an Edit button.
+
+00:02:22.265 --> 00:02:23.712
+Let's open Travel.
+
+00:02:23.712 --> 00:02:28.171
+Its Permalink is travel, the second part of the address of its page.
+
+00:02:32.402 --> 00:02:33.998
+Term pages are paged.
+
+00:02:33.998 --> 00:02:37.839
+The number of items on a page is the Page size in Settings,
+
+00:02:37.839 --> 00:02:40.202
+General, which is set to ten here.
+
+00:02:40.660 --> 00:02:43.967
+Let's change the Page size to three, and select Save.
+
+00:02:43.967 --> 00:02:47.330
+A message confirms that the site settings are updated.
+
+00:02:47.809 --> 00:02:52.249
+Back on the Travel term page, the list holds only the three newest
+
+00:02:52.249 --> 00:02:54.839
+posts, and a pager appears under it.
+
+00:02:55.307 --> 00:02:59.055
+Selecting page two shows the three older posts.
+
+00:02:59.055 --> 00:03:02.167
+Every term page is paged the same way.
+
+00:03:06.367 --> 00:03:11.448
+First, the Autoroute feature is enabled, and the taxonomy has Route contained items
+
+00:03:11.448 --> 00:03:16.757
+checked, so that each of its terms gets an address under the permalink of the taxonomy.
+
+00:03:17.507 --> 00:03:19.987
+Second, the taxonomy is published.
+
+00:03:19.987 --> 00:03:24.452
+A term has a page only once the published taxonomy contains it, so
+
+00:03:24.452 --> 00:03:27.367
+publish the taxonomy after you add terms.
+
+00:03:28.117 --> 00:03:33.039
+Third, the content type of the terms has Manage contained item routes checked,
+
+00:03:33.039 --> 00:03:35.499
+so each term uses its own Permalink.
+
+00:03:35.499 --> 00:03:40.187
+Without it, the address ends with the identifier of the term and its name.
+
+00:03:40.937 --> 00:03:45.345
+Finally, content items need a taxonomy field with the term selected.
+
+00:03:45.345 --> 00:03:50.587
+The term page lists those items, and a separate video covers how to add the field.
+
+00:03:52.587 --> 00:03:56.171
+A term page gives each term an address and a paged list of
+
+00:03:56.171 --> 00:03:57.851
+the content that has it.
+
+00:03:57.851 --> 00:03:59.307
+Thanks for watching.
+
