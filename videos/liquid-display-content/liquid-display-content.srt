@@ -1,0 +1,336 @@
+1
+00:00:01,000 --> 00:00:06,478
+Orchard Core builds a page from shapes, and Liquid templates decide how each shape looks.
+
+2
+00:00:06,478 --> 00:00:10,802
+This video shows how a template draws a content item, how zones place
+
+3
+00:00:10,802 --> 00:00:15,300
+content in the layout, and how to render other content items and shapes.
+
+4
+00:00:19,900 --> 00:00:23,696
+A shape is an object that holds the data and metadata of the
+
+5
+00:00:23,696 --> 00:00:26,457
+thing to display, and a template draws it.
+
+6
+00:00:26,457 --> 00:00:30,196
+The template can come from a module, a theme, or the admin.
+
+7
+00:00:30,196 --> 00:00:34,280
+In a Liquid template, Model is the shape that the template draws.
+
+8
+00:00:35,030 --> 00:00:37,633
+A content item becomes a Content shape.
+
+9
+00:00:37,633 --> 00:00:43,418
+The default template of the Contents module draws its Header, Meta, Content, and Footer zones.
+
+10
+00:00:43,418 --> 00:00:48,450
+The Content zone of the item holds the shapes that its parts and fields generate.
+
+11
+00:00:49,200 --> 00:00:53,788
+In Liquid, a name after Model reads a property of the shape, or
+
+12
+00:00:53,788 --> 00:00:56,248
+the child shape with that name.
+
+13
+00:00:56,248 --> 00:01:03,163
+So Model.Content is the Content zone, and Model.Content.MarkdownBodyPart is the shape of one part.
+
+14
+00:01:03,163 --> 00:01:06,620
+The shape_render filter draws a shape as HTML.
+
+15
+00:01:10,819 --> 00:01:14,195
+This is the home page of a site made with the Blog recipe.
+
+16
+00:01:14,195 --> 00:01:16,674
+It is one content item, of the type Blog.
+
+17
+00:01:16,674 --> 00:01:20,999
+The Blog Theme draws its layout and its content types with Liquid templates.
+
+18
+00:01:21,464 --> 00:01:25,029
+At the top, the banner belongs to the Header zone of the layout.
+
+19
+00:01:25,029 --> 00:01:28,491
+The template of the Blog type fills that zone with a zone tag,
+
+20
+00:01:28,491 --> 00:01:31,444
+and the layout of the theme draws it above the page.
+
+21
+00:01:31,899 --> 00:01:35,587
+Under the banner, the Content zone holds the list of posts.
+
+22
+00:01:35,587 --> 00:01:39,446
+A post in the list is the Summary display of its content item:
+
+23
+00:01:39,446 --> 00:01:42,339
+a title, a subtitle, and the author and date.
+
+24
+00:01:42,805 --> 00:01:44,955
+At the bottom is the Footer zone.
+
+25
+00:01:44,955 --> 00:01:48,649
+A widget in a layer puts its content there, and the layout of
+
+26
+00:01:48,649 --> 00:01:51,185
+the theme draws that zone in its footer.
+
+27
+00:01:51,659 --> 00:01:53,445
+A post has its own template.
+
+28
+00:01:53,445 --> 00:01:57,332
+It fills the Header zone of the layout with the title, the subtitle,
+
+29
+00:01:57,332 --> 00:02:00,589
+and the author and date, and it draws the Markdown body.
+
+30
+00:02:04,789 --> 00:02:07,516
+This is the template of the Blog Post type.
+
+31
+00:02:07,516 --> 00:02:12,246
+It writes the title from Model.ContentItem into the Header zone, then draws the
+
+32
+00:02:12,246 --> 00:02:14,638
+Markdown body part with shape_render.
+
+33
+00:02:14,638 --> 00:02:17,699
+The template draws only the shapes that it names.
+
+34
+00:02:18,449 --> 00:02:22,558
+The template of the Blog type draws its body part inside the header.
+
+35
+00:02:22,558 --> 00:02:27,445
+Then shape_remove_item removes that shape and the image from the Content zone, and
+
+36
+00:02:27,445 --> 00:02:30,999
+shape_render draws what remains, so nothing appears twice.
+
+37
+00:02:31,749 --> 00:02:35,371
+A theme names a template after the shape it draws:
+
+38
+00:02:35,371 --> 00:02:39,899
+Content-BlogPost.liquid draws the Detail display of a Blog Post.
+
+39
+00:02:39,899 --> 00:02:46,173
+In the admin, under Design, Templates, the template is named Content__BlogPost instead, and
+
+40
+00:02:46,173 --> 00:02:49,989
+it takes priority over a theme file of the same name.
+
+41
+00:02:54,189 --> 00:02:58,308
+The zone tag renders the content between its tags, writes nothing at that
+
+42
+00:02:58,308 --> 00:03:01,801
+place, and adds the result to the zone with the name you give
+
+43
+00:03:01,801 --> 00:03:03,677
+it, in the layout of the page.
+
+44
+00:03:03,677 --> 00:03:06,649
+A position argument orders the content in the zone.
+
+45
+00:03:07,399 --> 00:03:09,359
+The layout draws the zones.
+
+46
+00:03:09,359 --> 00:03:13,873
+The render_section tag writes the zone you name, or nothing when it is
+
+47
+00:03:13,873 --> 00:03:18,208
+empty, and with required set to true an empty zone raises an error.
+
+48
+00:03:18,208 --> 00:03:23,019
+The render_body tag writes the layout's Content zone, which holds the page.
+
+49
+00:03:23,769 --> 00:03:28,911
+The content of the page is drawn first, then the other zones, and the layout last.
+
+50
+00:03:28,911 --> 00:03:32,885
+That is why a template in the Content zone can fill the Header
+
+51
+00:03:32,885 --> 00:03:35,339
+zone, and the layout still draws it.
+
+52
+00:03:36,089 --> 00:03:38,588
+A template can also choose another layout.
+
+53
+00:03:38,588 --> 00:03:42,076
+The layout tag adds the name you give it to the alternates of
+
+54
+00:03:42,076 --> 00:03:46,242
+the Layout shape, the names under which Orchard Core looks for a template.
+
+55
+00:03:46,242 --> 00:03:48,949
+A template with that name then draws the page.
+
+56
+00:03:53,149 --> 00:03:57,589
+To draw another content item, build its display shape and render it.
+
+57
+00:03:57,589 --> 00:04:02,689
+The shape_build_display filter takes a display type, and Detail is the default.
+
+58
+00:04:02,689 --> 00:04:06,349
+In The Blog Theme, the list uses Summary for each post.
+
+59
+00:04:07,099 --> 00:04:10,360
+The Contents module adds the Content accessor.
+
+60
+00:04:10,360 --> 00:04:13,307
+It loads the published item for a handle:
+
+61
+00:04:13,307 --> 00:04:19,579
+alias, slug for the path of an Autoroute part, or contentitemid for a content item identifier.
+
+62
+00:04:19,579 --> 00:04:24,909
+When nothing matches, it returns nothing, and the render filters write nothing.
+
+63
+00:04:25,659 --> 00:04:30,059
+The contentitem tag loads an item by handle and draws it with a
+
+64
+00:04:30,059 --> 00:04:32,100
+display type, in one step.
+
+65
+00:04:32,100 --> 00:04:38,669
+When you have a list of content item identifiers, the content_item_id filter loads them together.
+
+66
+00:04:42,869 --> 00:04:47,634
+The shape_new filter creates a shape from its type, and each named argument
+
+67
+00:04:47,634 --> 00:04:50,869
+becomes a property, with its name in Pascal case.
+
+68
+00:04:50,869 --> 00:04:55,634
+Here a DateTime shape gets the creation date of a post, and shape_stringify
+
+69
+00:04:55,634 --> 00:04:57,869
+turns the drawn shape into text.
+
+70
+00:04:58,619 --> 00:05:01,929
+The shape tag creates a shape and draws it in one step.
+
+71
+00:05:01,929 --> 00:05:05,348
+The layout of The Blog Theme draws the main menu with it:
+
+72
+00:05:05,348 --> 00:05:09,636
+the alias argument becomes a property of the Menu shape, and with Dynamic
+
+73
+00:05:09,636 --> 00:05:12,729
+Cache enabled the cache arguments cache the result.
+
+74
+00:05:13,479 --> 00:05:16,278
+Tags change a shape before you draw it.
+
+75
+00:05:16,278 --> 00:05:23,243
+They set its alternates, wrappers, classes, attributes, type, display type, position, tab, and properties.
+
+76
+00:05:23,243 --> 00:05:26,539
+Each one takes the shape as its first argument.
+
+77
+00:05:27,289 --> 00:05:32,389
+Here a post is built in the Summary display type, then given one more alternate.
+
+78
+00:05:32,389 --> 00:05:35,118
+The last alternate added is tried first.
+
+79
+00:05:35,118 --> 00:05:38,973
+If a template exists for it, it draws the post; if not, the
+
+80
+00:05:38,973 --> 00:05:40,989
+earlier alternates are used.
+
+81
+00:05:42,989 --> 00:05:47,909
+A Liquid template draws the shapes it receives, places content in zones, and
+
+82
+00:05:47,909 --> 00:05:49,949
+renders other content items.
+
+83
+00:05:49,949 --> 00:05:54,269
+The documentation of the Liquid module lists the filters and tags.
+
+84
+00:05:54,269 --> 00:05:55,829
+Thanks for watching.
+
