@@ -1,0 +1,40 @@
+1
+00:00:03,300 --> 00:00:06,586
+Let's start at Search, Indexes, on a Blog site.
+
+2
+00:00:06,586 --> 00:00:08,013
+Select Add index:
+
+3
+00:00:08,013 --> 00:00:13,097
+the dialog lists the available sources, and with no provider enabled it asks
+
+4
+00:00:13,097 --> 00:00:16,880
+you to enable a feature which provides an index source.
+
+5
+00:00:17,466 --> 00:00:20,831
+Open Tools, Features, and filter the list for Lucene.
+
+6
+00:00:20,831 --> 00:00:24,936
+Select Enable on the row named Lucene, and the page reloads with a
+
+7
+00:00:24,936 --> 00:00:27,046
+message that names the feature.
+
+8
+00:00:27,513 --> 00:00:30,030
+Search is the second feature to enable.
+
+9
+00:00:30,030 --> 00:00:34,951
+Filter the list for frontend search, words from its description, and select Enable
+
+10
+00:00:34,951 --> 00:00:36,293
+on the Search row.
+

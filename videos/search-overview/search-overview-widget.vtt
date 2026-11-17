@@ -1,0 +1,20 @@
+WEBVTT
+
+00:00:03.300 --> 00:00:06.032
+A widget puts the search box on your pages.
+
+00:00:06.032 --> 00:00:11.049
+Open Design, Widgets, where zones are the regions of a page in which widgets appear.
+
+00:00:11.049 --> 00:00:14.840
+In the Footer zone, select Add Widget, and choose Search Form.
+
+00:00:15.354 --> 00:00:20.807
+Enter a Title, and select the Always layer, so the widget appears on every page.
+
+00:00:20.807 --> 00:00:24.992
+Enter a Placeholder for the widget's box, which is required.
+
+00:00:24.992 --> 00:00:29.684
+Leave Index Name empty to use the default index, and select Publish.
+

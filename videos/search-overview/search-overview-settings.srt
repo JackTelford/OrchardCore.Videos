@@ -1,0 +1,24 @@
+1
+00:00:03,253 --> 00:00:05,825
+Open Settings, Search, Site Search.
+
+2
+00:00:05,825 --> 00:00:09,402
+Default search index lists the indexes you created.
+
+3
+00:00:09,402 --> 00:00:15,113
+Select website, which the search page queries unless the address names another index.
+
+4
+00:00:15,609 --> 00:00:19,702
+Placeholder is the text that the search box of the search page shows
+
+5
+00:00:19,702 --> 00:00:21,307
+before a visitor types.
+
+6
+00:00:21,307 --> 00:00:24,349
+Enter Search articles and posts, and select Save.
+
