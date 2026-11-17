@@ -4766,7 +4766,7 @@
     "docs": [
       "src/docs/reference/modules/Recipes/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 6.9,
     "words": 1029,
     "contentCommit": "",
@@ -4777,7 +4777,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: Recording needs a module (Bakery.Starter, holding the bakery-pages recipe) compiled into an Orchard Core source checkout: the recipe is harvested from the Recipes folder of a module, and module names are read from the ModuleName attributes of the application assembly (OrchardCore.Abstractions/Modules/AssemblyAttributeModuleNamesProvider.cs:13), so the host has to be rebuilt. The shared site build C:/Code/oc-video-site must not be changed and no separate checkout/build is available in the recording batches."
   },
   {
     "slug": "deployment-overview",
