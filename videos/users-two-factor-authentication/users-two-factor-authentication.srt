@@ -1,0 +1,356 @@
+1
+00:00:01,000 --> 00:00:04,039
+A password alone can be guessed or stolen.
+
+2
+00:00:04,039 --> 00:00:08,344
+Two-factor authentication adds a one-time code to the sign-in.
+
+3
+00:00:08,344 --> 00:00:13,408
+In this video, we enable the authenticator app, email and SMS methods, set
+
+4
+00:00:13,408 --> 00:00:16,890
+up each one, and see how users sign in with them.
+
+5
+00:00:21,490 --> 00:00:25,329
+With two-factor authentication, signing in takes two steps.
+
+6
+00:00:25,329 --> 00:00:29,700
+The user enters a username and password, then a one-time code from a
+
+7
+00:00:29,700 --> 00:00:32,240
+second source that only the user has.
+
+8
+00:00:32,990 --> 00:00:35,388
+Orchard Core offers three methods.
+
+9
+00:00:35,388 --> 00:00:39,466
+An authenticator app generates codes on the user's own device.
+
+10
+00:00:39,466 --> 00:00:43,783
+The Email method sends a code to a verified email address, and the
+
+11
+00:00:43,783 --> 00:00:47,680
+SMS method sends a text message to a verified phone number.
+
+12
+00:00:48,430 --> 00:00:52,514
+An administrator turns the methods on and sets the rules for the site.
+
+13
+00:00:52,514 --> 00:00:57,134
+Each user then sets up their own methods, and can turn two-factor authentication
+
+14
+00:00:57,134 --> 00:00:59,230
+off, unless the site requires it.
+
+15
+00:01:03,442 --> 00:01:07,164
+Let's open Tools, Features, and search for two-factor.
+
+16
+00:01:07,164 --> 00:01:09,832
+There is one feature for each method:
+
+17
+00:01:09,832 --> 00:01:15,662
+Two-Factor Authenticator App Method, Two-Factor Email Method, and Two-Factor SMS Method.
+
+18
+00:01:16,121 --> 00:01:20,204
+Let's select the three methods and choose Bulk Actions, Enable.
+
+19
+00:01:20,204 --> 00:01:25,765
+Orchard Core also enables the features they depend on, such as Two-Factor Authentication
+
+20
+00:01:25,765 --> 00:01:29,611
+Services, which provides the core services of every method.
+
+21
+00:01:30,067 --> 00:01:35,851
+The Email and SMS methods send their codes through the site's email and SMS providers.
+
+22
+00:01:35,851 --> 00:01:41,447
+Both providers are already configured on this site, and separate videos cover them.
+
+23
+00:01:45,671 --> 00:01:51,299
+Let's open Settings, Security, User Login, and select the Two-Factor Authentication tab.
+
+24
+00:01:51,299 --> 00:01:55,611
+The first group, Two-Factor Settings, holds the rules of the site.
+
+25
+00:01:56,067 --> 00:02:01,792
+Allow users to remember client adds a Remember this device option to the code prompt.
+
+26
+00:02:01,792 --> 00:02:07,517
+Number of recovery codes to generate sets how many recovery codes each user receives.
+
+27
+00:02:08,029 --> 00:02:15,035
+To require two-factor authentication for some users only, select Require two-factor authentication specific
+
+28
+00:02:15,035 --> 00:02:16,957
+roles and pick the roles.
+
+29
+00:02:16,957 --> 00:02:19,809
+A user in any selected role must use it.
+
+30
+00:02:20,267 --> 00:02:26,484
+Require two-factor authentication makes it mandatory for every user, whatever their roles.
+
+31
+00:02:26,484 --> 00:02:31,017
+A user who has not enabled it must do so right after signing in.
+
+32
+00:02:31,480 --> 00:02:37,453
+Let's clear the roles option, because Require two-factor authentication already covers every user,
+
+33
+00:02:37,453 --> 00:02:39,060
+and save the settings.
+
+34
+00:02:40,660 --> 00:02:44,533
+The same tab also holds the Email Subject and Email Body of the
+
+35
+00:02:44,533 --> 00:02:48,687
+email code, the Message Body of the SMS code, and Show email address
+
+36
+00:02:48,687 --> 00:02:51,100
+in the app for the authenticator app.
+
+37
+00:02:55,344 --> 00:02:59,634
+Users manage their own two-factor authentication from the user menu.
+
+38
+00:02:59,634 --> 00:03:05,664
+Let's choose Security, which opens the Two-Factor Authentication page, with a row for each method.
+
+39
+00:03:06,120 --> 00:03:08,893
+Next to Authenticator app, let's choose Add.
+
+40
+00:03:08,893 --> 00:03:11,167
+The page shows a QR code and a key.
+
+41
+00:03:11,167 --> 00:03:16,047
+Scan the code with an authenticator app, such as Microsoft Authenticator or Google
+
+42
+00:03:16,047 --> 00:03:18,820
+Authenticator, or type the key into the app.
+
+43
+00:03:19,325 --> 00:03:21,737
+The app then shows a one-time code.
+
+44
+00:03:21,737 --> 00:03:25,325
+Let's enter it in Verification code, and choose Verify.
+
+45
+00:03:25,868 --> 00:03:31,162
+Verifying the app enables two-factor authentication and generates the recovery codes.
+
+46
+00:03:31,162 --> 00:03:35,584
+The Recovery Codes page lists them and does not show them again later,
+
+47
+00:03:35,584 --> 00:03:37,678
+so store them in a safe place.
+
+48
+00:03:38,132 --> 00:03:43,027
+Under Recovery options, Reset codes opens a page with a Generate Recovery Codes
+
+49
+00:03:43,027 --> 00:03:45,330
+button, which creates another set.
+
+50
+00:03:45,330 --> 00:03:49,822
+The Two-Factor Authentication page warns when only a few codes are left.
+
+51
+00:03:54,071 --> 00:03:55,453
+Let's sign in again.
+
+52
+00:03:55,453 --> 00:04:00,981
+After the username and password, the page asks for a verification code from the authenticator app.
+
+53
+00:04:01,452 --> 00:04:05,826
+Remember this device lets this browser skip the code at later sign-ins.
+
+54
+00:04:05,826 --> 00:04:10,144
+Sign in another way switches to the next method, and the recovery code
+
+55
+00:04:10,144 --> 00:04:11,962
+link is for a lost device.
+
+56
+00:04:12,439 --> 00:04:15,515
+Let's enter the code from the app and choose Log in.
+
+57
+00:04:15,515 --> 00:04:16,999
+The sign-in completes.
+
+58
+00:04:21,224 --> 00:04:26,548
+Email authentication needs no setup when the user's email address is verified:
+
+59
+00:04:26,548 --> 00:04:28,386
+the row shows Verified.
+
+60
+00:04:28,386 --> 00:04:33,584
+If it is not, the row offers Verify Email, which sends a verification email.
+
+61
+00:04:34,047 --> 00:04:40,294
+With more than one method, Preferred Two-Factor Method sets the method that the sign-in offers first.
+
+62
+00:04:40,294 --> 00:04:43,387
+Let's choose the authenticator app, and Update.
+
+63
+00:04:45,087 --> 00:04:49,217
+At the code prompt, Sign in another way switches to the Email method.
+
+64
+00:04:49,703 --> 00:04:53,867
+The click here link sends a one-time code to the verified email address,
+
+65
+00:04:53,867 --> 00:04:56,323
+and a message confirms that it was sent.
+
+66
+00:04:56,821 --> 00:04:59,721
+Let's type the code from the email and choose Log in.
+
+67
+00:05:01,374 --> 00:05:04,231
+SMS authentication starts with a phone number.
+
+68
+00:05:04,231 --> 00:05:09,944
+Let's choose Verify Phone Number, enter the number with its country code, and choose Request Code.
+
+69
+00:05:10,421 --> 00:05:13,271
+The site sends a text message to that number.
+
+70
+00:05:13,271 --> 00:05:16,736
+Let's enter the code from the message and choose Verify.
+
+71
+00:05:16,736 --> 00:05:19,251
+SMS authentication then shows Verified.
+
+72
+00:05:23,469 --> 00:05:28,159
+Let's sign in as Jamie, a user who has not enabled two-factor authentication.
+
+73
+00:05:28,159 --> 00:05:33,075
+Because the site requires it, Jamie is sent to the Two-Factor Authentication page
+
+74
+00:05:33,075 --> 00:05:37,369
+right after signing in, with a message to enable it before proceeding.
+
+75
+00:05:37,823 --> 00:05:41,760
+Jamie's email address is verified, so Enable is available.
+
+76
+00:05:41,760 --> 00:05:47,113
+Choosing it turns on two-factor authentication and opens the Recovery Codes page.
+
+77
+00:05:47,573 --> 00:05:51,675
+Because the site requires it, the page shows Enabled in place of a
+
+78
+00:05:51,675 --> 00:05:53,213
+button to disable it.
+
+79
+00:05:57,417 --> 00:05:59,666
+Let's open Access Control, Users.
+
+80
+00:05:59,666 --> 00:06:03,760
+A user who loses access to every method and to the recovery codes
+
+81
+00:06:03,760 --> 00:06:09,467
+cannot sign in, but an administrator can turn two-factor authentication off for that account.
+
+82
+00:06:09,921 --> 00:06:14,494
+The permission Disable two-factor authentication for any user allows it.
+
+83
+00:06:14,494 --> 00:06:20,122
+In the Actions menu of Jamie's row, choose Disable two-factor authentication, and confirm.
+
+84
+00:06:20,122 --> 00:06:24,460
+The account signs in without a code, and since the site requires it,
+
+85
+00:06:24,460 --> 00:06:27,391
+Jamie must enable it again after signing in.
+
+86
+00:06:29,391 --> 00:06:31,669
+That's two-factor authentication:
+
+87
+00:06:31,669 --> 00:06:35,874
+a one-time code from an authenticator app, email or SMS, set up by
+
+88
+00:06:35,874 --> 00:06:39,203
+each user and required by the site when you choose.
+
+89
+00:06:39,203 --> 00:06:40,721
+Thanks for watching.
+
