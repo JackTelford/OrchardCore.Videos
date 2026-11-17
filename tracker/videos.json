@@ -3309,12 +3309,12 @@
     "docs": [
       "src/docs/reference/modules/Scripting/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 5.6,
     "words": 837,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
