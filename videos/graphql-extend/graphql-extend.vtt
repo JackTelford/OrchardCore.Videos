@@ -1,0 +1,257 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.141
+Orchard Core builds its GraphQL schema from services that modules register.
+
+00:00:06.141 --> 00:00:08.363
+In this video, you extend it:
+
+00:00:08.363 --> 00:00:12.869
+an object type for a content part, filters for that part, a query
+
+00:00:12.869 --> 00:00:16.170
+of your own, and a filter for content queries.
+
+00:00:20.770 --> 00:00:25.104
+The GraphQL module builds the schema from what modules register.
+
+00:00:25.104 --> 00:00:30.677
+It adds every registered object type and input type, then calls each ISchemaBuilder,
+
+00:00:30.677 --> 00:00:34.330
+which can add fields to the Query root of the schema.
+
+00:00:35.080 --> 00:00:39.321
+The module keeps one schema for each culture, and builds it again when
+
+00:00:39.321 --> 00:00:44.510
+the identifier of a builder changes, such as the identifier of the content definitions.
+
+00:00:45.260 --> 00:00:48.022
+Four extension points cover most needs.
+
+00:00:48.022 --> 00:00:52.503
+An object type describes a content part, an input type and an index
+
+00:00:52.503 --> 00:00:57.292
+filter by it, a schema builder adds a query, and a GraphQLFilter changes
+
+00:00:57.292 --> 00:00:59.440
+how content type queries run.
+
+00:01:00.190 --> 00:01:09.519
+A module that extends GraphQL references OrchardCore.Apis.GraphQL.Abstractions, and OrchardCore.ContentManagement.GraphQL for content.
+
+00:01:09.519 --> 00:01:15.450
+It registers its types in a Startup class, and tests them in GraphiQL, under Tools.
+
+00:01:19.650 --> 00:01:24.331
+Take a content part, such as the AutoroutePart of the Autoroute module.
+
+00:01:24.331 --> 00:01:27.309
+It is a C# class with properties like Path.
+
+00:01:27.309 --> 00:01:31.990
+GraphQL cannot read a class by itself, so the part needs a description.
+
+00:01:32.740 --> 00:01:38.691
+Describe it with a class that inherits ObjectGraphType, with the part as its type argument.
+
+00:01:38.691 --> 00:01:43.415
+Give it a Name, a description, and a Field for each property to expose.
+
+00:01:43.415 --> 00:01:45.440
+Here, only Path is exposed.
+
+00:01:46.190 --> 00:01:52.695
+Register the description in a Startup class with AddObjectGraphType, naming the part and its graph type.
+
+00:01:52.695 --> 00:01:57.780
+RequireFeatures keeps the registration off until the GraphQL feature is enabled.
+
+00:01:58.530 --> 00:01:59.998
+The match is by name:
+
+00:01:59.998 --> 00:02:03.751
+the part on the content type must be named like the part class.
+
+00:02:03.751 --> 00:02:07.775
+Its fields then sit under the part name without Part, in camel case.
+
+00:02:07.775 --> 00:02:12.670
+Autoroute marks its part as collapsed, which puts path directly on the content type.
+
+00:02:16.864 --> 00:02:18.968
+This is GraphiQL, under Tools.
+
+00:02:18.968 --> 00:02:23.234
+The query asks for the display text of each blogPost, and for path,
+
+00:02:23.234 --> 00:02:27.734
+a field that comes from the object type the Autoroute module registers.
+
+00:02:28.189 --> 00:02:29.323
+Run the query.
+
+00:02:29.323 --> 00:02:34.483
+Each post comes back with its display text and its path, read from the AutoroutePart.
+
+00:02:34.483 --> 00:02:38.509
+The Explorer on the left lists path among the fields of blogPost.
+
+00:02:42.709 --> 00:02:48.739
+To filter by the part, add an input type that inherits WhereInputObjectGraphType, and
+
+00:02:48.739 --> 00:02:52.053
+pass its IStringLocalizer to the base class.
+
+00:02:52.053 --> 00:02:55.366
+AddScalarFilterFields adds the path filters:
+
+00:02:55.366 --> 00:03:00.469
+equals, contains, starts with, ends with, and in, each with a negation.
+
+00:03:01.219 --> 00:03:03.552
+The filters run against an index.
+
+00:03:03.552 --> 00:03:09.713
+An IIndexAliasProvider connects an alias for the part to the index type, here AutoroutePartIndex.
+
+00:03:09.713 --> 00:03:14.199
+The names of the input fields must match the properties of the index.
+
+00:03:14.949 --> 00:03:20.760
+Register the input type with AddInputObjectGraphType, the alias provider as a transient service,
+
+00:03:20.760 --> 00:03:24.179
+and the index with AddWhereInputIndexPropertyProvider.
+
+00:03:24.179 --> 00:03:28.509
+The content type queries then accept the part in their where argument.
+
+00:03:32.715 --> 00:03:38.180
+In GraphiQL, the where argument of blogPost accepts the path filters directly, because
+
+00:03:38.180 --> 00:03:40.913
+the Autoroute module collapses its part.
+
+00:03:40.913 --> 00:03:44.715
+This query asks for the posts whose path contains harvest.
+
+00:03:45.175 --> 00:03:48.261
+Run it, and only the matching post is returned.
+
+00:03:48.261 --> 00:03:52.687
+The filter runs in the database, joined to the Autoroute index, so the
+
+00:03:52.687 --> 00:03:54.725
+other posts are never loaded.
+
+00:03:58.925 --> 00:04:02.938
+A query that belongs to no content type is an ISchemaBuilder.
+
+00:04:02.938 --> 00:04:07.670
+In BuildAsync, create a FieldType with a name, a description, a type, and
+
+00:04:07.670 --> 00:04:11.025
+a resolver, and add it to the Query of the schema.
+
+00:04:11.775 --> 00:04:16.589
+The resolver gets its services from the request services of the resolve context.
+
+00:04:16.589 --> 00:04:22.020
+LockedAsyncFieldResolver waits for the execution lock of the request, so the resolvers that
+
+00:04:22.020 --> 00:04:24.875
+use it run one at a time within that request.
+
+00:04:25.625 --> 00:04:29.815
+The field returns a list, so each item needs an object type.
+
+00:04:29.815 --> 00:04:35.846
+CultureQueryObjectType declares the fields culture and default, each with a graph type, a
+
+00:04:35.846 --> 00:04:38.005
+description, and a resolver.
+
+00:04:38.755 --> 00:04:44.806
+Register the builder as a singleton ISchemaBuilder, and the object type as a transient service.
+
+00:04:44.806 --> 00:04:50.317
+GetIdentifierAsync returns an empty string, because the shape of this query depends on
+
+00:04:50.317 --> 00:04:51.935
+no data that changes.
+
+00:04:52.685 --> 00:04:58.329
+The builder calls IsHiddenByDefault, so a site can hide the query with GraphQLContentOptions.
+
+00:04:58.329 --> 00:05:02.946
+And anyone who may execute GraphQL can run it, so call RequirePermission on
+
+00:05:02.946 --> 00:05:06.025
+the field, or check permissions in the resolver.
+
+00:05:10.226 --> 00:05:16.209
+This query uses the siteCultures field, which the Localization module adds with an ISchemaBuilder.
+
+00:05:16.209 --> 00:05:21.386
+It asks for the culture code and the default flag of each culture the site supports.
+
+00:05:21.846 --> 00:05:22.590
+Run it.
+
+00:05:22.590 --> 00:05:26.763
+The site returns each supported culture, and marks the default one.
+
+00:05:26.763 --> 00:05:32.594
+The Explorer lists siteCultures among the content type queries, because every registered builder
+
+00:05:32.594 --> 00:05:35.166
+adds its fields to the same Query root.
+
+00:05:39.366 --> 00:05:44.217
+To change how every content type query runs, write a GraphQLFilter.
+
+00:05:44.217 --> 00:05:50.927
+PreQueryAsync receives the YesSql query before it runs, and PostQueryAsync receives the content
+
+00:05:50.927 --> 00:05:53.186
+items after they are loaded.
+
+00:05:53.936 --> 00:05:58.531
+ContentItemFilters is the filter that Orchard Core registers itself.
+
+00:05:58.531 --> 00:06:03.001
+Before the query, it limits the results to what the user may view.
+
+00:06:03.001 --> 00:06:08.216
+After the items load, it checks each one again with the authorization service.
+
+00:06:08.966 --> 00:06:15.122
+Register a filter with AddGraphQLFilterType, naming the type to filter and the filter.
+
+00:06:15.122 --> 00:06:20.073
+Every registered filter runs, in order, for each content type query.
+
+00:06:20.073 --> 00:06:25.626
+The module then adds its own conditions to the query that the filters return.
+
+00:06:29.826 --> 00:06:34.322
+Orchard Core's own source shows a working example of each piece.
+
+00:06:34.322 --> 00:06:39.846
+Autoroute and Alias filter by a part, Localization and Layers add queries, Media
+
+00:06:39.846 --> 00:06:46.076
+adds a query and a field type, and the content management GraphQL library holds the filter.
+
+00:06:48.076 --> 00:06:53.451
+That is how you add types, filters, and queries to the GraphQL schema of Orchard Core:
+
+00:06:53.451 --> 00:06:57.307
+register them in a Startup class, and test them in GraphiQL.
+
+00:06:57.307 --> 00:06:58.826
+Thanks for watching.
+
