@@ -1,0 +1,60 @@
+1
+00:00:03,209 --> 00:00:06,910
+Tools, GraphiQL opens a page for writing and running queries.
+
+2
+00:00:06,910 --> 00:00:10,943
+The Explorer on the left lists the fields you can query, the editor
+
+3
+00:00:10,943 --> 00:00:14,369
+is in the middle, and the response appears on the right.
+
+4
+00:00:14,835 --> 00:00:18,718
+Each content type is a field of the query, named after the type
+
+5
+00:00:18,718 --> 00:00:20,743
+with a lowercase first letter.
+
+6
+00:00:20,743 --> 00:00:22,769
+The BlogPost type is blogPost.
+
+7
+00:00:22,769 --> 00:00:26,765
+This query asks for the display text of the published blog posts.
+
+8
+00:00:27,246 --> 00:00:28,441
+Let's run it.
+
+9
+00:00:28,441 --> 00:00:31,523
+The response is JSON, with a data property.
+
+10
+00:00:31,523 --> 00:00:36,177
+Inside it, blogPost is a list with one entry for each published blog
+
+11
+00:00:36,177 --> 00:00:40,516
+post, newest first, and each entry holds only the display text.
+
+12
+00:00:40,971 --> 00:00:43,699
+One request can also follow relationships.
+
+13
+00:00:43,699 --> 00:00:47,792
+The list part of the blog holds its posts, and the inline fragment
+
+14
+00:00:47,792 --> 00:00:50,520
+on BlogPost picks the fields of each post.
+
+15
+00:00:50,520 --> 00:00:53,931
+Run it, and the blog and its posts come back together.
+

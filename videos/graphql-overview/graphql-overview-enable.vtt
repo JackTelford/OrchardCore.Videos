@@ -1,0 +1,26 @@
+WEBVTT
+
+00:00:03.251 --> 00:00:05.816
+The GraphQL module is a feature.
+
+00:00:05.816 --> 00:00:09.664
+Let's open Tools, Features, and search for GraphQL.
+
+00:00:09.664 --> 00:00:16.281
+The Headless site recipe enables it during setup, and on other sites you enable it yourself.
+
+00:00:16.735 --> 00:00:19.811
+GraphQL is listed under the Api category.
+
+00:00:19.811 --> 00:00:24.915
+Select Enable, and a notification confirms that the feature was enabled.
+
+00:00:25.381 --> 00:00:29.012
+Tools has a GraphiQL entry once GraphQL is enabled.
+
+00:00:29.012 --> 00:00:34.491
+Modules such as Contents, Lists, Markdown and Autoroute each add their own types
+
+00:00:34.491 --> 00:00:37.741
+to the schema when they find GraphQL enabled.
+

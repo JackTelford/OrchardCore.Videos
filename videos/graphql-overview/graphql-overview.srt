@@ -1,0 +1,308 @@
+1
+00:00:01,000 --> 00:00:05,989
+Orchard Core can answer a question about your content in a single request.
+
+2
+00:00:05,989 --> 00:00:11,788
+The GraphQL module turns your content types into a schema that clients query over HTTP.
+
+3
+00:00:11,788 --> 00:00:16,340
+This video shows how it works, how to try it, and how to extend it.
+
+4
+00:00:20,940 --> 00:00:24,987
+A page that lists posts needs a title and a path for each one.
+
+5
+00:00:24,987 --> 00:00:29,927
+When the server fixes the shape of every response, the client either receives
+
+6
+00:00:29,927 --> 00:00:34,570
+fields it never uses, or sends several requests to collect related data.
+
+7
+00:00:35,320 --> 00:00:39,873
+With GraphQL, the client sends a query that names the fields it wants.
+
+8
+00:00:39,873 --> 00:00:44,245
+The response has the same shape as the query, and related items are
+
+9
+00:00:44,245 --> 00:00:47,540
+part of the same query, so one request is enough.
+
+10
+00:00:48,290 --> 00:00:52,733
+The GraphQL module builds the schema from your content types and parts.
+
+11
+00:00:52,733 --> 00:00:56,887
+A content type you add appears in the schema without any code, and
+
+12
+00:00:56,887 --> 00:00:59,830
+every request is checked against permissions.
+
+13
+00:01:04,081 --> 00:01:06,646
+The GraphQL module is a feature.
+
+14
+00:01:06,646 --> 00:01:10,494
+Let's open Tools, Features, and search for GraphQL.
+
+15
+00:01:10,494 --> 00:01:17,111
+The Headless site recipe enables it during setup, and on other sites you enable it yourself.
+
+16
+00:01:17,565 --> 00:01:20,641
+GraphQL is listed under the Api category.
+
+17
+00:01:20,641 --> 00:01:25,745
+Select Enable, and a notification confirms that the feature was enabled.
+
+18
+00:01:26,211 --> 00:01:29,842
+Tools has a GraphiQL entry once GraphQL is enabled.
+
+19
+00:01:29,842 --> 00:01:35,321
+Modules such as Contents, Lists, Markdown and Autoroute each add their own types
+
+20
+00:01:35,321 --> 00:01:38,571
+to the schema when they find GraphQL enabled.
+
+21
+00:01:42,779 --> 00:01:46,481
+Tools, GraphiQL opens a page for writing and running queries.
+
+22
+00:01:46,481 --> 00:01:50,514
+The Explorer on the left lists the fields you can query, the editor
+
+23
+00:01:50,514 --> 00:01:53,939
+is in the middle, and the response appears on the right.
+
+24
+00:01:54,405 --> 00:01:58,288
+Each content type is a field of the query, named after the type
+
+25
+00:01:58,288 --> 00:02:00,314
+with a lowercase first letter.
+
+26
+00:02:00,314 --> 00:02:02,340
+The BlogPost type is blogPost.
+
+27
+00:02:02,340 --> 00:02:06,335
+This query asks for the display text of the published blog posts.
+
+28
+00:02:06,817 --> 00:02:08,012
+Let's run it.
+
+29
+00:02:08,012 --> 00:02:11,093
+The response is JSON, with a data property.
+
+30
+00:02:11,093 --> 00:02:15,747
+Inside it, blogPost is a list with one entry for each published blog
+
+31
+00:02:15,747 --> 00:02:20,087
+post, newest first, and each entry holds only the display text.
+
+32
+00:02:20,541 --> 00:02:23,270
+One request can also follow relationships.
+
+33
+00:02:23,270 --> 00:02:27,362
+The list part of the blog holds its posts, and the inline fragment
+
+34
+00:02:27,362 --> 00:02:30,091
+on BlogPost picks the fields of each post.
+
+35
+00:02:30,091 --> 00:02:33,501
+Run it, and the blog and its posts come back together.
+
+36
+00:02:37,701 --> 00:02:42,178
+A content type becomes a query field, unless its settings give it a
+
+37
+00:02:42,178 --> 00:02:44,202
+stereotype, such as Widget.
+
+38
+00:02:44,202 --> 00:02:49,415
+A part with fields or a GraphQL type becomes an object, unless it is collapsed.
+
+39
+00:02:49,415 --> 00:02:53,401
+A part named like its type, such as BlogPost, is collapsed.
+
+40
+00:02:54,151 --> 00:02:57,525
+Every content type query takes the same arguments.
+
+41
+00:02:57,525 --> 00:03:02,766
+The where argument filters, orderBy sorts, first and skip page through the items,
+
+42
+00:03:02,766 --> 00:03:05,717
+and status chooses which versions are read.
+
+43
+00:03:05,717 --> 00:03:09,151
+The contentItem query returns one item from its id.
+
+44
+00:03:09,901 --> 00:03:12,943
+The schema keeps up with your content definitions.
+
+45
+00:03:12,943 --> 00:03:17,288
+After you change a content type, the next request builds the schema again,
+
+46
+00:03:17,288 --> 00:03:20,601
+and GraphiQL shows the change when you reload the page.
+
+47
+00:03:24,801 --> 00:03:30,602
+Outside the admin, any HTTP client calls the same endpoint, /api/graphql.
+
+48
+00:03:30,602 --> 00:03:35,154
+A POST request sends the query in a JSON body, and a GET
+
+49
+00:03:35,154 --> 00:03:38,311
+request sends it in the query string.
+
+50
+00:03:39,061 --> 00:03:44,719
+A POST request can also use the application/graphql content type, where the body
+
+51
+00:03:44,719 --> 00:03:46,430
+is the query itself.
+
+52
+00:03:46,430 --> 00:03:51,233
+Variables and the operation name travel in the JSON body, or in the
+
+53
+00:03:51,233 --> 00:03:53,601
+query string of a GET request.
+
+54
+00:03:54,351 --> 00:03:56,115
+The response is JSON.
+
+55
+00:03:56,115 --> 00:04:00,295
+A successful query returns status 200 and a data property.
+
+56
+00:04:00,295 --> 00:04:05,521
+When the query has errors, an errors list describes them, with status 400,
+
+57
+00:04:05,521 --> 00:04:09,571
+or 401 when the user lacks a permission the query needs.
+
+58
+00:04:10,321 --> 00:04:13,814
+Every request needs the Execute GraphQL permission.
+
+59
+00:04:13,814 --> 00:04:18,778
+A client authenticates with the session cookie of a signed-in user, or with
+
+60
+00:04:18,778 --> 00:04:21,965
+a bearer token from the OpenID Connect module.
+
+61
+00:04:21,965 --> 00:04:25,151
+Anonymous users cannot run queries by default.
+
+62
+00:04:25,901 --> 00:04:28,179
+Content permissions apply as well.
+
+63
+00:04:28,179 --> 00:04:32,621
+A query returns only the content items that the user is allowed to view.
+
+64
+00:04:36,821 --> 00:04:42,242
+The module reads its options from the configuration, under OrchardCore, Apis, GraphQL.
+
+65
+00:04:42,242 --> 00:04:46,367
+They limit the depth and complexity of a query and the number of
+
+66
+00:04:46,367 --> 00:04:50,551
+results, and they decide whether exception details reach clients.
+
+67
+00:04:54,751 --> 00:04:59,335
+To expose your own part, write an ObjectGraphType that maps the fields you
+
+68
+00:04:59,335 --> 00:05:05,350
+want, and register it with AddObjectGraphType in a startup class that requires the GraphQL feature.
+
+69
+00:05:05,350 --> 00:05:08,501
+The Autoroute module does this for AutoroutePart.
+
+70
+00:05:09,251 --> 00:05:13,313
+For a query that no part provides, implement ISchemaBuilder.
+
+71
+00:05:13,313 --> 00:05:15,960
+BuildAsync adds fields to the schema.
+
+72
+00:05:15,960 --> 00:05:21,499
+GetIdentifierAsync returns a value that changes when the schema must be built again,
+
+73
+00:05:21,499 --> 00:05:25,191
+or an empty string when nothing it depends on changes.
+
+74
+00:05:27,191 --> 00:05:29,065
+That's the GraphQL module:
+
+75
+00:05:29,065 --> 00:05:34,510
+a schema built from your content, one endpoint, and permission checks on every request.
+
+76
+00:05:34,510 --> 00:05:38,199
+The other videos of this series go deeper into each part.
+
+77
+00:05:38,199 --> 00:05:39,721
+Thanks for watching.
+

@@ -1,0 +1,68 @@
+1
+00:00:03,200 --> 00:00:09,000
+Outside the admin, any HTTP client calls the same endpoint, /api/graphql.
+
+2
+00:00:09,000 --> 00:00:13,553
+A POST request sends the query in a JSON body, and a GET
+
+3
+00:00:13,553 --> 00:00:16,710
+request sends it in the query string.
+
+4
+00:00:17,460 --> 00:00:23,118
+A POST request can also use the application/graphql content type, where the body
+
+5
+00:00:23,118 --> 00:00:24,829
+is the query itself.
+
+6
+00:00:24,829 --> 00:00:29,631
+Variables and the operation name travel in the JSON body, or in the
+
+7
+00:00:29,631 --> 00:00:32,000
+query string of a GET request.
+
+8
+00:00:32,750 --> 00:00:34,514
+The response is JSON.
+
+9
+00:00:34,514 --> 00:00:38,694
+A successful query returns status 200 and a data property.
+
+10
+00:00:38,694 --> 00:00:43,920
+When the query has errors, an errors list describes them, with status 400,
+
+11
+00:00:43,920 --> 00:00:47,970
+or 401 when the user lacks a permission the query needs.
+
+12
+00:00:48,720 --> 00:00:52,213
+Every request needs the Execute GraphQL permission.
+
+13
+00:00:52,213 --> 00:00:57,177
+A client authenticates with the session cookie of a signed-in user, or with
+
+14
+00:00:57,177 --> 00:01:00,363
+a bearer token from the OpenID Connect module.
+
+15
+00:01:00,363 --> 00:01:03,550
+Anonymous users cannot run queries by default.
+
+16
+00:01:04,300 --> 00:01:06,578
+Content permissions apply as well.
+
+17
+00:01:06,578 --> 00:01:11,020
+A query returns only the content items that the user is allowed to view.
+
