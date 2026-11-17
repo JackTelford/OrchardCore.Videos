@@ -3887,18 +3887,18 @@
     "docs": [
       "src/docs/reference/modules/RateLimits/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 6.3,
     "words": 940,
     "contentCommit": "",
-    "recordedBy": "",
+    "recordedBy": "wipke",
     "recordedOn": "",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: Orchard Core main bug: the script asp-src tags of the RateLimits views are output literally (script never loads), so choosing Endpoint does not reveal the Request path field (create-2 cannot be recorded)"
   },
   {
     "slug": "security-reverse-proxy",
