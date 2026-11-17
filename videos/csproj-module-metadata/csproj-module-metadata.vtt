@@ -1,0 +1,161 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.863
+A module, a theme, or a feature describes itself to Orchard Core with
+
+00:00:05.863 --> 00:00:09.623
+a name, a category, a description, and dependencies.
+
+00:00:09.623 --> 00:00:14.875
+In this video, you declare that information in the project file, instead of
+
+00:00:14.875 --> 00:00:16.820
+in the Manifest.cs file.
+
+00:00:21.420 --> 00:00:26.124
+A module made from the project template comes with a Manifest.cs file.
+
+00:00:26.124 --> 00:00:31.880
+Its attributes carry the name, the author, the website, and the version, typed by hand.
+
+00:00:32.630 --> 00:00:37.770
+The build knows some of those values, such as the project name and the assembly version.
+
+00:00:37.770 --> 00:00:42.910
+The build can write the attributes for you, following the pattern of InternalsVisibleTo:
+
+00:00:42.910 --> 00:00:46.410
+an item in the project file becomes an assembly attribute.
+
+00:00:50.610 --> 00:00:55.155
+Declare a module with an OrchardCoreModules item in an item group of a
+
+00:00:55.155 --> 00:00:58.565
+project that references OrchardCore.Module.Targets.
+
+00:00:58.565 --> 00:01:03.110
+Its Include value is the module identifier, normally the project name.
+
+00:01:03.860 --> 00:01:06.853
+The rest is metadata of the item:
+
+00:01:06.853 --> 00:01:14.987
+Name, Category, Priority, Description, Author, Website, Version, Dependencies, Tags, and ModuleType.
+
+00:01:14.987 --> 00:01:21.280
+Dependencies and Tags are lists, separated by semicolons, commas, or spaces.
+
+00:01:22.030 --> 00:01:26.245
+Because these are MSBuild values, they can come from properties.
+
+00:01:26.245 --> 00:01:31.001
+Here, the identifier is the project name, and the version is the assembly
+
+00:01:31.001 --> 00:01:33.650
+version, so each value has one source.
+
+00:01:34.400 --> 00:01:37.410
+Three flags control how a feature is enabled.
+
+00:01:37.410 --> 00:01:43.430
+DefaultTenant restricts it to the default tenant, AlwaysEnabled prevents it from being disabled,
+
+00:01:43.430 --> 00:01:48.093
+and EnabledByDependencyOnly allows it to be enabled only as a dependency.
+
+00:01:48.093 --> 00:01:50.100
+Write each as true or false.
+
+00:01:54.300 --> 00:01:59.400
+A module declares each of its features with an OrchardCoreFeatures item.
+
+00:01:59.400 --> 00:02:06.135
+A feature takes a name, a category, a priority, a description, dependencies, and the three flags.
+
+00:02:06.135 --> 00:02:10.450
+The author, website, version, and tags belong to the module.
+
+00:02:11.200 --> 00:02:15.724
+When a module project declares a feature, the module itself is not a
+
+00:02:15.724 --> 00:02:20.004
+feature, unless one of the declared features has its identifier.
+
+00:02:20.004 --> 00:02:25.140
+A feature whose category, priority, or description is empty uses the module's.
+
+00:02:25.890 --> 00:02:28.770
+A theme uses an OrchardCoreThemes item.
+
+00:02:28.770 --> 00:02:34.594
+Its metadata is a module's, except ModuleType, plus Base, which names the base theme.
+
+00:02:34.594 --> 00:02:42.210
+A theme project references OrchardCore.Theme.Targets, and a module project references OrchardCore.Module.Targets.
+
+00:02:42.960 --> 00:02:48.277
+To keep every declaration in one list, use OrchardCoreAttributes items.
+
+00:02:48.277 --> 00:02:49.796
+Each has a Type:
+
+00:02:49.796 --> 00:02:53.870
+feature or theme, and any other value means a module.
+
+00:02:53.870 --> 00:02:57.460
+The item then takes the metadata of that type.
+
+00:03:01.660 --> 00:03:07.175
+When the project file declares the module, remove its attributes from Manifest.cs, since
+
+00:03:07.175 --> 00:03:11.106
+the Module attribute can be applied only once to an assembly.
+
+00:03:11.106 --> 00:03:14.450
+Comment out the contents of the file, or delete it.
+
+00:03:15.200 --> 00:03:17.536
+The build enforces three rules.
+
+00:03:17.536 --> 00:03:22.144
+A project declares at most one module, at most one theme, and never
+
+00:03:22.144 --> 00:03:24.480
+a module together with a theme.
+
+00:03:24.480 --> 00:03:27.700
+A project can declare any number of features.
+
+00:03:28.450 --> 00:03:33.189
+To see what the build embeds, set the OrchardCoreDebugTargets property to true.
+
+00:03:33.189 --> 00:03:37.427
+The build then prints a message for each module and each feature, with
+
+00:03:37.427 --> 00:03:39.490
+most of the values of the item.
+
+00:03:40.240 --> 00:03:48.043
+The embedding runs after the targets named by OrchardCoreEmbeddingAfterTargets, AfterResolveReferences by default.
+
+00:03:48.043 --> 00:03:54.740
+It runs before those named by OrchardCoreEmbeddingBeforeTargets, GenerateAssemblyInfo by default.
+
+00:03:55.490 --> 00:03:59.789
+After a build, the site reads the values from the assembly.
+
+00:03:59.789 --> 00:04:07.791
+The Features page, under Tools, lists a feature with its name, identifier, category, description, and dependencies.
+
+00:04:07.791 --> 00:04:14.470
+The Themes page, under Design, shows a theme's description, author, website, tags, and version.
+
+00:04:16.470 --> 00:04:20.963
+Item lists in the project file describe a module, its features, or a
+
+00:04:20.963 --> 00:04:25.881
+theme, and the build turns them into the attributes that Manifest.cs holds.
+
+00:04:25.881 --> 00:04:27.460
+Thanks for watching.
+
