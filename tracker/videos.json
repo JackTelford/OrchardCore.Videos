@@ -4465,12 +4465,12 @@
     "docs": [
       "src/docs/reference/modules/OpenId/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 3.8,
     "words": 567,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
