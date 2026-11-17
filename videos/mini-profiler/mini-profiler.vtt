@@ -1,0 +1,194 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.072
+A page loads slowly, and you do not know where the time goes.
+
+00:00:05.072 --> 00:00:09.812
+The Mini Profiler module times a request, the shapes it renders, and the
+
+00:00:09.812 --> 00:00:11.453
+SQL commands it runs.
+
+00:00:11.453 --> 00:00:15.950
+This video shows how to enable it, read a profile, and keep it safe.
+
+00:00:20.550 --> 00:00:24.954
+The Mini Profiler module integrates MiniProfiler with a tenant.
+
+00:00:24.954 --> 00:00:30.571
+It records request timings, MVC filters and views, the shapes Orchard Core renders
+
+00:00:30.571 --> 00:00:35.295
+a page from, and the YesSql database commands, then adds a widget to
+
+00:00:35.295 --> 00:00:38.550
+HTML pages for users who have the permission.
+
+00:00:39.300 --> 00:00:42.635
+Use it to investigate a specific performance problem.
+
+00:00:42.635 --> 00:00:46.874
+Profiling adds work to every request of an enabled tenant, and it can
+
+00:00:46.874 --> 00:00:51.396
+expose route names, SQL statements and timing details, so it should not be
+
+00:00:51.396 --> 00:00:53.940
+broadly available on a production site.
+
+00:00:58.144 --> 00:00:59.840
+Open Tools, Features.
+
+00:00:59.840 --> 00:01:04.865
+The page groups features by category, and Mini Profiler is in Performance.
+
+00:01:04.865 --> 00:01:07.504
+Search for Mini Profiler to find it.
+
+00:01:07.966 --> 00:01:09.862
+Select Enable for the feature.
+
+00:01:09.862 --> 00:01:11.336
+A message confirms it.
+
+00:01:11.336 --> 00:01:13.389
+The feature has no settings page:
+
+00:01:13.389 --> 00:01:16.126
+the widget appears on the pages you open next.
+
+00:01:20.413 --> 00:01:23.896
+Open Access Control, Roles, and edit the Editor role.
+
+00:01:23.896 --> 00:01:29.033
+Search its permissions for Mini Profiler to find the two that control the widget.
+
+00:01:29.501 --> 00:01:33.620
+View Mini Profiler widget on front end pages covers the site, and View
+
+00:01:33.620 --> 00:01:36.980
+Mini Profiler widget on back end pages covers the admin.
+
+00:01:36.980 --> 00:01:39.636
+The Administrator role has both by default.
+
+00:01:39.636 --> 00:01:43.971
+Grant them to another role only if its members may inspect profiling data.
+
+00:01:48.228 --> 00:01:51.932
+Browse to the home page while signed in as an administrator.
+
+00:01:51.932 --> 00:01:57.038
+The widget is in the top-left corner, and its button shows how long the request took.
+
+00:01:57.496 --> 00:01:59.774
+Click the button to open the profile.
+
+00:01:59.774 --> 00:02:03.112
+It lists the steps of the request as a tree, and each row
+
+00:02:03.112 --> 00:02:06.926
+shows the duration of that step, without the time of its children.
+
+00:02:07.386 --> 00:02:12.223
+Steps that took very little time are hidden until you choose show trivial.
+
+00:02:12.223 --> 00:02:16.576
+The shapes appear as rows named Shape, followed by the shape type.
+
+00:02:17.038 --> 00:02:20.552
+Click the SQL duration of a step to open the queries view.
+
+00:02:20.552 --> 00:02:24.835
+The commands are numbered in the order they ran, each with its duration,
+
+00:02:24.835 --> 00:02:28.458
+its start time, the step that ran it, and its SQL statement.
+
+00:02:32.658 --> 00:02:35.681
+In the queries view, hover a badge to read more.
+
+00:02:35.681 --> 00:02:40.382
+Duplicate marks a command whose text already ran earlier in the request, which
+
+00:02:40.382 --> 00:02:43.908
+often points to a missing cache or a query inside a loop.
+
+00:02:43.908 --> 00:02:46.818
+Error marks a command that threw an exception.
+
+00:02:47.568 --> 00:02:51.948
+Rows between the queries show how long the request ran without queries, and
+
+00:02:51.948 --> 00:02:54.165
+which step spent most of that time.
+
+00:02:54.165 --> 00:02:57.842
+A red exclamation mark on a step or on the widget button flags
+
+00:02:57.842 --> 00:02:59.788
+duplicate or failing commands.
+
+00:03:04.088 --> 00:03:07.890
+In the admin, the widget is docked to the middle of the right
+
+00:03:07.890 --> 00:03:09.592
+edge, clear of the menu.
+
+00:03:09.592 --> 00:03:14.528
+The Hide MiniProfiler toggle tucks it away, and the browser remembers the choice.
+
+00:03:18.728 --> 00:03:25.092
+The module registers MiniProfilerOptions for each tenant, and does not read them from configuration.
+
+00:03:25.092 --> 00:03:28.574
+Set them with ConfigureServices after AddOrchardCms:
+
+00:03:28.574 --> 00:03:34.878
+here, IgnoredPaths skips a health check path and PopupRenderPosition moves the widget to the right.
+
+00:03:35.628 --> 00:03:37.520
+Three controls are separate.
+
+00:03:37.520 --> 00:03:41.637
+The widget permissions decide whether the widget is added to a page.
+
+00:03:41.637 --> 00:03:46.367
+ResultsAuthorize protects the result endpoints and is not set by the module, so
+
+00:03:46.367 --> 00:03:49.371
+set it where untrusted users can reach the site.
+
+00:03:49.371 --> 00:03:52.598
+ShouldProfile decides whether a request is recorded.
+
+00:03:56.798 --> 00:04:00.902
+Code running during a profiled request can add its own steps.
+
+00:04:00.902 --> 00:04:05.618
+Wrap the work in a using block that calls Step on MiniProfiler.Current.
+
+00:04:05.618 --> 00:04:11.008
+It is null when the request is not profiled, so use the null-conditional operator.
+
+00:04:15.208 --> 00:04:19.684
+If the widget does not appear, check the feature, the permission, and that
+
+00:04:19.684 --> 00:04:21.922
+the theme renders the Footer zone.
+
+00:04:21.922 --> 00:04:24.720
+If a result is missing, it may have expired:
+
+00:04:24.720 --> 00:04:29.028
+results stay in memory for 30 minutes, and instances do not share them.
+
+00:04:31.028 --> 00:04:36.249
+The Mini Profiler shows where a request spends its time, from shapes to SQL commands.
+
+00:04:36.249 --> 00:04:40.437
+Use it to investigate a specific problem, and limit who can see it.
+
+00:04:40.437 --> 00:04:41.928
+Thanks for watching.
+
