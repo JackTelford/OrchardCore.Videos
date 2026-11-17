@@ -1,0 +1,203 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.241
+A theme decides how your site looks.
+
+00:00:03.241 --> 00:00:07.029
+In this video, you open the Themes page, switch the theme of your
+
+00:00:07.029 --> 00:00:09.110
+site, and turn themes on and off.
+
+00:00:13.710 --> 00:00:15.481
+A theme draws your pages.
+
+00:00:15.481 --> 00:00:19.880
+It sets the layout, the colors, and the fonts, while the content itself
+
+00:00:19.880 --> 00:00:21.308
+stays in your site.
+
+00:00:21.308 --> 00:00:25.250
+You can change the theme without editing a single page or post.
+
+00:00:26.000 --> 00:00:29.892
+Some themes also include templates for specific content.
+
+00:00:29.892 --> 00:00:35.290
+The Blog Theme, for example, has templates for blog posts, categories, and tags.
+
+00:00:36.040 --> 00:00:37.720
+A site has two themes.
+
+00:00:37.720 --> 00:00:41.020
+The Site theme draws the pages that visitors see.
+
+00:00:41.020 --> 00:00:45.520
+The Admin theme draws the admin, and the sign-in page as well, unless
+
+00:00:45.520 --> 00:00:49.960
+Use site theme for login page is checked in the User Login settings.
+
+00:00:50.710 --> 00:00:54.733
+The recipe you choose during setup sets the first Site theme.
+
+00:00:54.733 --> 00:00:59.415
+Blog uses The Blog Theme, Agency uses The Agency Theme, Coming Soon uses
+
+00:00:59.415 --> 00:01:04.098
+The Coming Soon Theme, and Software as a Service uses The Default Theme.
+
+00:01:04.098 --> 00:01:06.740
+Blank site and Headless site set none.
+
+00:01:10.982 --> 00:01:13.336
+Let's start on the admin home page.
+
+00:01:13.336 --> 00:01:18.215
+The Customize theme card has a Manage themes button that opens the Themes page.
+
+00:01:18.215 --> 00:01:21.832
+The same page is in the admin menu, under Design, Themes.
+
+00:01:22.314 --> 00:01:23.741
+Click Manage themes.
+
+00:01:23.741 --> 00:01:27.251
+The Themes page shows a card for each theme you can apply.
+
+00:01:27.251 --> 00:01:31.530
+The current themes come first, marked This is the current Site theme and
+
+00:01:31.530 --> 00:01:33.614
+This is the current Admin theme.
+
+00:01:34.080 --> 00:01:38.419
+Each card shows a thumbnail, the name of the theme, and a description.
+
+00:01:38.419 --> 00:01:43.270
+Below them are the author, the website, the tags, and the version of the theme.
+
+00:01:43.759 --> 00:01:47.578
+A theme tagged Admin is an admin theme, such as The Admin Theme.
+
+00:01:47.578 --> 00:01:51.342
+Make Current on an admin theme sets the Admin theme, and on any
+
+00:01:51.342 --> 00:01:53.579
+other theme it sets the Site theme.
+
+00:01:54.038 --> 00:01:58.431
+The other cards are The Agency Theme, The Coming Soon Theme, The Default
+
+00:01:58.431 --> 00:02:03.050
+Theme, and Safe Mode Theme, which describes itself as a fail-safe theme when
+
+00:02:03.050 --> 00:02:05.078
+no other themes are available.
+
+00:02:09.307 --> 00:02:11.673
+First, let's see the site as it is.
+
+00:02:11.673 --> 00:02:15.539
+On the Themes page, click the Visit Site icon in the top bar.
+
+00:02:15.539 --> 00:02:17.847
+The home page uses The Blog Theme.
+
+00:02:18.299 --> 00:02:21.356
+Back on the Themes page, find The Default Theme.
+
+00:02:21.356 --> 00:02:25.714
+It is disabled, so Orchard Core enables it when you click Make Current.
+
+00:02:25.714 --> 00:02:30.299
+Two messages confirm that it was enabled and set as the default Site theme.
+
+00:02:30.753 --> 00:02:34.743
+The card of The Default Theme shows This is the current Site theme,
+
+00:02:34.743 --> 00:02:36.438
+and its buttons are gone.
+
+00:02:36.438 --> 00:02:39.773
+The Blog Theme offers Make Current and Disable instead.
+
+00:02:40.229 --> 00:02:42.466
+Open the site again with Visit Site.
+
+00:02:42.466 --> 00:02:44.490
+Make Current changes no content.
+
+00:02:44.490 --> 00:02:47.739
+The layout and the styling come from The Default Theme.
+
+00:02:52.009 --> 00:02:56.177
+On the Themes page, go back by clicking Make Current on The Blog Theme.
+
+00:02:56.177 --> 00:03:00.019
+It is already enabled, so one message confirms that it was set as
+
+00:03:00.019 --> 00:03:01.589
+the default Site theme.
+
+00:03:02.109 --> 00:03:03.918
+Disable switches a theme off.
+
+00:03:03.918 --> 00:03:06.347
+Let's click Disable on The Default Theme.
+
+00:03:06.347 --> 00:03:10.379
+A message confirms it, and the card then offers Enable, which switches a
+
+00:03:10.379 --> 00:03:12.499
+theme on without making it current.
+
+00:03:12.969 --> 00:03:17.386
+A current theme has no Make Current, Enable, or Disable button, so this
+
+00:03:17.386 --> 00:03:20.943
+page does not let you switch off a theme that is in use.
+
+00:03:20.943 --> 00:03:23.869
+Choose another theme with Make Current first.
+
+00:03:28.115 --> 00:03:31.919
+At the bottom of the page, the Reset current themes box has two
+
+00:03:31.919 --> 00:03:34.896
+buttons, Reset Site Theme and Reset Admin Theme.
+
+00:03:34.896 --> 00:03:38.535
+The box says they are used for sites that can't use theming.
+
+00:03:39.006 --> 00:03:42.770
+Each button asks you to confirm, and then clears the Site theme or
+
+00:03:42.770 --> 00:03:46.325
+the Admin theme, until you choose one again with Make Current.
+
+00:03:46.325 --> 00:03:48.626
+Leave them alone unless you need them.
+
+00:03:52.826 --> 00:03:57.093
+Only users with the Apply a Theme permission can open the Themes page.
+
+00:03:57.093 --> 00:03:59.732
+The Administrator role has it by default.
+
+00:03:59.732 --> 00:04:04.056
+To give it to another role, edit that role under Access Control, Roles.
+
+00:04:06.056 --> 00:04:08.211
+Themes decide how your site looks:
+
+00:04:08.211 --> 00:04:12.629
+under Design, Themes, you choose the Site theme with Make Current and switch
+
+00:04:12.629 --> 00:04:15.215
+themes on and off with Enable and Disable.
+
+00:04:15.215 --> 00:04:16.616
+Thanks for watching.
+
