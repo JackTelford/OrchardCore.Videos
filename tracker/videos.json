@@ -6778,12 +6778,12 @@
     "docs": [
       "src/docs/guides/encoding-settings/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 3.3,
     "words": 496,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",

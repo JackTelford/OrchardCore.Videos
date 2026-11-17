@@ -1,0 +1,140 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.198
+Orchard Core writes text through the encoders of ASP.NET Core, which by default
+
+00:00:06.198 --> 00:00:09.438
+encode every character outside the ASCII range.
+
+00:00:09.438 --> 00:00:13.780
+In this video, we'll see why, how to allow the Unicode ranges you
+
+00:00:13.780 --> 00:00:17.510
+use, and how to use the same encoders in your own code.
+
+00:00:22.110 --> 00:00:27.874
+ASP.NET Core has an encoder for HTML, one for URLs, and one for JavaScript.
+
+00:00:27.874 --> 00:00:33.141
+By default, each of them leaves only the Basic Latin range, which is
+
+00:00:33.141 --> 00:00:36.770
+ASCII, as it is, and encodes everything else.
+
+00:00:37.520 --> 00:00:39.927
+Take a title such as Café Münster.
+
+00:00:39.927 --> 00:00:45.705
+With the default encoders, the page source holds each accented letter as a character code.
+
+00:00:45.705 --> 00:00:50.700
+The browser shows the same text, but the source is longer and harder to read.
+
+00:00:51.450 --> 00:00:55.131
+That is technically correct, but it makes the response bigger.
+
+00:00:55.131 --> 00:00:59.407
+Orchard Core registers the web encoders once for the host, and its Liquid
+
+00:00:59.407 --> 00:01:05.470
+templates and shape renderer take the HTML encoder from dependency injection, so one setting reaches them.
+
+00:01:09.670 --> 00:01:16.127
+To change the default, configure WebEncoderOptions in the Program.cs file of your web application.
+
+00:01:16.127 --> 00:01:19.915
+Set its TextEncoderSettings to allow UnicodeRanges.All.
+
+00:01:19.915 --> 00:01:25.130
+The first lines of the file import the three namespaces that these types need.
+
+00:01:25.880 --> 00:01:29.993
+UnicodeRanges.All covers the whole Basic Multilingual Plane.
+
+00:01:29.993 --> 00:01:35.538
+WebEncoderOptions holds the options that the HTML encoder, the URL encoder, and the
+
+00:01:35.538 --> 00:01:39.900
+JavaScript encoder share, so this one call configures all three.
+
+00:01:40.650 --> 00:01:43.493
+The default list is cautious on purpose:
+
+00:01:43.493 --> 00:01:47.633
+ASP.NET Core documents it as protection against browser bugs.
+
+00:01:47.633 --> 00:01:52.700
+So ideally you allow only the ranges your text uses, instead of all of them.
+
+00:01:53.450 --> 00:01:59.431
+Latin1Supplement, for example, holds accented letters like those in Café Münster.
+
+00:01:59.431 --> 00:02:06.650
+BasicLatin and Latin1Supplement together cover that title, so the call lists only those two ranges.
+
+00:02:07.400 --> 00:02:10.070
+The call belongs to the host application.
+
+00:02:10.070 --> 00:02:14.786
+Orchard Core shares the singleton services of the host with every tenant, and
+
+00:02:14.786 --> 00:02:18.990
+the encoders are singletons, so every tenant uses the same encoders.
+
+00:02:19.740 --> 00:02:24.490
+With those two ranges allowed, text that a template writes through the injected
+
+00:02:24.490 --> 00:02:27.563
+encoder reaches the page source as it is written.
+
+00:02:27.563 --> 00:02:31.810
+The browser shows the same text either way, and the source is shorter.
+
+00:02:36.010 --> 00:02:39.809
+In your own code, take the encoders from dependency injection.
+
+00:02:39.809 --> 00:02:45.060
+Add an HtmlEncoder parameter to the constructor of your service, and keep it in a field.
+
+00:02:45.810 --> 00:02:49.827
+Then call Encode on that field wherever your code writes text.
+
+00:02:49.827 --> 00:02:52.957
+The Title module's MetaWeblog driver does this:
+
+00:02:52.957 --> 00:02:57.860
+it receives an HtmlEncoder in its constructor, and encodes the title with it.
+
+00:02:58.610 --> 00:03:03.270
+Don't call HtmlEncoder.Default, or the default of any other encoder.
+
+00:03:03.270 --> 00:03:07.993
+The static encoders use only the Basic Latin safe list, so the ranges
+
+00:03:07.993 --> 00:03:10.637
+you configured do not apply to them.
+
+00:03:10.637 --> 00:03:13.660
+An injected encoder follows your settings.
+
+00:03:14.410 --> 00:03:18.450
+The URL encoder and the JavaScript encoder work the same way.
+
+00:03:18.450 --> 00:03:23.516
+The Google Analytics filter of Orchard Core takes both in its constructor, and
+
+00:03:23.516 --> 00:03:26.410
+encodes the tracking ID with each of them.
+
+00:03:28.410 --> 00:03:30.045
+That's encoding settings:
+
+00:03:30.045 --> 00:03:34.210
+allow the Unicode ranges your text uses in the host application, and take
+
+00:03:34.210 --> 00:03:37.479
+the encoders from dependency injection in your own code.
+
+00:03:37.479 --> 00:03:38.850
+Thanks for watching.
+
