@@ -1,0 +1,204 @@
+1
+00:00:01,000 --> 00:00:05,981
+Scripts that draw part of a page need labels in the language of the visitor.
+
+2
+00:00:05,981 --> 00:00:10,659
+Orchard Core gives them strings from the same PO files as your C# code.
+
+3
+00:00:10,659 --> 00:00:16,430
+In this video, we'll write a localizer, pass its strings to a script, and translate them.
+
+4
+00:00:21,030 --> 00:00:25,829
+Your C# code translates text with a string localizer that reads PO files.
+
+5
+00:00:25,829 --> 00:00:30,386
+A script runs in the browser, where it can't call that localizer, but
+
+6
+00:00:30,386 --> 00:00:33,970
+the interface it draws still needs translated labels.
+
+7
+00:00:34,720 --> 00:00:36,848
+IJSLocalizer connects the two.
+
+8
+00:00:36,848 --> 00:00:41,340
+A localizer returns a dictionary for a group name, the view writes the
+
+9
+00:00:41,340 --> 00:00:45,300
+dictionary into the page, and the script reads it from there.
+
+10
+00:00:49,500 --> 00:00:53,287
+A localizer is a class that implements IJSLocalizer.
+
+11
+00:00:53,287 --> 00:00:59,033
+It injects the string localizer of its own type, and GetLocalizations receives the
+
+12
+00:00:59,033 --> 00:01:00,470
+name of a group.
+
+13
+00:01:01,220 --> 00:01:04,309
+When the group is yours, return a dictionary:
+
+14
+00:01:04,309 --> 00:01:08,731
+each key, such as AddPolicy, is the name the script reads, and each
+
+15
+00:01:08,731 --> 00:01:13,638
+value is a string localizer call whose English text becomes the message ID.
+
+16
+00:01:13,638 --> 00:01:16,000
+For any other group, return null.
+
+17
+00:01:16,750 --> 00:01:20,652
+Register the class in the Startup of your module with AddScoped.
+
+18
+00:01:20,652 --> 00:01:25,056
+Any number of modules can register a localizer, and each one answers only
+
+19
+00:01:25,056 --> 00:01:26,450
+the groups it owns.
+
+20
+00:01:30,650 --> 00:01:36,051
+In a Razor view, call GetJSLocalizations on the Orchard helper with a group name.
+
+21
+00:01:36,051 --> 00:01:41,950
+It asks every registered localizer, and returns the merged dictionary, translated for the
+
+22
+00:01:41,950 --> 00:01:43,750
+culture of the request.
+
+23
+00:01:44,500 --> 00:01:48,435
+Serialize the dictionary to JSON, and put it in a data attribute of
+
+24
+00:01:48,435 --> 00:01:50,538
+the element your script works on.
+
+25
+00:01:50,538 --> 00:01:52,640
+The strings arrive with the page.
+
+26
+00:01:53,390 --> 00:02:00,300
+In the script, find that element, parse the attribute once, and pass the dictionary to setTranslations.
+
+27
+00:02:01,050 --> 00:02:08,005
+Orchard Core's helper merges it into one shared object, which getTranslations returns anywhere in your app.
+
+28
+00:02:08,005 --> 00:02:13,790
+A component reads a string by its key, such as AddPolicy, and shows the translated text.
+
+29
+00:02:17,990 --> 00:02:20,643
+Translations are ordinary PO entries.
+
+30
+00:02:20,643 --> 00:02:25,208
+The context is the full name of the localizer class, and the message
+
+31
+00:02:25,208 --> 00:02:28,910
+ID is the English text from the string localizer call.
+
+32
+00:02:29,660 --> 00:02:33,039
+Put the file where Orchard Core looks for PO files:
+
+33
+00:02:33,039 --> 00:02:37,485
+in a Localization folder of your module, of the site, or of a tenant.
+
+34
+00:02:37,485 --> 00:02:40,390
+Restart the application after you edit one.
+
+35
+00:02:44,605 --> 00:02:47,420
+The CORS settings page is drawn by a script.
+
+36
+00:02:47,420 --> 00:02:51,587
+Its search box, its Add a policy button and its Default Policy badge
+
+37
+00:02:51,587 --> 00:02:54,065
+are strings from the cors-admin group.
+
+38
+00:02:54,542 --> 00:02:59,277
+Request the page in French, and the same strings come from a PO file instead.
+
+39
+00:02:59,277 --> 00:03:01,332
+Nothing in the script changes.
+
+40
+00:03:01,811 --> 00:03:05,962
+Open a policy, and its titles, hints and buttons are translated too.
+
+41
+00:03:05,962 --> 00:03:10,281
+Each one is a key of the dictionary that the view passed to the script.
+
+42
+00:03:14,481 --> 00:03:17,684
+A view can request several groups in one call.
+
+43
+00:03:17,684 --> 00:03:22,549
+Each group is resolved in turn, a localizer that returns null is skipped,
+
+44
+00:03:22,549 --> 00:03:26,121
+and when two entries share a key, the last one wins.
+
+45
+00:03:26,871 --> 00:03:29,367
+Translators work from a template.
+
+46
+00:03:29,367 --> 00:03:36,727
+Add the OrchardCore.Localization.Build package to your project, and run its UpdateLocalizationCatalog target.
+
+47
+00:03:36,727 --> 00:03:42,231
+It reads the string localizer calls in C# and Razor code, not your script files.
+
+48
+00:03:44,231 --> 00:03:46,247
+That's JavaScript localization:
+
+49
+00:03:46,247 --> 00:03:50,333
+a localizer per module, a dictionary per group, and the same PO files
+
+50
+00:03:50,333 --> 00:03:52,675
+for your scripts as for your C# code.
+
+51
+00:03:52,675 --> 00:03:54,091
+Thanks for watching.
+
