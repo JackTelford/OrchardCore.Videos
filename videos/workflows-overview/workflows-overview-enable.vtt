@@ -1,0 +1,23 @@
+WEBVTT
+
+00:00:03.205 --> 00:00:08.606
+Orchard Core turns capabilities on as features, and Workflows is one of them.
+
+00:00:08.606 --> 00:00:12.445
+Let's open Tools, Features, and search for workflows.
+
+00:00:12.898 --> 00:00:15.953
+Workflows is the feature the others build on.
+
+00:00:15.953 --> 00:00:22.602
+HTTP Workflows Activities, Session Workflows Activities, and Timer Workflows Activities add activities of
+
+00:00:22.602 --> 00:00:25.478
+their own, and each is enabled separately.
+
+00:00:25.932 --> 00:00:27.739
+Let's enable Workflows.
+
+00:00:27.739 --> 00:00:33.782
+The Contents module provides the content events this video uses, once Workflows is enabled.
+

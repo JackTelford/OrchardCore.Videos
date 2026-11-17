@@ -21,7 +21,52 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Why workflows"
+    },
+    {
+      "time": "0:42",
+      "title": "The parts of a workflow"
+    },
+    {
+      "time": "1:28",
+      "title": "Enable Workflows"
+    },
+    {
+      "time": "2:03",
+      "title": "Create a workflow"
+    },
+    {
+      "time": "2:44",
+      "title": "The designer"
+    },
+    {
+      "time": "3:25",
+      "title": "Build a workflow"
+    },
+    {
+      "time": "4:25",
+      "title": "Run the workflow"
+    },
+    {
+      "time": "4:49",
+      "title": "Follow the instances"
+    },
+    {
+      "time": "5:10",
+      "title": "What else workflows can do"
+    },
+    {
+      "time": "5:47",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -48,5 +93,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows"
-  }
+  },
+  "length": "5:56"
 }

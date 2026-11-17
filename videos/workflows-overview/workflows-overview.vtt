@@ -1,0 +1,254 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.549
+When an editor publishes an article or a visitor registers, something else often has to happen.
+
+00:00:06.549 --> 00:00:11.329
+The Workflows module lets you describe that follow-up as a diagram, with no code.
+
+00:00:11.329 --> 00:00:14.680
+In this video, we'll build a workflow and watch it run.
+
+00:00:19.280 --> 00:00:22.724
+Sites often need to react to what happens on them:
+
+00:00:22.724 --> 00:00:26.968
+an article is published, a user registers, a form is submitted.
+
+00:00:26.968 --> 00:00:31.520
+Doing it by hand is slow, and writing code for every case is costly.
+
+00:00:32.270 --> 00:00:35.708
+With the Workflows module, you draw the reaction in the admin.
+
+00:00:35.708 --> 00:00:39.551
+Orchard Core runs the diagram each time the event happens, and you can
+
+00:00:39.551 --> 00:00:41.270
+inspect the runs afterwards.
+
+00:00:45.470 --> 00:00:47.985
+A workflow is a diagram of activities.
+
+00:00:47.985 --> 00:00:53.587
+An event is an activity that waits for something to happen, such as content being published.
+
+00:00:53.587 --> 00:00:55.930
+Only an event can start a workflow.
+
+00:00:56.680 --> 00:01:01.785
+A task is an activity that does something, such as showing a notification,
+
+00:01:01.785 --> 00:01:04.720
+sending an email, or publishing content.
+
+00:01:05.470 --> 00:01:10.095
+Each activity has outcomes, which are the exits it can take, such as Done.
+
+00:01:10.095 --> 00:01:15.530
+You connect an outcome to the next activity, and that connection is called a transition.
+
+00:01:16.280 --> 00:01:22.741
+When the event happens, Orchard Core starts an instance of the workflow and follows the transitions.
+
+00:01:22.741 --> 00:01:27.800
+An instance can finish at once, or wait for another event and continue later.
+
+00:01:32.005 --> 00:01:37.406
+Orchard Core turns capabilities on as features, and Workflows is one of them.
+
+00:01:37.406 --> 00:01:41.245
+Let's open Tools, Features, and search for workflows.
+
+00:01:41.698 --> 00:01:44.753
+Workflows is the feature the others build on.
+
+00:01:44.753 --> 00:01:51.402
+HTTP Workflows Activities, Session Workflows Activities, and Timer Workflows Activities add activities of
+
+00:01:51.402 --> 00:01:54.278
+their own, and each is enabled separately.
+
+00:01:54.732 --> 00:01:56.539
+Let's enable Workflows.
+
+00:01:56.539 --> 00:02:02.582
+The Contents module provides the content events this video uses, once Workflows is enabled.
+
+00:02:06.789 --> 00:02:09.849
+Workflows is under Design in the admin menu.
+
+00:02:09.849 --> 00:02:12.052
+The page lists your workflows.
+
+00:02:12.052 --> 00:02:14.929
+This site has none, so the list is empty.
+
+00:02:15.416 --> 00:02:17.394
+Let's select Create Workflow.
+
+00:02:17.394 --> 00:02:21.123
+It asks only for a name, and the name says what the workflow
+
+00:02:21.123 --> 00:02:25.136
+does, such as notifying the editors when an article is published.
+
+00:02:25.627 --> 00:02:27.282
+Let's open More settings.
+
+00:02:27.282 --> 00:02:31.337
+It holds options, such as whether the workflow is enabled and how many
+
+00:02:31.337 --> 00:02:32.938
+instances run at a time.
+
+00:02:32.938 --> 00:02:36.407
+The defaults suit most workflows, so they stay as they are.
+
+00:02:36.878 --> 00:02:39.518
+Let's select Create and open the designer.
+
+00:02:39.518 --> 00:02:43.478
+It saves the workflow and opens the designer with an empty canvas.
+
+00:02:47.697 --> 00:02:51.308
+The toolbar shows the name of the workflow, with a link back to
+
+00:02:51.308 --> 00:02:54.397
+Workflows, and the Publish and Discard draft buttons.
+
+00:02:54.853 --> 00:03:00.102
+The Activities pane on the left lists everything you can add, grouped by category.
+
+00:03:00.102 --> 00:03:03.323
+Search it by name, or show only Events or Tasks.
+
+00:03:03.815 --> 00:03:07.782
+The canvas in the middle is where the workflow takes shape.
+
+00:03:07.782 --> 00:03:13.275
+A workflow runs when something happens, so an empty one offers events to start with.
+
+00:03:13.733 --> 00:03:17.007
+On the right, the workflow panel has three tabs.
+
+00:03:17.007 --> 00:03:22.343
+Variables holds named values, Workflow holds settings such as the name, and Issues
+
+00:03:22.343 --> 00:03:24.223
+lists the problems found.
+
+00:03:28.430 --> 00:03:32.118
+Under Start with an event, let's pick the Content Published Event.
+
+00:03:32.118 --> 00:03:36.780
+The first event you add becomes the start activity, and its card shows a Start badge.
+
+00:03:37.260 --> 00:03:40.225
+Its settings open at the bottom of the canvas.
+
+00:03:40.225 --> 00:03:43.703
+Content Types limits the event to the types you choose.
+
+00:03:43.703 --> 00:03:47.750
+Let's pick Article, so other content does not start the workflow.
+
+00:03:48.232 --> 00:03:50.982
+Each activity shows its outcomes as ports.
+
+00:03:50.982 --> 00:03:55.165
+Let's point at the Done port, where a plus sign appears, then click
+
+00:03:55.165 --> 00:03:56.942
+it and search for Notify.
+
+00:03:57.403 --> 00:03:59.195
+Let's select Notify Task.
+
+00:03:59.195 --> 00:04:03.243
+It is added to the right, connected to Done by a transition, and
+
+00:04:03.243 --> 00:04:05.903
+it displays a notification when it runs.
+
+00:04:06.354 --> 00:04:10.643
+A message is required, so the card and the Issues tab flag a problem.
+
+00:04:10.643 --> 00:04:14.704
+Let's type a message and leave the field, and the problem clears.
+
+00:04:15.159 --> 00:04:18.940
+The designer saves your changes as a draft while you work, and a
+
+00:04:18.940 --> 00:04:20.290
+draft does not run.
+
+00:04:20.290 --> 00:04:24.179
+Let's select Publish, which makes the draft the version that runs.
+
+00:04:28.388 --> 00:04:29.734
+Let's trigger it.
+
+00:04:29.734 --> 00:04:35.588
+Under Content, Content Items, Edit opens an article in the editor, which has a Publish button.
+
+00:04:36.040 --> 00:04:37.595
+Let's select Publish.
+
+00:04:37.595 --> 00:04:41.970
+That makes the Content Published Event happen, so the workflow starts.
+
+00:04:41.970 --> 00:04:46.748
+The Notify Task shows its message, next to the notification Orchard Core adds
+
+00:04:46.748 --> 00:04:48.590
+when content is published.
+
+00:04:52.816 --> 00:04:57.762
+Back in Design, Workflows, the workflow has an Instances badge, because each run
+
+00:04:57.762 --> 00:05:00.236
+of a workflow is kept as an instance.
+
+00:05:00.690 --> 00:05:04.638
+The page counts the instances by status, and this one is Finished.
+
+00:05:04.638 --> 00:05:08.970
+Let's open it to see the activities that ran, highlighted on the diagram.
+
+00:05:13.170 --> 00:05:17.825
+HTTP Workflows Activities receive requests and call web services.
+
+00:05:17.825 --> 00:05:21.169
+Timer Workflows Activities run on a schedule.
+
+00:05:21.169 --> 00:05:24.710
+Other modules add events and tasks of their own.
+
+00:05:25.460 --> 00:05:29.623
+A workflow can branch with an If Else Task, repeat with loops, and
+
+00:05:29.623 --> 00:05:31.415
+keep values in variables.
+
+00:05:31.415 --> 00:05:33.960
+A separate video covers them in depth.
+
+00:05:34.710 --> 00:05:36.762
+Permissions guard workflows.
+
+00:05:36.762 --> 00:05:42.798
+Manage workflows is needed to build them, and Execute workflows to run them from the designer.
+
+00:05:42.798 --> 00:05:46.420
+By default, only administrators have Manage workflows.
+
+00:05:48.420 --> 00:05:52.518
+Workflows let a site react to what happens on it, with activities you
+
+00:05:52.518 --> 00:05:53.939
+connect on a canvas.
+
+00:05:53.939 --> 00:05:55.360
+Thanks for watching.
+

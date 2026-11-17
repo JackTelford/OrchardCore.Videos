@@ -1,0 +1,20 @@
+WEBVTT
+
+00:00:03.209 --> 00:00:04.555
+Let's trigger it.
+
+00:00:04.555 --> 00:00:10.409
+Under Content, Content Items, Edit opens an article in the editor, which has a Publish button.
+
+00:00:10.861 --> 00:00:12.416
+Let's select Publish.
+
+00:00:12.416 --> 00:00:16.791
+That makes the Content Published Event happen, so the workflow starts.
+
+00:00:16.791 --> 00:00:21.569
+The Notify Task shows its message, next to the notification Orchard Core adds
+
+00:00:21.569 --> 00:00:23.411
+when content is published.
+
