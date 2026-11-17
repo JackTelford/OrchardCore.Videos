@@ -1,0 +1,230 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.017
+A recipe changes a site one step at a time.
+
+00:00:04.017 --> 00:00:09.188
+Orchard Core ships steps for features, themes, roles and content, and a module
+
+00:00:09.188 --> 00:00:10.543
+can add its own.
+
+00:00:10.543 --> 00:00:15.160
+This video shows how a step handler is written, registered, and used.
+
+00:00:19.760 --> 00:00:22.652
+A recipe is a JSON file with a list of steps.
+
+00:00:22.652 --> 00:00:24.296
+Each step is an object.
+
+00:00:24.296 --> 00:00:28.265
+Its name says which step it is, and its other properties are the
+
+00:00:28.265 --> 00:00:30.080
+data that step works with.
+
+00:00:30.830 --> 00:00:34.509
+To run a recipe, Orchard Core takes its steps in order.
+
+00:00:34.509 --> 00:00:39.394
+It evaluates the script expressions in a step's values, then hands the step
+
+00:00:39.394 --> 00:00:41.082
+to every step handler.
+
+00:00:41.082 --> 00:00:44.580
+A handler acts only when the step's name is its own.
+
+00:00:45.330 --> 00:00:48.796
+The same handlers run wherever Orchard Core runs a recipe:
+
+00:00:48.796 --> 00:00:53.129
+on the Recipes page under Tools, during setup, in a deployment import, and
+
+00:00:53.129 --> 00:00:54.537
+in a data migration.
+
+00:00:54.537 --> 00:00:56.920
+A step you write works in all of them.
+
+00:01:01.120 --> 00:01:06.552
+A step handler implements I Recipe Step Handler, which has one method, Execute Async.
+
+00:01:06.552 --> 00:01:11.148
+Orchard Core calls it for every step, passing a context with the step's
+
+00:01:11.148 --> 00:01:14.610
+Name, the Step as a JSON object, and an Errors list.
+
+00:01:15.360 --> 00:01:18.664
+Named Recipe Step Handler does the name check for you.
+
+00:01:18.664 --> 00:01:22.905
+Pass the step's name to its constructor, and it calls Handle Async only
+
+00:01:22.905 --> 00:01:24.667
+for a step with that name.
+
+00:01:24.667 --> 00:01:26.540
+The comparison ignores case.
+
+00:01:27.290 --> 00:01:29.716
+The Themes step is a complete example.
+
+00:01:29.716 --> 00:01:34.071
+It derives from Named Recipe Step Handler, passes Themes as its name, and
+
+00:01:34.071 --> 00:01:37.710
+receives the services it works with through its constructor.
+
+00:01:38.460 --> 00:01:42.066
+Handle Async reads the step into a model with To Object.
+
+00:01:42.066 --> 00:01:46.835
+The properties of the model match the properties of the step, ignoring case.
+
+00:01:46.835 --> 00:01:50.150
+The handler then passes the values to its services.
+
+00:01:54.350 --> 00:01:58.546
+Orchard Core evaluates script expressions before any handler runs.
+
+00:01:58.546 --> 00:02:02.276
+By the time To Object reads the step, a value written as a
+
+00:02:02.276 --> 00:02:08.220
+JavaScript expression has been replaced by its result, so the handler never sees the expression.
+
+00:02:08.970 --> 00:02:13.695
+When the step's data does not fit a fixed class, read the JSON node yourself.
+
+00:02:13.695 --> 00:02:18.306
+The Shortcode Templates step calls Try Get Property Value on the step, then
+
+00:02:18.306 --> 00:02:21.950
+visits each property, whose key is the name of a template.
+
+00:02:26.150 --> 00:02:29.072
+A handler is not called until it is registered.
+
+00:02:29.072 --> 00:02:33.373
+In the Startup class of your module, call Add Recipe Execution Step with
+
+00:02:33.373 --> 00:02:36.130
+the handler type, as the Themes module does.
+
+00:02:36.880 --> 00:02:41.084
+The extension method adds the handler to the services of the tenant as
+
+00:02:41.084 --> 00:02:43.131
+a scoped I Recipe Step Handler.
+
+00:02:43.131 --> 00:02:48.110
+Being scoped, the handler's constructor can ask for any service the tenant provides.
+
+00:02:48.860 --> 00:02:53.175
+A Startup class without a Feature attribute belongs to the feature of the
+
+00:02:53.175 --> 00:02:57.054
+module itself, so the step exists only on tenants that enable it.
+
+00:02:57.054 --> 00:03:00.550
+A step that no handler claims is skipped without an error.
+
+00:03:04.750 --> 00:03:08.728
+A recipe is a file in the Recipes folder of a module or theme.
+
+00:03:08.728 --> 00:03:13.466
+Its top-level properties name and describe it, and each object in the steps
+
+00:03:13.466 --> 00:03:17.210
+list is a step, spelled with the name its handler expects.
+
+00:03:17.960 --> 00:03:22.458
+On the Recipes page under Tools, Orchard Core lists the recipes that are
+
+00:03:22.458 --> 00:03:25.687
+not setup recipes and do not carry the hidden tag.
+
+00:03:25.687 --> 00:03:29.550
+Run executes a recipe, and a notification reports the result.
+
+00:03:33.750 --> 00:03:38.085
+To report a problem, add a message to the Errors list of the context.
+
+00:03:38.085 --> 00:03:42.073
+The Recipes step does this when a recipe is not found, with the
+
+00:03:42.073 --> 00:03:46.350
+string localizer it receives, and then continues with the next item.
+
+00:03:47.100 --> 00:03:50.671
+When a step ends with errors, Orchard Core marks it as failed and
+
+00:03:50.671 --> 00:03:52.129
+stops the recipe there.
+
+00:03:52.129 --> 00:03:53.940
+The steps after it do not run.
+
+00:03:54.690 --> 00:03:58.996
+On the Recipes page, the notification says the recipe failed to run due
+
+00:03:58.996 --> 00:04:02.127
+to the following errors, then lists your messages.
+
+00:04:02.127 --> 00:04:06.097
+Write each one for the person who runs the recipe, as a localized
+
+00:04:06.097 --> 00:04:08.110
+string without sensitive data.
+
+00:04:08.860 --> 00:04:13.773
+A thrown exception reaches the notification only as a general message that names
+
+00:04:13.773 --> 00:04:16.401
+the step, and its details go to the log.
+
+00:04:16.401 --> 00:04:21.200
+Add to the Errors list for anything the person who runs the recipe can act on.
+
+00:04:25.400 --> 00:04:29.887
+Named Recipe Step Handler suits a class that handles one step name.
+
+00:04:29.887 --> 00:04:35.234
+To handle several names, implement I Recipe Step Handler directly and compare the
+
+00:04:35.234 --> 00:04:38.430
+names yourself, as the Translations step does.
+
+00:04:42.630 --> 00:04:46.981
+To write a step, derive from Named Recipe Step Handler with the step's
+
+00:04:46.981 --> 00:04:51.619
+name, read the step with To Object, and report problems in the Errors list.
+
+00:04:51.619 --> 00:04:54.940
+Register the handler with Add Recipe Execution Step.
+
+00:04:55.690 --> 00:04:58.854
+Then spell the step's name in the steps of a recipe.
+
+00:04:58.854 --> 00:05:04.037
+A separate video covers deployment steps, which contribute the recipe steps that handlers
+
+00:05:04.037 --> 00:05:05.510
+like this one import.
+
+00:05:07.510 --> 00:05:09.645
+That is how a recipe step works:
+
+00:05:09.645 --> 00:05:13.745
+a handler that owns a name, a registration in Startup, and a recipe
+
+00:05:13.745 --> 00:05:15.150
+that uses the name.
+
+00:05:15.150 --> 00:05:16.610
+Thanks for watching.
+
