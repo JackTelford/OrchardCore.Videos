@@ -1,0 +1,260 @@
+1
+00:00:01,000 --> 00:00:05,547
+The admin menu on the left is built from entries that modules provide.
+
+2
+00:00:05,547 --> 00:00:07,821
+In this video, you add your own:
+
+3
+00:00:07,821 --> 00:00:12,428
+a top-level item with two children, each opening a page of your module.
+
+4
+00:00:12,428 --> 00:00:15,420
+Then you enable the module and use the menu.
+
+5
+00:00:20,020 --> 00:00:24,461
+The goal is a top-level item, My Root View, with two items under
+
+6
+00:00:24,461 --> 00:00:26,618
+it, Child One and Child Two.
+
+7
+00:00:26,618 --> 00:00:31,440
+Each child opens its own page, made of a controller action and a view.
+
+8
+00:00:32,190 --> 00:00:37,797
+The module references the OrchardCore.Admin package, and the site references the module.
+
+9
+00:00:37,797 --> 00:00:40,660
+A separate video covers creating a module.
+
+10
+00:00:44,860 --> 00:00:46,334
+Start with the pages.
+
+11
+00:00:46,334 --> 00:00:51,086
+The controller carries the Admin attribute, which gives its pages the admin theme
+
+12
+00:00:51,086 --> 00:00:53,980
+and requires the Access admin panel permission.
+
+13
+00:00:54,730 --> 00:00:58,292
+The ChildOne and ChildTwo actions each return their view.
+
+14
+00:00:58,292 --> 00:01:02,646
+Orchard Core maps them to admin addresses made of the admin prefix, the
+
+15
+00:01:02,646 --> 00:01:05,190
+module, the controller, and the action.
+
+16
+00:01:05,940 --> 00:01:11,109
+The two views are files in the DemoNav folder, inside the Views folder of the module.
+
+17
+00:01:11,109 --> 00:01:15,085
+Each holds a single paragraph, View One or View Two, so the page
+
+18
+00:01:15,085 --> 00:01:16,960
+shows which item opened it.
+
+19
+00:01:21,160 --> 00:01:25,530
+The menu entries come from a class that implements INavigationProvider.
+
+20
+00:01:25,530 --> 00:01:29,957
+By convention it is called AdminMenu and sits at the root of the module.
+
+21
+00:01:29,957 --> 00:01:33,930
+It takes an IStringLocalizer, so the captions can be translated.
+
+22
+00:01:34,680 --> 00:01:39,672
+BuildNavigationAsync receives the name of the menu being built, and a builder.
+
+23
+00:01:39,672 --> 00:01:43,772
+The admin menu is named admin, so for any other menu the method
+
+24
+00:01:43,772 --> 00:01:46,030
+returns without adding anything.
+
+25
+00:01:46,780 --> 00:01:51,390
+The builder holds the menu, and every provider adds its items to it.
+
+26
+00:01:51,390 --> 00:01:56,250
+Add takes a caption, a position, and a function that describes the item.
+
+27
+00:01:56,250 --> 00:01:59,240
+Adding inside another Add creates a child.
+
+28
+00:01:59,990 --> 00:02:02,315
+Action gives an item its page:
+
+29
+00:02:02,315 --> 00:02:07,933
+the action name, the controller name, and route values, where area is the module.
+
+30
+00:02:07,933 --> 00:02:12,970
+My Root View has no page of its own, so selecting it opens its children.
+
+31
+00:02:17,170 --> 00:02:21,086
+The second argument of Add is the position, and items on the same
+
+32
+00:02:21,086 --> 00:02:22,685
+level are sorted by it.
+
+33
+00:02:22,685 --> 00:02:24,229
+Numbers sort by value.
+
+34
+00:02:24,229 --> 00:02:28,090
+The anchors before and after sit at the two ends of the numbers.
+
+35
+00:02:28,840 --> 00:02:33,926
+PrefixPosition builds a text position from the caption, so sibling items sort by
+
+36
+00:02:33,926 --> 00:02:39,130
+their translated captions, compared character by character without regard to case.
+
+37
+00:02:39,130 --> 00:02:43,980
+A text position sorts after every number, even after the anchor named after.
+
+38
+00:02:44,730 --> 00:02:48,606
+The positions start and end go before and after everything.
+
+39
+00:02:48,606 --> 00:02:53,317
+The Tools and Settings items use end, so My Root View appears above them.
+
+40
+00:02:53,317 --> 00:02:57,790
+A top-level item that must keep a fixed place takes a number instead.
+
+41
+00:03:01,990 --> 00:03:04,969
+A provider takes part only when it is registered.
+
+42
+00:03:04,969 --> 00:03:09,574
+In the Startup class of the module, AddNavigationProvider adds it as a service,
+
+43
+00:03:09,574 --> 00:03:12,770
+and Orchard Core calls it each time it builds a menu.
+
+44
+00:03:14,470 --> 00:03:20,450
+In the admin, open Tools, then Features, which lists the features of the installed modules.
+
+45
+00:03:21,526 --> 00:03:24,026
+Search for MyModule, and select Enable.
+
+46
+00:03:24,026 --> 00:03:27,526
+A message confirms that the feature MyModule was enabled.
+
+47
+00:03:27,997 --> 00:03:32,046
+My Root View is in the admin menu, above Tools and Settings.
+
+48
+00:03:32,046 --> 00:03:34,010
+It has no page of its own:
+
+49
+00:03:34,010 --> 00:03:37,017
+selecting it opens Child One and Child Two.
+
+50
+00:03:37,482 --> 00:03:38,737
+Select Child One.
+
+51
+00:03:38,737 --> 00:03:42,668
+The page opens in the admin theme with the paragraph View One, and
+
+52
+00:03:42,668 --> 00:03:44,852
+the menu keeps Child One selected.
+
+53
+00:03:45,315 --> 00:03:51,025
+Select Child Two, and the second view opens the same way, with the paragraph View Two.
+
+54
+00:03:55,225 --> 00:04:00,188
+Most of the modules of Orchard Core extend AdminNavigationProvider instead.
+
+55
+00:04:00,188 --> 00:04:05,765
+It checks the menu name for you, so you override BuildAsync and add your items there.
+
+56
+00:04:06,515 --> 00:04:09,112
+Items with the same caption are merged.
+
+57
+00:04:09,112 --> 00:04:13,902
+This provider, from the Background Tasks module, adds an item under Tools, so
+
+58
+00:04:13,902 --> 00:04:17,076
+the Tools item that already exists gains a child.
+
+59
+00:04:17,076 --> 00:04:20,655
+Your own provider can add to any existing item this way.
+
+60
+00:04:21,405 --> 00:04:26,226
+Permission hides an item, and its children, from users who lack that permission.
+
+61
+00:04:26,226 --> 00:04:30,710
+It does not protect the page, so the action checks the permission as well.
+
+62
+00:04:30,710 --> 00:04:33,065
+A separate video covers permissions.
+
+63
+00:04:35,065 --> 00:04:37,960
+That is how a module adds to the admin menu:
+
+64
+00:04:37,960 --> 00:04:43,809
+pages to open, a navigation provider that describes the items, and its registration in Startup.
+
+65
+00:04:43,809 --> 00:04:45,315
+Thanks for watching.
+
