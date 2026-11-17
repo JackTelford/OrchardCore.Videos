@@ -31,7 +31,7 @@ public static class Scenes
         }
     }
 
-    // Imports seed.json (the thumbnail profile, the renditions template and the Renditions page) through Tools > Deployments > JSON Import.
+    // Imports recorder/seed.json (the thumbnail profile, the renditions template and the Renditions page) through Tools > Deployments > JSON Import.
     public static async Task PrepareAsync(IBrowser browser)
     {
         var context = await browser.NewContextAsync(new BrowserNewContextOptions { StorageStatePath = StatePath });
@@ -39,7 +39,7 @@ public static class Scenes
         page.SetDefaultTimeout(60000);
         await page.GotoAsync(BaseUrl + "/Admin/DeploymentPlan/Import/Json", new PageGotoOptions { WaitUntil = WaitUntilState.NetworkIdle });
         await page.Locator(".CodeMirror").First.WaitForAsync(new LocatorWaitForOptions { State = WaitForSelectorState.Attached });
-        var text = await File.ReadAllTextAsync(Path.Combine(Root, "seed.json"));
+        var text = await File.ReadAllTextAsync(Path.Combine(Root, "recorder", "seed.json"));
         await page.EvaluateAsync("text => document.querySelector('.CodeMirror').CodeMirror.setValue(text)", text);
         await Task.Delay(500);
         await page.Locator("button:has-text(\"Import\")").First.ClickAsync();
