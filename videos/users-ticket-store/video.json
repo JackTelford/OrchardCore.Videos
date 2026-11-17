@@ -53,5 +53,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Users.Authentication.CacheTicketStore"
-  }
+  },
+  "length": "3:48"
 }
