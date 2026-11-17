@@ -1,0 +1,167 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.674
+While you build a site, you often need to know which template drew
+
+00:00:04.674 --> 00:00:05.848
+a part of a page.
+
+00:00:05.848 --> 00:00:08.400
+The Debugging settings answer that question.
+
+00:00:08.400 --> 00:00:12.534
+In this video, you'll turn on shape debug information, read the comments it
+
+00:00:12.534 --> 00:00:14.320
+adds, and see who can use it.
+
+00:00:18.920 --> 00:00:21.796
+Orchard Core builds a page from shapes.
+
+00:00:21.796 --> 00:00:26.207
+A shape holds the data to display, and what draws it, usually a
+
+00:00:26.207 --> 00:00:28.636
+template, is called its binding.
+
+00:00:28.636 --> 00:00:32.982
+Shapes sit inside other shapes, so a page is a tree of shapes,
+
+00:00:32.982 --> 00:00:34.900
+down to small fragments.
+
+00:00:35.650 --> 00:00:39.226
+A module provides a default template for a shape, and a theme can
+
+00:00:39.226 --> 00:00:40.736
+replace it with its own.
+
+00:00:40.736 --> 00:00:44.262
+Templates created in the admin can draw shapes too, so it can be
+
+00:00:44.262 --> 00:00:46.830
+hard to tell which one drew a part of a page.
+
+00:00:47.580 --> 00:00:50.567
+Shape debug information answers that question.
+
+00:00:50.567 --> 00:00:54.933
+When it is on, Orchard Core writes two HTML comments around each shape
+
+00:00:54.933 --> 00:00:57.518
+that a template or other binding draws.
+
+00:00:57.518 --> 00:01:02.630
+A browser does not display comments, so they appear only in the source of the page.
+
+00:01:06.853 --> 00:01:10.512
+In the admin menu, open Settings, and then Debugging.
+
+00:01:10.512 --> 00:01:15.783
+The Settings module is always enabled, so there is no feature to turn on first.
+
+00:01:16.240 --> 00:01:21.320
+The page has one option, Write shape debug information, and it is off by default.
+
+00:01:21.320 --> 00:01:25.699
+Its hint says that it wraps rendered shapes in HTML comments, to help
+
+00:01:25.699 --> 00:01:29.610
+identify the template or binding that produced each fragment.
+
+00:01:30.080 --> 00:01:32.621
+Let's check the box and select Save.
+
+00:01:32.621 --> 00:01:38.790
+A message reads, Site settings updated successfully, and the change applies to the running site.
+
+00:01:43.022 --> 00:01:45.441
+Let's open the home page of the site.
+
+00:01:45.441 --> 00:01:50.222
+It looks like any other page, because a browser does not display HTML comments.
+
+00:01:50.682 --> 00:01:54.223
+To read the comments, we open the source of the page, which a
+
+00:01:54.223 --> 00:01:57.024
+browser offers as the command View page source.
+
+00:01:57.024 --> 00:02:00.987
+Orchard Core has written a comment before and after each shape that a
+
+00:02:00.987 --> 00:02:02.942
+template or other binding drew.
+
+00:02:03.422 --> 00:02:05.985
+A start comment begins with shape-start.
+
+00:02:05.985 --> 00:02:08.325
+After type, it gives the shape type.
+
+00:02:08.325 --> 00:02:12.727
+After bindings, it gives the binding name, an arrow, the template it came
+
+00:02:12.727 --> 00:02:15.402
+from, and in brackets the kind of binding.
+
+00:02:15.865 --> 00:02:20.123
+Shapes sit inside other shapes, so comments sit inside other comments.
+
+00:02:20.123 --> 00:02:24.549
+Each shape ends with a comment that begins with shape-end and repeats the
+
+00:02:24.549 --> 00:02:27.575
+type, so you can match every start with its end.
+
+00:02:31.784 --> 00:02:36.118
+The setting applies to the whole site and to every visitor, and the
+
+00:02:36.118 --> 00:02:38.908
+comments name the templates of your site.
+
+00:02:38.908 --> 00:02:43.954
+When you finish, return to Settings, Debugging, clear the box, and select Save.
+
+00:02:44.420 --> 00:02:46.707
+Let's reload the source of the home page.
+
+00:02:46.707 --> 00:02:49.967
+The comments are gone, and the source is as it was before you
+
+00:02:49.967 --> 00:02:51.330
+turned the setting on.
+
+00:02:55.530 --> 00:02:59.434
+The Debugging page requires the permission Manage debugging settings.
+
+00:02:59.434 --> 00:03:04.014
+The permission Manage settings includes it, together with Manage general settings.
+
+00:03:04.014 --> 00:03:08.386
+The Administrator role has them by default, and you can grant Manage debugging
+
+00:03:08.386 --> 00:03:10.000
+settings to another role.
+
+00:03:10.750 --> 00:03:16.171
+Another option for building a site is Resource Debug Mode, on the General settings page.
+
+00:03:16.171 --> 00:03:21.419
+It decides whether scripts and stylesheets load in their debuggable or minified form.
+
+00:03:21.419 --> 00:03:24.360
+A separate video covers the General settings.
+
+00:03:26.360 --> 00:03:30.250
+The Debugging page has one option, Write shape debug information.
+
+00:03:30.250 --> 00:03:34.194
+Turn it on while you build, read the comments to find the template
+
+00:03:34.194 --> 00:03:37.755
+behind any part of a page, and turn it off when you finish.
+
+00:03:37.755 --> 00:03:39.180
+Thanks for watching.
+
