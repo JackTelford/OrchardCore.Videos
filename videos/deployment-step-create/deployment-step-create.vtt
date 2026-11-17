@@ -1,0 +1,245 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.547
+A deployment plan collects what you export from a site into one package.
+
+00:00:05.547 --> 00:00:09.803
+In this video, we'll read how the All Features step is written, and
+
+00:00:09.803 --> 00:00:12.252
+what your own deployment step needs:
+
+00:00:12.252 --> 00:00:15.400
+a step, a source, an editor, and a registration.
+
+00:00:20.000 --> 00:00:23.247
+A deployment plan is an ordered list of steps.
+
+00:00:23.247 --> 00:00:28.493
+When you execute it, Orchard Core passes each step to every deployment source.
+
+00:00:28.493 --> 00:00:34.300
+The sources add recipe steps and files to a package, which contains a Recipe.json file.
+
+00:00:35.050 --> 00:00:40.309
+A deployment step of your own has three parts, which one registration ties together.
+
+00:00:40.309 --> 00:00:44.634
+The step stores its settings in the plan, and the source adds recipe
+
+00:00:44.634 --> 00:00:46.796
+steps and files to the package.
+
+00:00:46.796 --> 00:00:50.770
+A display driver gives the step its card, summary, and editor.
+
+00:00:54.970 --> 00:00:57.093
+Let's read the All Features step.
+
+00:00:57.093 --> 00:00:59.107
+It derives from DeploymentStep.
+
+00:00:59.107 --> 00:01:03.354
+Name is saved with the plan, and the other properties hold its settings,
+
+00:01:03.354 --> 00:01:06.130
+here a single option, IgnoreDisabledFeatures.
+
+00:01:06.880 --> 00:01:11.037
+Category groups the step in the list of steps you can add to a plan.
+
+00:01:11.037 --> 00:01:16.430
+All Features uses Infrastructure, one of the CommonLocalizationSources that modules share.
+
+00:01:17.180 --> 00:01:21.165
+Title is the display name of the step, and the heading of its
+
+00:01:21.165 --> 00:01:22.771
+add and edit screens.
+
+00:01:22.771 --> 00:01:29.730
+A module declares its titles in an internal class of localization sources, such as FeaturesLocalizationSources.
+
+00:01:30.480 --> 00:01:33.334
+Mark Category and Title with JsonIgnore.
+
+00:01:33.334 --> 00:01:38.112
+A plan is saved as JSON, and these two values are never stored with it:
+
+00:01:38.112 --> 00:01:41.400
+they are always read from the type of the step.
+
+00:01:42.150 --> 00:01:46.934
+A plan stores each step under its full type name and its assembly name.
+
+00:01:46.934 --> 00:01:50.723
+The recipe step that creates plans uses the class name.
+
+00:01:50.723 --> 00:01:55.880
+If you rename or move the class, existing plans show the step as unavailable.
+
+00:02:00.080 --> 00:02:02.428
+A source implements IDeploymentSource.
+
+00:02:02.428 --> 00:02:07.125
+Deriving from DeploymentSourceBase checks the type of each step for you, and calls
+
+00:02:07.125 --> 00:02:09.900
+your ProcessAsync only for steps of your type.
+
+00:02:10.650 --> 00:02:14.979
+To add a recipe step, add a JSON object to the Steps of the result.
+
+00:02:14.979 --> 00:02:19.843
+The All Features source adds a Feature step that lists the enabled features,
+
+00:02:19.843 --> 00:02:24.350
+and the disabled ones too, unless Ignore disabled features is checked.
+
+00:02:25.100 --> 00:02:29.296
+To add a file, call SetFileAsync on the FileBuilder of the result, as
+
+00:02:29.296 --> 00:02:31.198
+the Custom File source does.
+
+00:02:31.198 --> 00:02:36.290
+Orchard Core creates sources with dependency injection, so a constructor can take the
+
+00:02:36.290 --> 00:02:38.080
+services the source needs.
+
+00:02:42.280 --> 00:02:47.255
+A display driver derives from DisplayDriver of DeploymentStep and your step.
+
+00:02:47.255 --> 00:02:52.170
+DisplayAsync builds a Summary shape, which the plan shows for the step, and
+
+00:02:52.170 --> 00:02:56.660
+a Thumbnail shape, which is the card in the list of available steps.
+
+00:02:57.410 --> 00:03:01.607
+Edit returns the editor shape, initialized from a view model.
+
+00:03:01.607 --> 00:03:06.870
+UpdateAsync binds the posted values to the step, and returns the editor again.
+
+00:03:07.620 --> 00:03:11.946
+To validate the input, add an error to the model state in UpdateAsync,
+
+00:03:11.946 --> 00:03:14.962
+as the Custom File step does for its File Name.
+
+00:03:14.962 --> 00:03:18.320
+The step is saved only when the model state is valid.
+
+00:03:19.070 --> 00:03:24.028
+Each shape is a Razor view in the Views folder of the module, usually under Items.
+
+00:03:24.028 --> 00:03:28.140
+The file name is the shape type, with dots in place of underscores.
+
+00:03:28.890 --> 00:03:30.747
+The edit view is the form.
+
+00:03:30.747 --> 00:03:34.462
+It binds an input to the view model with a tag helper, and
+
+00:03:34.462 --> 00:03:38.990
+uses the same wrapper and hint markup as the editors of the other steps.
+
+00:03:43.190 --> 00:03:47.892
+AddDeployment registers the source, the step, and the display driver together.
+
+00:03:47.892 --> 00:03:52.090
+The Features module calls it from its startup class for All Features.
+
+00:03:52.840 --> 00:03:57.119
+A module that works without Deployment, like Roles, calls it in a startup
+
+00:03:57.119 --> 00:04:00.476
+class marked RequireFeatures for OrchardCore.Deployment.
+
+00:04:00.476 --> 00:04:04.430
+The step is registered only when the Deployment feature is enabled.
+
+00:04:05.180 --> 00:04:09.498
+When the feature that registers a step is disabled, the plans that contain
+
+00:04:09.498 --> 00:04:11.118
+it keep the step's data.
+
+00:04:11.118 --> 00:04:15.760
+The plan shows the step as unavailable, with a Delete button and no Edit button.
+
+00:04:20.027 --> 00:04:22.410
+Let's use the All Features step.
+
+00:04:22.410 --> 00:04:28.617
+In Tools, Deployments, Plans, Add Deployment Plan asks for a name, and Create opens the plan.
+
+00:04:29.499 --> 00:04:32.345
+Add Step opens the Available Steps dialog.
+
+00:04:32.345 --> 00:04:37.799
+The steps are grouped by category, and the category of All Features is Infrastructure.
+
+00:04:38.264 --> 00:04:41.221
+Select Infrastructure to see the card of the step.
+
+00:04:41.221 --> 00:04:44.864
+It shows the title and the description from the thumbnail view.
+
+00:04:45.330 --> 00:04:46.917
+Add opens the editor.
+
+00:04:46.917 --> 00:04:51.441
+Its heading is the title of the step, and the checkbox, Ignore disabled
+
+00:04:51.441 --> 00:04:53.850
+features, comes from the edit view.
+
+00:04:54.317 --> 00:04:57.881
+Let's check Ignore disabled features, and select Create.
+
+00:04:57.881 --> 00:05:02.307
+The plan lists the step with its summary view, next to Edit and Delete.
+
+00:05:02.759 --> 00:05:05.197
+Execute lists the available targets.
+
+00:05:05.197 --> 00:05:09.610
+File Download builds the package from the steps of the plan, in order,
+
+00:05:09.610 --> 00:05:11.759
+and downloads it as a zip file.
+
+00:05:15.959 --> 00:05:20.677
+In the package, Recipe.json lists the recipe steps of the plan in order.
+
+00:05:20.677 --> 00:05:24.851
+The one that the source added is the Feature step, and its name
+
+00:05:24.851 --> 00:05:28.179
+property selects the recipe step that imports it.
+
+00:05:28.929 --> 00:05:35.683
+On import, FeatureStep, the recipe step handler named Feature, enables and disables those features.
+
+00:05:35.683 --> 00:05:39.029
+A separate video covers writing a recipe step.
+
+00:05:39.779 --> 00:05:45.820
+To send the package somewhere other than a download, implement IDeploymentTargetProvider, and register it.
+
+00:05:45.820 --> 00:05:49.757
+Each target names the route of an action that sends it, and Execute
+
+00:05:49.757 --> 00:05:52.239
+lists the targets next to File Download.
+
+00:05:54.239 --> 00:05:59.997
+A deployment step is a step class, a source, a display driver, and a registration.
+
+00:05:59.997 --> 00:06:01.699
+Thanks for watching.
+
