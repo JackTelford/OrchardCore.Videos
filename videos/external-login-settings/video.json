@@ -43,5 +43,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Users.ExternalAuthentication"
-  }
+  },
+  "length": "5:26"
 }

@@ -1,0 +1,296 @@
+1
+00:00:01,000 --> 00:00:04,583
+Many visitors already have an account with another service.
+
+2
+00:00:04,583 --> 00:00:09,213
+External authentication lets them use it to sign in to your Orchard Core site.
+
+3
+00:00:09,213 --> 00:00:14,560
+This video covers the feature, the login page it changes, and the settings that control it.
+
+4
+00:00:19,160 --> 00:00:23,986
+A provider feature, such as Google, Microsoft, GitHub, Meta or X, or an
+
+5
+00:00:23,986 --> 00:00:29,314
+OpenID Connect provider, adds a button to the login page when it is configured.
+
+6
+00:00:29,314 --> 00:00:34,015
+The provider confirms who the visitor is, and your site keeps a local
+
+7
+00:00:34,015 --> 00:00:35,770
+user account for them.
+
+8
+00:00:36,520 --> 00:00:40,795
+The External Authentication feature holds what every provider shares:
+
+9
+00:00:40,795 --> 00:00:44,615
+the pages a visitor sees on a first sign-in, a page to manage
+
+10
+00:00:44,615 --> 00:00:48,434
+linked accounts, and the settings for login and registration.
+
+11
+00:00:48,434 --> 00:00:52,310
+Each provider adds its own settings, covered in its own video.
+
+12
+00:00:53,060 --> 00:00:56,675
+Each time a visitor signs in with a provider, the site asks up
+
+13
+00:00:56,675 --> 00:00:58,482
+to three questions in order:
+
+14
+00:00:58,482 --> 00:01:02,469
+is this provider account already linked to a local user, does a local
+
+15
+00:01:02,469 --> 00:01:07,200
+user have the email address the provider shares, and are new registrations allowed?
+
+16
+00:01:11,500 --> 00:01:13,087
+Open Tools, Features.
+
+17
+00:01:13,087 --> 00:01:17,849
+A search for External Authentication does not list it at first, because the
+
+18
+00:01:17,849 --> 00:01:20,730
+Visibility filter hides on-demand features:
+
+19
+00:01:20,730 --> 00:01:25,080
+the ones Orchard Core turns on only when another feature needs them.
+
+20
+00:01:25,538 --> 00:01:27,054
+Clear Hide on demand.
+
+21
+00:01:27,054 --> 00:01:32,049
+External Authentication is listed, but its Enable button is inactive, so you cannot
+
+22
+00:01:32,049 --> 00:01:33,508
+turn it on yourself.
+
+23
+00:01:33,982 --> 00:01:36,533
+Enable a provider feature instead.
+
+24
+00:01:36,533 --> 00:01:43,614
+Here that is OpenID Connect Client Integration, with a provider named Example Accounts set up beforehand.
+
+25
+00:01:43,614 --> 00:01:49,928
+The Google, Microsoft, GitHub, Meta and X provider features depend on External Authentication
+
+26
+00:01:49,928 --> 00:01:51,332
+in the same way.
+
+27
+00:01:51,784 --> 00:01:52,928
+Search again.
+
+28
+00:01:52,928 --> 00:01:57,567
+External Authentication is enabled, and its Disable button is inactive.
+
+29
+00:01:57,567 --> 00:02:01,964
+A tooltip explains that the feature is enabled based on dependency.
+
+30
+00:02:06,166 --> 00:02:09,223
+Here is the login page for a signed-out visitor.
+
+31
+00:02:09,223 --> 00:02:12,845
+The local form is on the left, and on the right, under Use
+
+32
+00:02:12,845 --> 00:02:16,863
+another service to log in, each configured provider has a button.
+
+33
+00:02:16,863 --> 00:02:19,466
+This provider is named Example Accounts.
+
+34
+00:02:19,954 --> 00:02:22,024
+Let's select Example Accounts.
+
+35
+00:02:22,024 --> 00:02:27,084
+The provider confirms who the visitor is, then sends the browser back to the site.
+
+36
+00:02:27,542 --> 00:02:32,727
+The site refuses the sign-in with the message New registrations are disabled for this site.
+
+37
+00:02:32,727 --> 00:02:37,109
+The visitor has no local account, and the registration settings do not allow
+
+38
+00:02:37,109 --> 00:02:38,392
+one to be created.
+
+39
+00:02:42,611 --> 00:02:46,115
+To change that, open Settings, Security, Registration.
+
+40
+00:02:46,115 --> 00:02:51,663
+These External Authentication settings decide what happens when a visitor without a local
+
+41
+00:02:51,663 --> 00:02:53,941
+account signs in with a provider.
+
+42
+00:02:54,395 --> 00:02:57,167
+Disable new external registration is selected.
+
+43
+00:02:57,167 --> 00:03:01,004
+While it is, only people who already have a local account can sign
+
+44
+00:03:01,004 --> 00:03:02,337
+in with a provider.
+
+45
+00:03:02,337 --> 00:03:04,575
+That is why the visitor was refused.
+
+46
+00:03:05,145 --> 00:03:06,964
+Clear it, and select Save.
+
+47
+00:03:06,964 --> 00:03:11,285
+The site confirms with the message Site settings updated successfully.
+
+48
+00:03:11,768 --> 00:03:15,556
+Three options control what a first-time visitor is asked for:
+
+49
+00:03:15,556 --> 00:03:20,419
+Do not ask username, Do not ask email address, and Do not create local password.
+
+50
+00:03:20,419 --> 00:03:23,868
+Each one removes its fields from the registration form.
+
+51
+00:03:24,523 --> 00:03:28,754
+When all three are selected and the provider shares an email address, the
+
+52
+00:03:28,754 --> 00:03:31,913
+site creates the account directly and skips the form.
+
+53
+00:03:32,369 --> 00:03:37,384
+The last option, Use a script to generate userName based on external provider
+
+54
+00:03:37,384 --> 00:03:41,009
+claims, lets a developer write the rule for usernames.
+
+55
+00:03:45,287 --> 00:03:49,501
+Back on the login page, the visitor selects Example Accounts again.
+
+56
+00:03:49,501 --> 00:03:54,697
+This time the site accepts the sign-in and shows a page headed Create a new account.
+
+57
+00:03:55,155 --> 00:04:00,384
+The page says the visitor authenticated with the provider, and asks for the rest:
+
+58
+00:04:00,384 --> 00:04:06,095
+a Username, filled in with a generated value, an Email, a Password, and Confirm password.
+
+59
+00:04:06,553 --> 00:04:10,100
+The visitor completes the fields and selects Register.
+
+60
+00:04:10,100 --> 00:04:15,597
+The site creates the local account, links it to the provider, and signs the visitor in.
+
+61
+00:04:15,597 --> 00:04:21,863
+The visitor's page of external logins then lists the link under Registered Logins, as OpenIdConnect.
+
+62
+00:04:26,137 --> 00:04:30,970
+Open Settings, Security, User Login, and select the External Login tab.
+
+63
+00:04:30,970 --> 00:04:35,992
+Use external provider for login applies when only one provider is defined:
+
+64
+00:04:35,992 --> 00:04:39,507
+the login page then sends visitors straight to it.
+
+65
+00:04:39,971 --> 00:04:44,370
+The second option, Use a script to set user roles, user claims and
+
+66
+00:04:44,370 --> 00:04:50,968
+user properties based on external provider claims, runs a developer's script at each external sign-in.
+
+67
+00:04:50,968 --> 00:04:53,411
+This video does not cover scripts.
+
+68
+00:04:53,883 --> 00:04:57,703
+Select Use external provider for login, and select Save.
+
+69
+00:04:59,275 --> 00:05:03,944
+A signed-out visitor who opens the login page does not see the login form.
+
+70
+00:05:03,944 --> 00:05:08,439
+The browser goes to the provider and comes back with the visitor signed
+
+71
+00:05:08,439 --> 00:05:11,825
+in, which the list under Registered Logins confirms.
+
+72
+00:05:13,825 --> 00:05:18,326
+External Authentication is the shared layer behind every sign-in provider:
+
+73
+00:05:18,326 --> 00:05:23,502
+a button on the login page, rules for first-time visitors, and two groups of settings.
+
+74
+00:05:23,502 --> 00:05:24,965
+Thanks for watching.
+
