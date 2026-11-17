@@ -1,0 +1,336 @@
+1
+00:00:01,000 --> 00:00:05,521
+A deployment plan can send its package straight to another Orchard Core site,
+
+2
+00:00:05,521 --> 00:00:07,373
+which imports it on arrival.
+
+3
+00:00:07,373 --> 00:00:10,368
+The Remote Deployment module makes that possible.
+
+4
+00:00:10,368 --> 00:00:14,780
+In this video, you connect two sites and send a plan from one to the other.
+
+5
+00:00:19,380 --> 00:00:21,737
+Remote deployment involves two sites.
+
+6
+00:00:21,737 --> 00:00:26,451
+The source site holds the deployment plan, and the destination site receives the
+
+7
+00:00:26,451 --> 00:00:28,041
+package and imports it.
+
+8
+00:00:28,041 --> 00:00:32,920
+You create a remote client on the destination, and a remote instance on the source.
+
+9
+00:00:33,670 --> 00:00:37,966
+When you execute a plan, the source builds a package and posts it
+
+10
+00:00:37,966 --> 00:00:41,597
+to the destination, with a client name and an Api Key.
+
+11
+00:00:41,597 --> 00:00:47,830
+If both match its remote client, the destination imports the package at once, without asking you.
+
+12
+00:00:48,580 --> 00:00:51,120
+Before you start, check three things.
+
+13
+00:00:51,120 --> 00:00:56,319
+Deployment and Remote Deployment are enabled on both sites, under Tools, Features.
+
+14
+00:00:56,319 --> 00:01:00,691
+The source can reach the destination, over HTTPS on a real site, and
+
+15
+00:01:00,691 --> 00:01:04,590
+the destination has the features that the plan's steps need.
+
+16
+00:01:08,847 --> 00:01:12,928
+Let's start on the destination, a site called Staging Site.
+
+17
+00:01:12,928 --> 00:01:16,381
+Under Tools, Deployments, we open Remote Clients.
+
+18
+00:01:16,381 --> 00:01:20,147
+The list is empty, because this site trusts no source.
+
+19
+00:01:20,627 --> 00:01:26,376
+A remote client is the destination's record of a source site that may send it packages.
+
+20
+00:01:26,376 --> 00:01:28,477
+We select Add Remote Client.
+
+21
+00:01:28,947 --> 00:01:31,693
+The Client Name identifies the source site.
+
+22
+00:01:31,693 --> 00:01:33,094
+We enter Main Site.
+
+23
+00:01:33,094 --> 00:01:36,847
+The source must send this name exactly as it is written here.
+
+24
+00:01:37,303 --> 00:01:42,166
+The Api Key is the shared secret, and the field hides what you type.
+
+25
+00:01:42,166 --> 00:01:47,883
+Use a long, random value, and keep a copy, because the source needs the same key.
+
+26
+00:01:48,346 --> 00:01:49,638
+We select Create.
+
+27
+00:01:49,638 --> 00:01:54,242
+A notification confirms the remote client, and the list shows its name, with
+
+28
+00:01:54,242 --> 00:01:55,926
+Edit and Delete buttons.
+
+29
+00:02:00,126 --> 00:02:05,372
+The source needs the address of the destination's import endpoint, which has three parts.
+
+30
+00:02:05,372 --> 00:02:09,623
+They are the address of the destination site, the prefix of its tenant,
+
+31
+00:02:09,623 --> 00:02:12,826
+if the tenant has one, and the path of the endpoint.
+
+32
+00:02:14,526 --> 00:02:19,686
+Back on the source site, called Orchard Core, we open Tools, Deployments, Remote
+
+33
+00:02:19,686 --> 00:02:22,566
+Instances, and select Add Remote Instance.
+
+34
+00:02:28,523 --> 00:02:32,000
+A remote instance is the source's record of a destination.
+
+35
+00:02:32,000 --> 00:02:35,803
+Its Name appears in the list of targets when you execute a plan,
+
+36
+00:02:35,803 --> 00:02:37,813
+so choose one people recognize.
+
+37
+00:02:37,813 --> 00:02:39,063
+We enter Staging.
+
+38
+00:02:39,594 --> 00:02:44,374
+For the Url, we enter the endpoint, built the way the slide shows.
+
+39
+00:02:44,374 --> 00:02:49,686
+The destination is a tenant of this same installation, a separate site, so
+
+40
+00:02:49,686 --> 00:02:53,204
+the address is local and the prefix is staging.
+
+41
+00:02:53,204 --> 00:02:56,324
+A real destination uses an HTTPS address.
+
+42
+00:02:56,786 --> 00:03:00,699
+The Client Name and the Api Key are the ones we created on
+
+43
+00:03:00,699 --> 00:03:03,816
+the destination, and they must match exactly.
+
+44
+00:03:05,654 --> 00:03:10,427
+We select Create, and a notification confirms the remote instance.
+
+45
+00:03:10,427 --> 00:03:16,194
+The list shows Staging, with its Url under the name, and never shows the Api Key.
+
+46
+00:03:20,477 --> 00:03:26,478
+Under Tools, Deployments, Plans, we select Manage Steps for a plan called Publish Pages.
+
+47
+00:03:26,478 --> 00:03:31,712
+Its one step, Content, exports the published content items of the type Page.
+
+48
+00:03:31,712 --> 00:03:34,777
+A separate video shows how to build plans.
+
+49
+00:03:35,280 --> 00:03:36,608
+We select Execute.
+
+50
+00:03:36,608 --> 00:03:41,586
+Available Targets lists File Download, which saves the package on your computer, and
+
+51
+00:03:41,586 --> 00:03:43,799
+one card for each remote instance.
+
+52
+00:03:43,799 --> 00:03:47,450
+The Staging card sends the deployment plan to that instance.
+
+53
+00:03:47,984 --> 00:03:51,419
+The Select button of the Staging card starts the deployment.
+
+54
+00:03:51,419 --> 00:03:56,310
+The source builds the package and posts it to the destination, which imports it at once.
+
+55
+00:03:56,310 --> 00:03:58,184
+Nothing asks for confirmation.
+
+56
+00:03:58,664 --> 00:03:59,729
+We select it.
+
+57
+00:03:59,729 --> 00:04:06,625
+A notification reads Deployment executed successfully, which means that the destination answered with the status 200.
+
+58
+00:04:06,625 --> 00:04:10,494
+Whether the import itself worked, you check on the destination.
+
+59
+00:04:14,750 --> 00:04:18,695
+Let's go back to Staging Site and open Content, Content Items.
+
+60
+00:04:18,695 --> 00:04:23,220
+The two content items from the plan are listed, each with the type Page.
+
+61
+00:04:23,685 --> 00:04:28,294
+The destination answers 200 even if importing the content of the package fails,
+
+62
+00:04:28,294 --> 00:04:32,035
+so a quick look at its content is how you confirm a deployment.
+
+63
+00:04:36,235 --> 00:04:41,699
+A remote deployment changes the destination without asking for confirmation.
+
+64
+00:04:41,699 --> 00:04:46,830
+Use HTTPS, because the client name and Api Key travel with the package.
+
+65
+00:04:46,830 --> 00:04:51,495
+Use a different Api Key for each pair of source and destination.
+
+66
+00:04:52,245 --> 00:04:57,735
+Change keys regularly, and after any suspected leak, by editing the remote client
+
+67
+00:04:57,735 --> 00:04:59,629
+and the remote instance.
+
+68
+00:04:59,629 --> 00:05:03,415
+Delete remote clients and instances you no longer use.
+
+69
+00:05:03,415 --> 00:05:09,095
+Treat exported packages as sensitive, since they can hold content and configuration.
+
+70
+00:05:09,845 --> 00:05:15,680
+The permissions Manage remote instances and Manage remote clients control the two lists.
+
+71
+00:05:15,680 --> 00:05:20,831
+The Plans list needs Manage deployment plans and Export Data, and executing a
+
+72
+00:05:20,831 --> 00:05:22,631
+plan needs Export Data.
+
+73
+00:05:22,631 --> 00:05:25,735
+Administrators have all of these by default.
+
+74
+00:05:26,485 --> 00:05:32,077
+If the destination answers with an error, a notification shows its status code.
+
+75
+00:05:32,077 --> 00:05:37,209
+Check the Url, including any tenant prefix, and that the client name and
+
+76
+00:05:37,209 --> 00:05:39,446
+Api Key match on both sites.
+
+77
+00:05:39,446 --> 00:05:43,525
+A reverse proxy in front of it must allow large uploads.
+
+78
+00:05:44,275 --> 00:05:48,569
+If the source reports success but the content is missing, check that the
+
+79
+00:05:48,569 --> 00:05:51,982
+destination has the features that the plan's steps need.
+
+80
+00:05:51,982 --> 00:05:54,735
+The destination's log records import errors.
+
+81
+00:05:56,735 --> 00:06:01,332
+Remote deployment needs a remote client on the destination, a remote instance on
+
+82
+00:06:01,332 --> 00:06:03,470
+the source, and a plan to execute.
+
+83
+00:06:03,470 --> 00:06:05,715
+Check the result on the destination.
+
+84
+00:06:05,715 --> 00:06:07,105
+Thanks for watching.
+
