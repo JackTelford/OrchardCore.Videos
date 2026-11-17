@@ -6305,7 +6305,7 @@
       "src/docs/reference/modules/Lucene/README.md",
       "src/docs/reference/modules/Elasticsearch/README.md"
     ],
-    "status": "content-ready",
+    "status": "blocked",
     "estimatedMinutes": 6.6,
     "words": 989,
     "contentCommit": "",
@@ -6316,7 +6316,7 @@
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": "External services: Redis and Azurite in Docker; two local instances of the site."
+    "notes": "External services: Redis and Azurite in Docker; two local instances of the site. | 2026-11-17 blocked: needs a throwaway FarmHost (a copy of Cms.Web with AddAzureShellsConfiguration), two instances sharing PostgreSQL, Azurite and Redis in Docker; the shared build cannot be modified or run as two shared-database instances"
   },
   {
     "slug": "module-create",
