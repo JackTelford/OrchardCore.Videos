@@ -1,0 +1,284 @@
+1
+00:00:01,000 --> 00:00:04,581
+The GraphQL module exposes your content to API clients.
+
+2
+00:00:04,581 --> 00:00:09,688
+This video covers the options that limit queries, the permissions that decide who
+
+3
+00:00:09,688 --> 00:00:14,150
+can run them, and how to hide types, parts and fields from the schema.
+
+4
+00:00:18,750 --> 00:00:24,329
+The options live in the OrchardCore section of the configuration, under Apis, GraphQL.
+
+5
+00:00:24,329 --> 00:00:28,270
+This is shell configuration, so a tenant can override them.
+
+6
+00:00:28,270 --> 00:00:30,150
+Every option is optional.
+
+7
+00:00:30,900 --> 00:00:36,597
+DefaultNumberOfResults is the number of results a content type query returns when it
+
+8
+00:00:36,597 --> 00:00:39,445
+sets no first argument, 100 by default.
+
+9
+00:00:39,445 --> 00:00:45,142
+MaxNumberOfResults is the maximum for the first and last arguments, 1000 by default.
+
+10
+00:00:45,142 --> 00:00:48,370
+A separate video covers the paging arguments.
+
+11
+00:00:49,120 --> 00:00:53,985
+MaxNumberOfResultsValidationMode decides what happens above that maximum.
+
+12
+00:00:53,985 --> 00:00:58,789
+Enabled raises a validation error, and Disabled logs the excess instead.
+
+13
+00:00:58,789 --> 00:01:03,900
+Default means Enabled in the Development environment, and Disabled otherwise.
+
+14
+00:01:04,650 --> 00:01:08,791
+MaxDepth limits how deeply a query can nest, 100 by default.
+
+15
+00:01:08,791 --> 00:01:14,500
+MaxComplexity limits the complexity of a query, and FieldImpact sets what each object
+
+16
+00:01:14,500 --> 00:01:15,942
+field adds to it.
+
+17
+00:01:15,942 --> 00:01:17,950
+Neither is set by default.
+
+18
+00:01:18,700 --> 00:01:23,770
+ExposeExceptions sends exception details, such as stack traces, to clients.
+
+19
+00:01:23,770 --> 00:01:27,650
+It is on by default only in the Development environment.
+
+20
+00:01:31,850 --> 00:01:38,570
+Every request to the endpoint, and the Tools, GraphiQL menu item, needs the Execute GraphQL permission.
+
+21
+00:01:38,570 --> 00:01:41,529
+Anonymous users do not have it by default.
+
+22
+00:01:41,529 --> 00:01:46,030
+Without it, the endpoint challenges the request for authentication.
+
+23
+00:01:46,780 --> 00:01:50,715
+A mutation operation needs Execute GraphQL Mutations.
+
+24
+00:01:50,715 --> 00:01:56,184
+Execute GraphQL names that permission as one that implies it, so holding the
+
+25
+00:01:56,184 --> 00:02:00,052
+mutations permission also satisfies Execute GraphQL.
+
+26
+00:02:00,052 --> 00:02:03,320
+The Administrator role holds it by default.
+
+27
+00:02:04,070 --> 00:02:05,943
+Content has its own checks.
+
+28
+00:02:05,943 --> 00:02:09,859
+A query on a content type needs View own content for that type.
+
+29
+00:02:09,859 --> 00:02:14,059
+Users with View all content then get every item, and users with only
+
+30
+00:02:14,059 --> 00:02:16,670
+View own content get the items they own.
+
+31
+00:02:17,420 --> 00:02:22,439
+The contentItem query, which takes a content item id, returns nothing when the
+
+32
+00:02:22,439 --> 00:02:24,410
+user cannot view that item.
+
+33
+00:02:24,410 --> 00:02:29,250
+Every item of a type query is also checked once more before it is returned.
+
+34
+00:02:30,894 --> 00:02:37,293
+To let visitors run queries, edit the Anonymous role under Access Control, Roles.
+
+35
+00:02:37,293 --> 00:02:40,308
+Search the permissions for GraphQL.
+
+36
+00:02:40,308 --> 00:02:45,604
+Execute GraphQL and Execute GraphQL Mutations are listed together.
+
+37
+00:02:46,072 --> 00:02:50,582
+Let's allow Execute GraphQL in the Allow column, and save the role.
+
+38
+00:02:51,044 --> 00:02:52,308
+The role is saved.
+
+39
+00:02:52,308 --> 00:02:56,942
+Anonymous requests can reach the endpoint, and the content permissions of the role
+
+40
+00:02:56,942 --> 00:02:58,364
+decide what they see.
+
+41
+00:02:59,964 --> 00:03:03,125
+In your own types, RequirePermission protects a field.
+
+42
+00:03:03,125 --> 00:03:07,339
+The permission is checked while the query is validated, and a user without
+
+43
+00:03:07,339 --> 00:03:10,342
+it gets an authorization error with the status 401.
+
+44
+00:03:10,342 --> 00:03:14,504
+The second argument is an optional resource, such as a content type name.
+
+45
+00:03:18,754 --> 00:03:23,025
+GraphiQL is the query editor of the module, and its Explorer lists a
+
+46
+00:03:23,025 --> 00:03:27,181
+query for each content type without a stereotype, such as article.
+
+47
+00:03:27,181 --> 00:03:32,144
+Let's open Design, Content Definition, Content Types, and edit the Article type.
+
+48
+00:03:32,605 --> 00:03:36,189
+On the type, Hide removes it from the GraphQL schema.
+
+49
+00:03:36,189 --> 00:03:38,195
+Let's select Hide and save.
+
+50
+00:03:38,720 --> 00:03:42,410
+The schema is rebuilt when a content definition changes.
+
+51
+00:03:42,410 --> 00:03:46,040
+Back in GraphiQL, the Explorer no longer lists article.
+
+52
+00:03:47,675 --> 00:03:50,183
+Each part of a type has options too.
+
+53
+00:03:50,183 --> 00:03:55,436
+Let's open Design, Content Definition, Content Types, edit the Blog Post type, and
+
+54
+00:03:55,436 --> 00:03:57,465
+edit its Markdown body part.
+
+55
+00:03:57,920 --> 00:04:01,998
+Collapse adds the fields of a part directly to the content type, and
+
+56
+00:04:01,998 --> 00:04:05,084
+selecting it reveals Prevent Field Name Collision.
+
+57
+00:04:05,084 --> 00:04:07,950
+Hide removes the part from the GraphQL schema.
+
+58
+00:04:08,410 --> 00:04:12,648
+On the Autoroute part, Collapse is selected and disabled, with a note that
+
+59
+00:04:12,648 --> 00:04:14,396
+it is collapsed by default.
+
+60
+00:04:14,396 --> 00:04:17,310
+The Autoroute module collapses that part in code.
+
+61
+00:04:21,510 --> 00:04:26,194
+Options in code go through the GraphQL content options, in a Startup class.
+
+62
+00:04:26,194 --> 00:04:31,399
+IgnoreField removes a field from the content item types and from their where filter.
+
+63
+00:04:31,399 --> 00:04:33,250
+Here it removes the owner.
+
+64
+00:04:34,000 --> 00:04:40,226
+ConfigurePart collapses or hides a part for every content type, as the Autoroute module does.
+
+65
+00:04:40,226 --> 00:04:45,950
+ConfigureContentType hides a content type, or a query of a module such as SiteLayers.
+
+66
+00:04:46,700 --> 00:04:53,370
+A content type with a stereotype gets a query only when DiscoverableSterotypes lists that stereotype.
+
+67
+00:04:54,120 --> 00:04:56,947
+Options in code can only turn a setting on.
+
+68
+00:04:56,947 --> 00:05:02,140
+Hidden set to false does not undo what an editor selected, so the type stays hidden.
+
+69
+00:05:04,140 --> 00:05:08,976
+Configuration options limit what queries can ask for, permissions decide who can ask,
+
+70
+00:05:08,976 --> 00:05:12,378
+and hidden types and fields decide what the schema offers.
+
+71
+00:05:12,378 --> 00:05:13,760
+Thanks for watching.
+
