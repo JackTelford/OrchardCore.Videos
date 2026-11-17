@@ -132,11 +132,11 @@
             },
             {
               "id": "reg-2",
-              "text": "Disable new external registration lets only people with a local account sign in. Do not ask username, Do not ask email address, and Do not create local password let the site skip those questions."
+              "text": "Disable new external registration lets only people with a local account sign in. On this site it is selected, so first-time users could not register. Do not ask username, Do not ask email address, and Do not create local password let the site skip questions."
             },
             {
               "id": "reg-3",
-              "text": "Let's check Do not ask email address and Do not create local password, and click Save. Because the provider sends the email address, first-time users only choose a username."
+              "text": "Let's clear Disable new external registration, check Do not ask email address and Do not create local password, and click Save. Because the provider sends the email address, first-time users only choose a username."
             }
           ]
         },

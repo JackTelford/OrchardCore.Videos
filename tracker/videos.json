@@ -4413,12 +4413,12 @@
     "docs": [
       "src/docs/reference/modules/OpenId/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 5.4,
     "words": 807,
     "contentCommit": "",
     "recordedBy": "",
-    "recordedOn": "",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
