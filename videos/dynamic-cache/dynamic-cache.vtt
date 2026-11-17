@@ -1,0 +1,266 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.629
+Most pages mix content that rarely changes with content that depends on the visitor.
+
+00:00:06.629 --> 00:00:11.758
+The Dynamic Cache module stores sections of markup, each with its own rules.
+
+00:00:11.758 --> 00:00:17.200
+You turn it on, cache blocks and shapes, and remove entries when content changes.
+
+00:00:21.800 --> 00:00:26.668
+A page cache stores the whole response, so one personal detail forces you
+
+00:00:26.668 --> 00:00:29.379
+to skip it or to vary the entire page.
+
+00:00:29.379 --> 00:00:35.480
+Dynamic Cache works on sections of markup instead, and each section has its own cache policy.
+
+00:00:36.230 --> 00:00:37.892
+Sections can nest.
+
+00:00:37.892 --> 00:00:43.849
+In this layout, section A1 varies by role and section B1 varies by query string.
+
+00:00:43.849 --> 00:00:46.620
+Each section is stored on its own.
+
+00:00:47.370 --> 00:00:52.193
+On the first request, every shape is evaluated and the cacheable sections are
+
+00:00:52.193 --> 00:00:54.924
+stored through the IDynamicCache service.
+
+00:00:54.924 --> 00:01:00.386
+Later requests read the markup from the cache, and those shapes are not processed again.
+
+00:01:00.386 --> 00:01:02.710
+Entries stay in memory by default.
+
+00:01:06.955 --> 00:01:11.716
+The feature is called Dynamic Cache, and it is listed in the Performance
+
+00:01:11.716 --> 00:01:13.975
+category under Tools, Features.
+
+00:01:13.975 --> 00:01:18.065
+The Blog recipe enables it, so on this site it is already on.
+
+00:01:18.526 --> 00:01:20.613
+Cache Mode lists four options.
+
+00:01:20.613 --> 00:01:25.888
+From environment enables caching in Production only, Enabled turns it on, and Enabled
+
+00:01:25.888 --> 00:01:30.293
+with cache debug mode also writes comments around each cached section.
+
+00:01:30.293 --> 00:01:31.916
+Disabled turns it off.
+
+00:01:32.367 --> 00:01:37.367
+The default is From environment, so a site running in Development stores nothing.
+
+00:01:37.367 --> 00:01:39.436
+Let's choose Enabled and save.
+
+00:01:39.436 --> 00:01:43.287
+Saving reloads the tenant, and the mode applies from then on.
+
+00:01:47.487 --> 00:01:50.297
+The Liquid cache block wraps any markup.
+
+00:01:50.297 --> 00:01:54.208
+Its first argument is the cache id, the only required one.
+
+00:01:54.208 --> 00:01:59.279
+The first request stores everything between the cache and end cache tags, and
+
+00:01:59.279 --> 00:02:01.357
+later requests read it back.
+
+00:02:02.107 --> 00:02:05.365
+vary_by takes contexts that split the entry:
+
+00:02:05.365 --> 00:02:11.557
+user, user.roles, query, route and features, where query and features also accept a name.
+
+00:02:11.557 --> 00:02:15.207
+dependencies takes tags that invalidate the entry.
+
+00:02:15.207 --> 00:02:18.857
+expires_after and expires_sliding take time spans.
+
+00:02:19.607 --> 00:02:23.384
+Any other value you give vary_by is used as it is, so a
+
+00:02:23.384 --> 00:02:27.099
+content item id gives each content item its own entry.
+
+00:02:27.099 --> 00:02:31.867
+With no expiration, a Liquid block uses a sliding window of one minute.
+
+00:02:32.617 --> 00:02:38.566
+With cache debug mode enabled, each cached block is wrapped in comments in the page source.
+
+00:02:38.566 --> 00:02:43.043
+They list its cache id, what it varies by, its dependencies and its
+
+00:02:43.043 --> 00:02:46.417
+expiration, which helps when an entry misbehaves.
+
+00:02:50.587 --> 00:02:53.579
+This About page renders through a Liquid template.
+
+00:02:53.579 --> 00:02:56.305
+The first line shows the time of the request.
+
+00:02:56.305 --> 00:03:00.152
+The second line sits in a cache block that depends on this content
+
+00:03:00.152 --> 00:03:02.397
+item and expires after five minutes.
+
+00:03:02.862 --> 00:03:04.356
+Let's reload the page.
+
+00:03:04.356 --> 00:03:08.574
+The request time changes, but the cached time stays the same, because the
+
+00:03:08.574 --> 00:03:10.442
+block is read from the cache.
+
+00:03:10.900 --> 00:03:15.315
+Next, we open Content Items, edit the About page, and click Publish.
+
+00:03:15.315 --> 00:03:19.490
+Publishing removes the entries that depend on this content item.
+
+00:03:19.989 --> 00:03:23.058
+Back on the About page, both times have changed.
+
+00:03:23.058 --> 00:03:27.549
+The block was rendered again, stored again, and serves the next requests.
+
+00:03:31.749 --> 00:03:35.999
+The Blog Theme caches its main menu with attributes on the shape.
+
+00:03:35.999 --> 00:03:42.224
+cache_id names the entry, cache_fixed_duration sets five minutes, cache_tag adds a dependency, and
+
+00:03:42.224 --> 00:03:45.516
+cache_context varies it by the roles of the user.
+
+00:03:45.516 --> 00:03:48.689
+Razor tags use the same attributes with dashes.
+
+00:03:49.439 --> 00:03:54.184
+For a block of Razor markup, use the dynamic-cache tag helper.
+
+00:03:54.184 --> 00:04:01.094
+It takes a cache-id, vary-by, dependencies, and expires-on, expires-after or expires-sliding.
+
+00:04:01.094 --> 00:04:06.119
+Without an expiration, it uses a sliding window of thirty seconds.
+
+00:04:06.869 --> 00:04:11.158
+In a display driver, call Cache on the shape result with a cache
+
+00:04:11.158 --> 00:04:12.629
+id and a callback.
+
+00:04:12.629 --> 00:04:17.347
+The Notifications module adds the user context, tags and an expiration.
+
+00:04:17.347 --> 00:04:20.289
+Without the callback, Cache has no effect.
+
+00:04:24.489 --> 00:04:26.175
+Dependencies are tags.
+
+00:04:26.175 --> 00:04:31.654
+When a content item is published, unpublished or removed, the Contents module removes
+
+00:04:31.654 --> 00:04:33.460
+its content item id tag.
+
+00:04:33.460 --> 00:04:38.699
+The Alias module does the same for an alias, and the Autoroute module for a slug.
+
+00:04:39.449 --> 00:04:43.609
+Your own code calls RemoveTagAsync on ITagCache with any tag.
+
+00:04:43.609 --> 00:04:48.452
+Every entry stored with that tag is removed, and its section is rendered
+
+00:04:48.452 --> 00:04:50.439
+again on the next request.
+
+00:04:51.189 --> 00:04:53.873
+Nested Liquid blocks share what they learn.
+
+00:04:53.873 --> 00:04:58.310
+When a nested block renders, its dependencies are added to the block around
+
+00:04:58.310 --> 00:05:00.611
+it, and the shorter expiration wins.
+
+00:05:00.611 --> 00:05:03.569
+A nested block read from the cache adds nothing.
+
+00:05:04.319 --> 00:05:08.771
+When the dependencies are not known in advance, such as the items a
+
+00:05:08.771 --> 00:05:14.748
+query returns, call cache_dependency inside the block, or the cache-dependency tag in Razor.
+
+00:05:14.748 --> 00:05:19.749
+Here, each item adds its own content item id to the recent blog posts entry.
+
+00:05:20.499 --> 00:05:24.648
+A cache hit does not run the shape, so scripts and styles registered
+
+00:05:24.648 --> 00:05:26.610
+while it renders are skipped.
+
+00:05:26.610 --> 00:05:31.489
+The Notifications module keeps its resources in a separate shape for this reason.
+
+00:05:35.689 --> 00:05:39.040
+To add a context, implement ICacheContextProvider.
+
+00:05:39.040 --> 00:05:43.350
+It receives the contexts a section asked for and adds entries to a
+
+00:05:43.350 --> 00:05:47.001
+list, as the route provider does with the request path.
+
+00:05:47.001 --> 00:05:52.149
+The built-in providers are scoped services, and you register yours the same way.
+
+00:05:52.899 --> 00:05:57.321
+Entries live in IDynamicCache, which is based on IDistributedCache:
+
+00:05:57.321 --> 00:06:00.350
+memory by default, or a store such as Redis.
+
+00:06:00.350 --> 00:06:04.530
+If a read or write fails, the cache is skipped for the failover
+
+00:06:04.530 --> 00:06:07.378
+retry latency, thirty seconds by default.
+
+00:06:07.378 --> 00:06:09.559
+A separate video covers Redis.
+
+00:06:11.559 --> 00:06:16.588
+Dynamic Cache stores sections of markup, varies them by context, and removes them
+
+00:06:16.588 --> 00:06:17.976
+by tag or by time.
+
+00:06:17.976 --> 00:06:19.479
+Thanks for watching.
+
