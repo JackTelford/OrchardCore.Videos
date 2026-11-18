@@ -1,0 +1,227 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.631
+Orchard Core renders content items with shared templates.
+
+00:00:04.631 --> 00:00:10.049
+Shape alternates give one content type, or a single content item, a template of its own.
+
+00:00:10.049 --> 00:00:14.257
+In this video, let's name those templates, add them to a theme, and
+
+00:00:14.257 --> 00:00:16.620
+check which one Orchard Core picks.
+
+00:00:21.220 --> 00:00:23.897
+Orchard Core builds a page from shapes.
+
+00:00:23.897 --> 00:00:27.584
+Each shape has a type, and a template renders that type.
+
+00:00:27.584 --> 00:00:31.688
+A content item on its own page usually has the type Content, so
+
+00:00:31.688 --> 00:00:34.900
+one Content template renders all of those items.
+
+00:00:35.650 --> 00:00:39.277
+An alternate is another name that can render the same shape.
+
+00:00:39.277 --> 00:00:43.673
+Orchard Core tries the alternates first, starting with the last one added.
+
+00:00:43.673 --> 00:00:47.410
+If none of them has a template, it uses the shape type itself.
+
+00:00:48.160 --> 00:00:50.888
+A template is named after its shape.
+
+00:00:50.888 --> 00:00:55.304
+In a file name, a hyphen stands for a double underscore, and a
+
+00:00:55.304 --> 00:01:00.564
+dot after the last hyphen adds a display type, a named way to show an item.
+
+00:01:00.564 --> 00:01:05.630
+So Content-Event.Summary.liquid renders the Summary display of an Event.
+
+00:01:06.380 --> 00:01:09.316
+In a theme, templates live in the Views folder.
+
+00:01:09.316 --> 00:01:13.250
+A theme template wins over a module template of the same name, so
+
+00:01:13.250 --> 00:01:17.350
+you change how a module displays content without editing the module.
+
+00:01:21.550 --> 00:01:26.423
+For a content item, Orchard Core adds an alternate for its content type.
+
+00:01:26.423 --> 00:01:31.546
+A template named Content-Event applies to every Event shown on its own page,
+
+00:01:31.546 --> 00:01:38.230
+and Content-Event.Summary applies to events shown in the Summary display type, which lists often use.
+
+00:01:38.980 --> 00:01:42.661
+On its own page, an item with the Autoroute part also gets an
+
+00:01:42.661 --> 00:01:47.440
+alternate from its path, and an item with the Alias part gets one from its alias.
+
+00:01:47.440 --> 00:01:51.340
+In the file name, write the path with hyphens instead of slashes.
+
+00:01:52.090 --> 00:01:56.377
+The alternate for the content type is added first, when the item is built.
+
+00:01:56.377 --> 00:02:00.502
+The alternates for the path and the alias are added afterwards, so they
+
+00:02:00.502 --> 00:02:03.610
+are tried before it, and they win for that one item.
+
+00:02:07.789 --> 00:02:09.302
+Here is an event page.
+
+00:02:09.302 --> 00:02:13.679
+The theme has no template for events, so its Content template renders them,
+
+00:02:13.679 --> 00:02:15.949
+and the banner holds only the title.
+
+00:02:16.407 --> 00:02:20.947
+The other events look the same, because they share that one Content template.
+
+00:02:22.547 --> 00:02:29.393
+To change every event, add a file named Content-Event.liquid to the Views folder of the theme.
+
+00:02:29.393 --> 00:02:35.007
+A Razor file with the same name and the extension cshtml works the same way.
+
+00:02:35.757 --> 00:02:40.187
+This file is based on the Content template of the theme, with two changes.
+
+00:02:40.187 --> 00:02:44.617
+The banner uses another image, and the word Event appears under the title.
+
+00:02:46.212 --> 00:02:48.400
+Open the Harvest Festival page again.
+
+00:02:48.400 --> 00:02:52.622
+The banner has a different image, and the word Event appears under the title.
+
+00:02:53.074 --> 00:02:55.735
+The other events use the same template.
+
+00:02:55.735 --> 00:03:00.289
+A template named after the content type changes that type only, and the
+
+00:03:00.289 --> 00:03:02.654
+other content types are untouched.
+
+00:03:06.854 --> 00:03:10.468
+To change one event, name the file after its path.
+
+00:03:10.468 --> 00:03:16.404
+For the path events/night-market, the file is Content-Slug-events-night-market.liquid.
+
+00:03:17.154 --> 00:03:20.814
+It is based on the template of the content type, with two changes:
+
+00:03:20.814 --> 00:03:24.524
+a third banner image, and the words Featured event under the title.
+
+00:03:26.129 --> 00:03:27.777
+Open the Night Market page.
+
+00:03:27.777 --> 00:03:32.269
+The banner has the third image, and the words Featured event appear under the title.
+
+00:03:32.730 --> 00:03:34.826
+Open the Harvest Festival page again.
+
+00:03:34.826 --> 00:03:38.628
+It keeps the template of its content type, because only the Night Market
+
+00:03:38.628 --> 00:03:40.480
+has a template for its own path.
+
+00:03:44.749 --> 00:03:49.422
+When a template does not apply, ask Orchard Core which one rendered a shape.
+
+00:03:49.422 --> 00:03:54.722
+Under Settings, Debugging, the setting Write shape debug information is off by default.
+
+00:03:54.722 --> 00:03:56.489
+Check it and select Save.
+
+00:03:56.947 --> 00:03:59.064
+Then load the Night Market page.
+
+00:03:59.064 --> 00:04:03.356
+Its HTML source holds a pair of comments around each shape that Orchard
+
+00:04:03.356 --> 00:04:08.707
+Core renders for that request, and the next slide shows the pair around the Content shape.
+
+00:04:10.307 --> 00:04:13.978
+The first comment gives the shape type, then the template name and file
+
+00:04:13.978 --> 00:04:15.980
+that rendered it, with its language.
+
+00:04:15.980 --> 00:04:19.413
+Here the name comes from the path of the item, which confirms that
+
+00:04:19.413 --> 00:04:21.177
+the alternate for the path won.
+
+00:04:25.377 --> 00:04:28.822
+A template can add an alternate when it creates a shape.
+
+00:04:28.822 --> 00:04:33.267
+The Liquid shape tag takes an alternate argument, the Razor tag helpers an
+
+00:04:33.267 --> 00:04:38.047
+alternate attribute, and a metadata element can add, remove or clear alternates.
+
+00:04:38.797 --> 00:04:41.589
+Add the alternate before the shape renders.
+
+00:04:41.589 --> 00:04:45.635
+Orchard Core picks the template first and only then runs it, so a
+
+00:04:45.635 --> 00:04:48.827
+template cannot change the choice made for itself.
+
+00:04:49.577 --> 00:04:54.240
+To add alternates for a shape type everywhere, write a shape table provider.
+
+00:04:54.240 --> 00:04:58.959
+The Alias module describes the Content shape, and in OnDisplaying it adds the
+
+00:04:58.959 --> 00:05:01.917
+alias alternates to the metadata of the shape.
+
+00:05:02.667 --> 00:05:06.488
+A module registers its provider with AddShapeTableProvider.
+
+00:05:06.488 --> 00:05:11.074
+Add alternates from the least to the most specific, because the last one
+
+00:05:11.074 --> 00:05:12.661
+added is tried first.
+
+00:05:12.661 --> 00:05:16.777
+A separate video covers placement, which can add alternates too.
+
+00:05:18.777 --> 00:05:22.930
+Alternates let a theme change the display of one content type, or one
+
+00:05:22.930 --> 00:05:25.477
+content item, without touching a module.
+
+00:05:25.477 --> 00:05:26.917
+Thanks for watching.
+
