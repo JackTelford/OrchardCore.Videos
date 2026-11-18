@@ -54,22 +54,19 @@ Let's start with the features.
 00:01:20.723 --> 00:01:26.120
 Open Tools, Features, and type localization in the search box to narrow the list.
 
-00:01:26.617 --> 00:01:28.572
+00:01:26.617 --> 00:01:28.586
 Find Content Culture Picker.
 
-00:01:28.572 --> 00:01:35.416
+00:01:28.586 --> 00:01:35.478
 Its row lists Content Localization among the features it depends on, and Content Localization needs Localization.
 
-00:01:35.416 --> 00:01:39.097
-Press Enable, and all three features are enabled together.
+00:01:35.478 --> 00:01:38.837
+Press Enable to turn on all three features together.
 
-00:01:39.575 --> 00:01:42.672
-A message confirms that the feature was enabled.
-
-00:01:42.672 --> 00:01:44.737
+00:01:42.672 --> 00:01:44.812
 Search for localization again:
 
-00:01:44.737 --> 00:01:50.015
+00:01:44.812 --> 00:01:50.282
 Localization, Content Localization, and Content Culture Picker are all marked Enabled.
 
 00:01:54.315 --> 00:01:57.174

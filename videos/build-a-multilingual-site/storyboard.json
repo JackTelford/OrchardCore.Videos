@@ -68,11 +68,11 @@
             },
             {
               "id": "enable-2",
-              "text": "Find Content Culture Picker. Its row lists Content Localization among the features it depends on, and Content Localization needs Localization. Press Enable, and all three features are enabled together."
+              "text": "Find Content Culture Picker. Its row lists Content Localization among the features it depends on, and Content Localization needs Localization. Press Enable to turn on all three features together."
             },
             {
               "id": "enable-3",
-              "text": "A message confirms that the feature was enabled. Search for localization again: Localization, Content Localization, and Content Culture Picker are all marked Enabled."
+              "text": "Search for localization again: Localization, Content Localization, and Content Culture Picker are all marked Enabled."
             }
           ]
         }
