@@ -27,14 +27,11 @@ A background task for each part checks every minute for items whose time
 00:00:42.066 --> 00:00:44.390
 has arrived, and changes their state.
 
-00:00:48.677 --> 00:00:50.706
+00:00:48.677 --> 00:00:50.868
 Both are features you enable.
 
-00:00:50.706 --> 00:00:55.168
+00:00:50.868 --> 00:00:55.687
 Open Tools, then Features, search for Publish Later, and select Enable.
-
-00:00:55.168 --> 00:00:58.297
-A message confirms that the feature was enabled.
 
 00:00:59.566 --> 00:01:02.971
 Search for Archive Later and enable it in the same way.
