@@ -107,15 +107,15 @@ In Tools, Features, the ClamAV Antivirus Scanner is listed in the Security categ
 Let's search for ClamAV and select Enable.
 
 28
-00:02:08,315 --> 00:02:12,873
-The site restarts its features, and the ClamAV Antivirus Scanner row now shows
+00:02:08,315 --> 00:02:13,087
+The site restarts its features, and the ClamAV Antivirus Scanner row shows the
 
 29
-00:02:12,873 --> 00:02:15,314
-the Enabled badge and a Disable button.
+00:02:13,087 --> 00:02:15,417
+Enabled badge and a Disable button.
 
 30
-00:02:15,314 --> 00:02:20,795
+00:02:15,417 --> 00:02:21,155
 There is nothing else to set in the admin, because the connection comes from the configuration.
 
 31

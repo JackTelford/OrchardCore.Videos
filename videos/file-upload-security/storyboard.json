@@ -101,7 +101,7 @@
             },
             {
               "id": "enable-2",
-              "text": "The site restarts its features, and the ClamAV Antivirus Scanner row now shows the Enabled badge and a Disable button. There is nothing else to set in the admin, because the connection comes from the configuration."
+              "text": "The site restarts its features, and the ClamAV Antivirus Scanner row shows the Enabled badge and a Disable button. There is nothing else to set in the admin, because the connection comes from the configuration."
             }
           ]
         },
