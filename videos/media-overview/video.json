@@ -20,32 +20,7 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [
-    {
-      "time": "0:00",
-      "title": "Introduction"
-    },
-    {
-      "time": "0:17",
-      "title": "Why the Media module"
-    },
-    {
-      "time": "1:02",
-      "title": "Where it lives"
-    },
-    {
-      "time": "2:20",
-      "title": "The Media Library"
-    },
-    {
-      "time": "3:23",
-      "title": "Media in content"
-    },
-    {
-      "time": "4:02",
-      "title": "Wrap-up"
-    }
-  ],
+  "chapters": [],
   "links": [
     {
       "label": "Documentation: Media",
