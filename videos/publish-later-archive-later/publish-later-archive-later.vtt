@@ -1,0 +1,188 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.051
+Some content should appear on a set date, and some should leave on another.
+
+00:00:06.051 --> 00:00:12.288
+The Publish Later and Archive Later modules schedule both, so an item changes state by itself.
+
+00:00:12.288 --> 00:00:16.840
+This video enables them, schedules an item, and cancels a schedule.
+
+00:00:21.440 --> 00:00:26.704
+Publish Later holds a draft until the date and time you choose, and then publishes it.
+
+00:00:26.704 --> 00:00:28.878
+Archive Later does the opposite:
+
+00:00:28.878 --> 00:00:32.940
+at the date and time you choose, it unpublishes a published item.
+
+00:00:33.690 --> 00:00:37.851
+Each one is a content part, so you decide which content types offer it.
+
+00:00:37.851 --> 00:00:42.066
+A background task for each part checks every minute for items whose time
+
+00:00:42.066 --> 00:00:44.390
+has arrived, and changes their state.
+
+00:00:48.677 --> 00:00:50.706
+Both are features you enable.
+
+00:00:50.706 --> 00:00:55.168
+Open Tools, then Features, search for Publish Later, and select Enable.
+
+00:00:55.168 --> 00:00:58.297
+A message confirms that the feature was enabled.
+
+00:00:59.566 --> 00:01:02.971
+Search for Archive Later and enable it in the same way.
+
+00:01:02.971 --> 00:01:06.766
+Each feature adds a part that you can attach to content types.
+
+00:01:08.399 --> 00:01:11.910
+Next, choose the content types that need a schedule.
+
+00:01:11.910 --> 00:01:17.419
+Open Design, then Content Definition, then Content Types, and select Edit on Article.
+
+00:01:20.947 --> 00:01:26.476
+Select Add Parts, check PublishLater and ArchiveLater, and select Add Selected Parts.
+
+00:01:26.476 --> 00:01:32.127
+A message lists the parts that were added, and the Article type shows them under Parts.
+
+00:01:36.326 --> 00:01:38.385
+Let's schedule an article.
+
+00:01:38.385 --> 00:01:42.952
+Open Content, then Content Items, select New, and choose Article.
+
+00:01:42.952 --> 00:01:45.976
+Enter the title Spring Sale Announcement.
+
+00:01:47.537 --> 00:01:50.754
+The action bar at the bottom of the editor has a date and
+
+00:01:50.754 --> 00:01:53.155
+time field beside a Publish Later button.
+
+00:01:53.155 --> 00:01:55.147
+Enter a time a few minutes ahead.
+
+00:01:55.597 --> 00:01:57.078
+Select Publish Later.
+
+00:01:57.078 --> 00:02:00.151
+The article is saved as a draft with its schedule.
+
+00:02:00.151 --> 00:02:01.577
+It is not published.
+
+00:02:02.039 --> 00:02:05.119
+The Content Items list marks the article as Draft.
+
+00:02:05.119 --> 00:02:09.189
+A clock badge shows when it will be published, and hovering over the
+
+00:02:09.189 --> 00:02:11.499
+badge shows the exact date and time.
+
+00:02:11.951 --> 00:02:14.432
+A background task runs every minute.
+
+00:02:14.432 --> 00:02:18.213
+Once the chosen time has passed, it publishes the article.
+
+00:02:18.213 --> 00:02:19.513
+Reload the list:
+
+00:02:19.513 --> 00:02:24.121
+the Draft badge and the clock are gone, and the article shows Published.
+
+00:02:24.583 --> 00:02:27.923
+Visitors can read the published article on the public site.
+
+00:02:32.223 --> 00:02:34.533
+Archive Later works on a published item.
+
+00:02:34.533 --> 00:02:38.702
+Let's open the Spring Sale Announcement from the Content Items list, and look
+
+00:02:38.702 --> 00:02:40.913
+at the Archive Later field and button.
+
+00:02:43.761 --> 00:02:47.496
+Enter a time a few minutes ahead in the field beside Archive Later,
+
+00:02:47.496 --> 00:02:48.928
+and select the button.
+
+00:02:48.928 --> 00:02:53.431
+It also publishes the item, so whatever is in the editor becomes the live version.
+
+00:02:53.894 --> 00:02:59.028
+The list shows the article as Published, with a badge for the scheduled archive time.
+
+00:02:59.028 --> 00:03:02.414
+Hovering over the badge shows the exact date and time.
+
+00:03:02.866 --> 00:03:06.703
+When the time passes, the task unpublishes the article.
+
+00:03:06.703 --> 00:03:11.231
+After a reload, the badge is gone and the article is marked Draft.
+
+00:03:11.231 --> 00:03:14.816
+The content is kept, but visitors no longer see it.
+
+00:03:19.107 --> 00:03:23.476
+Reopen a scheduled draft, and its editor shows the time you chose, with
+
+00:03:23.476 --> 00:03:25.519
+a Cancel Publish Later button.
+
+00:03:25.519 --> 00:03:29.547
+To reschedule, enter another time and select Publish Later again.
+
+00:03:30.056 --> 00:03:34.633
+To remove the schedule, open the draft again and select Cancel Publish Later.
+
+00:03:34.633 --> 00:03:37.996
+The article stays a draft, and the clock badge is gone.
+
+00:03:38.453 --> 00:03:41.918
+Archive Later has a matching Cancel Archive Later button.
+
+00:03:41.918 --> 00:03:47.143
+Like Archive Later, it also publishes the item, so check the editor before you select it.
+
+00:03:51.343 --> 00:03:56.711
+A time you enter is read in the site's Default Time Zone, set under Settings, General.
+
+00:03:56.711 --> 00:04:01.729
+With the User Time Zone feature enabled, a zone set for a user takes precedence.
+
+00:04:01.729 --> 00:04:06.223
+Changing a zone later changes how a time is shown, not when it happens.
+
+00:04:06.973 --> 00:04:11.215
+The scheduling controls appear only for people who may publish the item.
+
+00:04:11.215 --> 00:04:14.914
+A change happens at the first run of the task after the chosen
+
+00:04:14.914 --> 00:04:18.233
+time, never before, and only while the site is running.
+
+00:04:20.233 --> 00:04:23.755
+Once the parts are attached to a content type and you enter a
+
+00:04:23.755 --> 00:04:28.276
+time in the editor, a background task publishes or unpublishes the item for you.
+
+00:04:28.276 --> 00:04:29.643
+Thanks for watching.
+
