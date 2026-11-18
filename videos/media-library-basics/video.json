@@ -22,48 +22,7 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [
-    {
-      "time": "0:00",
-      "title": "Introduction"
-    },
-    {
-      "time": "0:19",
-      "title": "What the library is"
-    },
-    {
-      "time": "0:52",
-      "title": "A tour of the library"
-    },
-    {
-      "time": "1:33",
-      "title": "Upload files"
-    },
-    {
-      "time": "2:03",
-      "title": "Organize with folders"
-    },
-    {
-      "time": "3:02",
-      "title": "Work with files"
-    },
-    {
-      "time": "4:08",
-      "title": "Find files"
-    },
-    {
-      "time": "5:10",
-      "title": "Reuse a file in content"
-    },
-    {
-      "time": "5:45",
-      "title": "Optional features"
-    },
-    {
-      "time": "6:05",
-      "title": "Wrap-up"
-    }
-  ],
+  "chapters": [],
   "links": [
     {
       "label": "Documentation: Media Library",
