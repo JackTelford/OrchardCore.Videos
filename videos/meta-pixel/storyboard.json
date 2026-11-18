@@ -60,7 +60,7 @@
             },
             {
               "id": "enable-3",
-              "text": "The site restarts its features, and the Meta Pixel row now shows the Enabled badge and a Disable button. The feature adds a Meta Pixel page under Settings, Integrations."
+              "text": "The site restarts its features, and the Meta Pixel row shows the Enabled badge and a Disable button. The feature adds a Meta Pixel page under Settings, Integrations."
             }
           ]
         }
