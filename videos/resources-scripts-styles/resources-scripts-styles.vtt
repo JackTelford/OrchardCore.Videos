@@ -153,84 +153,84 @@ comma and a space by default.
 00:03:58.595 --> 00:04:00.040
 Meta renders them.
 
-00:04:04.247 --> 00:04:06.475
+00:04:04.261 --> 00:04:06.488
 The resource settings are in the admin.
 
-00:04:06.475 --> 00:04:08.157
+00:04:06.488 --> 00:04:08.171
 Open Settings, then General.
 
-00:04:08.614 --> 00:04:13.754
+00:04:11.413 --> 00:04:16.553
 On the Resources tab, Settings for scripts and stylesheets holds the options.
 
-00:04:14.216 --> 00:04:20.723
+00:04:17.015 --> 00:04:23.522
 Use resources cache busting appends a version hash to the address of local scripts and stylesheets.
 
-00:04:20.723 --> 00:04:25.495
+00:04:23.522 --> 00:04:28.293
 The hash changes with the file, so browsers fetch an edited file again.
 
-00:04:25.495 --> 00:04:27.106
+00:04:28.293 --> 00:04:29.905
 It is on by default.
 
-00:04:27.565 --> 00:04:33.302
+00:04:30.365 --> 00:04:36.102
 Use framework CDN (Content Delivery Network) serves registered resources that have a CDN
 
-00:04:33.302 --> 00:04:37.268
+00:04:36.102 --> 00:04:40.069
 address, such as jQuery, from it instead of the local file.
 
-00:04:37.268 --> 00:04:41.845
+00:04:40.069 --> 00:04:44.645
 It is off by default, so a site works without an internet connection.
 
-00:04:42.300 --> 00:04:47.426
+00:04:45.108 --> 00:04:50.235
 Site CDN (Content Delivery Network) base url adds a prefix, such as the
 
-00:04:47.426 --> 00:04:52.686
+00:04:50.235 --> 00:04:55.494
 address of your own CDN, to the address of local scripts and stylesheets.
 
-00:04:52.686 --> 00:04:56.480
+00:04:55.494 --> 00:04:59.288
 It is ignored when empty, or when debug mode is on.
 
-00:04:56.936 --> 00:05:01.452
+00:04:59.770 --> 00:05:04.287
 Resource Debug Mode chooses between debuggable and minified files.
 
-00:05:01.452 --> 00:05:04.276
+00:05:04.287 --> 00:05:07.110
 By default, it follows the environment:
 
-00:05:04.276 --> 00:05:07.726
+00:05:07.110 --> 00:05:10.561
 debuggable files everywhere except in Production.
 
-00:05:07.726 --> 00:05:10.926
+00:05:10.561 --> 00:05:13.760
 The other two options force one or the other.
 
-00:05:11.382 --> 00:05:17.162
+00:05:14.227 --> 00:05:20.007
 Saving these settings reloads the tenant, so the next request uses the saved values.
 
-00:05:21.362 --> 00:05:23.853
+00:05:24.207 --> 00:05:26.698
 From code, inject IResourceManager.
 
-00:05:23.853 --> 00:05:28.895
+00:05:26.698 --> 00:05:31.740
 RegisterResource takes a type and a name, and returns settings you can chain,
 
-00:05:28.895 --> 00:05:31.082
+00:05:31.740 --> 00:05:33.927
 such as UseVersion and AtFoot.
 
-00:05:31.832 --> 00:05:39.427
+00:05:34.677 --> 00:05:42.272
 RegisterHeadScript and RegisterFootScript add custom scripts, RegisterMeta adds a meta tag, and AppendMeta
 
-00:05:39.427 --> 00:05:41.462
+00:05:42.272 --> 00:05:44.306
 adds to an existing one.
 
-00:05:41.462 --> 00:05:47.022
+00:05:44.306 --> 00:05:49.867
 The interface is in the OrchardCore.ResourceManagement.Abstractions package.
 
-00:05:49.022 --> 00:05:50.970
+00:05:51.867 --> 00:05:53.815
 That's the Resources module:
 
-00:05:50.970 --> 00:05:55.326
+00:05:53.815 --> 00:05:58.170
 declare a resource once, include it by name, and let the layout render
 
-00:05:55.326 --> 00:05:57.732
+00:05:58.170 --> 00:06:00.577
 it once, in order, where you decide.
 
-00:05:57.732 --> 00:05:59.222
+00:06:00.577 --> 00:06:02.067
 Thanks for watching.
 
