@@ -154,6 +154,11 @@ def card(title, subtitle, label=None, big=False):
     if label:
         draw.text((W // 2, y), label.upper(), font=font(30, "Bold"), fill=ACCENT, anchor="mm")
         y += 64
+    # A long title would run off both edges of the frame: shrink it until it fits with a margin.
+    size = title_font.size
+    while draw.textlength(title, font=title_font) > W - 160 and size > 40:
+        size -= 2
+        title_font = font(size, "Bold")
     draw.text((W // 2, y), title, font=title_font, fill=TEXT, anchor="mm")
     y += 72
     draw.rounded_rectangle((W // 2 - 60, y, W // 2 + 60, y + 6), radius=3, fill=ACCENT)

@@ -44,6 +44,8 @@ MIN_MINUTES, MAX_MINUTES = 3, 8
 MIN_STEP_WORDS, MAX_STEP_WORDS = 8, 45
 
 STORYBOARD_KEYS = {"title", "output", "spoken", "chapters"}
+# Tracker statuses in which the video has been assembled, so youtube.py chapters may have filled its chapters.
+ASSEMBLED = ("recorded", "in-review", "merged", "published", "needs-update")
 CHAPTER_KEYS = {"id", "title", "subtitle", "clips"}
 CHAPTER_OPTIONAL = {"short"}
 CLIP_KEYS = {"id", "kind", "steps"}
@@ -307,7 +309,7 @@ def check_video(slug: str, folder: Path, entry: dict | None, report: Report, sou
                 report.error(slug, 'each link is {"label": ..., "url": ...}')
         if isinstance(video["source"], dict):
             check_keys(slug, "video.json source", video["source"], SOURCE_KEYS, set(), report)
-        if (entry or {}).get("status") not in ("published", "needs-update") and video.get("chapters"):
+        if (entry or {}).get("status") not in ASSEMBLED and video.get("chapters"):
             report.error(slug, "chapters are filled in by youtube.py chapters after assembling; leave them empty")
         if source:
             for page in video["embeddedIn"]:

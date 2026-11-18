@@ -10,7 +10,13 @@ using Recorder;
 var command = args.Length > 0 ? args[0] : throw new ArgumentException("Usage: Recorder setup | probe <path> <script> | record <clip...>");
 
 using var playwright = await Playwright.CreateAsync();
-await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = true });
+// VIDEO_IGNORE_HTTPS_ERRORS=1 lets the browser (and only it) accept the site's local development certificate.
+var ignoreHttpsErrors = Environment.GetEnvironmentVariable("VIDEO_IGNORE_HTTPS_ERRORS") == "1";
+await using var browser = await playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
+{
+    Headless = true,
+    Args = ignoreHttpsErrors ? ["--ignore-certificate-errors"] : [],
+});
 
 switch (command)
 {
