@@ -63,11 +63,11 @@ Select Create Workflow, and give the workflow a name that says what it does.
 The other settings have defaults.
 
 17
-00:01:12,889 --> 00:01:16,263
+00:01:12,889 --> 00:01:16,264
 Create and open the designer opens an empty workflow.
 
 18
-00:01:16,263 --> 00:01:20,439
+00:01:16,264 --> 00:01:20,439
 A workflow runs when something happens, so it starts with an event.
 
 19
@@ -75,194 +75,194 @@ A workflow runs when something happens, so it starts with an event.
 Let's choose Content Published Event.
 
 20
-00:01:23,373 --> 00:01:27,176
+00:01:23,352 --> 00:01:27,155
 The Content Types box limits the event to the types you choose.
 
 21
-00:01:27,176 --> 00:01:29,766
+00:01:27,155 --> 00:01:29,745
 Left empty, it runs for any content type.
 
 22
-00:01:29,766 --> 00:01:33,403
+00:01:29,745 --> 00:01:33,382
 The Start badge marks the activity that starts the workflow.
 
 23
-00:01:33,855 --> 00:01:37,163
+00:01:33,852 --> 00:01:37,160
 Select the Done outcome to add the next activity.
 
 24
-00:01:37,163 --> 00:01:42,155
+00:01:37,160 --> 00:01:42,152
 Search for pipeline, and pick Run Data Pipeline Task, from the Data category.
 
 25
-00:01:42,607 --> 00:01:45,583
+00:01:50,476 --> 00:01:53,452
 Data pipeline lists the pipelines of the site.
 
 26
-00:01:45,583 --> 00:01:49,703
+00:01:53,452 --> 00:01:57,573
 Choose Blog posts export, which saves the blog posts as a CSV file
 
 27
-00:01:49,703 --> 00:01:51,249
+00:01:57,573 --> 00:01:59,118
 in the media library.
 
 28
-00:01:51,249 --> 00:01:56,457
+00:01:59,118 --> 00:02:04,326
 The task runs the published version, so publish a pipeline again after you change it.
 
 29
-00:01:56,923 --> 00:02:01,433
+00:02:04,787 --> 00:02:09,298
 Parameters passes values to the run, one name and value per line, for
 
 30
-00:02:01,433 --> 00:02:03,779
+00:02:09,298 --> 00:02:11,644
 the steps of the pipeline to use.
 
 31
-00:02:03,779 --> 00:02:05,223
+00:02:11,644 --> 00:02:13,087
 We leave it empty.
 
 32
-00:02:05,686 --> 00:02:09,604
+00:02:13,555 --> 00:02:17,472
 Wait for the run to end is checked, so the workflow halts until
 
 33
-00:02:09,604 --> 00:02:13,294
+00:02:17,472 --> 00:02:21,163
 the run ends, then follows the Succeeded or Failed outcome.
 
 34
-00:02:13,294 --> 00:02:16,473
+00:02:21,163 --> 00:02:24,342
 Unchecked, the task continues at once with Queued.
 
 35
-00:02:16,473 --> 00:02:20,106
+00:02:24,342 --> 00:02:27,975
 Skip when a run is already queued or running adds Skipped.
 
 36
-00:02:20,557 --> 00:02:24,702
+00:02:28,443 --> 00:02:32,587
 The designer saves a draft as you work, and a draft does not run.
 
 37
-00:02:24,702 --> 00:02:27,737
+00:02:32,587 --> 00:02:35,623
 Publish makes the draft the version that runs.
 
 38
-00:02:32,037 --> 00:02:34,003
+00:02:39,847 --> 00:02:41,812
 Let's publish a blog post.
 
 39
-00:02:34,003 --> 00:02:37,565
+00:02:41,812 --> 00:02:45,374
 In Content Items, open the post, and select Publish.
 
 40
-00:02:37,565 --> 00:02:42,907
+00:02:45,374 --> 00:02:50,717
 The Content Published Event starts the workflow, and the workflow queues the run.
 
 41
-00:02:43,388 --> 00:02:49,264
+00:02:51,168 --> 00:02:57,044
 Under Tools, Data Pipelines, Run History, the run is listed with the Succeeded status.
 
 42
-00:02:49,264 --> 00:02:52,010
+00:02:57,044 --> 00:02:59,790
 Its last badge shows what started it:
 
 43
-00:02:52,010 --> 00:02:52,968
+00:02:59,790 --> 00:03:00,748
 Workflow.
 
 44
-00:02:53,424 --> 00:02:57,152
+00:03:01,218 --> 00:03:04,947
 Details lists each step with the rows it read and wrote.
 
 45
-00:02:57,152 --> 00:03:01,844
+00:03:04,947 --> 00:03:09,638
 Under Delivered, the run reports the file it saved to the media library.
 
 46
-00:03:06,144 --> 00:03:11,443
+00:03:13,938 --> 00:03:19,237
 The outcomes of the task cover only the runs that the first workflow starts.
 
 47
-00:03:11,443 --> 00:03:16,160
+00:03:19,237 --> 00:03:23,954
 To react to any run, including one started by hand, create a second
 
 48
-00:03:16,160 --> 00:03:19,844
+00:03:23,954 --> 00:03:27,638
 workflow, in the same way, under Design, Workflows.
 
 49
-00:03:20,298 --> 00:03:25,682
+00:03:28,099 --> 00:03:33,483
 In the Activities pane, search for pipeline, and click Data Pipeline Run Completed.
 
 50
-00:03:25,682 --> 00:03:30,038
+00:03:33,483 --> 00:03:37,839
 This event starts the workflow when a run of a data pipeline ends.
 
 51
-00:03:30,511 --> 00:03:34,744
+00:03:38,349 --> 00:03:42,583
 Data pipeline can be one pipeline, or Any data pipeline.
 
 52
-00:03:34,744 --> 00:03:40,821
+00:03:42,583 --> 00:03:48,659
 Runs offers Every run, Runs that succeeded, and Runs that failed or were cancelled.
 
 53
-00:03:40,821 --> 00:03:43,211
+00:03:48,659 --> 00:03:51,049
 Let's choose the failed runs.
 
 54
-00:03:43,664 --> 00:03:48,086
+00:03:51,543 --> 00:03:55,964
 Any activity can follow the event, such as one that sends an email.
 
 55
-00:03:48,086 --> 00:03:49,721
+00:03:55,964 --> 00:03:57,600
 Let's add a Log Task:
 
 56
-00:03:49,721 --> 00:03:54,324
+00:03:57,600 --> 00:04:02,203
 set Log Level to Error, and Text to a sentence that says a run failed.
 
 57
-00:03:56,440 --> 00:04:00,104
+00:04:04,613 --> 00:04:08,277
 Publish the workflow so that it reacts when a run ends.
 
 58
-00:04:00,104 --> 00:04:05,030
+00:04:08,277 --> 00:04:13,203
 Then let's run Blog posts by email, a pipeline that sends the file by email.
 
 59
-00:04:05,481 --> 00:04:09,517
+00:04:13,678 --> 00:04:17,713
 In the list of pipelines, open the Actions menu of Blog posts by
 
 60
-00:04:09,517 --> 00:04:10,901
+00:04:17,713 --> 00:04:19,097
 email, and run it.
 
 61
-00:04:10,901 --> 00:04:14,071
+00:04:19,097 --> 00:04:22,268
 The site has no email settings, so the run fails.
 
 62
-00:04:14,551 --> 00:04:18,771
+00:04:22,723 --> 00:04:26,943
 Under Run History, the run is Failed, and its error says why.
 
 63
-00:04:19,221 --> 00:04:24,952
+00:04:27,903 --> 00:04:33,633
 Under Design, Workflows, Instances, both workflows have an instance, and both are Finished.
 
 64
-00:04:24,952 --> 00:04:28,201
+00:04:33,633 --> 00:04:36,883
 The second one started when the failed run ended.
 
 65
-00:04:30,201 --> 00:04:34,646
+00:04:38,883 --> 00:04:43,327
 The Run Data Pipeline Task starts a run and follows its outcome, and
 
 66
-00:04:34,646 --> 00:04:38,790
+00:04:43,327 --> 00:04:47,471
 the Data Pipeline Run Completed Event reacts when any run ends.
 
 67
-00:04:38,790 --> 00:04:40,351
+00:04:47,471 --> 00:04:49,033
 Thanks for watching.
 
