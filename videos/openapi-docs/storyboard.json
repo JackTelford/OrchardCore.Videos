@@ -84,7 +84,7 @@
             },
             {
               "id": "enable-3",
-              "text": "The page reloads with a confirmation. Search again, and all four features show the Enabled badge."
+              "text": "The page reloads. Search again, and all four features show the Enabled badge."
             }
           ]
         }
