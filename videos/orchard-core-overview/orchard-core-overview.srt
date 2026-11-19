@@ -1,0 +1,324 @@
+1
+00:00:01,000 --> 00:00:07,546
+Orchard Core is an open-source content management system and application framework for ASP.NET Core.
+
+2
+00:00:07,546 --> 00:00:11,745
+In this video, you'll see what it is, how a site is organized,
+
+3
+00:00:11,745 --> 00:00:14,030
+and what you can build with it.
+
+4
+00:00:18,630 --> 00:00:22,374
+Orchard Core is open source, modular, and multi-tenant.
+
+5
+00:00:22,374 --> 00:00:23,786
+It has two parts:
+
+6
+00:00:23,786 --> 00:00:28,513
+the Orchard Core Framework, and the Orchard Core CMS, which is built on
+
+7
+00:00:28,513 --> 00:00:30,170
+top of the framework.
+
+8
+00:00:30,920 --> 00:00:37,027
+The framework is for developers who build modular, multi-tenant applications on ASP.NET Core,
+
+9
+00:00:37,027 --> 00:00:39,802
+such as software as a service products.
+
+10
+00:00:39,802 --> 00:00:43,380
+It is distributed on its own, separate from the CMS.
+
+11
+00:00:44,130 --> 00:00:48,761
+The CMS is for building websites that you manage from an admin interface.
+
+12
+00:00:48,761 --> 00:00:52,630
+It includes content management, themes, and user management.
+
+13
+00:00:52,630 --> 00:00:54,740
+This video focuses on the CMS.
+
+14
+00:00:58,940 --> 00:01:02,135
+This is a website built with the Orchard Core CMS:
+
+15
+00:01:02,135 --> 00:01:06,129
+a blog, with a menu that has Home and About, and a post to read.
+
+16
+00:01:06,129 --> 00:01:08,640
+It is the front end, drawn by a theme.
+
+17
+00:01:09,106 --> 00:01:12,124
+The people who run the site work in the admin.
+
+18
+00:01:12,124 --> 00:01:17,406
+Its welcome page has cards such as Create content, Customize theme, and Manage users.
+
+19
+00:01:17,873 --> 00:01:20,973
+The menu on the left leads to everything else.
+
+20
+00:01:20,973 --> 00:01:25,803
+Content is for what you publish, Design is for themes, widgets, and content
+
+21
+00:01:25,803 --> 00:01:28,843
+types, and Tools is for features and recipes.
+
+22
+00:01:33,131 --> 00:01:37,047
+Content, Content Items opens the Manage Content page.
+
+23
+00:01:37,047 --> 00:01:41,892
+Each row is one content item, with its title, its type, its status,
+
+24
+00:01:41,892 --> 00:01:46,141
+such as Published or Draft, and when it was last modified.
+
+25
+00:01:46,742 --> 00:01:48,687
+Let's open About with Edit.
+
+26
+00:01:48,687 --> 00:01:52,871
+The editor shows the pieces that the item's type is made of, such
+
+27
+00:01:52,871 --> 00:01:57,232
+as Title, Permalink, and HtmlBody, which holds the body of the item.
+
+28
+00:01:57,694 --> 00:02:00,493
+Publish makes your changes visible on the site.
+
+29
+00:02:00,493 --> 00:02:04,771
+Save Draft stores them without publishing, and Preview shows the page as it
+
+30
+00:02:04,771 --> 00:02:07,464
+will look on the site, before you publish it.
+
+31
+00:02:09,140 --> 00:02:12,485
+Behind every content item is a content type.
+
+32
+00:02:12,485 --> 00:02:18,640
+Design, Content Definition, Content Types lists them, such as Article, Blog, and Page.
+
+33
+00:02:20,615 --> 00:02:22,082
+Let's open Article.
+
+34
+00:02:22,082 --> 00:02:25,015
+A content type is a set of fields and parts.
+
+35
+00:02:25,015 --> 00:02:29,826
+Fields hold values such as Subtitle and Banner Image, and parts add behavior
+
+36
+00:02:29,826 --> 00:02:35,635
+that many types share, such as Title, Autoroute for the permalink, and HtmlBody for the body.
+
+37
+00:02:36,164 --> 00:02:39,614
+Add Field and Add Parts extend a type from this screen, so you
+
+38
+00:02:39,614 --> 00:02:42,404
+can shape your content without leaving the admin.
+
+39
+00:02:46,704 --> 00:02:49,383
+Design, Themes lists the installed themes.
+
+40
+00:02:49,383 --> 00:02:54,629
+The current Site theme draws the front end, and the current Admin theme draws the admin.
+
+41
+00:02:54,629 --> 00:02:57,364
+Make Current changes which theme is in use.
+
+42
+00:02:57,829 --> 00:03:01,878
+A zone is a named section of a theme's layout, and a widget
+
+43
+00:03:01,878 --> 00:03:04,620
+is a block of content shown in a zone.
+
+44
+00:03:04,620 --> 00:03:08,545
+Design, Widgets lists the zones, here Content and Footer.
+
+45
+00:03:08,545 --> 00:03:12,159
+The Footer zone holds one widget, also named Footer.
+
+46
+00:03:12,622 --> 00:03:15,797
+A layer decides on which pages its widgets appear.
+
+47
+00:03:15,797 --> 00:03:20,162
+The Always layer shows them on every page, and the Homepage layer shows
+
+48
+00:03:20,162 --> 00:03:22,032
+them only on the home page.
+
+49
+00:03:26,295 --> 00:03:30,887
+Orchard Core is built from modules, and each module provides features.
+
+50
+00:03:30,887 --> 00:03:35,721
+Tools, Features lists them by category, with a description of each one and
+
+51
+00:03:35,721 --> 00:03:37,715
+the features it depends on.
+
+52
+00:03:38,194 --> 00:03:40,657
+Search narrows the list as you type.
+
+53
+00:03:40,657 --> 00:03:44,468
+Let's search for Workflows, which is disabled on this site.
+
+54
+00:03:44,468 --> 00:03:48,455
+Enable turns a feature on, and Disable turns it off, so a site
+
+55
+00:03:48,455 --> 00:03:50,214
+uses only what it needs.
+
+56
+00:03:51,814 --> 00:03:54,365
+A recipe sets up a site in one go.
+
+57
+00:03:54,365 --> 00:04:02,019
+Depending on the recipe, it enables features, defines content types, chooses themes, and creates starting content.
+
+58
+00:04:02,019 --> 00:04:06,674
+The Setup screen runs one, and this blog came from the Blog recipe.
+
+59
+00:04:07,424 --> 00:04:12,585
+Deployment plans build packages that move content and configuration between sites.
+
+60
+00:04:12,585 --> 00:04:17,042
+Importing a package runs it as a recipe, and Remote Deployment sends a
+
+61
+00:04:17,042 --> 00:04:19,564
+package to another Orchard Core site.
+
+62
+00:04:23,764 --> 00:04:26,082
+Orchard Core is multi-tenant.
+
+63
+00:04:26,082 --> 00:04:32,374
+One running application hosts many independent sites, called tenants, and each tenant has
+
+64
+00:04:32,374 --> 00:04:35,354
+its own URL, content, users, and theme.
+
+65
+00:04:36,104 --> 00:04:42,442
+You manage tenants from the Default tenant, in Multi-Tenancy, Tenants, once the Tenants feature is enabled.
+
+66
+00:04:42,442 --> 00:04:45,414
+Each tenant is set up with a recipe of its own.
+
+67
+00:04:49,614 --> 00:04:54,123
+A full CMS site uses a theme and templates to render your content,
+
+68
+00:04:54,123 --> 00:04:56,816
+with little or no custom development.
+
+69
+00:04:56,816 --> 00:05:00,824
+The Blog, Agency, and Coming Soon recipes each set one up.
+
+70
+00:05:01,574 --> 00:05:07,838
+A decoupled site keeps the admin, and your own ASP.NET Core pages render the content.
+
+71
+00:05:07,838 --> 00:05:15,134
+A headless site only manages content, and another application reads it through GraphQL or REST APIs.
+
+72
+00:05:15,884 --> 00:05:21,249
+With the framework alone, you build your own modular, multi-tenant application, such as
+
+73
+00:05:21,249 --> 00:05:25,344
+a software as a service product, without any of the CMS features.
+
+74
+00:05:29,544 --> 00:05:34,559
+The Orchard Core documentation has reference pages for the built-in modules.
+
+75
+00:05:34,559 --> 00:05:40,124
+The Modules Reference groups them by area, such as Content, Design, and Localization.
+
+76
+00:05:40,874 --> 00:05:45,925
+The Glossary explains the terms you met here, such as content item, content
+
+77
+00:05:45,925 --> 00:05:48,294
+type, tenant, layer, and recipe.
+
+78
+00:05:49,044 --> 00:05:52,838
+Other videos in this series cover setting up your first site and finding
+
+79
+00:05:52,838 --> 00:05:54,394
+your way around the admin.
+
+80
+00:05:56,394 --> 00:06:03,192
+Orchard Core is a modular, multi-tenant framework, and a CMS built on it, for ASP.NET Core.
+
+81
+00:06:03,192 --> 00:06:05,014
+Thanks for watching.
+
