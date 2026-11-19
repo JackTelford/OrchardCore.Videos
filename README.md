@@ -177,7 +177,7 @@ to make a video again, or to change how it appears on YouTube.
 | [OpenID Connect Server: Flows, Endpoints and Keys](videos/openid-server-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [OpenID Connect Token Validation: Protect Your APIs](videos/openid-token-validation) |  | not uploaded | OrchardCMS/OrchardCore |
 | [OpenTelemetry: Traces, Metrics and Logs for Each Tenant](videos/opentelemetry) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Orchard Core: What It Is and What You Can Build](videos/orchard-core-overview) | 6:06 | [https://youtu.be/Sz_saoz0kdg](https://youtu.be/Sz_saoz0kdg) | OrchardCMS/OrchardCore |
+| [Orchard Core: What It Is and What You Can Build](videos/orchard-core-overview) | 6:06 | not uploaded | OrchardCMS/OrchardCore |
 | [Permissions: Declare Them and Check Them in Your Module](videos/permissions-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Placement: Decide Where Parts and Fields Appear](videos/placement-files) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Placements Module: Edit Placement From the Admin](videos/placements-admin) |  | not uploaded | OrchardCMS/OrchardCore |
