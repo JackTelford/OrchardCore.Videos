@@ -29,7 +29,7 @@ A video goes to YouTube when its **release is published**:
    This tags `<slug>/v1` (then `v2`, ...) on `main`. A draft is visible only to the repository's members: watch the
    video on the release page.
 3. **Publish the release** on GitHub. The **Publish video** workflow then:
-   - uploads the MP4 with the title, description, chapters, links, tags, captions, thumbnail and playlists of
+   - uploads the MP4, **unlisted** unless `video.json`'s `privacyStatus` says otherwise, with the title, description, chapters, links, tags, captions, thumbnail and playlists of
      `video.json` (scheduled with `publishAt` when it is set);
    - makes the previous version unlisted when this is `v2` or later, since YouTube can't replace a video's file;
    - commits the YouTube id to `video.json` and the README index, and adds the link to the release notes;
@@ -68,6 +68,13 @@ channel does this once:
 4. Run `python tools/youtube/youtube.py auth`, sign in with the account that owns the Orchard Core channel (pick the
    channel if it's a brand account), and allow access. The token is kept in `~/.orchardcore-videos/youtube-token.json`,
    outside the repository.
+
+## Privacy
+
+Videos are uploaded **unlisted** by default: every `video.json` has `"privacyStatus": "unlisted"`, `publish` falls back
+to `unlisted` when it's missing, and the playlists it creates are unlisted. Anyone with the link (or the docs page that
+embeds it) can watch an unlisted video, but it doesn't show on the channel or in search. To make one public, set
+`"privacyStatus": "public"` before its release, or change it in YouTube Studio afterwards.
 
 ## What the API allows, and what it doesn't
 

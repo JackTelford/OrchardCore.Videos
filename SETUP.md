@@ -18,7 +18,7 @@ repository's GitHub settings, plus one token file on your machine.
 | 6 | Store the YouTube secrets | `YOUTUBE_CLIENT_ID`, `YOUTUBE_CLIENT_SECRET`, `YOUTUBE_REFRESH_TOKEN` |
 | 7 | A token for the documentation pull requests | `DOCS_REPOSITORY_TOKEN` (and the variable `DOCS_FORK_REPOSITORY`) |
 | 8 | Repository settings | Actions permissions and branch protection |
-| 9 | Request the YouTube API audit | Needed before API uploads can be public |
+| 9 | Request the YouTube API audit | Needed before API uploads can be unlisted or public |
 | 10 | Check it all works | |
 
 You need: owner or manager access to the Orchard Core YouTube channel, a Google account for the Google Cloud project
@@ -189,10 +189,10 @@ hand.
 3. **Settings > Actions > General > Actions permissions**: allow actions (the workflows use `actions/checkout` and
    `actions/setup-python`).
 
-## 9. Request the YouTube API audit (needed for public uploads)
+## 9. Request the YouTube API audit (needed for unlisted and public uploads)
 
 YouTube locks **every video uploaded through the API by an unaudited project to private**, and it can't be made public
-afterwards. Until the project passes the audit:
+afterwards, even though the videos are uploaded unlisted by default. Until the project passes the audit:
 
 - the workflow uploads fine, but the video stays private and won't play in the docs; **or**
 - upload the MP4 in [YouTube Studio](https://studio.youtube.com/) by hand, put its id in `video.json`
@@ -200,7 +200,7 @@ afterwards. Until the project passes the audit:
   `python tools/youtube/youtube.py update <slug>` for the description and chapters, and
   `python tools/youtube/youtube.py docs-embed <slug> --docs <OrchardCore checkout>/src/docs` for the docs.
 
-To unlock public uploads, submit the free
+To unlock unlisted and public uploads, submit the free
 [YouTube API Services compliance audit form](https://support.google.com/youtube/contact/yt_api_form) once, for the Google
 Cloud project of step 2 (give the project number, from the console's dashboard, and say it's the Orchard Core
 project that publishes the channel's own videos). It takes a few weeks. The same form can ask for more than the default

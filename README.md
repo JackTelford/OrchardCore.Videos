@@ -50,7 +50,8 @@ Follow `.agents/skills/orchardcore-video-producer/SKILL.md`. In short:
    and assemble (`scripts/assemble.py`); then `youtube.py chapters`.
 3. Check the video for private data, and merge its folder (never the MP4) to `main`.
 4. `python tools/youtube/youtube.py release <slug> --file <mp4>` creates a draft release with the MP4 attached.
-   Watch it there, then **publish the release**: the **Publish video** workflow uploads it to YouTube with its
+   Watch it there, then **publish the release**: the **Publish video** workflow uploads it to YouTube, **unlisted**
+   by default (the `privacyStatus` of `video.json`), with its
    metadata, captions, thumbnail and playlists, records the YouTube id here, and opens a pull request in
    OrchardCMS/OrchardCore that fills in the `<!-- video:<slug> -->` markers of the docs pages.
 

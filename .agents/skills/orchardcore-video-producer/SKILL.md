@@ -183,7 +183,8 @@ miss a word on some frames, so redaction usually takes two or three passes.
   python tools/youtube/youtube.py release <slug> --file videos/<slug>/build/master.mp4
   ```
 
-  Watch the video on the draft release, then publish the release. The **Publish video** workflow uploads it with the
+  Watch the video on the draft release, then publish the release. The **Publish video** workflow uploads it, unlisted
+  unless `video.json` says otherwise (keep `"privacyStatus": "unlisted"` unless a maintainer asks for `public`), with the
   title, description (with chapters and links), tags, captions, `thumbnail.jpg` and playlists of `video.json`, records
   the YouTube id back in `video.json` and the README index, and opens the documentation pull request. A re-recording
   is the next version (`<slug>/v2`): it is a new YouTube video, and the previous one becomes unlisted. To change the

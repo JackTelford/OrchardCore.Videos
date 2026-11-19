@@ -194,7 +194,7 @@ def playlist_ids(youtube, titles):
         if title not in existing:
             created = youtube.playlists().insert(
                 part="snippet,status",
-                body={"snippet": {"title": title, "defaultLanguage": "en"}, "status": {"privacyStatus": "public"}},
+                body={"snippet": {"title": title, "defaultLanguage": "en"}, "status": {"privacyStatus": "unlisted"}},
             ).execute()
             existing[title] = created["id"]
             print(f"  created the playlist {title}")
@@ -231,7 +231,7 @@ def cmd_publish(args):
     captions = args.captions or default_file(args.slug, f"{output_name(args.slug)}.srt")
     thumbnail = args.thumbnail or default_file(args.slug, "thumbnail.jpg")
     status = {
-        "privacyStatus": args.privacy or video.get("privacyStatus", "private"),
+        "privacyStatus": args.privacy or video.get("privacyStatus", "unlisted"),
         "selfDeclaredMadeForKids": False,
         "containsSyntheticMedia": True,
         "embeddable": True,
@@ -502,7 +502,7 @@ def main():
         publish.add_argument("--version", help="the version being published, such as v2 (from the release tag)")
         publish.add_argument("--captions", help="default: videos/<slug>/<output>.srt")
         publish.add_argument("--thumbnail", help="default: videos/<slug>/thumbnail.jpg")
-        publish.add_argument("--privacy", choices=["private", "unlisted", "public"], help="default: video.json's privacyStatus")
+        publish.add_argument("--privacy", choices=["private", "unlisted", "public"], help="default: video.json's privacyStatus, else unlisted")
         publish.add_argument("--keep-previous", action="store_true", help="leave the previous version as it is")
         publish.add_argument("--force", action="store_true")
         publish.set_defaults(run=cmd_publish)
