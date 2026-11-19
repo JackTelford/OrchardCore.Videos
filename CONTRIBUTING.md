@@ -57,7 +57,7 @@ and don't rename it later.
 
 | File | Required | What it is |
 | --- | --- | --- |
-| `video.json` | yes | What YouTube shows: the title (at most 100 characters, `<Feature>: <benefit> \| Orchard Core`), the description, tags, hashtags, chapters, links to the documentation, playlists, `privacyStatus`, and `embeddedIn` (the docs pages that show it). Leave `youtube` empty: the workflow fills it in. |
+| `video.json` | yes | What YouTube shows: the title (at most 100 characters, `<Feature>: <benefit> \| Orchard Core`), the description, tags, hashtags, chapters, links to the documentation, playlists, `privacyStatus` (`unlisted` by default; `public` only when a maintainer asks), and `embeddedIn` (the docs pages that show it). Leave `youtube` empty: the workflow fills it in. |
 | `thumbnail.jpg` | yes | The YouTube thumbnail: the opening card, as JPEG |
 | `README.md` | yes | What the video covers, and how to make it again |
 | `<slug>.srt`, `<slug>.vtt` | narrated videos | The captions (uploaded to YouTube with the video) |
