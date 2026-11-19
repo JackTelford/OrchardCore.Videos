@@ -16,6 +16,264 @@ to make a video again, or to change how it appears on YouTube.
 <!-- videos:start -->
 | Video | Length | YouTube | Source |
 | --- | --- | --- | --- |
+| [Admin Culture Picker and the Content-Language Header](videos/admin-culture-and-language-header) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Admin Dashboard: Build a Start Page for Your Editors](videos/admin-dashboard) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Add Admin Menu Entries to Your Module](videos/admin-menu-add) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Admin Menus: Add Your Own Links to the Admin Navigation](videos/admin-menus-custom) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Admin Settings: Tailor the Admin for Your Editors](videos/admin-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Admin Templates: Customize Admin Screens With Liquid](videos/admin-templates) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create an Admin Theme: Restyle the Admin](videos/admin-theme-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [The Admin: Find Your Way Around Orchard Core](videos/admin-tour) |  | not uploaded | OrchardCMS/OrchardCore |
+| [AI Quick Start: Build Orchard Core Sites With a Coding Agent](videos/ai-quick-start) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Alias Part: Give Content Items a Stable Name](videos/alias-part) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Audit Trail: See Who Changed What and When](videos/audit-trail-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Audit Trail: Compare and Restore Content Versions](videos/audit-trail-restore-content) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Audit Trail Settings: Events, Retention and User Events](videos/audit-trail-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Auto Setup: Install Sites Without the Setup Screen](videos/auto-setup) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Autoroute Patterns: Generate URLs With Liquid](videos/autoroute-patterns) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Autoroute: Friendly URLs for Your Content Items](videos/autoroute-urls) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Azure AI Search: Connect Your Site and Create Indexes](videos/azure-ai-search) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Azure AI Search Queries: Search From a Saved Query](videos/azure-ai-search-queries) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Azure Key Vault Configuration: Keep Settings Out of Files](videos/azure-key-vault-configuration) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Background Tasks: See, Schedule and Run Them](videos/background-tasks) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Write a Background Task: Schedules, Locks and Monitoring](videos/background-tasks-developer) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Blazor: A Blazor Server Front End for Orchard Core Content](videos/blazor-cms) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Build a Blog: Posts, Categories, Tags and a Menu](videos/build-a-blog) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Launch a Coming Soon Page While You Build Your Site](videos/build-a-coming-soon-page) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Build a Company Website With the Agency Theme](videos/build-a-company-website) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Build a Headless Site: Content in Orchard Core, Front End Anywhere](videos/build-a-headless-site) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Build a Landing Page With Flows, Widgets and Layers](videos/build-a-landing-page) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Build a Members Area: Registration, Roles and Members-Only Pages](videos/build-a-members-area) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Build a Multilingual Site: Cultures, Translations and a Picker](videos/build-a-multilingual-site) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Build a Product Catalog: Types, Categories and Search](videos/build-a-product-catalog) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Configuration: appsettings, Environment Variables and Tenants](videos/configuration-appsettings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Culture Picker: Let Visitors Switch Languages](videos/content-culture-picker) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Definition Stores: Keep Types in the Database or a File](videos/content-definition-stores) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Definitions in Code: Migrations and Recipes](videos/content-definitions-in-code) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Write a Content Field With Its Editor and Settings](videos/content-field-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Field Editors and Display Modes: One Field, Many Faces](videos/content-fields-editors) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Fields: Links, Rich Text, Markdown and YouTube Videos](videos/content-fields-links-html-youtube) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Fields: Text, Numbers, Dates and Yes or No](videos/content-fields-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Localization: Translate Your Content Items](videos/content-localization) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Write a Content Part With a Display Driver](videos/content-part-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Parts: Create Reusable Groups of Fields](videos/content-parts-reusable) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Picker and User Picker Fields: Relate Content Items](videos/content-picker-fields) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Preview: See Your Changes Before You Publish](videos/content-preview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content API: Read and Write Content Items Over HTTP](videos/content-rest-api) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Types: Create a Type and Add Parts and Fields](videos/content-types-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Types: Model the Content of Your Site](videos/content-types-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Type Settings: Creatable, Listable, Draftable and More](videos/content-types-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Version Pruning: Remove Old Versions Automatically](videos/content-version-pruning) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Items: Create, Edit and Publish](videos/contents-create-edit-publish) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Drafts and Versions: Change Content Without Losing the Live Page](videos/contents-drafts-versions) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Items List: Search, Filter and Act on Many Items](videos/contents-list-search-filter) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create a CMS Web Application With dotnet new](videos/create-cms-web-application) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create a Liquid Widget Without Writing a Module](videos/create-liquid-widget) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Module Metadata in Your Project File](videos/csproj-module-metadata) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Custom Settings: Turn a Content Type Into Site Settings](videos/custom-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data in Orchard Core: Databases, YesSql and Documents](videos/data-and-yessql) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Dynamic Translations: Translate Type Names and Other Site Data](videos/data-localization) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Migrations: Create and Update Your Module's Data](videos/data-migrations) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Pipelines: Deliver Files by Link, Email, FTP and SFTP](videos/data-pipelines-destinations) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Pipelines: Export Content Items to a CSV File](videos/data-pipelines-export-csv) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Pipelines: Import Rows as Content Items](videos/data-pipelines-import) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Pipelines: Move and Transform Your Site's Data](videos/data-pipelines-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Pipelines: Schedule Runs and Read the History](videos/data-pipelines-schedule-history) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Pipelines and Workflows: Run a Pipeline From a Workflow](videos/data-pipelines-workflows) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Protection Keys: Share Them Across Servers](videos/data-protection) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Data Sources: Expose Your Module's Data to Pipelines](videos/data-sources-developer) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Debugging Settings: Find the Template Behind Any Part of a Page](videos/debugging-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Decoupled CMS: Razor Pages With Orchard Core Content](videos/decoupled-cms) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Export Content From the List: Download, Add to Plan, Send](videos/deployment-content-actions) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Import: Package and JSON Import](videos/deployment-import) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Deployment: Move Configuration and Content Between Sites](videos/deployment-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Deployment Plans: Choose What to Export](videos/deployment-plans) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Remote Deployment: Send a Plan Straight to Another Site](videos/deployment-remote) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Write a Deployment Step](videos/deployment-step-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Development Tools: Preview Packages and Local NuGet Feeds](videos/development-tools) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Error Pages: Customize Not Found and Error Pages](videos/diagnostics-error-pages) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Shape Alternates: Customize the Display of One Type or One Item](videos/display-alternates) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Shapes: How Orchard Core Renders a Page](videos/display-shapes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Docker: Run Orchard Core in a Container](videos/docker-orchard-core) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Dynamic Cache: Cache Parts of a Page](videos/dynamic-cache) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Elasticsearch: Search Indexes on an Elasticsearch Server](videos/elasticsearch-search) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Azure Communication Services Email](videos/email-azure-communication-services) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Send Email, SMS and Notifications From Your Module](videos/email-sms-in-code) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Email: Configure SMTP and Send a Test Email](videos/email-smtp) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Encoding Settings: Render Non-ASCII Text Without Encoding](videos/encoding-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [External Login: Let Users Sign In With Other Accounts](videos/external-login-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Features: Dependencies and Features That Enable Others](videos/features-dependencies) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Features: Enable and Disable What Your Site Uses](videos/features-manage) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Feeds: Publish an RSS Feed of Your Content](videos/feeds-rss) |  | not uploaded | OrchardCMS/OrchardCore |
+| [File Upload Security: Antivirus Scanning and Temporary Files](videos/file-upload-security) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Bag Part: Embed Content Items Inside a Content Item](videos/flows-bag-part) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Flow Part: Build Pages From Widgets](videos/flows-flow-part) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Flow and Bag Parts: Templates and Alternates for Their Widgets](videos/flows-templates) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Forms: Build a Contact Form From Widgets](videos/forms-contact-form) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Forms: Validate What Visitors Type](videos/forms-validation) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Forms and Workflows: Process Each Submission](videos/forms-workflows) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Implement Full-Text Search: From Index to Results Page](videos/full-text-search-guide) |  | not uploaded | OrchardCMS/OrchardCore |
+| [GitHub Sign-In: Let Developers Sign In With GitHub](videos/github-login) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Go to Production: A Checklist for a Live Orchard Core Site](videos/go-to-production) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Google Analytics and Tag Manager: Measure Your Visitors](videos/google-analytics-tag-manager) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Google Sign-In: Let Users Sign In With Google](videos/google-login) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Extend GraphQL: Add Your Own Types and Queries](videos/graphql-extend) |  | not uploaded | OrchardCMS/OrchardCore |
+| [GraphQL: Filter, Sort and Page Content Items](videos/graphql-filters-paging) |  | not uploaded | OrchardCMS/OrchardCore |
+| [GraphiQL: Explore and Test GraphQL Queries](videos/graphql-graphiql) |  | not uploaded | OrchardCMS/OrchardCore |
+| [GraphQL: Query Your Content With One Request](videos/graphql-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [GraphQL: Settings, Permissions and Hidden Fields](videos/graphql-settings-permissions) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Headless: Serve Content to Any Front End](videos/headless-front-end) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Health Checks: Let Your Host Know the Site Is Up](videos/health-checks) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Home Page: Choose What Your Site Shows First](videos/home-route) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Html and Markdown: Write the Body of Your Content](videos/html-and-markdown-editors) |  | not uploaded | OrchardCMS/OrchardCore |
+| [HTML Sanitizer: Keep Unsafe Markup Out of Content](videos/html-sanitizer) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Indexing in Code: Index Your Own Data and Fields](videos/indexing-developer) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Indexes: Create, Rebuild and Reset Search Indexes](videos/indexing-indexes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Layers: Show Widgets on the Right Pages](videos/layers-zones) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Liquid: Objects, Filters and Tags in Orchard Core](videos/liquid-basics) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Liquid: Display Content Items, Shapes and Zones](videos/liquid-display-content) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Write a Liquid Filter](videos/liquid-filter-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Liquid Part and Liquid Field: Content That Runs Templates](videos/liquid-part-and-field) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Lists in Templates: Liquid Filters for Containers and Their Items](videos/lists-in-templates) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Lists: Ordering, Paging and Contained Types](videos/lists-ordering-paging) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Lists: Group Content Items in a Container](videos/lists-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Cultures: Make Your Site Multilingual](videos/localization-cultures) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Localize a Module: Strings, Plurals and Extraction](videos/localization-in-modules) |  | not uploaded | OrchardCMS/OrchardCore |
+| [JavaScript Localization: Translate Strings in Scripts](videos/localization-javascript) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Translate the UI: Install and Write PO Files](videos/localization-po-files) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Logging: Configure NLog and Serilog](videos/logging) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Lucene Query Syntax: Write Precise Search Queries](videos/lucene-query-syntax) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Lucene: Full-Text Search With No External Service](videos/lucene-search) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Amazon S3 Media Storage: Keep Media in an S3 Bucket](videos/media-amazon-s3) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Azure Media Storage: Keep Media in Azure Blob Storage](videos/media-azure-blob-storage) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media Cache: Purge the Local Copy of Remote Media](videos/media-cache) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media Field: Attach Images and Files to Content](videos/media-field) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media in Templates: Image Resizing, Asset URLs and Tag Helpers](videos/media-in-templates) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Search Media Files: Index PDF, Office and Text Documents](videos/media-indexing) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media Library: Upload, Organize and Reuse Files](videos/media-library-basics) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media: Manage the Files of Your Site](videos/media-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media Profiles: Resize and Crop Images Consistently](videos/media-profiles) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Secure Media: Control Who Sees Each Media Folder](videos/media-secure-media) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media Settings: Options, Allowed Files and the Media API](videos/media-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media Uploads: Slugified Names, Resumable Uploads and Live Updates](videos/media-uploads) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Menu Items: Links, Content Items, HTML and Permissions](videos/menus-item-types) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Menus: Build the Navigation of Your Site](videos/menus-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Meta Login: Let Users Sign In With Facebook](videos/meta-login) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Meta Pixel: Track Conversions From Meta Ads](videos/meta-pixel) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Meta Social Plugins: Like, Share and Comments Widgets](videos/meta-social-plugins) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Microsoft Account: Sign In With Personal Microsoft Accounts](videos/microsoft-account-login) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Microsoft Entra ID: Sign In With Work Accounts](videos/microsoft-entra-id-login) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Mini Profiler: Find What Makes a Page Slow](videos/mini-profiler) |  | not uploaded | OrchardCMS/OrchardCore |
+| [A Modular ASP.NET Core MVC Application With Orchard Core](videos/modular-mvc-application) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create a Module: Your First Orchard Core Module](videos/module-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Navigation in Themes: Render Menus, Breadcrumbs and Pagers](videos/navigation-in-themes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Notifications: Keep Users Informed in the Admin, by Email and SMS](videos/notifications) |  | not uploaded | OrchardCMS/OrchardCore |
+| [OpenAPI: Document Your APIs With Swagger, ReDoc and Scalar](videos/openapi-docs) |  | not uploaded | OrchardCMS/OrchardCore |
+| [OpenID Connect Applications and Scopes](videos/openid-applications-scopes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [OpenID Connect Client: Sign In With Another Identity Provider](videos/openid-client) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Call the Orchard Core API With Client Credentials](videos/openid-client-credentials-api) |  | not uploaded | OrchardCMS/OrchardCore |
+| [OpenID Connect: Orchard Core as an Identity Provider](videos/openid-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [OpenID Connect Signing and Encryption Keys as Secrets](videos/openid-secrets) |  | not uploaded | OrchardCMS/OrchardCore |
+| [OpenID Connect Server: Flows, Endpoints and Keys](videos/openid-server-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [OpenID Connect Token Validation: Protect Your APIs](videos/openid-token-validation) |  | not uploaded | OrchardCMS/OrchardCore |
+| [OpenTelemetry: Traces, Metrics and Logs for Each Tenant](videos/opentelemetry) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Orchard Core: What It Is and What You Can Build](videos/orchard-core-overview) | 6:06 | [https://youtu.be/_88x2l9XrgQ](https://youtu.be/_88x2l9XrgQ) | OrchardCMS/OrchardCore |
+| [Permissions: Declare Them and Check Them in Your Module](videos/permissions-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Placement: Decide Where Parts and Fields Appear](videos/placement-files) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Placements Module: Edit Placement From the Admin](videos/placements-admin) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Publish Later and Archive Later: Schedule Your Content](videos/publish-later-archive-later) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Queries in Liquid, Razor and the API](videos/queries-in-templates-and-api) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Lucene and Elasticsearch Queries: Search From a Saved Query](videos/queries-lucene-elasticsearch) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Queries: Save and Reuse Search and Database Queries](videos/queries-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [SQL Queries: Query Content Items With SQL](videos/queries-sql) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Razor Helpers and Tag Helpers for Orchard Core Themes](videos/razor-helpers) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Write a Recipe Step](videos/recipe-step-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Recipes: Set Up and Update Sites From a File](videos/recipes-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Write a Recipe: Steps, Variables and Content](videos/recipes-write) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Redis: Distributed Cache, Locks, Bus and Data Protection](videos/redis) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Resources: Declare and Include Scripts and Stylesheets](videos/resources-scripts-styles) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Response Compression: Smaller Responses With Gzip and Brotli](videos/response-compression) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Roles and Permissions: Control Who Can Do What](videos/roles-and-permissions) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Permissions: By Content Type and by Owner](videos/roles-content-permissions) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Rules: Conditions That Decide When a Layer Shows](videos/rules-conditions) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Run Code When a Tenant Starts](videos/run-code-on-startup) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Scripting: JavaScript in Workflows and Recipes](videos/scripting-javascript) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Search: Add Site Search to Your Site](videos/search-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Site Search Settings: Index, Fields and Results Page](videos/search-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Secrets in Azure Key Vault](videos/secrets-azure-key-vault) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Secrets in Your Module: Offer Secret Inputs in Your Settings](videos/secrets-in-your-module) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Secrets: Store Passwords and API Keys Safely](videos/secrets-manage) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Secrets: Move Existing Credentials and Change Stores](videos/secrets-migrate-and-stores) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Secure Your Site: A Checklist for Administrators](videos/secure-your-site) |  | not uploaded | OrchardCMS/OrchardCore |
+| [CORS: Allow Other Sites to Call Your APIs](videos/security-cors) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Security Headers: Content Security Policy and More](videos/security-headers) |  | not uploaded | OrchardCMS/OrchardCore |
+| [HTTPS: Require Secure Connections](videos/security-https) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Rate Limits: Protect Your Site From Floods of Requests](videos/security-rate-limits) |  | not uploaded | OrchardCMS/OrchardCore |
+| [reCAPTCHA: Keep Bots Out of Sign-In, Registration and Forms](videos/security-recaptcha) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Reverse Proxy Settings: Run Behind a Load Balancer](videos/security-reverse-proxy) |  | not uploaded | OrchardCMS/OrchardCore |
+| [SEO Meta: Titles, Descriptions and Social Sharing Cards](videos/seo-meta) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Robots: Tell Search Engines What to Crawl](videos/seo-robots) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Setup: Install Your First Orchard Core Site](videos/setup-first-site) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Shells and Configuration: How Tenants Are Configured](videos/shells-and-configuration) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Shortcode Templates: Write Your Own Shortcodes With Liquid](videos/shortcode-templates) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Shortcodes: Embed Images and Links in Your Text](videos/shortcodes-built-in) |  | not uploaded | OrchardCMS/OrchardCore |
+| [SignalR: Real-Time Updates and Backplanes](videos/signalr) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Add Site Settings to Your Module](videos/site-settings-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Site Settings: Name, Time Zone, Page Size and More](videos/site-settings-general) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Sitemaps: Help Search Engines Find Your Pages](videos/sitemaps-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Sitemap Indexes and the Sitemaps Cache](videos/sitemaps-indexes-and-cache) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Sitemaps for Localized Content and Razor Pages](videos/sitemaps-localized-and-razor-pages) |  | not uploaded | OrchardCMS/OrchardCore |
+| [SMS: Configure a Provider and Send a Test Message](videos/sms-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Source Generators: Less Boilerplate in Your Modules](videos/source-generators) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Geo Point Field: Add Locations to Content Items](videos/spatial-geo-point-field) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Fields Indexing: Query Fields With SQL](videos/sql-indexing-content-fields) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Starter Recipes: Choose How Your Site Starts](videos/starter-recipes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies: Filter the Content Items List by Term](videos/taxonomies-contents-list-filters) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies: Create a Taxonomy and Organize Its Terms](videos/taxonomies-create-terms) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomy Field: Categories and Tags on Your Content](videos/taxonomies-field-and-tags) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies: Categorize Your Content](videos/taxonomies-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies in Code: Query Content Items by Term](videos/taxonomies-query-content) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies: Term Pages That List Their Content](videos/taxonomies-term-pages) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Templates: Override Shapes From the Admin With Liquid](videos/templates-override-shapes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Templates: Preview a Template on Any Page Before You Save It](videos/templates-preview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Tenants: Create a Tenant and Set It Up](videos/tenants-create-and-setup) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Tenant Feature Profiles: Limit the Features of Each Tenant](videos/tenants-feature-profiles) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Tenants: Edit, Disable, Reload and Remove](videos/tenants-manage) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Tenants: Run Many Sites From One Application](videos/tenants-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Static Files per Tenant: Serve Each Tenant's Own Files](videos/tenants-static-files) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows for Tenants: Create and Set Up Tenants Automatically](videos/tenants-workflow-tasks) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Test Drive Orchard Core: Run It From Source](videos/test-drive-orchard-core) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create a Theme: Your First Orchard Core Theme](videos/theme-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create a Theme From an HTML Template](videos/theme-from-html-template) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Themes: Change the Look of Your Site](videos/themes-choose) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Title Part: Titles, Generated Titles and Display Text](videos/title-part) |  | not uploaded | OrchardCMS/OrchardCore |
+| [URL Rewriting: Redirect and Rewrite Requests](videos/url-rewriting) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Change Email: Let Users Update Their Email Address](videos/users-change-email) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Custom User Settings: Add Your Own Fields to User Profiles](videos/users-custom-user-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [User Login Settings: Sign-In Options and Lockout](videos/users-login-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Users: Create, Edit, Disable and Delete Accounts](videos/users-manage) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Password and Lockout Options: Configure ASP.NET Core Identity](videos/users-password-and-lockout-options) |  | not uploaded | OrchardCMS/OrchardCore |
+| [User Registration: Let Visitors Create Accounts](videos/users-registration) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Reset Password: Let Users Recover Their Accounts](videos/users-reset-password) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Authentication Ticket Store: Keep Sign-In Tickets on the Server](videos/users-ticket-store) |  | not uploaded | OrchardCMS/OrchardCore |
+| [User Time Zone and Culture: Personal Preferences for Each User](videos/users-time-zone-and-culture) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Two-Factor Authentication: Authenticator App, Email and SMS](videos/users-two-factor-authentication) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Run in a Web Farm: Distributed Tenants, Workers and Shared Storage](videos/web-farm) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Widgets: Add Content Blocks to Your Pages](videos/widgets-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Write a Workflow Activity](videos/workflow-activity-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows: Create, Update and Publish Content Automatically](videos/workflows-content-tasks) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows: Events, Tasks and Outcomes](videos/workflows-events-tasks-outcomes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows in Depth: Expressions, Variables, Branches and Loops](videos/workflows-expressions-and-loops) |  | not uploaded | OrchardCMS/OrchardCore |
+| [HTTP Workflows: Handle Requests and Call Web APIs](videos/workflows-http) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflow Instances: Follow and Troubleshoot Each Run](videos/workflows-instances) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows: Automate Tasks Without Writing Code](videos/workflows-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows: Send an Email When Content Is Published](videos/workflows-send-email-on-publish) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows and the Database Session: Commit, Fork and Join](videos/workflows-session-activities) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Timer Workflows: Run Tasks on a Schedule](videos/workflows-timers) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows: React to Registrations, Sign-Ins and Role Changes](videos/workflows-user-events) |  | not uploaded | OrchardCMS/OrchardCore |
+| [X (Twitter): Sign In With X and Post From Workflows](videos/x-twitter-integration) |  | not uploaded | OrchardCMS/OrchardCore |
+| [XML-RPC: Publish From Desktop Blogging Clients](videos/xml-rpc-remote-publishing) |  | not uploaded | OrchardCMS/OrchardCore |
+| [YesSql Indexes: Query Your Own Documents](videos/yessql-indexes) |  | not uploaded | OrchardCMS/OrchardCore |
 <!-- videos:end -->
 
 This table is generated from each video's `video.json` by `python tools/youtube/youtube.py index`.
