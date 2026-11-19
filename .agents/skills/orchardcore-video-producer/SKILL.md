@@ -164,6 +164,11 @@ Before publishing, OCR the video at one frame per second **and at every scene ch
 numbers and tokens. One frame per second misses a flash: a page that shows real names for a moment before its mask
 applies. Fix the site or the mask, and record again; never publish a video that shows real data.
 
+Extract the scene-change frames with `-fps_mode vfr` (recent ffmpeg builds refuse `-vsync`), and run
+`scripts/ocr-words.ps1` with Windows PowerShell (`powershell.exe -NoProfile -ExecutionPolicy Bypass -File ...`):
+PowerShell 7 lacks the Windows OCR types and prints nothing. Delete the frames once the scan passes: they take a few
+hundred megabytes per video.
+
 When recording again isn't possible (the screencasts a reel reuses), `scripts/redact.py` hides the words instead. It
 OCRs every frame (Windows OCR), pixelates what matches `--pixelate`, and paints a fake name over a real one with
 `--replace "Jordan Rivera=John Smith"`, in the original's size, color and weight. Use `--ocr-scale 2` for small

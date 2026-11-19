@@ -38,15 +38,23 @@ def duration(path):
 
 
 async def synthesize(text, path):
+    """Synthesizes one step. The speech service can hang when it throttles, or drop the stream and leave a cut-off
+    file, so each try has a timeout and a result much shorter than the words need (about 0.4 s a word) is retried."""
     import edge_tts
-    for attempt in range(4):
+    words = len(text.split())
+    for attempt in range(6):
         try:
-            await edge_tts.Communicate(text, VOICE, rate=RATE).save(str(path))
-            return
-        except Exception:
-            if attempt == 3:
+            await asyncio.wait_for(edge_tts.Communicate(text, VOICE, rate=RATE).save(str(path)), timeout=90)
+            if words < 6 or duration(path) / words >= 0.27:
+                return
+            print(f"  {path.name} looks cut off ({duration(path):.1f} s for {words} words), retrying", flush=True)
+        except Exception as error:
+            if attempt == 5:
                 raise
-            await asyncio.sleep(2)
+            print(f"  {path.name}: {type(error).__name__}, retrying", flush=True)
+        if attempt == 5:
+            raise RuntimeError(f"{path.name} is still cut off after 6 tries")
+        await asyncio.sleep(5 * (attempt + 1))
 
 
 async def main():
