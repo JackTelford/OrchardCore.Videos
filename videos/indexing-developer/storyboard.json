@@ -130,7 +130,7 @@
           "steps": [
             {
               "id": "reset-1",
-              "text": "Documents are built when a record changes or a task is processed, so existing documents change only when they are built again. In the Actions menu of the index, choose Reset, and confirm with Yes."
+              "text": "Documents are built when a record changes or a task is processed, so existing documents change only when they are built again. In the Actions menu of the index, choose Reset."
             },
             {
               "id": "reset-2",

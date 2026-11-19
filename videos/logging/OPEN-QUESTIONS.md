@@ -46,7 +46,7 @@ replacement):
    `template.json` lists `NLog`, `Serilog` and `None`. The narration says `nlog, serilog or none`. Confirm the output of
    `dotnet new occms --help` and that the option accepts either case.
 8. **The admin.** The narration says the packages are libraries with nothing to enable in the admin. Confirm that
-   Configuration, Features lists no logging feature on a site made with the CMS web project.
+   Tools, Features lists no logging feature on a site made with the CMS web project.
 9. **Lines outside a request.** `None` is what the NLog renderer prints when neither the request nor the current scope
    has a tenant (`TenantLayoutRenderer.cs:26`). The narration does not say which log lines are in that case (start-up
    lines, for example). Confirm on a running site before saying so in a later version of the video.

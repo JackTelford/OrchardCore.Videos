@@ -188,7 +188,8 @@ No recording. `slides.py` draws them; this is what each one shows.
 - `why-1`: three cards, "Your endpoints", "An OpenAPI document", "Other tools".
 - `why-2`: four cards, one per feature; the three explorers are bright.
 - `why-3`: three cards with the address of each explorer.
-- `access-1`: three cards: not signed in, signed in without the permission, the `ViewOpenApiContent` permission.
+- `access-1`: three cards: not signed in, signed in without the permission, the `ViewOpenApiContent` permission
+  (shown in Roles as "Access view content endpoints").
 - `access-2`: three cards: bearer tokens only, Swagger UI and Scalar, ReDoc.
 - `access-3`: the trimmed recipe, with the features and the client bright.
 - `access-4`: the same recipe, with the `RedirectUris` line bright.

@@ -1,4 +1,4 @@
-# Debugging Settings: Show Errors While You Build a Site
+# Debugging Settings: Find the Template Behind Any Part of a Page
 
 **YouTube:** not published yet · **Length:** 3:40 · **Feature:** [`OrchardCore.Settings`](https://docs.orchardcore.net/en/latest/reference/modules/Settings/)
 

@@ -51,9 +51,10 @@ below could not be confirmed without a running site. A person confirms them whil
 ## Words the narration does not say as a fact
 
 - **The permission label.** The narration uses the permission's name, `ViewOpenApiContent`, as the documentation does.
-  The settings page calls it "View OpenAPI Content" (`OpenApiSettings.Edit.cshtml:49`), and the Roles screen should
-  show its description, "Access view content endpoints" (`OrchardCore.OpenApi.Core/OpenApiPermissions.cs:13-17`). Open
-  the role editor of Administrator once to see which one appears.
+  The settings page calls it "View OpenAPI Content" (`OpenApiSettings.Edit.cshtml:49`). The Roles screen shows the
+  permission's description, "Access view content endpoints" (`OrchardCore.Roles/Views/Admin/_RolePermissions.cshtml:14`
+  and `:118-120`; the description is in `OrchardCore.OpenApi.Core/OpenApiPermissions.cs:13-17`), so card 3 of the
+  `access-1` slide gives that label next to the name. Settled from the source; nothing to check on the site.
 - **XML comments.** The documentation says XML documentation comments give richer Swagger descriptions. The module
   never calls `IncludeXmlComments` on its Swagger generator (`Startup.cs:32-69`), so the video does not say it.
 - **Disabled explorers return 404.** Documentation only. The access gate runs for every path under `/swagger`, `/redoc`

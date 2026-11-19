@@ -177,11 +177,10 @@ feature registers the handler that adds them) and `03-field`; the search in `06-
 - `index-1`
   - Click the menu items Search, Indexes (`/Admin/indexing`). The list shows the index Articles.
   - In the Articles row (`[data-filter-value='articles']`) click the Actions button (`button.actions`: its label is "Actions"; in the Menu layout it is the ellipsis button).
-  - Highlight the **Reset** item (`a.dropdown-item:has-text("Reset")`, exact text Reset) with the caption `Reset`, then click it. A confirmation window appears.
-  - On screen when the narration ends: the window titled **Reset Index** with the message "This will restart the indexing of all content items. Continue?" and the buttons Yes and No.
+  - Highlight the **Reset** item (`a.dropdown-item:has-text("Reset")`, exact text Reset) with the caption `Reset`, then click it. The link has `data-url-af="UnsafeUrl"` only, with no `RemoveUrl` and no `data-unsafe-url`, so the admin theme posts it at once, with no confirmation window (`src/OrchardCore.Themes/TheAdmin/Assets/js/TheAdmin/TheAdmin.ts:155-180`). If a window does appear on the running site, click Yes and say so in the narration.
+  - Wait, with `scene.OffCameraAsync`, until the text "An index has been reset successfully." is on the page.
   - Labels: `src/OrchardCore.Modules/OrchardCore.Indexing/AdminMenu.cs:19,22` (Search, Indexes); `.../Views/Admin/Index.cshtml:12` (title); `src/OrchardCore.Modules/OrchardCore.Admin/Views/AdminListActions.cshtml:32` (Actions); `.../OrchardCore.Indexing/Views/IndexProfile.ActionsMenuItems.SummaryAdmin.cshtml:18-23` (Reset Index, message, Yes, Reset); row filter `.../OrchardCore.Indexing/Drivers/IndexProfileDisplayDriver.cs:36`. Reset also saves the index, which refreshes its field names: `.../Controllers/AdminController.cs:416-418` and `src/OrchardCore/OrchardCore.Lucene.Core/Handlers/LuceneContentIndexProfileHandler.cs:40,116`.
 - `index-2`
-  - Click **Yes** (`.modal.show button:has-text("Yes")`). Wait, with `scene.OffCameraAsync`, until the text "An index has been reset successfully." is on the page.
   - Click **Edit** in the Articles row (`[data-filter-value='articles'] a:has-text("Edit")`; in the Menu layout, open the row's Actions menu first) with `ClickAndWaitForNavigationAsync`.
   - On screen when the narration ends: the page "Edit 'Articles' index".
   - Labels: `.../OrchardCore.Indexing/Controllers/AdminController.cs:420` (message); `.../Views/IndexProfile.Buttons.SummaryAdmin.cshtml:8` (Edit); `.../Views/Admin/Edit.cshtml:6` (page title).

@@ -96,9 +96,9 @@ Nothing is typed or selected.
 
 - `analytics-1`
   - Click **Settings** in the admin menu (`#adminMenu` text `Settings`, exact match), then **Integrations** (exact match), then **Google Analytics** with `ClickAndWaitForNavigationAsync` (the page is `/Admin/Settings/OrchardCore.Google.Analytics`).
-  - `HighlightAsync` on the **See documentation** link (`a.seedoc`), then on the title **Google Analytics Settings** (`h3`), as the narration reaches them.
-  - Visible when the narration ends: the page with the **See documentation** link above the title **Google Analytics Settings**, and the empty **Tracking ID** field below.
-  - Labels: Settings `OrchardCore.Google/GoogleAnalyticsAdminMenu.cs:25`; Integrations `:26`; Google Analytics `:27`; title `Views/GoogleAnalyticsSettings.Edit.cshtml:14`; link `:7`.
+  - `HighlightAsync` on the **See documentation** link (`a.seedoc`), then on the heading **Google Analytics Settings** (`h3`; the page's own `h1` title is **Settings**, `OrchardCore.Settings/Views/Admin/Index.cshtml:4`), as the narration reaches them.
+  - Visible when the narration ends: the page with the **See documentation** link above the heading **Google Analytics Settings**, and the empty **Tracking ID** field below.
+  - Labels: Settings `OrchardCore.Google/GoogleAnalyticsAdminMenu.cs:25`; Integrations `:26`; Google Analytics `:27`; heading `Views/GoogleAnalyticsSettings.Edit.cshtml:14`; link `:7`.
 - `analytics-2`
   - `ClearHighlightsAsync()`, then `HighlightAsync` on the label **Tracking ID**, then on the hint under the field.
   - Visible when the narration ends: the label **Tracking ID** (with the required marker) and the hint **The tracking ID defined in your Google Analytics account.**, with a ring on the hint.
@@ -122,8 +122,8 @@ Nothing is typed or selected.
 
 - `tagmanager-1`
   - Click **Settings**, then **Integrations**, then **Google Tag Manager** with `ClickAndWaitForNavigationAsync` (the page is `/Admin/Settings/OrchardCore.Google.TagManager`).
-  - Visible when the narration ends: the page titled **Google Tag Manager Settings**, with the empty **Container ID** field.
-  - Labels: `OrchardCore.Google/GoogleTagManagerAdminMenu.cs:25-27`; title `Views/GoogleTagManagerSettings.Edit.cshtml:14`.
+  - Visible when the narration ends: the page with the heading **Google Tag Manager Settings**, with the empty **Container ID** field.
+  - Labels: `OrchardCore.Google/GoogleTagManagerAdminMenu.cs:25-27`; heading `Views/GoogleTagManagerSettings.Edit.cshtml:14`.
 - `tagmanager-2`
   - `HighlightAsync` on the label **Container ID**, then on the hint under the field; `ClearHighlightsAsync()`; then `TypeAsync(input[id$='ContainerID'], "GTM-XXXXXXX")` during the last sentence.
   - Visible when the narration ends: `GTM-XXXXXXX` in the **Container ID** field, not saved yet, and the hint **The container ID defined in your Google Tag Manager account.**
@@ -152,8 +152,8 @@ Nothing is typed or selected.
   - Visible when the narration ends: the **About** page of the site.
   - Source: the main menu is created by the Blog recipe (`OrchardCore.Themes/TheBlogTheme/Recipes/blog.recipe.json:843-849`, the link goes to `~/about`).
 - `site-3`
-  - `NavigateAsync("/Admin/Settings/OrchardCore.Google.Analytics")`: the admin settings page of `03-analytics`. `HighlightAsync` on the title **Google Analytics Settings** at the end of the step.
-  - Visible when the narration ends: the admin settings page, with the ring on its title.
+  - `NavigateAsync("/Admin/Settings/OrchardCore.Google.Analytics")`: the admin settings page of `03-analytics`. `HighlightAsync` on the heading **Google Analytics Settings** at the end of the step.
+  - Visible when the narration ends: the admin settings page, with the ring on its heading.
   - Source: admin pages are skipped by `!AdminAttribute.IsApplied(...)`, `GoogleAnalyticsFilter.cs:38` and `GoogleTagManagerFilter.cs:34`.
 
 ### Slides (nothing to record)

@@ -253,11 +253,11 @@
           "steps": [
             {
               "id": "rebuild-1",
-              "text": "Under Search, Indexes, open the Actions menu of posts and select Rebuild. A dialog asks you to confirm, because the index is removed and created again."
+              "text": "Under Search, Indexes, open the Actions menu of posts and select Rebuild, which removes the index and creates it again."
             },
             {
               "id": "rebuild-2",
-              "text": "Select Yes. A message says that the index was rebuilt and that synchronizing runs in the background."
+              "text": "A message says that the index was rebuilt and that synchronizing runs in the background."
             },
             {
               "id": "rebuild-3",

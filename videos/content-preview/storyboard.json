@@ -14,7 +14,7 @@
           "steps": [
             {
               "id": "intro",
-              "text": "Before you publish a page, you can see how it will look. Content Preview shows your changes in a separate window while you type, and Preview Draft shows saved drafts before they go live. In this video, we'll use both."
+              "text": "Before you publish a page, you can see how it will look. Content Preview shows your changes in a separate tab while you type, and Preview Draft shows saved drafts before they go live. In this video, we'll use both."
             }
           ]
         }
@@ -65,7 +65,7 @@
     {
       "id": "03",
       "title": "Preview while you edit",
-      "subtitle": "A separate window that follows the editor",
+      "subtitle": "A separate tab that follows the editor",
       "clips": [
         {
           "id": "03-live",
@@ -77,15 +77,15 @@
             },
             {
               "id": "live-2",
-              "text": "Select Preview. A separate window opens and shows the article with the values that are in the form, without saving anything."
+              "text": "Select Preview. A new tab opens and shows the article with the values that are in the form, without saving anything."
             },
             {
               "id": "live-3",
-              "text": "Go back to the editor and change the Title and the Subtitle. A moment after you stop typing, the editor sends the form to the site, and the preview window shows the result."
+              "text": "Go back to the editor and change the Title and the Subtitle. A moment after you stop typing, the editor sends the form to the site, and the preview tab shows the result."
             },
             {
               "id": "live-4",
-              "text": "In the preview window, the page shows the changed Title and Subtitle. The editor has to stay open for the preview to keep updating."
+              "text": "In the preview tab, the page shows the changed Title and Subtitle. The editor has to stay open for the preview to keep updating."
             },
             {
               "id": "live-5",
@@ -93,7 +93,7 @@
             },
             {
               "id": "live-6",
-              "text": "In the preview window, a Preview Disconnected message appears, because you left the editor."
+              "text": "In the preview tab, a Preview Disconnected message appears, because you left the editor."
             }
           ]
         }
@@ -139,7 +139,7 @@
             },
             {
               "id": "limits-1",
-              "text": "The editor and the preview window have to stay in the same browser, on the same site address. A preview link identifies temporary content that may be unpublished, so do not share it."
+              "text": "The editor and the preview tab have to stay in the same browser, on the same site address. A preview link identifies temporary content that may be unpublished, so do not share it."
             },
             {
               "id": "part-1",

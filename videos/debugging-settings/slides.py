@@ -31,7 +31,7 @@ PERMISSIONS = [
 ]
 
 RESOURCES = [
-    ("1", "On the General page", "Under Settings, General, in the section for scripts and stylesheets."),
+    ("1", "On the General page", "Under Settings, General, on the Resources tab."),
     ("2", "From environment", "Disabled in Production, enabled otherwise."),
     ("3", "Enabled", "Scripts and stylesheets load their debuggable version."),
     ("4", "Disabled", "Scripts and stylesheets load their minified version."),

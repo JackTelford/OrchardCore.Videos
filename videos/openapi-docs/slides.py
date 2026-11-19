@@ -32,7 +32,7 @@ ADDRESSES = [
 ACCESS = [
     ("1", "Not signed in", "Redirected to the admin"),
     ("2", "Signed in, without the permission", "A 403 Forbidden response"),
-    ("3", "ViewOpenApiContent", "Granted to Administrators by default; ManageOpenApi implies it"),
+    ("3", "ViewOpenApiContent", "Shown in Roles as Access view content endpoints; Administrators have it; ManageOpenApi implies it"),
 ]
 
 TOKENS = [

@@ -89,7 +89,7 @@
           "steps": [
             {
               "id": "analytics-1",
-              "text": "Open Settings, then Integrations, and select Google Analytics. The page is titled Google Analytics Settings, with a See documentation link above the title."
+              "text": "Open Settings, then Integrations, and select Google Analytics. Its heading reads Google Analytics Settings, with a See documentation link above it."
             },
             {
               "id": "analytics-2",
