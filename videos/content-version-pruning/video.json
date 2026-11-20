@@ -20,7 +20,32 @@
     "Orchard Core",
     "Content Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "How pruning works"
+    },
+    {
+      "time": "1:05",
+      "title": "Enable the features"
+    },
+    {
+      "time": "1:36",
+      "title": "Choose the rules"
+    },
+    {
+      "time": "2:42",
+      "title": "Run the task"
+    },
+    {
+      "time": "3:28",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -42,5 +67,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Contents.VersionPruning"
-  }
+  },
+  "length": "3:38"
 }
