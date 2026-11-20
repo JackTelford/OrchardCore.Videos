@@ -1,0 +1,239 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.914
+Every page, post and menu on an Orchard Core site is a content
+
+00:00:04.914 --> 00:00:08.253
+item, and its content type decides what it contains.
+
+00:00:08.253 --> 00:00:13.030
+In this video, you learn what content types, content parts and content fields
+
+00:00:13.030 --> 00:00:15.160
+are, and where you manage them.
+
+00:00:19.760 --> 00:00:22.859
+A content item is one piece of content:
+
+00:00:22.859 --> 00:00:25.201
+a page, a blog post, a menu.
+
+00:00:25.201 --> 00:00:31.400
+It stores the values that editors enter, and it belongs to exactly one content type.
+
+00:00:32.150 --> 00:00:34.795
+A content type describes a kind of content.
+
+00:00:34.795 --> 00:00:39.330
+It lists the parts that make up its items, in the order that editors see them.
+
+00:00:40.080 --> 00:00:44.661
+A content part adds one capability, such as a title, a permalink or a body.
+
+00:00:44.661 --> 00:00:48.506
+A part can bring its own editor to the form, and several types
+
+00:00:48.506 --> 00:00:50.090
+can use the same part.
+
+00:00:50.840 --> 00:00:54.049
+A content field holds a value of one kind:
+
+00:00:54.049 --> 00:00:57.458
+a line of text, a number, a date or an image.
+
+00:00:57.458 --> 00:00:59.530
+Fields live inside parts.
+
+00:01:00.280 --> 00:01:04.230
+A type created in the admin gets a part of its own, named after the type.
+
+00:01:04.230 --> 00:01:06.880
+That part holds the fields you add to the type.
+
+00:01:11.099 --> 00:01:15.289
+Content types live under Design, Content Definition, Content Types.
+
+00:01:15.289 --> 00:01:19.019
+The page lists the types of the site, with a search box and
+
+00:01:19.019 --> 00:01:20.799
+a Create new type button.
+
+00:01:21.254 --> 00:01:26.219
+Each row shows the display name of a type, and a badge with its technical name.
+
+00:01:26.219 --> 00:01:31.594
+The Blog Post type, for example, has the technical name BlogPost, written as one word.
+
+00:01:32.044 --> 00:01:34.984
+Some rows have a second badge, the stereotype.
+
+00:01:34.984 --> 00:01:39.563
+A stereotype is a label that features use to find the types they work with:
+
+00:01:39.563 --> 00:01:44.424
+widgets have the Widget stereotype, and menu items have the MenuItem stereotype.
+
+00:01:44.889 --> 00:01:49.244
+On the right, Create New Article opens the editor of an article, and
+
+00:01:49.244 --> 00:01:52.010
+List Items shows the articles that exist.
+
+00:01:52.010 --> 00:01:57.247
+Blog Post has no Create New Blog Post button, because its Creatable setting is off.
+
+00:01:57.247 --> 00:01:59.189
+Edit opens the type itself.
+
+00:02:03.392 --> 00:02:05.248
+Let's open the Article type.
+
+00:02:05.248 --> 00:02:08.960
+At the top are its technical name, which is read only, and its
+
+00:02:08.960 --> 00:02:11.962
+display name, which is the name shown on screens.
+
+00:02:12.418 --> 00:02:15.542
+Below the names are the settings of the type.
+
+00:02:15.542 --> 00:02:20.688
+Creatable and Listable decide whether editors can create and list items in the
+
+00:02:20.688 --> 00:02:23.200
+admin, and Draftable allows drafts.
+
+00:02:23.200 --> 00:02:26.508
+Stereotype, Category and Thumbnail are optional.
+
+00:02:26.964 --> 00:02:30.131
+Under Fields, the type lists its own fields.
+
+00:02:30.131 --> 00:02:34.311
+Subtitle is a Text Field, and Banner Image is a Media Field.
+
+00:02:34.311 --> 00:02:38.364
+Each one holds a single value, a line of text or an image.
+
+00:02:38.818 --> 00:02:44.043
+Under Parts, the type lists its parts, in the order that editors see them:
+
+00:02:44.043 --> 00:02:47.048
+Title, Autoroute, HtmlBody, and Article.
+
+00:02:47.498 --> 00:02:49.835
+The last part is named after the type.
+
+00:02:49.835 --> 00:02:53.182
+It is the part that holds the fields above, and it is the
+
+00:02:53.182 --> 00:02:55.678
+only one without Edit and Remove buttons.
+
+00:02:56.138 --> 00:03:00.357
+Title, Autoroute and HtmlBody are parts that features provide.
+
+00:03:00.357 --> 00:03:04.701
+Edit opens the settings of a part in this type, and Remove takes
+
+00:03:04.701 --> 00:03:06.438
+the part off the type.
+
+00:03:06.889 --> 00:03:11.349
+Add Parts lists the parts you can add to the type, each with a short description.
+
+00:03:11.802 --> 00:03:16.145
+Back on the type, Add Field asks for a display name, a technical
+
+00:03:16.145 --> 00:03:17.881
+name and a field type.
+
+00:03:17.881 --> 00:03:24.022
+The field types include Boolean Field, Date Field, Media Field, Numeric Field and Text Field.
+
+00:03:28.235 --> 00:03:29.902
+Let's click Create New Article.
+
+00:03:29.902 --> 00:03:31.344
+The form follows the type:
+
+00:03:31.344 --> 00:03:34.363
+the parts add their editors in the order of the type, and the
+
+00:03:34.363 --> 00:03:36.615
+fields appear with the part that holds them.
+
+00:03:37.094 --> 00:03:41.442
+Title comes from the Title part, and Permalink from Autoroute.
+
+00:03:41.442 --> 00:03:43.679
+The body comes from HtmlBody.
+
+00:03:43.679 --> 00:03:48.154
+The Article part adds its two fields, Subtitle and Banner Image.
+
+00:03:48.611 --> 00:03:53.820
+Let's leave the form without saving and open the About page, an article of this site.
+
+00:03:53.820 --> 00:03:58.342
+Its title is the heading, its subtitle sits below the heading, its banner
+
+00:03:58.342 --> 00:04:01.261
+image fills the header, and the body follows.
+
+00:04:01.711 --> 00:04:03.999
+The type sits behind both screens.
+
+00:04:03.999 --> 00:04:08.346
+Add a field to the type, and every article gets a place to fill it in.
+
+00:04:08.346 --> 00:04:10.691
+A theme can then display the value.
+
+00:04:14.888 --> 00:04:19.249
+Parts have a page of their own, under Design, Content Definition, Content Parts.
+
+00:04:19.249 --> 00:04:22.950
+It lists the parts you can configure, with a Create new part button
+
+00:04:22.950 --> 00:04:24.268
+for adding your own.
+
+00:04:24.724 --> 00:04:28.020
+Features add parts such as Title and Autoroute.
+
+00:04:28.020 --> 00:04:30.756
+A part you create joins the same list:
+
+00:04:30.756 --> 00:04:35.234
+Contact Details, for example, groups a phone number and a website.
+
+00:04:35.687 --> 00:04:37.641
+Let's open Contact Details.
+
+00:04:37.641 --> 00:04:40.187
+It shows its names and a description.
+
+00:04:40.187 --> 00:04:44.805
+Attachable lets other types add the part, and Reusable lets one type add
+
+00:04:44.805 --> 00:04:46.227
+it more than once.
+
+00:04:46.679 --> 00:04:50.548
+Under Fields, Contact Details lists Phone and Website.
+
+00:04:50.548 --> 00:04:54.739
+Any type that adds the part gets both fields in its editor.
+
+00:04:56.739 --> 00:04:59.264
+That is the content model of Orchard Core:
+
+00:04:59.264 --> 00:05:03.841
+types made of parts, parts that hold fields, and the pages where you manage them.
+
+00:05:03.841 --> 00:05:05.209
+Thanks for watching.
+
