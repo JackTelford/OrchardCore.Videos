@@ -1,0 +1,284 @@
+1
+00:00:01,000 --> 00:00:05,391
+An Orchard Core site that is not installed starts on the Setup screen,
+
+2
+00:00:05,391 --> 00:00:07,991
+where a person answers a few questions.
+
+3
+00:00:07,991 --> 00:00:11,457
+The Auto Setup module answers them from configuration.
+
+4
+00:00:11,457 --> 00:00:16,310
+In this video, you register it, configure it, and watch a site install itself.
+
+5
+00:00:20,976 --> 00:00:24,094
+This is the Setup screen of a site that is not installed.
+
+6
+00:00:24,094 --> 00:00:27,410
+It asks "What is the name of your site?", then the Recipe and
+
+7
+00:00:27,410 --> 00:00:28,796
+the Default Time Zone.
+
+8
+00:00:29,255 --> 00:00:33,809
+Next comes "What type of database to use?" Providers that run on a
+
+9
+00:00:33,809 --> 00:00:38,995
+server also ask for a Table Prefix, a Connection String, and a Table Schema.
+
+10
+00:00:40,858 --> 00:00:42,753
+Last is the Super User:
+
+11
+00:00:42,753 --> 00:00:46,673
+User Name, Email, Password, and Password Confirmation.
+
+12
+00:00:46,673 --> 00:00:53,338
+Auto Setup supplies every one of these answers from configuration, so nobody fills in this form.
+
+13
+00:00:57,538 --> 00:01:00,957
+Auto Setup is a setup feature of the host.
+
+14
+00:01:00,957 --> 00:01:07,367
+In Program.cs, AddSetupFeatures registers OrchardCore.AutoSetup after AddOrchardCms.
+
+15
+00:01:07,367 --> 00:01:13,278
+The OrchardCore.Cms.Web project in the Orchard Core source does exactly this.
+
+16
+00:01:14,028 --> 00:01:18,181
+The module ships with the Orchard Core CMS packages, but the CMS web
+
+17
+00:01:18,181 --> 00:01:22,559
+application template does not register it, so you add the call yourself.
+
+18
+00:01:22,559 --> 00:01:25,478
+The Features page has no Enable button for it.
+
+19
+00:01:29,678 --> 00:01:36,360
+The configuration lives in the AutoSetup section under OrchardCore, for example in appsettings.json.
+
+20
+00:01:36,360 --> 00:01:41,088
+Its Tenants list holds one entry per site, and exactly one entry must
+
+21
+00:01:41,088 --> 00:01:43,168
+have the ShellName Default.
+
+22
+00:01:43,918 --> 00:01:47,412
+Each key answers a question of the Setup screen.
+
+23
+00:01:47,412 --> 00:01:54,788
+SiteName is the name of your site, and AdminUsername, AdminEmail, and AdminPassword describe the Super User.
+
+24
+00:01:55,538 --> 00:02:00,804
+RecipeName is the name of a setup recipe, such as Blog, Agency, or SaaS.
+
+25
+00:02:00,804 --> 00:02:03,032
+It is not the display name:
+
+26
+00:02:03,032 --> 00:02:07,082
+the Setup screen shows Software as a Service for SaaS.
+
+27
+00:02:07,082 --> 00:02:12,078
+SiteTimeZone is a time zone identifier, such as America/Los_Angeles.
+
+28
+00:02:12,828 --> 00:02:19,301
+DatabaseProvider is Sqlite, SqlConnection for SQL Server, MySql, or Postgres.
+
+29
+00:02:19,301 --> 00:02:24,605
+Every provider except Sqlite needs a DatabaseConnectionString.
+
+30
+00:02:24,605 --> 00:02:29,128
+DatabaseTablePrefix and DatabaseSchema are optional.
+
+31
+00:02:33,328 --> 00:02:38,737
+The section holds an administrator password, and a connection string for most providers.
+
+32
+00:02:38,737 --> 00:02:44,433
+In production, supply them as environment variables, where a double underscore separates each
+
+33
+00:02:44,433 --> 00:02:47,368
+level and array items are numbered from zero.
+
+34
+00:02:48,118 --> 00:02:53,025
+During development, user secrets keep the values out of source control.
+
+35
+00:02:53,025 --> 00:02:58,569
+The dotnet user-secrets command takes the same keys, separated by colons, and the
+
+36
+00:02:58,569 --> 00:03:02,138
+OrchardCore.Cms.Web project has a user secrets ID.
+
+37
+00:03:06,386 --> 00:03:09,173
+This host has the configuration and no data.
+
+38
+00:03:09,173 --> 00:03:12,796
+Let's request its home page, which starts the installation.
+
+39
+00:03:13,261 --> 00:03:17,932
+The installation ran during that request, and Auto Setup redirected the browser to
+
+40
+00:03:17,932 --> 00:03:19,365
+the root of the site.
+
+41
+00:03:19,365 --> 00:03:24,088
+The navigation bar shows the SiteName from the configuration, and the content comes
+
+42
+00:03:24,088 --> 00:03:25,521
+from the Blog recipe.
+
+43
+00:03:25,979 --> 00:03:29,175
+Let's open the login page, and log in with the user name and
+
+44
+00:03:29,175 --> 00:03:31,209
+the password from the configuration.
+
+45
+00:03:31,666 --> 00:03:36,206
+In the admin, Settings, General shows the Site name and the Default Time
+
+46
+00:03:36,206 --> 00:03:38,418
+Zone that the configuration set.
+
+47
+00:03:38,418 --> 00:03:41,386
+The Setup screen uses the same setup service.
+
+48
+00:03:45,586 --> 00:03:48,345
+The Tenants list can hold more sites.
+
+49
+00:03:48,345 --> 00:03:53,414
+When Auto Setup installs the Default tenant, it also creates a tenant for
+
+50
+00:03:53,414 --> 00:03:58,162
+every other entry, routed by its RequestUrlHost or RequestUrlPrefix.
+
+51
+00:03:58,162 --> 00:04:01,306
+Each one installs on its own first request.
+
+52
+00:04:02,056 --> 00:04:06,987
+By default, the first request to a tenant starts its installation.
+
+53
+00:04:06,987 --> 00:04:10,616
+When AutoSetupPath is set, only that path does:
+
+54
+00:04:10,616 --> 00:04:17,396
+/autosetup for the Default tenant, and /harbor/autosetup for a tenant with the prefix harbor.
+
+55
+00:04:21,596 --> 00:04:24,631
+Auto Setup validates its configuration first.
+
+56
+00:04:24,631 --> 00:04:28,976
+When a required key is missing, or there is not exactly one Default
+
+57
+00:04:28,976 --> 00:04:32,071
+tenant, it logs the errors and does not start.
+
+58
+00:04:32,071 --> 00:04:35,106
+It acts only on sites that are not installed.
+
+59
+00:04:35,856 --> 00:04:43,013
+When an installation succeeds, an Information level log entry names the site that Auto Setup provisioned.
+
+60
+00:04:43,013 --> 00:04:48,428
+When it fails, for example because the database is unreachable or the password
+
+61
+00:04:48,428 --> 00:04:54,166
+is rejected, the response is 503 Service Unavailable, and the log lists the errors.
+
+62
+00:04:54,916 --> 00:05:00,112
+When several instances share one database, register the Redis Lock feature as a
+
+63
+00:05:00,112 --> 00:05:03,597
+setup feature too, and set the Redis configuration.
+
+64
+00:05:03,597 --> 00:05:08,426
+The instances take the lock one at a time, so the site is installed once.
+
+65
+00:05:09,176 --> 00:05:11,519
+The lock options are optional.
+
+66
+00:05:11,519 --> 00:05:18,615
+When you set LockOptions, give both LockTimeout and LockExpiration a value above zero, in milliseconds.
+
+67
+00:05:18,615 --> 00:05:23,236
+Without LockOptions, a distributed lock uses 60 seconds for each.
+
+68
+00:05:25,236 --> 00:05:29,463
+Auto Setup answers the questions of the Setup screen from configuration.
+
+69
+00:05:29,463 --> 00:05:34,016
+Register it in the host, describe each tenant, keep the secrets in environment
+
+70
+00:05:34,016 --> 00:05:37,647
+variables, and the site installs itself on its first request.
+
+71
+00:05:37,647 --> 00:05:39,056
+Thanks for watching.
+
