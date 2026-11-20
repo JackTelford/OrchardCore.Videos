@@ -294,12 +294,12 @@
     "docs": [
       "src/docs/getting-started/test-drive-orchard-core.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 4.4,
     "words": 665,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
