@@ -23,7 +23,32 @@
     "Orchard Core",
     "Content Types"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Where definitions are kept"
+    },
+    {
+      "time": "0:54",
+      "title": "The File Content Definition feature"
+    },
+    {
+      "time": "2:06",
+      "title": "Move the definitions to the database"
+    },
+    {
+      "time": "3:41",
+      "title": "Keep it out of other tenants"
+    },
+    {
+      "time": "4:01",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Understanding Content Definition Stores",
@@ -50,5 +75,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Contents.FileContentDefinition"
-  }
+  },
+  "length": "4:17"
 }
