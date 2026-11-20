@@ -1,0 +1,212 @@
+1
+00:00:01,000 --> 00:00:04,483
+Before you publish a page, you can see how it will look.
+
+2
+00:00:04,483 --> 00:00:08,864
+Content Preview shows your changes in a separate tab while you type, and
+
+3
+00:00:08,864 --> 00:00:12,178
+Preview Draft shows saved drafts before they go live.
+
+4
+00:00:12,178 --> 00:00:14,200
+In this video, we'll use both.
+
+5
+00:00:18,800 --> 00:00:22,609
+A content editor shows form fields, not the finished page.
+
+6
+00:00:22,609 --> 00:00:26,657
+Content Preview renders the item as a page, so you can check a
+
+7
+00:00:26,657 --> 00:00:28,740
+change before you publish it.
+
+8
+00:00:29,490 --> 00:00:31,557
+There are two ways to preview.
+
+9
+00:00:31,557 --> 00:00:36,382
+Preview, in the editor, shows the values you are typing, even before you save.
+
+10
+00:00:36,382 --> 00:00:40,861
+Preview Draft, in the content items list, shows the draft you saved, and
+
+11
+00:00:40,861 --> 00:00:43,790
+it works without the Content Preview feature.
+
+12
+00:00:48,082 --> 00:00:50,913
+Content Preview is a feature you enable.
+
+13
+00:00:50,913 --> 00:00:54,544
+Open Tools, Features, and search for Content Preview.
+
+14
+00:00:54,544 --> 00:00:57,252
+It is listed under Content Management.
+
+15
+00:00:57,752 --> 00:01:02,059
+Select Enable, and a message confirms that the feature was enabled.
+
+16
+00:01:02,059 --> 00:01:05,482
+Some setup recipes, such as Blog, enable it for you.
+
+17
+00:01:09,740 --> 00:01:12,862
+Select Edit on an article in Content, Content Items.
+
+18
+00:01:12,862 --> 00:01:16,630
+The action bar at the bottom of the editor has a Preview button.
+
+19
+00:01:17,104 --> 00:01:18,252
+Select Preview.
+
+20
+00:01:18,252 --> 00:01:21,972
+A new tab opens and shows the article with the values that are
+
+21
+00:01:21,972 --> 00:01:24,324
+in the form, without saving anything.
+
+22
+00:01:24,798 --> 00:01:28,455
+Go back to the editor and change the Title and the Subtitle.
+
+23
+00:01:28,455 --> 00:01:32,333
+A moment after you stop typing, the editor sends the form to the
+
+24
+00:01:32,333 --> 00:01:35,048
+site, and the preview tab shows the result.
+
+25
+00:01:35,503 --> 00:01:39,657
+In the preview tab, the page shows the changed Title and Subtitle.
+
+26
+00:01:39,657 --> 00:01:43,523
+The editor has to stay open for the preview to keep updating.
+
+27
+00:01:43,976 --> 00:01:46,718
+Select Cancel to leave without saving.
+
+28
+00:01:46,718 --> 00:01:52,326
+The content items list shows the original title, because live preview saves nothing.
+
+29
+00:01:52,788 --> 00:01:58,288
+In the preview tab, a Preview Disconnected message appears, because you left the editor.
+
+30
+00:02:02,518 --> 00:02:06,587
+An article with a saved draft shows a Draft badge beside Published in
+
+31
+00:02:06,587 --> 00:02:09,734
+the content items list, with a Preview Draft button.
+
+32
+00:02:09,734 --> 00:02:12,338
+Items without a draft have no such button.
+
+33
+00:02:12,819 --> 00:02:14,329
+Select Preview Draft.
+
+34
+00:02:14,329 --> 00:02:18,466
+A second tab opens with the saved draft of the article, displayed as
+
+35
+00:02:18,466 --> 00:02:19,919
+a page of your site.
+
+36
+00:02:20,400 --> 00:02:22,492
+Back in the list, select View.
+
+37
+00:02:22,492 --> 00:02:27,492
+It opens the published page, which shows the earlier Subtitle, because the draft
+
+38
+00:02:27,492 --> 00:02:29,760
+is not live until you publish it.
+
+39
+00:02:33,960 --> 00:02:37,303
+Previewing needs the Preview content permission.
+
+40
+00:02:37,303 --> 00:02:43,557
+Roles that can Edit content for others, or Publish or unpublish content for others, include it.
+
+41
+00:02:43,557 --> 00:02:47,210
+Assign it to other roles under Access Control, Roles.
+
+42
+00:02:47,960 --> 00:02:51,880
+The editor and the preview tab have to stay in the same browser,
+
+43
+00:02:51,880 --> 00:02:53,616
+on the same site address.
+
+44
+00:02:53,616 --> 00:02:58,880
+A preview link identifies temporary content that may be unpublished, so do not share it.
+
+45
+00:02:59,630 --> 00:03:03,246
+If the preview does not look like the page on your site, add
+
+46
+00:03:03,246 --> 00:03:05,602
+the Preview part to the content type.
+
+47
+00:03:05,602 --> 00:03:11,410
+Edit the type under Design, Content Definition, Content Types, select Add Parts, and choose Preview.
+
+48
+00:03:12,160 --> 00:03:14,430
+The Preview part has a Pattern setting.
+
+49
+00:03:14,430 --> 00:03:18,265
+It holds an expression that returns the path of the page that displays
+
+50
+00:03:18,265 --> 00:03:22,050
+the item, and the Preview button then loads that page from your site.
+
+51
+00:03:24,050 --> 00:03:28,425
+Preview checks your changes while you edit, and Preview Draft checks the version
+
+52
+00:03:28,425 --> 00:03:30,867
+you saved, both before anything goes live.
+
+53
+00:03:30,867 --> 00:03:32,190
+Thanks for watching.
+
