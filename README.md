@@ -102,7 +102,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Email: Configure SMTP and Send a Test Email](videos/email-smtp) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Encoding Settings: Render Non-ASCII Text Without Encoding](videos/encoding-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [External Login: Let Users Sign In With Other Accounts](videos/external-login-settings) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Features: Dependencies and Features That Enable Others](videos/features-dependencies) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Features: Dependencies and Features That Enable Others](videos/features-dependencies) | 3:45 | [https://youtu.be/3tyO-8nl5EQ](https://youtu.be/3tyO-8nl5EQ) | OrchardCMS/OrchardCore |
 | [Features: Enable and Disable What Your Site Uses](videos/features-manage) | 4:33 | [https://youtu.be/BmreMHrfixM](https://youtu.be/BmreMHrfixM) | OrchardCMS/OrchardCore |
 | [Feeds: Publish an RSS Feed of Your Content](videos/feeds-rss) |  | not uploaded | OrchardCMS/OrchardCore |
 | [File Upload Security: Antivirus Scanning and Temporary Files](videos/file-upload-security) |  | not uploaded | OrchardCMS/OrchardCore |
