@@ -1,0 +1,179 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.791
+A tenant records its content types, parts, and fields in a content definition.
+
+00:00:05.791 --> 00:00:10.638
+The database keeps it by default, and the File Content Definition feature keeps
+
+00:00:10.638 --> 00:00:11.722
+it in a file.
+
+00:00:11.722 --> 00:00:16.170
+Let's see how the store is chosen, and how to move back to the database.
+
+00:00:20.770 --> 00:00:24.854
+A content definition is one document, a Content Definition Record.
+
+00:00:24.854 --> 00:00:28.881
+It holds the type records and the part records of the tenant, and
+
+00:00:28.881 --> 00:00:32.000
+each part record holds the records of its fields.
+
+00:00:32.750 --> 00:00:36.399
+The content definition manager never touches storage itself.
+
+00:00:36.399 --> 00:00:40.766
+It goes through an I Content Definition Store, which loads the record for
+
+00:00:40.766 --> 00:00:44.580
+updating, gets a cached copy for reading, and saves the record.
+
+00:00:45.330 --> 00:00:48.146
+The default implementation is the database store.
+
+00:00:48.146 --> 00:00:51.833
+It asks a Document Manager for the record, which reads it from the
+
+00:00:51.833 --> 00:00:53.830
+database and keeps a cached copy.
+
+00:00:58.030 --> 00:01:01.588
+You enable File Content Definition in Tools, Features.
+
+00:01:01.588 --> 00:01:06.214
+The Contents module declares the feature in its manifest, and gives it a
+
+00:01:06.214 --> 00:01:10.010
+startup class that runs only while the feature is enabled.
+
+00:01:10.760 --> 00:01:14.605
+The database store is added only if no store is registered.
+
+00:01:14.605 --> 00:01:20.342
+The feature's startup calls Add File Content Definition Store, which removes the registered
+
+00:01:20.342 --> 00:01:23.240
+store and adds the file store in its place.
+
+00:01:23.990 --> 00:01:28.931
+The file store has the same three methods, but its Document Manager uses
+
+00:01:28.931 --> 00:01:30.832
+the file document store.
+
+00:01:30.832 --> 00:01:36.216
+The record names its file, so each tenant gets a ContentDefinition.json file in
+
+00:01:36.216 --> 00:01:38.750
+its folder, under App_Data, Sites.
+
+00:01:39.500 --> 00:01:42.477
+The file holds the same record as indented JSON.
+
+00:01:42.477 --> 00:01:47.548
+The admin, migrations, and recipes all change definitions through the manager, so each
+
+00:01:47.548 --> 00:01:50.470
+change is written to the file after the commit.
+
+00:01:51.220 --> 00:01:55.689
+Without a file, the store returns an empty record, and enabling the feature
+
+00:01:55.689 --> 00:01:57.841
+copies nothing from the database.
+
+00:01:57.841 --> 00:02:02.476
+To start from those definitions, export them with a deployment plan first, and
+
+00:02:02.476 --> 00:02:05.400
+import the package once the feature is enabled.
+
+00:02:09.669 --> 00:02:15.332
+The documentation suggests the file for development, and the database for production.
+
+00:02:15.332 --> 00:02:18.071
+To move, first export the definitions.
+
+00:02:18.071 --> 00:02:24.979
+In Tools, Deployments, Plans, choose Add Deployment Plan, name it Content Definitions, and select Create.
+
+00:02:25.440 --> 00:02:29.996
+On the plan, choose Add Step, and add Update Content Definitions.
+
+00:02:29.996 --> 00:02:36.220
+In the step form, check Include all content types and parts definitions, and select Create.
+
+00:02:36.702 --> 00:02:39.310
+Choose Execute, and select File Download.
+
+00:02:39.310 --> 00:02:43.582
+The step reads the definitions from the active store, so it exports the
+
+00:02:43.582 --> 00:02:47.522
+file's content, and the browser downloads ContentDefinitions.zip.
+
+00:02:49.159 --> 00:02:53.064
+Next, in Tools, Features, find File Content Definition.
+
+00:02:53.064 --> 00:02:55.817
+Select Disable, and confirm with Yes.
+
+00:02:55.817 --> 00:03:01.259
+The tenant restarts with the database store, and the feature shows as disabled.
+
+00:03:02.290 --> 00:03:07.807
+Open Design, Content Definition, Content Types, and search for Event, a type created
+
+00:03:07.807 --> 00:03:09.769
+while the file was in use.
+
+00:03:09.769 --> 00:03:11.301
+There is no result:
+
+00:03:11.301 --> 00:03:13.570
+the database never received it.
+
+00:03:15.199 --> 00:03:21.125
+Open Tools, Deployments, Package Import, select ContentDefinitions.zip, and select Import.
+
+00:03:21.125 --> 00:03:26.496
+The package's Content Definition recipe step saves each type and part through the
+
+00:03:26.496 --> 00:03:29.459
+active store, which is the database again.
+
+00:03:29.944 --> 00:03:33.306
+The page reports that the deployment package was imported.
+
+00:03:33.306 --> 00:03:36.667
+Back in Content Types, searching for Event finds the type.
+
+00:03:36.667 --> 00:03:40.764
+The definitions are in the database, and the site reads them from there.
+
+00:03:44.964 --> 00:03:50.187
+On the Default tenant, with Tenant Feature Profiles enabled, a feature profile restricts
+
+00:03:50.187 --> 00:03:52.577
+the features of the tenants given it.
+
+00:03:52.577 --> 00:03:57.189
+This Feature Profiles recipe step has an Exclude rule that names File Content
+
+00:03:57.189 --> 00:04:00.634
+Definition by its id, so those tenants cannot enable it.
+
+00:04:02.634 --> 00:04:04.805
+That's content definition stores:
+
+00:04:04.805 --> 00:04:09.814
+the database by default, a ContentDefinition.json file for each tenant with the File
+
+00:04:09.814 --> 00:04:14.767
+Content Definition feature, and a deployment plan to move definitions between them.
+
+00:04:14.767 --> 00:04:16.214
+Thanks for watching.
+
