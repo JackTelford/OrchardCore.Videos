@@ -48,7 +48,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Build a Product Catalog: Types, Categories and Search](videos/build-a-product-catalog) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Configuration: appsettings, Environment Variables and Tenants](videos/configuration-appsettings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Culture Picker: Let Visitors Switch Languages](videos/content-culture-picker) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Content Definition Stores: Keep Types in the Database or a File](videos/content-definition-stores) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Definition Stores: Keep Types in the Database or a File](videos/content-definition-stores) | 4:17 | [https://youtu.be/ybiJ2vcaFKc](https://youtu.be/ybiJ2vcaFKc) | OrchardCMS/OrchardCore |
 | [Content Definitions in Code: Migrations and Recipes](videos/content-definitions-in-code) | 6:38 | [https://youtu.be/NvF7c7HLinc](https://youtu.be/NvF7c7HLinc) | OrchardCMS/OrchardCore |
 | [Write a Content Field With Its Editor and Settings](videos/content-field-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Field Editors and Display Modes: One Field, Many Faces](videos/content-fields-editors) |  | not uploaded | OrchardCMS/OrchardCore |
