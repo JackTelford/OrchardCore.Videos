@@ -1,0 +1,304 @@
+1
+00:00:01,000 --> 00:00:05,930
+Content types in Orchard Core have settings that decide where their items appear,
+
+2
+00:00:05,930 --> 00:00:08,933
+how they are saved, and who can work with them.
+
+3
+00:00:08,933 --> 00:00:14,430
+In this video, we'll look at Creatable, Listable, Draftable, Versionable and Securable, and
+
+4
+00:00:14,430 --> 00:00:17,660
+at the Stereotype, Category and Thumbnail settings.
+
+5
+00:00:22,260 --> 00:00:28,274
+You find these settings by editing a content type, under Design, Content Definition, Content Types.
+
+6
+00:00:28,274 --> 00:00:33,945
+A type you create there starts with Creatable, Listable, Draftable, Versionable and Securable
+
+7
+00:00:33,945 --> 00:00:37,210
+all checked, and you clear the ones you don't want.
+
+8
+00:00:37,960 --> 00:00:41,565
+Creatable offers the type when someone creates an item.
+
+9
+00:00:41,565 --> 00:00:44,460
+Listable shows its items in Manage Content.
+
+10
+00:00:44,460 --> 00:00:50,370
+Draftable adds the Save Draft button, and Versionable lets an item keep more than one version.
+
+11
+00:00:51,120 --> 00:00:54,722
+Securable gives the type its own permissions for roles.
+
+12
+00:00:54,722 --> 00:00:58,205
+Stereotype, Category and Thumbnail are text settings:
+
+13
+00:00:58,205 --> 00:01:02,752
+a stereotype groups types for a feature, and a category and a thumbnail
+
+14
+00:01:02,752 --> 00:01:04,700
+organize types in a picker.
+
+15
+00:01:09,000 --> 00:01:12,935
+This is Manage Content, and the Event items are listed here.
+
+16
+00:01:12,935 --> 00:01:17,108
+The New button offers Event as a type to create, and the Content
+
+17
+00:01:17,108 --> 00:01:19,850
+Type filter offers it as a type to list.
+
+18
+00:01:21,485 --> 00:01:23,528
+Let's open the settings of Event.
+
+19
+00:01:23,528 --> 00:01:27,353
+On the Content Types page, Event has a Create New Event button, and
+
+20
+00:01:27,353 --> 00:01:28,925
+Edit opens its settings.
+
+21
+00:01:29,677 --> 00:01:34,666
+The form begins with the Technical Name, which can't be changed, and the Display Name.
+
+22
+00:01:34,666 --> 00:01:38,842
+Description comes next, and its text appears under the name of the type
+
+23
+00:01:38,842 --> 00:01:40,577
+on the Content Types page.
+
+24
+00:01:41,083 --> 00:01:45,448
+Each checkbox has a hint next to its label that explains what it does.
+
+25
+00:01:45,448 --> 00:01:47,803
+Let's clear Creatable and Listable.
+
+26
+00:01:49,787 --> 00:01:50,819
+Choose Save.
+
+27
+00:01:50,819 --> 00:01:55,292
+Back on Content Types, Event has lost its Create New Event button, while
+
+28
+00:01:55,292 --> 00:01:57,127
+List Items is still there.
+
+29
+00:01:57,686 --> 00:02:02,738
+On Manage Content, the New button no longer offers Event, the Content Type
+
+30
+00:02:02,738 --> 00:02:06,906
+filter no longer lists it, and its items have left the list.
+
+31
+00:02:07,465 --> 00:02:08,994
+The items still exist.
+
+32
+00:02:08,994 --> 00:02:13,035
+List Items on the Content Types page opens them, because a page that
+
+33
+00:02:13,035 --> 00:02:17,185
+asks for one specific type lists it even when the type isn't Listable.
+
+34
+00:02:21,474 --> 00:02:24,238
+This is the editor of a published Event.
+
+35
+00:02:24,238 --> 00:02:29,347
+Publish makes your changes live, and Save Draft stores them without publishing.
+
+36
+00:02:29,347 --> 00:02:33,134
+The Save Draft button is here because Event is Draftable.
+
+37
+00:02:33,650 --> 00:02:36,801
+Let's change the title and choose Save Draft.
+
+38
+00:02:36,801 --> 00:02:41,310
+In Manage Content, the Event shows two badges, Published and Draft.
+
+39
+00:02:41,772 --> 00:02:45,233
+The published version stays in place while the draft waits.
+
+40
+00:02:45,233 --> 00:02:47,363
+That is what Versionable provides:
+
+41
+00:02:47,363 --> 00:02:49,759
+an item can keep more than one version.
+
+42
+00:02:49,759 --> 00:02:52,262
+Without it, an item has a single version.
+
+43
+00:02:52,726 --> 00:02:54,817
+Let's clear Draftable next.
+
+44
+00:02:54,817 --> 00:02:59,951
+On the Edit Content Type page for Event, the Draftable checkbox is checked.
+
+45
+00:02:59,951 --> 00:03:02,106
+Uncheck it, and choose Save.
+
+46
+00:03:02,570 --> 00:03:03,918
+Open another Event.
+
+47
+00:03:03,918 --> 00:03:09,150
+Publish is still there, but Save Draft is gone, because the type no longer supports drafts.
+
+48
+00:03:13,436 --> 00:03:17,194
+Securable gives a content type permissions of its own.
+
+49
+00:03:17,194 --> 00:03:21,766
+To see them, go to Access Control, Roles, and edit the Editor role.
+
+50
+00:03:22,335 --> 00:03:27,671
+Searching the permissions for Event finds a group named Event Content Type - Event.
+
+51
+00:03:27,671 --> 00:03:32,768
+It lists permissions such as publish, edit, delete, view, preview and clone for
+
+52
+00:03:32,768 --> 00:03:35,705
+Event items, and a permission to list them.
+
+53
+00:03:36,181 --> 00:03:37,948
+Let's clear Securable.
+
+54
+00:03:37,948 --> 00:03:43,124
+On the Edit Content Type page for Event, uncheck Securable, and choose Save.
+
+55
+00:03:43,124 --> 00:03:46,091
+After that, we return to the Editor role.
+
+56
+00:03:46,558 --> 00:03:49,950
+Searching the Editor role for Event again finds nothing.
+
+57
+00:03:49,950 --> 00:03:54,436
+Without Securable, the Roles page offers no permissions for the type, so the
+
+58
+00:03:54,436 --> 00:03:58,538
+general content permissions decide what a role can do with its items.
+
+59
+00:04:02,793 --> 00:04:06,261
+Paragraph is a widget, so its Stereotype is Widget.
+
+60
+00:04:06,261 --> 00:04:11,433
+Features that work with widgets offer only the types that have this stereotype.
+
+61
+00:04:11,950 --> 00:04:16,808
+The hint under the Stereotype box gives examples, such as Widget and MenuItem.
+
+62
+00:04:16,808 --> 00:04:21,840
+A stereotype of your own is made of letters and digits, and starts with a letter.
+
+63
+00:04:22,371 --> 00:04:26,786
+Category groups types in a picker, and Thumbnail is the path of an
+
+64
+00:04:26,786 --> 00:04:28,748
+image shown with the type.
+
+65
+00:04:28,748 --> 00:04:34,511
+Let's enter Text as the category, a placeholder image as the thumbnail, and choose Save.
+
+66
+00:04:35,027 --> 00:04:37,027
+Next, let's create a Page.
+
+67
+00:04:37,027 --> 00:04:41,529
+Its editor is set to Blocks, so the plus button, Add Widget, opens
+
+68
+00:04:41,529 --> 00:04:43,717
+a picker named Select Widget.
+
+69
+00:04:44,170 --> 00:04:47,104
+The sidebar lists categories, starting with All.
+
+70
+00:04:47,104 --> 00:04:52,103
+Text shows only the types of that category, each with its thumbnail and an Add button.
+
+71
+00:04:52,103 --> 00:04:54,710
+Types without a category appear under All.
+
+72
+00:04:56,710 --> 00:05:01,284
+Content type settings decide where items are offered, how they are saved, and
+
+73
+00:05:01,284 --> 00:05:02,881
+who can work with them.
+
+74
+00:05:02,881 --> 00:05:07,509
+Check the options a type needs, clear the others, and use stereotype, category
+
+75
+00:05:07,509 --> 00:05:09,438
+and thumbnail to organize it.
+
+76
+00:05:09,438 --> 00:05:10,870
+Thanks for watching.
+
