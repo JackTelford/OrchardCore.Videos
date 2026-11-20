@@ -101,5 +101,10 @@
     "pullRequest": null,
     "feature": "guide:getting-started"
   },
-  "length": "6:36"
+  "length": "6:36",
+  "youtube": {
+    "id": "AL5UNqnC-W0",
+    "url": "https://youtu.be/AL5UNqnC-W0",
+    "version": "v1"
+  }
 }

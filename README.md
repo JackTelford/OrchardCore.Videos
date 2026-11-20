@@ -67,7 +67,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Content Items: Create, Edit and Publish](videos/contents-create-edit-publish) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Drafts and Versions: Change Content Without Losing the Live Page](videos/contents-drafts-versions) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Items List: Search, Filter and Act on Many Items](videos/contents-list-search-filter) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Create a CMS Web Application With dotnet new](videos/create-cms-web-application) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create a CMS Web Application With dotnet new](videos/create-cms-web-application) | 6:36 | [https://youtu.be/AL5UNqnC-W0](https://youtu.be/AL5UNqnC-W0) | OrchardCMS/OrchardCore |
 | [Create a Liquid Widget Without Writing a Module](videos/create-liquid-widget) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Module Metadata in Your Project File](videos/csproj-module-metadata) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Custom Settings: Turn a Content Type Into Site Settings](videos/custom-settings) |  | not uploaded | OrchardCMS/OrchardCore |
