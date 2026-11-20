@@ -23,7 +23,40 @@
     "Orchard Core",
     "Content Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "What a content item is"
+    },
+    {
+      "time": "1:20",
+      "title": "Find your content"
+    },
+    {
+      "time": "2:05",
+      "title": "Create a content item"
+    },
+    {
+      "time": "3:04",
+      "title": "View it on your site"
+    },
+    {
+      "time": "3:26",
+      "title": "Edit and publish changes"
+    },
+    {
+      "time": "3:51",
+      "title": "Unpublish and delete"
+    },
+    {
+      "time": "4:38",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Contents",
@@ -50,5 +83,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Contents"
-  }
+  },
+  "length": "4:48"
 }
