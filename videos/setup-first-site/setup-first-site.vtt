@@ -1,0 +1,221 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.874
+In this video, we'll set up an Orchard Core site.
+
+00:00:03.874 --> 00:00:08.054
+We'll answer the questions on the Setup screen, finish the setup, and sign
+
+00:00:08.054 --> 00:00:09.830
+in to the admin of the site.
+
+00:00:14.430 --> 00:00:16.577
+A site that is not set up is empty.
+
+00:00:16.577 --> 00:00:19.563
+When you open its address, you don't see a website.
+
+00:00:19.563 --> 00:00:23.910
+You see the Setup screen, which asks a few questions about the site you want.
+
+00:00:24.660 --> 00:00:29.034
+Select Finish Setup, and Orchard Core builds the site from your answers.
+
+00:00:29.034 --> 00:00:32.510
+Then you sign in to the admin with the user you created.
+
+00:00:33.260 --> 00:00:38.494
+Behind that button, Orchard Core checks the database, creates its tables, and runs
+
+00:00:38.494 --> 00:00:42.716
+the recipe, which turns on features and can add starting content.
+
+00:00:42.716 --> 00:00:47.950
+It also saves the site name and time zone as settings, and creates the super user.
+
+00:00:52.157 --> 00:00:53.968
+This is the Setup screen.
+
+00:00:53.968 --> 00:00:58.116
+At the top right, Change language reloads it in another language.
+
+00:00:58.116 --> 00:01:01.914
+The whole form is on this one page, from the site name down
+
+00:01:01.914 --> 00:01:03.317
+to the super user.
+
+00:01:03.786 --> 00:01:05.514
+What is the name of your site?
+
+00:01:05.514 --> 00:01:08.250
+The answer becomes the default title of your pages.
+
+00:01:08.250 --> 00:01:09.786
+Let's type Contoso Bakery.
+
+00:01:10.244 --> 00:01:15.688
+Recipe sets how the site starts, by turning on features and sometimes adding content.
+
+00:01:15.688 --> 00:01:19.396
+Software as a Service is selected when the screen opens.
+
+00:01:19.396 --> 00:01:23.344
+Let's open the list, read the descriptions, and choose Blog.
+
+00:01:23.847 --> 00:01:27.584
+Default Time Zone sets how dates and times are shown and edited.
+
+00:01:27.584 --> 00:01:29.987
+Let's choose Los Angeles from the list.
+
+00:01:30.464 --> 00:01:32.631
+What type of database to use?
+
+00:01:32.631 --> 00:01:37.523
+Sqlite is selected, and it needs no database server or connection string.
+
+00:01:37.523 --> 00:01:42.724
+Orchard Core keeps a Sqlite database as a file in the data folder of the site.
+
+00:01:44.324 --> 00:01:48.151
+Sql Server, MySql, and Postgres use a database server.
+
+00:01:48.151 --> 00:01:54.147
+Create the database first, because Orchard Core creates the tables but not the database.
+
+00:01:54.147 --> 00:01:56.634
+Then enter its Connection String.
+
+00:01:57.384 --> 00:02:00.345
+Table Prefix and Table Schema are optional.
+
+00:02:00.345 --> 00:02:05.120
+A prefix lets several sites share one database, and the default schema of
+
+00:02:05.120 --> 00:02:08.564
+the server is used when you leave the schema blank.
+
+00:02:09.314 --> 00:02:13.758
+If setup can't finish, the screen returns with a message at the top.
+
+00:02:13.758 --> 00:02:18.801
+The connection string may be invalid, or the database, table prefix and schema
+
+00:02:18.801 --> 00:02:20.483
+may already be in use.
+
+00:02:20.483 --> 00:02:22.824
+Correct the answer and try again.
+
+00:02:23.574 --> 00:02:27.583
+Your host can preset some answers, such as the recipe or the database.
+
+00:02:27.583 --> 00:02:31.539
+When it does, the screen leaves those questions out, so your form can
+
+00:02:31.539 --> 00:02:33.174
+be shorter than this one.
+
+00:02:37.438 --> 00:02:42.240
+Below the database questions, the Super User section creates the first user.
+
+00:02:42.240 --> 00:02:46.340
+The screen says this user has all the rights, and should be used
+
+00:02:46.340 --> 00:02:49.268
+only during Setup and for disaster recovery.
+
+00:02:49.727 --> 00:02:52.044
+Enter a User Name and an Email.
+
+00:02:52.044 --> 00:02:58.057
+The user name accepts letters, digits, and the characters dash, dot, underscore, and plus.
+
+00:02:58.508 --> 00:03:00.309
+Select the Password field.
+
+00:03:00.309 --> 00:03:04.360
+A list shows the rules the password must meet, and checks each one
+
+00:03:04.360 --> 00:03:05.767
+off as you meet it.
+
+00:03:05.767 --> 00:03:08.468
+A bar under the field shows your progress.
+
+00:03:08.931 --> 00:03:12.212
+Type the same password in Password Confirmation.
+
+00:03:12.212 --> 00:03:16.951
+The eye button beside each password field shows or hides what you typed.
+
+00:03:17.432 --> 00:03:18.938
+Select Finish Setup.
+
+00:03:18.938 --> 00:03:24.322
+Orchard Core checks the database, builds the site from your answers, and then opens it.
+
+00:03:24.786 --> 00:03:28.271
+This is the front end of the site, the part your visitors see.
+
+00:03:28.271 --> 00:03:30.526
+The name you entered is in the header.
+
+00:03:34.742 --> 00:03:37.301
+The admin is a separate part of the site.
+
+00:03:37.301 --> 00:03:41.656
+By default, you reach it by adding Admin to the end of the site's address.
+
+00:03:41.656 --> 00:03:44.052
+Orchard Core first asks you to log in.
+
+00:03:44.540 --> 00:03:49.163
+In Username or email address, type the user name of the super user.
+
+00:03:49.163 --> 00:03:51.000
+Then type its password.
+
+00:03:51.481 --> 00:03:52.697
+Select Log in.
+
+00:03:52.697 --> 00:03:57.014
+The admin opens with a welcome message and cards for first tasks:
+
+00:03:57.014 --> 00:04:02.729
+Create content, Customize theme, and Manage users, where you add users and assign roles.
+
+00:04:02.729 --> 00:04:05.161
+The menu leads to everything else.
+
+00:04:05.619 --> 00:04:09.183
+Setup saves your site name and time zone as settings.
+
+00:04:09.183 --> 00:04:12.143
+In the menu, select Settings, then General.
+
+00:04:12.143 --> 00:04:17.639
+There, Site name holds the name you entered, and Default Time Zone holds your choice.
+
+00:04:18.093 --> 00:04:22.670
+On the Resources tab, Use framework CDN is not selected, so the site
+
+00:04:22.670 --> 00:04:27.124
+loads scripts and stylesheets, such as jQuery, from its own files.
+
+00:04:27.124 --> 00:04:30.093
+That works without an internet connection.
+
+00:04:32.093 --> 00:04:33.567
+That is the Setup screen:
+
+00:04:33.567 --> 00:04:36.941
+the questions it asks, what Finish Setup does, and how to sign in
+
+00:04:36.941 --> 00:04:38.367
+to the site you created.
+
+00:04:38.367 --> 00:04:39.603
+Thanks for watching.
+
