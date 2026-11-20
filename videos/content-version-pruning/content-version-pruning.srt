@@ -1,0 +1,224 @@
+1
+00:00:01,000 --> 00:00:05,771
+Publishing a change to a versioned content item leaves the previous version in
+
+2
+00:00:05,771 --> 00:00:08,667
+the database, and these old versions pile up.
+
+3
+00:00:08,667 --> 00:00:11,904
+Content Version Pruning deletes them on a schedule.
+
+4
+00:00:11,904 --> 00:00:16,050
+In this video, we'll enable it, choose its rules, and run its task.
+
+5
+00:00:20,650 --> 00:00:26,210
+In a content type that is Versionable, publishing a change keeps the version it replaces.
+
+6
+00:00:26,210 --> 00:00:28,493
+That copy is an archived version:
+
+7
+00:00:28,493 --> 00:00:32,355
+it is neither the most recent version nor the published one.
+
+8
+00:00:32,355 --> 00:00:35,750
+Here, archived has nothing to do with Archive Later.
+
+9
+00:00:36,500 --> 00:00:40,474
+Pruning never deletes the published version or the most recent version.
+
+10
+00:00:40,474 --> 00:00:44,344
+It deletes an archived version of a chosen content type only when the
+
+11
+00:00:44,344 --> 00:00:48,266
+version is older than the retention period and is not among the newest
+
+12
+00:00:48,266 --> 00:00:50,640
+archived versions you keep for its item.
+
+13
+00:00:51,390 --> 00:00:53,292
+Three steps put it to work:
+
+14
+00:00:53,292 --> 00:00:58,308
+enable the features, choose the rules, and enable the background task, which runs
+
+15
+00:00:58,308 --> 00:00:59,922
+once a day by default.
+
+16
+00:00:59,922 --> 00:01:04,130
+Pruning is permanent, because a deleted version cannot be restored.
+
+17
+00:01:08,324 --> 00:01:11,574
+Let's open Tools, Features, and search for pruning.
+
+18
+00:01:11,574 --> 00:01:16,534
+The Content Version Pruning feature is listed in the Content Management category.
+
+19
+00:01:16,993 --> 00:01:18,092
+Select Enable.
+
+20
+00:01:18,092 --> 00:01:22,432
+The feature adds a Content Version Pruning page to the Settings menu, and
+
+21
+00:01:22,432 --> 00:01:25,563
+it adds the background task that does the deleting.
+
+22
+00:01:26,015 --> 00:01:29,990
+The task is managed on the Background Tasks page, which has a feature
+
+23
+00:01:29,990 --> 00:01:32,058
+of its own in the Tasks category.
+
+24
+00:01:32,058 --> 00:01:35,185
+Let's search for Background Tasks, and select Enable.
+
+25
+00:01:39,420 --> 00:01:42,062
+Open Settings, Content Version Pruning.
+
+26
+00:01:42,062 --> 00:01:45,056
+Administrators can open this page by default.
+
+27
+00:01:45,056 --> 00:01:47,346
+Other roles need two permissions:
+
+28
+00:01:47,346 --> 00:01:51,280
+Manage settings, and Manage Content Version Pruning settings.
+
+29
+00:01:51,732 --> 00:01:56,227
+At the top, the Disable check box stops the pruning while the feature stays enabled.
+
+30
+00:01:56,227 --> 00:02:00,173
+It is separate from the switch of the background task, which comes later.
+
+31
+00:02:00,173 --> 00:02:01,622
+Let's leave it cleared.
+
+32
+00:02:02,085 --> 00:02:05,145
+Retention period (days) is 30 by default.
+
+33
+00:02:05,145 --> 00:02:10,745
+An archived version that was last modified within this many days is not deleted.
+
+34
+00:02:11,265 --> 00:02:14,788
+Archived versions to keep per item is 1 by default.
+
+35
+00:02:14,788 --> 00:02:20,844
+That many of the most recent archived versions of each item always stay, whatever their age.
+
+36
+00:02:20,844 --> 00:02:23,625
+A value of 0 turns this protection off.
+
+37
+00:02:24,079 --> 00:02:28,744
+Under Content types to prune, nothing is selected by default, and nothing is
+
+38
+00:02:28,744 --> 00:02:30,849
+pruned until you select a type.
+
+39
+00:02:30,849 --> 00:02:35,003
+Let's select Blog Post and Page, not Select all, so that only those
+
+40
+00:02:35,003 --> 00:02:36,539
+two types are pruned.
+
+41
+00:02:37,010 --> 00:02:37,989
+Select Save.
+
+42
+00:02:37,989 --> 00:02:41,310
+A message confirms that the site settings were updated.
+
+43
+00:02:45,556 --> 00:02:50,726
+Open Tools, Background Tasks, and find the Content Version Pruning Background Task.
+
+44
+00:02:50,726 --> 00:02:54,676
+Its Disabled badge shows that it does not run on its schedule.
+
+45
+00:02:55,129 --> 00:02:56,261
+Select Enable.
+
+46
+00:02:56,261 --> 00:03:00,280
+By default, the task then runs every day at midnight, in the time
+
+47
+00:03:00,280 --> 00:03:03,620
+zone of your site, and the Next run badge shows when.
+
+48
+00:03:03,620 --> 00:03:07,299
+Edit opens its settings, where you can change the schedule.
+
+49
+00:03:07,764 --> 00:03:11,956
+To try the task before midnight, open its Actions menu and choose the
+
+50
+00:03:11,956 --> 00:03:13,856
+item that runs it on demand.
+
+51
+00:03:13,856 --> 00:03:18,104
+The Last run badge then shows when the task ran, and how long it took.
+
+52
+00:03:18,563 --> 00:03:23,154
+On this site, there are no archived versions, so the run deletes nothing.
+
+53
+00:03:23,154 --> 00:03:27,803
+On a site with older versions, each run removes the ones your rules allow.
+
+54
+00:03:29,803 --> 00:03:34,101
+Content Version Pruning removes the old versions of your content on a schedule,
+
+55
+00:03:34,101 --> 00:03:35,618
+by the rules you choose.
+
+56
+00:03:35,618 --> 00:03:36,933
+Thanks for watching.
+
