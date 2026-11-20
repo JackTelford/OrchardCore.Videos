@@ -1,0 +1,248 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.073
+A growing site holds more content items than you can scroll through.
+
+00:00:05.073 --> 00:00:09.312
+The content items list finds them by title, type or status, and applies
+
+00:00:09.312 --> 00:00:11.624
+one action to several items at once.
+
+00:00:11.624 --> 00:00:13.220
+Let's see how it works.
+
+00:00:17.820 --> 00:00:23.247
+Every content item has a content type, such as Article or Page, and a status:
+
+00:00:23.247 --> 00:00:25.339
+published, draft, or both.
+
+00:00:25.339 --> 00:00:30.047
+The list shows each item with its title, its type, its status, and
+
+00:00:30.047 --> 00:00:32.270
+the time of its last change.
+
+00:00:33.020 --> 00:00:35.821
+Four controls narrow and order the list.
+
+00:00:35.821 --> 00:00:38.744
+The search box matches words in the title.
+
+00:00:38.744 --> 00:00:43.920
+Content Type keeps one type, Show keeps one status, and Sort changes the order.
+
+00:00:44.670 --> 00:00:48.458
+Tick two or more items, and an Actions menu appears.
+
+00:00:48.458 --> 00:00:54.010
+Its commands publish, unpublish or delete every selected item in a single step.
+
+00:00:58.236 --> 00:01:01.567
+In the admin menu, open Content, then Content Items.
+
+00:01:01.567 --> 00:01:05.990
+The page is titled Manage Content, and lists your items with the newest
+
+00:01:05.990 --> 00:01:07.426
+changes at the top.
+
+00:01:07.887 --> 00:01:12.116
+The list shows only items of content types whose Listable setting is on,
+
+00:01:12.116 --> 00:01:14.827
+and only those your role allows you to view.
+
+00:01:17.255 --> 00:01:20.428
+Each row shows an item's title and content type.
+
+00:01:20.428 --> 00:01:24.893
+A Published badge, a Draft badge, or both show its status; both appear
+
+00:01:24.893 --> 00:01:27.595
+when a published item has a newer draft.
+
+00:01:27.595 --> 00:01:30.885
+The time of the last change and the author follow.
+
+00:01:31.361 --> 00:01:36.351
+Edit opens the editor, and View opens the public page of a published item.
+
+00:01:36.351 --> 00:01:41.341
+The Actions menu holds more commands, such as Unpublish, Delete and Clone.
+
+00:01:41.835 --> 00:01:47.159
+The count above the list shows how many items this page holds, out of the total.
+
+00:01:47.159 --> 00:01:50.255
+Below the list, a pager moves between pages.
+
+00:01:50.711 --> 00:01:54.629
+At the end of the row that holds the count, the List and
+
+00:01:54.629 --> 00:01:56.967
+Grid buttons switch the layout.
+
+00:01:56.967 --> 00:02:02.971
+Grid arranges Title, Type, Status and Last modified in columns, and List returns to rows.
+
+00:02:07.172 --> 00:02:09.812
+Type a word in the search box and press Enter.
+
+00:02:09.812 --> 00:02:13.214
+The search looks for it in the display text of each item, the
+
+00:02:13.214 --> 00:02:14.737
+title shown in the list.
+
+00:02:14.737 --> 00:02:16.362
+Let's search for schedule.
+
+00:02:16.858 --> 00:02:20.494
+Three items contain the word, and the count at the top says so.
+
+00:02:20.494 --> 00:02:24.658
+The search box keeps what you typed, so you can edit it and search again.
+
+00:02:25.636 --> 00:02:30.147
+To see what the search box understands, open the Filters button, the funnel
+
+00:02:30.147 --> 00:02:32.654
+at its start, and choose Filter syntax.
+
+00:02:32.654 --> 00:02:36.386
+The Available Filters dialog lists every filter you can type.
+
+00:02:36.843 --> 00:02:39.887
+Words separated by a space match any of them.
+
+00:02:39.887 --> 00:02:44.960
+AND combines words, NOT leaves out items that contain a word, parentheses group
+
+00:02:44.960 --> 00:02:48.003
+words, and quotes search for an exact phrase.
+
+00:02:48.468 --> 00:02:52.255
+Let's close the dialog and search for schedule NOT winter.
+
+00:02:52.255 --> 00:02:56.218
+The Winter Snowshoe Schedule drops out, and two items remain.
+
+00:03:00.452 --> 00:03:02.574
+Content Type keeps one type.
+
+00:03:02.574 --> 00:03:06.880
+Open it, type a few letters to find a type, and choose Article.
+
+00:03:06.880 --> 00:03:09.502
+The list reloads with articles only.
+
+00:03:09.962 --> 00:03:11.723
+Show filters by status.
+
+00:03:11.723 --> 00:03:17.431
+Published lists items with a published version, and Unpublished lists items whose newest
+
+00:03:17.431 --> 00:03:18.949
+version is a draft.
+
+00:03:18.949 --> 00:03:20.832
+Let's choose Unpublished.
+
+00:03:21.321 --> 00:03:26.251
+Each choice also appears in the search box as a filter, such as type or status.
+
+00:03:26.251 --> 00:03:28.861
+You can type the same filters yourself.
+
+00:03:29.316 --> 00:03:31.002
+Sort changes the order.
+
+00:03:31.002 --> 00:03:36.523
+Besides the modification date, it can order by creation date, publication date, or Title.
+
+00:03:36.523 --> 00:03:37.976
+Let's choose Title.
+
+00:03:38.434 --> 00:03:41.313
+The Filters button also holds shortcuts:
+
+00:03:41.313 --> 00:03:45.194
+Only draft items, Only published items, and Owned by me.
+
+00:03:45.194 --> 00:03:48.950
+Each replaces the current search with a status filter.
+
+00:03:48.950 --> 00:03:51.204
+Let's choose Only draft items.
+
+00:03:51.701 --> 00:03:54.484
+The type shown on each row is also a shortcut.
+
+00:03:54.484 --> 00:03:57.321
+Selecting it lists only the items of that type.
+
+00:04:01.550 --> 00:04:05.074
+From the list of drafts, tick Winter Snowshoe Schedule.
+
+00:04:05.074 --> 00:04:07.731
+One selected item shows no Actions menu.
+
+00:04:07.731 --> 00:04:12.698
+Tick Autumn Hiking Schedule, and an Actions menu replaces the Content Type, Show
+
+00:04:12.698 --> 00:04:17.030
+and Sort controls, while the count shows how many items are selected.
+
+00:04:17.489 --> 00:04:21.848
+The Actions menu lists the commands that apply to every selected item.
+
+00:04:21.848 --> 00:04:27.469
+The first publishes them, Unpublish takes them off the public site, and Delete removes them.
+
+00:04:27.940 --> 00:04:30.190
+Let's publish the two schedules.
+
+00:04:30.190 --> 00:04:32.973
+A Bulk Action dialog asks you to confirm.
+
+00:04:32.973 --> 00:04:33.920
+Select Ok.
+
+00:04:34.565 --> 00:04:39.869
+A message confirms that the content was published, and the list reloads without the filter.
+
+00:04:39.869 --> 00:04:42.385
+Both schedules show the Published badge.
+
+00:04:42.842 --> 00:04:44.513
+Delete works the same way.
+
+00:04:44.513 --> 00:04:48.482
+Let's search for placeholder, which finds the two placeholder notices.
+
+00:04:48.934 --> 00:04:54.306
+Select both items with the box at the top, open the Actions menu, and choose Delete.
+
+00:04:54.306 --> 00:04:56.514
+The dialog asks you to confirm.
+
+00:04:56.996 --> 00:04:57.835
+Select Ok.
+
+00:04:57.835 --> 00:05:01.976
+A message says that the content was removed, and the two placeholders are
+
+00:05:01.976 --> 00:05:03.286
+gone from the list.
+
+00:05:05.286 --> 00:05:09.962
+The content items list finds your content by title, type and status, sorts
+
+00:05:09.962 --> 00:05:13.176
+it, and applies one action to many items at once.
+
+00:05:13.176 --> 00:05:14.696
+Thanks for watching.
+
