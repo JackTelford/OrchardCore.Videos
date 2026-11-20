@@ -1,0 +1,332 @@
+1
+00:00:01,000 --> 00:00:03,760
+Every Orchard Core site starts from a recipe.
+
+2
+00:00:03,760 --> 00:00:07,982
+The recipe you choose on the Setup screen decides which features are on,
+
+3
+00:00:07,982 --> 00:00:10,850
+which theme is active, and what content exists.
+
+4
+00:00:10,850 --> 00:00:13,340
+This video compares the starter recipes.
+
+5
+00:00:17,940 --> 00:00:22,890
+A starter recipe is a list of instructions that Orchard Core follows once,
+
+6
+00:00:22,890 --> 00:00:24,684
+when it sets up a site.
+
+7
+00:00:24,684 --> 00:00:27,716
+It can enable features and activate themes.
+
+8
+00:00:27,716 --> 00:00:32,480
+It can also create roles, content types such as Blog Post, and content.
+
+9
+00:00:33,230 --> 00:00:35,698
+You choose one recipe on the Setup screen.
+
+10
+00:00:35,698 --> 00:00:39,452
+It decides how the site starts, not what it can become, because you
+
+11
+00:00:39,452 --> 00:00:42,640
+can enable more features and change the theme afterward.
+
+12
+00:00:43,390 --> 00:00:47,345
+Which recipes you see depends on the application that is running.
+
+13
+00:00:47,345 --> 00:00:51,523
+Blank site and Headless site come with the CMS core, and the standard
+
+14
+00:00:51,523 --> 00:00:54,810
+CMS application adds a recipe for each starter theme.
+
+15
+00:00:59,093 --> 00:01:02,873
+This is the Setup screen of a site that has not been set up.
+
+16
+00:01:02,873 --> 00:01:07,512
+Next to the site name, the Recipe button opens the list of starter recipes.
+
+17
+00:01:07,512 --> 00:01:10,203
+A separate video covers the other fields.
+
+18
+00:01:10,698 --> 00:01:14,087
+Each entry has a name and a short description.
+
+19
+00:01:14,087 --> 00:01:16,954
+The entries are in alphabetical order:
+
+20
+00:01:16,954 --> 00:01:22,558
+Agency, Blank site, Blog, Coming Soon, Headless site, and Software as a Service.
+
+21
+00:01:27,163 --> 00:01:30,521
+Software as a Service is selected when the screen opens.
+
+22
+00:01:30,521 --> 00:01:31,820
+Let's choose Blog.
+
+23
+00:01:31,820 --> 00:01:37,073
+The name on the Recipe button changes, and Finish Setup installs the site with that recipe.
+
+24
+00:01:41,273 --> 00:01:46,313
+Blank site enables the content management features and activates the admin theme.
+
+25
+00:01:46,313 --> 00:01:49,905
+It sets no site theme and no home page, so the front end
+
+26
+00:01:49,905 --> 00:01:51,353
+is yours to design.
+
+27
+00:01:52,103 --> 00:01:55,535
+Use it when you build your own theme, or when you run a
+
+28
+00:01:55,535 --> 00:02:00,710
+decoupled site, where developers write the pages and Orchard Core manages the content.
+
+29
+00:02:00,710 --> 00:02:04,873
+Otherwise, start from another recipe and change the theme afterward.
+
+30
+00:02:05,623 --> 00:02:09,779
+Headless site is for using Orchard Core as an API as well as
+
+31
+00:02:09,779 --> 00:02:11,919
+a content management system.
+
+32
+00:02:11,919 --> 00:02:17,523
+It enables the GraphQL and OpenID Connect features, and its home page is the admin.
+
+33
+00:02:18,273 --> 00:02:23,825
+The recipe also gives the Authenticated role, which every signed-in user has, permissions
+
+34
+00:02:23,825 --> 00:02:27,098
+that include View all content and Execute GraphQL.
+
+35
+00:02:27,098 --> 00:02:31,423
+Review them under Access Control, Roles before you publish the site.
+
+36
+00:02:35,676 --> 00:02:39,603
+Blog activates The Blog Theme and makes the blog the home page.
+
+37
+00:02:39,603 --> 00:02:43,359
+On a site set up with this recipe, a header shows the blog's
+
+38
+00:02:43,359 --> 00:02:46,546
+title and description, and the posts follow below.
+
+39
+00:02:47,065 --> 00:02:49,612
+The recipe creates a first blog post.
+
+40
+00:02:49,612 --> 00:02:53,937
+Its preview shows a title, a subtitle, the author and the date, and
+
+41
+00:02:53,937 --> 00:02:56,425
+the category and tags it belongs to.
+
+42
+00:02:56,918 --> 00:02:59,558
+The main menu links to Home and About.
+
+43
+00:02:59,558 --> 00:03:03,998
+About is an Article, one of the content types the recipe adds, along
+
+44
+00:03:03,998 --> 00:03:06,758
+with Blog Post, Page, Tag, and Category.
+
+45
+00:03:08,358 --> 00:03:14,279
+The Blog Theme also carries optional recipes for SQL, Lucene, and Elasticsearch search.
+
+46
+00:03:14,279 --> 00:03:19,054
+They are not starter recipes, so the Setup screen does not list them.
+
+47
+00:03:19,054 --> 00:03:21,918
+You run them later from Tools, Recipes.
+
+48
+00:03:26,218 --> 00:03:30,027
+Agency activates The Agency Theme and sets up a company website.
+
+49
+00:03:30,027 --> 00:03:33,673
+The home page is a landing page, with a header that shows the
+
+50
+00:03:33,673 --> 00:03:35,958
+site name and a Tell Me More button.
+
+51
+00:03:36,515 --> 00:03:39,600
+The menu links to the sections below the header:
+
+52
+00:03:39,600 --> 00:03:42,571
+Services, Portfolio, About, Team, and Contact.
+
+53
+00:03:42,571 --> 00:03:46,914
+The recipe fills most of them with sample content, which you change by
+
+54
+00:03:46,914 --> 00:03:48,685
+editing the landing page.
+
+55
+00:03:52,931 --> 00:03:57,579
+Coming Soon activates The Coming Soon Theme and makes one landing page for
+
+56
+00:03:57,579 --> 00:03:59,439
+a site under construction.
+
+57
+00:03:59,439 --> 00:04:03,391
+It has a heading, a message, an email field, and social icons.
+
+58
+00:04:03,918 --> 00:04:07,794
+Visitors type an email address and select the Notify Me!
+
+59
+00:04:07,794 --> 00:04:08,607
+button.
+
+60
+00:04:08,607 --> 00:04:11,420
+Under the email field, a message reads:
+
+61
+00:04:11,420 --> 00:04:14,171
+ReCaptcha settings are not configured.
+
+62
+00:04:14,171 --> 00:04:20,048
+It stays until you save a Site Key and a Secret Key under Settings, Security, reCaptcha.
+
+63
+00:04:21,648 --> 00:04:27,168
+A workflow named User Registration validates the form, registers a user for the
+
+64
+00:04:27,168 --> 00:04:30,156
+address, and sends a confirmation email.
+
+65
+00:04:30,156 --> 00:04:32,884
+You find it under Design, Workflows.
+
+66
+00:04:32,884 --> 00:04:39,508
+The recipe also enables the Email, Forms, ReCaptcha, Workflows, and Users Registration features.
+
+67
+00:04:43,808 --> 00:04:49,474
+Software as a Service activates The Default Theme, and its home page is a welcome message.
+
+68
+00:04:49,474 --> 00:04:54,727
+The recipe enables the Tenants feature, which lets you manage several sites, called
+
+69
+00:04:54,727 --> 00:04:57,678
+tenants, from the admin of one installation.
+
+70
+00:04:59,278 --> 00:05:05,083
+Under Multi-Tenancy, Tenants, the Add Tenant button opens a form with a Recipe list.
+
+71
+00:05:05,083 --> 00:05:09,792
+Each tenant can start from a recipe of its own, so one installation
+
+72
+00:05:09,792 --> 00:05:12,888
+can host a blog, an agency site, and more.
+
+73
+00:05:17,088 --> 00:05:20,785
+For a site where you design the front end, start with Blank site.
+
+74
+00:05:20,785 --> 00:05:25,628
+For an application that serves content to other applications, start with Headless site.
+
+75
+00:05:26,378 --> 00:05:31,159
+For a theme with sample content, pick Blog, Agency, or Coming Soon.
+
+76
+00:05:31,159 --> 00:05:36,268
+To host several sites from one installation, pick Software as a Service.
+
+77
+00:05:37,018 --> 00:05:40,488
+A recipe sets the starting point, not the limits.
+
+78
+00:05:40,488 --> 00:05:46,291
+You enable more features under Tools, Features, change the theme under Design, Themes,
+
+79
+00:05:46,291 --> 00:05:49,319
+and run more recipes under Tools, Recipes.
+
+80
+00:05:49,319 --> 00:05:51,968
+Separate videos cover each of these.
+
+81
+00:05:53,968 --> 00:05:57,808
+Pick the recipe closest to the site you want, then adjust its features
+
+82
+00:05:57,808 --> 00:05:59,374
+and theme from the admin.
+
+83
+00:05:59,374 --> 00:06:00,688
+Thanks for watching.
+

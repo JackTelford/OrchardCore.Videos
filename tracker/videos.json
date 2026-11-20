@@ -41,7 +41,7 @@
     "docs": [
       "src/docs/reference/modules/Setup/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.8,
     "words": 713,
     "contentCommit": "",
@@ -49,9 +49,9 @@
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/270",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "setup-first-site/v1",
+    "youtubeId": "0SlLT1du0A0",
+    "publishedOn": "2026-11-19",
     "notes": ""
   },
   {
@@ -79,14 +79,14 @@
       "src/docs/reference/modules/Navigation/README.md",
       "src/docs/reference/modules/Notifications/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 5.5,
     "words": 827,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-16",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/272",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
