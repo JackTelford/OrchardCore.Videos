@@ -20,7 +20,36 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Features need features"
+    },
+    {
+      "time": "0:45",
+      "title": "Dependencies on the Features page"
+    },
+    {
+      "time": "1:37",
+      "title": "Enable a feature"
+    },
+    {
+      "time": "2:09",
+      "title": "Disable a feature"
+    },
+    {
+      "time": "2:41",
+      "title": "Features you do not switch by hand"
+    },
+    {
+      "time": "3:33",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -42,5 +71,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Features"
-  }
+  },
+  "length": "3:45"
 }
