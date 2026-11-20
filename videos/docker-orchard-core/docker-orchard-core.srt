@@ -1,0 +1,272 @@
+1
+00:00:01,000 --> 00:00:04,561
+The Orchard Core source repository includes a Dockerfile.
+
+2
+00:00:04,561 --> 00:00:08,406
+In this video, you build an image from it, run a container and
+
+3
+00:00:08,406 --> 00:00:12,250
+open the site, see where the site keeps its files, and start a
+
+4
+00:00:12,250 --> 00:00:14,850
+database next to it with Docker Compose.
+
+5
+00:00:19,450 --> 00:00:21,655
+To follow along, you need Docker.
+
+6
+00:00:21,655 --> 00:00:26,914
+For Windows, the documentation points to containers on the Windows Subsystem for Linux,
+
+7
+00:00:26,914 --> 00:00:31,550
+and for Ubuntu or other Linux systems, to the installation of Docker Engine.
+
+8
+00:00:32,300 --> 00:00:34,388
+Docker runs containers from images.
+
+9
+00:00:34,388 --> 00:00:38,106
+You can pull an image that Orchard Core publishes to Docker Hub, or
+
+10
+00:00:38,106 --> 00:00:42,130
+build your own from the Dockerfile in the source code, the way developers
+
+11
+00:00:42,130 --> 00:00:44,320
+test a pull request on their machine.
+
+12
+00:00:45,070 --> 00:00:47,762
+The published image starts with one command.
+
+13
+00:00:47,762 --> 00:00:51,423
+It names the container and maps a port of your machine to port
+
+14
+00:00:51,423 --> 00:00:54,330
+80 inside it, where the web application listens.
+
+15
+00:00:58,530 --> 00:01:01,951
+The Dockerfile sits at the root of the repository.
+
+16
+00:01:01,951 --> 00:01:06,348
+Its build stage starts from an image with the .NET SDK, copies the
+
+17
+00:01:06,348 --> 00:01:09,830
+source code, and publishes the CMS web application.
+
+18
+00:01:10,580 --> 00:01:15,535
+The runtime stages start from the ASP.NET Core runtime image, for Linux or
+
+19
+00:01:15,535 --> 00:01:19,313
+for Windows, and the target operating system picks one.
+
+20
+00:01:19,313 --> 00:01:25,320
+The last stage copies in only the published application, listens on port 80, and starts it.
+
+21
+00:01:26,070 --> 00:01:31,154
+The .dockerignore file keeps every App_Data folder, and every bin and obj folder,
+
+22
+00:01:31,154 --> 00:01:32,498
+out of the build.
+
+23
+00:01:32,498 --> 00:01:36,414
+The data of a site you ran from source, and its build output,
+
+24
+00:01:36,414 --> 00:01:38,050
+never enter the image.
+
+25
+00:01:38,800 --> 00:01:43,541
+A site built on the NuGet packages of Orchard Core can use the same two files.
+
+26
+00:01:43,541 --> 00:01:48,338
+Copy the Dockerfile and .dockerignore to the root of your solution, then adjust
+
+27
+00:01:48,338 --> 00:01:51,950
+the paths of the build stage to your own folder structure.
+
+28
+00:01:56,150 --> 00:02:00,254
+From the root of the repository, docker build creates the image.
+
+29
+00:02:00,254 --> 00:02:05,590
+The platform option sets the target operating system, which selects the Linux runtime
+
+30
+00:02:05,590 --> 00:02:08,580
+stage, and the tag option names the image oc.
+
+31
+00:02:09,330 --> 00:02:12,659
+Then docker run starts a container from that image.
+
+32
+00:02:12,659 --> 00:02:17,390
+Its publish option maps a port of your machine to port 80 in the container.
+
+33
+00:02:18,140 --> 00:02:20,404
+The build stage carries a label.
+
+34
+00:02:20,404 --> 00:02:26,780
+After a build, the documentation prunes the leftover intermediate images with a filter on that label.
+
+35
+00:02:31,006 --> 00:02:36,096
+Browsing to the port that the container maps shows the Setup screen of Orchard Core.
+
+36
+00:02:36,096 --> 00:02:41,016
+The container holds no site, so Orchard Core asks the questions that install one.
+
+37
+00:02:41,471 --> 00:02:45,903
+The database type is Sqlite, the default, so nothing else has to run
+
+38
+00:02:45,903 --> 00:02:47,580
+next to the container.
+
+39
+00:02:47,580 --> 00:02:52,011
+Let's name the site, choose the Blog recipe, and select a time zone.
+
+40
+00:02:54,664 --> 00:03:00,356
+The super user needs a user name, an email address, and a password, typed twice.
+
+41
+00:03:00,356 --> 00:03:02,804
+Then let's select Finish Setup.
+
+42
+00:03:03,281 --> 00:03:08,225
+Orchard Core runs the recipe, creates the site inside the container, and redirects
+
+43
+00:03:08,225 --> 00:03:10,191
+to the home page of the Blog.
+
+44
+00:03:14,391 --> 00:03:18,884
+The site keeps its files in the App_Data folder, which is app slash
+
+45
+00:03:18,884 --> 00:03:20,854
+App_Data in the container.
+
+46
+00:03:20,854 --> 00:03:25,531
+Among other files, it holds the tenants file and, for each tenant, the
+
+47
+00:03:25,531 --> 00:03:29,101
+Data Protection keys and, with Sqlite, the database.
+
+48
+00:03:29,851 --> 00:03:34,287
+A volume mounted on App_Data keeps these files outside the container.
+
+49
+00:03:34,287 --> 00:03:38,901
+A container that mounts the same volume later starts with the same site.
+
+50
+00:03:39,651 --> 00:03:46,085
+Settings reach the container as environment variables, with two underscores between the levels of a name.
+
+51
+00:03:46,085 --> 00:03:50,490
+The Auto Setup settings install a site without the Setup screen, and a
+
+52
+00:03:50,490 --> 00:03:52,751
+separate video covers Auto Setup.
+
+53
+00:03:56,951 --> 00:04:00,293
+A compose file describes several containers together.
+
+54
+00:04:00,293 --> 00:04:04,655
+This one has a web service, built from the Dockerfile, and a PostgreSQL
+
+55
+00:04:04,655 --> 00:04:06,411
+service for the database.
+
+56
+00:04:07,161 --> 00:04:11,051
+The web service builds from the Dockerfile in the current folder, maps a
+
+57
+00:04:11,051 --> 00:04:14,791
+port of your machine to port 80, and depends on the database service.
+
+58
+00:04:15,541 --> 00:04:20,078
+The database service sets its user, its database name, and its password.
+
+59
+00:04:20,078 --> 00:04:24,790
+Compose reads the password from an environment variable of your own, so the
+
+60
+00:04:24,790 --> 00:04:26,361
+file holds no secret.
+
+61
+00:04:27,111 --> 00:04:33,704
+Set the password variable, run docker-compose build, and then docker-compose up to start both containers.
+
+62
+00:04:33,704 --> 00:04:37,861
+Open the mapped port in a browser, and the Setup screen appears.
+
+63
+00:04:38,611 --> 00:04:43,913
+On the Setup screen, choose Postgres as the type of database, and enter a connection string.
+
+64
+00:04:43,913 --> 00:04:47,917
+Its server is the name of the database service, and the other values
+
+65
+00:04:47,917 --> 00:04:50,081
+come from that service's settings.
+
+66
+00:04:52,081 --> 00:04:56,956
+The Dockerfile builds Orchard Core into an image, a container serves it, the
+
+67
+00:04:56,956 --> 00:05:01,355
+App_Data folder holds its state, and Docker Compose adds a database.
+
+68
+00:05:01,355 --> 00:05:02,901
+Thanks for watching.
+

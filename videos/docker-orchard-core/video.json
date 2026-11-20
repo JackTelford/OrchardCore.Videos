@@ -23,7 +23,40 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Images and containers"
+    },
+    {
+      "time": "0:55",
+      "title": "The Dockerfile"
+    },
+    {
+      "time": "1:52",
+      "title": "Build and run"
+    },
+    {
+      "time": "2:27",
+      "title": "The first request"
+    },
+    {
+      "time": "3:11",
+      "title": "Data and settings"
+    },
+    {
+      "time": "3:53",
+      "title": "Docker Compose"
+    },
+    {
+      "time": "4:51",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -45,5 +78,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:topics/docker"
-  }
+  },
+  "length": "5:04"
 }
