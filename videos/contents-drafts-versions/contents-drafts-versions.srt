@@ -1,0 +1,300 @@
+1
+00:00:01,000 --> 00:00:05,088
+An editor can change a page without changing what visitors see.
+
+2
+00:00:05,088 --> 00:00:09,473
+In this video, you save changes as a draft, preview them, publish or
+
+3
+00:00:09,473 --> 00:00:11,903
+discard them, and unpublish a page.
+
+4
+00:00:11,903 --> 00:00:15,280
+Then you find the drafts that wait for publication.
+
+5
+00:00:19,880 --> 00:00:24,176
+A content item, such as an article, can have more than one version.
+
+6
+00:00:24,176 --> 00:00:27,236
+The published version is the one visitors see.
+
+7
+00:00:27,236 --> 00:00:31,590
+A draft is a version you are working on, and visitors cannot see it.
+
+8
+00:00:32,340 --> 00:00:36,260
+When you edit a published item and save a draft, the published version
+
+9
+00:00:36,260 --> 00:00:37,343
+stays as it is.
+
+10
+00:00:37,343 --> 00:00:39,716
+Your changes go into a separate version.
+
+11
+00:00:39,716 --> 00:00:44,410
+Publishing the draft makes it the live one, and the version it replaces stays stored.
+
+12
+00:00:45,160 --> 00:00:49,439
+The Content Items list shows the state of each item with badges.
+
+13
+00:00:49,439 --> 00:00:52,129
+Published means a live version exists.
+
+14
+00:00:52,129 --> 00:00:57,020
+Draft means the last saved version is not live, and an item can show both.
+
+15
+00:00:57,770 --> 00:01:00,669
+Two settings of a content type control this.
+
+16
+00:01:00,669 --> 00:01:06,642
+Draftable adds the Save Draft button, and Versionable keeps the published version while you edit.
+
+17
+00:01:06,642 --> 00:01:10,700
+Types you create in the admin have both, and so does the Article
+
+18
+00:01:10,700 --> 00:01:12,150
+type in this video.
+
+19
+00:01:16,415 --> 00:01:22,471
+In Content, Content Items, the About article is published, and its row shows the Published badge.
+
+20
+00:01:22,471 --> 00:01:25,175
+Let's click Edit to change its subtitle.
+
+21
+00:01:26,095 --> 00:01:27,996
+The Edit Article page opens.
+
+22
+00:01:27,996 --> 00:01:31,125
+Let's change the Subtitle to a different sentence.
+
+23
+00:01:31,125 --> 00:01:36,435
+In the bottom bar, Publish would make the change live, so let's click Save Draft instead.
+
+24
+00:01:36,897 --> 00:01:40,180
+Save Draft returns to the list, with the message:
+
+25
+00:01:40,180 --> 00:01:42,568
+Your Article draft has been saved.
+
+26
+00:01:42,568 --> 00:01:47,046
+The row shows two badges, Published and Draft, because the item has a
+
+27
+00:01:47,046 --> 00:01:48,897
+live version and a draft.
+
+28
+00:01:49,353 --> 00:01:52,029
+Let's click View to open the live page.
+
+29
+00:01:52,029 --> 00:01:57,323
+The subtitle is the original text, because visitors see only the published version.
+
+30
+00:01:57,787 --> 00:02:00,659
+Back in the list, let's click Preview Draft.
+
+31
+00:02:00,659 --> 00:02:05,253
+It opens the draft in a separate tab, where the subtitle shows the change.
+
+32
+00:02:05,253 --> 00:02:08,297
+Only users who may preview content can open it.
+
+33
+00:02:12,501 --> 00:02:16,165
+Back in the list, let's open the Actions menu of the About row
+
+34
+00:02:16,165 --> 00:02:17,782
+and click Publish Draft.
+
+35
+00:02:17,782 --> 00:02:21,446
+The draft becomes the published version, and the message says:
+
+36
+00:02:21,446 --> 00:02:23,493
+That Article has been published.
+
+37
+00:02:23,493 --> 00:02:25,271
+The Draft badge disappears.
+
+38
+00:02:25,730 --> 00:02:28,459
+Let's click View to open the live page again.
+
+39
+00:02:28,459 --> 00:02:32,740
+It shows the changed subtitle, because the draft is the published version.
+
+40
+00:02:33,193 --> 00:02:35,811
+Next, a change that you decide not to keep.
+
+41
+00:02:35,811 --> 00:02:39,552
+Let's go back to the list, edit the Subtitle once more, and save
+
+42
+00:02:39,552 --> 00:02:40,888
+it with Save Draft.
+
+43
+00:02:40,888 --> 00:02:43,133
+The row shows the Draft badge again.
+
+44
+00:02:43,636 --> 00:02:47,105
+Discard Draft, in the same menu, asks you to confirm.
+
+45
+00:02:47,105 --> 00:02:49,692
+After you click Yes, the message says:
+
+46
+00:02:49,692 --> 00:02:52,103
+The Article draft has been removed.
+
+47
+00:02:52,103 --> 00:02:57,336
+The row shows only the Published badge again, and the live page was never affected.
+
+48
+00:03:01,576 --> 00:03:05,600
+In the Actions menu of the About row, Unpublish takes the page out
+
+49
+00:03:05,600 --> 00:03:08,506
+of public view, and asks you to confirm first.
+
+50
+00:03:08,506 --> 00:03:10,966
+After you click Yes, the message says:
+
+51
+00:03:10,966 --> 00:03:13,146
+The Article has been unpublished.
+
+52
+00:03:13,600 --> 00:03:15,370
+The item is not deleted.
+
+53
+00:03:15,370 --> 00:03:19,499
+Its row shows only the Draft badge, and the View button is gone,
+
+54
+00:03:19,499 --> 00:03:21,740
+because no version is published.
+
+55
+00:03:22,201 --> 00:03:26,285
+Publish Draft, in the Actions menu, puts the page back on the site.
+
+56
+00:03:26,285 --> 00:03:30,481
+The row shows the Published badge again, and the View button returns.
+
+57
+00:03:34,695 --> 00:03:37,659
+As the list grows, drafts can go unnoticed.
+
+58
+00:03:37,659 --> 00:03:41,287
+Parking Information has a Published and a Draft badge:
+
+59
+00:03:41,287 --> 00:03:42,920
+its draft is waiting.
+
+60
+00:03:42,920 --> 00:03:47,395
+Spring Event has only a Draft badge, so it has no published version.
+
+61
+00:03:47,853 --> 00:03:52,279
+Let's open the Filters menu, the funnel button next to the search box,
+
+62
+00:03:52,279 --> 00:03:54,201
+and click Only draft items.
+
+63
+00:03:54,201 --> 00:03:59,209
+The list shows every item that has a draft, with or without a published version:
+
+64
+00:03:59,209 --> 00:04:02,063
+here, Parking Information and Spring Event.
+
+65
+00:04:06,263 --> 00:04:09,296
+Saving a draft needs permission to edit content.
+
+66
+00:04:09,296 --> 00:04:15,138
+Publishing, publishing a draft and unpublishing need permission to publish content, and discarding
+
+67
+00:04:15,138 --> 00:04:17,890
+a draft needs permission to delete content.
+
+68
+00:04:17,890 --> 00:04:22,103
+A user who can only edit prepares changes that someone else releases.
+
+69
+00:04:22,853 --> 00:04:27,816
+Older versions stay in the database, and Content Version Pruning can remove them.
+
+70
+00:04:27,816 --> 00:04:31,923
+When the Audit Trail module is enabled and set to record a content
+
+71
+00:04:31,923 --> 00:04:37,000
+type, it records that type's changes and can restore a recorded version as a draft.
+
+72
+00:04:37,000 --> 00:04:38,883
+Separate videos cover both.
+
+73
+00:04:40,883 --> 00:04:45,263
+Save Draft keeps the live page as it is, and Publish Draft, Discard
+
+74
+00:04:45,263 --> 00:04:48,323
+Draft and Unpublish decide what happens next.
+
+75
+00:04:48,323 --> 00:04:49,883
+Thanks for watching.
+
