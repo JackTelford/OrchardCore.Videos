@@ -377,12 +377,12 @@
     "docs": [
       "src/docs/topics/docker/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 4.8,
     "words": 722,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
