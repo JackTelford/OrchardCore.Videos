@@ -21,8 +21,8 @@ OPEN-QUESTIONS.md before the first take.
 2. Sign the recorder in once, so the sign-in is not recorded.
 3. Create the seed outside the capture: the content type **Workshop**, with the **Title** part and no fields. The plan lists
    the steps.
-4. The Youtube Field needs a video address. The video uses an example.com address and a stand-in page for the player, set
-   up in the plan, so no real video service is called.
+4. The Youtube Field needs a video address. The video uses an example.com address; the embedded frame then shows the
+   page of example.com itself, so no real video service is called and no player is faked.
 5. Stop the site and copy its App_Data folder aside after the seed and after each clip. Restore the copy taken before a
    clip to record that clip again.
 6. Narrate first, then record the clips in this order, each one starting from the state the previous one left: Link Field,

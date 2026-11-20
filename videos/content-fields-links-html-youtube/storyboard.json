@@ -220,7 +220,7 @@
             },
             {
               "id": "site-5",
-              "text": "The Teaser Video appears in an embedded player, at the width and height from the field settings."
+              "text": "The Teaser Video appears in an embedded frame, at the width and height from the field settings. With the address of a real video, the player loads in this frame."
             }
           ]
         }

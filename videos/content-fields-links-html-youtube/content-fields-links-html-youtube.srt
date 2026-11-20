@@ -1,0 +1,304 @@
+1
+00:00:01,000 --> 00:00:04,425
+A content type can hold more than text and numbers.
+
+2
+00:00:04,425 --> 00:00:08,571
+In this video we'll add a Link Field, an Html Field, a Markdown
+
+3
+00:00:08,571 --> 00:00:12,717
+Field, and a Youtube Field to a content type, fill them in, and
+
+4
+00:00:12,717 --> 00:00:14,700
+see the result on the site.
+
+5
+00:00:19,300 --> 00:00:22,511
+Text, numbers and dates don't cover everything.
+
+6
+00:00:22,511 --> 00:00:27,055
+A workshop page needs a sign-up link, a formatted schedule, a list of
+
+7
+00:00:27,055 --> 00:00:29,600
+things to bring, and a teaser video.
+
+8
+00:00:30,350 --> 00:00:35,514
+A Link Field stores an address, the text of the link, and where the link opens.
+
+9
+00:00:35,514 --> 00:00:39,280
+An Html Field stores formatted text, such as a schedule.
+
+10
+00:00:40,030 --> 00:00:44,204
+A Markdown Field stores text written in Markdown, such as a list.
+
+11
+00:00:44,204 --> 00:00:48,790
+A Youtube Field stores the address of a video, and shows it in a player.
+
+12
+00:00:49,540 --> 00:00:55,133
+The Link Field, the Html Field, and the Youtube Field come with the Content Fields module.
+
+13
+00:00:55,133 --> 00:00:58,396
+The Markdown Field comes with the Markdown module.
+
+14
+00:00:58,396 --> 00:01:00,960
+You enable both under Tools, Features.
+
+15
+00:01:05,260 --> 00:01:09,647
+Content types are under Design, Content Definition, Content Types.
+
+16
+00:01:09,647 --> 00:01:13,669
+Select Edit on the Workshop type, which already has a Title.
+
+17
+00:01:13,669 --> 00:01:17,020
+Its Fields section is empty, so select Add Field.
+
+18
+00:01:17,526 --> 00:01:22,912
+Enter Registration Link as the Display Name, and the Technical Name follows from it.
+
+19
+00:01:22,912 --> 00:01:25,426
+Under Field Type, choose Link Field.
+
+20
+00:01:25,974 --> 00:01:27,920
+Select Save & Configure.
+
+21
+00:01:27,920 --> 00:01:31,034
+The field is added, and its settings open.
+
+22
+00:01:31,532 --> 00:01:34,079
+Required makes the address mandatory.
+
+23
+00:01:34,079 --> 00:01:37,159
+The Text drop-down decides what the link says.
+
+24
+00:01:37,159 --> 00:01:41,662
+Choose Text is required, so every link has words that people can read.
+
+25
+00:01:42,168 --> 00:01:46,550
+Default value of the Target fills the Target box in each new item.
+
+26
+00:01:46,550 --> 00:01:50,505
+Enter the value that opens the link in a new window or tab,
+
+27
+00:01:50,505 --> 00:01:52,148
+and then select Save.
+
+28
+00:01:56,416 --> 00:01:58,603
+Select Add Field again.
+
+29
+00:01:58,603 --> 00:02:05,316
+Enter Schedule as the Display Name, choose Html Field, and select Save & Configure.
+
+30
+00:02:05,782 --> 00:02:09,957
+Hint is help text that appears under the field in the editor.
+
+31
+00:02:09,957 --> 00:02:16,002
+Sanitize Html is on by default, and it removes unsafe markup when the content is displayed.
+
+32
+00:02:16,494 --> 00:02:20,267
+The Standard editor is for people who write HTML markup.
+
+33
+00:02:20,267 --> 00:02:23,979
+The Wysiwyg editor shows formatted text with a toolbar.
+
+34
+00:02:23,979 --> 00:02:27,874
+Choose Wysiwyg editor from the drop-down, and select Save.
+
+35
+00:02:32,127 --> 00:02:33,611
+Add one more field.
+
+36
+00:02:33,611 --> 00:02:39,427
+Enter What to Bring as the Display Name, choose Markdown Field, and select Save & Configure.
+
+37
+00:02:39,910 --> 00:02:44,701
+A Markdown Field has the same two settings, Hint and Sanitize Html.
+
+38
+00:02:44,701 --> 00:02:50,740
+The Standard editor is a plain text box, and the Wysiwyg editor option adds a toolbar.
+
+39
+00:02:50,740 --> 00:02:53,300
+We keep Standard and select Save.
+
+40
+00:02:57,544 --> 00:02:59,803
+The last field is the video.
+
+41
+00:02:59,803 --> 00:03:06,184
+Enter Teaser Video as the Display Name, choose Youtube Field, and select Save & Configure.
+
+42
+00:03:06,664 --> 00:03:11,690
+Placeholder shows sample text in the empty box, and Hint adds help text.
+
+43
+00:03:11,690 --> 00:03:15,105
+Width and Height set the size of the video box.
+
+44
+00:03:15,105 --> 00:03:16,264
+Select Save.
+
+45
+00:03:16,720 --> 00:03:21,140
+The Workshop type lists all four fields, each with its field type.
+
+46
+00:03:25,421 --> 00:03:29,334
+In the Content Types list, select Create New Workshop.
+
+47
+00:03:29,334 --> 00:03:32,791
+The editor shows the Title and our four fields.
+
+48
+00:03:33,259 --> 00:03:35,528
+Enter Pottery Basics as the Title.
+
+49
+00:03:35,528 --> 00:03:39,442
+For the Registration Link, enter the address and the link text.
+
+50
+00:03:39,442 --> 00:03:42,959
+The Target is already filled in from the field settings.
+
+51
+00:03:43,578 --> 00:03:46,061
+The Schedule is a rich text editor.
+
+52
+00:03:46,061 --> 00:03:50,058
+Type the days and times, and use the toolbar to format them.
+
+53
+00:03:50,550 --> 00:03:52,190
+What to Bring takes Markdown.
+
+54
+00:03:52,190 --> 00:03:55,752
+A line that starts with number signs becomes a heading, and lines that
+
+55
+00:03:55,752 --> 00:03:57,580
+start with hyphens become a list.
+
+56
+00:03:58,056 --> 00:04:01,776
+For the Teaser Video, enter the address of a video page.
+
+57
+00:04:01,776 --> 00:04:06,216
+The field builds the embedded address itself when the item is saved.
+
+58
+00:04:06,685 --> 00:04:10,145
+Publish saves the Workshop and makes it live on the site.
+
+59
+00:04:14,444 --> 00:04:18,946
+Back in the Content Types list, select List Items on the Workshop row.
+
+60
+00:04:18,946 --> 00:04:23,804
+In the row of Pottery Basics, View opens the published Workshop on the site.
+
+61
+00:04:24,277 --> 00:04:28,461
+The Registration Link is an ordinary link with the words we typed.
+
+62
+00:04:28,461 --> 00:04:32,007
+Because of the Target, it opens in a new window or tab.
+
+63
+00:04:32,522 --> 00:04:36,122
+The Schedule keeps the formatting that we applied in the toolbar.
+
+64
+00:04:36,580 --> 00:04:39,840
+What to Bring shows the Markdown as a heading and a list.
+
+65
+00:04:40,313 --> 00:04:44,568
+The Teaser Video appears in an embedded frame, at the width and height
+
+66
+00:04:44,568 --> 00:04:46,247
+from the field settings.
+
+67
+00:04:46,247 --> 00:04:50,223
+With the address of a real video, the player loads in this frame.
+
+68
+00:04:54,423 --> 00:04:59,258
+The Html Field and the Markdown Field have a Sanitize Html setting, which
+
+69
+00:04:59,258 --> 00:05:00,666
+is on by default.
+
+70
+00:05:00,666 --> 00:05:05,808
+When the content is displayed, unsafe markup, such as script tags, is removed.
+
+71
+00:05:05,808 --> 00:05:08,563
+What you typed stays stored as written.
+
+72
+00:05:09,313 --> 00:05:14,331
+By default, HTML that you type inside Markdown is shown as text, not as markup.
+
+73
+00:05:14,331 --> 00:05:17,933
+And the Link Field rejects an address that isn't valid.
+
+74
+00:05:19,933 --> 00:05:24,737
+The Link Field, the Html Field, the Markdown Field, and the Youtube Field
+
+75
+00:05:24,737 --> 00:05:28,811
+bring addresses, formatted text, and video into your content.
+
+76
+00:05:28,811 --> 00:05:30,393
+Thanks for watching.
+
