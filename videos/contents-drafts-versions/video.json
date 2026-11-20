@@ -24,7 +24,40 @@
     "Orchard Core",
     "Content Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Drafts and versions"
+    },
+    {
+      "time": "1:13",
+      "title": "Save a draft"
+    },
+    {
+      "time": "2:09",
+      "title": "Publish or discard the draft"
+    },
+    {
+      "time": "2:58",
+      "title": "Unpublish a page"
+    },
+    {
+      "time": "3:31",
+      "title": "Find the drafts"
+    },
+    {
+      "time": "4:03",
+      "title": "Permissions and older versions"
+    },
+    {
+      "time": "4:39",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +79,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Contents"
-  }
+  },
+  "length": "4:51"
 }
