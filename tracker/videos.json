@@ -41,14 +41,14 @@
     "docs": [
       "src/docs/reference/modules/Setup/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 4.8,
     "words": 713,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/270",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
