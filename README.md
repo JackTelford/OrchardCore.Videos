@@ -62,7 +62,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Content API: Read and Write Content Items Over HTTP](videos/content-rest-api) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Types: Create a Type and Add Parts and Fields](videos/content-types-create) | 5:18 | [https://youtu.be/7OLZiWph0vs](https://youtu.be/7OLZiWph0vs) | OrchardCMS/OrchardCore |
 | [Content Types: Model the Content of Your Site](videos/content-types-overview) | 5:06 | [https://youtu.be/-wPGXu8ERwU](https://youtu.be/-wPGXu8ERwU) | OrchardCMS/OrchardCore |
-| [Content Type Settings: Creatable, Listable, Draftable and More](videos/content-types-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Type Settings: Creatable, Listable, Draftable and More](videos/content-types-settings) | 5:12 | [https://youtu.be/OAoSBQ8vurM](https://youtu.be/OAoSBQ8vurM) | OrchardCMS/OrchardCore |
 | [Content Version Pruning: Remove Old Versions Automatically](videos/content-version-pruning) | 3:38 | [https://youtu.be/0c7PkSaO4Q4](https://youtu.be/0c7PkSaO4Q4) | OrchardCMS/OrchardCore |
 | [Content Items: Create, Edit and Publish](videos/contents-create-edit-publish) | 4:48 | [https://youtu.be/gQgMKIZpCNY](https://youtu.be/gQgMKIZpCNY) | OrchardCMS/OrchardCore |
 | [Drafts and Versions: Change Content Without Losing the Live Page](videos/contents-drafts-versions) | 4:51 | [https://youtu.be/wy2nPHfp2qE](https://youtu.be/wy2nPHfp2qE) | OrchardCMS/OrchardCore |
