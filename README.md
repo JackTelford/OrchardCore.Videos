@@ -29,7 +29,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Audit Trail: See Who Changed What and When](videos/audit-trail-overview) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Audit Trail: Compare and Restore Content Versions](videos/audit-trail-restore-content) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Audit Trail Settings: Events, Retention and User Events](videos/audit-trail-settings) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Auto Setup: Install Sites Without the Setup Screen](videos/auto-setup) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Auto Setup: Install Sites Without the Setup Screen](videos/auto-setup) | 5:40 | [https://youtu.be/kewT2I9Nwdk](https://youtu.be/kewT2I9Nwdk) | OrchardCMS/OrchardCore |
 | [Autoroute Patterns: Generate URLs With Liquid](videos/autoroute-patterns) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Autoroute: Friendly URLs for Your Content Items](videos/autoroute-urls) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Azure AI Search: Connect Your Site and Create Indexes](videos/azure-ai-search) |  | not uploaded | OrchardCMS/OrchardCore |
