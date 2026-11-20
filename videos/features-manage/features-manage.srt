@@ -1,0 +1,260 @@
+1
+00:00:01,000 --> 00:00:05,491
+The Features page is where you choose what your Orchard Core site runs.
+
+2
+00:00:05,491 --> 00:00:09,690
+In this video, you find it, search and filter its list, and enable
+
+3
+00:00:09,690 --> 00:00:13,190
+and disable features one at a time or several at once.
+
+4
+00:00:17,790 --> 00:00:20,830
+Orchard Core is divided into modules.
+
+5
+00:00:20,830 --> 00:00:26,980
+Each module provides one or more features, such as Media, Workflows, or Sitemaps.
+
+6
+00:00:27,730 --> 00:00:31,586
+Your site runs only the features that are enabled, and the recipe you
+
+7
+00:00:31,586 --> 00:00:34,620
+choose at setup decides which ones start out enabled.
+
+8
+00:00:35,370 --> 00:00:40,548
+An enabled feature can add admin menu entries, settings pages, and permissions.
+
+9
+00:00:40,548 --> 00:00:44,812
+A feature that is disabled adds none of them, so the admin shows
+
+10
+00:00:44,812 --> 00:00:46,700
+only what your site uses.
+
+11
+00:00:47,450 --> 00:00:49,701
+Features can depend on one another.
+
+12
+00:00:49,701 --> 00:00:54,314
+Enabling a feature also enables the features it needs, and disabling a feature
+
+13
+00:00:54,314 --> 00:00:56,840
+also disables the features that need it.
+
+14
+00:00:56,840 --> 00:00:59,860
+A separate video explains dependencies in detail.
+
+15
+00:01:04,108 --> 00:01:06,162
+Let's open the Features page.
+
+16
+00:01:06,162 --> 00:01:09,508
+In the admin menu, open Tools, and choose Features.
+
+17
+00:01:11,794 --> 00:01:16,049
+The page lists the features in groups, one group for each category.
+
+18
+00:01:16,049 --> 00:01:19,954
+Above the list, a summary shows how many features are listed.
+
+19
+00:01:20,416 --> 00:01:24,618
+Each row shows the name of a feature, with its identifier beside it.
+
+20
+00:01:24,618 --> 00:01:28,763
+Badges show the features it depends on and whether it is Enabled or
+
+21
+00:01:28,763 --> 00:01:31,716
+Disabled, and the description sits underneath.
+
+22
+00:01:32,167 --> 00:01:35,817
+A button at the end of a row changes the state of that feature.
+
+23
+00:01:35,817 --> 00:01:39,414
+Enable turns on a feature that is off, and Disable turns off a
+
+24
+00:01:39,414 --> 00:01:40,737
+feature that is on.
+
+25
+00:01:45,029 --> 00:01:48,070
+The search box narrows the list as you type.
+
+26
+00:01:48,070 --> 00:01:51,355
+It matches names, identifiers, and descriptions.
+
+27
+00:01:51,355 --> 00:01:53,789
+Let's search for background tasks.
+
+28
+00:01:54,273 --> 00:01:57,187
+One row is left, and the summary counts it.
+
+29
+00:01:57,187 --> 00:02:00,993
+Press Escape to clear the search, and the list comes back.
+
+30
+00:02:01,456 --> 00:02:05,140
+The Status filter limits the list to features that are enabled, or to
+
+31
+00:02:05,140 --> 00:02:06,614
+those that are disabled.
+
+32
+00:02:06,614 --> 00:02:09,856
+Choose Enabled only to list the features that are turned on.
+
+33
+00:02:10,322 --> 00:02:14,210
+The Visibility filter hides two kinds of features by default.
+
+34
+00:02:14,210 --> 00:02:19,491
+Hide on demand covers features that are enabled only when another feature needs them.
+
+35
+00:02:19,491 --> 00:02:24,772
+Hide always enabled covers features that are always enabled and cannot be turned off.
+
+36
+00:02:25,234 --> 00:02:27,448
+Let's clear Hide always enabled.
+
+37
+00:02:27,448 --> 00:02:32,692
+Features, the feature behind this page, joins the list with a dimmed Disable button.
+
+38
+00:02:32,692 --> 00:02:37,644
+Pointing at it shows that it is always enabled and cannot be manually disabled.
+
+39
+00:02:41,864 --> 00:02:43,951
+Let's enable Background Tasks.
+
+40
+00:02:43,951 --> 00:02:48,414
+Search for it, and its row shows a Disabled badge and an Enable button.
+
+41
+00:02:48,875 --> 00:02:49,927
+Click Enable.
+
+42
+00:02:49,927 --> 00:02:54,135
+The page reloads, and a message confirms that the feature was enabled.
+
+43
+00:02:54,593 --> 00:02:59,308
+Under Tools in the admin menu, a Background Tasks entry appears.
+
+44
+00:02:59,308 --> 00:03:04,023
+In the list, the row shows Enabled, and its button says Disable.
+
+45
+00:03:08,323 --> 00:03:10,358
+Let's disable Background Tasks.
+
+46
+00:03:10,358 --> 00:03:13,053
+Search for it and click Disable on its row.
+
+47
+00:03:13,505 --> 00:03:17,104
+A dialog titled Disable Feature asks you to confirm.
+
+48
+00:03:17,104 --> 00:03:20,515
+Click Yes to continue, or No to keep the feature.
+
+49
+00:03:21,009 --> 00:03:22,143
+Let's click Yes.
+
+50
+00:03:22,143 --> 00:03:26,061
+The page reloads with a message that the feature was disabled, and the
+
+51
+00:03:26,061 --> 00:03:28,999
+Background Tasks entry is gone from the Tools menu.
+
+52
+00:03:33,210 --> 00:03:37,299
+To change several features together, use the checkbox on each row.
+
+53
+00:03:37,299 --> 00:03:41,900
+Let's search for google, and check Google Analytics and Google Tag Manager.
+
+54
+00:03:45,011 --> 00:03:46,406
+Open Bulk Actions.
+
+55
+00:03:46,406 --> 00:03:50,532
+Disable turns the checked features off, and Enable turns them on.
+
+56
+00:03:50,532 --> 00:03:53,961
+Neither asks for confirmation, so let's click Enable.
+
+57
+00:03:54,415 --> 00:03:57,861
+The page reloads with a message naming both features.
+
+58
+00:03:57,861 --> 00:04:03,350
+Searching for google again shows them as Enabled, while Google Authentication, which was
+
+59
+00:04:03,350 --> 00:04:05,335
+not checked, stays Disabled.
+
+60
+00:04:09,535 --> 00:04:14,092
+Only users with the Manage Features permission can open the Features page.
+
+61
+00:04:14,092 --> 00:04:16,769
+The Administrator role has it by default.
+
+62
+00:04:16,769 --> 00:04:21,155
+To give it to another role, edit that role under Access Control, Roles.
+
+63
+00:04:23,155 --> 00:04:27,866
+The Features page, under Tools, lets you enable and disable the features your
+
+64
+00:04:27,866 --> 00:04:30,250
+site runs, one at a time or in bulk.
+
+65
+00:04:30,250 --> 00:04:31,725
+Thanks for watching.
+
