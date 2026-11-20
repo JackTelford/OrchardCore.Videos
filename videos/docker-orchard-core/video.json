@@ -79,5 +79,10 @@
     "pullRequest": null,
     "feature": "guide:topics/docker"
   },
-  "length": "5:04"
+  "length": "5:04",
+  "youtube": {
+    "id": "pP7y62hDsN4",
+    "url": "https://youtu.be/pP7y62hDsN4",
+    "version": "v1"
+  }
 }
