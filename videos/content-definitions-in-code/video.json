@@ -24,7 +24,48 @@
     "Orchard Core",
     "Content Types"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Why define content in code"
+    },
+    {
+      "time": "0:51",
+      "title": "The migration class"
+    },
+    {
+      "time": "1:44",
+      "title": "Content types"
+    },
+    {
+      "time": "2:28",
+      "title": "Parts and fields"
+    },
+    {
+      "time": "3:00",
+      "title": "Recipes"
+    },
+    {
+      "time": "4:02",
+      "title": "Versions"
+    },
+    {
+      "time": "4:59",
+      "title": "A migration at work"
+    },
+    {
+      "time": "5:48",
+      "title": "Reading the values in C#"
+    },
+    {
+      "time": "6:21",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Content Types",
@@ -51,5 +92,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentTypes"
-  }
+  },
+  "length": "6:38"
 }
