@@ -55,7 +55,7 @@
           "steps": [
             {
               "id": "features-1",
-              "text": "Both are features you enable. Open Tools, then Features, search for Publish Later, and select Enable. A message confirms that the feature was enabled."
+              "text": "Both are features you enable. Open Tools, then Features, search for Publish Later, and select Enable."
             },
             {
               "id": "features-2",
