@@ -60,7 +60,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Content Picker and User Picker Fields: Relate Content Items](videos/content-picker-fields) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Preview: See Your Changes Before You Publish](videos/content-preview) | 3:33 | [https://youtu.be/4pEEdtzAkXs](https://youtu.be/4pEEdtzAkXs) | OrchardCMS/OrchardCore |
 | [Content API: Read and Write Content Items Over HTTP](videos/content-rest-api) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Content Types: Create a Type and Add Parts and Fields](videos/content-types-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Types: Create a Type and Add Parts and Fields](videos/content-types-create) | 5:18 | [https://youtu.be/7OLZiWph0vs](https://youtu.be/7OLZiWph0vs) | OrchardCMS/OrchardCore |
 | [Content Types: Model the Content of Your Site](videos/content-types-overview) | 5:06 | [https://youtu.be/-wPGXu8ERwU](https://youtu.be/-wPGXu8ERwU) | OrchardCMS/OrchardCore |
 | [Content Type Settings: Creatable, Listable, Draftable and More](videos/content-types-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Version Pruning: Remove Old Versions Automatically](videos/content-version-pruning) | 3:38 | [https://youtu.be/0c7PkSaO4Q4](https://youtu.be/0c7PkSaO4Q4) | OrchardCMS/OrchardCore |
