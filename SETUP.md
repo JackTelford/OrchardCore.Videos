@@ -204,7 +204,7 @@ To unlock unlisted and public uploads, submit the free
 [YouTube API Services compliance audit form](https://support.google.com/youtube/contact/yt_api_form) once, for the Google
 Cloud project of step 2 (give the project number, from the console's dashboard, and say it's the Orchard Core
 project that publishes the channel's own videos). It takes a few weeks. The same form can ask for more than the default
-quota of 10,000 units a day (a full publish costs about 2,150, so about four videos a day).
+quota of 10,000 units a day (a full publish uses about 550, so about 18 videos a day).
 
 Also make sure the channel is verified by phone (YouTube Studio > Settings > Channel > Feature eligibility): custom
 thumbnails and long videos need it.

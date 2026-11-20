@@ -100,7 +100,8 @@ Publishing a GitHub release is what sends a video to YouTube.
    (title, description with chapters and links, tags, captions, thumbnail, playlists), records the YouTube id in
    `video.json` and the README table, adds the YouTube link to the release, and opens the documentation pull request.
 
-Publish at most about **four videos a day**: each upload costs about 2,150 of the YouTube API's 10,000 daily units.
+Publish at most about **18 videos a day**: each upload uses about 550 of the YouTube API's 10,000 daily units (the
+upload itself has a separate allowance of 100 a day), and the quota resets at midnight Pacific time.
 A release that fails on the quota can be run again the next day from **Actions > Publish video > Run workflow**, with
 its tag.
 

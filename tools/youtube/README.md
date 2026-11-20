@@ -83,8 +83,10 @@ embeds it) can watch an unlisted video, but it doesn't show on the channel or in
   to private viewing, and it can't be made public. Either request the audit once, which is free and takes a few weeks,
   or upload in YouTube Studio and use this tool for everything else (captions, thumbnail, metadata updates and the
   index), which isn't restricted. Record a Studio upload's id in `video.json` as `"youtube": { "id": "...", "url": "https://youtu.be/..." }`.
-- **Quota**: 10,000 units a day by default. A full publish (upload 1,600, captions 400, thumbnail 50, playlist 50,
-  plus a playlist lookup) costs about 2,150, so about four videos a day; the audit form can ask for more.
+- **Quota**: uploads have their own allowance of 100 `videos.insert` calls a day; every other call shares 10,000 units
+  a day. A full publish uses about 550 units (captions 400, thumbnail 50, 50 for each playlist, plus a playlist lookup),
+  so about 18 videos a day, with the captions as the limit. The quota resets at midnight Pacific time; the audit form
+  can ask for more.
 - **Not in the API**: end screens, cards, monetization and pinning a comment are set in YouTube Studio.
 - **Custom thumbnails** need a channel with phone verification or channel history; the tool reports when YouTube
   refuses one.
