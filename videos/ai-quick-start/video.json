@@ -89,5 +89,10 @@
     "pullRequest": null,
     "feature": "guide:getting-started/ai-quick-start"
   },
-  "length": "6:31"
+  "length": "6:31",
+  "youtube": {
+    "id": "9Q2x-Q2Gg0k",
+    "url": "https://youtu.be/9Q2x-Q2Gg0k",
+    "version": "v1"
+  }
 }
