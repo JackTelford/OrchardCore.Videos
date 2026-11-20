@@ -24,7 +24,36 @@
     "Orchard Core",
     "Content Types"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:19",
+      "title": "The options of a content type"
+    },
+    {
+      "time": "1:05",
+      "title": "Creatable and Listable"
+    },
+    {
+      "time": "2:18",
+      "title": "Draftable and Versionable"
+    },
+    {
+      "time": "3:10",
+      "title": "Securable"
+    },
+    {
+      "time": "3:59",
+      "title": "Stereotype, category and thumbnail"
+    },
+    {
+      "time": "4:55",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +75,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentTypes"
-  }
+  },
+  "length": "5:12"
 }
