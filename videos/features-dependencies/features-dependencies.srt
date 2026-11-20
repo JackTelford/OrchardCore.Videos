@@ -1,0 +1,240 @@
+1
+00:00:01,000 --> 00:00:04,443
+Some Orchard Core features need other features to work.
+
+2
+00:00:04,443 --> 00:00:09,016
+In this video, you see how the Features page shows these dependencies, what
+
+3
+00:00:09,016 --> 00:00:13,249
+happens to related features when you enable or disable one, and why a
+
+4
+00:00:13,249 --> 00:00:15,620
+few features have no working switch.
+
+5
+00:00:20,220 --> 00:00:22,639
+A feature can build on other features.
+
+6
+00:00:22,639 --> 00:00:27,752
+Users Registration, for example, lets visitors sign up and confirm their email address,
+
+7
+00:00:27,752 --> 00:00:29,731
+so it needs the Email feature.
+
+8
+00:00:29,731 --> 00:00:32,700
+The features that it needs are its dependencies.
+
+9
+00:00:33,450 --> 00:00:35,955
+Orchard Core keeps both sides consistent.
+
+10
+00:00:35,955 --> 00:00:39,686
+When you enable a feature, its dependencies are enabled with it.
+
+11
+00:00:39,686 --> 00:00:44,270
+When you disable a feature, the features that depend on it are disabled with it.
+
+12
+00:00:48,526 --> 00:00:52,958
+The Features page is under Tools, Features, and lists the features of the
+
+13
+00:00:52,958 --> 00:00:54,754
+site, grouped by category.
+
+14
+00:00:54,754 --> 00:00:57,110
+Let's search for Users Registration.
+
+15
+00:00:57,110 --> 00:01:01,150
+The search narrows the list as you type, and matches the name, the
+
+16
+00:01:01,150 --> 00:01:03,956
+identifier and the description of a feature.
+
+17
+00:01:04,412 --> 00:01:09,079
+The row shows the name of the feature, its identifier, its description, and
+
+18
+00:01:09,079 --> 00:01:10,692
+whether it is enabled.
+
+19
+00:01:10,692 --> 00:01:13,804
+The badges beside the name are its dependencies:
+
+20
+00:01:13,804 --> 00:01:15,072
+Email and Users.
+
+21
+00:01:15,524 --> 00:01:20,174
+Point at a badge, and a tooltip shows the description of that dependency.
+
+22
+00:01:20,174 --> 00:01:25,824
+The Email badge, for example, describes the infrastructure for configuring email settings.
+
+23
+00:01:26,293 --> 00:01:31,679
+The button with three dots, Show indirect dependencies, adds the features that the
+
+24
+00:01:31,679 --> 00:01:33,638
+dependencies need in turn:
+
+25
+00:01:33,638 --> 00:01:36,393
+here, Roles Core Services and Settings.
+
+26
+00:01:40,607 --> 00:01:42,373
+Let's search for email.
+
+27
+00:01:42,373 --> 00:01:47,427
+Email is disabled on this site, and so is Users Registration, which needs it.
+
+28
+00:01:47,878 --> 00:01:50,311
+Select Enable on Users Registration.
+
+29
+00:01:50,311 --> 00:01:52,917
+Enabling does not ask for confirmation.
+
+30
+00:01:52,917 --> 00:01:58,418
+A message confirms that the feature was enabled, and it names only the feature you chose.
+
+31
+00:01:58,869 --> 00:02:00,546
+Search for email again.
+
+32
+00:02:00,546 --> 00:02:03,958
+Email is enabled too, although you did not select it.
+
+33
+00:02:03,958 --> 00:02:08,469
+Dependencies that were already enabled, such as Users, stay as they are.
+
+34
+00:02:12,658 --> 00:02:14,319
+Let's go the other way.
+
+35
+00:02:14,319 --> 00:02:18,558
+Search for email again, and select Disable on Email, the dependency.
+
+36
+00:02:19,018 --> 00:02:21,091
+A dialog asks you to confirm.
+
+37
+00:02:21,091 --> 00:02:25,059
+It lists the dependent features that are disabled with Email:
+
+38
+00:02:25,059 --> 00:02:26,895
+here, Users Registration.
+
+39
+00:02:26,895 --> 00:02:31,278
+A feature without enabled dependents only asks whether you are sure.
+
+40
+00:02:31,736 --> 00:02:32,810
+Select Yes.
+
+41
+00:02:32,810 --> 00:02:38,494
+The message names Email, but a search for registration shows that Users Registration
+
+42
+00:02:38,494 --> 00:02:40,136
+is disabled as well.
+
+43
+00:02:44,369 --> 00:02:46,138
+Some features are on demand:
+
+44
+00:02:46,138 --> 00:02:49,261
+they are turned on only when other features need them.
+
+45
+00:02:49,261 --> 00:02:51,187
+The list hides them by default.
+
+46
+00:02:51,187 --> 00:02:54,259
+Open the Visibility filter, and clear Hide on demand.
+
+47
+00:02:54,729 --> 00:02:56,871
+Search for Roles Core Services.
+
+48
+00:02:56,871 --> 00:03:00,576
+Features such as Users need it, so it is enabled for them.
+
+49
+00:03:00,576 --> 00:03:05,266
+Its Disable button is inactive, and the tooltip says the feature is enabled
+
+50
+00:03:05,266 --> 00:03:07,639
+automatically, based on dependency.
+
+51
+00:03:08,096 --> 00:03:10,342
+Some features are always enabled.
+
+52
+00:03:10,342 --> 00:03:15,812
+Clear Hide always enabled, and search for the Features feature, the one behind this page.
+
+53
+00:03:15,812 --> 00:03:20,476
+Its tooltip says that it is always enabled and cannot be manually disabled.
+
+54
+00:03:22,076 --> 00:03:26,328
+To sum up, an on demand feature is enabled while another feature needs
+
+55
+00:03:26,328 --> 00:03:28,454
+it, and disabled when none does.
+
+56
+00:03:28,454 --> 00:03:30,748
+An always enabled feature stays on.
+
+57
+00:03:30,748 --> 00:03:32,706
+Neither has a working switch.
+
+58
+00:03:34,706 --> 00:03:37,598
+That's how dependencies work on the Features page:
+
+59
+00:03:37,598 --> 00:03:42,503
+enabling a feature enables what it needs, and disabling a feature disables what needs it.
+
+60
+00:03:42,503 --> 00:03:43,846
+Thanks for watching.
+
