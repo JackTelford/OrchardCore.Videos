@@ -294,7 +294,7 @@
     "docs": [
       "src/docs/getting-started/test-drive-orchard-core.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.4,
     "words": 665,
     "contentCommit": "",
@@ -302,9 +302,9 @@
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/279",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "test-drive-orchard-core/v1",
+    "youtubeId": "yY0zPvmLsjg",
+    "publishedOn": "2026-11-19",
     "notes": ""
   },
   {
