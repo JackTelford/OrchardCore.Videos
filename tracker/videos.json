@@ -621,7 +621,7 @@
     "docs": [
       "src/docs/reference/modules/Contents/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 3.6,
     "words": 534,
     "contentCommit": "",
@@ -629,9 +629,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/292",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "content-version-pruning/v1",
+    "youtubeId": "0c7PkSaO4Q4",
+    "publishedOn": "2026-11-20",
     "notes": ""
   },
   {
