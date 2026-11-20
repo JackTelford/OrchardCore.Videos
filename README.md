@@ -64,7 +64,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Content Types: Model the Content of Your Site](videos/content-types-overview) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Type Settings: Creatable, Listable, Draftable and More](videos/content-types-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Version Pruning: Remove Old Versions Automatically](videos/content-version-pruning) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Content Items: Create, Edit and Publish](videos/contents-create-edit-publish) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Items: Create, Edit and Publish](videos/contents-create-edit-publish) | 4:48 | [https://youtu.be/gQgMKIZpCNY](https://youtu.be/gQgMKIZpCNY) | OrchardCMS/OrchardCore |
 | [Drafts and Versions: Change Content Without Losing the Live Page](videos/contents-drafts-versions) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Items List: Search, Filter and Act on Many Items](videos/contents-list-search-filter) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Create a CMS Web Application With dotnet new](videos/create-cms-web-application) | 6:36 | [https://youtu.be/AL5UNqnC-W0](https://youtu.be/AL5UNqnC-W0) | OrchardCMS/OrchardCore |
