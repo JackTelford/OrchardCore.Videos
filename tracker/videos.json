@@ -865,7 +865,7 @@
     "docs": [
       "src/docs/reference/modules/ContentFields/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.9,
     "words": 742,
     "contentCommit": "",
@@ -873,9 +873,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/301",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "content-fields-editors/v1",
+    "youtubeId": "zujP0UIdETM",
+    "publishedOn": "2026-11-20",
     "notes": ""
   },
   {
