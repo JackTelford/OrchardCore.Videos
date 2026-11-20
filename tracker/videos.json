@@ -513,14 +513,14 @@
     "docs": [
       "src/docs/reference/modules/Contents/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 4.8,
     "words": 714,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-16",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/288",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
