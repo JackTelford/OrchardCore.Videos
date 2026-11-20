@@ -30,18 +30,10 @@ which stays on "Standard". Do not click the button or change the drop-down.
 
 The Youtube Field turns the address it is given into an embedded address on the same host: for
 `https://www.example.com/watch?v=pottery-teaser` the embedded address is `https://www.example.com/embed/pottery-teaser`
-(`OrchardCore.ContentFields/Drivers/YoutubeFieldDisplayDriver.cs:60-84`). The programme allows `example.com` as the only
-real domain in the repository, so the video uses an `example.com` address and a stand-in for the player. The stand-in is
-a route on the browser context, set in `07-site` before the capture starts (see that clip). It answers the embedded
-address with a dark page and a green play triangle:
-
-```csharp
-const string StandIn = "<!doctype html><meta charset=\"utf-8\"><style>html,body{margin:0;height:100%;background:#181B1A}" +
-    "body{display:grid;place-items:center}.play{width:0;height:0;border-style:solid;border-width:28px 0 28px 48px;" +
-    "border-color:transparent transparent transparent #41B670}</style><body><div class=\"play\"></div></body>";
-await scene.Page.Context.RouteAsync("https://www.example.com/embed/**",
-    route => route.FulfillAsync(new RouteFulfillOptions { ContentType = "text/html", Body = StandIn }));
-```
+(`OrchardCore.ContentFields/Drivers/YoutubeFieldDisplayDriver.cs:60-84`). The programme allows `example.com` as the only real domain in the repository, so the video uses an `example.com` address. No stand-in is used: the
+recorder's browser has internet access (only the site process is blocked), so the embedded frame shows the page of `https://www.example.com/embed/pottery-teaser`,
+which is example.com's own plain documentation page, not an error. The narration of `site-5` says only that the address becomes an embedded frame at the
+saved size, and that a real video address loads the player there. Do not register a route that draws a fake player.
 
 No other external address is loaded by the pages of this video. Do not click the Registration Link on the site: it opens
 `example.com` in another tab.
@@ -216,7 +208,6 @@ Starts on `/Admin/ContentTypes/List`.
 
 Starts on `/Admin/ContentTypes/List`, where `06-fill` ended. The first action opens the items of the type, whose list shows the row
 **Pottery Basics** with the buttons **Edit** and **View**.
-Before `StartCaptureAsync()`, register the stand-in route of section 1 on `scene.Page.Context`, so the new tab uses it too.
 
 - `site-1`: Highlight the **Workshop** row for a moment, then clear the highlight. Click **List Items** of that row (`a[role="btn-list-Workshop"]`,
   `OrchardCore.ContentTypes/Views/ContentTypeEntry.Buttons.SummaryAdmin.cshtml:22`) and wait for `/Admin/Contents/ContentItems/Workshop`. Then click **View** (`a.btn.view` in the row, `OrchardCore.Contents/Views/ContentsButtonEdit_SummaryAdmin.cshtml:18`). The link
@@ -229,8 +220,8 @@ Before `StartCaptureAsync()`, register the stand-in route of section 1 on `scene
 - `site-4`: Clear the highlight, scroll if needed, highlight What to Bring (`div.field-type-markdownfield`,
   `OrchardCore.Markdown/Views/MarkdownField.cshtml:8`). *Visible:* the heading `Bring with you` and the three list items.
 - `site-5`: Clear the highlight, scroll if needed, highlight the player (`iframe[src*="/embed/pottery-teaser"]`;
-  `OrchardCore.ContentFields/Views/YoutubeField.cshtml:16`). *Visible:* the frame at 560 by 315 showing the stand-in page.
-  Make sure the frame is not empty white: if it is, the route was registered too late or on the wrong context.
+  `OrchardCore.ContentFields/Views/YoutubeField.cshtml:16`). *Visible:* the frame at 560 by 315 showing the example.com page.
+  The frame shows the example.com page (no route is registered). Wait until it has loaded, off camera.
 
 ### Slides and cards (drawn by `slides.py`, not recorded)
 

@@ -28,7 +28,48 @@
     "Orchard Core",
     "Content Fields"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Four fields for richer content"
+    },
+    {
+      "time": "1:01",
+      "title": "Link Field"
+    },
+    {
+      "time": "1:53",
+      "title": "Html Field"
+    },
+    {
+      "time": "2:28",
+      "title": "Markdown Field"
+    },
+    {
+      "time": "2:54",
+      "title": "Youtube Field"
+    },
+    {
+      "time": "3:22",
+      "title": "Fill in a Workshop"
+    },
+    {
+      "time": "4:11",
+      "title": "On the site"
+    },
+    {
+      "time": "4:51",
+      "title": "Safe by default"
+    },
+    {
+      "time": "5:18",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Content Fields",
@@ -55,5 +96,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentFields"
-  }
+  },
+  "length": "5:31"
 }
