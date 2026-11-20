@@ -20,7 +20,36 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "What the settings change"
+    },
+    {
+      "time": "0:30",
+      "title": "Open the admin settings"
+    },
+    {
+      "time": "0:51",
+      "title": "The admin menu"
+    },
+    {
+      "time": "1:48",
+      "title": "The top bar and page headings"
+    },
+    {
+      "time": "2:30",
+      "title": "Lists and actions"
+    },
+    {
+      "time": "3:22",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -42,5 +71,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Admin"
-  }
+  },
+  "length": "3:34"
 }
