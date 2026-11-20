@@ -20,7 +20,48 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "Menus and nodes"
+    },
+    {
+      "time": "0:49",
+      "title": "The Admin Menus page"
+    },
+    {
+      "time": "1:30",
+      "title": "Create a menu"
+    },
+    {
+      "time": "1:50",
+      "title": "Add a link"
+    },
+    {
+      "time": "2:46",
+      "title": "Group links"
+    },
+    {
+      "time": "3:32",
+      "title": "Links that list content"
+    },
+    {
+      "time": "4:15",
+      "title": "Control who sees a menu"
+    },
+    {
+      "time": "4:57",
+      "title": "Reuse your menus"
+    },
+    {
+      "time": "5:13",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -42,5 +83,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.AdminMenu"
-  }
+  },
+  "length": "5:23"
 }
