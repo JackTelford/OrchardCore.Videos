@@ -103,7 +103,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Encoding Settings: Render Non-ASCII Text Without Encoding](videos/encoding-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [External Login: Let Users Sign In With Other Accounts](videos/external-login-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Features: Dependencies and Features That Enable Others](videos/features-dependencies) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Features: Enable and Disable What Your Site Uses](videos/features-manage) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Features: Enable and Disable What Your Site Uses](videos/features-manage) | 4:33 | [https://youtu.be/BmreMHrfixM](https://youtu.be/BmreMHrfixM) | OrchardCMS/OrchardCore |
 | [Feeds: Publish an RSS Feed of Your Content](videos/feeds-rss) |  | not uploaded | OrchardCMS/OrchardCore |
 | [File Upload Security: Antivirus Scanning and Temporary Files](videos/file-upload-security) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Bag Part: Embed Content Items Inside a Content Item](videos/flows-bag-part) |  | not uploaded | OrchardCMS/OrchardCore |

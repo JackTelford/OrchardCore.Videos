@@ -81,5 +81,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Features"
   },
-  "length": "4:33"
+  "length": "4:33",
+  "youtube": {
+    "id": "BmreMHrfixM",
+    "url": "https://youtu.be/BmreMHrfixM",
+    "version": "v1"
+  }
 }
