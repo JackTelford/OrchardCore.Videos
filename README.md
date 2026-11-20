@@ -242,7 +242,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Tenants: Run Many Sites From One Application](videos/tenants-overview) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Static Files per Tenant: Serve Each Tenant's Own Files](videos/tenants-static-files) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Workflows for Tenants: Create and Set Up Tenants Automatically](videos/tenants-workflow-tasks) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Test Drive Orchard Core: Run It From Source](videos/test-drive-orchard-core) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Test Drive Orchard Core: Run It From Source](videos/test-drive-orchard-core) | 4:56 | [https://youtu.be/yY0zPvmLsjg](https://youtu.be/yY0zPvmLsjg) | OrchardCMS/OrchardCore |
 | [Create a Theme: Your First Orchard Core Theme](videos/theme-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Create a Theme From an HTML Template](videos/theme-from-html-template) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Themes: Change the Look of Your Site](videos/themes-choose) |  | not uploaded | OrchardCMS/OrchardCore |

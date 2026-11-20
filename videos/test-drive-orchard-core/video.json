@@ -77,5 +77,10 @@
     "pullRequest": null,
     "feature": "guide:getting-started/test-drive-orchard-core"
   },
-  "length": "4:56"
+  "length": "4:56",
+  "youtube": {
+    "id": "yY0zPvmLsjg",
+    "url": "https://youtu.be/yY0zPvmLsjg",
+    "version": "v1"
+  }
 }
