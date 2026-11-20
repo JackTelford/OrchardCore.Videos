@@ -23,7 +23,44 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "What a recipe sets up"
+    },
+    {
+      "time": "0:55",
+      "title": "Choose on the Setup screen"
+    },
+    {
+      "time": "1:38",
+      "title": "Blank site and Headless site"
+    },
+    {
+      "time": "2:32",
+      "title": "Blog"
+    },
+    {
+      "time": "3:22",
+      "title": "Agency"
+    },
+    {
+      "time": "3:49",
+      "title": "Coming Soon"
+    },
+    {
+      "time": "4:40",
+      "title": "Software as a Service"
+    },
+    {
+      "time": "5:13",
+      "title": "Which recipe fits"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Starter Recipes and Themes",
@@ -85,5 +122,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:getting-started/starter-recipes"
-  }
+  },
+  "length": "6:02"
 }
