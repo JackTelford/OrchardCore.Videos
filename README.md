@@ -52,7 +52,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Content Definitions in Code: Migrations and Recipes](videos/content-definitions-in-code) | 6:38 | [https://youtu.be/NvF7c7HLinc](https://youtu.be/NvF7c7HLinc) | OrchardCMS/OrchardCore |
 | [Write a Content Field With Its Editor and Settings](videos/content-field-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Field Editors and Display Modes: One Field, Many Faces](videos/content-fields-editors) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Content Fields: Links, Rich Text, Markdown and YouTube Videos](videos/content-fields-links-html-youtube) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Fields: Links, Rich Text, Markdown and YouTube Videos](videos/content-fields-links-html-youtube) | 5:31 | [https://youtu.be/t495H9BAZVA](https://youtu.be/t495H9BAZVA) | OrchardCMS/OrchardCore |
 | [Content Fields: Text, Numbers, Dates and Yes or No](videos/content-fields-overview) | 6:27 | [https://youtu.be/mC1uIlK9bQs](https://youtu.be/mC1uIlK9bQs) | OrchardCMS/OrchardCore |
 | [Content Localization: Translate Your Content Items](videos/content-localization) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Write a Content Part With a Display Driver](videos/content-part-create) |  | not uploaded | OrchardCMS/OrchardCore |
