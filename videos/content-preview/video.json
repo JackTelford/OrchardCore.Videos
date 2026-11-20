@@ -22,7 +22,36 @@
     "Orchard Core",
     "Content Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "Two ways to preview"
+    },
+    {
+      "time": "0:44",
+      "title": "Enable Content Preview"
+    },
+    {
+      "time": "1:06",
+      "title": "Preview while you edit"
+    },
+    {
+      "time": "1:59",
+      "title": "Preview a saved draft"
+    },
+    {
+      "time": "2:30",
+      "title": "Good to know"
+    },
+    {
+      "time": "3:23",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +73,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentPreview"
-  }
+  },
+  "length": "3:33"
 }
