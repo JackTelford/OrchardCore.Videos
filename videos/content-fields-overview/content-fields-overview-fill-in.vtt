@@ -1,0 +1,56 @@
+WEBVTT
+
+00:00:03.229 --> 00:00:08.160
+Under Content, Content Items, the New menu lists the content types you can create.
+
+00:00:08.160 --> 00:00:09.729
+Let's choose Workshop.
+
+00:00:10.203 --> 00:00:14.189
+The editor for a workshop lists the fields in the order they were
+
+00:00:14.189 --> 00:00:17.108
+added, each with the input that fits its type.
+
+00:00:17.108 --> 00:00:21.206
+A red asterisk marks Speaker and Seats as required, and the hint of
+
+00:00:21.206 --> 00:00:23.283
+Speaker appears with its field.
+
+00:00:23.773 --> 00:00:29.512
+Seats starts at twenty, its default value, with the minimum and the maximum beside the input.
+
+00:00:29.512 --> 00:00:35.483
+The checkbox labeled Participants can register starts checked, because its default value is true.
+
+00:00:35.968 --> 00:00:38.332
+Let's enter a title and the speaker.
+
+00:00:38.332 --> 00:00:42.440
+Then, to see validation at work, let's enter a seat count of fifty,
+
+00:00:42.440 --> 00:00:44.298
+which is above the maximum.
+
+00:00:44.762 --> 00:00:49.914
+The date, the date and time, and the time use the inputs that your browser provides.
+
+00:00:49.914 --> 00:00:54.264
+Let's enter a registration deadline, a start date and time, and a time
+
+00:00:54.264 --> 00:00:55.752
+when the doors open.
+
+00:00:56.242 --> 00:00:59.523
+Publish checks every field against its settings.
+
+00:00:59.523 --> 00:01:05.052
+The Numeric Field refuses fifty, so the editor stays open and shows an error message.
+
+00:01:05.591 --> 00:01:09.259
+Let's change the seat count to twenty-five and publish again.
+
+00:01:09.259 --> 00:01:12.051
+The item is saved, and a message confirms it.
+

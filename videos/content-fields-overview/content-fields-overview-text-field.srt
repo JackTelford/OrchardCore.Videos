@@ -1,0 +1,48 @@
+1
+00:00:03,254 --> 00:00:07,228
+On the Workshop type, Add Field opens a form with a Display Name,
+
+2
+00:00:07,228 --> 00:00:09,467
+a Technical Name and a Field Type.
+
+3
+00:00:09,467 --> 00:00:13,105
+The Technical Name follows the Display Name as you type it.
+
+4
+00:00:13,105 --> 00:00:15,064
+Let's call the field Speaker.
+
+5
+00:00:15,524 --> 00:00:19,821
+The Field Type list shows the fields that the enabled features provide.
+
+6
+00:00:19,821 --> 00:00:24,175
+Let's choose Text Field, and then Save & Configure, which adds the field
+
+7
+00:00:24,175 --> 00:00:25,794
+and opens its settings.
+
+8
+00:00:26,292 --> 00:00:32,040
+A Text Field has settings such as Required, Hint, Placeholder, Default value, Minimum
+
+9
+00:00:32,040 --> 00:00:34,061
+length and Maximum length.
+
+10
+00:00:34,061 --> 00:00:39,872
+Two lists below choose the editor and the display mode, which a separate video covers.
+
+11
+00:00:40,336 --> 00:00:45,208
+Let's make the field required, and add a hint that says who leads the workshop.
+
+12
+00:00:45,208 --> 00:00:50,196
+Save returns to the type, where Speaker is listed with the field type Text Field.
+

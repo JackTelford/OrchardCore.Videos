@@ -1,0 +1,20 @@
+1
+00:00:03,265 --> 00:00:08,035
+A Boolean Field holds a yes or no value, which appears as a checkbox.
+
+2
+00:00:08,035 --> 00:00:14,205
+On the Workshop type, let's add Registration Open as a Boolean Field and open its settings.
+
+3
+00:00:14,672 --> 00:00:17,275
+Label is the text beside the checkbox.
+
+4
+00:00:17,275 --> 00:00:22,363
+Default value is true decides whether it starts checked when you create an item.
+
+5
+00:00:22,363 --> 00:00:28,042
+Let's set the label to Participants can register, turn on Default value is true, and save.
+

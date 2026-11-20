@@ -37,7 +37,7 @@ All names are invented. Nothing else is created before the first clip.
 5. Add nothing else: no fields, no other parts, no content items.
 6. Check, and fix the site if one check fails:
    - `/Admin/Features`: **Content Fields** shows **Enabled**; **User Time Zone** shows **Disabled**.
-   - `/Admin/ContentTypes/Edit/Workshop`: the **Parts** list holds **Title** and **Workshop**; the **Fields** section is empty and the **Add Field** button is there.
+   - `/Admin/ContentTypes/Edit/Workshop`: the **Parts** list holds only **Title** (the part **Workshop** appears after the first field is added); the **Fields** section is empty and the **Add Field** button is there.
 
 Stop the site and copy its data folder aside as snapshot **S0** (see "Order" below).
 
@@ -188,8 +188,8 @@ Local helper: `ILocator Row(string id) => scene.Page.Locator(".list-group-item")
 
 #### `open-3`
 
-- Actions: `ClearHighlightsAsync()`; `ClickAndWaitForNavigationAsync(Locator("a.edit-button[href$='/ContentTypes/Edit/Workshop']"))`; `ScrollToAsync(scene, GetByRole(AriaRole.Heading, new() { Name = "Fields", Exact = true }), 120)`; `HighlightAsync` on the hint text **Contains the fields for the current type** next to the part **Workshop** (`GetByText("Contains the fields for the current type")`), hold 3 s; clear; `HighlightAsync(GetByRole(AriaRole.Button, new() { Name = "Add Field", Exact = true }))`.
-- On screen at the end of the narration: **Edit Content Type - Workshop**, the **Fields** heading with no field under it, the **Add Field** button ringed, and, below, the **Parts** list with **Title** and **Workshop**.
+- Actions: `ClearHighlightsAsync()`; `ClickAndWaitForNavigationAsync(Locator("a.edit-button[href$='/ContentTypes/Edit/Workshop']"))`; `ScrollToAsync(scene, GetByRole(AriaRole.Heading, new() { Name = "Fields", Exact = true }), 120)`; `HighlightAsync(GetByRole(AriaRole.Button, new() { Name = "Add Field", Exact = true }))`.
+- On screen at the end of the narration: **Edit Content Type - Workshop**, the **Fields** heading with no field under it, the **Add Field** button ringed, and, below, the **Parts** list with only **Title**. The part **Workshop** ("Contains the fields for the current type") appears in that list only after the first field was added: on a fresh type the part has no definition yet and the page skips it (`Views/Admin/Edit.cshtml`, `GetPartDefinitionAsync` returns null). The narration of `open-3` says so (changed after the first take).
 - Labels from: `OrchardCore.ContentTypes/Views/Admin/Edit.cshtml:63` (page title), `:88` (Fields), `:137` (Add Field), `:144` (Parts), `:180` (Contains the fields for the current type).
 
 ### Clip `03-text`: Speaker, a Text Field
