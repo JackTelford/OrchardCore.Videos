@@ -58,7 +58,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Write a Content Part With a Display Driver](videos/content-part-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Parts: Create Reusable Groups of Fields](videos/content-parts-reusable) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Picker and User Picker Fields: Relate Content Items](videos/content-picker-fields) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Content Preview: See Your Changes Before You Publish](videos/content-preview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Preview: See Your Changes Before You Publish](videos/content-preview) | 3:33 | [https://youtu.be/4pEEdtzAkXs](https://youtu.be/4pEEdtzAkXs) | OrchardCMS/OrchardCore |
 | [Content API: Read and Write Content Items Over HTTP](videos/content-rest-api) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Types: Create a Type and Add Parts and Fields](videos/content-types-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Types: Model the Content of Your Site](videos/content-types-overview) |  | not uploaded | OrchardCMS/OrchardCore |
