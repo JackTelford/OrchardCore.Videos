@@ -1,0 +1,284 @@
+1
+00:00:01,000 --> 00:00:02,708
+Most pages need text.
+
+2
+00:00:02,708 --> 00:00:07,263
+The Html and Markdown modules give a content type two ways to hold
+
+3
+00:00:07,263 --> 00:00:10,679
+it, the HtmlBody part and the MarkdownBody part.
+
+4
+00:00:10,679 --> 00:00:15,930
+In this video, we attach a body part, choose its editor, and write with both.
+
+5
+00:00:20,530 --> 00:00:24,208
+A body part holds the main text of a content item.
+
+6
+00:00:24,208 --> 00:00:30,315
+HtmlBody stores HTML, and MarkdownBody stores Markdown, which is plain text with simple
+
+7
+00:00:30,315 --> 00:00:33,270
+marks for headings, lists and emphasis.
+
+8
+00:00:34,020 --> 00:00:39,645
+Each part comes with its own editors, and you choose one for each content type.
+
+9
+00:00:39,645 --> 00:00:45,137
+HtmlBody offers Standard, Wysiwyg editor, Trumbowyg editor and Monaco editor.
+
+10
+00:00:45,137 --> 00:00:48,710
+MarkdownBody offers Standard and Wysiwyg editor.
+
+11
+00:00:49,460 --> 00:00:52,891
+The site stores your text without changing it.
+
+12
+00:00:52,891 --> 00:00:57,906
+When a visitor opens the page, the site turns Markdown into HTML, runs
+
+13
+00:00:57,906 --> 00:01:04,240
+the shortcodes, and, unless you turn it off, sanitizes the result to remove unsafe markup.
+
+14
+00:01:08,434 --> 00:01:10,522
+Both modules are features.
+
+15
+00:01:10,522 --> 00:01:16,853
+Under Tools, Features, we search for them, and the list shows Html and Markdown as enabled.
+
+16
+00:01:16,853 --> 00:01:20,574
+If they are off, you select Enable beside each one.
+
+17
+00:01:21,038 --> 00:01:23,693
+A body part belongs to a content type.
+
+18
+00:01:23,693 --> 00:01:29,365
+Let's open Design, Content Definition, Content Types, and edit Announcement, which has a
+
+19
+00:01:29,365 --> 00:01:31,718
+title and Autoroute, but no body.
+
+20
+00:01:32,173 --> 00:01:35,429
+Add Parts lists every part you can attach.
+
+21
+00:01:35,429 --> 00:01:39,634
+HtmlBody and MarkdownBody each have a short description.
+
+22
+00:01:39,634 --> 00:01:43,093
+Let's choose Add & Configure beside HtmlBody.
+
+23
+00:01:43,550 --> 00:01:45,241
+The part's settings open.
+
+24
+00:01:45,241 --> 00:01:50,370
+The question, What type of editor should be used, sets the editor for this content type.
+
+25
+00:01:50,370 --> 00:01:54,570
+Let's choose Wysiwyg editor, which shows formatted text with a toolbar.
+
+26
+00:01:55,040 --> 00:02:00,483
+Sanitize Html is checked by default, so unsafe markup is removed from the page.
+
+27
+00:02:00,483 --> 00:02:02,980
+Let's leave it on and click Save.
+
+28
+00:02:03,446 --> 00:02:09,597
+Back on Announcement, the HtmlBody entry carries a badge that names its editor, Wysiwyg.
+
+29
+00:02:09,597 --> 00:02:12,346
+Every announcement uses this editor.
+
+30
+00:02:16,566 --> 00:02:18,425
+Let's create an announcement.
+
+31
+00:02:18,425 --> 00:02:22,782
+Under Content, Content Items, the New button lists the types you can create,
+
+32
+00:02:22,782 --> 00:02:24,536
+and we choose Announcement.
+
+33
+00:02:24,994 --> 00:02:29,127
+The editor labeled HtmlBody is the Wysiwyg editor we chose.
+
+34
+00:02:29,127 --> 00:02:33,134
+We enter a title, then type the text of the announcement.
+
+35
+00:02:33,590 --> 00:02:36,002
+The toolbar above the text formats it.
+
+36
+00:02:36,002 --> 00:02:38,689
+Let's make a few words bold and add a list.
+
+37
+00:02:38,689 --> 00:02:41,650
+The editor shows formatted text while you write.
+
+38
+00:02:42,109 --> 00:02:45,440
+We click Publish, then View on the item in the list.
+
+39
+00:02:45,440 --> 00:02:49,689
+The page shows the formatted text, with the bold words and the list.
+
+40
+00:02:53,894 --> 00:02:58,525
+Let's edit the Blog item, which uses the Standard editor of HtmlBody.
+
+41
+00:02:58,525 --> 00:03:02,415
+It is a text box with line numbers, and it shows the HTML
+
+42
+00:03:02,415 --> 00:03:04,144
+of the body as stored.
+
+43
+00:03:04,623 --> 00:03:06,937
+Nothing is formatted for you here.
+
+44
+00:03:06,937 --> 00:03:12,373
+You type the text and the HTML tags yourself, which suits people who already write HTML.
+
+45
+00:03:16,613 --> 00:03:22,332
+Help Topic is a content type with a MarkdownBody part that uses the Wysiwyg editor.
+
+46
+00:03:22,332 --> 00:03:25,803
+Let's choose New, Help Topic, and enter a title.
+
+47
+00:03:26,332 --> 00:03:28,760
+Markdown is plain text with simple marks.
+
+48
+00:03:28,760 --> 00:03:32,220
+We type a heading, marked with hash signs at the start of the
+
+49
+00:03:32,220 --> 00:03:33,872
+line, and then a sentence.
+
+50
+00:03:34,340 --> 00:03:36,487
+The toolbar adds marks for you.
+
+51
+00:03:36,487 --> 00:03:41,420
+Let's select a word and click Bold, then click Generic List and type two items.
+
+52
+00:03:41,903 --> 00:03:46,054
+Toggle Preview shows the formatted result in place of the text.
+
+53
+00:03:46,054 --> 00:03:49,963
+Toggle Side by Side shows the text and the result together.
+
+54
+00:03:53,599 --> 00:03:55,595
+We click Publish, then View.
+
+55
+00:03:55,595 --> 00:03:59,411
+The page shows a heading, a bold word and a list, while the
+
+56
+00:03:59,411 --> 00:04:01,349
+stored text stays Markdown.
+
+57
+00:04:05,549 --> 00:04:07,960
+Choose what fits your writers.
+
+58
+00:04:07,960 --> 00:04:14,191
+HtmlBody with the Wysiwyg editor gives formatted text, HtmlBody with Standard or Monaco
+
+59
+00:04:14,191 --> 00:04:19,349
+gives HTML source, and MarkdownBody gives plain text with simple marks.
+
+60
+00:04:20,099 --> 00:04:24,675
+Sanitize Html is a setting of each body part on each content type.
+
+61
+00:04:24,675 --> 00:04:29,633
+Turn it off only for content you fully trust, because unsafe markup then
+
+62
+00:04:29,633 --> 00:04:31,159
+stays on the page.
+
+63
+00:04:31,909 --> 00:04:36,445
+By default, HTML typed into a Markdown body appears as text on the
+
+64
+00:04:36,445 --> 00:04:38,776
+page instead of being rendered.
+
+65
+00:04:38,776 --> 00:04:44,509
+Shortcodes work in both bodies, and the Wysiwyg editors have a button to insert them.
+
+66
+00:04:45,259 --> 00:04:50,236
+The Markdown module also provides a Markdown field, with the same Standard and
+
+67
+00:04:50,236 --> 00:04:53,732
+Wysiwyg editors, which you can add to a content type.
+
+68
+00:04:53,732 --> 00:04:56,399
+A separate video covers content fields.
+
+69
+00:04:58,399 --> 00:05:04,091
+HtmlBody holds formatted HTML and MarkdownBody holds plain text with simple marks, and
+
+70
+00:05:04,091 --> 00:05:07,060
+you pick the editor for each content type.
+
+71
+00:05:07,060 --> 00:05:08,669
+Thanks for watching.
+
