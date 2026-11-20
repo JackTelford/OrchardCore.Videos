@@ -26,7 +26,48 @@
     "Orchard Core",
     "Content Fields"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What a content field is"
+    },
+    {
+      "time": "1:01",
+      "title": "Open a content type"
+    },
+    {
+      "time": "1:44",
+      "title": "Add a Text Field"
+    },
+    {
+      "time": "2:35",
+      "title": "Add a Numeric Field"
+    },
+    {
+      "time": "3:10",
+      "title": "Add a Boolean Field"
+    },
+    {
+      "time": "3:39",
+      "title": "Dates and times"
+    },
+    {
+      "time": "4:24",
+      "title": "Fill in a workshop"
+    },
+    {
+      "time": "5:37",
+      "title": "See it on the site"
+    },
+    {
+      "time": "6:12",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -48,5 +89,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentFields"
-  }
+  },
+  "length": "6:27"
 }

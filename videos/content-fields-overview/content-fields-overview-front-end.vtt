@@ -1,0 +1,32 @@
+WEBVTT
+
+00:00:03.164 --> 00:00:06.358
+The Content Items list shows the workshop you published.
+
+00:00:06.358 --> 00:00:10.016
+View opens it on the site, where the fields print their values in
+
+00:00:10.016 --> 00:00:11.974
+the order they have in the type.
+
+00:00:12.444 --> 00:00:16.965
+By default, these fields print their value alone, without the field name.
+
+00:00:16.965 --> 00:00:21.257
+The Text Field prints its text, the Numeric Field its number, and the
+
+00:00:21.257 --> 00:00:23.604
+Boolean Field prints True or False.
+
+00:00:24.062 --> 00:00:26.313
+The Date Field prints only the day.
+
+00:00:26.313 --> 00:00:29.881
+The Date Time Field prints the day and the time in the time
+
+00:00:29.881 --> 00:00:31.143
+zone of the site.
+
+00:00:31.143 --> 00:00:34.162
+The Time Field prints hours, minutes and seconds.
+

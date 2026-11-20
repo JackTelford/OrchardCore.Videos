@@ -71,7 +71,7 @@
             },
             {
               "id": "open-3",
-              "text": "The Parts list holds a part named Workshop, which contains the fields for the current type. The Fields section is empty, and Add Field starts the first one."
+              "text": "The Fields section is empty, and Add Field starts the first one. The Parts list shows only Title at first. The first field creates a part named Workshop, which contains the fields for the current type."
             }
           ]
         }
