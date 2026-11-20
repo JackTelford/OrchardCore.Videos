@@ -66,7 +66,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Content Version Pruning: Remove Old Versions Automatically](videos/content-version-pruning) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Items: Create, Edit and Publish](videos/contents-create-edit-publish) | 4:48 | [https://youtu.be/gQgMKIZpCNY](https://youtu.be/gQgMKIZpCNY) | OrchardCMS/OrchardCore |
 | [Drafts and Versions: Change Content Without Losing the Live Page](videos/contents-drafts-versions) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Content Items List: Search, Filter and Act on Many Items](videos/contents-list-search-filter) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Items List: Search, Filter and Act on Many Items](videos/contents-list-search-filter) | 5:16 | [https://youtu.be/c6qgnS49bKQ](https://youtu.be/c6qgnS49bKQ) | OrchardCMS/OrchardCore |
 | [Create a CMS Web Application With dotnet new](videos/create-cms-web-application) | 6:36 | [https://youtu.be/AL5UNqnC-W0](https://youtu.be/AL5UNqnC-W0) | OrchardCMS/OrchardCore |
 | [Create a Liquid Widget Without Writing a Module](videos/create-liquid-widget) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Module Metadata in Your Project File](videos/csproj-module-metadata) |  | not uploaded | OrchardCMS/OrchardCore |
