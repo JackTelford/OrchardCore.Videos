@@ -21,7 +21,36 @@
     "Orchard Core",
     "Content Types"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "The content model"
+    },
+    {
+      "time": "1:07",
+      "title": "The Content Types page"
+    },
+    {
+      "time": "2:00",
+      "title": "Inside a content type"
+    },
+    {
+      "time": "3:25",
+      "title": "From type to editor"
+    },
+    {
+      "time": "4:11",
+      "title": "The Content Parts page"
+    },
+    {
+      "time": "4:55",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Content Types",
@@ -48,5 +77,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentTypes"
-  }
+  },
+  "length": "5:06"
 }
