@@ -21,7 +21,36 @@
     "Orchard Core",
     "Content Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "Narrowing the list"
+    },
+    {
+      "time": "0:55",
+      "title": "The content items list"
+    },
+    {
+      "time": "2:04",
+      "title": "Search"
+    },
+    {
+      "time": "2:57",
+      "title": "Filter and sort"
+    },
+    {
+      "time": "3:58",
+      "title": "Act on many items"
+    },
+    {
+      "time": "5:04",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -43,5 +72,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Contents"
-  }
+  },
+  "length": "5:16"
 }
