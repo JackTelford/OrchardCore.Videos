@@ -22,7 +22,40 @@
     "Orchard Core",
     "Content Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Two kinds of body"
+    },
+    {
+      "time": "1:05",
+      "title": "Add a body part"
+    },
+    {
+      "time": "2:13",
+      "title": "Write with the Html editor"
+    },
+    {
+      "time": "2:50",
+      "title": "The Standard editor"
+    },
+    {
+      "time": "3:13",
+      "title": "Write with the Markdown editor"
+    },
+    {
+      "time": "4:02",
+      "title": "Good to know"
+    },
+    {
+      "time": "4:57",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Html",
@@ -49,5 +82,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Html"
-  }
+  },
+  "length": "5:10"
 }
