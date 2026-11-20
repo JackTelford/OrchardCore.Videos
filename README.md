@@ -90,7 +90,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Deployment Plans: Choose What to Export](videos/deployment-plans) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Remote Deployment: Send a Plan Straight to Another Site](videos/deployment-remote) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Write a Deployment Step](videos/deployment-step-create) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Development Tools: Preview Packages and Local NuGet Feeds](videos/development-tools) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Development Tools: Preview Packages and Local NuGet Feeds](videos/development-tools) | 4:47 | [https://youtu.be/wUvs6BXgksc](https://youtu.be/wUvs6BXgksc) | OrchardCMS/OrchardCore |
 | [Error Pages: Customize Not Found and Error Pages](videos/diagnostics-error-pages) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Shape Alternates: Customize the Display of One Type or One Item](videos/display-alternates) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Shapes: How Orchard Core Renders a Page](videos/display-shapes) |  | not uploaded | OrchardCMS/OrchardCore |

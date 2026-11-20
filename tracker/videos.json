@@ -433,7 +433,7 @@
       "src/docs/getting-started/preview-package-source.md",
       "src/docs/topics/local-nuget-packages/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.5,
     "words": 673,
     "contentCommit": "",
@@ -441,9 +441,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/285",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "development-tools/v1",
+    "youtubeId": "wUvs6BXgksc",
+    "publishedOn": "2026-11-20",
     "notes": ""
   },
   {
