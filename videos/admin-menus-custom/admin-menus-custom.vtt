@@ -1,0 +1,236 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.720
+The admin menu lists the pages of the admin, but your team uses
+
+00:00:04.720 --> 00:00:06.607
+only a few of them every day.
+
+00:00:06.607 --> 00:00:11.028
+The Admin Menu module lets you add your own links, grouped the way you work.
+
+00:00:11.028 --> 00:00:13.670
+Let's build a menu, and decide who sees it.
+
+00:00:18.270 --> 00:00:22.065
+An admin menu is a named set of items, and each item is
+
+00:00:22.065 --> 00:00:25.051
+an admin node, which can hold other nodes.
+
+00:00:25.051 --> 00:00:29.032
+Orchard Core adds the enabled menus to its own admin menu.
+
+00:00:29.032 --> 00:00:33.200
+They change the admin only, never the site your visitors see.
+
+00:00:33.950 --> 00:00:36.254
+Four kinds of node are available:
+
+00:00:36.254 --> 00:00:40.034
+a link opens a page, and a placeholder groups other nodes.
+
+00:00:40.034 --> 00:00:44.464
+Content Types adds a link for each content type you choose, and Lists
+
+00:00:44.464 --> 00:00:48.540
+adds a link for each item that holds a list, such as each blog.
+
+00:00:52.795 --> 00:00:55.961
+Admin menus live under Tools, Admin Menus.
+
+00:00:55.961 --> 00:00:59.523
+The Blog recipe turns the Admin Menu feature on.
+
+00:00:59.523 --> 00:01:04.865
+On a site where it is off, enable the feature first, under Tools, Features.
+
+00:01:05.330 --> 00:01:09.162
+The Blog recipe also creates a menu named Admin menus.
+
+00:01:09.162 --> 00:01:14.720
+Each row shows whether a menu is enabled, and offers Edit Nodes, Edit and Delete.
+
+00:01:14.720 --> 00:01:18.170
+The Actions button disables or enables the menu.
+
+00:01:18.652 --> 00:01:21.147
+Edit Nodes shows the tree of a menu.
+
+00:01:21.147 --> 00:01:26.254
+Blog and Main Menu are links, and Content is a placeholder with nodes inside it.
+
+00:01:26.254 --> 00:01:29.402
+The admin menu on the left shows these entries.
+
+00:01:33.643 --> 00:01:36.868
+On the list, Add Admin Menu asks for a name only.
+
+00:01:36.868 --> 00:01:40.503
+Let's call the menu Editor Shortcuts, and select Create.
+
+00:01:40.958 --> 00:01:43.948
+The menu is listed as Enabled, with no nodes.
+
+00:01:43.948 --> 00:01:47.819
+A menu appears in the admin menu only when it is enabled and
+
+00:01:47.819 --> 00:01:49.578
+holds at least one node.
+
+00:01:53.820 --> 00:01:56.734
+Edit Nodes opens the tree, which is empty.
+
+00:01:56.734 --> 00:01:59.831
+Add Node lists the kinds of node you can add.
+
+00:01:59.831 --> 00:02:03.474
+The Link Admin Node adds a link with a text and a Url,
+
+00:02:03.474 --> 00:02:04.810
+so let's add it.
+
+00:02:05.365 --> 00:02:10.064
+Link Text is the label in the admin menu, and Link Url is where it goes.
+
+00:02:10.064 --> 00:02:14.342
+An address without a leading slash is relative to the root of the
+
+00:02:14.342 --> 00:02:17.415
+admin site, so Media opens the media library.
+
+00:02:17.896 --> 00:02:22.551
+Target decides where the link opens, for example in a separate tab.
+
+00:02:22.551 --> 00:02:27.206
+A full web address, such as one for another site, is used as it is.
+
+00:02:27.746 --> 00:02:29.763
+Pick opens the list of icons.
+
+00:02:29.763 --> 00:02:32.759
+Type a word to search it, then select an icon.
+
+00:02:32.759 --> 00:02:36.216
+The icon shows beside the link text in the admin menu.
+
+00:02:36.692 --> 00:02:41.062
+Create adds the node to the tree, and Media Library appears in the
+
+00:02:41.062 --> 00:02:42.822
+admin menu on the left.
+
+00:02:42.822 --> 00:02:45.552
+Select it, and the media library opens.
+
+00:02:49.814 --> 00:02:53.394
+Add Node also offers the Placeholder Admin Node:
+
+00:02:53.394 --> 00:02:56.112
+a menu item that holds other nodes.
+
+00:02:56.112 --> 00:03:01.284
+It has no address of its own, only a Link Text, an icon and permissions.
+
+00:03:01.737 --> 00:03:05.507
+Let's name it Editorial, pick an icon, and select Create.
+
+00:03:05.507 --> 00:03:09.277
+The placeholder is added to the tree after Media Library.
+
+00:03:14.091 --> 00:03:16.029
+Nesting is done by dragging.
+
+00:03:16.029 --> 00:03:19.505
+Drag Media Library onto Editorial, and it moves inside.
+
+00:03:19.505 --> 00:03:21.841
+The tree shows it below its parent.
+
+00:03:22.358 --> 00:03:26.682
+In the admin menu, Editorial is a group with Media Library inside.
+
+00:03:26.682 --> 00:03:31.668
+A placeholder shows only when it holds at least one item that has an address.
+
+00:03:35.918 --> 00:03:40.098
+Content Types adds a link for each content type you select.
+
+00:03:40.098 --> 00:03:45.371
+Tick Blog Post and Page, or choose Show All Content Types to add every type.
+
+00:03:45.371 --> 00:03:46.978
+Then select Create.
+
+00:03:47.497 --> 00:03:51.657
+Lists adds a link for each content item of a type that holds a list.
+
+00:03:51.657 --> 00:03:55.872
+Choose the Blog content type, and clear Add parent menu item, so that
+
+00:03:55.872 --> 00:03:59.582
+the links to the blogs are not grouped under a parent entry.
+
+00:03:59.582 --> 00:04:00.987
+Then select Create.
+
+00:04:01.463 --> 00:04:04.789
+Drag both nodes onto Editorial, as before.
+
+00:04:04.789 --> 00:04:09.432
+Its group lists Media Library, Blog Post, Page and each blog.
+
+00:04:09.432 --> 00:04:14.283
+A blog added later gets its link without any change to the menu.
+
+00:04:18.505 --> 00:04:20.687
+A node can require permissions.
+
+00:04:20.687 --> 00:04:25.820
+In the Permissions field of Media Library, choose Manage Media, then select Save.
+
+00:04:25.820 --> 00:04:29.065
+Only users who have that permission see the item.
+
+00:04:29.524 --> 00:04:34.864
+Each menu also has its own permission, named View Admin Menu followed by the menu name.
+
+00:04:34.864 --> 00:04:38.539
+Search for it on a role's edit page and allow it, and that
+
+00:04:38.539 --> 00:04:41.583
+role sees the menu items its permissions allow.
+
+00:04:41.583 --> 00:04:44.454
+The Administrator role has every permission.
+
+00:04:44.911 --> 00:04:49.134
+To hide a whole menu, open Actions on the list and choose Disable.
+
+00:04:49.134 --> 00:04:52.711
+Its nodes leave the admin menu until you choose Enable.
+
+00:04:52.711 --> 00:04:56.171
+A node has the same choice, beside its Delete button.
+
+00:05:00.371 --> 00:05:05.471
+To use your menus on another site, add the Admin Menus step to a deployment plan.
+
+00:05:05.471 --> 00:05:07.464
+It exports every admin menu.
+
+00:05:07.464 --> 00:05:11.099
+A recipe can also create menus when a site is set up, as
+
+00:05:11.099 --> 00:05:12.681
+the Blog recipe does.
+
+00:05:14.681 --> 00:05:18.778
+Admin menus put the pages your team uses in one place, grouped your
+
+00:05:18.778 --> 00:05:21.022
+way, and shown to the right roles.
+
+00:05:21.022 --> 00:05:22.481
+Thanks for watching.
+
