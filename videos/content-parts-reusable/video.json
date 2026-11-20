@@ -23,7 +23,40 @@
     "Orchard Core",
     "Content Types"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What a content part is"
+    },
+    {
+      "time": "0:56",
+      "title": "Create a part"
+    },
+    {
+      "time": "1:27",
+      "title": "Set up the part"
+    },
+    {
+      "time": "2:04",
+      "title": "Add fields"
+    },
+    {
+      "time": "2:42",
+      "title": "Attach the part twice"
+    },
+    {
+      "time": "3:42",
+      "title": "Fill in a customer"
+    },
+    {
+      "time": "4:24",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Content Types",
@@ -50,5 +83,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentTypes"
-  }
+  },
+  "length": "4:36"
 }
