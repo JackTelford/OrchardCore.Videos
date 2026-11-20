@@ -83,5 +83,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Html"
   },
-  "length": "5:10"
+  "length": "5:10",
+  "youtube": {
+    "id": "3clJc4yscS0",
+    "url": "https://youtu.be/3clJc4yscS0",
+    "version": "v1"
+  }
 }
