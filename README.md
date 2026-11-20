@@ -23,7 +23,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Admin Settings: Tailor the Admin for Your Editors](videos/admin-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Admin Templates: Customize Admin Screens With Liquid](videos/admin-templates) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Create an Admin Theme: Restyle the Admin](videos/admin-theme-create) |  | not uploaded | OrchardCMS/OrchardCore |
-| [The Admin: Find Your Way Around Orchard Core](videos/admin-tour) |  | not uploaded | OrchardCMS/OrchardCore |
+| [The Admin: Find Your Way Around Orchard Core](videos/admin-tour) | 5:08 | [https://youtu.be/hQPLynQAPeY](https://youtu.be/hQPLynQAPeY) | OrchardCMS/OrchardCore |
 | [AI Quick Start: Build Orchard Core Sites With a Coding Agent](videos/ai-quick-start) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Alias Part: Give Content Items a Stable Name](videos/alias-part) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Audit Trail: See Who Changed What and When](videos/audit-trail-overview) |  | not uploaded | OrchardCMS/OrchardCore |
