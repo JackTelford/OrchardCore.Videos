@@ -23,7 +23,48 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:19",
+      "title": "Two ways to start"
+    },
+    {
+      "time": "0:52",
+      "title": "Install the templates"
+    },
+    {
+      "time": "1:32",
+      "title": "Create the project"
+    },
+    {
+      "time": "2:57",
+      "title": "Run the project"
+    },
+    {
+      "time": "3:26",
+      "title": "Set up the site"
+    },
+    {
+      "time": "4:34",
+      "title": "Sign in to the admin"
+    },
+    {
+      "time": "4:59",
+      "title": "Logging and site data"
+    },
+    {
+      "time": "5:58",
+      "title": "Where to go next"
+    },
+    {
+      "time": "6:25",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Code Generation Templates",
@@ -59,5 +100,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:getting-started"
-  }
+  },
+  "length": "6:36"
 }
