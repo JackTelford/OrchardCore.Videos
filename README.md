@@ -181,7 +181,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Permissions: Declare Them and Check Them in Your Module](videos/permissions-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Placement: Decide Where Parts and Fields Appear](videos/placement-files) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Placements Module: Edit Placement From the Admin](videos/placements-admin) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Publish Later and Archive Later: Schedule Your Content](videos/publish-later-archive-later) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Publish Later and Archive Later: Schedule Your Content](videos/publish-later-archive-later) | 4:31 | [https://youtu.be/_s-RUUfGr_o](https://youtu.be/_s-RUUfGr_o) | OrchardCMS/OrchardCore |
 | [Queries in Liquid, Razor and the API](videos/queries-in-templates-and-api) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Lucene and Elasticsearch Queries: Search From a Saved Query](videos/queries-lucene-elasticsearch) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Queries: Save and Reuse Search and Database Queries](videos/queries-overview) |  | not uploaded | OrchardCMS/OrchardCore |

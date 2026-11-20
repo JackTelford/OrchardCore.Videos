@@ -567,7 +567,7 @@
       "src/docs/reference/modules/PublishLater/README.md",
       "src/docs/reference/modules/ArchiveLater/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.3,
     "words": 642,
     "contentCommit": "",
@@ -575,9 +575,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/290",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "publish-later-archive-later/v1",
+    "youtubeId": "_s-RUUfGr_o",
+    "publishedOn": "2026-11-20",
     "notes": ""
   },
   {
