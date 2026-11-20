@@ -22,7 +22,36 @@
     "Orchard Core",
     "Content Fields"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "One field, many faces"
+    },
+    {
+      "time": "0:57",
+      "title": "Choose an editor"
+    },
+    {
+      "time": "2:09",
+      "title": "An editor with its own settings"
+    },
+    {
+      "time": "3:11",
+      "title": "Choose a display mode"
+    },
+    {
+      "time": "3:54",
+      "title": "What each field offers"
+    },
+    {
+      "time": "4:46",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +73,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentFields"
-  }
+  },
+  "length": "4:59"
 }
