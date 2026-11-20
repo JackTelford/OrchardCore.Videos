@@ -123,5 +123,10 @@
     "pullRequest": null,
     "feature": "guide:getting-started/starter-recipes"
   },
-  "length": "6:02"
+  "length": "6:02",
+  "youtube": {
+    "id": "VtnARneJ6GY",
+    "url": "https://youtu.be/VtnARneJ6GY",
+    "version": "v1"
+  }
 }
