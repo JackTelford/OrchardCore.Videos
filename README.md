@@ -20,7 +20,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Admin Dashboard: Build a Start Page for Your Editors](videos/admin-dashboard) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Add Admin Menu Entries to Your Module](videos/admin-menu-add) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Admin Menus: Add Your Own Links to the Admin Navigation](videos/admin-menus-custom) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Admin Settings: Tailor the Admin for Your Editors](videos/admin-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Admin Settings: Tailor the Admin for Your Editors](videos/admin-settings) | 3:34 | [https://youtu.be/_87tZ98HO58](https://youtu.be/_87tZ98HO58) | OrchardCMS/OrchardCore |
 | [Admin Templates: Customize Admin Screens With Liquid](videos/admin-templates) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Create an Admin Theme: Restyle the Admin](videos/admin-theme-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [The Admin: Find Your Way Around Orchard Core](videos/admin-tour) | 5:08 | [https://youtu.be/hQPLynQAPeY](https://youtu.be/hQPLynQAPeY) | OrchardCMS/OrchardCore |
