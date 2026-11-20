@@ -21,7 +21,32 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:11",
+      "title": "What setup does"
+    },
+    {
+      "time": "0:48",
+      "title": "The setup questions"
+    },
+    {
+      "time": "2:34",
+      "title": "Super user and Finish Setup"
+    },
+    {
+      "time": "3:31",
+      "title": "Sign in and check the result"
+    },
+    {
+      "time": "4:31",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -47,5 +72,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Setup"
-  }
+  },
+  "length": "4:41"
 }

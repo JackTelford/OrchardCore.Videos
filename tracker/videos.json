@@ -15,17 +15,17 @@
       "src/docs/reference/README.md",
       "src/docs/reference/glossary/README.md"
     ],
-    "status": "recorded",
+    "status": "published",
     "estimatedMinutes": 5.5,
     "words": 830,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
-    "pullRequest": "",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/267",
+    "release": "orchard-core-overview/v1",
+    "youtubeId": "2LDUXKVdbrU",
+    "publishedOn": "2026-11-19",
     "notes": ""
   },
   {
