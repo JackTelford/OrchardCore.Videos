@@ -1,0 +1,368 @@
+1
+00:00:01,000 --> 00:00:04,914
+Types, parts and fields do not have to be built in the admin.
+
+2
+00:00:04,914 --> 00:00:09,061
+A module can define them in code, so that every site that enables
+
+3
+00:00:09,061 --> 00:00:10,638
+the module gets them.
+
+4
+00:00:10,638 --> 00:00:14,610
+This video shows how, with a data migration and with a recipe.
+
+5
+00:00:19,210 --> 00:00:23,762
+Content definitions built in the admin live in the database of one site.
+
+6
+00:00:23,762 --> 00:00:27,731
+A module that needs a Product type, or an SEO part, cannot ask
+
+7
+00:00:27,731 --> 00:00:30,123
+every site to rebuild them by hand.
+
+8
+00:00:30,123 --> 00:00:33,800
+It defines them in code, and they travel with the module.
+
+9
+00:00:34,550 --> 00:00:35,985
+Two tools do this:
+
+10
+00:00:35,985 --> 00:00:40,711
+a data migration, which is a C# class that alters definitions through the
+
+11
+00:00:40,711 --> 00:00:46,333
+content definition manager, and a recipe, which is a JSON file that a migration can run.
+
+12
+00:00:46,333 --> 00:00:50,460
+The migration is versioned, so each site catches up on its own.
+
+13
+00:00:54,660 --> 00:00:57,436
+The SEO module is a complete example.
+
+14
+00:00:57,436 --> 00:01:02,666
+Its manifest lists the modules it depends on, among them Media, whose field
+
+15
+00:01:02,666 --> 00:01:07,380
+it uses, and Recipes Core Services, which provides IRecipeMigrator.
+
+16
+00:01:07,380 --> 00:01:12,610
+Orchard Core enables them with the module, and runs their migrations first.
+
+17
+00:01:13,360 --> 00:01:17,021
+Startup registers the migration with AddDataMigration.
+
+18
+00:01:17,021 --> 00:01:21,962
+Orchard Core does not discover migrations by itself, so a migration that is
+
+19
+00:01:21,962 --> 00:01:23,914
+not registered never runs.
+
+20
+00:01:23,914 --> 00:01:27,880
+Startup also registers the part class, with AddContentPart.
+
+21
+00:01:28,630 --> 00:01:31,642
+The migration inherits from DataMigration.
+
+22
+00:01:31,642 --> 00:01:40,742
+Dependency injection provides IContentDefinitionManager, which reads and writes definitions, and IRecipeMigrator, which runs a recipe file.
+
+23
+00:01:40,742 --> 00:01:43,440
+The steps of the migration come next.
+
+24
+00:01:47,640 --> 00:01:51,937
+AlterTypeDefinitionAsync takes the name of a type and a builder.
+
+25
+00:01:51,937 --> 00:01:56,725
+It creates the type when it does not exist, and changes it when it does.
+
+26
+00:01:56,725 --> 00:02:03,170
+The builder sets the settings of the type, such as Creatable, Draftable, Versionable and Securable.
+
+27
+00:02:03,920 --> 00:02:05,989
+WithPart attaches a part by name.
+
+28
+00:02:05,989 --> 00:02:09,968
+A second builder configures the part in the context of this type, for
+
+29
+00:02:09,968 --> 00:02:12,143
+example its position in the editor.
+
+30
+00:02:12,143 --> 00:02:15,750
+Names start with a letter and contain only letters and digits.
+
+31
+00:02:16,500 --> 00:02:20,715
+A type created without a display name is shown as its name with
+
+32
+00:02:20,715 --> 00:02:24,442
+a space before each capital letter, as the slide shows.
+
+33
+00:02:24,442 --> 00:02:27,130
+WithDisplayName chooses another label.
+
+34
+00:02:31,330 --> 00:02:34,788
+AlterPartDefinitionAsync creates or changes a part.
+
+35
+00:02:34,788 --> 00:02:38,792
+Attachable lets editors add the part to a type in the admin.
+
+36
+00:02:38,792 --> 00:02:40,552
+WithField adds a field:
+
+37
+00:02:40,552 --> 00:02:46,740
+OfType names its field type, WithDisplayName sets its label, and WithSettings gives it settings.
+
+38
+00:02:47,490 --> 00:02:49,512
+A type has no fields of its own.
+
+39
+00:02:49,512 --> 00:02:52,971
+Create a part with the name of the type, attach it, and add
+
+40
+00:02:52,971 --> 00:02:56,537
+the fields to that part; the admin lists them under the type.
+
+41
+00:02:56,537 --> 00:02:59,730
+An added field needs OfType, or saving the part fails.
+
+42
+00:03:03,930 --> 00:03:06,810
+When a definition is long, put it in a recipe.
+
+43
+00:03:06,810 --> 00:03:10,078
+The file goes in the Migrations folder of the module.
+
+44
+00:03:10,078 --> 00:03:15,450
+The migration runs it with IRecipeMigrator, passing the file name and the migration itself.
+
+45
+00:03:16,200 --> 00:03:18,753
+This recipe belongs to the SEO module.
+
+46
+00:03:18,753 --> 00:03:22,061
+Its first step lists ContentTypes and ContentParts:
+
+47
+00:03:22,061 --> 00:03:26,240
+the Social Meta Settings type, and the part that holds its fields.
+
+48
+00:03:26,240 --> 00:03:30,360
+A deployment plan can export definitions as these same two lists.
+
+49
+00:03:31,110 --> 00:03:33,622
+Give every type in a recipe a DisplayName.
+
+50
+00:03:33,622 --> 00:03:37,338
+The step applies the display name and the settings of a type only
+
+51
+00:03:37,338 --> 00:03:42,100
+when the DisplayName is present, while the parts of the type are attached either way.
+
+52
+00:03:42,850 --> 00:03:47,478
+The Content Types feature provides three recipe steps for definitions.
+
+53
+00:03:47,478 --> 00:03:54,115
+ContentDefinition adds and updates, ReplaceContentDefinition deletes each type and part it lists before
+
+54
+00:03:54,115 --> 00:03:58,622
+creating it again, and DeleteContentDefinition removes them by name.
+
+55
+00:03:58,622 --> 00:04:01,910
+Deleting a part also removes it from every type.
+
+56
+00:04:06,110 --> 00:04:11,160
+Each method returns the version it leaves the site at, and Orchard Core
+
+57
+00:04:11,160 --> 00:04:13,717
+stores that number for each site.
+
+58
+00:04:13,717 --> 00:04:19,292
+A site without one runs CreateAsync, and any other runs only the later methods.
+
+59
+00:04:19,292 --> 00:04:24,210
+Here CreateAsync returns 2, so a fresh tenant skips UpdateFrom1Async.
+
+60
+00:04:24,960 --> 00:04:29,881
+To change a definition later, add an UpdateFrom method for the current version,
+
+61
+00:04:29,881 --> 00:04:31,792
+and return the next number.
+
+62
+00:04:31,792 --> 00:04:36,945
+A site never runs a method twice, so editing a released one changes nothing for it.
+
+63
+00:04:36,945 --> 00:04:40,940
+CreateAsync can carry the change too, for fresh sites, as here.
+
+64
+00:04:41,690 --> 00:04:46,721
+An alteration starts from the stored definition and changes only what it names,
+
+65
+00:04:46,721 --> 00:04:48,260
+so it never removes.
+
+66
+00:04:48,260 --> 00:04:52,700
+RemovePart takes a part from a type, RemoveField takes a field from a
+
+67
+00:04:52,700 --> 00:04:58,560
+part, and DeleteTypeDefinitionAsync and DeletePartDefinitionAsync delete a definition itself.
+
+68
+00:05:02,860 --> 00:05:05,205
+Let's see the SEO migration run.
+
+69
+00:05:05,205 --> 00:05:09,031
+On the Features page, search for SEO, and select Enable.
+
+70
+00:05:09,031 --> 00:05:14,277
+Orchard Core reloads the tenant, and the migrations of the enabled features run
+
+71
+00:05:14,277 --> 00:05:15,820
+as it starts again.
+
+72
+00:05:16,318 --> 00:05:21,744
+Under Design, Content Definition, Content Parts, the SeoMeta part is listed, with the
+
+73
+00:05:21,744 --> 00:05:24,428
+description that the migration gave it.
+
+74
+00:05:24,895 --> 00:05:26,409
+Let's edit the part.
+
+75
+00:05:26,409 --> 00:05:31,475
+Its three Media fields, Default social image, Open graph image and Twitter image,
+
+76
+00:05:31,475 --> 00:05:36,075
+are the ones AlterPartDefinitionAsync added, with the same display names.
+
+77
+00:05:36,529 --> 00:05:40,076
+Under Content Types, Social Meta Settings comes from the recipe.
+
+78
+00:05:40,076 --> 00:05:41,089
+Let's edit it.
+
+79
+00:05:41,089 --> 00:05:44,738
+Its Fields come from the part named like the type, which the Parts
+
+80
+00:05:44,738 --> 00:05:47,829
+list marks as Contains the fields for the current type.
+
+81
+00:05:52,029 --> 00:05:56,652
+To use the values in code, write a class that inherits from ContentPart,
+
+82
+00:05:56,652 --> 00:05:58,194
+named like the part.
+
+83
+00:05:58,194 --> 00:06:02,758
+For each field, add a property with the name and the type of the field.
+
+84
+00:06:02,758 --> 00:06:06,789
+DefaultSocialImage is a MediaField, as the migration declares.
+
+85
+00:06:07,539 --> 00:06:10,061
+A part handler receives the typed part.
+
+86
+00:06:10,061 --> 00:06:13,648
+Anywhere else, GetOrCreate returns it from a content item.
+
+87
+00:06:13,648 --> 00:06:17,964
+Editors can change definitions in the admin, so a property can be null,
+
+88
+00:06:17,964 --> 00:06:20,599
+and your code should check it before use.
+
+89
+00:06:22,599 --> 00:06:26,108
+That is how a module carries its content definitions:
+
+90
+00:06:26,108 --> 00:06:30,630
+migrations in C#, recipes in JSON, and a version stored for each site.
+
+91
+00:06:30,630 --> 00:06:34,972
+Define them once, and every site that enables the module gets them.
+
+92
+00:06:34,972 --> 00:06:36,519
+Thanks for watching.
+
