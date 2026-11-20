@@ -22,7 +22,40 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What the settings are"
+    },
+    {
+      "time": "0:53",
+      "title": "Open the General settings"
+    },
+    {
+      "time": "1:20",
+      "title": "Site name, page title and base url"
+    },
+    {
+      "time": "2:14",
+      "title": "Default time zone"
+    },
+    {
+      "time": "2:59",
+      "title": "Page size"
+    },
+    {
+      "time": "4:07",
+      "title": "Resources and caches"
+    },
+    {
+      "time": "5:13",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +77,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Settings"
-  }
+  },
+  "length": "5:26"
 }
