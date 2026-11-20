@@ -21,7 +21,44 @@
     "Orchard Core",
     "Getting Started"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "Modules and features"
+    },
+    {
+      "time": "1:00",
+      "title": "The Features page"
+    },
+    {
+      "time": "1:41",
+      "title": "Search and filter"
+    },
+    {
+      "time": "2:38",
+      "title": "Enable a feature"
+    },
+    {
+      "time": "3:05",
+      "title": "Disable a feature"
+    },
+    {
+      "time": "3:30",
+      "title": "Several features at once"
+    },
+    {
+      "time": "4:06",
+      "title": "Permissions"
+    },
+    {
+      "time": "4:22",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -43,5 +80,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Features"
-  }
+  },
+  "length": "4:33"
 }
