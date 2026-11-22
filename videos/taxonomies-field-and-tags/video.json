@@ -23,7 +23,36 @@
     "Orchard Core",
     "Taxonomies"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "How the Taxonomy Field works"
+    },
+    {
+      "time": "1:10",
+      "title": "Add a Category field"
+    },
+    {
+      "time": "2:25",
+      "title": "Add a Tags field"
+    },
+    {
+      "time": "3:30",
+      "title": "Choose terms while editing"
+    },
+    {
+      "time": "4:32",
+      "title": "See the terms on the site"
+    },
+    {
+      "time": "4:52",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
