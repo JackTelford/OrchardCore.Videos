@@ -1348,7 +1348,7 @@
       "src/docs/reference/modules/Media.Slugify/README.md",
       "src/docs/topics/media/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.2,
     "words": 633,
     "contentCommit": "",
@@ -1356,9 +1356,9 @@
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/319",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "media-overview/v1",
+    "youtubeId": "rZ8-gT1Rcxg",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {

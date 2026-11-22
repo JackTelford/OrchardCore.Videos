@@ -151,7 +151,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Media in Templates: Image Resizing, Asset URLs and Tag Helpers](videos/media-in-templates) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Search Media Files: Index PDF, Office and Text Documents](videos/media-indexing) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Media Library: Upload, Organize and Reuse Files](videos/media-library-basics) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Media: Manage the Files of Your Site](videos/media-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media: Manage the Files of Your Site](videos/media-overview) | 4:15 | [https://youtu.be/rZ8-gT1Rcxg](https://youtu.be/rZ8-gT1Rcxg) | OrchardCMS/OrchardCore |
 | [Media Profiles: Resize and Crop Images Consistently](videos/media-profiles) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Secure Media: Control Who Sees Each Media Folder](videos/media-secure-media) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Media Settings: Options, Allowed Files and the Media API](videos/media-settings) |  | not uploaded | OrchardCMS/OrchardCore |
