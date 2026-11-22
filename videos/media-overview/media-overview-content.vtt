@@ -1,0 +1,32 @@
+WEBVTT
+
+00:00:03.238 --> 00:00:06.247
+Content uses the library through media fields.
+
+00:00:06.247 --> 00:00:11.108
+This is the form that creates an Article, and its Banner Image field is empty.
+
+00:00:11.607 --> 00:00:16.717
+Add media opens the media picker, which shows the same library in a dialog.
+
+00:00:17.178 --> 00:00:19.690
+Select a file and confirm the choice.
+
+00:00:19.690 --> 00:00:21.677
+The field shows a thumbnail.
+
+00:00:21.677 --> 00:00:25.768
+When you save, the content item stores the path of the file, not
+
+00:00:25.768 --> 00:00:26.878
+a copy of it.
+
+00:00:27.339 --> 00:00:31.494
+On the site, the About page uses this same file in its Banner Image field.
+
+00:00:31.494 --> 00:00:35.753
+The theme requests the image through the banner profile, so the header shows
+
+00:00:35.753 --> 00:00:37.519
+it cropped to a wide banner.
+

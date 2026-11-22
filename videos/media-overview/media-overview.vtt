@@ -1,0 +1,200 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.339
+Sites use pictures, documents, audio and video.
+
+00:00:04.339 --> 00:00:08.559
+The Media module gives your site one library for these files.
+
+00:00:08.559 --> 00:00:12.906
+In this video, we see where the module lives in the admin, tour
+
+00:00:12.906 --> 00:00:15.930
+the library, and attach a file to content.
+
+00:00:20.530 --> 00:00:25.112
+Without a shared place for files, the same picture is uploaded again for
+
+00:00:25.112 --> 00:00:26.934
+every page that needs it.
+
+00:00:26.934 --> 00:00:31.281
+Copies drift apart, nobody knows which one is current, and a file is
+
+00:00:31.281 --> 00:00:32.750
+hard to find later.
+
+00:00:33.500 --> 00:00:36.442
+The Media module gives the site one library.
+
+00:00:36.442 --> 00:00:40.915
+You upload a file once, keep it in a folder, and attach it to content.
+
+00:00:40.915 --> 00:00:44.976
+Content stores the path of the file, so every page that uses it
+
+00:00:44.976 --> 00:00:46.800
+points to the same place.
+
+00:00:47.550 --> 00:00:49.722
+A file travels in three moves.
+
+00:00:49.722 --> 00:00:53.826
+You upload it to the library, attach it to a content item, and
+
+00:00:53.826 --> 00:00:55.274
+the site shows it.
+
+00:00:55.274 --> 00:00:59.860
+A media profile, a preset that resizes or crops an image, applies when
+
+00:00:59.860 --> 00:01:01.610
+the theme asks for one.
+
+00:01:05.887 --> 00:01:08.955
+In the admin menu, Media has two pages.
+
+00:01:08.955 --> 00:01:14.477
+Library holds the files, and Profiles holds the presets that resize images.
+
+00:01:14.950 --> 00:01:18.134
+Profiles lists the media profiles of the site.
+
+00:01:18.134 --> 00:01:22.850
+This site has one, named banner, which crops an image to a wide banner.
+
+00:01:23.310 --> 00:01:25.851
+Under Settings, Media has two entries.
+
+00:01:25.851 --> 00:01:30.355
+Options shows the values the library runs with, such as the allowed file
+
+00:01:30.355 --> 00:01:35.495
+extensions and the maximum file size, and API chooses how the library authenticates
+
+00:01:35.495 --> 00:01:36.938
+with the media API.
+
+00:01:36.938 --> 00:01:38.960
+A separate video covers both.
+
+00:01:39.430 --> 00:01:42.440
+Tools, Features lists what a site can turn on.
+
+00:01:42.440 --> 00:01:46.781
+Searching for media narrows the list to the features that mention it.
+
+00:01:46.781 --> 00:01:49.270
+Media itself is enabled on this site.
+
+00:01:49.741 --> 00:01:54.545
+Media Slugify rewrites the names of the folders and files you create as
+
+00:01:54.545 --> 00:01:59.163
+lowercase words joined by dashes, which keeps their addresses clean.
+
+00:01:59.163 --> 00:02:03.781
+Secure Media adds permissions that restrict access to media folders.
+
+00:02:04.239 --> 00:02:09.118
+Other features make uploads resumable and keep every open library up to date
+
+00:02:09.118 --> 00:02:11.260
+when files and folders change.
+
+00:02:11.260 --> 00:02:16.020
+Azure Media Storage and Amazon Media Storage store the files in Azure Blob
+
+00:02:16.020 --> 00:02:19.769
+Storage or in Amazon S3, instead of on the server's disk.
+
+00:02:23.999 --> 00:02:28.128
+The Library page shows the folders of the site on the left, starting
+
+00:02:28.128 --> 00:02:30.359
+with the root folder, named Files.
+
+00:02:30.845 --> 00:02:34.859
+On the right, a table lists the files of the selected folder, with
+
+00:02:34.859 --> 00:02:38.595
+their name, the date they were last modified, and their size.
+
+00:02:39.052 --> 00:02:42.466
+The toolbar above the table has a button with a grid icon.
+
+00:02:42.466 --> 00:02:46.359
+It switches the table to a grid of thumbnails, so you can recognize
+
+00:02:46.359 --> 00:02:47.692
+images at a glance.
+
+00:02:48.150 --> 00:02:50.313
+Press it again to return to the table.
+
+00:02:50.313 --> 00:02:54.490
+The search box narrows the list to the files whose name contains what you type.
+
+00:02:54.963 --> 00:02:59.362
+Upload files adds files to the selected folder, and you can also drop
+
+00:02:59.362 --> 00:03:00.887
+files onto the page.
+
+00:03:00.887 --> 00:03:05.403
+A file needs an allowed extension and must not exceed the maximum size.
+
+00:03:05.870 --> 00:03:12.850
+The menu at the end of each row offers Rename, Move, Copy, View, Download and Delete.
+
+00:03:13.317 --> 00:03:15.449
+Each folder has a menu too.
+
+00:03:15.449 --> 00:03:20.295
+Create a subfolder adds a folder inside it, and Delete is offered for
+
+00:03:20.295 --> 00:03:22.557
+every folder except the root.
+
+00:03:26.795 --> 00:03:29.804
+Content uses the library through media fields.
+
+00:03:29.804 --> 00:03:34.665
+This is the form that creates an Article, and its Banner Image field is empty.
+
+00:03:35.164 --> 00:03:40.274
+Add media opens the media picker, which shows the same library in a dialog.
+
+00:03:40.735 --> 00:03:43.247
+Select a file and confirm the choice.
+
+00:03:43.247 --> 00:03:45.234
+The field shows a thumbnail.
+
+00:03:45.234 --> 00:03:49.325
+When you save, the content item stores the path of the file, not
+
+00:03:49.325 --> 00:03:50.435
+a copy of it.
+
+00:03:50.896 --> 00:03:55.051
+On the site, the About page uses this same file in its Banner Image field.
+
+00:03:55.051 --> 00:03:59.310
+The theme requests the image through the banner profile, so the header shows
+
+00:03:59.310 --> 00:04:01.076
+it cropped to a wide banner.
+
+00:04:03.076 --> 00:04:04.867
+That is the Media module:
+
+00:04:04.867 --> 00:04:09.315
+one library for the files of your site, attached to content, resized by
+
+00:04:09.315 --> 00:04:12.204
+profiles, and extended by optional features.
+
+00:04:12.204 --> 00:04:13.706
+Thanks for watching.
+
