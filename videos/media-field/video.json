@@ -23,7 +23,40 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "What a Media Field stores"
+    },
+    {
+      "time": "0:51",
+      "title": "Add a Media Field"
+    },
+    {
+      "time": "1:20",
+      "title": "The settings of the field"
+    },
+    {
+      "time": "2:13",
+      "title": "Attach media to a page"
+    },
+    {
+      "time": "3:39",
+      "title": "The Gallery editor"
+    },
+    {
+      "time": "4:20",
+      "title": "The Attached editor"
+    },
+    {
+      "time": "5:28",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Media Picker",
