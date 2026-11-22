@@ -1318,7 +1318,7 @@
       "src/docs/reference/modules/Taxonomies/README.md",
       "src/docs/guides/query-content-items-based-on-taxonomy/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.7,
     "words": 699,
     "contentCommit": "",
@@ -1326,9 +1326,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/318",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "taxonomies-query-content/v1",
+    "youtubeId": "hwRD0KJ3e4o",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {
