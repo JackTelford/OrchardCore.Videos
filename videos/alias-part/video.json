@@ -23,7 +23,48 @@
     "Orchard Core",
     "Content Parts"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Why an alias"
+    },
+    {
+      "time": "0:48",
+      "title": "Check the Alias feature"
+    },
+    {
+      "time": "1:05",
+      "title": "Add the part to a content type"
+    },
+    {
+      "time": "1:56",
+      "title": "Generate an alias"
+    },
+    {
+      "time": "2:46",
+      "title": "One alias, one content item"
+    },
+    {
+      "time": "3:04",
+      "title": "Generated and disabled"
+    },
+    {
+      "time": "3:32",
+      "title": "The rules of an alias"
+    },
+    {
+      "time": "3:52",
+      "title": "An alias at work"
+    },
+    {
+      "time": "4:17",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -45,5 +86,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Alias"
-  }
+  },
+  "length": "4:31"
 }
