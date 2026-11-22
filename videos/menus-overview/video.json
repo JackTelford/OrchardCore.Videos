@@ -22,7 +22,40 @@
     "Orchard Core",
     "Menus and Navigation"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "Menus and menu items"
+    },
+    {
+      "time": "1:08",
+      "title": "Open a menu"
+    },
+    {
+      "time": "1:53",
+      "title": "Add a menu item"
+    },
+    {
+      "time": "2:40",
+      "title": "Nest and reorder"
+    },
+    {
+      "time": "3:33",
+      "title": "Publish a menu"
+    },
+    {
+      "time": "4:09",
+      "title": "Create a menu"
+    },
+    {
+      "time": "4:50",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Menu",
@@ -49,5 +82,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Menu"
-  }
+  },
+  "length": "5:02"
 }
