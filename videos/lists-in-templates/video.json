@@ -25,7 +25,40 @@
     "Orchard Core",
     "Lists"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "How a list is stored"
+    },
+    {
+      "time": "0:45",
+      "title": "The ListPart template"
+    },
+    {
+      "time": "1:18",
+      "title": "The container filter"
+    },
+    {
+      "time": "1:46",
+      "title": "Items and counts"
+    },
+    {
+      "time": "2:16",
+      "title": "A template that uses them"
+    },
+    {
+      "time": "3:36",
+      "title": "In Razor"
+    },
+    {
+      "time": "4:02",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -55,5 +88,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Lists"
-  }
+  },
+  "length": "4:17"
 }
