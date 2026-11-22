@@ -83,5 +83,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Media.AmazonS3"
   },
-  "length": "6:14"
+  "length": "6:14",
+  "youtube": {
+    "id": "Y-kcW6Njz18",
+    "url": "https://youtu.be/Y-kcW6Njz18",
+    "version": "v1"
+  }
 }
