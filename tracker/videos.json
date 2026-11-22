@@ -923,14 +923,14 @@
     "docs": [
       "src/docs/reference/modules/Spatial/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 3.8,
     "words": 568,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/303",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
