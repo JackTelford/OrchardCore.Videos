@@ -155,7 +155,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Media Profiles: Resize and Crop Images Consistently](videos/media-profiles) | 5:02 | [https://youtu.be/kobmZSw_z_w](https://youtu.be/kobmZSw_z_w) | OrchardCMS/OrchardCore |
 | [Secure Media: Control Who Sees Each Media Folder](videos/media-secure-media) | 4:41 | [https://youtu.be/MD0S2Pc9Oo0](https://youtu.be/MD0S2Pc9Oo0) | OrchardCMS/OrchardCore |
 | [Media Settings: Options, Allowed Files and the Media API](videos/media-settings) | 4:56 | [https://youtu.be/8UT6FKmFhSo](https://youtu.be/8UT6FKmFhSo) | OrchardCMS/OrchardCore |
-| [Media Uploads: Slugified Names, Resumable Uploads and Live Updates](videos/media-uploads) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Media Uploads: Slugified Names, Resumable Uploads and Live Updates](videos/media-uploads) | 5:50 | [https://youtu.be/GPew_nIP47o](https://youtu.be/GPew_nIP47o) | OrchardCMS/OrchardCore |
 | [Menu Items: Links, Content Items, HTML and Permissions](videos/menus-item-types) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Menus: Build the Navigation of Your Site](videos/menus-overview) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Meta Login: Let Users Sign In With Facebook](videos/meta-login) |  | not uploaded | OrchardCMS/OrchardCore |
