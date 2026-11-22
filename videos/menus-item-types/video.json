@@ -22,7 +22,44 @@
     "Orchard Core",
     "Menus and Navigation"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "Three types of menu item"
+    },
+    {
+      "time": "1:02",
+      "title": "Add a menu item"
+    },
+    {
+      "time": "1:28",
+      "title": "Link Menu Item"
+    },
+    {
+      "time": "2:03",
+      "title": "Content Menu Item"
+    },
+    {
+      "time": "2:42",
+      "title": "Html Menu Item"
+    },
+    {
+      "time": "3:25",
+      "title": "Who sees an item"
+    },
+    {
+      "time": "3:55",
+      "title": "Publish and check"
+    },
+    {
+      "time": "4:36",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +81,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Menu"
-  }
+  },
+  "length": "4:51"
 }
