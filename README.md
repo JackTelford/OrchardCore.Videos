@@ -57,7 +57,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Content Localization: Translate Your Content Items](videos/content-localization) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Write a Content Part With a Display Driver](videos/content-part-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Parts: Create Reusable Groups of Fields](videos/content-parts-reusable) | 4:36 | [https://youtu.be/W1Kl3Lekkvg](https://youtu.be/W1Kl3Lekkvg) | OrchardCMS/OrchardCore |
-| [Content Picker and User Picker Fields: Relate Content Items](videos/content-picker-fields) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Content Picker and User Picker Fields: Relate Content Items](videos/content-picker-fields) | 5:47 | [https://youtu.be/6a2SSz2Ky60](https://youtu.be/6a2SSz2Ky60) | OrchardCMS/OrchardCore |
 | [Content Preview: See Your Changes Before You Publish](videos/content-preview) | 3:33 | [https://youtu.be/4pEEdtzAkXs](https://youtu.be/4pEEdtzAkXs) | OrchardCMS/OrchardCore |
 | [Content API: Read and Write Content Items Over HTTP](videos/content-rest-api) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Types: Create a Type and Add Parts and Fields](videos/content-types-create) | 5:18 | [https://youtu.be/7OLZiWph0vs](https://youtu.be/7OLZiWph0vs) | OrchardCMS/OrchardCore |

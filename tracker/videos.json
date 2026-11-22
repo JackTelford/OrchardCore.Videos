@@ -897,7 +897,7 @@
       "src/docs/reference/modules/Elasticsearch/README.md",
       "src/docs/topics/content-relationships/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 5.6,
     "words": 842,
     "contentCommit": "",
@@ -905,9 +905,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/302",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "content-picker-fields/v1",
+    "youtubeId": "6a2SSz2Ky60",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {
