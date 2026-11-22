@@ -233,7 +233,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Taxonomy Field: Categories and Tags on Your Content](videos/taxonomies-field-and-tags) | 5:06 | [https://youtu.be/Ev9Ie1MVrhM](https://youtu.be/Ev9Ie1MVrhM) | OrchardCMS/OrchardCore |
 | [Taxonomies: Categorize Your Content](videos/taxonomies-overview) | 4:36 | [https://youtu.be/ZamtKKu53Lo](https://youtu.be/ZamtKKu53Lo) | OrchardCMS/OrchardCore |
 | [Taxonomies in Code: Query Content Items by Term](videos/taxonomies-query-content) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Taxonomies: Term Pages That List Their Content](videos/taxonomies-term-pages) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies: Term Pages That List Their Content](videos/taxonomies-term-pages) | 4:01 | [https://youtu.be/NmtoLt7F65o](https://youtu.be/NmtoLt7F65o) | OrchardCMS/OrchardCore |
 | [Templates: Override Shapes From the Admin With Liquid](videos/templates-override-shapes) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Templates: Preview a Template on Any Page Before You Save It](videos/templates-preview) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Tenants: Create a Tenant and Set It Up](videos/tenants-create-and-setup) |  | not uploaded | OrchardCMS/OrchardCore |
