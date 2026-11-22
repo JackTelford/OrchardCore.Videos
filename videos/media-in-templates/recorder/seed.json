@@ -1,0 +1,46 @@
+{
+  "steps": [
+    {
+      "name": "MediaProfiles",
+      "MediaProfiles": {
+        "thumbnail": {
+          "Hint": "A square thumbnail",
+          "Width": 160,
+          "Height": 160,
+          "Mode": 2,
+          "Format": 0,
+          "Quality": 100
+        }
+      }
+    },
+    {
+      "name": "Templates",
+      "Templates": {
+        "Content__Slug__renditions": {
+          "Description": "One image through resize_url with different arguments",
+          "Content": "{% assign path = 'home-bg.jpg' %}\n<style>\n  .renditions { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px; padding: 110px 0 40px; }\n  .renditions figure { margin: 0; }\n  .renditions img { display: block; max-width: 100%; }\n  .renditions figcaption { margin-top: 8px; font-weight: 700; }\n  .renditions code { display: block; font-size: 12px; overflow-wrap: anywhere; }\n</style>\n<div class=\"renditions\">\n  <figure>\n    {% assign url = path | asset_url | resize_url: width: 200, height: 200 %}\n    <img src=\"{{ url }}\" alt=\"home-bg.jpg, max\" />\n    <figcaption>max</figcaption>\n    <code>{{ url | split: '&token=' | first }}</code>\n  </figure>\n  <figure>\n    {% assign url = path | asset_url | resize_url: width: 200, height: 200, mode: 'crop' %}\n    <img src=\"{{ url }}\" alt=\"home-bg.jpg, crop\" />\n    <figcaption>crop</figcaption>\n    <code>{{ url | split: '&token=' | first }}</code>\n  </figure>\n  <figure>\n    {% assign url = path | asset_url | resize_url: width: 200, height: 200, mode: 'pad', bgcolor: '404041' %}\n    <img src=\"{{ url }}\" alt=\"home-bg.jpg, pad\" />\n    <figcaption>pad</figcaption>\n    <code>{{ url | split: '&token=' | first }}</code>\n  </figure>\n  <figure>\n    {% assign url = path | asset_url | resize_url: width: 200, height: 200, mode: 'stretch' %}\n    <img src=\"{{ url }}\" alt=\"home-bg.jpg, stretch\" />\n    <figcaption>stretch</figcaption>\n    <code>{{ url | split: '&token=' | first }}</code>\n  </figure>\n  <figure>\n    {% assign url = path | asset_url | resize_url: profile: 'thumbnail' %}\n    <img src=\"{{ url }}\" alt=\"home-bg.jpg, profile: thumbnail\" />\n    <figcaption>profile: thumbnail</figcaption>\n    <code>{{ url | split: '&token=' | first }}</code>\n  </figure>\n</div>\n"
+        }
+      }
+    },
+    {
+      "name": "content",
+      "data": [
+        {
+          "ContentItemId": "4q8m2zk7tw5v9r3xhd6c1bnrdp",
+          "ContentType": "Page",
+          "DisplayText": "Renditions",
+          "Latest": true,
+          "Published": true,
+          "Author": "admin",
+          "TitlePart": {
+            "Title": "Renditions"
+          },
+          "AutoroutePart": {
+            "Path": "renditions",
+            "SetHomepage": false
+          }
+        }
+      ]
+    }
+  ]
+}
