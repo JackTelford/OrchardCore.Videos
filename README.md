@@ -225,7 +225,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Sitemaps for Localized Content and Razor Pages](videos/sitemaps-localized-and-razor-pages) |  | not uploaded | OrchardCMS/OrchardCore |
 | [SMS: Configure a Provider and Send a Test Message](videos/sms-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Source Generators: Less Boilerplate in Your Modules](videos/source-generators) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Geo Point Field: Add Locations to Content Items](videos/spatial-geo-point-field) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Geo Point Field: Add Locations to Content Items](videos/spatial-geo-point-field) | 4:03 | [https://youtu.be/NyJDG0sIVs8](https://youtu.be/NyJDG0sIVs8) | OrchardCMS/OrchardCore |
 | [Content Fields Indexing: Query Fields With SQL](videos/sql-indexing-content-fields) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Starter Recipes: Choose How Your Site Starts](videos/starter-recipes) | 6:02 | [https://youtu.be/VtnARneJ6GY](https://youtu.be/VtnARneJ6GY) | OrchardCMS/OrchardCore |
 | [Taxonomies: Filter the Content Items List by Term](videos/taxonomies-contents-list-filters) |  | not uploaded | OrchardCMS/OrchardCore |
