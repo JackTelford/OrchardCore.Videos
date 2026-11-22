@@ -1,0 +1,23 @@
+WEBVTT
+
+00:00:03.206 --> 00:00:06.254
+The Taxonomies module has two features.
+
+00:00:06.254 --> 00:00:12.756
+Let's open Tools, then Features, and type taxonomies in the Search box to filter the list.
+
+00:00:13.213 --> 00:00:17.596
+Taxonomies is the core feature, in the Content Management category.
+
+00:00:17.596 --> 00:00:22.339
+It provides the Taxonomy content type, the terms, and the Taxonomy Field.
+
+00:00:22.339 --> 00:00:27.563
+A site set up with the Blog recipe has it enabled; otherwise, you enable it here.
+
+00:00:28.018 --> 00:00:31.547
+Taxonomies Contents List Filters is optional.
+
+00:00:31.547 --> 00:00:37.498
+It adds filters by term to the Content Items list, and it depends on Taxonomies.
+

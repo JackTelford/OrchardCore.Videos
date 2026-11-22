@@ -1,0 +1,185 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.848
+Posts about travel, products in a catalog:
+
+00:00:03.848 --> 00:00:06.400
+almost every site groups its content.
+
+00:00:06.400 --> 00:00:11.741
+The Taxonomies module gives you managed categories and tags, linked to your content.
+
+00:00:11.741 --> 00:00:17.200
+This video covers how they are organized, chosen in the editor, and shown on the site.
+
+00:00:21.800 --> 00:00:26.063
+Without a shared list, every editor types categories by hand.
+
+00:00:26.063 --> 00:00:29.626
+One writes Travel, another Travels, a third Trips.
+
+00:00:29.626 --> 00:00:35.670
+Visitors can't follow a topic across the site, and one topic ends up under several names.
+
+00:00:36.420 --> 00:00:38.904
+A taxonomy is a managed vocabulary.
+
+00:00:38.904 --> 00:00:43.327
+It holds terms, like Travel or Food, and the terms are organized as
+
+00:00:43.327 --> 00:00:46.720
+a hierarchy, with child terms under a parent term.
+
+00:00:47.470 --> 00:00:50.835
+A Taxonomy Field attaches terms to your content items.
+
+00:00:50.835 --> 00:00:55.042
+Editors pick terms from the list instead of typing them, and the site
+
+00:00:55.042 --> 00:00:57.790
+can show every item that belongs to a term.
+
+00:01:01.996 --> 00:01:05.044
+The Taxonomies module has two features.
+
+00:01:05.044 --> 00:01:11.546
+Let's open Tools, then Features, and type taxonomies in the Search box to filter the list.
+
+00:01:12.003 --> 00:01:16.386
+Taxonomies is the core feature, in the Content Management category.
+
+00:01:16.386 --> 00:01:21.129
+It provides the Taxonomy content type, the terms, and the Taxonomy Field.
+
+00:01:21.129 --> 00:01:26.353
+A site set up with the Blog recipe has it enabled; otherwise, you enable it here.
+
+00:01:26.808 --> 00:01:30.337
+Taxonomies Contents List Filters is optional.
+
+00:01:30.337 --> 00:01:36.288
+It adds filters by term to the Content Items list, and it depends on Taxonomies.
+
+00:01:40.488 --> 00:01:44.509
+A taxonomy is a content item of the Taxonomy type, so it is
+
+00:01:44.509 --> 00:01:47.107
+listed under Content, Content Items.
+
+00:01:47.107 --> 00:01:53.108
+Filtered by that type, the list shows the two taxonomies of this site, Categories and Tags.
+
+00:01:53.563 --> 00:01:55.235
+Let's edit Categories.
+
+00:01:55.235 --> 00:01:59.655
+Term Content Type sets the content type of the terms, here Category.
+
+00:01:59.655 --> 00:02:02.463
+Each term is a content item of that type.
+
+00:02:02.932 --> 00:02:05.614
+Below it is the hierarchy of terms.
+
+00:02:05.614 --> 00:02:11.436
+Travel is a term, and Food is a term with two child terms, Recipes and Restaurants.
+
+00:02:11.436 --> 00:02:14.642
+Each row has Edit, Add, and Delete buttons.
+
+00:02:15.155 --> 00:02:18.190
+Add Category creates a term at the top level.
+
+00:02:18.190 --> 00:02:21.761
+The Add button of a row creates a child term under it.
+
+00:02:21.761 --> 00:02:27.535
+The terms are stored inside the taxonomy, so you publish the taxonomy to publish its terms.
+
+00:02:31.783 --> 00:02:34.472
+Content is categorized with fields.
+
+00:02:34.472 --> 00:02:36.374
+Let's edit a Blog Post.
+
+00:02:36.374 --> 00:02:40.309
+Below the body, it has two fields that use taxonomies:
+
+00:02:40.309 --> 00:02:41.883
+Tags and Category.
+
+00:02:42.336 --> 00:02:46.919
+Category accepts one term, and only a term without children.
+
+00:02:46.919 --> 00:02:48.655
+Travel is selected.
+
+00:02:48.655 --> 00:02:54.696
+Food is a parent, so it is disabled, while Recipes and Restaurants can be chosen.
+
+00:02:55.190 --> 00:02:57.085
+Tags accepts several terms.
+
+00:02:57.085 --> 00:03:01.735
+Clicking the box lists the existing tags, and you select the ones you want.
+
+00:03:01.735 --> 00:03:06.040
+If you type a name that does not exist, pressing Enter creates a tag.
+
+00:03:06.500 --> 00:03:10.880
+When the post is published, the terms you selected are saved with it.
+
+00:03:10.880 --> 00:03:15.260
+Because editors choose from the list, every post uses the same names.
+
+00:03:19.496 --> 00:03:25.142
+On the site, the theme shows the category and the tags of each post as badges.
+
+00:03:25.142 --> 00:03:27.966
+Each badge is a link to a term page.
+
+00:03:28.428 --> 00:03:32.815
+The Travel page lists the content categorized with Travel, newest first.
+
+00:03:32.815 --> 00:03:35.458
+Here it shows the two posts about travel.
+
+00:03:35.910 --> 00:03:40.937
+Term pages are available when a taxonomy has Route contained items checked in
+
+00:03:40.937 --> 00:03:44.207
+its editor, and the theme decides how they look.
+
+00:03:44.207 --> 00:03:46.690
+A separate video covers term pages.
+
+00:03:50.890 --> 00:03:56.142
+You add a Taxonomy Field to a content part under Design, Content Definition.
+
+00:03:56.142 --> 00:04:01.650
+Its settings choose the taxonomy, and include Required, Unique, and Leaves only.
+
+00:04:01.650 --> 00:04:06.390
+The Tags editor has an Open setting for creating tags while editing.
+
+00:04:07.140 --> 00:04:14.144
+With Taxonomies Contents List Filters enabled, Settings, Taxonomy Filters chooses the taxonomies that
+
+00:04:14.144 --> 00:04:16.500
+filter the Content Items list.
+
+00:04:17.250 --> 00:04:22.098
+The Manage taxonomies permission controls who can add, edit, and delete terms.
+
+00:04:22.098 --> 00:04:24.810
+The Administrator role has it by default.
+
+00:04:26.810 --> 00:04:28.191
+That's Taxonomies:
+
+00:04:28.191 --> 00:04:33.254
+managed categories and tags for your content, with terms organized as a hierarchy.
+
+00:04:33.254 --> 00:04:34.750
+Thanks for watching.
+
