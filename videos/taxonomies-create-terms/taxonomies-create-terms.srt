@@ -1,0 +1,328 @@
+1
+00:00:01,000 --> 00:00:05,289
+In Orchard Core, a taxonomy is a managed list of terms that you
+
+2
+00:00:05,289 --> 00:00:07,278
+use to categorize content.
+
+3
+00:00:07,278 --> 00:00:11,567
+In this video, you create a taxonomy, add terms to it, edit and
+
+4
+00:00:11,567 --> 00:00:15,980
+delete them, arrange them in a hierarchy, and publish the result.
+
+5
+00:00:20,580 --> 00:00:25,576
+A taxonomy is a content item that holds a list of terms, such as Topics.
+
+6
+00:00:25,576 --> 00:00:30,123
+A term can contain other terms, which gives the list a hierarchy.
+
+7
+00:00:30,123 --> 00:00:34,670
+Every term is a content item of one content type that you choose.
+
+8
+00:00:35,420 --> 00:00:38,999
+The taxonomy that you build in this video is called Topics.
+
+9
+00:00:38,999 --> 00:00:42,963
+It has two terms at the top level, Gardening and Cooking, and each
+
+10
+00:00:42,963 --> 00:00:45,000
+of them holds terms of its own.
+
+11
+00:00:45,750 --> 00:00:50,237
+The terms are stored inside the taxonomy, and are not listed as content
+
+12
+00:00:50,237 --> 00:00:51,694
+items of their own.
+
+13
+00:00:51,694 --> 00:00:56,007
+Adding, editing, and deleting terms changes a draft of the taxonomy.
+
+14
+00:00:56,007 --> 00:00:59,620
+The published taxonomy changes only when you publish it.
+
+15
+00:01:00,370 --> 00:01:05,169
+Before you start, enable the Taxonomies feature in Tools, Features.
+
+16
+00:01:05,169 --> 00:01:12,270
+Adding, editing, and deleting terms needs the Manage taxonomies permission, which administrators have.
+
+17
+00:01:13,020 --> 00:01:14,972
+The terms need a content type.
+
+18
+00:01:14,972 --> 00:01:18,225
+This site has one named Topic, which has only a title.
+
+19
+00:01:18,225 --> 00:01:21,370
+A separate video shows how to create a content type.
+
+20
+00:01:25,620 --> 00:01:32,384
+Content, Content Items lists the content of your site, and its New button creates content items.
+
+21
+00:01:32,384 --> 00:01:34,771
+Select New, and then Taxonomy.
+
+22
+00:01:34,771 --> 00:01:39,280
+A taxonomy is a content item, so you create it like any other.
+
+23
+00:01:39,806 --> 00:01:43,253
+The editor has a title, an alias, and a permalink.
+
+24
+00:01:43,253 --> 00:01:45,530
+Let's type Topics as the title.
+
+25
+00:01:45,530 --> 00:01:48,976
+The alias and the permalink are generated from it.
+
+26
+00:01:49,455 --> 00:01:54,025
+Term Content Type sets the content type of the terms, and it is required.
+
+27
+00:01:54,025 --> 00:01:59,579
+The list leaves out special-purpose content types that have a stereotype, such as widgets.
+
+28
+00:01:59,579 --> 00:02:01,025
+Let's select Topic.
+
+29
+00:02:01,507 --> 00:02:02,832
+Select Publish.
+
+30
+00:02:02,832 --> 00:02:07,500
+The taxonomy is saved, and Topics appears in the list as a Taxonomy.
+
+31
+00:02:07,500 --> 00:02:11,537
+A taxonomy has to be saved before you can add terms to it.
+
+32
+00:02:15,739 --> 00:02:17,697
+Open Topics from the list.
+
+33
+00:02:17,697 --> 00:02:22,469
+Since the taxonomy is saved, its editor shows an Add Topic button, named
+
+34
+00:02:22,469 --> 00:02:24,549
+after the term content type.
+
+35
+00:02:25,026 --> 00:02:26,475
+Select Add Topic.
+
+36
+00:02:26,475 --> 00:02:31,578
+The editor of a Topic asks for a title, so type Cooking and select Publish.
+
+37
+00:02:31,578 --> 00:02:36,806
+That adds the term to a draft of the taxonomy, not to the published taxonomy.
+
+38
+00:02:37,284 --> 00:02:41,835
+The term appears in the list, with an Edit, an Add, and a Delete button.
+
+39
+00:02:41,835 --> 00:02:45,161
+Add a second term at the top level in the same way:
+
+40
+00:02:45,161 --> 00:02:46,094
+Gardening.
+
+41
+00:02:46,562 --> 00:02:50,759
+To put a term inside another term, select the Add button on its row.
+
+42
+00:02:50,759 --> 00:02:52,687
+Let's add Baking to Cooking.
+
+43
+00:02:52,687 --> 00:02:55,182
+The term is indented below its parent.
+
+44
+00:02:55,657 --> 00:02:58,810
+Add Grilling and Roasting to Cooking in the same way.
+
+45
+00:02:58,810 --> 00:03:02,819
+Each term is placed after the terms that its parent already holds, so
+
+46
+00:03:02,819 --> 00:03:06,027
+the list follows the order in which you add the terms.
+
+47
+00:03:06,490 --> 00:03:10,132
+Select the Add button on the Gardening row to add Vegetables.
+
+48
+00:03:10,132 --> 00:03:13,936
+Then select Add Topic to add Herbs at the top level, even though
+
+49
+00:03:13,936 --> 00:03:15,675
+it belongs with Gardening.
+
+50
+00:03:15,675 --> 00:03:17,360
+A later chapter moves it.
+
+51
+00:03:21,598 --> 00:03:25,513
+In the Topics editor, select Edit on a row to change a term.
+
+52
+00:03:25,513 --> 00:03:29,072
+Let's rename Grilling to Barbecue, and select Publish.
+
+53
+00:03:29,072 --> 00:03:31,918
+The term keeps its place in the hierarchy.
+
+54
+00:03:32,381 --> 00:03:35,396
+To remove a term, select Delete on its row.
+
+55
+00:03:35,396 --> 00:03:37,118
+Let's delete Roasting.
+
+56
+00:03:37,118 --> 00:03:39,271
+A dialog asks you to confirm.
+
+57
+00:03:39,723 --> 00:03:40,638
+Select Ok.
+
+58
+00:03:40,638 --> 00:03:43,838
+A message says Taxonomy item deleted successfully.
+
+59
+00:03:43,838 --> 00:03:48,239
+Deleting a term also deletes the terms inside it, so check the children
+
+60
+00:03:48,239 --> 00:03:50,353
+of a term before you delete it.
+
+61
+00:03:54,549 --> 00:03:58,701
+In the Topics editor, drag a term by its row to change the order.
+
+62
+00:03:58,701 --> 00:04:01,099
+Let's drag Gardening above Cooking.
+
+63
+00:04:01,099 --> 00:04:03,789
+The terms inside Gardening move with it.
+
+64
+00:04:04,564 --> 00:04:08,538
+Dragging a term to the right moves it a level deeper, and dragging
+
+65
+00:04:08,538 --> 00:04:10,800
+it to the left moves it a level up.
+
+66
+00:04:10,800 --> 00:04:16,154
+Let's drag Herbs below Vegetables, and a little to the right, to place it inside Gardening.
+
+67
+00:04:16,643 --> 00:04:19,518
+The order is stored when you save the taxonomy.
+
+68
+00:04:19,518 --> 00:04:22,610
+Until then, the page warns you before you leave it.
+
+69
+00:04:22,610 --> 00:04:25,593
+Select Save Draft to keep the order in the draft.
+
+70
+00:04:29,790 --> 00:04:32,745
+Every change to the terms is kept in a draft.
+
+71
+00:04:32,745 --> 00:04:37,091
+In the Content Items list, Topics shows a Published badge and a Draft
+
+72
+00:04:37,091 --> 00:04:39,410
+badge, since it has both versions.
+
+73
+00:04:39,864 --> 00:04:40,824
+Open Topics.
+
+74
+00:04:40,824 --> 00:04:44,822
+The terms are in the order that you saved, but the published taxonomy
+
+75
+00:04:44,822 --> 00:04:46,634
+does not hold these changes.
+
+76
+00:04:47,092 --> 00:04:48,226
+Select Publish.
+
+77
+00:04:48,226 --> 00:04:52,657
+The message says Your Taxonomy has been published, and the list shows Topics
+
+78
+00:04:52,657 --> 00:04:54,602
+with only the Published badge.
+
+79
+00:04:56,602 --> 00:04:58,633
+That's how a taxonomy works:
+
+80
+00:04:58,633 --> 00:05:02,936
+it is a content item whose terms you add, edit, delete, arrange in
+
+81
+00:05:02,936 --> 00:05:04,788
+a hierarchy, and publish.
+
+82
+00:05:04,788 --> 00:05:06,342
+Thanks for watching.
+
