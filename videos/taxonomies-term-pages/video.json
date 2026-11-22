@@ -23,7 +23,36 @@
     "Orchard Core",
     "Taxonomies"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What a term page is"
+    },
+    {
+      "time": "0:51",
+      "title": "Browse by term"
+    },
+    {
+      "time": "1:50",
+      "title": "Give terms their pages"
+    },
+    {
+      "time": "2:29",
+      "title": "Control the page size"
+    },
+    {
+      "time": "3:03",
+      "title": "What a term page needs"
+    },
+    {
+      "time": "3:51",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -45,5 +74,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Taxonomies"
-  }
+  },
+  "length": "4:01"
 }
