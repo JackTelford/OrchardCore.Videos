@@ -22,7 +22,44 @@
     "Orchard Core",
     "Routing"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "How a pattern works"
+    },
+    {
+      "time": "1:00",
+      "title": "What a pattern can use"
+    },
+    {
+      "time": "1:46",
+      "title": "Edit a pattern"
+    },
+    {
+      "time": "2:37",
+      "title": "Generated paths"
+    },
+    {
+      "time": "3:31",
+      "title": "A pattern with a container"
+    },
+    {
+      "time": "4:10",
+      "title": "Patterns in code"
+    },
+    {
+      "time": "4:38",
+      "title": "Find content by its URL"
+    },
+    {
+      "time": "5:08",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +81,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Autoroute"
-  }
+  },
+  "length": "5:23"
 }
