@@ -1212,7 +1212,7 @@
     "docs": [
       "src/docs/reference/modules/Taxonomies/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 5.0,
     "words": 757,
     "contentCommit": "",
@@ -1220,9 +1220,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/314",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "taxonomies-create-terms/v1",
+    "youtubeId": "3VE0pO491kw",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {

@@ -229,7 +229,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Content Fields Indexing: Query Fields With SQL](videos/sql-indexing-content-fields) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Starter Recipes: Choose How Your Site Starts](videos/starter-recipes) | 6:02 | [https://youtu.be/VtnARneJ6GY](https://youtu.be/VtnARneJ6GY) | OrchardCMS/OrchardCore |
 | [Taxonomies: Filter the Content Items List by Term](videos/taxonomies-contents-list-filters) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Taxonomies: Create a Taxonomy and Organize Its Terms](videos/taxonomies-create-terms) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies: Create a Taxonomy and Organize Its Terms](videos/taxonomies-create-terms) | 5:08 | [https://youtu.be/3VE0pO491kw](https://youtu.be/3VE0pO491kw) | OrchardCMS/OrchardCore |
 | [Taxonomy Field: Categories and Tags on Your Content](videos/taxonomies-field-and-tags) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Taxonomies: Categorize Your Content](videos/taxonomies-overview) | 4:36 | [https://youtu.be/ZamtKKu53Lo](https://youtu.be/ZamtKKu53Lo) | OrchardCMS/OrchardCore |
 | [Taxonomies in Code: Query Content Items by Term](videos/taxonomies-query-content) |  | not uploaded | OrchardCMS/OrchardCore |
