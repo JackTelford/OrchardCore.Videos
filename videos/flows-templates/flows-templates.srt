@@ -1,0 +1,264 @@
+1
+00:00:01,000 --> 00:00:05,669
+The Flow Part and the Bag Part display content items inside another content item.
+
+2
+00:00:05,669 --> 00:00:07,762
+This video shows how they render:
+
+3
+00:00:07,762 --> 00:00:12,538
+the shapes they produce, the templates and alternates that change their markup, and
+
+4
+00:00:12,538 --> 00:00:15,060
+the templates of the widgets inside them.
+
+5
+00:00:19,660 --> 00:00:22,631
+The Flow Part renders a shape named FlowPart.
+
+6
+00:00:22,631 --> 00:00:25,253
+Its template loops through the widgets.
+
+7
+00:00:25,253 --> 00:00:28,866
+It skips any item whose type is not a widget, and, for a
+
+8
+00:00:28,866 --> 00:00:33,410
+securable type, any widget that the current user is not allowed to view.
+
+9
+00:00:34,160 --> 00:00:38,180
+Each remaining widget is built with the display type of the item that
+
+10
+00:00:38,180 --> 00:00:40,163
+holds the Flow, such as Detail.
+
+11
+00:00:40,163 --> 00:00:44,130
+Its shape is Widget, and one of its alternates, a more specific name
+
+12
+00:00:44,130 --> 00:00:48,150
+that a template can target, is named after the widget's content type.
+
+13
+00:00:48,900 --> 00:00:53,917
+When a widget has Flow metadata, the template adds CSS classes to its
+
+14
+00:00:53,917 --> 00:01:00,540
+shape for the type, the alignment and the size, such as widget-paragraph and widget-size-100.
+
+15
+00:01:04,740 --> 00:01:11,333
+To change how Paragraph widgets render, add Widget-Paragraph.liquid to the Views folder of your theme.
+
+16
+00:01:11,333 --> 00:01:14,080
+This is the template of The Blog Theme:
+
+17
+00:01:14,080 --> 00:01:19,880
+an article element whose class attribute is Model.Classes, around the rendered paragraph.
+
+18
+00:01:20,630 --> 00:01:25,011
+In a file name, a dash stands for two underscores in the shape type.
+
+19
+00:01:25,011 --> 00:01:30,634
+A dot before the extension adds a display type, so Widget-Paragraph.Summary.liquid is the
+
+20
+00:01:30,634 --> 00:01:33,180
+Summary version of the same template.
+
+21
+00:01:33,930 --> 00:01:37,091
+A widget can have these alignment and size classes.
+
+22
+00:01:37,091 --> 00:01:41,750
+Print Model.Classes in your own template to keep them, as The Blog Theme does.
+
+23
+00:01:45,950 --> 00:01:48,584
+The Bag Part renders a shape named BagPart.
+
+24
+00:01:48,584 --> 00:01:52,830
+Its template builds each contained item with the Display Type of the part
+
+25
+00:01:52,830 --> 00:01:56,270
+settings, and with Summary when that setting has no value.
+
+26
+00:01:57,883 --> 00:02:01,089
+This is the editor of the Landing Page content type.
+
+27
+00:02:01,089 --> 00:02:04,627
+A Bag Part can be named, so one type can hold several, and
+
+28
+00:02:04,627 --> 00:02:07,723
+Landing Page has named Bag Parts such as Services.
+
+29
+00:02:08,176 --> 00:02:10,825
+Edit the Services part to see its settings.
+
+30
+00:02:10,825 --> 00:02:15,205
+Display Type has the placeholder Summary, and its hint says that Summary is
+
+31
+00:02:15,205 --> 00:02:18,016
+the default for rendering the contained items.
+
+32
+00:02:19,616 --> 00:02:22,983
+The shape of each item depends on its content type.
+
+33
+00:02:22,983 --> 00:02:27,649
+A Paragraph widget has the Widget stereotype, so its shape is Widget, and
+
+34
+00:02:27,649 --> 00:02:31,606
+with Summary its template is Widget-Paragraph.Summary.liquid.
+
+35
+00:02:31,606 --> 00:02:35,386
+A Service item has no stereotype, so its shape is Content.
+
+36
+00:02:36,136 --> 00:02:41,439
+Widget-Paragraph.liquid targets the Detail display type, so it does not apply to a
+
+37
+00:02:41,439 --> 00:02:43,609
+Bag Part that renders Summary.
+
+38
+00:02:43,609 --> 00:02:47,706
+Name the template for the display type that the Bag Part uses.
+
+39
+00:02:51,906 --> 00:02:54,511
+The part shapes have alternates too.
+
+40
+00:02:54,511 --> 00:03:03,195
+LandingPage-BagPart.liquid targets the Bag Parts of the type LandingPage, and LandingPage-Services.liquid only the one named Services.
+
+41
+00:03:03,195 --> 00:03:05,366
+Flow Parts work the same way.
+
+42
+00:03:06,116 --> 00:03:10,800
+By default, a Flow Part displays only in the Detail display type, while
+
+43
+00:03:10,800 --> 00:03:14,024
+a Bag Part displays in both Detail and Summary.
+
+44
+00:03:14,024 --> 00:03:17,856
+The display driver of each part declares these locations.
+
+45
+00:03:18,606 --> 00:03:24,289
+An empty Flow or Bag renders as FlowPart_Empty or BagPart_Empty, and the Flows
+
+46
+00:03:24,289 --> 00:03:27,265
+module ships empty templates for them.
+
+47
+00:03:27,265 --> 00:03:31,662
+A rule in a placement file can set the shape to FlowPart to
+
+48
+00:03:31,662 --> 00:03:33,556
+use the full template.
+
+49
+00:03:34,306 --> 00:03:41,509
+If you replace FlowPart.cshtml, your template takes over the checks and the classes of the original.
+
+50
+00:03:41,509 --> 00:03:47,216
+The Default Theme does this, with a copy whose section also has the row class.
+
+51
+00:03:51,416 --> 00:03:57,545
+A content template can skip the part shape and read a named Bag Part directly.
+
+52
+00:03:57,545 --> 00:04:05,716
+In Liquid, Model.ContentItem.Content.Services.ContentItems lists the items of the Bag Part named Services.
+
+53
+00:04:06,466 --> 00:04:10,772
+The landing page template of the Agency recipe does this.
+
+54
+00:04:10,772 --> 00:04:17,948
+It calls shape_build_display for each service, renders only its HtmlBodyPart with shape_render, and
+
+55
+00:04:17,948 --> 00:04:20,886
+writes the surrounding markup itself.
+
+56
+00:04:25,089 --> 00:04:29,300
+To see which template renders a shape, open Settings, Debugging.
+
+57
+00:04:29,300 --> 00:04:32,909
+The page has the option Write shape debug information.
+
+58
+00:04:33,365 --> 00:04:35,261
+Check the option, and save.
+
+59
+00:04:35,261 --> 00:04:39,798
+The site then wraps the rendered shapes in HTML comments, and keeps doing
+
+60
+00:04:39,798 --> 00:04:41,865
+so until you clear the option.
+
+61
+00:04:43,465 --> 00:04:48,777
+In the page source, each comment names the shape type and the template that rendered it.
+
+62
+00:04:48,777 --> 00:04:54,088
+Outside the Production environment, the console_log filter also prints a shape, with its
+
+63
+00:04:54,088 --> 00:04:56,405
+alternates, to the browser console.
+
+64
+00:04:58,405 --> 00:05:02,492
+A template named after the part, the content type or the widget, with
+
+65
+00:05:02,492 --> 00:05:06,088
+the display type added, changes how a Flow or a Bag renders.
+
+66
+00:05:06,088 --> 00:05:07,505
+Thanks for watching.
+
