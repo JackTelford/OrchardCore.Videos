@@ -23,7 +23,40 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:19",
+      "title": "Three upload features"
+    },
+    {
+      "time": "1:02",
+      "title": "Enable the features"
+    },
+    {
+      "time": "1:45",
+      "title": "Slugified names"
+    },
+    {
+      "time": "3:12",
+      "title": "Resumable uploads"
+    },
+    {
+      "time": "4:13",
+      "title": "Live updates"
+    },
+    {
+      "time": "5:03",
+      "title": "Several servers"
+    },
+    {
+      "time": "5:35",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Media Slugify documentation",
