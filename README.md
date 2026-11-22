@@ -166,7 +166,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Mini Profiler: Find What Makes a Page Slow](videos/mini-profiler) |  | not uploaded | OrchardCMS/OrchardCore |
 | [A Modular ASP.NET Core MVC Application With Orchard Core](videos/modular-mvc-application) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Create a Module: Your First Orchard Core Module](videos/module-create) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Navigation in Themes: Render Menus, Breadcrumbs and Pagers](videos/navigation-in-themes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Navigation in Themes: Render Menus, Breadcrumbs and Pagers](videos/navigation-in-themes) | 5:55 | [https://youtu.be/AVmhUepSEgQ](https://youtu.be/AVmhUepSEgQ) | OrchardCMS/OrchardCore |
 | [Notifications: Keep Users Informed in the Admin, by Email and SMS](videos/notifications) |  | not uploaded | OrchardCMS/OrchardCore |
 | [OpenAPI: Document Your APIs With Swagger, ReDoc and Scalar](videos/openapi-docs) |  | not uploaded | OrchardCMS/OrchardCore |
 | [OpenID Connect Applications and Scopes](videos/openid-applications-scopes) |  | not uploaded | OrchardCMS/OrchardCore |
