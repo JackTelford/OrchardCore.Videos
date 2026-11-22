@@ -1,0 +1,260 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.165
+Most pages need more than text.
+
+00:00:03.165 --> 00:00:07.552
+A Media Field attaches images and other files to a content item, from
+
+00:00:07.552 --> 00:00:09.717
+the media library or by upload.
+
+00:00:09.717 --> 00:00:13.870
+This video shows how to add the field, choose files, and pick one
+
+00:00:13.870 --> 00:00:15.450
+of its three editors.
+
+00:00:20.050 --> 00:00:24.733
+A Media Field stores the location of each file, not the file itself.
+
+00:00:24.733 --> 00:00:30.365
+Usually the file lives in the media library, so one image can appear on many pages.
+
+00:00:30.365 --> 00:00:35.870
+Each file can carry a description, the media text, and a focal point, the anchor.
+
+00:00:36.620 --> 00:00:38.644
+The field has three editors.
+
+00:00:38.644 --> 00:00:43.227
+Standard opens the media library in a dialog, where you pick files, and
+
+00:00:43.227 --> 00:00:46.619
+Gallery shows the same files as cards or as a list.
+
+00:00:46.619 --> 00:00:50.250
+Attached uploads files that belong to the content item.
+
+00:00:54.477 --> 00:00:56.655
+Fields belong to content types.
+
+00:00:56.655 --> 00:01:01.777
+Under Design, Content Definition, Content Types, you find every type of the site.
+
+00:01:02.239 --> 00:01:04.724
+Open the Page type with its Edit button.
+
+00:01:04.724 --> 00:01:08.939
+The Fields section lists the fields of the type, and Add Field adds one.
+
+00:01:09.396 --> 00:01:14.981
+Enter Photos as the Display Name, and the Technical Name fills in by itself.
+
+00:01:14.981 --> 00:01:19.476
+Choose Media Field as the Field Type, then Save & Configure.
+
+00:01:23.682 --> 00:01:26.591
+The settings decide how the field behaves.
+
+00:01:26.591 --> 00:01:32.468
+Required forces editors to choose at least one file, and Multiple lets them choose several.
+
+00:01:32.468 --> 00:01:36.952
+The Hint is a line of help shown above the field, so let's type one.
+
+00:01:37.403 --> 00:01:42.271
+Allow media text lets editors describe each file, and it is on by default.
+
+00:01:42.271 --> 00:01:45.982
+Allow anchors lets them mark a focal point on an image.
+
+00:01:45.982 --> 00:01:48.903
+It is off by default, so let's turn it on.
+
+00:01:49.367 --> 00:01:54.339
+By default the field accepts every type of file that the media library accepts.
+
+00:01:54.339 --> 00:01:58.960
+Clear Allow all default media types to choose the types yourself, such as
+
+00:01:58.960 --> 00:02:02.587
+image types, and the dialog then lists only those files.
+
+00:02:03.043 --> 00:02:06.960
+Further down, the question What type of editor should be used?
+
+00:02:06.960 --> 00:02:09.495
+offers Standard, Gallery and Attached.
+
+00:02:09.495 --> 00:02:11.973
+Let's keep Standard, and choose Save.
+
+00:02:16.183 --> 00:02:18.477
+To use the field, create a Page.
+
+00:02:18.477 --> 00:02:23.306
+Under Content, Content Items, the New menu lists the types you can create.
+
+00:02:23.306 --> 00:02:24.393
+Choose Page.
+
+00:02:24.855 --> 00:02:26.056
+Enter a Title.
+
+00:02:26.056 --> 00:02:30.922
+The Photos field shows its Hint, and No Files, because nothing is attached.
+
+00:02:30.922 --> 00:02:33.685
+Add media opens the Select Media dialog.
+
+00:02:34.148 --> 00:02:37.061
+The dialog is the media library itself.
+
+00:02:37.061 --> 00:02:41.916
+Open a folder, search, or upload files, then tick the files you want.
+
+00:02:41.916 --> 00:02:46.578
+Only image files are listed, because the field allows image types.
+
+00:02:47.030 --> 00:02:49.614
+The footer counts the selected files.
+
+00:02:49.614 --> 00:02:54.660
+OK adds them to the field, and each file appears as a thumbnail with its name.
+
+00:02:55.112 --> 00:02:57.485
+Click a thumbnail to select it.
+
+00:02:57.485 --> 00:03:01.334
+The toolbar then shows Remove, Media text, and Anchor.
+
+00:03:01.334 --> 00:03:07.042
+Media text opens a box where you describe the image for visitors who cannot see it.
+
+00:03:07.493 --> 00:03:11.340
+In the Enter media text box, type a description of the image, such
+
+00:03:11.340 --> 00:03:13.423
+as Spring orchard, and choose OK.
+
+00:03:13.877 --> 00:03:16.110
+Anchor opens a box with the image.
+
+00:03:16.110 --> 00:03:20.017
+Click the point that must stay in view when a template crops the
+
+00:03:20.017 --> 00:03:21.691
+picture, then choose OK.
+
+00:03:21.691 --> 00:03:24.537
+Reset Anchor returns the point to the center.
+
+00:03:24.994 --> 00:03:26.116
+Choose Publish.
+
+00:03:26.116 --> 00:03:29.214
+A message confirms that the Page has been published.
+
+00:03:29.674 --> 00:03:31.705
+Let's open the page on the site.
+
+00:03:31.705 --> 00:03:35.392
+It shows the images, and the media text of an image becomes its
+
+00:03:35.392 --> 00:03:38.384
+alternative text, which screen readers read aloud.
+
+00:03:42.567 --> 00:03:46.627
+The editor is a setting of the field, so you can change it later.
+
+00:03:46.627 --> 00:03:51.372
+In the settings of Photos, choose Gallery from the list of editors, and Save.
+
+00:03:51.372 --> 00:03:56.747
+The chosen files stay in place, because both editors keep a list of media library files.
+
+00:03:57.200 --> 00:03:59.113
+Let's edit the Page again.
+
+00:03:59.113 --> 00:04:03.416
+The Gallery editor shows each file as a card, with buttons for its
+
+00:04:03.416 --> 00:04:06.226
+media text, anchor, download and removal.
+
+00:04:06.226 --> 00:04:10.470
+The Add media card at the end opens the same Select Media dialog.
+
+00:04:10.921 --> 00:04:13.738
+The toolbar switches between cards and a list.
+
+00:04:13.738 --> 00:04:17.422
+Drag a card onto another to change the order of the files, and
+
+00:04:17.422 --> 00:04:19.101
+Publish keeps that order.
+
+00:04:23.300 --> 00:04:27.228
+The Attached editor suits a file that belongs to one page.
+
+00:04:27.228 --> 00:04:31.831
+Let's add a second Media Field to the Page type, named Visitor Guide,
+
+00:04:31.831 --> 00:04:33.550
+with Save & Configure.
+
+00:04:34.032 --> 00:04:38.101
+The guide is one PDF, so in the settings clear Multiple.
+
+00:04:38.101 --> 00:04:42.958
+Clear Allow all default media types, tick .pdf in the list of types,
+
+00:04:42.958 --> 00:04:45.583
+and choose Attached as the editor.
+
+00:04:45.583 --> 00:04:47.092
+Then choose Save.
+
+00:04:47.547 --> 00:04:51.527
+When you edit the Page, Visitor Guide has an Add media button that
+
+00:04:51.527 --> 00:04:56.170
+uploads a file from your computer, instead of opening the Select Media dialog.
+
+00:04:56.170 --> 00:04:58.657
+The uploaded file appears in the field.
+
+00:04:59.108 --> 00:05:03.448
+When the page is saved, here with Publish, the uploaded file moves from
+
+00:05:03.448 --> 00:05:07.168
+a temporary location into a folder that belongs to the page.
+
+00:05:07.628 --> 00:05:11.199
+On the site, a file that is not an image appears as a link.
+
+00:05:11.199 --> 00:05:14.605
+The link text is the media text, or the path of the file
+
+00:05:14.605 --> 00:05:15.978
+when there is none.
+
+00:05:17.578 --> 00:05:20.836
+Deleting the page deletes the files in its folder.
+
+00:05:20.836 --> 00:05:27.758
+Using the Attached editor requires the Manage Attached Media Fields Folder permission, which administrators have.
+
+00:05:29.758 --> 00:05:31.312
+That is the Media Field:
+
+00:05:31.312 --> 00:05:34.989
+files from the library or uploaded to the page, each with its own
+
+00:05:34.989 --> 00:05:38.252
+description, in the editor that fits how your team works.
+
+00:05:38.252 --> 00:05:39.598
+Thanks for watching.
+
