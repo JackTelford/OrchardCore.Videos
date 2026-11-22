@@ -23,7 +23,40 @@
     "Orchard Core",
     "Flows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What a Bag part is"
+    },
+    {
+      "time": "1:06",
+      "title": "Add a Bag to a content type"
+    },
+    {
+      "time": "2:19",
+      "title": "Add items to a page"
+    },
+    {
+      "time": "3:21",
+      "title": "Reorder and remove items"
+    },
+    {
+      "time": "3:53",
+      "title": "The bag on the site"
+    },
+    {
+      "time": "4:08",
+      "title": "The Blocks editor"
+    },
+    {
+      "time": "4:42",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Bag part",
@@ -50,5 +83,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Flows"
-  }
+  },
+  "length": "4:53"
 }
