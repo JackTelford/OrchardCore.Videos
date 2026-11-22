@@ -1376,7 +1376,7 @@
       "src/docs/reference/modules/Media/README.md",
       "src/docs/reference/modules/Media.Slugify/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 6.0,
     "words": 901,
     "contentCommit": "",
@@ -1384,9 +1384,9 @@
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/320",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "media-library-basics/v1",
+    "youtubeId": "96HKBh1upho",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {
