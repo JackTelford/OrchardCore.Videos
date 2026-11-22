@@ -23,7 +23,36 @@
     "Orchard Core",
     "Taxonomies"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:20",
+      "title": "Why filter by term"
+    },
+    {
+      "time": "1:01",
+      "title": "Enable the feature"
+    },
+    {
+      "time": "1:38",
+      "title": "Choose the taxonomies"
+    },
+    {
+      "time": "2:15",
+      "title": "Filter the list by term"
+    },
+    {
+      "time": "3:19",
+      "title": "Filters follow the content type"
+    },
+    {
+      "time": "3:48",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
