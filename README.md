@@ -153,7 +153,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Media Library: Upload, Organize and Reuse Files](videos/media-library-basics) | 6:16 | [https://youtu.be/96HKBh1upho](https://youtu.be/96HKBh1upho) | OrchardCMS/OrchardCore |
 | [Media: Manage the Files of Your Site](videos/media-overview) | 4:15 | [https://youtu.be/rZ8-gT1Rcxg](https://youtu.be/rZ8-gT1Rcxg) | OrchardCMS/OrchardCore |
 | [Media Profiles: Resize and Crop Images Consistently](videos/media-profiles) | 5:02 | [https://youtu.be/kobmZSw_z_w](https://youtu.be/kobmZSw_z_w) | OrchardCMS/OrchardCore |
-| [Secure Media: Control Who Sees Each Media Folder](videos/media-secure-media) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Secure Media: Control Who Sees Each Media Folder](videos/media-secure-media) | 4:41 | [https://youtu.be/MD0S2Pc9Oo0](https://youtu.be/MD0S2Pc9Oo0) | OrchardCMS/OrchardCore |
 | [Media Settings: Options, Allowed Files and the Media API](videos/media-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Media Uploads: Slugified Names, Resumable Uploads and Live Updates](videos/media-uploads) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Menu Items: Links, Content Items, HTML and Permissions](videos/menus-item-types) |  | not uploaded | OrchardCMS/OrchardCore |
