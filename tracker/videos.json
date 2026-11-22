@@ -1598,14 +1598,14 @@
     "docs": [
       "src/docs/reference/modules/Media.Azure/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 5.7,
     "words": 851,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/328",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
