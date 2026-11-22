@@ -134,7 +134,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Liquid: Display Content Items, Shapes and Zones](videos/liquid-display-content) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Write a Liquid Filter](videos/liquid-filter-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Liquid Part and Liquid Field: Content That Runs Templates](videos/liquid-part-and-field) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Lists in Templates: Liquid Filters for Containers and Their Items](videos/lists-in-templates) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Lists in Templates: Liquid Filters for Containers and Their Items](videos/lists-in-templates) | 4:17 | [https://youtu.be/IXGsED-FvrA](https://youtu.be/IXGsED-FvrA) | OrchardCMS/OrchardCore |
 | [Lists: Ordering, Paging and Contained Types](videos/lists-ordering-paging) | 4:25 | [https://youtu.be/qOUnxBy9_Tw](https://youtu.be/qOUnxBy9_Tw) | OrchardCMS/OrchardCore |
 | [Lists: Group Content Items in a Container](videos/lists-overview) | 4:58 | [https://youtu.be/vkE32ZCRHXE](https://youtu.be/vkE32ZCRHXE) | OrchardCMS/OrchardCore |
 | [Cultures: Make Your Site Multilingual](videos/localization-cultures) |  | not uploaded | OrchardCMS/OrchardCore |
