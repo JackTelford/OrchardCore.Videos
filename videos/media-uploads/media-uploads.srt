@@ -1,0 +1,296 @@
+1
+00:00:01,000 --> 00:00:06,182
+Names with spaces, large files, and several people working at once all affect
+
+2
+00:00:06,182 --> 00:00:08,367
+uploads to the Media Library.
+
+3
+00:00:08,367 --> 00:00:11,676
+Three features of the Media module handle them:
+
+4
+00:00:11,676 --> 00:00:15,298
+Media Slugify, Media TUS Uploads, and Media SignalR.
+
+5
+00:00:15,298 --> 00:00:17,920
+This video shows what each one does.
+
+6
+00:00:22,520 --> 00:00:26,898
+By default, the Media Library keeps names as you type them, and spaces
+
+7
+00:00:26,898 --> 00:00:30,008
+and symbols end up in the web address of a file.
+
+8
+00:00:30,008 --> 00:00:35,020
+Media Slugify cleans the name of each folder you create and each file you upload.
+
+9
+00:00:35,770 --> 00:00:40,973
+A large file takes time to upload, and a lost connection stops the default upload.
+
+10
+00:00:40,973 --> 00:00:44,935
+Media TUS Uploads sends a file in parts, so you can pause it,
+
+11
+00:00:44,935 --> 00:00:48,010
+resume it, and continue after an interruption.
+
+12
+00:00:48,760 --> 00:00:53,493
+A Media Library open in one window does not update by itself when
+
+13
+00:00:53,493 --> 00:00:56,093
+another window changes the files.
+
+14
+00:00:56,093 --> 00:01:01,360
+Media SignalR keeps the file list of every open Media Library up to date.
+
+15
+00:01:05,588 --> 00:01:09,821
+All three are features of the Media module, and all three are disabled
+
+16
+00:01:09,821 --> 00:01:11,381
+until you enable them.
+
+17
+00:01:11,381 --> 00:01:14,278
+Under Tools, Features, let's search for media.
+
+18
+00:01:14,731 --> 00:01:18,210
+Let's enable Media Slugify, then Media TUS Uploads.
+
+19
+00:01:18,210 --> 00:01:22,360
+After each one, a message at the top of the page confirms that
+
+20
+00:01:22,360 --> 00:01:24,191
+the feature was enabled.
+
+21
+00:01:24,644 --> 00:01:31,124
+Media SignalR depends on the SignalR feature, so enabling Media SignalR also enables SignalR.
+
+22
+00:01:31,576 --> 00:01:38,141
+Under Settings, Media, Options, Temporary file lifetime is the lifetime of the temporary
+
+23
+00:01:38,141 --> 00:01:40,586
+files that an upload creates.
+
+24
+00:01:40,586 --> 00:01:44,916
+Further down, SignalR and TUS uploads show a check mark.
+
+25
+00:01:49,116 --> 00:01:56,389
+Letters become lowercase, and spaces and most symbols between words become a single dash.
+
+26
+00:01:56,389 --> 00:02:01,978
+The folder Images & docs is stored as images-docs, and the file The
+
+27
+00:02:01,978 --> 00:02:06,036
+team (2020).jpg is stored as the-team-2020.jpg.
+
+28
+00:02:06,786 --> 00:02:10,286
+The public address of a file is built from the stored names.
+
+29
+00:02:10,286 --> 00:02:14,209
+Names that exist before you enable the feature stay as they are, and
+
+30
+00:02:14,209 --> 00:02:15,906
+so does a file you rename.
+
+31
+00:02:17,510 --> 00:02:23,548
+In Media, Library, the folder Team Photos was created before Media Slugify was enabled.
+
+32
+00:02:23,548 --> 00:02:29,390
+Its name, and the name of the file inside it, keep their capital letters and spaces.
+
+33
+00:02:29,850 --> 00:02:31,439
+Let's create a folder.
+
+34
+00:02:31,439 --> 00:02:35,300
+The menu button of the Files folder offers Create a subfolder.
+
+35
+00:02:35,752 --> 00:02:38,906
+Let's type Images & docs and select Ok.
+
+36
+00:02:38,906 --> 00:02:42,692
+The folder tree lists the folder as images-docs.
+
+37
+00:02:43,150 --> 00:02:50,622
+In images-docs, let's select Upload files and choose The team (2020).jpg.
+
+38
+00:02:50,622 --> 00:02:55,920
+The list shows the stored name, the-team-2020.jpg.
+
+39
+00:02:56,385 --> 00:03:00,197
+Two different names can give the same slug.
+
+40
+00:03:00,197 --> 00:03:06,499
+With Media TUS Uploads enabled, a second picture named The Team 2020.jpg is
+
+41
+00:03:06,499 --> 00:03:11,245
+saved as the-team-2020-1.jpg, with a number at the end.
+
+42
+00:03:15,438 --> 00:03:21,432
+In the folder images-docs, Media TUS Uploads sends a file in parts.
+
+43
+00:03:21,432 --> 00:03:27,178
+Let's upload a large file, retreat-video.mp4, with Upload files.
+
+44
+00:03:27,638 --> 00:03:32,641
+The Uploads panel at the bottom right shows the progress and the speed of each file.
+
+45
+00:03:32,641 --> 00:03:36,978
+If the connection breaks for a moment, the upload tries again by itself.
+
+46
+00:03:37,428 --> 00:03:39,793
+The pause button stops the transfer.
+
+47
+00:03:39,793 --> 00:03:44,748
+The progress bar stays where it is, and the parts already sent stay on the server.
+
+48
+00:03:45,208 --> 00:03:49,846
+Selecting the button again, which shows a play icon, continues from that point
+
+49
+00:03:49,846 --> 00:03:51,557
+instead of starting over.
+
+50
+00:03:51,557 --> 00:03:54,428
+When the upload ends, the file is in the list.
+
+51
+00:03:54,880 --> 00:03:58,880
+Closing the page keeps the parts already sent as well.
+
+52
+00:03:58,880 --> 00:04:05,080
+Let's start another upload, office-tour.mp4, and reload the page while it is under way.
+
+53
+00:04:05,532 --> 00:04:10,187
+Selecting the same file again continues the upload from the parts the server kept.
+
+54
+00:04:10,187 --> 00:04:12,832
+The file joins the list once it is complete.
+
+55
+00:04:17,042 --> 00:04:21,408
+Media SignalR connects each open Media Library to the server.
+
+56
+00:04:21,408 --> 00:04:26,882
+The folder images-docs is open in this window, and in a second browser window.
+
+57
+00:04:27,333 --> 00:04:33,553
+In the second window, let's upload summer-picnic.jpg to the same folder.
+
+58
+00:04:34,004 --> 00:04:37,934
+Back in the first window, the file is already in the list, and
+
+59
+00:04:37,934 --> 00:04:39,784
+the page was not reloaded.
+
+60
+00:04:40,237 --> 00:04:44,834
+Renaming, moving, copying and deleting a file are announced the same way.
+
+61
+00:04:44,834 --> 00:04:49,547
+When the file is deleted in the other window, it disappears from this list.
+
+62
+00:04:50,021 --> 00:04:53,925
+Updates cover the files of the folder you are viewing, and only for
+
+63
+00:04:53,925 --> 00:04:56,065
+folders you are allowed to manage.
+
+64
+00:04:56,065 --> 00:05:00,344
+Without Media SignalR, a window shows the changes of others only after you
+
+65
+00:05:00,344 --> 00:05:02,431
+reload the page or open a folder.
+
+66
+00:05:06,631 --> 00:05:11,097
+By default, a resumable upload keeps its parts in a temporary folder and
+
+67
+00:05:11,097 --> 00:05:12,815
+its progress in a cache.
+
+68
+00:05:12,815 --> 00:05:16,767
+On several servers, all the parts of a file must reach the same
+
+69
+00:05:16,767 --> 00:05:21,291
+server, or the servers must share the folder and the Redis Cache feature.
+
+70
+00:05:22,041 --> 00:05:29,346
+Live updates need a backplane, which the SignalR Azure Backplane or SignalR Redis Backplane feature provides.
+
+71
+00:05:29,346 --> 00:05:34,111
+Without one, updates reach only windows connected to the same server.
+
+72
+00:05:36,111 --> 00:05:41,360
+Media Slugify cleans the names of folders and files, Media TUS Uploads makes
+
+73
+00:05:41,360 --> 00:05:47,186
+large uploads resumable, and Media SignalR keeps every open Media Library up to date.
+
+74
+00:05:47,186 --> 00:05:48,851
+Thanks for watching.
+
