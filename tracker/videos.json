@@ -1053,7 +1053,7 @@
     "docs": [
       "src/docs/reference/modules/Lists/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.5,
     "words": 669,
     "contentCommit": "",
@@ -1061,9 +1061,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/308",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "lists-ordering-paging/v1",
+    "youtubeId": "qOUnxBy9_Tw",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {

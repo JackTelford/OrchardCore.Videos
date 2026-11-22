@@ -135,7 +135,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Write a Liquid Filter](videos/liquid-filter-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Liquid Part and Liquid Field: Content That Runs Templates](videos/liquid-part-and-field) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Lists in Templates: Liquid Filters for Containers and Their Items](videos/lists-in-templates) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Lists: Ordering, Paging and Contained Types](videos/lists-ordering-paging) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Lists: Ordering, Paging and Contained Types](videos/lists-ordering-paging) | 4:25 | [https://youtu.be/qOUnxBy9_Tw](https://youtu.be/qOUnxBy9_Tw) | OrchardCMS/OrchardCore |
 | [Lists: Group Content Items in a Container](videos/lists-overview) | 4:58 | [https://youtu.be/vkE32ZCRHXE](https://youtu.be/vkE32ZCRHXE) | OrchardCMS/OrchardCore |
 | [Cultures: Make Your Site Multilingual](videos/localization-cultures) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Localize a Module: Strings, Plurals and Extraction](videos/localization-in-modules) |  | not uploaded | OrchardCMS/OrchardCore |
