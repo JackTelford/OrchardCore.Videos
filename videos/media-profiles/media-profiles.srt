@@ -1,0 +1,300 @@
+1
+00:00:01,000 --> 00:00:03,944
+A site shows pictures in several sizes:
+
+2
+00:00:03,944 --> 00:00:06,692
+a banner, a thumbnail, a card image.
+
+3
+00:00:06,692 --> 00:00:12,123
+Media profiles give each size a name, so every page produces it the same way.
+
+4
+00:00:12,123 --> 00:00:17,750
+You will create a profile, learn the resize modes, and see a change on the site.
+
+5
+00:00:22,350 --> 00:00:26,208
+A picture uploaded to the Media Library keeps its own size, but a
+
+6
+00:00:26,208 --> 00:00:30,282
+page needs it wide for a banner, small for a thumbnail, and different
+
+7
+00:00:30,282 --> 00:00:31,532
+again for a card.
+
+8
+00:00:31,532 --> 00:00:35,770
+Spelling those sizes out in every page makes them hard to keep the same.
+
+9
+00:00:36,520 --> 00:00:40,832
+A media profile is a named set of image settings, such as width,
+
+10
+00:00:40,832 --> 00:00:43,666
+height, resize mode, format and quality.
+
+11
+00:00:43,666 --> 00:00:47,794
+A theme asks for it by name, and Orchard Core makes the image
+
+12
+00:00:47,794 --> 00:00:49,457
+when a page needs it.
+
+13
+00:00:49,457 --> 00:00:51,860
+The original file stays as it is.
+
+14
+00:00:56,076 --> 00:00:59,214
+In the admin menu, open Media, then Profiles.
+
+15
+00:00:59,214 --> 00:01:04,322
+The Media Profiles page lists each profile by name, with its hint underneath.
+
+16
+00:01:04,322 --> 00:01:10,476
+By default, only administrators have the Manage Media Profiles permission that the page needs.
+
+17
+00:01:10,944 --> 00:01:15,048
+This site comes from the Blog recipe, which adds one profile:
+
+18
+00:01:15,048 --> 00:01:15,844
+banner.
+
+19
+00:01:15,844 --> 00:01:20,192
+Its hint describes a banner image of 2048 by 600 pixels, cropped.
+
+20
+00:01:20,192 --> 00:01:24,112
+The Blog theme uses it for the large picture at the top of
+
+21
+00:01:24,112 --> 00:01:26,684
+the home page, posts and About page.
+
+22
+00:01:27,143 --> 00:01:29,855
+The search box filters the list by name.
+
+23
+00:01:29,855 --> 00:01:34,278
+Each row has Edit and Delete buttons, and Add Media Profile opens the
+
+24
+00:01:34,278 --> 00:01:36,283
+form that creates a profile.
+
+25
+00:01:40,483 --> 00:01:45,183
+The Resize Mode setting decides how a picture meets the width and height.
+
+26
+00:01:45,183 --> 00:01:50,301
+Max, the default, fits the whole picture inside them, keeps its proportions, and
+
+27
+00:01:50,301 --> 00:01:52,502
+never enlarges a small picture.
+
+28
+00:01:52,502 --> 00:01:57,263
+Crop makes a large picture fill the size, cutting away what falls outside.
+
+29
+00:01:58,013 --> 00:02:03,079
+Pad also fits the whole picture, then fills the empty space with a Background Color.
+
+30
+00:02:03,079 --> 00:02:07,639
+Stretch forces the picture to the exact width and height, which distorts it
+
+31
+00:02:07,639 --> 00:02:09,553
+when the proportions differ.
+
+32
+00:02:13,761 --> 00:02:16,487
+Let's create a profile for thumbnails.
+
+33
+00:02:16,487 --> 00:02:21,941
+On the Media Profiles page, Add Media Profile opens the Create Media Profile form.
+
+34
+00:02:22,399 --> 00:02:23,923
+The Name is required.
+
+35
+00:02:23,923 --> 00:02:27,932
+A theme asks for the profile by this name, and Orchard Core saves
+
+36
+00:02:27,932 --> 00:02:30,586
+it in lowercase, so let's type thumbnail.
+
+37
+00:02:30,586 --> 00:02:34,709
+The Hint is a note for your team, shown under the name in the list.
+
+38
+00:02:35,167 --> 00:02:39,884
+Width and Height each offer a list of sizes in pixels, and Default
+
+39
+00:02:39,884 --> 00:02:42,176
+applies no size to that side.
+
+40
+00:02:42,176 --> 00:02:46,696
+Custom Size shows a box for any other number, so let's type 320
+
+41
+00:02:46,696 --> 00:02:49,447
+for Width and choose 240 for Height.
+
+42
+00:02:49,907 --> 00:02:55,427
+Let's set Resize Mode to Crop, so a large picture fills the whole thumbnail size.
+
+43
+00:02:55,427 --> 00:03:01,137
+The Background Color field stays hidden, because it appears only for Pad and BoxPad.
+
+44
+00:03:01,607 --> 00:03:06,918
+Format converts the image, and Default keeps the format of the original.
+
+45
+00:03:06,918 --> 00:03:13,319
+Quality is a percentage for Jpg and WebP images, and at 100 the default quality applies.
+
+46
+00:03:13,319 --> 00:03:16,247
+Let's choose Jpg and a quality of 80.
+
+47
+00:03:16,700 --> 00:03:19,007
+Auto Orient is ticked by default.
+
+48
+00:03:19,007 --> 00:03:23,739
+It turns the image to match the orientation recorded in its EXIF metadata.
+
+49
+00:03:23,739 --> 00:03:27,880
+Save adds the profile to the list, with the hint under the name.
+
+50
+00:03:32,086 --> 00:03:33,528
+This is the home page.
+
+51
+00:03:33,528 --> 00:03:37,393
+The large picture behind the title is a photo from the Media Library,
+
+52
+00:03:37,393 --> 00:03:39,866
+cut to a wide strip by the banner profile.
+
+53
+00:03:40,347 --> 00:03:44,197
+The Blog theme asks for banner on the home page, on blog posts,
+
+54
+00:03:44,197 --> 00:03:45,759
+and on the About page.
+
+55
+00:03:45,759 --> 00:03:48,437
+A change to the profile changes all three.
+
+56
+00:03:48,899 --> 00:03:52,914
+Back on the Media Profiles page, let's choose Edit for banner.
+
+57
+00:03:52,914 --> 00:03:56,989
+The form has the same fields as the one that creates a profile.
+
+58
+00:03:57,445 --> 00:04:00,245
+Let's choose Pad as the Resize Mode.
+
+59
+00:04:00,245 --> 00:04:05,311
+The Background Color field appears, so let's type a color code for the
+
+60
+00:04:05,311 --> 00:04:08,245
+empty space, such as 336699, and save.
+
+61
+00:04:08,706 --> 00:04:11,971
+On the home page, the photo sits in the middle of the header,
+
+62
+00:04:11,971 --> 00:04:13,676
+with the color on both sides.
+
+63
+00:04:14,127 --> 00:04:18,877
+A blog post shows the same change, because its header uses the same profile.
+
+64
+00:04:23,078 --> 00:04:26,963
+On the Media Profiles page, to find a profile, type part of its
+
+65
+00:04:26,963 --> 00:04:29,496
+name in the search box and press Enter.
+
+66
+00:04:29,496 --> 00:04:32,198
+The list shows only the matching profiles.
+
+67
+00:04:32,656 --> 00:04:34,698
+Edit also lets you rename a profile.
+
+68
+00:04:34,698 --> 00:04:37,955
+A theme that asks for the old name gets none of the profile's
+
+69
+00:04:37,955 --> 00:04:40,386
+settings, so change the theme with the name.
+
+70
+00:04:40,840 --> 00:04:44,714
+Delete asks you to confirm, and then removes the profile.
+
+71
+00:04:44,714 --> 00:04:48,280
+Let's delete thumbnail, so that only banner remains.
+
+72
+00:04:50,280 --> 00:04:52,584
+That is how media profiles work:
+
+73
+00:04:52,584 --> 00:04:57,132
+one name for each image size, created in Media, Profiles, and used by
+
+74
+00:04:57,132 --> 00:04:59,194
+every page that asks for it.
+
+75
+00:04:59,194 --> 00:05:00,770
+Thanks for watching.
+

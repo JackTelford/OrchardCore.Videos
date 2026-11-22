@@ -22,7 +22,40 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:19",
+      "title": "Why media profiles"
+    },
+    {
+      "time": "0:52",
+      "title": "The Media Profiles page"
+    },
+    {
+      "time": "1:37",
+      "title": "Resize modes"
+    },
+    {
+      "time": "2:10",
+      "title": "Create a profile"
+    },
+    {
+      "time": "3:28",
+      "title": "A profile on the site"
+    },
+    {
+      "time": "4:19",
+      "title": "Search and delete"
+    },
+    {
+      "time": "4:49",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -54,5 +87,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Media"
-  }
+  },
+  "length": "5:02"
 }
