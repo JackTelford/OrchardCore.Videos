@@ -1,0 +1,328 @@
+1
+00:00:01,000 --> 00:00:05,310
+A bundle lists products, and each bundle has someone who manages it.
+
+2
+00:00:05,310 --> 00:00:10,494
+The Content Picker and User Picker fields store those links as choices from a list.
+
+3
+00:00:10,494 --> 00:00:14,920
+In this video, you add both fields to a content type and fill them in.
+
+4
+00:00:19,520 --> 00:00:22,989
+Orchard Core connects content items in several ways.
+
+5
+00:00:22,989 --> 00:00:27,355
+A Bag Part stores items inside their parent, a List Part keeps them
+
+6
+00:00:27,355 --> 00:00:31,900
+in a container like a blog, and Taxonomies tag them with shared terms.
+
+7
+00:00:32,650 --> 00:00:35,141
+A Content Picker Field is different:
+
+8
+00:00:35,141 --> 00:00:38,107
+the editor chooses items that already exist.
+
+9
+00:00:38,107 --> 00:00:42,201
+The field keeps a reference to each chosen item, not a copy, so
+
+10
+00:00:42,201 --> 00:00:44,870
+one product can appear in many bundles.
+
+11
+00:00:45,620 --> 00:00:48,092
+A product bundle can pick its products.
+
+12
+00:00:48,092 --> 00:00:51,444
+A blog post can pick related posts for further reading.
+
+13
+00:00:51,444 --> 00:00:55,290
+And any content item can pick the user accounts connected to it.
+
+14
+00:00:56,040 --> 00:00:59,394
+The Content Fields module provides three picker fields:
+
+15
+00:00:59,394 --> 00:01:03,902
+the Content Picker Field for content items, the User Picker Field for users,
+
+16
+00:01:03,902 --> 00:01:08,521
+and the Localization Set Content Picker Field for the translations of an item.
+
+17
+00:01:08,521 --> 00:01:11,710
+The last one needs the Content Localization feature.
+
+18
+00:01:16,010 --> 00:01:20,546
+Let's relate the Product Bundle content type to the Product content type.
+
+19
+00:01:20,546 --> 00:01:26,230
+Under Design, Content Definition, Content Types, we edit Product Bundle and select Add Field.
+
+20
+00:01:26,684 --> 00:01:28,703
+The Display Name is Products.
+
+21
+00:01:28,703 --> 00:01:33,375
+For Field Type, we choose Content Picker Field, and select Save & Configure
+
+22
+00:01:33,375 --> 00:01:35,394
+to open the field's settings.
+
+23
+00:01:35,870 --> 00:01:39,366
+Required means an editor must pick at least one item.
+
+24
+00:01:39,366 --> 00:01:42,269
+Allow multiple lets an editor pick several.
+
+25
+00:01:42,269 --> 00:01:46,120
+A bundle holds many products, so we turn on Allow multiple.
+
+26
+00:01:46,581 --> 00:01:49,946
+Contained Content Types sets what the picker offers.
+
+27
+00:01:49,946 --> 00:01:55,343
+Display All Content Types offers every type without a stereotype, and Stereotype offers
+
+28
+00:01:55,343 --> 00:01:58,651
+the types that share a stereotype, such as widgets.
+
+29
+00:01:59,118 --> 00:02:01,915
+Content Types offers only the types you tick.
+
+30
+00:02:01,915 --> 00:02:04,658
+A bundle picks products, so we tick Product.
+
+31
+00:02:05,114 --> 00:02:08,956
+Hint adds a line of help below the field in the content editor.
+
+32
+00:02:08,956 --> 00:02:14,134
+We write one, save the settings, and the type lists Products as a Content Picker Field.
+
+33
+00:02:18,364 --> 00:02:22,794
+In the list of Product Bundle items, let's edit the Weekend Camping Bundle.
+
+34
+00:02:22,794 --> 00:02:26,404
+Its editor shows the Products field, with the hint we wrote.
+
+35
+00:02:26,869 --> 00:02:31,176
+Typing in the field searches the content items of the allowed types.
+
+36
+00:02:31,176 --> 00:02:35,890
+The picker matches the typed text anywhere in a title or content type name.
+
+37
+00:02:35,890 --> 00:02:38,509
+We type pack and select Trail Backpack.
+
+38
+00:02:38,974 --> 00:02:43,150
+Because Allow multiple is on, we add more products the same way:
+
+39
+00:02:43,150 --> 00:02:45,059
+Camp Stove, then Headlamp.
+
+40
+00:02:45,059 --> 00:02:47,564
+All three choices stay in the field.
+
+41
+00:02:48,018 --> 00:02:52,888
+We select Publish, and the bundle is saved together with its three products.
+
+42
+00:02:53,347 --> 00:02:55,112
+We open the bundle's page.
+
+43
+00:02:55,112 --> 00:02:59,967
+The Products field lists each chosen product as a link to that product's own page.
+
+44
+00:03:00,420 --> 00:03:04,894
+Following the Camp Stove link opens that product's page, which is a content
+
+45
+00:03:04,894 --> 00:03:06,110
+item of its own.
+
+46
+00:03:10,364 --> 00:03:14,476
+To record who manages a bundle, we select Add Field on the Product
+
+47
+00:03:14,476 --> 00:03:18,644
+Bundle type again and add a User Picker Field named Bundle Manager.
+
+48
+00:03:18,644 --> 00:03:22,584
+This field type is available when the Users feature is enabled.
+
+49
+00:03:23,061 --> 00:03:26,722
+The settings repeat Required and Allow multiple.
+
+50
+00:03:26,722 --> 00:03:30,451
+Under Roles, Display All Users offers every user.
+
+51
+00:03:30,451 --> 00:03:36,281
+We clear it and tick Editor, so the picker offers only users in the Editor role.
+
+52
+00:03:36,743 --> 00:03:40,286
+The display mode decides how the field appears on the page.
+
+53
+00:03:40,286 --> 00:03:44,210
+Standard looks up each user when the page is shown, and User Names
+
+54
+00:03:44,210 --> 00:03:48,079
+shows the names saved with the bundle the last time it was saved.
+
+55
+00:03:48,079 --> 00:03:49,823
+We keep Standard and save.
+
+56
+00:03:51,523 --> 00:03:54,514
+In the bundle's editor, we type the letters o r.
+
+57
+00:03:54,514 --> 00:03:58,946
+The user names jordan, morgan and taylor all contain them, but only jordan
+
+58
+00:03:58,946 --> 00:04:02,269
+and morgan are editors, so the picker lists those two.
+
+59
+00:04:02,269 --> 00:04:03,543
+We select jordan.
+
+60
+00:04:03,999 --> 00:04:06,571
+We publish the bundle and open its page.
+
+61
+00:04:06,571 --> 00:04:09,759
+It shows Bundle Manager, followed by the user name.
+
+62
+00:04:13,959 --> 00:04:17,364
+By default, the picker searches the database by title.
+
+63
+00:04:17,364 --> 00:04:20,769
+Two optional features add another editor to the field:
+
+64
+00:04:20,769 --> 00:04:27,125
+Lucene Content Picker adds a Lucene editor, and Elasticsearch Content Picker adds an Elasticsearch editor.
+
+65
+00:04:27,125 --> 00:04:29,339
+Each comes with an Index setting.
+
+66
+00:04:31,005 --> 00:04:34,995
+With the Lucene Content Picker feature enabled, we open the settings of the
+
+67
+00:04:34,995 --> 00:04:38,986
+Products field and choose Lucene in the drop-down list labeled What type of
+
+68
+00:04:38,986 --> 00:04:40,365
+editor should be used?
+
+69
+00:04:40,895 --> 00:04:46,950
+The Index setting lists the Lucene indexes of the site, which you create under Search, Indexes.
+
+70
+00:04:46,950 --> 00:04:51,567
+The index must contain the content types the field offers, so we select
+
+71
+00:04:51,567 --> 00:04:54,865
+Catalog, an index of the Product items, and save.
+
+72
+00:04:56,449 --> 00:04:59,011
+In the bundle's editor, we type rain.
+
+73
+00:04:59,011 --> 00:05:03,719
+The Lucene editor matches the start of a title, so Rain Jacket is listed.
+
+74
+00:05:04,175 --> 00:05:08,135
+Typing jacket finds nothing, because no title starts with it.
+
+75
+00:05:12,335 --> 00:05:17,119
+A Content Picker Field relates an item to other items, and Contained Content
+
+76
+00:05:17,119 --> 00:05:19,394
+Types sets which types it offers.
+
+77
+00:05:19,394 --> 00:05:23,478
+A User Picker Field relates an item to users, and can offer only
+
+78
+00:05:23,478 --> 00:05:25,345
+the users in chosen roles.
+
+79
+00:05:26,095 --> 00:05:31,155
+Both store a reference to each choice, and both allow one choice or several.
+
+80
+00:05:31,155 --> 00:05:36,585
+The Lucene and Elasticsearch editors change where a Content Picker Field searches.
+
+81
+00:05:38,585 --> 00:05:44,183
+Content Picker and User Picker fields let editors relate content by choosing from a list.
+
+82
+00:05:44,183 --> 00:05:45,715
+Thanks for watching.
+
