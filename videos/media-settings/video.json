@@ -22,7 +22,32 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "Pages under Settings, Media"
+    },
+    {
+      "time": "0:49",
+      "title": "Allowed file types"
+    },
+    {
+      "time": "2:28",
+      "title": "Limits, caching and storage"
+    },
+    {
+      "time": "3:28",
+      "title": "The Media API"
+    },
+    {
+      "time": "4:45",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Media",
