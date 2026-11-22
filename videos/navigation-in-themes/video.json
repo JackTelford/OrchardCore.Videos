@@ -25,7 +25,36 @@
     "Orchard Core",
     "Menus and Navigation"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:13",
+      "title": "Navigation shapes"
+    },
+    {
+      "time": "0:45",
+      "title": "Rendering a menu"
+    },
+    {
+      "time": "1:37",
+      "title": "Menu templates"
+    },
+    {
+      "time": "2:35",
+      "title": "Breadcrumbs"
+    },
+    {
+      "time": "4:12",
+      "title": "Pagers"
+    },
+    {
+      "time": "5:43",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Navigation documentation",
@@ -52,5 +81,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Navigation"
-  }
+  },
+  "length": "5:55"
 }

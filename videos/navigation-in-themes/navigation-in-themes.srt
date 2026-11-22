@@ -1,0 +1,296 @@
+1
+00:00:01,000 --> 00:00:05,432
+Menus, breadcrumb trails and pagers are shapes in Orchard Core, so your theme
+
+2
+00:00:05,432 --> 00:00:06,927
+decides how they look.
+
+3
+00:00:06,927 --> 00:00:10,505
+This video shows how to render each one from a theme, and how
+
+4
+00:00:10,505 --> 00:00:12,160
+to override its template.
+
+5
+00:00:16,760 --> 00:00:20,626
+A shape is a named piece of output that a template draws.
+
+6
+00:00:20,626 --> 00:00:26,395
+To change the markup, add a template with the shape's name to your theme's Views folder.
+
+7
+00:00:26,395 --> 00:00:31,980
+A more specific name, called an alternate, targets one menu, one trail, or one pager.
+
+8
+00:00:32,730 --> 00:00:38,020
+The Menu module provides the Menu shape, for menus that editors build in the admin.
+
+9
+00:00:38,020 --> 00:00:44,320
+The Navigation module, which is always enabled, provides the Breadcrumb, Pager and PagerSlim shapes.
+
+10
+00:00:48,520 --> 00:00:52,736
+In a Razor layout, the menu tag helper renders a menu by its alias.
+
+11
+00:00:52,736 --> 00:00:57,645
+The cache attributes, which need the Dynamic Cache feature, keep the output for
+
+12
+00:00:57,645 --> 00:01:00,590
+five minutes and vary it by the user's roles.
+
+13
+00:01:01,340 --> 00:01:06,762
+Publishing the menu drops the cached copy, because the cache tag is the menu's alias.
+
+14
+00:01:06,762 --> 00:01:12,720
+In Liquid, the shape tag takes the same values, with underscores in the cache parameter names.
+
+15
+00:01:14,337 --> 00:01:17,081
+Let's edit Main Menu, in Content, Menus.
+
+16
+00:01:17,081 --> 00:01:21,674
+Its Alias field holds main-menu, the name that the layout looks up with
+
+17
+00:01:21,674 --> 00:01:26,507
+the alias prefix, and the two link items below it are what the theme draws.
+
+18
+00:01:26,963 --> 00:01:31,113
+On the site, the layout renders that alias in the navigation bar.
+
+19
+00:01:31,113 --> 00:01:36,783
+The links are the same items; only the markup around them comes from the theme's templates.
+
+20
+00:01:40,983 --> 00:01:45,921
+The Menu template receives the menu shape and creates the outer list.
+
+21
+00:01:45,921 --> 00:01:51,253
+It displays each entry of Model.Items, and every entry is a MenuItem shape.
+
+22
+00:01:52,003 --> 00:01:56,089
+The MenuItem template draws one list item and its sub items.
+
+23
+00:01:56,089 --> 00:02:01,103
+It displays the same shape again as a MenuItemLink, which draws the anchor.
+
+24
+00:02:01,853 --> 00:02:06,486
+MenuItemLink has a template for each type of menu item, such as the
+
+25
+00:02:06,486 --> 00:02:09,024
+link, content and HTML menu items.
+
+26
+00:02:09,024 --> 00:02:13,530
+The address of a link or HTML item is checked before the template
+
+27
+00:02:13,530 --> 00:02:16,513
+runs, so an unsafe address arrives empty.
+
+28
+00:02:17,263 --> 00:02:20,366
+To target one case, use an alternate name.
+
+29
+00:02:20,366 --> 00:02:25,019
+A menu's name is its title as one word, without spaces or hyphens,
+
+30
+00:02:25,019 --> 00:02:28,445
+each word capitalized, as the first card shows.
+
+31
+00:02:28,445 --> 00:02:34,133
+The name, a content type and a level combine, and the most specific template wins.
+
+32
+00:02:38,333 --> 00:02:42,221
+Reference the Navigation Core tag helpers in your view imports.
+
+33
+00:02:42,221 --> 00:02:46,108
+Then add the breadcrumb tag helper to a view, in the Title zone
+
+34
+00:02:46,108 --> 00:02:51,123
+that the admin theme renders, with a stable name and the title of the current page.
+
+35
+00:02:51,873 --> 00:02:55,729
+Declare only the ancestors as breadcrumb item children.
+
+36
+00:02:55,729 --> 00:02:59,901
+Each links to an action or a URL, and a permission turns its
+
+37
+00:02:59,901 --> 00:03:02,999
+link into plain text for users who lack it.
+
+38
+00:03:02,999 --> 00:03:06,223
+The current page comes last, never as a link.
+
+39
+00:03:07,823 --> 00:03:15,147
+To change the ancestors of any trail, implement IBreadcrumbProvider and register it with AddBreadcrumbProvider.
+
+40
+00:03:15,147 --> 00:03:19,967
+A provider sees every visible trail, so it checks the trail name first.
+
+41
+00:03:19,967 --> 00:03:23,473
+Providers run before the current page is appended.
+
+42
+00:03:25,074 --> 00:03:27,955
+In the admin, edit an item of Main Menu.
+
+43
+00:03:27,955 --> 00:03:33,340
+The trail reads Dashboard, Manage Content, Edit Main Menu, and the current page,
+
+44
+00:03:33,340 --> 00:03:34,968
+Edit Link Menu Item.
+
+45
+00:03:34,968 --> 00:03:40,604
+The Dashboard link comes from a provider that the Admin Dashboard feature registers.
+
+46
+00:03:41,064 --> 00:03:46,719
+The Show breadcrumb setting, under Settings, Admin, controls the trail on admin screens.
+
+47
+00:03:46,719 --> 00:03:48,524
+Let's clear it and save.
+
+48
+00:03:48,987 --> 00:03:53,425
+With it cleared, the same screen shows only the heading, because the tag
+
+49
+00:03:53,425 --> 00:03:55,587
+helper always renders the title.
+
+50
+00:03:57,187 --> 00:04:01,346
+The Breadcrumb template draws the trail and the heading together.
+
+51
+00:04:01,346 --> 00:04:06,033
+The display type is DetailAdmin in the admin and Detail elsewhere, and the
+
+52
+00:04:06,033 --> 00:04:11,247
+trail's name is another alternate, so a theme can restyle one trail or one context.
+
+53
+00:04:15,447 --> 00:04:20,766
+In a controller, build a Pager from the request's PagerParameters and the PagerOptions,
+
+54
+00:04:20,766 --> 00:04:24,198
+count the items, and create the shape with PagerAsync.
+
+55
+00:04:24,198 --> 00:04:28,717
+Query only the items of the current page, and pass the shape to the view.
+
+56
+00:04:29,467 --> 00:04:35,651
+The view displays the shape; in Liquid, the shape_pager tag sets its texts and classes first.
+
+57
+00:04:35,651 --> 00:04:40,023
+The slim pager needs no item count, because it only links to the
+
+58
+00:04:40,023 --> 00:04:41,897
+previous and next pages.
+
+59
+00:04:43,502 --> 00:04:47,323
+On the home page of the blog, The Blog Theme draws the slim
+
+60
+00:04:47,323 --> 00:04:49,499
+pager with the shape pager tag.
+
+61
+00:04:49,499 --> 00:04:54,202
+The first page offers Older Posts, and the second page offers Newer Posts.
+
+62
+00:04:55,804 --> 00:05:00,626
+In the admin, the list of Blog Post content items shows the full pager:
+
+63
+00:05:00,626 --> 00:05:05,448
+numbered pages, with links to the first, previous, next and last pages.
+
+64
+00:05:05,448 --> 00:05:11,334
+The Items per page selector at its end appears when the site allows page size selection.
+
+65
+00:05:12,934 --> 00:05:17,366
+A theme restyles a pager by overriding the templates of its parts.
+
+66
+00:05:17,366 --> 00:05:21,798
+The Default Theme wraps the pager in a nav element, and each part,
+
+67
+00:05:21,798 --> 00:05:27,214
+such as Previous or Next, turns into a Pager_Link that adds the Bootstrap classes.
+
+68
+00:05:27,964 --> 00:05:32,818
+When page size selection is allowed in Settings, General, both pagers render an
+
+69
+00:05:32,818 --> 00:05:34,531
+Items per page selector.
+
+70
+00:05:34,531 --> 00:05:39,042
+The Navigation module provides plain markup for it, and a theme styles it
+
+71
+00:05:39,042 --> 00:05:41,954
+with its own Pager_PageSizeSelector template.
+
+72
+00:05:43,954 --> 00:05:47,730
+That is how a theme renders menus, breadcrumb trails and pagers:
+
+73
+00:05:47,730 --> 00:05:52,152
+shapes you call from a layout or a view, and templates you override by name.
+
+74
+00:05:52,152 --> 00:05:53,554
+Thanks for watching.
+
