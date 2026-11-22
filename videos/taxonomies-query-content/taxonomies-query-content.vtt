@@ -1,0 +1,206 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.342
+A taxonomy field stores the terms an editor picked.
+
+00:00:04.342 --> 00:00:08.094
+This video queries content items by those terms from code:
+
+00:00:08.094 --> 00:00:14.660
+through the TaxonomyIndex table, through a Lucene query with parameters, and through the term page filter.
+
+00:00:19.260 --> 00:00:22.205
+The TaxonomyField class has two properties:
+
+00:00:22.205 --> 00:00:26.411
+the content item id of its taxonomy, and the content item ids of
+
+00:00:26.411 --> 00:00:28.515
+the terms an editor selected.
+
+00:00:28.515 --> 00:00:31.880
+Every query in this video works on those term ids.
+
+00:00:32.630 --> 00:00:37.756
+The TaxonomyIndex table has one row for each selected term of each field.
+
+00:00:37.756 --> 00:00:42.428
+A row names the taxonomy, the content item, its type, the part and
+
+00:00:42.428 --> 00:00:46.840
+the field, and the term, plus two flags, Published and Latest.
+
+00:00:51.040 --> 00:00:56.058
+In a view, the Orchard helper provides QueryCategorizedContentItemsAsync.
+
+00:00:56.058 --> 00:01:00.950
+You pass a function that receives a query on TaxonomyIndex, and you get
+
+00:01:00.950 --> 00:01:03.300
+back the content items, loaded.
+
+00:01:04.050 --> 00:01:06.947
+This TaxonomyField view lists related items.
+
+00:01:06.947 --> 00:01:10.828
+It reads the term ids of the field, keeps the rows whose term
+
+00:01:10.828 --> 00:01:14.420
+is one of them, and leaves out the item being displayed.
+
+00:01:15.170 --> 00:01:17.417
+The helper adds no filter of its own.
+
+00:01:17.417 --> 00:01:21.024
+The index has rows for the published version of an item and for
+
+00:01:21.024 --> 00:01:25.048
+the version flagged Latest, so add Published or Latest to the query, as
+
+00:01:25.048 --> 00:01:26.930
+this view does with Published.
+
+00:01:27.680 --> 00:01:30.903
+The index holds only the terms an editor selected.
+
+00:01:30.903 --> 00:01:34.644
+An item filed under a child term has no row for its parent,
+
+00:01:34.644 --> 00:01:37.810
+so a query on the parent term does not return it.
+
+00:01:38.560 --> 00:01:42.918
+Outside a view, run the same query on ISession, and load the results
+
+00:01:42.918 --> 00:01:44.744
+with the content manager.
+
+00:01:44.744 --> 00:01:49.220
+Use it in a service, a controller, or any code that is not a template.
+
+00:01:53.420 --> 00:01:56.031
+A Lucene index can hold the same ids.
+
+00:01:56.031 --> 00:02:00.282
+For a field marked Include this element in the index, the key is
+
+00:02:00.282 --> 00:02:04.533
+the type or part name, the field name, then Ids for the selected
+
+00:02:04.533 --> 00:02:08.420
+terms, or Inherited for those terms and all their parents.
+
+00:02:10.033 --> 00:02:16.845
+In Design, Content Definition, Content Types, open the Blog Post type and edit its Category field.
+
+00:02:16.845 --> 00:02:22.413
+Under Lucene Index settings, check Include this element in the index, and save.
+
+00:02:22.880 --> 00:02:26.968
+Do the same for the Tags field, so both fields write their term
+
+00:02:26.968 --> 00:02:28.330
+ids to the index.
+
+00:02:28.782 --> 00:02:31.858
+A rebuild indexes the existing posts again.
+
+00:02:31.858 --> 00:02:36.002
+Go to Search, Indexes, and open Actions on the Search index.
+
+00:02:36.472 --> 00:02:37.693
+Choose Rebuild.
+
+00:02:37.693 --> 00:02:43.452
+A notification says the index was rebuilt, and the posts are indexed again in the background.
+
+00:02:47.652 --> 00:02:51.310
+A Lucene query is JSON, and Liquid renders it first.
+
+00:02:51.310 --> 00:02:54.652
+The clause for the content type always applies.
+
+00:02:54.652 --> 00:02:58.941
+An if tag adds a match clause for categories or tags only when
+
+00:02:58.941 --> 00:03:01.022
+that parameter has a value.
+
+00:03:01.772 --> 00:03:05.937
+A match query splits its text into ids and joins them with or.
+
+00:03:05.937 --> 00:03:09.918
+The must list joins the clauses with and, so a post needs a
+
+00:03:09.918 --> 00:03:12.552
+matching category and a matching tag.
+
+00:03:14.143 --> 00:03:18.915
+On the Lucene Query page, the template runs against the Search index.
+
+00:03:18.915 --> 00:03:22.923
+Without parameters, it returns the blog posts, up to ten.
+
+00:03:23.378 --> 00:03:26.787
+Save Query opens the form for a Lucene query.
+
+00:03:26.787 --> 00:03:32.668
+Name it GetBlogsByFilter, select the Search index, and check Return Content Items.
+
+00:03:33.129 --> 00:03:33.978
+Save it.
+
+00:03:33.978 --> 00:03:38.769
+The query appears in All Queries, and Razor or Liquid can run it by name.
+
+00:03:39.232 --> 00:03:44.220
+In All Queries, Run opens the query on the Lucene Query page again.
+
+00:03:44.220 --> 00:03:49.482
+Parameters takes a JSON object, with one value for each parameter name.
+
+00:03:49.951 --> 00:03:54.659
+Passing the id of the Politics term as categories returns two posts.
+
+00:03:54.659 --> 00:03:58.731
+The table shows the stored fields, including the term ids.
+
+00:04:02.931 --> 00:04:06.672
+In Razor, ContentQueryAsync runs the query by name.
+
+00:04:06.672 --> 00:04:11.726
+Pass the parameters in a dictionary, join several ids with a space, and
+
+00:04:11.726 --> 00:04:14.351
+leave out a filter you do not use.
+
+00:04:15.101 --> 00:04:20.412
+ContentQueryAsync returns content items, so a view can list their DisplayText.
+
+00:04:20.412 --> 00:04:26.671
+In Liquid, the query filter on the Queries property runs the same query with named arguments.
+
+00:04:30.871 --> 00:04:34.352
+A term page lists its items with the same index.
+
+00:04:34.352 --> 00:04:39.315
+It asks TaxonomyIndex for the rows of the page's term, then calls every
+
+00:04:39.315 --> 00:04:44.021
+registered IContentsTaxonomyListFilter before it applies the pager.
+
+00:04:44.771 --> 00:04:47.749
+A filter receives the query and the TermPart.
+
+00:04:47.749 --> 00:04:52.071
+Implement it to narrow or change the query before the list is paged.
+
+00:04:54.071 --> 00:04:58.604
+You can query content items by term from the TaxonomyIndex, from a Lucene
+
+00:04:58.604 --> 00:05:01.989
+query with parameters, and from the term page filter.
+
+00:05:01.989 --> 00:05:03.481
+Thanks for watching.
+
