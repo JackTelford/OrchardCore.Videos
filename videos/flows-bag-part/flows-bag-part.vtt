@@ -1,0 +1,218 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.287
+A help page can hold questions and tips that editors add, reorder, and
+
+00:00:05.287 --> 00:00:06.923
+remove inside the page.
+
+00:00:06.923 --> 00:00:10.251
+The Bag part of the Flows module makes that possible.
+
+00:00:10.251 --> 00:00:14.200
+We add a Bag to a content type, fill it, and see it on the site.
+
+00:00:18.800 --> 00:00:22.290
+A content part adds one capability to a content type.
+
+00:00:22.290 --> 00:00:26.489
+The Bag part lets a content item hold other content items, of the
+
+00:00:26.489 --> 00:00:28.323
+content types you choose.
+
+00:00:28.323 --> 00:00:31.280
+Editors add them from the page's own editor.
+
+00:00:32.030 --> 00:00:36.433
+The items are stored inside the page's own document, so they are saved
+
+00:00:36.433 --> 00:00:38.055
+and published with it.
+
+00:00:38.055 --> 00:00:42.110
+Each item is a full content item, with its own parts and fields.
+
+00:00:42.860 --> 00:00:46.135
+The Flows module has a second part, the Flow part.
+
+00:00:46.135 --> 00:00:50.053
+A Flow part holds widgets, each with an alignment and a size.
+
+00:00:50.053 --> 00:00:55.200
+A Bag part holds items of the content types you choose and has no layout settings.
+
+00:00:55.950 --> 00:00:58.943
+The Bag part comes with the Flows feature.
+
+00:00:58.943 --> 00:01:01.250
+Recipes such as Blog enable it.
+
+00:01:01.250 --> 00:01:05.240
+On any other site, you enable Flows under Tools, Features.
+
+00:01:09.475 --> 00:01:14.791
+Under Design, Content Definition, Content Types, we see every content type.
+
+00:01:14.791 --> 00:01:19.385
+We select Create new type, name it Help Page, and select Create.
+
+00:01:19.838 --> 00:01:23.354
+The Add Parts page lists the parts a type can use.
+
+00:01:23.354 --> 00:01:28.188
+We tick Title, so every page has a name, and select Add Selected Parts.
+
+00:01:28.666 --> 00:01:33.095
+We add the bag as a named part, so the type could hold several bags.
+
+00:01:33.095 --> 00:01:36.806
+On the Edit Content Type page, we select Add Named Part.
+
+00:01:37.262 --> 00:01:40.120
+We call the part Help Items and describe it.
+
+00:01:40.120 --> 00:01:41.891
+The Bag part is selected.
+
+00:01:41.891 --> 00:01:44.292
+Save & Configure opens its settings.
+
+00:01:44.774 --> 00:01:49.333
+Contained Content Types offers two choices, Content Types and Stereotype.
+
+00:01:49.333 --> 00:01:53.834
+We keep Content Types, and tick Question and Tip, two content types that
+
+00:01:53.834 --> 00:01:57.354
+already exist on this site and that this bag will hold.
+
+00:01:57.807 --> 00:02:01.898
+Display Type is the display type the site uses for each item, and
+
+00:02:01.898 --> 00:02:03.914
+an empty value means Summary.
+
+00:02:03.914 --> 00:02:08.927
+Collapse Contained Items makes saved items start collapsed when the editor opens.
+
+00:02:08.927 --> 00:02:09.907
+We tick it.
+
+00:02:10.412 --> 00:02:12.305
+The editor stays Standard.
+
+00:02:12.305 --> 00:02:18.162
+Selecting Save stores the settings and returns to the type, which lists Title and Help Items.
+
+00:02:22.454 --> 00:02:27.547
+Under Content, Content Items, the New button lists the content types we can create.
+
+00:02:27.547 --> 00:02:29.034
+We choose Help Page.
+
+00:02:33.703 --> 00:02:35.929
+We type a title, Account Help.
+
+00:02:35.929 --> 00:02:38.031
+The Help Items bag is empty.
+
+00:02:38.031 --> 00:02:42.173
+Because it accepts two content types, its button is Add Item.
+
+00:02:42.697 --> 00:02:44.610
+Add Item lists the two types.
+
+00:02:44.610 --> 00:02:45.977
+We choose Question.
+
+00:02:45.977 --> 00:02:49.694
+A card opens with the fields of that content type, a Title and
+
+00:02:49.694 --> 00:02:51.717
+an Answer, and we fill them in.
+
+00:03:01.206 --> 00:03:04.938
+Choosing Tip from Add Item appends a second card at the end of
+
+00:03:04.938 --> 00:03:07.791
+the bag, and we fill in its Title and Details.
+
+00:03:07.791 --> 00:03:10.206
+The items keep the order of the cards.
+
+00:03:15.491 --> 00:03:16.887
+We select Publish.
+
+00:03:16.887 --> 00:03:20.551
+The items are saved and published together with the page.
+
+00:03:24.782 --> 00:03:28.806
+When we edit the page again, the saved items load collapsed, because of
+
+00:03:28.806 --> 00:03:30.269
+the setting we ticked.
+
+00:03:30.269 --> 00:03:32.202
+The arrow on a card expands it.
+
+00:03:32.690 --> 00:03:35.197
+The handle at the left of a card moves it.
+
+00:03:35.197 --> 00:03:39.220
+We drag the Tip above the Question, and the order of the items changes.
+
+00:03:40.156 --> 00:03:44.847
+The red trash button removes an item, after asking for confirmation.
+
+00:03:44.847 --> 00:03:47.066
+We cancel, so the item stays.
+
+00:03:49.103 --> 00:03:52.583
+Publish saves the reordered items together with the page.
+
+00:03:56.788 --> 00:04:01.142
+In the Content Items list, View opens the published page in another tab.
+
+00:04:01.142 --> 00:04:04.770
+Under the title, the site shows the items of the bag in the
+
+00:04:04.770 --> 00:04:07.058
+order of the editor, the Tip first.
+
+00:04:11.316 --> 00:04:13.398
+The Bag part has a second editor.
+
+00:04:13.398 --> 00:04:17.561
+In the part's settings, the question What type of editor should be used?
+
+00:04:17.561 --> 00:04:19.322
+offers Standard and Blocks.
+
+00:04:19.322 --> 00:04:22.151
+We choose Blocks, and two more settings appear:
+
+00:04:22.151 --> 00:04:24.446
+Add Button Text and Modal Title Text.
+
+00:04:24.904 --> 00:04:31.124
+We leave both empty, which keeps the defaults, Add Block and Select Block, and select Save.
+
+00:04:31.626 --> 00:04:34.935
+In the page editor, the button reads Add Block.
+
+00:04:34.935 --> 00:04:38.556
+It opens a dialog with a card for each content type.
+
+00:04:38.556 --> 00:04:41.926
+Selecting Add on a card adds an item to the bag.
+
+00:04:43.926 --> 00:04:47.537
+The Bag part keeps a group of content items inside a page, and
+
+00:04:47.537 --> 00:04:50.246
+editors manage them in the page's own editor.
+
+00:04:50.246 --> 00:04:51.626
+Thanks for watching.
+
