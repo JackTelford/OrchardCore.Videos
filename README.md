@@ -231,7 +231,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Taxonomies: Filter the Content Items List by Term](videos/taxonomies-contents-list-filters) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Taxonomies: Create a Taxonomy and Organize Its Terms](videos/taxonomies-create-terms) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Taxonomy Field: Categories and Tags on Your Content](videos/taxonomies-field-and-tags) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Taxonomies: Categorize Your Content](videos/taxonomies-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies: Categorize Your Content](videos/taxonomies-overview) | 4:36 | [https://youtu.be/ZamtKKu53Lo](https://youtu.be/ZamtKKu53Lo) | OrchardCMS/OrchardCore |
 | [Taxonomies in Code: Query Content Items by Term](videos/taxonomies-query-content) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Taxonomies: Term Pages That List Their Content](videos/taxonomies-term-pages) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Templates: Override Shapes From the Admin With Liquid](videos/templates-override-shapes) |  | not uploaded | OrchardCMS/OrchardCore |
