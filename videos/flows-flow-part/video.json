@@ -80,5 +80,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Flows"
   },
-  "length": "5:16"
+  "length": "5:16",
+  "youtube": {
+    "id": "kuIT3d1zubg",
+    "url": "https://youtu.be/kuIT3d1zubg",
+    "version": "v1"
+  }
 }

@@ -1106,7 +1106,7 @@
       "src/docs/reference/modules/Flow/BagPart.md",
       "src/docs/reference/modules/Flow/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 5.2,
     "words": 786,
     "contentCommit": "",
@@ -1114,9 +1114,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/310",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "flows-flow-part/v1",
+    "youtubeId": "kuIT3d1zubg",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {
