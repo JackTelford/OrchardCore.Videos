@@ -1,0 +1,76 @@
+1
+00:00:03,277 --> 00:00:06,345
+In the admin menu, Media has two pages.
+
+2
+00:00:06,345 --> 00:00:11,867
+Library holds the files, and Profiles holds the presets that resize images.
+
+3
+00:00:12,340 --> 00:00:15,524
+Profiles lists the media profiles of the site.
+
+4
+00:00:15,524 --> 00:00:20,240
+This site has one, named banner, which crops an image to a wide banner.
+
+5
+00:00:20,700 --> 00:00:23,241
+Under Settings, Media has two entries.
+
+6
+00:00:23,241 --> 00:00:27,745
+Options shows the values the library runs with, such as the allowed file
+
+7
+00:00:27,745 --> 00:00:32,885
+extensions and the maximum file size, and API chooses how the library authenticates
+
+8
+00:00:32,885 --> 00:00:34,328
+with the media API.
+
+9
+00:00:34,328 --> 00:00:36,350
+A separate video covers both.
+
+10
+00:00:36,820 --> 00:00:39,830
+Tools, Features lists what a site can turn on.
+
+11
+00:00:39,830 --> 00:00:44,171
+Searching for media narrows the list to the features that mention it.
+
+12
+00:00:44,171 --> 00:00:46,660
+Media itself is enabled on this site.
+
+13
+00:00:47,131 --> 00:00:51,935
+Media Slugify rewrites the names of the folders and files you create as
+
+14
+00:00:51,935 --> 00:00:56,553
+lowercase words joined by dashes, which keeps their addresses clean.
+
+15
+00:00:56,553 --> 00:01:01,171
+Secure Media adds permissions that restrict access to media folders.
+
+16
+00:01:01,629 --> 00:01:06,508
+Other features make uploads resumable and keep every open library up to date
+
+17
+00:01:06,508 --> 00:01:08,650
+when files and folders change.
+
+18
+00:01:08,650 --> 00:01:13,410
+Azure Media Storage and Amazon Media Storage store the files in Azure Blob
+
+19
+00:01:13,410 --> 00:01:17,159
+Storage or in Amazon S3, instead of on the server's disk.
+
