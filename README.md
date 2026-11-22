@@ -228,7 +228,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Geo Point Field: Add Locations to Content Items](videos/spatial-geo-point-field) | 4:03 | [https://youtu.be/NyJDG0sIVs8](https://youtu.be/NyJDG0sIVs8) | OrchardCMS/OrchardCore |
 | [Content Fields Indexing: Query Fields With SQL](videos/sql-indexing-content-fields) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Starter Recipes: Choose How Your Site Starts](videos/starter-recipes) | 6:02 | [https://youtu.be/VtnARneJ6GY](https://youtu.be/VtnARneJ6GY) | OrchardCMS/OrchardCore |
-| [Taxonomies: Filter the Content Items List by Term](videos/taxonomies-contents-list-filters) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomies: Filter the Content Items List by Term](videos/taxonomies-contents-list-filters) | 4:00 | [https://youtu.be/YthQGl_C0B0](https://youtu.be/YthQGl_C0B0) | OrchardCMS/OrchardCore |
 | [Taxonomies: Create a Taxonomy and Organize Its Terms](videos/taxonomies-create-terms) | 5:08 | [https://youtu.be/3VE0pO491kw](https://youtu.be/3VE0pO491kw) | OrchardCMS/OrchardCore |
 | [Taxonomy Field: Categories and Tags on Your Content](videos/taxonomies-field-and-tags) | 5:06 | [https://youtu.be/Ev9Ie1MVrhM](https://youtu.be/Ev9Ie1MVrhM) | OrchardCMS/OrchardCore |
 | [Taxonomies: Categorize Your Content](videos/taxonomies-overview) | 4:36 | [https://youtu.be/ZamtKKu53Lo](https://youtu.be/ZamtKKu53Lo) | OrchardCMS/OrchardCore |

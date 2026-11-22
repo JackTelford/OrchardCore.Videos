@@ -1290,7 +1290,7 @@
     "docs": [
       "src/docs/reference/modules/Taxonomies/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 3.4,
     "words": 513,
     "contentCommit": "",
@@ -1298,9 +1298,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/317",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "taxonomies-contents-list-filters/v1",
+    "youtubeId": "YthQGl_C0B0",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {
