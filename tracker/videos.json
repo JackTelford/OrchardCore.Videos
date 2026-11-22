@@ -1683,7 +1683,7 @@
       "src/docs/reference/modules/Menu/README.md",
       "src/docs/topics/navigation/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 5.0,
     "words": 748,
     "contentCommit": "",
@@ -1691,9 +1691,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/331",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "menus-overview/v1",
+    "youtubeId": "cXMmkEd_-SA",
+    "publishedOn": "2026-11-22",
     "notes": ""
   },
   {
