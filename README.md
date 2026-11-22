@@ -106,7 +106,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Features: Enable and Disable What Your Site Uses](videos/features-manage) | 4:33 | [https://youtu.be/BmreMHrfixM](https://youtu.be/BmreMHrfixM) | OrchardCMS/OrchardCore |
 | [Feeds: Publish an RSS Feed of Your Content](videos/feeds-rss) |  | not uploaded | OrchardCMS/OrchardCore |
 | [File Upload Security: Antivirus Scanning and Temporary Files](videos/file-upload-security) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Bag Part: Embed Content Items Inside a Content Item](videos/flows-bag-part) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Bag Part: Embed Content Items Inside a Content Item](videos/flows-bag-part) | 4:53 | [https://youtu.be/EBz1f1Bgcgw](https://youtu.be/EBz1f1Bgcgw) | OrchardCMS/OrchardCore |
 | [Flow Part: Build Pages From Widgets](videos/flows-flow-part) | 5:16 | [https://youtu.be/kuIT3d1zubg](https://youtu.be/kuIT3d1zubg) | OrchardCMS/OrchardCore |
 | [Flow and Bag Parts: Templates and Alternates for Their Widgets](videos/flows-templates) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Forms: Build a Contact Form From Widgets](videos/forms-contact-form) |  | not uploaded | OrchardCMS/OrchardCore |
