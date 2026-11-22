@@ -1,0 +1,191 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.820
+A content item needs a name you can recognize.
+
+00:00:03.820 --> 00:00:07.669
+The Title part gives a content type a title that an editor types,
+
+00:00:07.669 --> 00:00:10.272
+or that the site builds from other fields.
+
+00:00:10.272 --> 00:00:14.610
+Let's add the part, try its behaviors, and generate titles from a pattern.
+
+00:00:19.210 --> 00:00:23.412
+A content type describes a kind of content, such as a product, and
+
+00:00:23.412 --> 00:00:26.330
+each content item is one entry of that type.
+
+00:00:26.330 --> 00:00:30.241
+A content item can have a display text, which is the name the
+
+00:00:30.241 --> 00:00:32.050
+admin shows in its lists.
+
+00:00:32.800 --> 00:00:36.733
+An item without a display text is listed under the name of its
+
+00:00:36.733 --> 00:00:40.724
+content type, which makes items of one type hard to tell apart.
+
+00:00:40.724 --> 00:00:45.640
+The Title part gives a content type a title, and stores it as the display text.
+
+00:00:46.390 --> 00:00:50.214
+An editor can type the title, or the site can generate it from
+
+00:00:50.214 --> 00:00:51.958
+other fields of the item.
+
+00:00:51.958 --> 00:00:55.670
+A Behavior option on the part chooses between four settings:
+
+00:00:55.670 --> 00:01:01.800
+editable, editable and required, generated with the input disabled, or generated with the input hidden.
+
+00:01:06.023 --> 00:01:11.511
+Under Design, Content Definition, Content Types, you find every content type of the site.
+
+00:01:11.511 --> 00:01:14.399
+Product has two Text fields, Brand and Name.
+
+00:01:14.399 --> 00:01:16.363
+Let's click Edit on Product.
+
+00:01:16.820 --> 00:01:20.366
+Add Parts lists the parts that you can attach to a type.
+
+00:01:20.366 --> 00:01:21.910
+Title is one of them.
+
+00:01:21.910 --> 00:01:25.170
+Add & Configure attaches it and opens its settings.
+
+00:01:25.626 --> 00:01:27.633
+The settings of the part open.
+
+00:01:27.633 --> 00:01:31.479
+The Behavior option is Title is editable, which is the default.
+
+00:01:31.479 --> 00:01:35.826
+Render Title is checked, so the part renders the title in display views.
+
+00:01:36.277 --> 00:01:39.964
+Placeholder sets the hint text of an empty Title field.
+
+00:01:39.964 --> 00:01:45.827
+Let's type Product title, and choose Title is editable and required as the Behavior option.
+
+00:01:46.286 --> 00:01:49.885
+Save stores the settings on the Product type, and a message confirms that
+
+00:01:49.885 --> 00:01:51.706
+the part settings have been saved.
+
+00:01:55.897 --> 00:02:00.703
+On the Content Types page, Create New Product opens the editor for a product.
+
+00:02:00.703 --> 00:02:04.467
+It has a Title field, and the placeholder text shows in it.
+
+00:02:04.932 --> 00:02:07.740
+Let's publish with the Title field empty.
+
+00:02:07.740 --> 00:02:11.923
+The title is required, so the item is not saved, and the message
+
+00:02:11.923 --> 00:02:14.432
+reads A value is required for Title.
+
+00:02:14.888 --> 00:02:19.190
+Let's type Brightwater Camp Stove in the Title field and publish.
+
+00:02:19.190 --> 00:02:23.068
+The item is saved, and the Content Types page opens again.
+
+00:02:23.525 --> 00:02:26.997
+List Items on the Product row shows its content items.
+
+00:02:26.997 --> 00:02:30.585
+The title you typed is the name of the item in the list.
+
+00:02:34.808 --> 00:02:39.966
+To generate titles, let's edit Product again and then edit the Title part.
+
+00:02:39.966 --> 00:02:45.318
+Let's choose Title is generated and input is disabled as the Behavior option.
+
+00:02:45.776 --> 00:02:47.481
+The Pattern field appears.
+
+00:02:47.481 --> 00:02:50.837
+It takes a template that can read the fields of the item.
+
+00:02:50.837 --> 00:02:55.206
+Let's combine the Brand field and the Name field, with a space between them.
+
+00:02:55.661 --> 00:03:00.276
+The editor cannot type in a generated title, so let's clear the Placeholder.
+
+00:03:00.276 --> 00:03:02.021
+Save stores the settings.
+
+00:03:02.473 --> 00:03:06.721
+On the Content Types page, Create New Product opens the editor with the
+
+00:03:06.721 --> 00:03:11.963
+Title field disabled, and a hint says The title will be auto-generated using the pattern.
+
+00:03:11.963 --> 00:03:16.873
+Let's fill in Brightwater as the Brand and Trail Backpack as the Name, and publish.
+
+00:03:17.334 --> 00:03:21.396
+List Items shows the item named Brightwater Trail Backpack.
+
+00:03:21.396 --> 00:03:26.334
+The site builds the title again each time the item is saved or published.
+
+00:03:26.794 --> 00:03:29.235
+Edit opens the item in the editor.
+
+00:03:29.235 --> 00:03:33.324
+The Title field holds the generated title and stays disabled.
+
+00:03:33.786 --> 00:03:37.800
+Back on the list, View opens the item on the site in a new tab.
+
+00:03:37.800 --> 00:03:40.766
+The heading of the page shows the same title.
+
+00:03:44.967 --> 00:03:47.256
+The last option hides the field.
+
+00:03:47.256 --> 00:03:52.978
+Let's edit the Title part again, choose Title is generated and input is hidden, and save.
+
+00:03:52.978 --> 00:03:55.387
+The same pattern builds the title.
+
+00:03:55.839 --> 00:04:00.712
+Back on the Content Types page, Create New Product shows no Title field at all.
+
+00:04:00.712 --> 00:04:05.699
+Let's fill in Brightwater as the Brand and Water Bottle as the Name, and publish.
+
+00:04:06.156 --> 00:04:08.876
+List Items shows Brightwater Water Bottle.
+
+00:04:08.876 --> 00:04:14.146
+Whichever option you choose, the title ends up as the display text of the content item.
+
+00:04:16.146 --> 00:04:18.748
+The Title part names your content items:
+
+00:04:18.748 --> 00:04:23.895
+editors type the title, or a pattern generates it, with the field disabled or hidden.
+
+00:04:23.895 --> 00:04:25.366
+Thanks for watching.
+
