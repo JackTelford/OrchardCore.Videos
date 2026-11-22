@@ -230,7 +230,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Starter Recipes: Choose How Your Site Starts](videos/starter-recipes) | 6:02 | [https://youtu.be/VtnARneJ6GY](https://youtu.be/VtnARneJ6GY) | OrchardCMS/OrchardCore |
 | [Taxonomies: Filter the Content Items List by Term](videos/taxonomies-contents-list-filters) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Taxonomies: Create a Taxonomy and Organize Its Terms](videos/taxonomies-create-terms) | 5:08 | [https://youtu.be/3VE0pO491kw](https://youtu.be/3VE0pO491kw) | OrchardCMS/OrchardCore |
-| [Taxonomy Field: Categories and Tags on Your Content](videos/taxonomies-field-and-tags) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Taxonomy Field: Categories and Tags on Your Content](videos/taxonomies-field-and-tags) | 5:06 | [https://youtu.be/Ev9Ie1MVrhM](https://youtu.be/Ev9Ie1MVrhM) | OrchardCMS/OrchardCore |
 | [Taxonomies: Categorize Your Content](videos/taxonomies-overview) | 4:36 | [https://youtu.be/ZamtKKu53Lo](https://youtu.be/ZamtKKu53Lo) | OrchardCMS/OrchardCore |
 | [Taxonomies in Code: Query Content Items by Term](videos/taxonomies-query-content) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Taxonomies: Term Pages That List Their Content](videos/taxonomies-term-pages) |  | not uploaded | OrchardCMS/OrchardCore |
