@@ -23,7 +23,36 @@
     "Orchard Core",
     "Lists"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "How a list is configured"
+    },
+    {
+      "time": "0:53",
+      "title": "Open the List settings"
+    },
+    {
+      "time": "1:24",
+      "title": "Contained content types"
+    },
+    {
+      "time": "1:55",
+      "title": "Page Size"
+    },
+    {
+      "time": "2:39",
+      "title": "Manual ordering"
+    },
+    {
+      "time": "3:36",
+      "title": "Display options"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -45,5 +74,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Lists"
-  }
+  },
+  "length": "4:25"
 }

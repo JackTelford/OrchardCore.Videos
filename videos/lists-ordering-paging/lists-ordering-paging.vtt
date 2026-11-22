@@ -1,0 +1,203 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.162
+A list is a content item that holds other content items, like a
+
+00:00:05.162 --> 00:00:06.670
+blog and its posts.
+
+00:00:06.670 --> 00:00:11.014
+In this video, you choose the types a list accepts, how many items
+
+00:00:11.014 --> 00:00:14.030
+each page shows, and the order of the items.
+
+00:00:18.630 --> 00:00:22.203
+A list is a content item with the List part, such as a Blog.
+
+00:00:22.203 --> 00:00:26.426
+Its items are content items of the types you choose, such as Blog Posts.
+
+00:00:26.426 --> 00:00:30.920
+The settings sit on the content type, so every list of that type shares them.
+
+00:00:31.670 --> 00:00:36.201
+Contained Content Types chooses which content types the list accepts.
+
+00:00:36.201 --> 00:00:40.188
+Page Size sets how many items appear on each page, and it is
+
+00:00:40.188 --> 00:00:41.940
+10 until you change it.
+
+00:00:42.690 --> 00:00:46.422
+Enable Ordering lets you arrange the items by dragging them.
+
+00:00:46.422 --> 00:00:52.530
+Two display options, Show full pager and Show container's header, change what appears around the list.
+
+00:00:56.763 --> 00:01:01.483
+The List settings live under Design, Content Definition, Content Types.
+
+00:01:01.483 --> 00:01:05.713
+Each content type has an Edit button; let's edit the Blog type.
+
+00:01:06.169 --> 00:01:09.759
+In the Parts list, the List part has an Edit button of its own.
+
+00:01:09.759 --> 00:01:12.049
+Select it to open the part's settings.
+
+00:01:12.509 --> 00:01:14.726
+The List part has these settings:
+
+00:01:14.726 --> 00:01:20.637
+Page Size, Enable Ordering, Contained Content Types, Show container's header, and Show full pager.
+
+00:01:20.637 --> 00:01:23.479
+The next chapters change them one at a time.
+
+00:01:27.695 --> 00:01:29.822
+This is the admin page of a blog.
+
+00:01:29.822 --> 00:01:34.185
+Because the list accepts a single content type, Blog Post, one Create Blog
+
+00:01:34.185 --> 00:01:35.875
+Post button adds an item.
+
+00:01:36.326 --> 00:01:41.162
+Contained Content Types shows every content type of the site as a checkbox.
+
+00:01:41.162 --> 00:01:43.790
+Let's check Article as well, and save.
+
+00:01:43.790 --> 00:01:46.716
+Saving with no type checked shows an error.
+
+00:01:47.180 --> 00:01:51.287
+Back on the blog's page, a New menu replaces the single button.
+
+00:01:51.287 --> 00:01:54.740
+It lists both accepted types, Article and Blog Post.
+
+00:01:58.970 --> 00:02:02.366
+Page Size sets how many items appear on a page.
+
+00:02:02.366 --> 00:02:06.402
+At the default of 10, all eight posts of this blog fit on
+
+00:02:06.402 --> 00:02:08.260
+one page, newest first.
+
+00:02:08.727 --> 00:02:10.036
+Let's set it to 3.
+
+00:02:10.036 --> 00:02:15.107
+Open the List settings, enter the number in the Page Size field, and save the settings.
+
+00:02:15.566 --> 00:02:19.894
+On the blog's admin page, the list shows three posts, with an arrow
+
+00:02:19.894 --> 00:02:22.266
+below it that opens the next page.
+
+00:02:22.719 --> 00:02:25.266
+The same setting applies on the site.
+
+00:02:25.266 --> 00:02:30.419
+Visitors see three posts at a time, and the Older Posts link opens the next page.
+
+00:02:30.879 --> 00:02:34.942
+The second page adds a Newer Posts link to go back, next to
+
+00:02:34.942 --> 00:02:38.629
+Older Posts, which continues toward the oldest posts.
+
+00:02:42.835 --> 00:02:46.633
+Without ordering, a list shows its newest items first.
+
+00:02:46.633 --> 00:02:51.065
+Enable Ordering lets you choose the order yourself, by dragging.
+
+00:02:51.525 --> 00:02:53.581
+Check Enable Ordering and save.
+
+00:02:53.581 --> 00:02:57.803
+Turning it on numbers the existing items from newest to oldest, so the
+
+00:02:57.803 --> 00:03:00.525
+list looks the same until you drag an item.
+
+00:03:00.984 --> 00:03:05.204
+On the blog's admin page, every row has a drag handle at its start.
+
+00:03:05.657 --> 00:03:08.589
+Open the second page with the arrow below the list.
+
+00:03:08.589 --> 00:03:11.469
+Let's drag its third post to the top of that page.
+
+00:03:11.469 --> 00:03:13.937
+The order is saved as soon as you drop it.
+
+00:03:14.400 --> 00:03:17.508
+Open the blog on the site, and select Older Posts.
+
+00:03:17.508 --> 00:03:20.006
+The second page follows the same order:
+
+00:03:20.006 --> 00:03:22.060
+the post you moved comes first.
+
+00:03:22.520 --> 00:03:25.860
+Items you create later are added at the end of the list.
+
+00:03:25.860 --> 00:03:28.500
+A post you create appears on the last page.
+
+00:03:28.955 --> 00:03:32.230
+Searching or filtering the list hides the handles.
+
+00:03:32.230 --> 00:03:35.915
+Search for garden, and the matching rows have no handles.
+
+00:03:40.129 --> 00:03:43.409
+Show full pager adds numbered pages to the pager.
+
+00:03:43.409 --> 00:03:48.358
+Its hint notes that it needs an additional database query to count the items.
+
+00:03:48.358 --> 00:03:49.849
+Check it, and save.
+
+00:03:50.302 --> 00:03:54.534
+The admin page then shows a number for every page, with arrows on
+
+00:03:54.534 --> 00:03:58.229
+either side for the first, previous, next and last page.
+
+00:03:58.229 --> 00:04:00.792
+Select a number to jump to that page.
+
+00:04:01.243 --> 00:04:06.278
+Show container's header adds a card with the title of the list above its items.
+
+00:04:06.278 --> 00:04:09.063
+Back in the settings, check it, and save.
+
+00:04:09.513 --> 00:04:13.306
+The card appears on the list's admin page, and on the editor page
+
+00:04:13.306 --> 00:04:14.963
+of each post in the list.
+
+00:04:16.963 --> 00:04:20.900
+That's how a list decides what it accepts, how many items a page
+
+00:04:20.900 --> 00:04:22.700
+shows, and in which order.
+
+00:04:22.700 --> 00:04:24.163
+Thanks for watching.
+
