@@ -1,0 +1,56 @@
+WEBVTT
+
+00:00:03.300 --> 00:00:08.351
+To make your own list, start with a content type, which defines a kind of content.
+
+00:00:08.351 --> 00:00:13.000
+Open Design, Content Definition, Content Types, and choose Create new type.
+
+00:00:13.892 --> 00:00:15.352
+Name it Help Center.
+
+00:00:15.352 --> 00:00:18.496
+The Technical Name fills in from the Display Name.
+
+00:00:18.496 --> 00:00:21.192
+Create saves the type and opens Add Parts.
+
+00:00:22.004 --> 00:00:24.150
+Parts give a type its behavior.
+
+00:00:24.150 --> 00:00:25.657
+Check three of them:
+
+00:00:25.657 --> 00:00:30.295
+Autoroute gives items a web address, List turns the type into a container,
+
+00:00:30.295 --> 00:00:32.324
+and Title gives them a title.
+
+00:00:32.785 --> 00:00:35.643
+Add Selected Parts attaches them and opens the type.
+
+00:00:35.643 --> 00:00:37.860
+Each part you added has an Edit button.
+
+00:00:37.860 --> 00:00:40.175
+Let's open the settings of the List part.
+
+00:00:40.648 --> 00:00:46.717
+The settings are Page Size, Enable Ordering, Contained Content Types, Show container's header,
+
+00:00:46.717 --> 00:00:48.294
+and Show full pager.
+
+00:00:48.294 --> 00:00:51.328
+A separate video covers ordering and paging.
+
+00:00:51.780 --> 00:00:54.631
+A list needs at least one contained type.
+
+00:00:54.631 --> 00:00:59.727
+Contained Content Types lists every content type, so check Page, the type this
+
+00:00:59.727 --> 00:01:01.790
+list holds, and choose Save.
+

@@ -1,0 +1,20 @@
+1
+00:00:03,203 --> 00:00:07,833
+In Content Items, View on the Help Center row opens the list on the site.
+
+2
+00:00:08,289 --> 00:00:12,269
+Visitors see the published items as links, the most recent first.
+
+3
+00:00:12,269 --> 00:00:15,129
+The draft is not there until it is published.
+
+4
+00:00:15,588 --> 00:00:19,142
+Selecting a title opens the item on a page of its own.
+
+5
+00:00:19,142 --> 00:00:23,408
+Each item of the list has its own address, like any other content.
+
