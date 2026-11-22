@@ -24,7 +24,40 @@
     "Orchard Core",
     "Content Fields"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "What the field stores"
+    },
+    {
+      "time": "1:01",
+      "title": "Enable Spatial"
+    },
+    {
+      "time": "1:22",
+      "title": "Add the field"
+    },
+    {
+      "time": "2:27",
+      "title": "Set a location"
+    },
+    {
+      "time": "3:11",
+      "title": "Check the result"
+    },
+    {
+      "time": "3:34",
+      "title": "After you save"
+    },
+    {
+      "time": "3:53",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +79,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Spatial"
-  }
+  },
+  "length": "4:03"
 }
