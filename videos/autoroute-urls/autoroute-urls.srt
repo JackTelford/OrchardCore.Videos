@@ -1,0 +1,308 @@
+1
+00:00:01,000 --> 00:00:03,947
+A web address should be short and readable.
+
+2
+00:00:03,947 --> 00:00:09,060
+The Autoroute module gives a content item a permalink, generated from a pattern
+
+3
+00:00:09,060 --> 00:00:11,105
+that usually uses the title.
+
+4
+00:00:11,105 --> 00:00:17,300
+In this video, you attach Autoroute to a content type, choose its options, and manage permalinks.
+
+5
+00:00:21,900 --> 00:00:26,968
+Without Autoroute, Orchard Core displays a content item at an address that ends
+
+6
+00:00:26,968 --> 00:00:31,440
+with the identifier of the item, a long string of letters and digits.
+
+7
+00:00:31,440 --> 00:00:34,720
+Visitors can't read it, remember it, or guess it.
+
+8
+00:00:35,470 --> 00:00:39,664
+A content type, such as Event, is made of parts, and Autoroute is
+
+9
+00:00:39,664 --> 00:00:41,732
+a part that you attach to it.
+
+10
+00:00:41,732 --> 00:00:45,868
+Each saved item then receives a permalink, built from a pattern.
+
+11
+00:00:45,868 --> 00:00:50,830
+By default, the pattern turns the title into lowercase words joined by dashes.
+
+12
+00:00:55,060 --> 00:00:59,295
+The Autoroute part comes from a feature, listed under Tools, Features.
+
+13
+00:00:59,295 --> 00:01:00,800
+Search for Autoroute:
+
+14
+00:01:00,800 --> 00:01:05,425
+it's enabled here, because the Blog recipe that set up this site turns it on.
+
+15
+00:01:05,425 --> 00:01:07,710
+On another site, you select Enable.
+
+16
+00:01:08,184 --> 00:01:11,633
+Open Design, Content Definition, Content Types.
+
+17
+00:01:11,633 --> 00:01:16,774
+Choose Edit on Event, a type that has a Title part and no Autoroute part.
+
+18
+00:01:17,231 --> 00:01:19,641
+The Parts list shows what the type contains.
+
+19
+00:01:19,641 --> 00:01:22,821
+Choose Add Parts to see the parts that you can attach to it.
+
+20
+00:01:23,275 --> 00:01:28,464
+Autoroute is on the list, described as providing a custom URL for your content item.
+
+21
+00:01:28,464 --> 00:01:30,771
+Choose Add & Configure on its row.
+
+22
+00:01:30,771 --> 00:01:35,325
+Orchard Core attaches the part to the Event type, and opens its settings.
+
+23
+00:01:39,587 --> 00:01:42,962
+This page holds the Autoroute settings of the Event type.
+
+24
+00:01:42,962 --> 00:01:48,587
+The Pattern field contains the template that builds each permalink, and its default uses the title.
+
+25
+00:01:48,587 --> 00:01:51,587
+A separate video covers writing your own patterns.
+
+26
+00:01:52,050 --> 00:01:54,340
+Let's turn on Allow custom path.
+
+27
+00:01:54,340 --> 00:01:57,173
+It lets editors type their own permalink.
+
+28
+00:01:57,173 --> 00:02:02,900
+When it stays off, the Permalink field can't be edited, and every permalink is generated.
+
+29
+00:02:03,354 --> 00:02:05,512
+Let's turn on Allow path updates.
+
+30
+00:02:05,512 --> 00:02:09,219
+It adds a Refresh the path option to the editor, for when the
+
+31
+00:02:09,219 --> 00:02:10,934
+title of an item changes.
+
+32
+00:02:11,386 --> 00:02:13,817
+Let's turn on Show homepage options.
+
+33
+00:02:13,817 --> 00:02:17,696
+It adds Set as homepage to the editor, for users who have the
+
+34
+00:02:17,696 --> 00:02:19,837
+permission to set the homepage.
+
+35
+00:02:19,837 --> 00:02:22,326
+A separate video covers the homepage.
+
+36
+00:02:22,782 --> 00:02:24,709
+Let's turn on Allow disabled.
+
+37
+00:02:24,709 --> 00:02:29,722
+It adds a Disabled option to the editor, which turns Autoroute off for a single item.
+
+38
+00:02:30,186 --> 00:02:35,180
+Container Settings, further down, are for items that contain other items and for
+
+39
+00:02:35,180 --> 00:02:38,839
+the items they contain, such as a taxonomy and its terms.
+
+40
+00:02:38,839 --> 00:02:42,206
+Let's leave them as they are, and save the settings.
+
+41
+00:02:46,396 --> 00:02:51,596
+Under Content, Content Items, the New button lists the content types that you can create.
+
+42
+00:02:51,596 --> 00:02:52,636
+Choose Event.
+
+43
+00:02:53,095 --> 00:02:55,932
+Enter the title, Spring Planting Workshop.
+
+44
+00:02:55,932 --> 00:03:00,306
+The Permalink field stays empty, and its hint says to leave it empty
+
+45
+00:03:00,306 --> 00:03:02,198
+to generate the permalink.
+
+46
+00:03:02,198 --> 00:03:05,863
+The options that these settings add are on the form too:
+
+47
+00:03:05,863 --> 00:03:09,055
+Disabled, Set as homepage, and Refresh the path.
+
+48
+00:03:09,506 --> 00:03:10,705
+Select Publish.
+
+49
+00:03:10,705 --> 00:03:16,015
+Autoroute generates the permalink from the title, in lowercase, with dashes between the
+
+50
+00:03:16,015 --> 00:03:20,241
+words, and adds a dash and a number if another item already uses it.
+
+51
+00:03:20,241 --> 00:03:22,296
+The event appears in the list.
+
+52
+00:03:22,755 --> 00:03:25,147
+Choose Edit to open the item again.
+
+53
+00:03:25,147 --> 00:03:31,155
+The Permalink field shows the generated permalink, and a link beside it opens the published page.
+
+54
+00:03:31,612 --> 00:03:32,789
+Follow the link.
+
+55
+00:03:32,789 --> 00:03:36,803
+The page is displayed at an address that ends with the permalink, and
+
+56
+00:03:36,803 --> 00:03:38,622
+no identifier appears in it.
+
+57
+00:03:42,828 --> 00:03:48,065
+In Content Items, let's open the event again, and change its title to Spring Planting Day.
+
+58
+00:03:48,065 --> 00:03:52,048
+The Permalink field holds the permalink built from the first title.
+
+59
+00:03:52,525 --> 00:03:54,785
+Publish, and open the item again.
+
+60
+00:03:54,785 --> 00:03:58,437
+The Permalink field holds the first permalink, unchanged.
+
+61
+00:03:58,437 --> 00:04:03,306
+Autoroute generates a permalink only when the field is empty, so the addresses
+
+62
+00:04:03,306 --> 00:04:05,915
+that visitors already use keep working.
+
+63
+00:04:06,405 --> 00:04:09,249
+To follow the title, turn on Refresh the path.
+
+64
+00:04:09,249 --> 00:04:13,133
+Its hint warns that the previous URL won't be accessible anymore.
+
+65
+00:04:13,133 --> 00:04:14,665
+Then publish the item.
+
+66
+00:04:15,120 --> 00:04:16,709
+Open the item once more.
+
+67
+00:04:16,709 --> 00:04:21,530
+The Permalink field holds the permalink generated from the title Spring Planting Day.
+
+68
+00:04:21,990 --> 00:04:24,570
+You can also type your own permalink.
+
+69
+00:04:24,570 --> 00:04:29,610
+Orchard Core refuses one that another item already uses, and one that contains
+
+70
+00:04:29,610 --> 00:04:31,710
+a space, and it explains why.
+
+71
+00:04:32,202 --> 00:04:34,920
+Replace the space with a dash, and publish.
+
+72
+00:04:34,920 --> 00:04:37,194
+Orchard Core accepts the permalink.
+
+73
+00:04:37,194 --> 00:04:38,581
+Then open the item:
+
+74
+00:04:38,581 --> 00:04:41,632
+the Permalink field holds exactly what you typed.
+
+75
+00:04:43,632 --> 00:04:45,596
+That's the Autoroute module:
+
+76
+00:04:45,596 --> 00:04:51,490
+readable, unique permalinks for your content items, with options that each content type decides.
+
+77
+00:04:51,490 --> 00:04:52,992
+Thanks for watching.
+
