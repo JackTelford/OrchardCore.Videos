@@ -1,0 +1,261 @@
+{
+ "steps": [
+  {
+   "name": "Content",
+   "data": [
+    {
+     "ContentItemId": "4gardennotesblog0000000001",
+     "ContentType": "Blog",
+     "DisplayText": "Garden Notes",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-03-01T09:00:00Z",
+     "ModifiedUtc": "2025-03-01T09:00:00Z",
+     "PublishedUtc": "2025-03-01T09:00:00Z",
+     "TitlePart": {
+      "Title": "Garden Notes"
+     },
+     "HtmlBodyPart": {
+      "Html": "Notes from a small community garden."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes"
+     },
+     "ListPart": {}
+    },
+    {
+     "ContentItemId": "4gardennotespost0000000001",
+     "ContentType": "BlogPost",
+     "DisplayText": "Planning the vegetable beds",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-03-03T09:00:00Z",
+     "ModifiedUtc": "2025-03-03T09:00:00Z",
+     "PublishedUtc": "2025-03-03T09:00:00Z",
+     "TitlePart": {
+      "Title": "Planning the vegetable beds"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "4gardennotesblog0000000001",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Sketch the plot first, then mark the sunny corners."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes/planning-the-vegetable-beds"
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Where to put each bed"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4gardennotespost0000000002",
+     "ContentType": "BlogPost",
+     "DisplayText": "Starting tomatoes from seed",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-03-10T09:00:00Z",
+     "ModifiedUtc": "2025-03-10T09:00:00Z",
+     "PublishedUtc": "2025-03-10T09:00:00Z",
+     "TitlePart": {
+      "Title": "Starting tomatoes from seed"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "4gardennotesblog0000000001",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Sow the seeds indoors, in small pots, near a bright window."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes/starting-tomatoes-from-seed"
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Six weeks before the last frost"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4gardennotespost0000000003",
+     "ContentType": "BlogPost",
+     "DisplayText": "Compost basics for beginners",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-03-17T09:00:00Z",
+     "ModifiedUtc": "2025-03-17T09:00:00Z",
+     "PublishedUtc": "2025-03-17T09:00:00Z",
+     "TitlePart": {
+      "Title": "Compost basics for beginners"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "4gardennotesblog0000000001",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Mix green scraps with dry leaves, and keep the pile damp."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes/compost-basics-for-beginners"
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Turn kitchen scraps into soil"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4gardennotespost0000000004",
+     "ContentType": "BlogPost",
+     "DisplayText": "Choosing tools for a small garden",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-03-24T09:00:00Z",
+     "ModifiedUtc": "2025-03-24T09:00:00Z",
+     "PublishedUtc": "2025-03-24T09:00:00Z",
+     "TitlePart": {
+      "Title": "Choosing tools for a small garden"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "4gardennotesblog0000000001",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "A trowel, a fork and a pair of shears cover most jobs."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes/choosing-tools-for-a-small-garden"
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Fewer tools, used more often"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4gardennotespost0000000005",
+     "ContentType": "BlogPost",
+     "DisplayText": "Watering without waste",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-03-31T09:00:00Z",
+     "ModifiedUtc": "2025-03-31T09:00:00Z",
+     "PublishedUtc": "2025-03-31T09:00:00Z",
+     "TitlePart": {
+      "Title": "Watering without waste"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "4gardennotesblog0000000001",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "A slow soak in the morning beats a daily sprinkle."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes/watering-without-waste"
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Water early, water deep"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4gardennotespost0000000006",
+     "ContentType": "BlogPost",
+     "DisplayText": "Companion planting guide",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-04-07T09:00:00Z",
+     "ModifiedUtc": "2025-04-07T09:00:00Z",
+     "PublishedUtc": "2025-04-07T09:00:00Z",
+     "TitlePart": {
+      "Title": "Companion planting guide"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "4gardennotesblog0000000001",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Basil beside tomatoes, and marigolds along the edges."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes/companion-planting-guide"
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Neighbors that help each other"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4gardennotespost0000000007",
+     "ContentType": "BlogPost",
+     "DisplayText": "Dealing with garden pests",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-04-14T09:00:00Z",
+     "ModifiedUtc": "2025-04-14T09:00:00Z",
+     "PublishedUtc": "2025-04-14T09:00:00Z",
+     "TitlePart": {
+      "Title": "Dealing with garden pests"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "4gardennotesblog0000000001",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Check the undersides of leaves, and pick off what you find."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes/dealing-with-garden-pests"
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "Gentle ways to keep leaves intact"
+      }
+     }
+    },
+    {
+     "ContentItemId": "4gardennotespost0000000008",
+     "ContentType": "BlogPost",
+     "DisplayText": "Spring planting calendar",
+     "Latest": true,
+     "Published": true,
+     "CreatedUtc": "2025-04-21T09:00:00Z",
+     "ModifiedUtc": "2025-04-21T09:00:00Z",
+     "PublishedUtc": "2025-04-21T09:00:00Z",
+     "TitlePart": {
+      "Title": "Spring planting calendar"
+     },
+     "ContainedPart": {
+      "ListContentItemId": "4gardennotesblog0000000001",
+      "ListContentType": "Blog",
+      "Order": 0
+     },
+     "MarkdownBodyPart": {
+      "Markdown": "Cool-season crops first, tender plants after the last frost."
+     },
+     "AutoroutePart": {
+      "Path": "garden-notes/spring-planting-calendar"
+     },
+     "BlogPost": {
+      "Subtitle": {
+       "Text": "What goes in the ground, and when"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
