@@ -1,0 +1,44 @@
+1
+00:00:03,232 --> 00:00:05,610
+A site can have more than one menu.
+
+2
+00:00:05,610 --> 00:00:09,612
+On the Menus page, New Menu opens the editor for an empty menu.
+
+3
+00:00:10,098 --> 00:00:14,100
+Let's type Footer Menu as the title, and leave Alias empty.
+
+4
+00:00:14,100 --> 00:00:18,410
+Add Menu Item is disabled, because a menu has to be saved before
+
+5
+00:00:18,410 --> 00:00:19,888
+it can have items.
+
+6
+00:00:20,374 --> 00:00:24,660
+Publish saves the menu and returns to the list, where Footer Menu and
+
+7
+00:00:24,660 --> 00:00:26,204
+Main Menu are listed.
+
+8
+00:00:26,668 --> 00:00:28,400
+Let's open Footer Menu:
+
+9
+00:00:28,400 --> 00:00:31,805
+its alias is footer-menu, generated from the title.
+
+10
+00:00:31,805 --> 00:00:36,883
+This theme asks only for main-menu, so Footer Menu does not appear on the site.
+
+11
+00:00:36,883 --> 00:00:40,228
+A separate video shows how a theme renders a menu.
+

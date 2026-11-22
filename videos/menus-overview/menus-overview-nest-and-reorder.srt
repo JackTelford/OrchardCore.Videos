@@ -1,0 +1,56 @@
+1
+00:00:03,300 --> 00:00:07,236
+In the editor, to put an item inside another one, use the Add
+
+2
+00:00:07,236 --> 00:00:08,646
+button of its row.
+
+3
+00:00:08,646 --> 00:00:11,055
+Let's add Categories inside Browse.
+
+4
+00:00:11,055 --> 00:00:13,640
+The same window lists the three types.
+
+5
+00:00:14,112 --> 00:00:20,427
+Let's choose Link Menu Item again, name it Categories, and point it to the categories page.
+
+6
+00:00:20,427 --> 00:00:23,162
+Publish adds the item inside Browse.
+
+7
+00:00:23,648 --> 00:00:26,622
+Categories appears indented under Browse.
+
+8
+00:00:26,622 --> 00:00:31,622
+To reorder, drag an item by its row; dragging sideways changes its level.
+
+9
+00:00:31,622 --> 00:00:36,178
+Let's drag Browse above About, and the items inside it move along.
+
+10
+00:00:36,667 --> 00:00:39,527
+The order is stored when the menu is saved.
+
+11
+00:00:39,527 --> 00:00:43,437
+Save Draft keeps it as a draft, and the confirmation says so.
+
+12
+00:00:43,904 --> 00:00:45,470
+Edit changes an item.
+
+13
+00:00:45,470 --> 00:00:50,401
+Delete removes an item together with the items inside it, after a confirmation.
+
+14
+00:00:50,401 --> 00:00:52,664
+Let's cancel, to keep Categories.
+

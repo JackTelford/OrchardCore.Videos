@@ -1,0 +1,48 @@
+1
+00:00:03,206 --> 00:00:05,571
+Let's add a link to the Main Menu.
+
+2
+00:00:05,571 --> 00:00:10,536
+Add Menu Item opens a window named Available Menu Items, with the three types.
+
+3
+00:00:10,536 --> 00:00:13,786
+Choose Link Menu Item, and select its Add button.
+
+4
+00:00:14,280 --> 00:00:19,162
+Name is the text that visitors read, and Url is the address of the link.
+
+5
+00:00:19,162 --> 00:00:22,856
+Let's name the item Browse, and point it to the blog.
+
+6
+00:00:22,856 --> 00:00:28,114
+Target, which says where the link opens, and Permissions, which limit who sees
+
+7
+00:00:28,114 --> 00:00:29,930
+the item, are optional.
+
+8
+00:00:30,477 --> 00:00:34,137
+On this form, the Publish button adds the item to the menu.
+
+9
+00:00:34,137 --> 00:00:36,502
+It does not publish the menu itself.
+
+10
+00:00:36,502 --> 00:00:37,797
+That comes later.
+
+11
+00:00:38,308 --> 00:00:40,887
+Browse appears at the end of the list.
+
+12
+00:00:40,887 --> 00:00:45,988
+Adding an item saves a draft of the menu, and the published menu does not change.
+
