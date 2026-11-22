@@ -24,7 +24,36 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Check before you store"
+    },
+    {
+      "time": "1:02",
+      "title": "The ClamAV scanner"
+    },
+    {
+      "time": "1:52",
+      "title": "Scan an upload"
+    },
+    {
+      "time": "3:28",
+      "title": "Your own upload flow"
+    },
+    {
+      "time": "4:45",
+      "title": "Temporary file storage"
+    },
+    {
+      "time": "5:52",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Antivirus",
@@ -56,5 +85,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Antivirus.ClamAV"
-  }
+  },
+  "length": "6:08"
 }
