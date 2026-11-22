@@ -21,7 +21,40 @@
     "Orchard Core",
     "Lists"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What a list is"
+    },
+    {
+      "time": "1:01",
+      "title": "The Blog is a list"
+    },
+    {
+      "time": "1:31",
+      "title": "Create a list type"
+    },
+    {
+      "time": "2:34",
+      "title": "Add items to a list"
+    },
+    {
+      "time": "3:38",
+      "title": "Find items in a list"
+    },
+    {
+      "time": "4:21",
+      "title": "See the list on the site"
+    },
+    {
+      "time": "4:45",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -43,5 +76,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Lists"
-  }
+  },
+  "length": "4:58"
 }
