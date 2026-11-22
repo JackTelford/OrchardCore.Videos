@@ -1,0 +1,300 @@
+1
+00:00:01,000 --> 00:00:03,614
+Some values belong to the whole site:
+
+2
+00:00:03,614 --> 00:00:06,715
+an announcement, a contact address, a switch.
+
+3
+00:00:06,715 --> 00:00:11,518
+Custom Settings turns a content type into a section of the Settings menu.
+
+4
+00:00:11,518 --> 00:00:15,956
+You create one, edit its values, control who can change it, and add
+
+5
+00:00:15,956 --> 00:00:17,780
+it to a deployment plan.
+
+6
+00:00:22,380 --> 00:00:26,830
+Site settings are values that belong to the whole site, not to one page.
+
+7
+00:00:26,830 --> 00:00:31,451
+The Settings menu groups them into sections, such as General and Debugging.
+
+8
+00:00:31,451 --> 00:00:34,190
+Custom Settings adds sections of your own.
+
+9
+00:00:34,940 --> 00:00:38,675
+A content type describes the fields of one kind of content.
+
+10
+00:00:38,675 --> 00:00:43,444
+Give it the CustomSettings stereotype, a label that marks its purpose, and it
+
+11
+00:00:43,444 --> 00:00:46,030
+becomes a section of the Settings menu.
+
+12
+00:00:46,780 --> 00:00:49,065
+Its fields become the form you fill in.
+
+13
+00:00:49,065 --> 00:00:52,721
+The values are saved with the site settings, so they do not appear
+
+14
+00:00:52,721 --> 00:00:54,498
+in the list of content items.
+
+15
+00:00:54,498 --> 00:00:57,240
+A site holds one set of values for each section.
+
+16
+00:00:57,990 --> 00:01:01,296
+Create a separate content type for every section.
+
+17
+00:01:01,296 --> 00:01:05,745
+Do not give the stereotype to a type that already has content items:
+
+18
+00:01:05,745 --> 00:01:08,210
+the documentation warns against it.
+
+19
+00:01:12,399 --> 00:01:15,012
+Custom Settings is a feature of its own.
+
+20
+00:01:15,012 --> 00:01:19,045
+If it is not enabled on your site, open Tools, then Features, and
+
+21
+00:01:19,045 --> 00:01:20,919
+search for Custom Settings.
+
+22
+00:01:21,372 --> 00:01:23,859
+Select Enable next to Custom Settings.
+
+23
+00:01:23,859 --> 00:01:26,912
+A message confirms that the feature was enabled.
+
+24
+00:01:31,102 --> 00:01:33,676
+A section starts as a content type.
+
+25
+00:01:33,676 --> 00:01:38,762
+Open Design, Content Definition, Content Types, and select Create new type.
+
+26
+00:01:39,226 --> 00:01:42,014
+Enter Announcement Banner as the Display Name.
+
+27
+00:01:42,014 --> 00:01:46,893
+The Technical Name fills in from it, and the saved values are stored under that name.
+
+28
+00:01:46,893 --> 00:01:47,966
+Select Create.
+
+29
+00:01:48,418 --> 00:01:52,177
+A message confirms the type, and the Add Parts page opens.
+
+30
+00:01:52,177 --> 00:01:55,642
+A type can have parts, which add ready-made behavior.
+
+31
+00:01:55,642 --> 00:01:58,638
+This one needs only fields, so select Cancel.
+
+32
+00:01:59,091 --> 00:02:01,718
+The Fields section of the type is empty.
+
+33
+00:02:01,718 --> 00:02:03,031
+Select Add Field.
+
+34
+00:02:03,497 --> 00:02:06,258
+Enter Banner Text as the Display Name.
+
+35
+00:02:06,258 --> 00:02:10,651
+The Field Type list offers Boolean Field, Text Field and others.
+
+36
+00:02:10,651 --> 00:02:13,287
+Choose Text Field, then select Save.
+
+37
+00:02:13,758 --> 00:02:16,068
+Add a second field the same way.
+
+38
+00:02:16,068 --> 00:02:21,298
+Name it Show Banner, choose Boolean Field, which is a checkbox, and select Save.
+
+39
+00:02:21,753 --> 00:02:27,378
+A type starts with Creatable, Listable, Draftable, Versionable and Securable checked.
+
+40
+00:02:27,378 --> 00:02:31,953
+A settings section needs none of them, so clear all five checkboxes.
+
+41
+00:02:32,421 --> 00:02:33,446
+Select Save.
+
+42
+00:02:33,446 --> 00:02:37,833
+Do this before you set the stereotype, because the editor hides most of
+
+43
+00:02:37,833 --> 00:02:40,511
+these options once a stereotype is saved.
+
+44
+00:02:40,963 --> 00:02:44,336
+Back in the list, select Edit for Announcement Banner.
+
+45
+00:02:44,336 --> 00:02:47,373
+Then enter CustomSettings in the Stereotype box.
+
+46
+00:02:47,829 --> 00:02:48,889
+Select Save.
+
+47
+00:02:48,889 --> 00:02:53,129
+A message confirms the update, and the type is a settings section.
+
+48
+00:02:57,318 --> 00:02:58,953
+Open Settings in the menu.
+
+49
+00:02:58,953 --> 00:03:03,704
+Announcement Banner is listed beside the sections that Orchard Core provides, under the
+
+50
+00:03:03,704 --> 00:03:05,288
+display name of the type.
+
+51
+00:03:05,752 --> 00:03:08,540
+The page shows the two fields of the type.
+
+52
+00:03:08,540 --> 00:03:12,782
+Enter a message in Banner Text, check Show Banner, and select Save.
+
+53
+00:03:13,238 --> 00:03:18,665
+A message confirms that the site settings were updated, and the page shows the saved values.
+
+54
+00:03:18,665 --> 00:03:22,098
+Templates and code can read them from the site settings.
+
+55
+00:03:26,300 --> 00:03:29,033
+Every section has a permission of its own.
+
+56
+00:03:29,033 --> 00:03:34,100
+No role receives it automatically, but the Administrator role has every permission.
+
+57
+00:03:34,554 --> 00:03:40,334
+To grant it, open Access Control, then Roles, and select Edit for the Editor role.
+
+58
+00:03:40,788 --> 00:03:43,552
+Search the permissions for Announcement Banner.
+
+59
+00:03:43,552 --> 00:03:48,248
+Manage Custom Settings - Announcement Banner is listed in the Custom Settings group.
+
+60
+00:03:48,702 --> 00:03:50,578
+Check Allow and select Save.
+
+61
+00:03:50,578 --> 00:03:54,386
+Members of the Editor role can open the section under Settings.
+
+62
+00:03:54,386 --> 00:03:57,752
+Roles without the permission do not see it in the menu.
+
+63
+00:04:01,943 --> 00:04:05,713
+A deployment plan can carry the values to another site.
+
+64
+00:04:05,713 --> 00:04:10,843
+Open Tools, Deployments, Plans, and select Manage Steps for an existing plan.
+
+65
+00:04:11,304 --> 00:04:12,717
+Select Add Step.
+
+66
+00:04:12,717 --> 00:04:17,084
+In Available Steps, filter for Custom Settings and select Add.
+
+67
+00:04:17,538 --> 00:04:22,111
+Include all custom settings is checked, which exports every section.
+
+68
+00:04:22,111 --> 00:04:25,015
+Clear it to pick the sections to include.
+
+69
+00:04:25,015 --> 00:04:27,548
+Leave it checked and select Create.
+
+70
+00:04:27,999 --> 00:04:28,254
+The plan lists the Custom Settings step with the badge All.
+
+71
+00:04:28,254 --> 00:04:28,408
+The step carries the values only.
+
+72
+00:04:28,408 --> 00:04:28,719
+To move the content type as well, add an Update Content Definitions step.
+
+73
+00:04:30,719 --> 00:04:35,163
+A content type with the CustomSettings stereotype becomes a section of the Settings
+
+74
+00:04:35,163 --> 00:04:36,960
+menu, with its own permission.
+
+75
+00:04:36,960 --> 00:04:38,259
+Thanks for watching.
+
