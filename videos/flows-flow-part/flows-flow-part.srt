@@ -1,0 +1,304 @@
+1
+00:00:01,000 --> 00:00:05,228
+A landing page often mixes text, quotes, images, and other blocks.
+
+2
+00:00:05,228 --> 00:00:09,750
+The Flow part lets editors build a page from widgets, and arrange them.
+
+3
+00:00:09,750 --> 00:00:14,036
+In this video, we'll look at the part's settings, build a page, see
+
+4
+00:00:14,036 --> 00:00:16,620
+the result, and try the Blocks editor.
+
+5
+00:00:21,220 --> 00:00:24,915
+A single body field gives an editor one block of text.
+
+6
+00:00:24,915 --> 00:00:26,886
+A landing page needs more:
+
+7
+00:00:26,886 --> 00:00:30,581
+a paragraph here, a quote there, an image beside them.
+
+8
+00:00:30,581 --> 00:00:34,830
+Editors should arrange these blocks without asking a developer.
+
+9
+00:00:35,580 --> 00:00:39,086
+The Flow part adds a list of widgets to a content item.
+
+10
+00:00:39,086 --> 00:00:43,223
+A widget is a content item whose type has Widget as its Stereotype
+
+11
+00:00:43,223 --> 00:00:46,039
+setting, so each widget has its own fields.
+
+12
+00:00:46,039 --> 00:00:48,970
+The widgets are saved inside the page itself.
+
+13
+00:00:49,720 --> 00:00:53,648
+Every widget in a Flow part has a size, from 25% to 100%
+
+14
+00:00:53,648 --> 00:00:55,991
+of the width, and an alignment.
+
+15
+00:00:55,991 --> 00:01:01,059
+The editor chooses both for each widget, and the theme decides how widgets
+
+16
+00:01:01,059 --> 00:01:04,100
+of different sizes sit next to each other.
+
+17
+00:01:04,850 --> 00:01:09,861
+The Flows feature provides the Flow part, and depends on the Widgets feature.
+
+18
+00:01:09,861 --> 00:01:12,760
+You enable features under Tools, Features.
+
+19
+00:01:12,760 --> 00:01:17,590
+The Blog recipe enables both, and the site in this video uses that recipe.
+
+20
+00:01:18,340 --> 00:01:23,694
+The recipe also creates widget types such as Paragraph, Blockquote, Image, and Raw
+
+21
+00:01:23,694 --> 00:01:26,675
+Html, and a Page type that has a Flow part.
+
+22
+00:01:26,675 --> 00:01:32,090
+The Container widget has a Flow part of its own, so widgets can hold other widgets.
+
+23
+00:01:36,294 --> 00:01:41,127
+Parts are added to a content type under Design, Content Definition, Content Types.
+
+24
+00:01:41,127 --> 00:01:42,994
+Let's open the Article type.
+
+25
+00:01:43,449 --> 00:01:44,995
+Let's choose Add Parts.
+
+26
+00:01:44,995 --> 00:01:48,460
+It lists the parts that can be attached, and Flow is one of
+
+27
+00:01:48,460 --> 00:01:50,219
+them, with its description.
+
+28
+00:01:50,671 --> 00:01:54,746
+Add & Configure attaches the part, and opens its settings.
+
+29
+00:01:54,746 --> 00:02:00,031
+The Page type has the Flow part, so let's open Page, and choose Edit on Flow.
+
+30
+00:02:00,488 --> 00:02:04,628
+Restrict Content Types limits the widget types that editors can add.
+
+31
+00:02:04,628 --> 00:02:09,608
+When no box is checked, every content type with the Widget stereotype is available.
+
+32
+00:02:10,064 --> 00:02:14,315
+Collapse Contained Items folds the widgets when the edit form loads.
+
+33
+00:02:14,315 --> 00:02:16,784
+Editors can expand each widget again.
+
+34
+00:02:17,250 --> 00:02:21,715
+The list under What default alignment should be used sets the alignment of
+
+35
+00:02:21,715 --> 00:02:23,166
+each widget you add.
+
+36
+00:02:23,166 --> 00:02:26,180
+Without a choice, widgets you add are justified.
+
+37
+00:02:26,722 --> 00:02:31,521
+The last setting, What type of editor should be used, offers Standard and Blocks.
+
+38
+00:02:31,521 --> 00:02:35,382
+Let's keep Standard for the page, and look at Blocks at the end.
+
+39
+00:02:39,663 --> 00:02:41,323
+Let's build a page.
+
+40
+00:02:41,323 --> 00:02:47,033
+Open Content, Content Items, choose New, and then Page, to open the page editor.
+
+41
+00:02:47,593 --> 00:02:52,146
+The editor has a Title, a Permalink, and the Flow part with its description.
+
+42
+00:02:52,146 --> 00:02:56,699
+Let's type the title Hillside Bakery, and leave the Permalink empty, so that
+
+43
+00:02:56,699 --> 00:02:58,753
+it is generated from the title.
+
+44
+00:02:59,217 --> 00:03:03,361
+The plus button under Flow lists the widget types that the part allows.
+
+45
+00:03:03,361 --> 00:03:06,107
+Let's choose Paragraph, and write a sentence.
+
+46
+00:03:06,567 --> 00:03:11,177
+Let's add a Blockquote the same way, and write a short quote in its text box.
+
+47
+00:03:11,629 --> 00:03:15,091
+Hover over a widget's header to see its controls.
+
+48
+00:03:15,091 --> 00:03:17,420
+The size button starts at 100%.
+
+49
+00:03:17,420 --> 00:03:22,959
+Let's set both the Paragraph and the Blockquote to 50%, and they sit side by side.
+
+50
+00:03:23,430 --> 00:03:28,519
+The alignment button offers Left, Center, Right, Justify, and Inherit.
+
+51
+00:03:28,519 --> 00:03:30,460
+Let's center the quote.
+
+52
+00:03:30,934 --> 00:03:35,664
+The arrow in a widget's header collapses the widget, leaving only the header.
+
+53
+00:03:35,664 --> 00:03:38,854
+Let's collapse the Paragraph, and expand it again.
+
+54
+00:03:39,340 --> 00:03:43,346
+To change the order, drag a widget by the handle at the left of its header.
+
+55
+00:03:43,346 --> 00:03:45,720
+Let's drag the quote before the paragraph.
+
+56
+00:03:46,207 --> 00:03:50,228
+The plus button in a header inserts a widget above that one.
+
+57
+00:03:50,228 --> 00:03:53,457
+Let's insert a Raw Html widget above the quote.
+
+58
+00:03:53,915 --> 00:03:57,993
+The trash button removes a widget, after a confirmation.
+
+59
+00:03:57,993 --> 00:04:01,545
+Let's remove the Raw Html widget, and choose Ok.
+
+60
+00:04:02,017 --> 00:04:06,231
+Publish saves the page with all its widgets, and returns to the list
+
+61
+00:04:06,231 --> 00:04:08,907
+of content items, where the page appears.
+
+62
+00:04:13,104 --> 00:04:17,199
+On the site, the quote and the paragraph appear side by side, each
+
+63
+00:04:17,199 --> 00:04:20,384
+taking half of the width, with the quote centered.
+
+64
+00:04:20,384 --> 00:04:25,104
+The theme provides these columns, and the order is the one set in the editor.
+
+65
+00:04:29,321 --> 00:04:32,652
+The Blocks editor replaces the plus menu with a dialog.
+
+66
+00:04:32,652 --> 00:04:36,421
+Let's choose Blocks in the settings of the Flow part, and save.
+
+67
+00:04:36,896 --> 00:04:39,517
+Let's edit the Hillside Bakery page again.
+
+68
+00:04:39,517 --> 00:04:43,610
+The plus button opens the Select Widget dialog, with a search box and
+
+69
+00:04:43,610 --> 00:04:45,466
+a card for each widget type.
+
+70
+00:04:45,922 --> 00:04:50,873
+Categories on the left filter the cards, and a thumbnail can illustrate each one.
+
+71
+00:04:50,873 --> 00:04:56,052
+A widget type gets both from the Category and Thumbnail settings of its content type.
+
+72
+00:04:56,506 --> 00:05:00,234
+Let's search for quote, and choose Add on the Blockquote card.
+
+73
+00:05:00,234 --> 00:05:04,236
+The dialog closes, and the widget is added after the other widgets.
+
+74
+00:05:06,236 --> 00:05:10,591
+The Flow part turns a page into a list of widgets that editors
+
+75
+00:05:10,591 --> 00:05:13,281
+add, fill in, size, align, and move.
+
+76
+00:05:13,281 --> 00:05:14,946
+Thanks for watching.
+
