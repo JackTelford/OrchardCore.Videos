@@ -22,7 +22,36 @@
     "Orchard Core",
     "Content Parts"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Why the Title part"
+    },
+    {
+      "time": "1:02",
+      "title": "Add the Title part"
+    },
+    {
+      "time": "1:52",
+      "title": "Typed titles"
+    },
+    {
+      "time": "2:31",
+      "title": "Generated titles"
+    },
+    {
+      "time": "3:41",
+      "title": "Hidden Title field"
+    },
+    {
+      "time": "4:15",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +73,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Title"
-  }
+  },
+  "length": "4:26"
 }
