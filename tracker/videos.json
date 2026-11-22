@@ -1290,14 +1290,14 @@
     "docs": [
       "src/docs/reference/modules/Taxonomies/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 3.4,
     "words": 513,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/317",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
