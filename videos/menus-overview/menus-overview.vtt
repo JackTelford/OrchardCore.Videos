@@ -1,0 +1,245 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.509
+Visitors find their way around a site with its menus.
+
+00:00:04.509 --> 00:00:08.494
+In this video, you use the Orchard Core Menu module to open a
+
+00:00:08.494 --> 00:00:12.419
+menu, add items to it, arrange them, and publish the result.
+
+00:00:12.419 --> 00:00:14.560
+Then you create a second menu.
+
+00:00:19.160 --> 00:00:21.853
+Orchard Core has two kinds of navigation.
+
+00:00:21.853 --> 00:00:25.234
+The admin menu is for the people who manage the site.
+
+00:00:25.234 --> 00:00:30.220
+The menus of the Menu module are for your visitors, and this video is about them.
+
+00:00:30.970 --> 00:00:34.848
+A menu is a content item of the type Menu, like the pages
+
+00:00:34.848 --> 00:00:36.634
+and posts of your site.
+
+00:00:36.634 --> 00:00:40.143
+It has a title, an alias, and a list of menu items.
+
+00:00:40.143 --> 00:00:43.590
+An item can hold other items, so a menu is a tree.
+
+00:00:44.340 --> 00:00:47.756
+The Menu module has three types of menu items:
+
+00:00:47.756 --> 00:00:51.698
+Link Menu Item, Content Menu Item, and Html Menu Item.
+
+00:00:51.698 --> 00:00:53.538
+This video uses links.
+
+00:00:53.538 --> 00:00:56.560
+A separate video covers the other types.
+
+00:00:57.310 --> 00:01:01.123
+A theme shows a menu where its layout asks for it, usually by
+
+00:01:01.123 --> 00:01:02.716
+the alias of the menu.
+
+00:01:02.716 --> 00:01:07.610
+It shows the published version, so your changes reach visitors when you publish.
+
+00:01:11.910 --> 00:01:14.235
+This is the front end of a site.
+
+00:01:14.235 --> 00:01:17.415
+In the navigation bar, a menu lists two items:
+
+00:01:17.415 --> 00:01:18.700
+Home and About.
+
+00:01:19.201 --> 00:01:22.491
+In the admin, let's open Content, then Menus.
+
+00:01:22.491 --> 00:01:28.038
+If your site does not show Menus, enable the Menu feature under Tools, Features.
+
+00:01:28.038 --> 00:01:30.941
+The list shows one menu, the Main Menu.
+
+00:01:31.434 --> 00:01:33.619
+Let's select Edit on the Main Menu.
+
+00:01:33.619 --> 00:01:36.924
+Title is the name of the menu in the admin, and Alias is
+
+00:01:36.924 --> 00:01:39.162
+the name a theme uses to ask for it.
+
+00:01:39.162 --> 00:01:41.614
+This theme asks for the alias main-menu.
+
+00:01:42.071 --> 00:01:47.716
+Below, the items are listed in order, each with Edit, Add, and Delete buttons.
+
+00:01:47.716 --> 00:01:52.151
+Add Menu Item starts an item at the first level of the menu.
+
+00:01:56.358 --> 00:01:58.722
+Let's add a link to the Main Menu.
+
+00:01:58.722 --> 00:02:03.687
+Add Menu Item opens a window named Available Menu Items, with the three types.
+
+00:02:03.687 --> 00:02:06.938
+Choose Link Menu Item, and select its Add button.
+
+00:02:07.431 --> 00:02:12.313
+Name is the text that visitors read, and Url is the address of the link.
+
+00:02:12.313 --> 00:02:16.007
+Let's name the item Browse, and point it to the blog.
+
+00:02:16.007 --> 00:02:21.265
+Target, which says where the link opens, and Permissions, which limit who sees
+
+00:02:21.265 --> 00:02:23.081
+the item, are optional.
+
+00:02:23.628 --> 00:02:27.288
+On this form, the Publish button adds the item to the menu.
+
+00:02:27.288 --> 00:02:29.653
+It does not publish the menu itself.
+
+00:02:29.653 --> 00:02:30.948
+That comes later.
+
+00:02:31.459 --> 00:02:34.039
+Browse appears at the end of the list.
+
+00:02:34.039 --> 00:02:39.139
+Adding an item saves a draft of the menu, and the published menu does not change.
+
+00:02:43.439 --> 00:02:47.375
+In the editor, to put an item inside another one, use the Add
+
+00:02:47.375 --> 00:02:48.785
+button of its row.
+
+00:02:48.785 --> 00:02:51.194
+Let's add Categories inside Browse.
+
+00:02:51.194 --> 00:02:53.779
+The same window lists the three types.
+
+00:02:54.251 --> 00:03:00.566
+Let's choose Link Menu Item again, name it Categories, and point it to the categories page.
+
+00:03:00.566 --> 00:03:03.301
+Publish adds the item inside Browse.
+
+00:03:03.787 --> 00:03:06.761
+Categories appears indented under Browse.
+
+00:03:06.761 --> 00:03:11.761
+To reorder, drag an item by its row; dragging sideways changes its level.
+
+00:03:11.761 --> 00:03:16.317
+Let's drag Browse above About, and the items inside it move along.
+
+00:03:16.806 --> 00:03:19.666
+The order is stored when the menu is saved.
+
+00:03:19.666 --> 00:03:23.576
+Save Draft keeps it as a draft, and the confirmation says so.
+
+00:03:24.043 --> 00:03:25.609
+Edit changes an item.
+
+00:03:25.609 --> 00:03:30.540
+Delete removes an item together with the items inside it, after a confirmation.
+
+00:03:30.540 --> 00:03:32.803
+Let's cancel, to keep Categories.
+
+00:03:37.100 --> 00:03:39.396
+The site shows the published menu.
+
+00:03:39.396 --> 00:03:43.357
+The items you added are in a draft, so the navigation bar lists
+
+00:03:43.357 --> 00:03:44.850
+only Home and About.
+
+00:03:45.310 --> 00:03:49.115
+Back in the admin, the Menus page shows two badges on the Main Menu:
+
+00:03:49.115 --> 00:03:50.452
+Published and Draft.
+
+00:03:50.452 --> 00:03:52.560
+Let's open it with the Edit button.
+
+00:03:53.046 --> 00:03:55.886
+Publish makes the draft the published version.
+
+00:03:55.886 --> 00:04:00.146
+The page returns to the list, which confirms that the menu is published.
+
+00:04:00.620 --> 00:04:04.876
+On the site, the navigation bar lists Home, Browse, and About.
+
+00:04:04.876 --> 00:04:08.130
+Browse opens a drop-down list with Categories.
+
+00:04:12.362 --> 00:04:14.740
+A site can have more than one menu.
+
+00:04:14.740 --> 00:04:18.742
+On the Menus page, New Menu opens the editor for an empty menu.
+
+00:04:19.228 --> 00:04:23.230
+Let's type Footer Menu as the title, and leave Alias empty.
+
+00:04:23.230 --> 00:04:27.540
+Add Menu Item is disabled, because a menu has to be saved before
+
+00:04:27.540 --> 00:04:29.018
+it can have items.
+
+00:04:29.504 --> 00:04:33.790
+Publish saves the menu and returns to the list, where Footer Menu and
+
+00:04:33.790 --> 00:04:35.334
+Main Menu are listed.
+
+00:04:35.798 --> 00:04:37.530
+Let's open Footer Menu:
+
+00:04:37.530 --> 00:04:40.935
+its alias is footer-menu, generated from the title.
+
+00:04:40.935 --> 00:04:46.013
+This theme asks only for main-menu, so Footer Menu does not appear on the site.
+
+00:04:46.013 --> 00:04:49.358
+A separate video shows how a theme renders a menu.
+
+00:04:51.358 --> 00:04:52.998
+That's the Menu module:
+
+00:04:52.998 --> 00:04:57.014
+you create a menu, add items, arrange them in a tree, and publish
+
+00:04:57.014 --> 00:04:59.107
+it to change what visitors see.
+
+00:04:59.107 --> 00:05:00.578
+Thanks for watching.
+
