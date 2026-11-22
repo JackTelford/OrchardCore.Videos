@@ -23,7 +23,40 @@
     "Orchard Core",
     "Content Parts"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:19",
+      "title": "What Custom Settings are"
+    },
+    {
+      "time": "1:09",
+      "title": "Enable the feature"
+    },
+    {
+      "time": "1:27",
+      "title": "Create the content type"
+    },
+    {
+      "time": "2:54",
+      "title": "Edit the settings"
+    },
+    {
+      "time": "3:23",
+      "title": "Control who can edit it"
+    },
+    {
+      "time": "3:58",
+      "title": "Move settings to another site"
+    },
+    {
+      "time": "4:29",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -45,5 +78,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.CustomSettings"
-  }
+  },
+  "length": "4:39"
 }
