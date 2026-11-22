@@ -145,7 +145,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Lucene Query Syntax: Write Precise Search Queries](videos/lucene-query-syntax) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Lucene: Full-Text Search With No External Service](videos/lucene-search) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Amazon S3 Media Storage: Keep Media in an S3 Bucket](videos/media-amazon-s3) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Azure Media Storage: Keep Media in Azure Blob Storage](videos/media-azure-blob-storage) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Azure Media Storage: Keep Media in Azure Blob Storage](videos/media-azure-blob-storage) | 6:09 | [https://youtu.be/SqUaSbUri9g](https://youtu.be/SqUaSbUri9g) | OrchardCMS/OrchardCore |
 | [Media Cache: Purge the Local Copy of Remote Media](videos/media-cache) | 3:38 | [https://youtu.be/MTkbtx3ykaE](https://youtu.be/MTkbtx3ykaE) | OrchardCMS/OrchardCore |
 | [Media Field: Attach Images and Files to Content](videos/media-field) | 5:41 | [https://youtu.be/5wbolSzAOpg](https://youtu.be/5wbolSzAOpg) | OrchardCMS/OrchardCore |
 | [Media in Templates: Image Resizing, Asset URLs and Tag Helpers](videos/media-in-templates) | 6:15 | [https://youtu.be/aGWXBEQEa-0](https://youtu.be/aGWXBEQEa-0) | OrchardCMS/OrchardCore |

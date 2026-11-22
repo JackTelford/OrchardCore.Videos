@@ -82,5 +82,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Media.Azure.Storage"
   },
-  "length": "6:09"
+  "length": "6:09",
+  "youtube": {
+    "id": "SqUaSbUri9g",
+    "url": "https://youtu.be/SqUaSbUri9g",
+    "version": "v1"
+  }
 }
