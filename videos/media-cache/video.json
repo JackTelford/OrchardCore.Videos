@@ -23,7 +23,36 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:18",
+      "title": "How the cache works"
+    },
+    {
+      "time": "0:58",
+      "title": "Enable Media Cache"
+    },
+    {
+      "time": "1:41",
+      "title": "Purge the cache"
+    },
+    {
+      "time": "2:28",
+      "title": "Who can purge"
+    },
+    {
+      "time": "2:53",
+      "title": "Automatic cleanup"
+    },
+    {
+      "time": "3:27",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Permissions",
@@ -53,5 +82,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Media.Cache"
-  }
+  },
+  "length": "3:38"
 }

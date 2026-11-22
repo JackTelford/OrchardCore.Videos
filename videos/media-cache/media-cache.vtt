@@ -1,0 +1,161 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.514
+When your site stores media in Azure Blob Storage or Amazon S3, it
+
+00:00:05.514 --> 00:00:08.523
+keeps a local copy of the files it serves.
+
+00:00:08.523 --> 00:00:13.349
+This video enables Media Cache, purges the copy, allows a role to purge
+
+00:00:13.349 --> 00:00:16.860
+it, and names the tasks that can clean the caches.
+
+00:00:21.460 --> 00:00:25.782
+When media lives in Azure Blob Storage or Amazon S3, your Orchard Core
+
+00:00:25.782 --> 00:00:27.375
+site serves the files.
+
+00:00:27.375 --> 00:00:31.697
+The first time someone requests a file, the site downloads it from the
+
+00:00:31.697 --> 00:00:34.370
+store and keeps a copy on the web server.
+
+00:00:35.120 --> 00:00:39.955
+Later requests for the file use that copy, and image resizing starts from it.
+
+00:00:39.955 --> 00:00:44.033
+A file you upload in the media library is copied right away, and
+
+00:00:44.033 --> 00:00:47.120
+deleting or moving a file removes its old copy.
+
+00:00:47.870 --> 00:00:51.625
+You purge the whole cache to free disk space or to fetch fresh copies.
+
+00:00:51.625 --> 00:00:55.282
+With a content delivery network in front of your site, you can purge
+
+00:00:55.282 --> 00:00:57.950
+once the network has fetched the files it needs.
+
+00:01:02.143 --> 00:01:05.712
+Let's open Tools, Features, and search for Media Cache.
+
+00:01:05.712 --> 00:01:10.041
+It is in the Content Management category, and its description reads:
+
+00:01:10.041 --> 00:01:13.903
+The media cache module adds remote file store cache support.
+
+00:01:14.354 --> 00:01:19.160
+Azure Media Storage and Amazon Media Storage both depend on Media Cache, so
+
+00:01:19.160 --> 00:01:21.593
+enabling either one enables it too.
+
+00:01:21.593 --> 00:01:26.814
+Let's enable Media Cache alone, to see what its page shows without a remote store.
+
+00:01:27.287 --> 00:01:30.980
+Settings, Media, Cache opens a page titled Asset Cache.
+
+00:01:30.980 --> 00:01:35.581
+Without a remote store, the page reports an error saying that a remote
+
+00:01:35.581 --> 00:01:40.847
+media store must be enabled and configured in the host configuration of the site.
+
+00:01:45.059 --> 00:01:49.426
+On a site where Azure Media Storage is enabled and configured, the same
+
+00:01:49.426 --> 00:01:53.850
+page shows a notice that media is configured, and one action, Purge All.
+
+00:01:53.850 --> 00:01:56.119
+It empties the cache of this site.
+
+00:01:56.570 --> 00:01:58.151
+Let's select Purge All.
+
+00:01:58.151 --> 00:01:59.241
+A dialog asks:
+
+00:01:59.241 --> 00:02:02.510
+Are you sure you want to purge the entire asset cache?
+
+00:02:02.510 --> 00:02:03.600
+Let's confirm.
+
+00:02:04.134 --> 00:02:06.072
+The page shows the message:
+
+00:02:06.072 --> 00:02:07.540
+Asset cache purged.
+
+00:02:07.540 --> 00:02:11.063
+If a file is in use and the site cannot delete it, the
+
+00:02:11.063 --> 00:02:14.116
+message reads Asset cache purged, with errors.
+
+00:02:14.116 --> 00:02:17.404
+The files in the remote store stay where they are.
+
+00:02:17.950 --> 00:02:20.047
+The cache fills again on demand.
+
+00:02:20.047 --> 00:02:23.026
+Let's request one of the site's images directly.
+
+00:02:23.026 --> 00:02:27.330
+The site downloads it from the store again, keeps a copy, and serves it.
+
+00:02:31.522 --> 00:02:35.998
+The Administrator role has the Manage Asset Cache Folder permission.
+
+00:02:35.998 --> 00:02:41.382
+To give it to another role, open Access Control, Roles, and select Edit for Editor.
+
+00:02:41.844 --> 00:02:44.148
+Search the permissions for cache.
+
+00:02:44.148 --> 00:02:49.052
+Under Media Cache, select Allow for Manage Asset Cache Folder, and then Save.
+
+00:02:49.052 --> 00:02:52.714
+The permission exists only while Media Cache is enabled.
+
+00:02:56.914 --> 00:03:00.761
+Purge All empties only the copies of the original files.
+
+00:03:00.761 --> 00:03:05.724
+Resized images are kept in a separate cache, which Purge All leaves alone.
+
+00:03:06.474 --> 00:03:09.884
+Two background tasks clean the caches on a schedule:
+
+00:03:09.884 --> 00:03:13.706
+Remote Media Cache Cleaner and Resized Media Cache Cleaner.
+
+00:03:13.706 --> 00:03:18.644
+With the Background Tasks feature enabled, Tools, Background Tasks lists them.
+
+00:03:19.394 --> 00:03:21.422
+They run once a day by default.
+
+00:03:21.422 --> 00:03:26.574
+They do nothing until the host configuration sets a time limit for the cache they clean.
+
+00:03:28.574 --> 00:03:32.352
+A site that stores media remotely keeps a local copy of it, and
+
+00:03:32.352 --> 00:03:35.691
+Purge All empties that copy when you need fresh copies.
+
+00:03:35.691 --> 00:03:37.114
+Thanks for watching.
+

@@ -1543,14 +1543,14 @@
     "docs": [
       "src/docs/reference/modules/Security/Permissions.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 3.5,
     "words": 528,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/326",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
