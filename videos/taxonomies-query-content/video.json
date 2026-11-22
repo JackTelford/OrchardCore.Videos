@@ -25,7 +25,40 @@
     "Orchard Core",
     "Taxonomies"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Where the terms are stored"
+    },
+    {
+      "time": "0:47",
+      "title": "Query the TaxonomyIndex"
+    },
+    {
+      "time": "1:50",
+      "title": "Index the terms for Lucene"
+    },
+    {
+      "time": "2:44",
+      "title": "A Lucene query with parameters"
+    },
+    {
+      "time": "3:59",
+      "title": "Call the query from code"
+    },
+    {
+      "time": "4:27",
+      "title": "The term page query"
+    },
+    {
+      "time": "4:53",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -53,5 +86,5 @@
     "pullRequest": null,
     "feature": "OrchardCore.Taxonomies"
   },
-  "length": "5:04"
+  "length": "5:05"
 }
