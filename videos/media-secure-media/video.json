@@ -22,7 +22,40 @@
     "Orchard Core",
     "Media"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Why Secure Media"
+    },
+    {
+      "time": "0:50",
+      "title": "Enable Secure Media"
+    },
+    {
+      "time": "1:47",
+      "title": "The view permissions"
+    },
+    {
+      "time": "2:31",
+      "title": "Open the root folder"
+    },
+    {
+      "time": "3:11",
+      "title": "Allow a role to view a folder"
+    },
+    {
+      "time": "4:05",
+      "title": "Good to know"
+    },
+    {
+      "time": "4:26",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Permissions",
@@ -48,5 +81,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Media.Security"
-  }
+  },
+  "length": "4:41"
 }
