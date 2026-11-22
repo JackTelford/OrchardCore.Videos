@@ -23,7 +23,40 @@
     "Orchard Core",
     "Content Fields"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Ways to relate content"
+    },
+    {
+      "time": "1:12",
+      "title": "Add a Content Picker field"
+    },
+    {
+      "time": "2:15",
+      "title": "Pick content items"
+    },
+    {
+      "time": "3:07",
+      "title": "Pick users"
+    },
+    {
+      "time": "4:10",
+      "title": "Pick from a search index"
+    },
+    {
+      "time": "5:09",
+      "title": "Content pickers at a glance"
+    },
+    {
+      "time": "5:37",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Content Fields",
@@ -60,5 +93,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentFields"
-  }
+  },
+  "length": "5:47"
 }
