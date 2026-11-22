@@ -1,0 +1,56 @@
+WEBVTT
+
+00:00:03.215 --> 00:00:05.283
+Next, create the list itself.
+
+00:00:05.283 --> 00:00:10.187
+Under Content, Content Items, the New menu offers Help Center, like any other
+
+00:00:10.187 --> 00:00:12.195
+content type you can create.
+
+00:00:12.810 --> 00:00:14.696
+Enter the title Help Center.
+
+00:00:14.696 --> 00:00:16.970
+The permalink is generated for you.
+
+00:00:16.970 --> 00:00:18.135
+Choose Publish:
+
+00:00:18.135 --> 00:00:21.520
+the list is published, and you return to Content Items.
+
+00:00:21.985 --> 00:00:26.149
+The Help Center row has a button for its items, List Page Items.
+
+00:00:26.149 --> 00:00:29.065
+It opens the page of the list in the admin.
+
+00:00:29.540 --> 00:00:32.502
+The page of the list says that it is empty.
+
+00:00:32.502 --> 00:00:37.820
+Create Page adds the first item, and the editor opens with links back to the list.
+
+00:00:38.283 --> 00:00:41.835
+Enter the title Reset your password and choose Publish.
+
+00:00:41.835 --> 00:00:44.863
+You return to the list, and the item is in it.
+
+00:00:45.315 --> 00:00:48.125
+Save Draft keeps an item unpublished.
+
+00:00:48.125 --> 00:00:52.635
+Create a second item, Export your data, and save it as a draft.
+
+00:00:52.635 --> 00:00:54.335
+The list shows both.
+
+00:00:54.800 --> 00:00:59.433
+Create a third item, Change your email address, and choose Publish.
+
+00:00:59.433 --> 00:01:02.860
+The list shows all three, the most recent first.
+

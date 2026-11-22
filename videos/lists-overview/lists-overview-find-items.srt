@@ -1,0 +1,36 @@
+1
+00:00:03,213 --> 00:00:08,271
+The page of a list shows its items, the most recent first, drafts included.
+
+2
+00:00:08,271 --> 00:00:12,643
+Each row has an Edit button, and published items also have View.
+
+3
+00:00:13,113 --> 00:00:17,612
+The filter menu next to the search box offers Only draft items, Only
+
+4
+00:00:17,612 --> 00:00:21,868
+published items, and Owned by me, which keeps the items you own.
+
+5
+00:00:21,868 --> 00:00:26,123
+Choose Only draft items to see the items that are not published.
+
+6
+00:00:26,581 --> 00:00:30,645
+Open the filter menu again and choose Only published items.
+
+7
+00:00:30,645 --> 00:00:34,521
+The draft is hidden, and the two published items remain.
+
+8
+00:00:34,979 --> 00:00:37,902
+The search box filters the items by title.
+
+9
+00:00:37,902 --> 00:00:41,799
+Search for password, and only Reset your password remains.
+

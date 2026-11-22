@@ -1,0 +1,239 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:02.954
+Some content belongs together:
+
+00:00:02.954 --> 00:00:05.885
+the posts of a blog, the pages of a help center.
+
+00:00:05.885 --> 00:00:09.358
+The Lists module groups content items in a container item.
+
+00:00:09.358 --> 00:00:12.832
+You'll see what a list is, how to turn a content type into
+
+00:00:12.832 --> 00:00:14.460
+one, and how to fill it.
+
+00:00:19.060 --> 00:00:22.997
+A list is a content item that holds other content items.
+
+00:00:22.997 --> 00:00:27.061
+A blog holds its posts, and a help center holds its pages.
+
+00:00:27.061 --> 00:00:33.030
+Both the list and its items are ordinary content items, edited in the usual admin pages.
+
+00:00:33.780 --> 00:00:37.339
+A content type becomes a list when it has the List part.
+
+00:00:37.339 --> 00:00:40.439
+Items created from inside the list belong to it.
+
+00:00:40.439 --> 00:00:44.515
+Each item remembers the list it was created in, and it belongs to
+
+00:00:44.515 --> 00:00:45.950
+one list at a time.
+
+00:00:46.700 --> 00:00:50.547
+In the admin, a list gets its own page, with a button to
+
+00:00:50.547 --> 00:00:52.346
+create items inside it.
+
+00:00:52.346 --> 00:00:55.573
+On the site, visitors see its published items.
+
+00:00:55.573 --> 00:01:00.040
+The feature is called Lists, and you enable it in Tools, Features.
+
+00:01:04.266 --> 00:01:08.211
+A site set up with the Blog recipe has the Lists feature enabled,
+
+00:01:08.211 --> 00:01:09.823
+and its Blog is a list.
+
+00:01:09.823 --> 00:01:12.046
+Let's open Blog in the admin menu.
+
+00:01:12.505 --> 00:01:14.630
+This is the page of the list.
+
+00:01:14.630 --> 00:01:19.486
+Edit Blog changes the list itself, and Create Blog Post adds a post to it.
+
+00:01:19.486 --> 00:01:22.035
+The posts it holds are listed below.
+
+00:01:22.529 --> 00:01:25.018
+Each post is a content item of its own.
+
+00:01:25.018 --> 00:01:28.945
+It remembers the blog it was created in, and this page shows only
+
+00:01:28.945 --> 00:01:30.549
+the posts of that blog.
+
+00:01:34.849 --> 00:01:39.900
+To make your own list, start with a content type, which defines a kind of content.
+
+00:01:39.900 --> 00:01:44.549
+Open Design, Content Definition, Content Types, and choose Create new type.
+
+00:01:45.441 --> 00:01:46.901
+Name it Help Center.
+
+00:01:46.901 --> 00:01:50.045
+The Technical Name fills in from the Display Name.
+
+00:01:50.045 --> 00:01:52.741
+Create saves the type and opens Add Parts.
+
+00:01:53.553 --> 00:01:55.698
+Parts give a type its behavior.
+
+00:01:55.698 --> 00:01:57.206
+Check three of them:
+
+00:01:57.206 --> 00:02:01.844
+Autoroute gives items a web address, List turns the type into a container,
+
+00:02:01.844 --> 00:02:03.873
+and Title gives them a title.
+
+00:02:04.334 --> 00:02:07.192
+Add Selected Parts attaches them and opens the type.
+
+00:02:07.192 --> 00:02:09.409
+Each part you added has an Edit button.
+
+00:02:09.409 --> 00:02:11.724
+Let's open the settings of the List part.
+
+00:02:12.197 --> 00:02:18.265
+The settings are Page Size, Enable Ordering, Contained Content Types, Show container's header,
+
+00:02:18.265 --> 00:02:19.843
+and Show full pager.
+
+00:02:19.843 --> 00:02:22.877
+A separate video covers ordering and paging.
+
+00:02:23.329 --> 00:02:26.180
+A list needs at least one contained type.
+
+00:02:26.180 --> 00:02:31.276
+Contained Content Types lists every content type, so check Page, the type this
+
+00:02:31.276 --> 00:02:33.339
+list holds, and choose Save.
+
+00:02:37.554 --> 00:02:39.622
+Next, create the list itself.
+
+00:02:39.622 --> 00:02:44.526
+Under Content, Content Items, the New menu offers Help Center, like any other
+
+00:02:44.526 --> 00:02:46.534
+content type you can create.
+
+00:02:47.148 --> 00:02:49.035
+Enter the title Help Center.
+
+00:02:49.035 --> 00:02:51.309
+The permalink is generated for you.
+
+00:02:51.309 --> 00:02:52.474
+Choose Publish:
+
+00:02:52.474 --> 00:02:55.858
+the list is published, and you return to Content Items.
+
+00:02:56.324 --> 00:03:00.488
+The Help Center row has a button for its items, List Page Items.
+
+00:03:00.488 --> 00:03:03.404
+It opens the page of the list in the admin.
+
+00:03:03.879 --> 00:03:06.841
+The page of the list says that it is empty.
+
+00:03:06.841 --> 00:03:12.159
+Create Page adds the first item, and the editor opens with links back to the list.
+
+00:03:12.622 --> 00:03:16.174
+Enter the title Reset your password and choose Publish.
+
+00:03:16.174 --> 00:03:19.202
+You return to the list, and the item is in it.
+
+00:03:19.653 --> 00:03:22.464
+Save Draft keeps an item unpublished.
+
+00:03:22.464 --> 00:03:26.974
+Create a second item, Export your data, and save it as a draft.
+
+00:03:26.974 --> 00:03:28.673
+The list shows both.
+
+00:03:29.139 --> 00:03:33.772
+Create a third item, Change your email address, and choose Publish.
+
+00:03:33.772 --> 00:03:37.199
+The list shows all three, the most recent first.
+
+00:03:41.411 --> 00:03:46.470
+The page of a list shows its items, the most recent first, drafts included.
+
+00:03:46.470 --> 00:03:50.841
+Each row has an Edit button, and published items also have View.
+
+00:03:51.312 --> 00:03:55.811
+The filter menu next to the search box offers Only draft items, Only
+
+00:03:55.811 --> 00:04:00.066
+published items, and Owned by me, which keeps the items you own.
+
+00:04:00.066 --> 00:04:04.322
+Choose Only draft items to see the items that are not published.
+
+00:04:04.780 --> 00:04:08.843
+Open the filter menu again and choose Only published items.
+
+00:04:08.843 --> 00:04:12.720
+The draft is hidden, and the two published items remain.
+
+00:04:13.178 --> 00:04:16.101
+The search box filters the items by title.
+
+00:04:16.101 --> 00:04:19.998
+Search for password, and only Reset your password remains.
+
+00:04:24.201 --> 00:04:28.831
+In Content Items, View on the Help Center row opens the list on the site.
+
+00:04:29.286 --> 00:04:33.267
+Visitors see the published items as links, the most recent first.
+
+00:04:33.267 --> 00:04:36.126
+The draft is not there until it is published.
+
+00:04:36.585 --> 00:04:40.140
+Selecting a title opens the item on a page of its own.
+
+00:04:40.140 --> 00:04:44.405
+Each item of the list has its own address, like any other content.
+
+00:04:46.405 --> 00:04:49.079
+A list is a content item that holds others:
+
+00:04:49.079 --> 00:04:52.788
+add the List part to a type, choose the types it contains, and
+
+00:04:52.788 --> 00:04:55.407
+create its items from the list's own page.
+
+00:04:55.407 --> 00:04:56.825
+Thanks for watching.
+
