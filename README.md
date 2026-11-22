@@ -70,7 +70,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Create a CMS Web Application With dotnet new](videos/create-cms-web-application) | 6:36 | [https://youtu.be/AL5UNqnC-W0](https://youtu.be/AL5UNqnC-W0) | OrchardCMS/OrchardCore |
 | [Create a Liquid Widget Without Writing a Module](videos/create-liquid-widget) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Module Metadata in Your Project File](videos/csproj-module-metadata) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Custom Settings: Turn a Content Type Into Site Settings](videos/custom-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Custom Settings: Turn a Content Type Into Site Settings](videos/custom-settings) | 4:39 | [https://youtu.be/f0x_gSmC4JA](https://youtu.be/f0x_gSmC4JA) | OrchardCMS/OrchardCore |
 | [Data in Orchard Core: Databases, YesSql and Documents](videos/data-and-yessql) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Dynamic Translations: Translate Type Names and Other Site Data](videos/data-localization) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Data Migrations: Create and Update Your Module's Data](videos/data-migrations) |  | not uploaded | OrchardCMS/OrchardCore |
