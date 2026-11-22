@@ -1,0 +1,48 @@
+1
+00:00:03,200 --> 00:00:07,221
+A taxonomy is a content item of the Taxonomy type, so it is
+
+2
+00:00:07,221 --> 00:00:09,819
+listed under Content, Content Items.
+
+3
+00:00:09,819 --> 00:00:15,820
+Filtered by that type, the list shows the two taxonomies of this site, Categories and Tags.
+
+4
+00:00:16,275 --> 00:00:17,948
+Let's edit Categories.
+
+5
+00:00:17,948 --> 00:00:22,368
+Term Content Type sets the content type of the terms, here Category.
+
+6
+00:00:22,368 --> 00:00:25,175
+Each term is a content item of that type.
+
+7
+00:00:25,644 --> 00:00:28,326
+Below it is the hierarchy of terms.
+
+8
+00:00:28,326 --> 00:00:34,148
+Travel is a term, and Food is a term with two child terms, Recipes and Restaurants.
+
+9
+00:00:34,148 --> 00:00:37,354
+Each row has Edit, Add, and Delete buttons.
+
+10
+00:00:37,867 --> 00:00:40,903
+Add Category creates a term at the top level.
+
+11
+00:00:40,903 --> 00:00:44,474
+The Add button of a row creates a child term under it.
+
+12
+00:00:44,474 --> 00:00:50,247
+The terms are stored inside the taxonomy, so you publish the taxonomy to publish its terms.
+

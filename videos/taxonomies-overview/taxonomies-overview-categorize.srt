@@ -1,0 +1,48 @@
+1
+00:00:03,248 --> 00:00:05,937
+Content is categorized with fields.
+
+2
+00:00:05,937 --> 00:00:07,839
+Let's edit a Blog Post.
+
+3
+00:00:07,839 --> 00:00:11,774
+Below the body, it has two fields that use taxonomies:
+
+4
+00:00:11,774 --> 00:00:13,348
+Tags and Category.
+
+5
+00:00:13,801 --> 00:00:18,384
+Category accepts one term, and only a term without children.
+
+6
+00:00:18,384 --> 00:00:20,120
+Travel is selected.
+
+7
+00:00:20,120 --> 00:00:26,161
+Food is a parent, so it is disabled, while Recipes and Restaurants can be chosen.
+
+8
+00:00:26,656 --> 00:00:28,550
+Tags accepts several terms.
+
+9
+00:00:28,550 --> 00:00:33,200
+Clicking the box lists the existing tags, and you select the ones you want.
+
+10
+00:00:33,200 --> 00:00:37,506
+If you type a name that does not exist, pressing Enter creates a tag.
+
+11
+00:00:37,966 --> 00:00:42,346
+When the post is published, the terms you selected are saved with it.
+
+12
+00:00:42,346 --> 00:00:46,726
+Because editors choose from the list, every post uses the same names.
+
