@@ -2121,18 +2121,18 @@
     "docs": [
       "src/docs/getting-started/theme.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 5.7,
     "words": 853,
     "contentCommit": "",
     "recordedBy": "",
-    "recordedOn": "",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: Recording needs a theme project (MyTheme.OrchardCore) compiled into an Orchard Core source checkout; the shared site build C:/Code/oc-video-site must not be changed and no separate checkout/build is available in the recording batches."
   },
   {
     "slug": "theme-from-html-template",
