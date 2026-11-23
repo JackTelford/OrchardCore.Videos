@@ -22,7 +22,40 @@
     "Orchard Core",
     "Themes"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:10",
+      "title": "What a theme is"
+    },
+    {
+      "time": "1:07",
+      "title": "The Themes page"
+    },
+    {
+      "time": "2:05",
+      "title": "Change the Site theme"
+    },
+    {
+      "time": "2:48",
+      "title": "Enable and disable themes"
+    },
+    {
+      "time": "3:23",
+      "title": "Reset the current themes"
+    },
+    {
+      "time": "3:48",
+      "title": "Permissions"
+    },
+    {
+      "time": "4:03",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -80,5 +113,5 @@
     "pullRequest": null,
     "feature": "OrchardCore.Themes"
   },
-  "length": "4:16"
+  "length": "4:17"
 }
