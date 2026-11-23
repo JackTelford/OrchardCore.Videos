@@ -24,7 +24,40 @@
     "Orchard Core",
     "Templates and Liquid"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Shapes and zones"
+    },
+    {
+      "time": "1:07",
+      "title": "The Blog page"
+    },
+    {
+      "time": "2:01",
+      "title": "A template for a content item"
+    },
+    {
+      "time": "2:51",
+      "title": "Zones and layouts"
+    },
+    {
+      "time": "3:49",
+      "title": "Other content items"
+    },
+    {
+      "time": "4:39",
+      "title": "Create and change shapes"
+    },
+    {
+      "time": "5:42",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
