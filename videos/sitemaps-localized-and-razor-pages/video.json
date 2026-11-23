@@ -25,7 +25,32 @@
     "Orchard Core",
     "SEO and Analytics"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:19",
+      "title": "How a sitemap finds its pages"
+    },
+    {
+      "time": "0:51",
+      "title": "Localized content item sitemaps"
+    },
+    {
+      "time": "2:11",
+      "title": "Sitemaps for Decoupled Razor Pages"
+    },
+    {
+      "time": "3:37",
+      "title": "Routing other content"
+    },
+    {
+      "time": "4:04",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Sitemaps",
@@ -52,5 +77,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ContentLocalization.Sitemaps"
-  }
+  },
+  "length": "4:18"
 }
