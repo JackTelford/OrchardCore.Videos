@@ -1,0 +1,232 @@
+1
+00:00:01,000 --> 00:00:06,147
+Google Analytics and Google Tag Manager help you measure the visitors of your site.
+
+2
+00:00:06,147 --> 00:00:09,675
+Orchard Core connects to each of them with a single ID.
+
+3
+00:00:09,675 --> 00:00:13,723
+In this video, we enable the two features, save the IDs, and see
+
+4
+00:00:13,723 --> 00:00:15,400
+where the scripts load.
+
+5
+00:00:20,000 --> 00:00:24,657
+Orchard Core has two Google features for measuring visitors on public pages.
+
+6
+00:00:24,657 --> 00:00:29,086
+Google Analytics takes the tracking ID of your Google Analytics account.
+
+7
+00:00:29,086 --> 00:00:33,800
+Google Tag Manager takes the container ID of your Google Tag Manager account.
+
+8
+00:00:34,550 --> 00:00:38,788
+Each feature adds its Google script to the head of every public page.
+
+9
+00:00:38,788 --> 00:00:43,026
+With Tag Manager, you choose the tags in your Google account, and the
+
+10
+00:00:43,026 --> 00:00:45,230
+site only needs the container ID.
+
+11
+00:00:45,980 --> 00:00:48,460
+You can enable either feature or both.
+
+12
+00:00:48,460 --> 00:00:52,518
+Each has its own settings page, and nothing is added to your pages
+
+13
+00:00:52,518 --> 00:00:54,040
+until an ID is saved.
+
+14
+00:00:58,252 --> 00:01:01,499
+Neither feature is enabled until you turn it on.
+
+15
+00:01:01,499 --> 00:01:03,423
+Open Tools, then Features.
+
+16
+00:01:03,423 --> 00:01:08,232
+The page lists the features of the site by category, so search for Google.
+
+17
+00:01:08,709 --> 00:01:14,464
+The Google category lists Google Analytics, Google Authentication, and Google Tag Manager.
+
+18
+00:01:14,464 --> 00:01:20,759
+Google Authentication lets users sign in with their Google Account, and a separate video covers it.
+
+19
+00:01:21,212 --> 00:01:24,488
+Let's select Google Analytics and Google Tag Manager.
+
+20
+00:01:24,488 --> 00:01:27,042
+Each row also has its own Enable button.
+
+21
+00:01:27,498 --> 00:01:32,348
+Then open Bulk Actions, and choose Enable to turn on both features together.
+
+22
+00:01:32,806 --> 00:01:36,046
+A message confirms that both features are enabled.
+
+23
+00:01:40,277 --> 00:01:44,503
+Open Settings, then Integrations, and select Google Analytics.
+
+24
+00:01:44,503 --> 00:01:50,097
+Its heading reads Google Analytics Settings, with a See documentation link above it.
+
+25
+00:01:50,554 --> 00:01:54,304
+It has one field, Tracking ID, and the field is required.
+
+26
+00:01:54,304 --> 00:01:59,244
+The hint says it is the tracking ID defined in your Google Analytics account.
+
+27
+00:01:59,713 --> 00:02:03,793
+Let's enter a sample ID, in place of the one from your own account.
+
+28
+00:02:04,255 --> 00:02:05,365
+Select Save.
+
+29
+00:02:05,365 --> 00:02:09,005
+The message reads Site settings updated successfully.
+
+30
+00:02:09,457 --> 00:02:15,627
+Once the ID is saved, every public page of the site loads the Google Analytics script.
+
+31
+00:02:19,829 --> 00:02:22,739
+Google Tag Manager works the same way.
+
+32
+00:02:22,739 --> 00:02:27,369
+Open Settings, then Integrations, and select Google Tag Manager.
+
+33
+00:02:27,830 --> 00:02:33,818
+The required field is Container ID, the container ID defined in your Google Tag Manager account.
+
+34
+00:02:33,818 --> 00:02:35,580
+Let's enter a sample ID.
+
+35
+00:02:36,036 --> 00:02:36,970
+Select Save.
+
+36
+00:02:36,970 --> 00:02:40,496
+The same message confirms that the site settings were updated.
+
+37
+00:02:40,951 --> 00:02:46,389
+Once the container ID is saved, public pages load the Tag Manager script as well.
+
+38
+00:02:46,389 --> 00:02:51,201
+Each feature keeps its own ID, so you can change one without the other.
+
+39
+00:02:55,410 --> 00:02:58,038
+Let's visit the home page as a visitor would.
+
+40
+00:02:58,038 --> 00:03:02,470
+The page looks the same, because the scripts load from Google in the background.
+
+41
+00:03:02,923 --> 00:03:06,329
+Every public page includes them, such as the About page.
+
+42
+00:03:06,329 --> 00:03:09,954
+They are added each time a page is built, so the content you
+
+43
+00:03:09,954 --> 00:03:11,493
+edit never holds them.
+
+44
+00:03:11,953 --> 00:03:14,420
+Pages of the admin do not include them.
+
+45
+00:03:14,420 --> 00:03:17,928
+This is the settings page we used, so your own work in the
+
+46
+00:03:17,928 --> 00:03:19,463
+admin is not measured.
+
+47
+00:03:23,663 --> 00:03:26,057
+Four cases leave a script out of a page.
+
+48
+00:03:26,057 --> 00:03:29,543
+A page of the admin never has it, and neither does a response
+
+49
+00:03:29,543 --> 00:03:31,103
+that is not a full page.
+
+50
+00:03:31,853 --> 00:03:34,874
+A feature adds nothing until an ID is saved.
+
+51
+00:03:34,874 --> 00:03:40,493
+And when the consent of the visitor does not allow tracking, both scripts are left out.
+
+52
+00:03:41,243 --> 00:03:45,502
+To stop a script, disable its feature in Tools, Features.
+
+53
+00:03:45,502 --> 00:03:48,273
+The ID field cannot be saved empty.
+
+54
+00:03:49,023 --> 00:03:54,140
+The Administrator role has the permissions Manage Google Analytics settings and Manage Google
+
+55
+00:03:54,140 --> 00:03:56,103
+Tag Manager settings by default.
+
+56
+00:03:58,103 --> 00:04:02,173
+That's Google Analytics and Google Tag Manager in Orchard Core.
+
+57
+00:04:02,173 --> 00:04:07,010
+Enable a feature, save its ID, and your public pages load the Google script.
+
+58
+00:04:07,010 --> 00:04:08,543
+Thanks for watching.
+
