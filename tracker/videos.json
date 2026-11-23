@@ -2121,14 +2121,14 @@
     "docs": [
       "src/docs/getting-started/theme.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 5.7,
     "words": 853,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/347",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
