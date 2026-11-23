@@ -23,7 +23,40 @@
     "Orchard Core",
     "SEO and Analytics"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Two Google features"
+    },
+    {
+      "time": "0:55",
+      "title": "Enable the features"
+    },
+    {
+      "time": "1:37",
+      "title": "Google Analytics"
+    },
+    {
+      "time": "2:16",
+      "title": "Google Tag Manager"
+    },
+    {
+      "time": "2:52",
+      "title": "On the public site"
+    },
+    {
+      "time": "3:20",
+      "title": "When a script is left out"
+    },
+    {
+      "time": "3:57",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
