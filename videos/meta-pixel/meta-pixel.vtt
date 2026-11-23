@@ -1,0 +1,194 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.012
+The Meta Pixel feature connects your site to Meta, so you can track
+
+00:00:05.012 --> 00:00:07.046
+conversions from your Meta ads.
+
+00:00:07.046 --> 00:00:11.442
+In this video, you enable it, add your Pixel Identifier, and configure the
+
+00:00:11.442 --> 00:00:14.630
+Conversions API, which sends events from the server.
+
+00:00:19.230 --> 00:00:23.732
+When you run ads on Meta, you want to know what visitors do after they click.
+
+00:00:23.732 --> 00:00:28.180
+The Meta Pixel feature reports their visits and actions to Meta in two ways.
+
+00:00:28.930 --> 00:00:31.913
+The pixel runs in the browser of each visitor.
+
+00:00:31.913 --> 00:00:36.273
+The Conversions API runs on your server, so it also covers events that
+
+00:00:36.273 --> 00:00:38.281
+do not depend on the browser.
+
+00:00:38.281 --> 00:00:41.150
+Both use the Pixel Identifier of your pixel.
+
+00:00:45.450 --> 00:00:47.062
+Open Tools, Features.
+
+00:00:47.062 --> 00:00:49.093
+Let's search for Meta Pixel.
+
+00:00:49.093 --> 00:00:53.990
+The result is listed under the Meta category, which holds the Meta features.
+
+00:00:54.472 --> 00:00:58.301
+The description of Meta Pixel says it provides a way to enable Meta
+
+00:00:58.301 --> 00:01:00.137
+Pixel tracking for your site.
+
+00:01:00.137 --> 00:01:01.502
+Let's select Enable.
+
+00:01:01.965 --> 00:01:06.783
+The site restarts its features, and the Meta Pixel row shows the Enabled
+
+00:01:06.783 --> 00:01:08.821
+badge and a Disable button.
+
+00:01:08.821 --> 00:01:13.145
+The feature adds a Meta Pixel page under Settings, Integrations.
+
+00:01:17.425 --> 00:01:20.249
+Open Settings, Integrations, Meta Pixel.
+
+00:01:20.249 --> 00:01:25.957
+The Pixel Identifier field comes first, and its hint says where to find the identifier:
+
+00:01:25.957 --> 00:01:28.105
+the Meta Data Sources portal.
+
+00:01:28.571 --> 00:01:30.885
+Let's enter the identifier of the pixel.
+
+00:01:30.885 --> 00:01:35.411
+This example uses a made-up value, and you enter the one from your own Meta account.
+
+00:01:35.890 --> 00:01:36.990
+Select Save.
+
+00:01:36.990 --> 00:01:38.457
+A notice confirms:
+
+00:01:38.457 --> 00:01:40.962
+Site settings updated successfully.
+
+00:01:40.962 --> 00:01:45.850
+Once the settings are saved, the pixel is added to the pages of your site.
+
+00:01:50.050 --> 00:01:53.924
+The pixel is added to the pages that visitors see, and it reports
+
+00:01:53.924 --> 00:01:56.434
+a page view each time one of them loads.
+
+00:01:56.434 --> 00:01:58.670
+It is not added to the admin pages.
+
+00:01:59.420 --> 00:02:03.855
+If the Pixel Identifier is empty, no pixel is added to your pages.
+
+00:02:03.855 --> 00:02:08.597
+And when tracking is not allowed for a visitor, Orchard Core leaves the
+
+00:02:08.597 --> 00:02:11.060
+pixel out of that visitor's pages.
+
+00:02:15.360 --> 00:02:19.853
+Below the Pixel Identifier, the Conversions API section is optional.
+
+00:02:19.853 --> 00:02:24.588
+It delivers events to Meta from the server, so workflows can send events
+
+00:02:24.588 --> 00:02:26.470
+such as Purchase or Lead.
+
+00:02:26.923 --> 00:02:30.108
+The Conversions API Access Token is a password field.
+
+00:02:30.108 --> 00:02:34.426
+You generate the token for your dataset in the Events Manager, and Orchard
+
+00:02:34.426 --> 00:02:36.693
+Core encrypts it before it saves it.
+
+00:02:37.146 --> 00:02:41.096
+The Test Event Code is optional, and comes from the Test Events tab
+
+00:02:41.096 --> 00:02:42.611
+of the Events Manager.
+
+00:02:42.611 --> 00:02:47.806
+While it is set, events appear in the test console instead of counting as production data.
+
+00:02:48.261 --> 00:02:51.221
+Remove the Test Event Code before you go live.
+
+00:02:51.221 --> 00:02:53.441
+Select Save to keep the settings.
+
+00:02:57.641 --> 00:03:00.846
+The settings do not send events by themselves.
+
+00:03:00.846 --> 00:03:02.202
+A workflow does.
+
+00:03:02.202 --> 00:03:07.995
+Enable the Workflows feature, open Design, Workflows, and the workflow editor offers the
+
+00:03:07.995 --> 00:03:11.631
+Meta Conversions API Event task in its Meta category.
+
+00:03:12.381 --> 00:03:14.270
+Event Name is required:
+
+00:03:14.270 --> 00:03:18.504
+a standard name such as Purchase or Lead, or a custom name.
+
+00:03:18.504 --> 00:03:24.431
+Action Source tells Meta where the conversion took place, and Website is the default.
+
+00:03:25.181 --> 00:03:27.202
+Event Source URL is optional:
+
+00:03:27.202 --> 00:03:30.147
+the browser address where the event happened.
+
+00:03:30.147 --> 00:03:31.936
+Event ID is optional too.
+
+00:03:31.936 --> 00:03:35.920
+It is a unique id that lets Meta deduplicate the event when the
+
+00:03:35.920 --> 00:03:38.691
+browser pixel also reports the same event.
+
+00:03:39.441 --> 00:03:42.114
+The task ends with one of two outcomes.
+
+00:03:42.114 --> 00:03:46.509
+Done means Meta accepted the event, and Failed means it did not, for
+
+00:03:46.509 --> 00:03:50.726
+example when the Pixel Identifier or the access token is missing.
+
+00:03:50.726 --> 00:03:53.101
+A separate video covers workflows.
+
+00:03:55.101 --> 00:03:58.852
+The Meta Pixel feature adds your pixel to the pages of your site,
+
+00:03:58.852 --> 00:04:02.708
+and the Conversions API lets workflows send events from the server.
+
+00:04:02.708 --> 00:04:04.081
+Thanks for watching.
+

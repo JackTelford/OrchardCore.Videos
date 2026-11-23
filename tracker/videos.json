@@ -2057,14 +2057,14 @@
     "docs": [
       "src/docs/reference/modules/Security/Permissions.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 3.8,
     "words": 570,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/345",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
