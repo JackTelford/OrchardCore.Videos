@@ -2258,14 +2258,14 @@
     "docs": [
       "src/docs/reference/modules/Liquid/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 6.0,
     "words": 901,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/352",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
