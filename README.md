@@ -131,7 +131,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Indexes: Create, Rebuild and Reset Search Indexes](videos/indexing-indexes) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Layers: Show Widgets on the Right Pages](videos/layers-zones) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Liquid: Objects, Filters and Tags in Orchard Core](videos/liquid-basics) | 6:42 | [https://youtu.be/CnTlbB-g9EE](https://youtu.be/CnTlbB-g9EE) | OrchardCMS/OrchardCore |
-| [Liquid: Display Content Items, Shapes and Zones](videos/liquid-display-content) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Liquid: Display Content Items, Shapes and Zones](videos/liquid-display-content) | 5:57 | [https://youtu.be/LqerV-y6Rpc](https://youtu.be/LqerV-y6Rpc) | OrchardCMS/OrchardCore |
 | [Write a Liquid Filter](videos/liquid-filter-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Liquid Part and Liquid Field: Content That Runs Templates](videos/liquid-part-and-field) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Lists in Templates: Liquid Filters for Containers and Their Items](videos/lists-in-templates) | 4:17 | [https://youtu.be/IXGsED-FvrA](https://youtu.be/IXGsED-FvrA) | OrchardCMS/OrchardCore |
