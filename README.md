@@ -243,7 +243,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Static Files per Tenant: Serve Each Tenant's Own Files](videos/tenants-static-files) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Workflows for Tenants: Create and Set Up Tenants Automatically](videos/tenants-workflow-tasks) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Test Drive Orchard Core: Run It From Source](videos/test-drive-orchard-core) | 4:56 | [https://youtu.be/yY0zPvmLsjg](https://youtu.be/yY0zPvmLsjg) | OrchardCMS/OrchardCore |
-| [Create a Theme: Your First Orchard Core Theme](videos/theme-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create a Theme: Your First Orchard Core Theme](videos/theme-create) | 5:53 | [https://youtu.be/wvpy233VVd4](https://youtu.be/wvpy233VVd4) | OrchardCMS/OrchardCore |
 | [Create a Theme From an HTML Template](videos/theme-from-html-template) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Themes: Change the Look of Your Site](videos/themes-choose) | 4:17 | [https://youtu.be/gi1KWyaQ7mI](https://youtu.be/gi1KWyaQ7mI) | OrchardCMS/OrchardCore |
 | [Title Part: Titles, Generated Titles and Display Text](videos/title-part) | 4:26 | [https://youtu.be/Ah_1UmINVcU](https://youtu.be/Ah_1UmINVcU) | OrchardCMS/OrchardCore |
