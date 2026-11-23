@@ -104,7 +104,7 @@ to make a video again, or to change how it appears on YouTube.
 | [External Login: Let Users Sign In With Other Accounts](videos/external-login-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Features: Dependencies and Features That Enable Others](videos/features-dependencies) | 3:45 | [https://youtu.be/3tyO-8nl5EQ](https://youtu.be/3tyO-8nl5EQ) | OrchardCMS/OrchardCore |
 | [Features: Enable and Disable What Your Site Uses](videos/features-manage) | 4:33 | [https://youtu.be/BmreMHrfixM](https://youtu.be/BmreMHrfixM) | OrchardCMS/OrchardCore |
-| [Feeds: Publish an RSS Feed of Your Content](videos/feeds-rss) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Feeds: Publish an RSS Feed of Your Content](videos/feeds-rss) | 3:29 | [https://youtu.be/CbMGEGMzUcE](https://youtu.be/CbMGEGMzUcE) | OrchardCMS/OrchardCore |
 | [File Upload Security: Antivirus Scanning and Temporary Files](videos/file-upload-security) | 6:08 | [https://youtu.be/o8fWqsPk0Ds](https://youtu.be/o8fWqsPk0Ds) | OrchardCMS/OrchardCore |
 | [Bag Part: Embed Content Items Inside a Content Item](videos/flows-bag-part) | 4:53 | [https://youtu.be/EBz1f1Bgcgw](https://youtu.be/EBz1f1Bgcgw) | OrchardCMS/OrchardCore |
 | [Flow Part: Build Pages From Widgets](videos/flows-flow-part) | 5:16 | [https://youtu.be/kuIT3d1zubg](https://youtu.be/kuIT3d1zubg) | OrchardCMS/OrchardCore |

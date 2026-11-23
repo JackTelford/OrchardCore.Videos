@@ -2004,7 +2004,7 @@
       "src/docs/reference/modules/Feeds/README.md",
       "src/docs/reference/modules/Lists/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 3.6,
     "words": 533,
     "contentCommit": "",
@@ -2012,9 +2012,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/343",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "feeds-rss/v1",
+    "youtubeId": "CbMGEGMzUcE",
+    "publishedOn": "2026-11-23",
     "notes": ""
   },
   {
