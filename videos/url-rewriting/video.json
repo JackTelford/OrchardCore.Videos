@@ -22,7 +22,36 @@
     "Orchard Core",
     "Routing"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:20",
+      "title": "How the rules work"
+    },
+    {
+      "time": "1:28",
+      "title": "Turn on the feature"
+    },
+    {
+      "time": "2:00",
+      "title": "Redirect a renamed page"
+    },
+    {
+      "time": "3:48",
+      "title": "Rewrite an address"
+    },
+    {
+      "time": "5:11",
+      "title": "Manage the rules"
+    },
+    {
+      "time": "5:48",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +73,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.UrlRewriting"
-  }
+  },
+  "length": "6:00"
 }
