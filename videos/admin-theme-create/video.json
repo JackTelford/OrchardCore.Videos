@@ -24,7 +24,44 @@
     "Orchard Core",
     "Themes"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "How the admin gets its theme"
+    },
+    {
+      "time": "0:53",
+      "title": "Create the theme"
+    },
+    {
+      "time": "1:32",
+      "title": "Override a template"
+    },
+    {
+      "time": "2:26",
+      "title": "Restyle the forms"
+    },
+    {
+      "time": "3:10",
+      "title": "Make it the admin theme"
+    },
+    {
+      "time": "3:50",
+      "title": "The restyled admin"
+    },
+    {
+      "time": "4:22",
+      "title": "More to customize"
+    },
+    {
+      "time": "5:02",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Creating a custom admin theme",
@@ -58,5 +95,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:guides/create-admin-theme"
-  }
+  },
+  "length": "5:14"
 }
