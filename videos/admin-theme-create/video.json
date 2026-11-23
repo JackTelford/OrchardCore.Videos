@@ -96,5 +96,10 @@
     "pullRequest": null,
     "feature": "guide:guides/create-admin-theme"
   },
-  "length": "5:14"
+  "length": "5:14",
+  "youtube": {
+    "id": "ht6M2TWKLaU",
+    "url": "https://youtu.be/ht6M2TWKLaU",
+    "version": "v1"
+  }
 }
