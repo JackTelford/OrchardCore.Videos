@@ -124,7 +124,7 @@ to make a video again, or to change how it appears on YouTube.
 | [GraphQL: Settings, Permissions and Hidden Fields](videos/graphql-settings-permissions) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Headless: Serve Content to Any Front End](videos/headless-front-end) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Health Checks: Let Your Host Know the Site Is Up](videos/health-checks) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Home Page: Choose What Your Site Shows First](videos/home-route) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Home Page: Choose What Your Site Shows First](videos/home-route) | 3:46 | [https://youtu.be/8Qm1voUuZW8](https://youtu.be/8Qm1voUuZW8) | OrchardCMS/OrchardCore |
 | [Html and Markdown: Write the Body of Your Content](videos/html-and-markdown-editors) | 5:10 | [https://youtu.be/3clJc4yscS0](https://youtu.be/3clJc4yscS0) | OrchardCMS/OrchardCore |
 | [HTML Sanitizer: Keep Unsafe Markup Out of Content](videos/html-sanitizer) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Indexing in Code: Index Your Own Data and Fields](videos/indexing-developer) |  | not uploaded | OrchardCMS/OrchardCore |
