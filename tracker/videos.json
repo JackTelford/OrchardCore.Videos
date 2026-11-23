@@ -1921,7 +1921,7 @@
     "docs": [
       "src/docs/reference/modules/Sitemaps/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 5.7,
     "words": 854,
     "contentCommit": "",
@@ -1929,9 +1929,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/340",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "sitemaps-create/v1",
+    "youtubeId": "qysbJTqgEzY",
+    "publishedOn": "2026-11-23",
     "notes": ""
   },
   {

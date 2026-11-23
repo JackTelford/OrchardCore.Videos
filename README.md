@@ -220,7 +220,7 @@ to make a video again, or to change how it appears on YouTube.
 | [SignalR: Real-Time Updates and Backplanes](videos/signalr) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Add Site Settings to Your Module](videos/site-settings-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Site Settings: Name, Time Zone, Page Size and More](videos/site-settings-general) | 5:26 | [https://youtu.be/6jg2SpIKvVY](https://youtu.be/6jg2SpIKvVY) | OrchardCMS/OrchardCore |
-| [Sitemaps: Help Search Engines Find Your Pages](videos/sitemaps-create) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Sitemaps: Help Search Engines Find Your Pages](videos/sitemaps-create) | 6:23 | [https://youtu.be/qysbJTqgEzY](https://youtu.be/qysbJTqgEzY) | OrchardCMS/OrchardCore |
 | [Sitemap Indexes and the Sitemaps Cache](videos/sitemaps-indexes-and-cache) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Sitemaps for Localized Content and Razor Pages](videos/sitemaps-localized-and-razor-pages) |  | not uploaded | OrchardCMS/OrchardCore |
 | [SMS: Configure a Provider and Send a Test Message](videos/sms-settings) |  | not uploaded | OrchardCMS/OrchardCore |
