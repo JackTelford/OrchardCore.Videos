@@ -21,7 +21,40 @@
     "Orchard Core",
     "SEO and Analytics"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "Why a sitemap index"
+    },
+    {
+      "time": "0:43",
+      "title": "Create a sitemap index"
+    },
+    {
+      "time": "1:43",
+      "title": "View the index"
+    },
+    {
+      "time": "2:36",
+      "title": "How the cache works"
+    },
+    {
+      "time": "3:03",
+      "title": "The Sitemaps Cache"
+    },
+    {
+      "time": "3:45",
+      "title": "Sitemaps Cleanup"
+    },
+    {
+      "time": "4:13",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -43,5 +76,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Sitemaps"
-  }
+  },
+  "length": "4:26"
 }
