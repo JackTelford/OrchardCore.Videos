@@ -22,7 +22,44 @@
     "Orchard Core",
     "Templates and Liquid"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Where Liquid runs"
+    },
+    {
+      "time": "1:04",
+      "title": "The syntax"
+    },
+    {
+      "time": "1:45",
+      "title": "On the page"
+    },
+    {
+      "time": "2:30",
+      "title": "Objects"
+    },
+    {
+      "time": "3:39",
+      "title": "Filters"
+    },
+    {
+      "time": "5:09",
+      "title": "Tags"
+    },
+    {
+      "time": "5:57",
+      "title": "Parser options"
+    },
+    {
+      "time": "6:29",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -45,5 +82,5 @@
     "pullRequest": null,
     "feature": "OrchardCore.Liquid"
   },
-  "length": "6:41"
+  "length": "6:42"
 }
