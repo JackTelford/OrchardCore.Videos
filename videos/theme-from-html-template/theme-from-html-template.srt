@@ -1,0 +1,404 @@
+1
+00:00:01,000 --> 00:00:04,337
+Many websites start from a static HTML template.
+
+2
+00:00:04,337 --> 00:00:08,107
+This video turns one into a working Orchard Core theme:
+
+3
+00:00:08,107 --> 00:00:13,608
+you copy the assets, declare the resources, build the layout, template the content,
+
+4
+00:00:13,608 --> 00:00:15,400
+and add a setup recipe.
+
+5
+00:00:20,000 --> 00:00:22,881
+A static template is a finished design:
+
+6
+00:00:22,881 --> 00:00:27,810
+HTML pages, a stylesheet, scripts, and images, filled with sample text.
+
+7
+00:00:27,810 --> 00:00:32,740
+The goal is to keep the design and let Orchard Core supply the content.
+
+8
+00:00:33,490 --> 00:00:36,075
+The built-in TheBlogTheme was created this way.
+
+9
+00:00:36,075 --> 00:00:39,490
+It is a port of the Clean Blog template from Start Bootstrap, so
+
+10
+00:00:39,490 --> 00:00:42,660
+its source code is a real reference while you follow along.
+
+11
+00:00:43,410 --> 00:00:48,204
+You need an Orchard Core CMS application, an empty theme project in your
+
+12
+00:00:48,204 --> 00:00:52,507
+solution, and the template with its CSS, JavaScript, and images.
+
+13
+00:00:52,507 --> 00:00:55,580
+In the examples, the theme is named MyTheme.
+
+14
+00:00:56,330 --> 00:00:59,379
+Four tasks turn the template into a theme:
+
+15
+00:00:59,379 --> 00:01:04,334
+copy the assets, declare them as resources, convert the main page into a
+
+16
+00:01:04,334 --> 00:01:08,464
+layout, and convert the inner pages into content templates.
+
+17
+00:01:08,464 --> 00:01:10,560
+A setup recipe is optional.
+
+18
+00:01:14,760 --> 00:01:20,244
+Copy the template's stylesheet, scripts, images, and icon into the wwwroot folder of
+
+19
+00:01:20,244 --> 00:01:23,230
+the theme project, as this file tree shows.
+
+20
+00:01:23,980 --> 00:01:31,849
+The static file middleware serves everything in wwwroot under the name of the theme project.
+
+21
+00:01:31,849 --> 00:01:40,200
+So css/styles.css is available at /MyTheme/css/styles.css, which is the address the resources use.
+
+22
+00:01:44,400 --> 00:01:50,339
+Instead of hardcoded link and script tags, you register the template's stylesheets and
+
+23
+00:01:50,339 --> 00:01:52,469
+scripts as named resources.
+
+24
+00:01:52,469 --> 00:01:59,570
+Orchard Core then handles version hashes, minified and debug files, CDN addresses, and dependency order.
+
+25
+00:02:00,320 --> 00:02:06,018
+A class that implements IConfigureOptions of ResourceManagementOptions declares them.
+
+26
+00:02:06,018 --> 00:02:11,715
+DefineStyle and DefineScript give each resource a name, and SetUrl takes the minified
+
+27
+00:02:11,715 --> 00:02:14,220
+file first, then the readable one.
+
+28
+00:02:14,970 --> 00:02:19,767
+Register the class in the Startup class of the theme with AddResourceConfiguration.
+
+29
+00:02:19,767 --> 00:02:22,840
+The theme can then ask for these resources by name.
+
+30
+00:02:23,590 --> 00:02:28,028
+When the template depends on a library such as Bootstrap, define the library
+
+31
+00:02:28,028 --> 00:02:31,546
+as a resource of its own, and list it with SetDependencies.
+
+32
+00:02:31,546 --> 00:02:35,010
+TheBlogTheme does this, so the library always loads first.
+
+33
+00:02:39,210 --> 00:02:42,909
+The layout is the markup that every page shares.
+
+34
+00:02:42,909 --> 00:02:50,239
+Copy the template's main page, usually index.html, to a file named Layout.liquid in the Views folder.
+
+35
+00:02:50,239 --> 00:02:53,870
+Keep its markup, and replace what is hardcoded.
+
+36
+00:02:54,620 --> 00:02:59,091
+Replace the hardcoded link and script tags with the resources you declared.
+
+37
+00:02:59,091 --> 00:03:02,900
+The style tag and the script tag take the name of the resource,
+
+38
+00:03:02,900 --> 00:03:05,660
+and the script goes to the foot of the page.
+
+39
+00:03:06,410 --> 00:03:07,958
+Keep the resources tags.
+
+40
+00:03:07,958 --> 00:03:12,343
+They render the stylesheets, scripts, and meta tags that other modules and your
+
+41
+00:03:12,343 --> 00:03:16,367
+own templates register at runtime, so the layout needs them even when it
+
+42
+00:03:16,367 --> 00:03:18,070
+does not use them directly.
+
+43
+00:03:18,820 --> 00:03:24,786
+Replace the hardcoded page content with render_body, and the static navigation list with the menu shape.
+
+44
+00:03:24,786 --> 00:03:29,070
+The shape renders the content items of the menu that has the given alias.
+
+45
+00:03:29,820 --> 00:03:35,852
+Add render_section wherever widgets should be able to appear, such as the header and the footer.
+
+46
+00:03:35,852 --> 00:03:40,760
+With required set to false, a page that puts nothing in a zone still renders.
+
+47
+00:03:41,510 --> 00:03:44,424
+A Razor layout follows the same pattern.
+
+48
+00:03:44,424 --> 00:03:50,822
+RenderBodyAsync and RenderSectionAsync replace the Liquid tags, and the style, script, and menu
+
+49
+00:03:50,822 --> 00:03:54,180
+tag helpers replace the resource and menu tags.
+
+50
+00:03:55,780 --> 00:03:58,678
+The menu shape renders its items as a list.
+
+51
+00:03:58,678 --> 00:04:03,705
+If the navigation of the template needs specific CSS classes, override the Menu
+
+52
+00:04:03,705 --> 00:04:08,850
+and MenuItem templates in the Views folder, plus a MenuItemLink template for each
+
+53
+00:04:08,850 --> 00:04:11,570
+type of menu item, as TheBlogTheme does.
+
+54
+00:04:15,837 --> 00:04:20,524
+The layout renders zones, and the admin offers widgets only in the zones
+
+55
+00:04:20,524 --> 00:04:22,087
+that the site lists.
+
+56
+00:04:22,087 --> 00:04:26,834
+In the admin, Settings, Zones has the field Available zones for Layers, a
+
+57
+00:04:26,834 --> 00:04:29,297
+comma separated list of zone names.
+
+58
+00:04:29,751 --> 00:04:33,081
+Design, Widgets shows one card for each listed zone.
+
+59
+00:04:33,081 --> 00:04:37,618
+Content is the zone that render_body renders, and the Footer zone holds a
+
+60
+00:04:37,618 --> 00:04:40,891
+widget that the layout renders with render_section.
+
+61
+00:04:41,390 --> 00:04:45,204
+On the front end, that widget appears at the bottom of the page,
+
+62
+00:04:45,204 --> 00:04:49,290
+because the layout renders the Footer zone inside its footer element.
+
+63
+00:04:53,490 --> 00:04:57,803
+With the layout in place, the inner pages become content templates.
+
+64
+00:04:57,803 --> 00:05:01,938
+For each content type, add a file to the Views folder whose name
+
+65
+00:05:01,938 --> 00:05:04,360
+says which content item it renders.
+
+66
+00:05:05,110 --> 00:05:09,776
+A hyphen separates the shape name, Content, from the content type.
+
+67
+00:05:09,776 --> 00:05:15,349
+A suffix after the last dot names a display type, so Content-BlogPost.Summary is
+
+68
+00:05:15,349 --> 00:05:18,070
+a blog post as it appears in a list.
+
+69
+00:05:18,820 --> 00:05:23,683
+Copy the matching markup from the template into the file, then replace the
+
+70
+00:05:23,683 --> 00:05:26,843
+sample text with the data of the content item.
+
+71
+00:05:26,843 --> 00:05:32,070
+Here, the title reads DisplayText, and the subtitle is a field of the blog post.
+
+72
+00:05:32,820 --> 00:05:36,447
+A content item's parts and fields have shapes of their own.
+
+73
+00:05:36,447 --> 00:05:41,357
+Model.Content holds them, and shape_render writes one, such as the HTML body part,
+
+74
+00:05:41,357 --> 00:05:43,310
+wherever the markup needs it.
+
+75
+00:05:44,060 --> 00:05:49,395
+A placement.json file at the root of the theme decides which shapes render, and where.
+
+76
+00:05:49,395 --> 00:05:53,280
+This rule hides the shape of the title part on the front end.
+
+77
+00:05:54,030 --> 00:05:59,502
+The Templates reference lists the template names for content, widgets, parts, and fields,
+
+78
+00:05:59,502 --> 00:06:02,267
+and the properties each template receives.
+
+79
+00:06:02,267 --> 00:06:05,550
+The Views folder of TheBlogTheme shows them in use.
+
+80
+00:06:09,750 --> 00:06:14,199
+If the theme is meant to be reused, add a recipe to its Recipes folder.
+
+81
+00:06:14,199 --> 00:06:18,878
+The blog recipe of TheBlogTheme enables the theme, selects it in the themes
+
+82
+00:06:18,878 --> 00:06:21,940
+step, and lists the zones in the settings step.
+
+83
+00:06:22,690 --> 00:06:27,130
+Its other steps create the content types, menu, widgets, and layers.
+
+84
+00:06:27,130 --> 00:06:31,930
+Because issetuprecipe is true, the recipe is listed in the Recipe field of
+
+85
+00:06:31,930 --> 00:06:36,370
+the setup screen, and choosing it sets up the site with all of this.
+
+86
+00:06:40,667 --> 00:06:44,602
+A theme that the site references is listed under Design, Themes.
+
+87
+00:06:44,602 --> 00:06:48,761
+Make Current selects it, and the card of the current site theme says
+
+88
+00:06:48,761 --> 00:06:50,840
+This is the current Site theme.
+
+89
+00:06:50,840 --> 00:06:52,807
+Here, that is The Blog Theme.
+
+90
+00:06:53,481 --> 00:06:57,147
+This is the front end of a site set up with the blog recipe.
+
+91
+00:06:57,147 --> 00:06:59,425
+The design of the template is kept:
+
+92
+00:06:59,425 --> 00:07:03,313
+the header image, the navigation, the post list, and the footer.
+
+93
+00:07:03,313 --> 00:07:07,591
+The text comes from the site settings, the menu, and the content items.
+
+94
+00:07:08,198 --> 00:07:11,424
+Opening a post shows the content template at work.
+
+95
+00:07:11,424 --> 00:07:15,974
+The masthead holds the title, subtitle, author, and date, and the body of
+
+96
+00:07:15,974 --> 00:07:17,818
+the post renders below it.
+
+97
+00:07:19,418 --> 00:07:20,318
+To recap:
+
+98
+00:07:20,318 --> 00:07:25,063
+copy the assets and declare them as resources, convert the main page into
+
+99
+00:07:25,063 --> 00:07:31,008
+a layout, convert the inner pages into content templates, and optionally ship a setup recipe.
+
+100
+00:07:33,008 --> 00:07:39,074
+A static template becomes a theme through assets, resources, a layout, and content templates.
+
+101
+00:07:39,074 --> 00:07:40,668
+Thanks for watching.
+

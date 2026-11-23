@@ -24,7 +24,48 @@
     "Orchard Core",
     "Themes"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "From template to theme"
+    },
+    {
+      "time": "1:11",
+      "title": "Copy the assets"
+    },
+    {
+      "time": "1:41",
+      "title": "Declare the resources"
+    },
+    {
+      "time": "2:36",
+      "title": "Build the layout"
+    },
+    {
+      "time": "4:12",
+      "title": "Zones"
+    },
+    {
+      "time": "4:50",
+      "title": "Template the content"
+    },
+    {
+      "time": "6:06",
+      "title": "A setup recipe"
+    },
+    {
+      "time": "6:37",
+      "title": "Use the theme"
+    },
+    {
+      "time": "7:32",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -58,5 +99,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:topics/display/theme-from-html-template"
-  }
+  },
+  "length": "7:42"
 }
