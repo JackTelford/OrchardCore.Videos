@@ -222,7 +222,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Site Settings: Name, Time Zone, Page Size and More](videos/site-settings-general) | 5:26 | [https://youtu.be/6jg2SpIKvVY](https://youtu.be/6jg2SpIKvVY) | OrchardCMS/OrchardCore |
 | [Sitemaps: Help Search Engines Find Your Pages](videos/sitemaps-create) | 6:23 | [https://youtu.be/qysbJTqgEzY](https://youtu.be/qysbJTqgEzY) | OrchardCMS/OrchardCore |
 | [Sitemap Indexes and the Sitemaps Cache](videos/sitemaps-indexes-and-cache) | 4:26 | [https://youtu.be/-UlSXMG0xPs](https://youtu.be/-UlSXMG0xPs) | OrchardCMS/OrchardCore |
-| [Sitemaps for Localized Content and Razor Pages](videos/sitemaps-localized-and-razor-pages) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Sitemaps for Localized Content and Razor Pages](videos/sitemaps-localized-and-razor-pages) | 4:18 | [https://youtu.be/1nxII1bpURA](https://youtu.be/1nxII1bpURA) | OrchardCMS/OrchardCore |
 | [SMS: Configure a Provider and Send a Test Message](videos/sms-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Source Generators: Less Boilerplate in Your Modules](videos/source-generators) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Geo Point Field: Add Locations to Content Items](videos/spatial-geo-point-field) | 4:03 | [https://youtu.be/NyJDG0sIVs8](https://youtu.be/NyJDG0sIVs8) | OrchardCMS/OrchardCore |
