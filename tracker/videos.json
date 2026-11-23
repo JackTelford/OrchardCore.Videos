@@ -1921,14 +1921,14 @@
     "docs": [
       "src/docs/reference/modules/Sitemaps/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 5.7,
     "words": 854,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/340",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",

@@ -21,7 +21,48 @@
     "Orchard Core",
     "SEO and Analytics"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What a sitemap is"
+    },
+    {
+      "time": "0:56",
+      "title": "Before you start"
+    },
+    {
+      "time": "1:38",
+      "title": "Create a sitemap"
+    },
+    {
+      "time": "2:17",
+      "title": "Add a source"
+    },
+    {
+      "time": "3:05",
+      "title": "View the sitemap"
+    },
+    {
+      "time": "3:26",
+      "title": "Choose content types"
+    },
+    {
+      "time": "4:06",
+      "title": "Add a custom path"
+    },
+    {
+      "time": "4:45",
+      "title": "Control a single page"
+    },
+    {
+      "time": "5:44",
+      "title": "Reaching search engines"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -43,5 +84,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Sitemaps"
-  }
+  },
+  "length": "6:23"
 }
