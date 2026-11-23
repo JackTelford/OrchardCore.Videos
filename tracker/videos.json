@@ -2095,7 +2095,7 @@
       "src/docs/reference/modules/Flow/BagPart.md",
       "src/docs/reference/modules/Tenants/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.4,
     "words": 659,
     "contentCommit": "",
@@ -2103,9 +2103,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/346",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "themes-choose/v1",
+    "youtubeId": "gi1KWyaQ7mI",
+    "publishedOn": "2026-11-23",
     "notes": ""
   },
   {

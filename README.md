@@ -245,7 +245,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Test Drive Orchard Core: Run It From Source](videos/test-drive-orchard-core) | 4:56 | [https://youtu.be/yY0zPvmLsjg](https://youtu.be/yY0zPvmLsjg) | OrchardCMS/OrchardCore |
 | [Create a Theme: Your First Orchard Core Theme](videos/theme-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Create a Theme From an HTML Template](videos/theme-from-html-template) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Themes: Change the Look of Your Site](videos/themes-choose) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Themes: Change the Look of Your Site](videos/themes-choose) | 4:17 | [https://youtu.be/gi1KWyaQ7mI](https://youtu.be/gi1KWyaQ7mI) | OrchardCMS/OrchardCore |
 | [Title Part: Titles, Generated Titles and Display Text](videos/title-part) | 4:26 | [https://youtu.be/Ah_1UmINVcU](https://youtu.be/Ah_1UmINVcU) | OrchardCMS/OrchardCore |
 | [URL Rewriting: Redirect and Rewrite Requests](videos/url-rewriting) | 6:00 | [https://youtu.be/qS6sm_CT4i0](https://youtu.be/qS6sm_CT4i0) | OrchardCMS/OrchardCore |
 | [Change Email: Let Users Update Their Email Address](videos/users-change-email) |  | not uploaded | OrchardCMS/OrchardCore |
