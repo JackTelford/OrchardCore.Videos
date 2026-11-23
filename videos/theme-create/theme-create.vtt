@@ -1,0 +1,257 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.609
+A theme decides how the pages of an Orchard Core site look.
+
+00:00:04.609 --> 00:00:08.939
+In this video, you generate a theme project from a template, describe it
+
+00:00:08.939 --> 00:00:11.660
+in its manifest, and apply it to your site.
+
+00:00:16.260 --> 00:00:19.898
+A theme is a project in your solution that holds the layout, the
+
+00:00:19.898 --> 00:00:24.471
+templates, and the static files, such as stylesheets and images, that Orchard Core
+
+00:00:24.471 --> 00:00:26.030
+uses to render the site.
+
+00:00:26.780 --> 00:00:28.464
+A site uses two themes:
+
+00:00:28.464 --> 00:00:32.937
+a site theme for the front end, and an admin theme for the admin pages.
+
+00:00:32.937 --> 00:00:38.803
+The Themes module, under Design, Themes, lists the themes of your application and applies them.
+
+00:00:38.803 --> 00:00:41.010
+This video creates a site theme.
+
+00:00:41.760 --> 00:00:44.785
+The template creates a theme with three parts:
+
+00:00:44.785 --> 00:00:48.916
+a project file that marks the project as a theme, a manifest that
+
+00:00:48.916 --> 00:00:52.116
+describes it, and a layout that wraps every page.
+
+00:00:52.116 --> 00:00:53.570
+Let's generate one.
+
+00:00:57.770 --> 00:01:02.261
+The project template for themes is part of the Orchard Core project templates
+
+00:01:02.261 --> 00:01:06.211
+package, which also has templates for web applications and modules.
+
+00:01:06.211 --> 00:01:09.890
+Install the package once, with the dotnet new install command.
+
+00:01:10.640 --> 00:01:15.577
+In the folder of your solution, next to the web application, run dotnet
+
+00:01:15.577 --> 00:01:18.399
+new octheme with a name for the theme.
+
+00:01:18.399 --> 00:01:21.220
+Here, the name is MyTheme.OrchardCore.
+
+00:01:21.970 --> 00:01:27.383
+The name becomes the folder, the project file, and the identifier of the theme.
+
+00:01:27.383 --> 00:01:29.867
+The template creates three files:
+
+00:01:29.867 --> 00:01:35.790
+the project file, Manifest.cs, and a Liquid layout, Layout.liquid, in the Views folder.
+
+00:01:36.540 --> 00:01:40.716
+AddLiquid is one of the template options, and it is true by default.
+
+00:01:40.716 --> 00:01:44.610
+Set to false, it leaves out the Liquid layout, for a theme that
+
+00:01:44.610 --> 00:01:46.190
+uses Razor views only.
+
+00:01:46.940 --> 00:01:50.575
+Add the project to the solution, then add a reference to it from
+
+00:01:50.575 --> 00:01:54.210
+the web application, so that the application includes the theme.
+
+00:01:58.410 --> 00:02:02.667
+The project file references the Orchard Core Theme Targets package.
+
+00:02:02.667 --> 00:02:06.749
+It marks the project as a theme, and embeds the views and static
+
+00:02:06.749 --> 00:02:09.140
+files of the theme in the assembly.
+
+00:02:09.890 --> 00:02:14.780
+The Razor SDK lets the theme use Razor templates as well as Liquid ones.
+
+00:02:14.780 --> 00:02:18.793
+If a theme has Razor views but does not use the Razor SDK,
+
+00:02:18.793 --> 00:02:21.050
+the build stops with an error.
+
+00:02:21.800 --> 00:02:24.519
+Manifest.cs holds the Theme attribute.
+
+00:02:24.519 --> 00:02:30.574
+Orchard Core reads the name, author, website, version, and description of the theme from it.
+
+00:02:30.574 --> 00:02:35.147
+The template sets the name and description to the name you gave, and
+
+00:02:35.147 --> 00:02:38.360
+fills in its own author, website, and version.
+
+00:02:39.110 --> 00:02:41.209
+Layout.liquid is the layout.
+
+00:02:41.209 --> 00:02:46.890
+The render_body tag outputs the content of the page being rendered, and render_section
+
+00:02:46.890 --> 00:02:49.792
+outputs a named section, here the Footer.
+
+00:02:49.792 --> 00:02:54.300
+The page_title tag writes the page title, with the site name first.
+
+00:02:55.050 --> 00:03:00.890
+The resources tags output the meta tags, stylesheets, and scripts that modules register,
+
+00:03:00.890 --> 00:03:02.941
+so keep them in the layout.
+
+00:03:02.941 --> 00:03:07.290
+A comment in the template reads, insert required resources here.
+
+00:03:08.040 --> 00:03:12.233
+A script tag near the end of the layout requests jQuery for the
+
+00:03:12.233 --> 00:03:13.630
+foot of the page.
+
+00:03:17.830 --> 00:03:20.895
+Replace the values of the template with your own.
+
+00:03:20.895 --> 00:03:24.852
+Here, MyTheme has an author, a website, a description, and a tag.
+
+00:03:24.852 --> 00:03:28.530
+The Themes page shows these values on the card of the theme.
+
+00:03:29.280 --> 00:03:34.358
+Name is the title of the card, and the identifier stays the name of the assembly.
+
+00:03:34.358 --> 00:03:36.342
+Tags appear on the card too.
+
+00:03:36.342 --> 00:03:39.261
+On the Themes page, two tags have a meaning:
+
+00:03:39.261 --> 00:03:43.580
+Admin marks an admin theme, and hidden keeps the theme off the page.
+
+00:03:44.330 --> 00:03:48.449
+To give the card a thumbnail, add a file named Theme.png to the
+
+00:03:48.449 --> 00:03:50.956
+wwwroot folder of the theme project.
+
+00:03:50.956 --> 00:03:55.254
+Orchard Core serves it from the static files of the theme, and the
+
+00:03:55.254 --> 00:03:57.940
+Themes page shows it as the card image.
+
+00:03:58.690 --> 00:04:04.129
+Files in the wwwroot folder, such as stylesheets, scripts, and images, are served
+
+00:04:04.129 --> 00:04:06.629
+under the identifier of the theme.
+
+00:04:06.629 --> 00:04:09.630
+The layout can refer to them by that path.
+
+00:04:13.841 --> 00:04:17.367
+Build and run the web application, and open the admin.
+
+00:04:17.367 --> 00:04:22.361
+In the admin menu, Design, Themes lists the themes of the application as cards.
+
+00:04:22.813 --> 00:04:25.084
+Here is the card of MyTheme.
+
+00:04:25.084 --> 00:04:30.827
+It shows the thumbnail from Theme.png, the name and description, and the author,
+
+00:04:30.827 --> 00:04:34.233
+website, tags, and version from the manifest.
+
+00:04:34.696 --> 00:04:36.576
+The card has two buttons.
+
+00:04:36.576 --> 00:04:40.094
+Enable turns the theme on without making it current.
+
+00:04:40.094 --> 00:04:44.826
+Make Current sets the theme as the site theme, and enables it if needed.
+
+00:04:45.286 --> 00:04:47.006
+Let's click Make Current.
+
+00:04:47.006 --> 00:04:48.670
+Two messages confirm it:
+
+00:04:48.670 --> 00:04:52.718
+MyTheme was enabled, and MyTheme was set as the default Site theme.
+
+00:04:52.718 --> 00:04:56.878
+The current themes come first, and the card of MyTheme reads, This is
+
+00:04:56.878 --> 00:04:58.486
+the current Site theme.
+
+00:04:58.937 --> 00:05:00.901
+Open the front end of the site.
+
+00:05:00.901 --> 00:05:05.677
+Its pages are rendered by the layout of MyTheme, which has no stylesheet of its own.
+
+00:05:09.877 --> 00:05:15.878
+To write the layout in Razor, add Layout.cshtml to Views in place of Layout.liquid.
+
+00:05:15.878 --> 00:05:18.912
+The project already uses the Razor SDK.
+
+00:05:18.912 --> 00:05:23.767
+As the built-in Razor themes do, add a view imports file to Views,
+
+00:05:23.767 --> 00:05:27.947
+so the layout inherits from the Orchard Core Razor page.
+
+00:05:28.697 --> 00:05:33.463
+To go further, separate videos cover creating a theme from an existing HTML
+
+00:05:33.463 --> 00:05:38.877
+template, declaring scripts and stylesheets as resources, and creating an admin theme.
+
+00:05:40.877 --> 00:05:44.407
+A theme is a project with a manifest and a layout, which you
+
+00:05:44.407 --> 00:05:50.236
+generate from the template, describe in the manifest, and apply with Make Current under Design, Themes.
+
+00:05:50.236 --> 00:05:51.627
+Thanks for watching.
+
