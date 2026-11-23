@@ -1,0 +1,245 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.509
+Old addresses keep arriving long after a page has been renamed.
+
+00:00:05.509 --> 00:00:12.633
+The URL Rewriting feature redirects or rewrites incoming requests, so visitors reach the right content.
+
+00:00:12.633 --> 00:00:17.339
+In this video, you create a redirect rule and a rewrite rule, test
+
+00:00:17.339 --> 00:00:19.430
+both, and manage the list.
+
+00:00:24.030 --> 00:00:28.800
+A page is renamed, but its old address stays in bookmarks, search results,
+
+00:00:28.800 --> 00:00:30.648
+and links on other sites.
+
+00:00:30.648 --> 00:00:35.120
+A folder of files moves, and pages keep pointing to the old location.
+
+00:00:35.870 --> 00:00:41.801
+A Redirect rule sends the visitor to another address, so the address in the browser changes.
+
+00:00:41.801 --> 00:00:45.613
+Use it when a page is renamed or moved, so that old links
+
+00:00:45.613 --> 00:00:47.610
+and bookmarks keep working.
+
+00:00:48.360 --> 00:00:53.242
+A Rewrite rule answers with the content of another address, and the address
+
+00:00:53.242 --> 00:00:55.411
+in the browser stays the same.
+
+00:00:55.411 --> 00:00:59.570
+Use it to serve content from a location the visitor never sees.
+
+00:01:00.320 --> 00:01:03.820
+Rules are kept in a list and checked from the top down.
+
+00:01:03.820 --> 00:01:07.377
+A Rewrite rule can stop the rules below it from running.
+
+00:01:07.377 --> 00:01:12.540
+Addresses under the admin prefix, which is /Admin by default, are always left alone.
+
+00:01:13.290 --> 00:01:18.010
+A rule matches addresses with a pattern, written as a regular expression.
+
+00:01:18.010 --> 00:01:22.611
+A caret marks the start of an address, and a dollar sign marks its end.
+
+00:01:22.611 --> 00:01:27.810
+Parentheses capture text, and $1 in the substitution puts the captured text back.
+
+00:01:32.042 --> 00:01:35.313
+In the admin menu, choose Tools, then Features.
+
+00:01:35.313 --> 00:01:39.942
+The list holds the features of the site, so search for URL Rewriting.
+
+00:01:40.400 --> 00:01:43.235
+Select Enable on the URL Rewriting row.
+
+00:01:43.235 --> 00:01:44.998
+A message confirms it:
+
+00:01:44.998 --> 00:01:47.770
+The feature URL Rewriting was enabled.
+
+00:01:48.228 --> 00:01:52.252
+With the feature enabled, the Tools menu has a URL Rewriting item.
+
+00:01:52.252 --> 00:01:56.834
+Users see it when their role has the Manage URLs rewriting rules permission,
+
+00:01:56.834 --> 00:01:59.628
+which the Administrator role has by default.
+
+00:02:03.850 --> 00:02:06.502
+Choose Tools, then URL Rewriting.
+
+00:02:06.502 --> 00:02:12.350
+The URL Rewriting Rules page lists the rules of the site, and the list is empty.
+
+00:02:12.822 --> 00:02:14.243
+Select Add Rule.
+
+00:02:14.243 --> 00:02:18.507
+The Available Rule Types window offers Redirect and Rewrite.
+
+00:02:18.507 --> 00:02:20.962
+Select Add on the Redirect card.
+
+00:02:21.454 --> 00:02:25.653
+Give the rule the Display Name Redirect about-us to about.
+
+00:02:25.653 --> 00:02:30.704
+In Match URL Pattern, type a caret, then /about-us, then a dollar sign,
+
+00:02:30.704 --> 00:02:33.984
+to match the old address and nothing longer.
+
+00:02:34.452 --> 00:02:39.935
+Check Case Insensitive, so the pattern ignores letter case and an address typed
+
+00:02:39.935 --> 00:02:42.322
+as /About-Us is caught as well.
+
+00:02:42.778 --> 00:02:47.321
+Query String Policy controls the part of an address after a question mark.
+
+00:02:47.321 --> 00:02:52.261
+Append Query String from Original Request keeps it, and Exclude Query String from
+
+00:02:52.261 --> 00:02:54.078
+Original Request drops it.
+
+00:02:54.532 --> 00:02:57.440
+Redirect Type sets the response code.
+
+00:02:57.440 --> 00:03:01.227
+Found (302), the default, is a temporary redirect.
+
+00:03:01.227 --> 00:03:06.299
+Choose Moved Permanently (301) for a page that has moved for good, so
+
+00:03:06.299 --> 00:03:09.072
+bookmarks and links can be updated.
+
+00:03:09.531 --> 00:03:15.969
+In The Substitution URL Pattern, type /about, the address visitors should reach.
+
+00:03:15.969 --> 00:03:17.691
+Then select Save.
+
+00:03:18.148 --> 00:03:22.690
+The message reads Rule created successfully, and the list shows one row with
+
+00:03:22.690 --> 00:03:25.848
+the rule name, its source, and when it was created.
+
+00:03:27.446 --> 00:03:33.094
+Let's visit the old address, /about-us, with a parameter added after a question mark.
+
+00:03:33.094 --> 00:03:36.136
+A green label shows the address we ask for.
+
+00:03:36.593 --> 00:03:40.251
+The browser follows the redirect and opens the About page.
+
+00:03:40.251 --> 00:03:44.995
+The label shows the address it ended on, /about, with the parameter attached,
+
+00:03:44.995 --> 00:03:47.853
+because the policy appends the query string.
+
+00:03:52.049 --> 00:03:55.438
+Back on URL Rewriting Rules, select Add Rule.
+
+00:03:55.438 --> 00:03:58.629
+This time, select Add on the Rewrite card.
+
+00:03:59.082 --> 00:04:02.457
+Name the rule Serve media from img.
+
+00:04:02.457 --> 00:04:10.358
+In Match URL Pattern, type a caret, /img/, parentheses around dot star, and a dollar sign.
+
+00:04:10.358 --> 00:04:14.802
+This matches any address that starts with /img/.
+
+00:04:15.270 --> 00:04:21.794
+In The Substitution URL Pattern, type /media/ followed by $1.
+
+00:04:21.794 --> 00:04:32.020
+The $1 stands for the text captured after /img/, so /img/photo.jpg is served from /media/photo.jpg.
+
+00:04:32.481 --> 00:04:37.232
+Check Case Insensitive, and set Query String Policy to Exclude Query String from
+
+00:04:37.232 --> 00:04:41.651
+Original Request, so that parameters on the old address are not passed on.
+
+00:04:42.112 --> 00:04:44.992
+Check Stop Evaluation of Subsequent Rules.
+
+00:04:44.992 --> 00:04:49.372
+When this rule matches, the rules below it in the list are ignored.
+
+00:04:49.372 --> 00:04:50.752
+Then select Save.
+
+00:04:51.212 --> 00:04:56.732
+The list shows both rules, with the Redirect rule first and the Rewrite rule below it.
+
+00:04:58.321 --> 00:05:00.897
+Let's open /img/about-bg.jpg.
+
+00:05:00.897 --> 00:05:06.639
+The site answers with the image stored under /media, and the label shows
+
+00:05:06.639 --> 00:05:10.541
+that the address in the browser did not change.
+
+00:05:14.735 --> 00:05:19.484
+Each row shows a drag handle, a checkbox, the rule name, its source,
+
+00:05:19.484 --> 00:05:21.410
+and when it was created.
+
+00:05:21.410 --> 00:05:24.555
+Edit changes a rule, and Delete removes it.
+
+00:05:25.006 --> 00:05:28.112
+Edit opens the same form with the saved values.
+
+00:05:28.112 --> 00:05:30.866
+Select Cancel to leave the rule as it is.
+
+00:05:31.327 --> 00:05:34.507
+Drag a row by its handle to move the rule up or down.
+
+00:05:34.507 --> 00:05:38.387
+The order of the list is the order in which the rules are checked.
+
+00:05:38.842 --> 00:05:43.446
+Select Delete on a row, and the Delete window asks you to confirm.
+
+00:05:43.446 --> 00:05:47.602
+Select Ok, and the page confirms that the rule was deleted.
+
+00:05:49.602 --> 00:05:54.130
+A Redirect rule changes the address, a Rewrite rule keeps it, and the
+
+00:05:54.130 --> 00:05:57.753
+order of the list decides which rule is checked first.
+
+00:05:57.753 --> 00:05:59.322
+Thanks for watching.
+
