@@ -2147,12 +2147,12 @@
     "docs": [
       "src/docs/topics/display/theme-from-html-template.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 7.1,
     "words": 1070,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
