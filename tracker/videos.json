@@ -2147,7 +2147,7 @@
     "docs": [
       "src/docs/topics/display/theme-from-html-template.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 7.1,
     "words": 1070,
     "contentCommit": "",
@@ -2155,9 +2155,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/348",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "theme-from-html-template/v1",
+    "youtubeId": "G34pofzTaVQ",
+    "publishedOn": "2026-11-23",
     "notes": ""
   },
   {
