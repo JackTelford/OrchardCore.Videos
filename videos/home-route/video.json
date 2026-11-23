@@ -23,7 +23,40 @@
     "Orchard Core",
     "Routing"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:12",
+      "title": "How the home page works"
+    },
+    {
+      "time": "0:54",
+      "title": "Two features"
+    },
+    {
+      "time": "1:19",
+      "title": "Allow a content type"
+    },
+    {
+      "time": "1:51",
+      "title": "Set the home page"
+    },
+    {
+      "time": "2:36",
+      "title": "Change the home page"
+    },
+    {
+      "time": "3:05",
+      "title": "Who can set it"
+    },
+    {
+      "time": "3:30",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Home Route",
@@ -50,5 +83,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.HomeRoute"
-  }
+  },
+  "length": "3:46"
 }
