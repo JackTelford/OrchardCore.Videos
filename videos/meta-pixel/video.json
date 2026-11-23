@@ -23,7 +23,40 @@
     "Orchard Core",
     "SEO and Analytics"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "How the Meta Pixel works"
+    },
+    {
+      "time": "0:42",
+      "title": "Enable the feature"
+    },
+    {
+      "time": "1:14",
+      "title": "Add your Pixel Identifier"
+    },
+    {
+      "time": "1:46",
+      "title": "What the pixel does on your pages"
+    },
+    {
+      "time": "2:12",
+      "title": "The Conversions API"
+    },
+    {
+      "time": "2:54",
+      "title": "Send events from a workflow"
+    },
+    {
+      "time": "3:54",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -49,5 +82,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Facebook.Pixel"
-  }
+  },
+  "length": "4:05"
 }
