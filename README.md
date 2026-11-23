@@ -130,7 +130,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Indexing in Code: Index Your Own Data and Fields](videos/indexing-developer) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Indexes: Create, Rebuild and Reset Search Indexes](videos/indexing-indexes) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Layers: Show Widgets on the Right Pages](videos/layers-zones) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Liquid: Objects, Filters and Tags in Orchard Core](videos/liquid-basics) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Liquid: Objects, Filters and Tags in Orchard Core](videos/liquid-basics) | 6:42 | [https://youtu.be/CnTlbB-g9EE](https://youtu.be/CnTlbB-g9EE) | OrchardCMS/OrchardCore |
 | [Liquid: Display Content Items, Shapes and Zones](videos/liquid-display-content) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Write a Liquid Filter](videos/liquid-filter-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Liquid Part and Liquid Field: Content That Runs Templates](videos/liquid-part-and-field) |  | not uploaded | OrchardCMS/OrchardCore |
