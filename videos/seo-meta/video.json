@@ -23,7 +23,40 @@
     "Orchard Core",
     "SEO and Analytics"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Two places for the values"
+    },
+    {
+      "time": "0:59",
+      "title": "Enable the module"
+    },
+    {
+      "time": "1:20",
+      "title": "Site-wide defaults"
+    },
+    {
+      "time": "2:18",
+      "title": "Add the part to a content type"
+    },
+    {
+      "time": "3:03",
+      "title": "Edit a page"
+    },
+    {
+      "time": "4:33",
+      "title": "Where each value comes from"
+    },
+    {
+      "time": "5:25",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
