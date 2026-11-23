@@ -24,7 +24,32 @@
     "Orchard Core",
     "SEO and Analytics"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "How feeds work"
+    },
+    {
+      "time": "1:09",
+      "title": "Enable the features"
+    },
+    {
+      "time": "1:40",
+      "title": "The feed of a list"
+    },
+    {
+      "time": "2:35",
+      "title": "Control the feed"
+    },
+    {
+      "time": "3:18",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Feeds",
@@ -51,5 +76,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Feeds"
-  }
+  },
+  "length": "3:29"
 }
