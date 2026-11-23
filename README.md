@@ -115,7 +115,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Implement Full-Text Search: From Index to Results Page](videos/full-text-search-guide) |  | not uploaded | OrchardCMS/OrchardCore |
 | [GitHub Sign-In: Let Developers Sign In With GitHub](videos/github-login) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Go to Production: A Checklist for a Live Orchard Core Site](videos/go-to-production) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Google Analytics and Tag Manager: Measure Your Visitors](videos/google-analytics-tag-manager) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Google Analytics and Tag Manager: Measure Your Visitors](videos/google-analytics-tag-manager) | 4:09 | [https://youtu.be/Vk-BUPp_Guo](https://youtu.be/Vk-BUPp_Guo) | OrchardCMS/OrchardCore |
 | [Google Sign-In: Let Users Sign In With Google](videos/google-login) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Extend GraphQL: Add Your Own Types and Queries](videos/graphql-extend) |  | not uploaded | OrchardCMS/OrchardCore |
 | [GraphQL: Filter, Sort and Page Content Items](videos/graphql-filters-paging) |  | not uploaded | OrchardCMS/OrchardCore |
