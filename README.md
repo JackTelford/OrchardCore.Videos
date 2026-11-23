@@ -212,7 +212,7 @@ to make a video again, or to change how it appears on YouTube.
 | [reCAPTCHA: Keep Bots Out of Sign-In, Registration and Forms](videos/security-recaptcha) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Reverse Proxy Settings: Run Behind a Load Balancer](videos/security-reverse-proxy) |  | not uploaded | OrchardCMS/OrchardCore |
 | [SEO Meta: Titles, Descriptions and Social Sharing Cards](videos/seo-meta) | 5:36 | [https://youtu.be/n0WUFjJtl0w](https://youtu.be/n0WUFjJtl0w) | OrchardCMS/OrchardCore |
-| [Robots: Tell Search Engines What to Crawl](videos/seo-robots) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Robots: Tell Search Engines What to Crawl](videos/seo-robots) | 3:41 | [https://youtu.be/BDJ5ziPIOL8](https://youtu.be/BDJ5ziPIOL8) | OrchardCMS/OrchardCore |
 | [Setup: Install Your First Orchard Core Site](videos/setup-first-site) | 4:41 | [https://youtu.be/0SlLT1du0A0](https://youtu.be/0SlLT1du0A0) | OrchardCMS/OrchardCore |
 | [Shells and Configuration: How Tenants Are Configured](videos/shells-and-configuration) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Shortcode Templates: Write Your Own Shortcodes With Liquid](videos/shortcode-templates) |  | not uploaded | OrchardCMS/OrchardCore |
