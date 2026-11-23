@@ -1,0 +1,328 @@
+1
+00:00:01,000 --> 00:00:05,516
+Search engines and social networks read a few values from every page:
+
+2
+00:00:05,516 --> 00:00:08,767
+its title, a description, and a preview picture.
+
+3
+00:00:08,767 --> 00:00:14,006
+The SEO module lets you set defaults for the whole site and values for each page.
+
+4
+00:00:14,006 --> 00:00:15,210
+Let's see how.
+
+5
+00:00:19,810 --> 00:00:23,007
+The SEO module keeps these values in two places.
+
+6
+00:00:23,007 --> 00:00:27,685
+Social Meta Settings holds defaults for the whole site, and they apply to
+
+7
+00:00:27,685 --> 00:00:31,830
+every page that shows a content item, whatever its content type.
+
+8
+00:00:32,580 --> 00:00:36,081
+The SeoMeta part holds the values of a single page.
+
+9
+00:00:36,081 --> 00:00:40,381
+You attach it to a content type, such as Article, and its fields
+
+10
+00:00:40,381 --> 00:00:42,899
+appear in an SEO tab of the editor.
+
+11
+00:00:42,899 --> 00:00:46,400
+A value set on the page wins over the site default.
+
+12
+00:00:47,150 --> 00:00:52,597
+Open Graph and Twitter Card are two formats that describe how a shared link is presented.
+
+13
+00:00:52,597 --> 00:00:56,382
+The module has a panel for each, and both can start from the
+
+14
+00:00:56,382 --> 00:00:58,790
+same title, description and picture.
+
+15
+00:01:03,090 --> 00:01:09,430
+The SEO module is a feature, so let's start in Tools, Features, and search for SEO.
+
+16
+00:01:09,958 --> 00:01:12,362
+Select Enable on the SEO feature.
+
+17
+00:01:12,362 --> 00:01:17,478
+Orchard Core also enables any feature that SEO depends on, and a notification
+
+18
+00:01:17,478 --> 00:01:19,698
+confirms that SEO was enabled.
+
+19
+00:01:23,960 --> 00:01:26,592
+Open Settings, then Social Meta Settings.
+
+20
+00:01:26,592 --> 00:01:30,401
+These fields hold the defaults that a page uses when it has no
+
+21
+00:01:30,401 --> 00:01:31,690
+value of its own.
+
+22
+00:01:32,174 --> 00:01:36,719
+Default Meta Description is the summary for pages without a Meta Description.
+
+23
+00:01:36,719 --> 00:01:39,184
+Let's type one sentence about the site.
+
+24
+00:01:39,647 --> 00:01:43,340
+The same page also has defaults for Open Graph and Twitter, such as
+
+25
+00:01:43,340 --> 00:01:48,400
+Open Graph Type, Default Open Graph Description, Twitter Card and Default Twitter Description.
+
+26
+00:01:48,400 --> 00:01:49,867
+Let's leave them empty.
+
+27
+00:01:50,320 --> 00:01:52,845
+The Social card holds the pictures.
+
+28
+00:01:52,845 --> 00:01:57,956
+Default social image is the picture for shared links, unless Open graph image
+
+29
+00:01:57,956 --> 00:02:00,912
+or Twitter Image sets a more specific one.
+
+30
+00:02:00,912 --> 00:02:04,360
+Select Add media, choose a picture, and select OK.
+
+31
+00:02:04,823 --> 00:02:07,804
+Select Media text and describe the picture.
+
+32
+00:02:07,804 --> 00:02:12,001
+The module uses this text as the alternative text of the image.
+
+33
+00:02:12,001 --> 00:02:17,353
+Select Save, and the message Site settings updated successfully confirms the save.
+
+34
+00:02:21,563 --> 00:02:24,300
+Page values come from the SeoMeta part.
+
+35
+00:02:24,300 --> 00:02:29,533
+Let's open Design, Content Definition, Content Types, and edit the Article type.
+
+36
+00:02:29,995 --> 00:02:31,523
+Select Add Parts.
+
+37
+00:02:31,523 --> 00:02:34,912
+SeoMeta is in the list, with its description.
+
+38
+00:02:34,912 --> 00:02:40,295
+Select Add & Configure on its row to attach the part and open its settings.
+
+39
+00:02:40,760 --> 00:02:46,376
+Five checkboxes, each starting with Display, decide which panels the editor shows:
+
+40
+00:02:46,376 --> 00:02:50,971
+Keywords, Custom Meta Tags, Open Graph, Twitter and Google Schema.
+
+41
+00:02:50,971 --> 00:02:52,950
+All five start unchecked.
+
+42
+00:02:53,412 --> 00:02:58,448
+Let's check Display Open Graph and Display Twitter, and leave the others off.
+
+43
+00:02:58,448 --> 00:03:02,392
+Select Save, and a notification confirms the part settings.
+
+44
+00:03:06,607 --> 00:03:10,852
+Let's open Content, Content Items, and edit the About article.
+
+45
+00:03:10,852 --> 00:03:13,599
+The editor has a second tab named SEO.
+
+46
+00:03:13,599 --> 00:03:14,597
+Select it.
+
+47
+00:03:15,053 --> 00:03:17,082
+Render is checked by default.
+
+48
+00:03:17,082 --> 00:03:21,603
+When you clear it, the SEO module writes no values for this page at all.
+
+49
+00:03:22,058 --> 00:03:26,084
+Page Title overrides the title that the browser shows for the page.
+
+50
+00:03:26,084 --> 00:03:29,228
+Its hint recommends keeping it under 70 characters.
+
+51
+00:03:29,228 --> 00:03:30,938
+Let's type a short title.
+
+52
+00:03:31,401 --> 00:03:34,486
+Meta Description is a short summary of the page.
+
+53
+00:03:34,486 --> 00:03:36,201
+Let's type one sentence.
+
+54
+00:03:36,664 --> 00:03:40,685
+Canonical overrides the address that identifies the page.
+
+55
+00:03:40,685 --> 00:03:44,770
+It stays empty, so the module uses the page's own address.
+
+56
+00:03:44,770 --> 00:03:49,430
+Meta Robots, the robots meta tag of this page, stays empty too, and
+
+57
+00:03:49,430 --> 00:03:53,514
+a separate video covers the robots file of the whole site.
+
+58
+00:03:53,974 --> 00:04:00,068
+In the Social card, Default social image sets one picture for both Open Graph and Twitter.
+
+59
+00:04:00,068 --> 00:04:03,624
+Select Add media, choose a picture, and select OK.
+
+60
+00:04:04,116 --> 00:04:06,809
+Select Media text and describe the picture.
+
+61
+00:04:06,809 --> 00:04:10,766
+This text becomes the alternative text of the image for this page.
+
+62
+00:04:11,248 --> 00:04:16,050
+The Open Graph and Twitter cards have their own title and description fields.
+
+63
+00:04:16,050 --> 00:04:20,678
+Here they stay empty, so they use the Page Title and the Meta Description.
+
+64
+00:04:21,131 --> 00:04:22,411
+Select Publish.
+
+65
+00:04:22,411 --> 00:04:25,153
+The content of the page stays as it is.
+
+66
+00:04:25,153 --> 00:04:30,273
+The module adds these values behind the page, for browsers, search engines and
+
+67
+00:04:30,273 --> 00:04:32,101
+social networks to read.
+
+68
+00:04:36,301 --> 00:04:38,037
+Each value has an order.
+
+69
+00:04:38,037 --> 00:04:42,494
+The Page Title replaces the whole browser title, without the site name.
+
+70
+00:04:42,494 --> 00:04:47,877
+Meta Description comes from the page, then from Default Meta Description, and Canonical
+
+71
+00:04:47,877 --> 00:04:51,061
+from the page, then from the address of the page.
+
+72
+00:04:51,811 --> 00:04:55,926
+For sharing, a title comes from its own field, the Page Title, then
+
+73
+00:04:55,926 --> 00:04:57,673
+the content item's title.
+
+74
+00:04:57,673 --> 00:05:02,576
+A description comes from its own field, the page's Meta Description, then Default
+
+75
+00:05:02,576 --> 00:05:07,311
+Open Graph Description or Default Twitter Description in Social Meta Settings.
+
+76
+00:05:08,061 --> 00:05:10,014
+Pictures follow four steps:
+
+77
+00:05:10,014 --> 00:05:14,572
+the specific picture of the page, the Default social image of the page,
+
+78
+00:05:14,572 --> 00:05:19,367
+the specific picture in Social Meta Settings, and its Default social image.
+
+79
+00:05:19,367 --> 00:05:24,161
+The media text, which becomes the alternative text, follows the same order.
+
+80
+00:05:26,161 --> 00:05:30,320
+Set the defaults once in Social Meta Settings, and add the SeoMeta part
+
+81
+00:05:30,320 --> 00:05:33,777
+to the content types whose pages need values of their own.
+
+82
+00:05:33,777 --> 00:05:35,181
+Thanks for watching.
+
