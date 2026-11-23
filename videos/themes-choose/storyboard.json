@@ -97,7 +97,7 @@
             },
             {
               "id": "site-2",
-              "text": "Back on the Themes page, find The Default Theme. It is disabled, so Orchard Core enables it when you click Make Current. Two messages confirm that it was enabled and set as the default Site theme."
+              "text": "Back on the Themes page, find The Default Theme. It is disabled, so Orchard Core enables it when you click Make Current. The card then reads This is the current Site theme, so the theme is both enabled and set as the default Site theme."
             },
             {
               "id": "site-3",
@@ -126,7 +126,7 @@
             },
             {
               "id": "toggle-2",
-              "text": "Disable switches a theme off. Let's click Disable on The Default Theme. A message confirms it, and the card then offers Enable, which switches a theme on without making it current."
+              "text": "Disable switches a theme off. Let's click Disable on The Default Theme. The card then offers Enable, which switches a theme on without making it current."
             },
             {
               "id": "toggle-3",
