@@ -1,0 +1,230 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.879
+The Orchard Core admin has a theme of its own, separate from the
+
+00:00:04.879 --> 00:00:06.265
+theme of your site.
+
+00:00:06.265 --> 00:00:10.310
+In this video, you create an admin theme on top of TheAdmin, change
+
+00:00:10.310 --> 00:00:13.580
+its branding, restyle its forms, and make it current.
+
+00:00:18.180 --> 00:00:20.303
+A site has two current themes:
+
+00:00:20.303 --> 00:00:24.666
+one renders the pages visitors see, and the other renders the admin.
+
+00:00:24.666 --> 00:00:29.206
+The setup recipes of Orchard Core, such as Blog and Blank, set TheAdmin
+
+00:00:29.206 --> 00:00:30.680
+as the admin theme.
+
+00:00:31.430 --> 00:00:35.170
+The Admin attribute marks a request as an admin request.
+
+00:00:35.170 --> 00:00:40.840
+For those requests, Orchard Core renders with the admin theme instead of the site theme.
+
+00:00:41.590 --> 00:00:44.155
+Your admin theme does not start from zero.
+
+00:00:44.155 --> 00:00:47.895
+It names TheAdmin as its base theme, so a template in your theme
+
+00:00:47.895 --> 00:00:52.490
+replaces the same template of TheAdmin, and every other template stays as it is.
+
+00:00:56.690 --> 00:01:01.006
+Create the theme project with the theme template, add it to your solution,
+
+00:01:01.006 --> 00:01:03.595
+and reference it from the web application.
+
+00:01:03.595 --> 00:01:06.670
+A separate video covers creating a theme in detail.
+
+00:01:07.420 --> 00:01:11.889
+In the manifest, add the tag admin, and set the base theme to TheAdmin.
+
+00:01:11.889 --> 00:01:15.953
+The tag lets the Themes page offer your theme as an admin theme.
+
+00:01:15.953 --> 00:01:20.480
+The base theme makes TheAdmin supply every template you do not override.
+
+00:01:21.230 --> 00:01:24.566
+The template also adds a Layout file for a site theme.
+
+00:01:24.566 --> 00:01:25.455
+Delete it.
+
+00:01:25.455 --> 00:01:29.736
+A Layout in your theme replaces the layout of TheAdmin, which draws the
+
+00:01:29.736 --> 00:01:31.960
+menu and the top bar of the admin.
+
+00:01:36.160 --> 00:01:39.443
+To change a template, add a file with the same name to the
+
+00:01:39.443 --> 00:01:41.135
+Views folder of your theme.
+
+00:01:41.135 --> 00:01:44.674
+The Razor files of your theme rely on a view imports file, like
+
+00:01:44.674 --> 00:01:48.880
+the one in TheAdmin, that sets the page class and registers the tag helpers.
+
+00:01:49.630 --> 00:01:54.349
+The Admin module provides AdminBranding, which renders the brand in the top bar:
+
+00:01:54.349 --> 00:01:56.160
+the logo and the site name.
+
+00:01:56.160 --> 00:02:00.330
+Your template keeps only the site name, linked to the admin home page.
+
+00:02:01.080 --> 00:02:05.150
+The layout renders the branding before the head of the page, so a
+
+00:02:05.150 --> 00:02:09.622
+stylesheet required here loads on every page that uses the admin layout.
+
+00:02:09.622 --> 00:02:12.890
+The file lives in the wwwroot folder of your theme.
+
+00:02:13.640 --> 00:02:19.322
+The depends-on attribute names TheAdminLayout, bootstrap and the-admin, the styles that the layout
+
+00:02:19.322 --> 00:02:20.743
+loads for the admin.
+
+00:02:20.743 --> 00:02:25.660
+The browser loads them first and your file after, so your rules can override theirs.
+
+00:02:29.860 --> 00:02:32.982
+Admin editors do not fix a form layout.
+
+00:02:32.982 --> 00:02:36.104
+They mark up a field with ocat classes:
+
+00:02:36.104 --> 00:02:43.250
+ocat-wrapper around the field, ocat-label for its label, and ocat-end for the input and its hint.
+
+00:02:44.000 --> 00:02:50.846
+Fields of limited width, such as dropdowns and numbers, use ocat-limited-wrapper and ocat-limited.
+
+00:02:50.846 --> 00:02:55.520
+By default, all of these classes stack the label above the input.
+
+00:02:56.270 --> 00:03:02.049
+Your stylesheet can restyle every editor that uses these classes without touching a Razor view.
+
+00:03:02.049 --> 00:03:06.055
+This one makes the wrapper a flex row, gives the label a quarter
+
+00:03:06.055 --> 00:03:09.660
+of the width, aligned to the end, and the input the rest.
+
+00:03:13.863 --> 00:03:16.901
+Build and run the site, then open Design, Themes.
+
+00:03:16.901 --> 00:03:20.878
+Your theme appears as a card, after the cards of the current admin
+
+00:03:20.878 --> 00:03:23.033
+theme and the current site theme.
+
+00:03:23.484 --> 00:03:28.667
+The card lists the author, the website, the tags and the version from the manifest.
+
+00:03:28.667 --> 00:03:33.150
+The tags include admin, so Make Current applies this theme to the admin
+
+00:03:33.150 --> 00:03:34.664
+and not to the site.
+
+00:03:35.124 --> 00:03:36.670
+Select Make Current.
+
+00:03:36.670 --> 00:03:42.734
+Orchard Core enables the theme and reports that MyAdminTheme was set as the default Admin theme.
+
+00:03:43.186 --> 00:03:44.324
+The card reads:
+
+00:03:44.324 --> 00:03:49.256
+This is the current Admin theme, and every page of the admin renders with your theme.
+
+00:03:53.454 --> 00:03:56.117
+The top bar shows the branding of your template:
+
+00:03:56.117 --> 00:03:57.992
+the site name, without the logo.
+
+00:03:57.992 --> 00:04:00.704
+The rest of the layout still comes from TheAdmin.
+
+00:04:01.161 --> 00:04:02.930
+Open Settings, General.
+
+00:04:02.930 --> 00:04:07.566
+Site name, Page title format and Base url each sit beside their field,
+
+00:04:07.566 --> 00:04:12.201
+because the editors use the ocat classes that your stylesheet changed.
+
+00:04:12.654 --> 00:04:15.079
+The Settings module did not change.
+
+00:04:15.079 --> 00:04:17.445
+Only the theme decides the layout.
+
+00:04:17.445 --> 00:04:21.704
+To go back, make The Admin Theme current again on the Themes page.
+
+00:04:25.904 --> 00:04:30.465
+Any template of TheAdmin can be replaced the same way, for example Layout,
+
+00:04:30.465 --> 00:04:32.518
+Breadcrumb, Pager and Message.
+
+00:04:32.518 --> 00:04:37.764
+A placement file in your theme also changes where parts of the admin pages are placed.
+
+00:04:38.514 --> 00:04:42.224
+Content fields render their hint with the Hint.Admin template.
+
+00:04:42.224 --> 00:04:47.352
+A template with that name in your theme replaces it, and reads the text from Model.Hint.
+
+00:04:47.352 --> 00:04:49.534
+This one renders a tooltip button.
+
+00:04:50.284 --> 00:04:53.933
+Pages of your own modules use the admin theme when you apply the
+
+00:04:53.933 --> 00:04:57.269
+Admin attribute to their controller or to a single action.
+
+00:04:57.269 --> 00:05:01.804
+The Admin module also checks that the user has the Access admin panel permission.
+
+00:05:03.804 --> 00:05:05.282
+That is an admin theme:
+
+00:05:05.282 --> 00:05:08.951
+a manifest with the admin tag and TheAdmin as base theme, and only
+
+00:05:08.951 --> 00:05:11.499
+the templates and styles you want to change.
+
+00:05:11.499 --> 00:05:12.824
+Thanks for watching.
+
