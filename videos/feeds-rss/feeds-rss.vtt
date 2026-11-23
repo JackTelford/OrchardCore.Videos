@@ -1,0 +1,161 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.969
+People can follow a site without visiting it, by adding its feed to a feed reader.
+
+00:00:05.969 --> 00:00:10.430
+In this video, you enable the Feeds feature, check that Lists is enabled,
+
+00:00:10.430 --> 00:00:14.100
+find the feed of a list, open it, and choose what it holds.
+
+00:00:18.700 --> 00:00:23.305
+A feed is a page made for programs, listing the newest entries of a site.
+
+00:00:23.305 --> 00:00:28.610
+A feed reader checks the feeds a person follows and shows their entries in one place.
+
+00:00:29.360 --> 00:00:31.279
+Two features work together.
+
+00:00:31.279 --> 00:00:36.686
+Feeds builds the feed in the RSS format and serves it, but publishes nothing by itself.
+
+00:00:36.686 --> 00:00:40.930
+Lists provides the lists whose items fill a feed, such as the posts
+
+00:00:40.930 --> 00:00:44.360
+of a blog, and gives each list its own feed settings.
+
+00:00:45.110 --> 00:00:49.940
+A list feed starts with the title, the address and the description of the list.
+
+00:00:49.940 --> 00:00:54.030
+Then come the items of the list, newest first by creation date, up
+
+00:00:54.030 --> 00:00:55.678
+to a number you choose.
+
+00:00:55.678 --> 00:00:57.610
+Only published items appear.
+
+00:00:58.360 --> 00:01:01.157
+The page of a list carries a link to its feed.
+
+00:01:01.157 --> 00:01:05.515
+Browsers and feed readers can use that link to find the feed from the page.
+
+00:01:05.515 --> 00:01:08.420
+The feed settings of the list control this link.
+
+00:01:12.720 --> 00:01:15.392
+Feeds and Lists are separate features.
+
+00:01:15.392 --> 00:01:19.460
+Let's open Tools, Features, and type Feeds in the Search box.
+
+00:01:19.951 --> 00:01:22.744
+Feeds is listed under the Content category.
+
+00:01:22.744 --> 00:01:23.826
+Click Enable.
+
+00:01:23.826 --> 00:01:28.271
+The site restarts its features, and the Feeds row then shows the Enabled
+
+00:01:28.271 --> 00:01:30.151
+badge and a Disable button.
+
+00:01:30.609 --> 00:01:34.945
+Lists is under Content Management, and it shows the Enabled badge, so there
+
+00:01:34.945 --> 00:01:36.176
+is nothing to do.
+
+00:01:36.176 --> 00:01:39.709
+Both features must be enabled before a list can have a feed.
+
+00:01:44.009 --> 00:01:49.034
+To find the feed of a list, open Content, Content Items, and edit the Blog.
+
+00:01:49.034 --> 00:01:51.329
+A blog is a list of blog posts.
+
+00:01:51.799 --> 00:01:55.220
+The editor of the Blog has three feed settings.
+
+00:01:55.220 --> 00:01:59.350
+The first is a checkbox, Disable RSS feed link generation.
+
+00:01:59.350 --> 00:02:01.739
+Unchecked means the feed is on.
+
+00:02:02.195 --> 00:02:06.712
+A hint under Feed proxy Url shows the current address of this feed.
+
+00:02:06.712 --> 00:02:09.805
+Click it, and the feed opens in another tab.
+
+00:02:10.290 --> 00:02:13.848
+The feed is a page of structured text, written for programs.
+
+00:02:13.848 --> 00:02:16.650
+A feed reader turns it into a list of entries.
+
+00:02:16.650 --> 00:02:21.070
+The page starts with the title, the address and the description of the Blog.
+
+00:02:21.523 --> 00:02:25.826
+After that comes one entry for each published post, newest first.
+
+00:02:25.826 --> 00:02:29.522
+An entry has a title, a link, the body of the post, and
+
+00:02:29.522 --> 00:02:31.462
+the date it was published.
+
+00:02:31.462 --> 00:02:34.553
+A post saved only as a draft is not included.
+
+00:02:38.853 --> 00:02:42.983
+In the editor, Feed items count sets how many entries the feed holds,
+
+00:02:42.983 --> 00:02:44.635
+and it starts at twenty.
+
+00:02:44.635 --> 00:02:46.343
+Let's change it to three.
+
+00:02:46.798 --> 00:02:51.157
+The feed reads the published version of the Blog, so click Publish.
+
+00:02:51.157 --> 00:02:55.338
+When the feed is reloaded, it holds only the three newest posts.
+
+00:02:55.806 --> 00:03:00.896
+Feed proxy Url takes a custom public address that proxies the local feed of the list.
+
+00:03:00.896 --> 00:03:04.308
+When it is set, the link in the page of the list points
+
+00:03:04.308 --> 00:03:05.986
+to that address instead.
+
+00:03:06.450 --> 00:03:10.470
+To turn the feed off, publish the Blog with this checkbox checked:
+
+00:03:10.470 --> 00:03:12.648
+Disable RSS feed link generation.
+
+00:03:12.648 --> 00:03:17.060
+The page then has no link, and the feed address no longer returns a feed.
+
+00:03:19.060 --> 00:03:22.604
+Feeds builds the feed, and Lists supplies its items.
+
+00:03:22.604 --> 00:03:26.331
+Enable both, set the options on a list, and publish it.
+
+00:03:26.331 --> 00:03:27.920
+Thanks for watching.
+
