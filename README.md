@@ -159,7 +159,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Menu Items: Links, Content Items, HTML and Permissions](videos/menus-item-types) | 4:51 | [https://youtu.be/1JPj2SdNV0c](https://youtu.be/1JPj2SdNV0c) | OrchardCMS/OrchardCore |
 | [Menus: Build the Navigation of Your Site](videos/menus-overview) | 5:02 | [https://youtu.be/cXMmkEd_-SA](https://youtu.be/cXMmkEd_-SA) | OrchardCMS/OrchardCore |
 | [Meta Login: Let Users Sign In With Facebook](videos/meta-login) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Meta Pixel: Track Conversions From Meta Ads](videos/meta-pixel) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Meta Pixel: Track Conversions From Meta Ads](videos/meta-pixel) | 4:05 | [https://youtu.be/EWn1usAXo-U](https://youtu.be/EWn1usAXo-U) | OrchardCMS/OrchardCore |
 | [Meta Social Plugins: Like, Share and Comments Widgets](videos/meta-social-plugins) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Microsoft Account: Sign In With Personal Microsoft Accounts](videos/microsoft-account-login) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Microsoft Entra ID: Sign In With Work Accounts](videos/microsoft-entra-id-login) |  | not uploaded | OrchardCMS/OrchardCore |
