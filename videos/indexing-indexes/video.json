@@ -22,7 +22,44 @@
     "Orchard Core",
     "Search and Indexing"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "What an index is"
+    },
+    {
+      "time": "1:00",
+      "title": "Add an index"
+    },
+    {
+      "time": "2:08",
+      "title": "Three ways to update an index"
+    },
+    {
+      "time": "2:42",
+      "title": "Run the actions"
+    },
+    {
+      "time": "3:32",
+      "title": "Edit and delete indexes"
+    },
+    {
+      "time": "4:36",
+      "title": "Keep indexes current"
+    },
+    {
+      "time": "5:15",
+      "title": "Who can manage indexes"
+    },
+    {
+      "time": "5:32",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +81,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Indexing"
-  }
+  },
+  "length": "5:46"
 }
