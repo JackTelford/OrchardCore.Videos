@@ -2284,12 +2284,12 @@
     "docs": [
       "src/docs/reference/modules/Templates/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 5.8,
     "words": 869,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
