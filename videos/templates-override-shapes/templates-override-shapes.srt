@@ -1,0 +1,352 @@
+1
+00:00:01,000 --> 00:00:04,525
+Every page of an Orchard Core site is built from shapes.
+
+2
+00:00:04,525 --> 00:00:09,984
+The Templates module replaces how a shape renders with Liquid that you write in the admin.
+
+3
+00:00:09,984 --> 00:00:15,500
+In this video, you override a shape, find the names to override, and manage your templates.
+
+4
+00:00:20,100 --> 00:00:22,682
+Orchard Core builds every page from shapes.
+
+5
+00:00:22,682 --> 00:00:26,108
+A shape has a type and a list of alternates, which are more
+
+6
+00:00:26,108 --> 00:00:27,583
+specific names for it.
+
+7
+00:00:27,583 --> 00:00:30,640
+The alternates are tried when the shape is rendered.
+
+8
+00:00:31,390 --> 00:00:38,518
+A blog post shown in a list is a Content_Summary shape, and Content_Summary__BlogPost is its alternate.
+
+9
+00:00:38,518 --> 00:00:42,899
+A view file of the theme answers to that name, and a template
+
+10
+00:00:42,899 --> 00:00:44,730
+answers to it as well.
+
+11
+00:00:45,480 --> 00:00:48,795
+The alternates are tried from the most specific one.
+
+12
+00:00:48,795 --> 00:00:53,824
+For each alternate, Orchard Core looks for a template first, then for a view file.
+
+13
+00:00:53,824 --> 00:00:57,310
+So a template wins over a view file with the same name.
+
+14
+00:00:58,060 --> 00:01:00,811
+Templates apply to the pages of the site.
+
+15
+00:01:00,811 --> 00:01:06,371
+The admin screens use the Admin Templates feature instead, which a separate video covers.
+
+16
+00:01:06,371 --> 00:01:10,760
+A template lives in the site's database, so saving it needs no build.
+
+17
+00:01:11,510 --> 00:01:14,132
+Editing templates takes two permissions:
+
+18
+00:01:14,132 --> 00:01:17,096
+Manage templates, and Manage Liquid templates.
+
+19
+00:01:17,096 --> 00:01:21,656
+You need both to see the menu item, and both are marked security critical.
+
+20
+00:01:21,656 --> 00:01:25,190
+The Administrator and Editor roles have them by default.
+
+21
+00:01:29,399 --> 00:01:32,905
+On the blog page, every post is listed by a summary view that
+
+22
+00:01:32,905 --> 00:01:34,318
+comes from the theme.
+
+23
+00:01:34,318 --> 00:01:36,359
+Let's replace it with a template.
+
+24
+00:01:36,819 --> 00:01:42,186
+Under Design, Templates, the list is empty, because the site has no templates.
+
+25
+00:01:42,186 --> 00:01:44,359
+Add Template opens the form.
+
+26
+00:01:44,813 --> 00:01:47,816
+The name is the alternate to override:
+
+27
+00:01:47,816 --> 00:01:50,000
+Content_Summary__BlogPost.
+
+28
+00:01:50,000 --> 00:01:54,913
+The description is optional, and the list shows it under the name.
+
+29
+00:01:55,371 --> 00:01:56,861
+Content is required.
+
+30
+00:01:56,861 --> 00:02:01,386
+If you save without it, the form refuses, and suggests Placements in case
+
+31
+00:02:01,386 --> 00:02:03,391
+you wanted to hide the shape.
+
+32
+00:02:03,845 --> 00:02:06,590
+Content takes the Liquid, in a code editor.
+
+33
+00:02:06,590 --> 00:02:11,575
+A template replaces the whole view, so it must write everything the shape displays.
+
+34
+00:02:12,026 --> 00:02:17,489
+After Save and Cancel, the Preview button opens a page for previewing templates.
+
+35
+00:02:17,489 --> 00:02:19,586
+A separate video covers it.
+
+36
+00:02:20,040 --> 00:02:23,735
+Save stores the template and returns to the list, where it appears with
+
+37
+00:02:23,735 --> 00:02:25,510
+its description under the name.
+
+38
+00:02:25,963 --> 00:02:30,208
+Back on the blog page, every post is drawn by the template, without
+
+39
+00:02:30,208 --> 00:02:33,987
+the date and the badges, which the template does not write.
+
+40
+00:02:33,987 --> 00:02:38,463
+Nothing was built or restarted, and the theme's view file is unchanged.
+
+41
+00:02:42,663 --> 00:02:45,434
+The documentation lists the names to use.
+
+42
+00:02:45,434 --> 00:02:50,031
+Content items are named by their type and display type, widgets by their
+
+43
+00:02:50,031 --> 00:02:53,981
+type, and parts, fields and zones have patterns of their own.
+
+44
+00:02:53,981 --> 00:02:57,163
+A single item can be named by its slug or alias.
+
+45
+00:02:57,913 --> 00:03:01,569
+In a template, Model is the shape being rendered.
+
+46
+00:03:01,569 --> 00:03:07,552
+For a content item, Model.ContentItem is the item, with its DisplayText, its Author,
+
+47
+00:03:07,552 --> 00:03:11,473
+and, under Content, the data of its parts and fields.
+
+48
+00:03:12,223 --> 00:03:16,505
+Model.Content is a zone with the shapes of the parts and fields.
+
+49
+00:03:16,505 --> 00:03:22,621
+The shape_render filter draws them, and the shape_remove_item tag takes one out by name first.
+
+50
+00:03:22,621 --> 00:03:25,923
+A separate video covers Liquid shapes and zones.
+
+51
+00:03:26,673 --> 00:03:29,242
+Other shapes have other properties.
+
+52
+00:03:29,242 --> 00:03:33,189
+A widget has Classes, and a zone has ZoneName and Parent.
+
+53
+00:03:33,189 --> 00:03:38,263
+The documentation lists the properties of content items, widgets and zones.
+
+54
+00:03:42,464 --> 00:03:46,916
+To find the shape behind a fragment of a page, open Settings, Debugging,
+
+55
+00:03:46,916 --> 00:03:49,884
+check Write shape debug information, and save.
+
+56
+00:03:51,484 --> 00:03:55,583
+In the page source, each rendered shape is then wrapped in comments.
+
+57
+00:03:55,583 --> 00:03:59,958
+The start comment gives the shape type, and the binding that rendered it:
+
+58
+00:03:59,958 --> 00:04:03,558
+the alternate that matched, and where its markup came from.
+
+59
+00:04:03,558 --> 00:04:05,884
+For a view file, it names that view.
+
+60
+00:04:06,634 --> 00:04:10,043
+Choose the most specific name that does what you need.
+
+61
+00:04:10,043 --> 00:04:14,930
+A template named for the shape type itself, such as Content_Summary, answers for
+
+62
+00:04:14,930 --> 00:04:19,134
+every content type in summary views that has no more specific match.
+
+63
+00:04:23,349 --> 00:04:27,610
+Content types have shortcuts, so you don't have to type names.
+
+64
+00:04:27,610 --> 00:04:33,500
+Under Design, Content Definition, Content Types, edit Blog Post and open Edit templates.
+
+65
+00:04:33,500 --> 00:04:37,699
+It lists an entry for detail views and one for summary views.
+
+66
+00:04:38,153 --> 00:04:42,623
+The detail entry stands for the alternate Content__BlogPost.
+
+67
+00:04:42,623 --> 00:04:47,703
+No template has that name, so the form opens with the name filled in.
+
+68
+00:04:48,159 --> 00:04:49,707
+Cancel leaves the form.
+
+69
+00:04:49,707 --> 00:04:54,351
+The summary entry opens the template you created earlier, because it exists, with
+
+70
+00:04:54,351 --> 00:04:56,059
+its content ready to edit.
+
+71
+00:05:00,272 --> 00:05:04,699
+In the list, the search box filters templates by name, and Edit opens
+
+72
+00:05:04,699 --> 00:05:07,592
+one with its name, description and content.
+
+73
+00:05:08,050 --> 00:05:09,773
+The name is editable too.
+
+74
+00:05:09,773 --> 00:05:14,220
+Saving under another name moves the template to another shape, and the old
+
+75
+00:05:14,220 --> 00:05:16,110
+name goes back to the theme.
+
+76
+00:05:16,572 --> 00:05:22,092
+Delete asks for confirmation in a dialog, and then removes the template from the site.
+
+77
+00:05:22,092 --> 00:05:23,532
+The list is empty.
+
+78
+00:05:23,987 --> 00:05:28,124
+The blog page shows the summary view of the theme, because no template
+
+79
+00:05:28,124 --> 00:05:29,867
+answers to that alternate.
+
+80
+00:05:34,067 --> 00:05:38,890
+Templates are data of the site, so recipes and deployment plans can carry them.
+
+81
+00:05:38,890 --> 00:05:44,337
+The Templates recipe step defines each template by name, with its description and content.
+
+82
+00:05:45,087 --> 00:05:48,948
+A deployment plan exports them with the All Templates step.
+
+83
+00:05:48,948 --> 00:05:53,225
+Export templates as files writes each one to its own file, and the
+
+84
+00:05:53,225 --> 00:05:55,067
+step refers to that file.
+
+85
+00:05:57,067 --> 00:05:58,744
+That's the Templates module:
+
+86
+00:05:58,744 --> 00:06:02,297
+Liquid stored under the name of a shape, written in the admin, and
+
+87
+00:06:02,297 --> 00:06:04,764
+tried before a view file with the same name.
+
+88
+00:06:04,764 --> 00:06:06,047
+Thanks for watching.
+
