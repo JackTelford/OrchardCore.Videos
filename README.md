@@ -21,7 +21,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Add Admin Menu Entries to Your Module](videos/admin-menu-add) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Admin Menus: Add Your Own Links to the Admin Navigation](videos/admin-menus-custom) | 5:23 | [https://youtu.be/YEWzj98xntI](https://youtu.be/YEWzj98xntI) | OrchardCMS/OrchardCore |
 | [Admin Settings: Tailor the Admin for Your Editors](videos/admin-settings) | 3:34 | [https://youtu.be/_87tZ98HO58](https://youtu.be/_87tZ98HO58) | OrchardCMS/OrchardCore |
-| [Admin Templates: Customize Admin Screens With Liquid](videos/admin-templates) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Admin Templates: Customize Admin Screens With Liquid](videos/admin-templates) | 4:59 | [https://youtu.be/_HoBVym4lBo](https://youtu.be/_HoBVym4lBo) | OrchardCMS/OrchardCore |
 | [Create an Admin Theme: Restyle the Admin](videos/admin-theme-create) | 5:14 | [https://youtu.be/ht6M2TWKLaU](https://youtu.be/ht6M2TWKLaU) | OrchardCMS/OrchardCore |
 | [The Admin: Find Your Way Around Orchard Core](videos/admin-tour) | 5:08 | [https://youtu.be/hQPLynQAPeY](https://youtu.be/hQPLynQAPeY) | OrchardCMS/OrchardCore |
 | [AI Quick Start: Build Orchard Core Sites With a Coding Agent](videos/ai-quick-start) | 6:31 | [https://youtu.be/9Q2x-Q2Gg0k](https://youtu.be/9Q2x-Q2Gg0k) | OrchardCMS/OrchardCore |
