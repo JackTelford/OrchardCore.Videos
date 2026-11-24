@@ -1,0 +1,328 @@
+1
+00:00:01,000 --> 00:00:06,239
+The Lucene module gives your site full-text search with no other service, because
+
+2
+00:00:06,239 --> 00:00:08,528
+the index lives inside the site.
+
+3
+00:00:08,528 --> 00:00:13,225
+In this video, you enable Lucene, create an index, learn what the search
+
+4
+00:00:13,225 --> 00:00:17,200
+looks in, search the site, and see how servers stay in sync.
+
+5
+00:00:21,800 --> 00:00:23,717
+Searching needs an index:
+
+6
+00:00:23,717 --> 00:00:27,984
+a copy of your text, organized so that words are found quickly.
+
+7
+00:00:27,984 --> 00:00:32,808
+Elasticsearch and Azure AI Search keep that index in a separate service.
+
+8
+00:00:32,808 --> 00:00:35,220
+Lucene keeps it inside your site.
+
+9
+00:00:35,970 --> 00:00:39,622
+With the Lucene module, an index is a set of files in the
+
+10
+00:00:39,622 --> 00:00:43,680
+folder of your tenant, the name Orchard Core gives to a site, on
+
+11
+00:00:43,680 --> 00:00:45,419
+the server that runs it.
+
+12
+00:00:45,419 --> 00:00:49,940
+When content is published, unpublished or removed, the index is updated.
+
+13
+00:00:50,690 --> 00:00:55,031
+The module adds Lucene indexes to the Indexes page, options for how text
+
+14
+00:00:55,031 --> 00:00:57,925
+is analyzed, and settings for what is indexed.
+
+15
+00:00:57,925 --> 00:01:02,210
+The Search feature then uses an index for the search page of your site.
+
+16
+00:01:06,438 --> 00:01:09,559
+Open Tools, Features, and search for Lucene.
+
+17
+00:01:09,559 --> 00:01:13,928
+The Lucene module lists several features in the Search category.
+
+18
+00:01:14,403 --> 00:01:17,597
+Lucene is the feature that provides indexes.
+
+19
+00:01:17,597 --> 00:01:24,241
+Lucene (Obsolete) exists for backwards compatibility and enables Lucene, and Lucene Content Picker
+
+20
+00:01:24,241 --> 00:01:27,243
+adds an editor for content picker fields.
+
+21
+00:01:27,721 --> 00:01:29,331
+Select Enable on Lucene.
+
+22
+00:01:29,331 --> 00:01:32,176
+A message confirms that the feature is enabled.
+
+23
+00:01:32,176 --> 00:01:37,061
+Lucene depends on the Indexing feature, which provides the Indexes page you use next.
+
+24
+00:01:41,274 --> 00:01:44,415
+Open Search, Indexes, and select Add index.
+
+25
+00:01:44,415 --> 00:01:49,735
+The dialog lists the sources, and under Lucene, Content in Lucene indexes the
+
+26
+00:01:49,735 --> 00:01:51,850
+content items of your site.
+
+27
+00:01:51,850 --> 00:01:53,324
+Select Add on it.
+
+28
+00:01:53,776 --> 00:01:57,418
+Index Name is the name of the index in Lucene itself, and it
+
+29
+00:01:57,418 --> 00:01:59,295
+can't change after you save.
+
+30
+00:01:59,295 --> 00:02:01,061
+Name is filled in from it.
+
+31
+00:02:01,061 --> 00:02:05,366
+The search page and the Site Search settings refer to the index by Name.
+
+32
+00:02:05,826 --> 00:02:09,089
+Choose the content types to index, at least one.
+
+33
+00:02:09,089 --> 00:02:11,990
+Let's select Article, Blog Post, and Page.
+
+34
+00:02:11,990 --> 00:02:17,006
+Culture can limit the index to one culture, and Any culture indexes them all.
+
+35
+00:02:17,525 --> 00:02:21,943
+Analyzer decides how text is split into the terms the index stores, and
+
+36
+00:02:21,943 --> 00:02:24,180
+the default analyzer is selected.
+
+37
+00:02:24,180 --> 00:02:29,745
+Store Source Data keeps field values in the index for later retrieval, and stays unchecked.
+
+38
+00:02:30,197 --> 00:02:33,525
+Query field names lists the fields a search looks in.
+
+39
+00:02:33,525 --> 00:02:38,432
+The full-text field, which gathers the searchable text of each item, is selected.
+
+40
+00:02:38,432 --> 00:02:40,857
+Leave the other settings as they are.
+
+41
+00:02:41,338 --> 00:02:45,337
+Save creates the index and starts filling it in the background.
+
+42
+00:02:45,337 --> 00:02:49,742
+A message confirms it, and the list shows the index with its provider,
+
+43
+00:02:49,742 --> 00:02:51,828
+Lucene, and its type, Content.
+
+44
+00:02:56,038 --> 00:03:00,921
+Under Design, Content Definition, Content Types, select Edit on Article.
+
+45
+00:03:00,921 --> 00:03:05,116
+Its Full-text section decides what the full-text field holds:
+
+46
+00:03:05,116 --> 00:03:08,998
+the display text, the body parts, or a custom full-text.
+
+47
+00:03:09,483 --> 00:03:13,527
+Include display text and Include body parts are selected by default.
+
+48
+00:03:13,527 --> 00:03:17,353
+That is why a search finds the title and the text of an article.
+
+49
+00:03:17,823 --> 00:03:21,128
+Parts and fields have their own Lucene Index settings.
+
+50
+00:03:21,128 --> 00:03:25,149
+On the Title part, Include this element in the index adds the value
+
+51
+00:03:25,149 --> 00:03:28,123
+of that part to the index as a field of its own.
+
+52
+00:03:28,575 --> 00:03:33,023
+Keyword indexes the value as a single token, and Stored lets you retrieve
+
+53
+00:03:33,023 --> 00:03:35,275
+the original value from the index.
+
+54
+00:03:35,727 --> 00:03:40,237
+Only people with the Manage Lucene Indexes permission see these settings.
+
+55
+00:03:40,701 --> 00:03:42,571
+We do not save this change.
+
+56
+00:03:42,571 --> 00:03:46,821
+The full-text field holds the title, and the search reads that field.
+
+57
+00:03:51,058 --> 00:03:55,662
+The Search feature, enabled on the Features page like Lucene, adds a search
+
+58
+00:03:55,662 --> 00:03:57,140
+page for each index.
+
+59
+00:03:57,140 --> 00:04:01,403
+Its address is the address of your site, followed by the word search,
+
+60
+00:04:01,403 --> 00:04:03,278
+a slash and the index name.
+
+61
+00:04:03,737 --> 00:04:07,368
+On the page of the index we created, let's search for garden.
+
+62
+00:04:07,368 --> 00:04:11,757
+Lucene looks the word up in the full-text field of every item in the index.
+
+63
+00:04:12,227 --> 00:04:16,380
+The results are the content items that match, ordered by how well they
+
+64
+00:04:16,380 --> 00:04:18,347
+match, and shown as summaries.
+
+65
+00:04:18,825 --> 00:04:22,757
+Visitors who are not signed in can search once the Anonymous role has
+
+66
+00:04:22,757 --> 00:04:26,795
+the Query any index permission, or the permission Query 'search' Index.
+
+67
+00:04:27,323 --> 00:04:31,580
+Without an index name in its address, the search page uses the default
+
+68
+00:04:31,580 --> 00:04:34,213
+index chosen in the Site Search settings.
+
+69
+00:04:38,413 --> 00:04:40,691
+A site can run on several servers.
+
+70
+00:04:40,691 --> 00:04:44,679
+Each server keeps its own Lucene files and its own record of how
+
+71
+00:04:44,679 --> 00:04:49,863
+far it has indexed, so each index must learn about changes made on the other servers.
+
+72
+00:04:50,613 --> 00:04:53,544
+Content changes are recorded in the database.
+
+73
+00:04:53,544 --> 00:04:58,488
+A background task named Indexes Content Updater runs every minute and brings the
+
+74
+00:04:58,488 --> 00:04:59,926
+indexes up to date.
+
+75
+00:04:59,926 --> 00:05:02,973
+The Indexing Worker feature provides that task.
+
+76
+00:05:03,723 --> 00:05:06,621
+The Features page also lists Lucene Worker.
+
+77
+00:05:06,621 --> 00:05:08,573
+It adds no task of its own.
+
+78
+00:05:09,323 --> 00:05:12,615
+A site on one server updates its index itself.
+
+79
+00:05:12,615 --> 00:05:17,553
+A site on several servers relies on the task to reach the other servers.
+
+80
+00:05:19,553 --> 00:05:21,195
+That's the Lucene module:
+
+81
+00:05:21,195 --> 00:05:25,805
+full-text search with an index inside your site, and a search page that reads it.
+
+82
+00:05:25,805 --> 00:05:27,183
+Thanks for watching.
+
