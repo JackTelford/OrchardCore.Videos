@@ -24,7 +24,40 @@
     "Orchard Core",
     "Display Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Shapes and places"
+    },
+    {
+      "time": "0:58",
+      "title": "The placement file"
+    },
+    {
+      "time": "2:13",
+      "title": "Targeting parts and fields"
+    },
+    {
+      "time": "3:29",
+      "title": "Places"
+    },
+    {
+      "time": "4:45",
+      "title": "In the editor"
+    },
+    {
+      "time": "5:54",
+      "title": "Which rule wins"
+    },
+    {
+      "time": "6:27",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +79,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "topic:Placement"
-  }
+  },
+  "length": "6:41"
 }
