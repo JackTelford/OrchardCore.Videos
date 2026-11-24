@@ -93,7 +93,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Development Tools: Preview Packages and Local NuGet Feeds](videos/development-tools) | 4:47 | [https://youtu.be/wUvs6BXgksc](https://youtu.be/wUvs6BXgksc) | OrchardCMS/OrchardCore |
 | [Error Pages: Customize Not Found and Error Pages](videos/diagnostics-error-pages) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Shape Alternates: Customize the Display of One Type or One Item](videos/display-alternates) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Shapes: How Orchard Core Renders a Page](videos/display-shapes) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Shapes: How Orchard Core Renders a Page](videos/display-shapes) | 6:53 | [https://youtu.be/sslz8AD1bu8](https://youtu.be/sslz8AD1bu8) | OrchardCMS/OrchardCore |
 | [Docker: Run Orchard Core in a Container](videos/docker-orchard-core) | 5:04 | [https://youtu.be/pP7y62hDsN4](https://youtu.be/pP7y62hDsN4) | OrchardCMS/OrchardCore |
 | [Dynamic Cache: Cache Parts of a Page](videos/dynamic-cache) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Elasticsearch: Search Indexes on an Elasticsearch Server](videos/elasticsearch-search) |  | not uploaded | OrchardCMS/OrchardCore |
