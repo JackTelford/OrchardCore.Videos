@@ -180,7 +180,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Orchard Core: What It Is and What You Can Build](videos/orchard-core-overview) | 6:06 | [https://youtu.be/2LDUXKVdbrU](https://youtu.be/2LDUXKVdbrU) | OrchardCMS/OrchardCore |
 | [Permissions: Declare Them and Check Them in Your Module](videos/permissions-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Placement: Decide Where Parts and Fields Appear](videos/placement-files) | 6:41 | [https://youtu.be/Sl51Xv2lO-E](https://youtu.be/Sl51Xv2lO-E) | OrchardCMS/OrchardCore |
-| [Placements Module: Edit Placement From the Admin](videos/placements-admin) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Placements Module: Edit Placement From the Admin](videos/placements-admin) | 4:39 | [https://youtu.be/G1T_-wch6gE](https://youtu.be/G1T_-wch6gE) | OrchardCMS/OrchardCore |
 | [Publish Later and Archive Later: Schedule Your Content](videos/publish-later-archive-later) | 4:31 | [https://youtu.be/_s-RUUfGr_o](https://youtu.be/_s-RUUfGr_o) | OrchardCMS/OrchardCore |
 | [Queries in Liquid, Razor and the API](videos/queries-in-templates-and-api) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Lucene and Elasticsearch Queries: Search From a Saved Query](videos/queries-lucene-elasticsearch) |  | not uploaded | OrchardCMS/OrchardCore |
