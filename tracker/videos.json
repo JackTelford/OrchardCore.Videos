@@ -2602,7 +2602,7 @@
     "docs": [
       "src/docs/reference/modules/Widgets/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 4.8,
     "words": 722,
     "contentCommit": "",
@@ -2610,9 +2610,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/364",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "widgets-overview/v1",
+    "youtubeId": "rJ0HfwwpFCg",
+    "publishedOn": "2026-11-24",
     "notes": ""
   },
   {

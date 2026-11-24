@@ -259,7 +259,7 @@ to make a video again, or to change how it appears on YouTube.
 | [User Time Zone and Culture: Personal Preferences for Each User](videos/users-time-zone-and-culture) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Two-Factor Authentication: Authenticator App, Email and SMS](videos/users-two-factor-authentication) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Run in a Web Farm: Distributed Tenants, Workers and Shared Storage](videos/web-farm) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Widgets: Add Content Blocks to Your Pages](videos/widgets-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Widgets: Add Content Blocks to Your Pages](videos/widgets-overview) | 4:53 | [https://youtu.be/rJ0HfwwpFCg](https://youtu.be/rJ0HfwwpFCg) | OrchardCMS/OrchardCore |
 | [Write a Workflow Activity](videos/workflow-activity-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Workflows: Create, Update and Publish Content Automatically](videos/workflows-content-tasks) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Workflows: Events, Tasks and Outcomes](videos/workflows-events-tasks-outcomes) |  | not uploaded | OrchardCMS/OrchardCore |
