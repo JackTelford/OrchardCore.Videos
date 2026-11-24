@@ -21,7 +21,32 @@
     "Orchard Core",
     "Templates and Liquid"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What a shortcode is"
+    },
+    {
+      "time": "1:05",
+      "title": "Insert an image"
+    },
+    {
+      "time": "1:52",
+      "title": "Options of the image"
+    },
+    {
+      "time": "2:37",
+      "title": "Choose a shortcode from a list"
+    },
+    {
+      "time": "3:22",
+      "title": "Where shortcodes work"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +69,5 @@
     "pullRequest": null,
     "feature": "OrchardCore.Shortcodes"
   },
-  "length": "3:59"
+  "length": "3:60"
 }
