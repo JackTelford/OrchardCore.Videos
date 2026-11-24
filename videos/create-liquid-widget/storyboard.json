@@ -74,7 +74,7 @@
             },
             {
               "id": "type-4",
-              "text": "The Edit Content Type page lists the parts of the type. The part named after the type holds its fields, and Liquid provides the body. This widget needs no fields."
+              "text": "The Edit Content Type page lists the parts of the type. This widget needs no fields, so the list holds only Liquid, which provides the body."
             }
           ]
         }

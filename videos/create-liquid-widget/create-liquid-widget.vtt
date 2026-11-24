@@ -1,0 +1,227 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.669
+A widget is a piece of content that Orchard Core places in a
+
+00:00:04.669 --> 00:00:06.058
+zone of your pages.
+
+00:00:06.058 --> 00:00:08.893
+A Liquid widget has a body written in Liquid.
+
+00:00:08.893 --> 00:00:12.729
+In this video, you create one in the admin, with no module, and
+
+00:00:12.729 --> 00:00:15.230
+customize the template that renders it.
+
+00:00:19.830 --> 00:00:22.835
+A widget is a content type with the Widget stereotype.
+
+00:00:22.835 --> 00:00:26.292
+Layers place widgets in the zones of a theme, and the Flow part
+
+00:00:26.292 --> 00:00:27.995
+of a page can hold them too.
+
+00:00:27.995 --> 00:00:30.850
+A Liquid widget gets its body from the Liquid part.
+
+00:00:31.600 --> 00:00:37.241
+The Liquid body is stored exactly as typed, and it can hold HTML, CSS, and JavaScript.
+
+00:00:37.241 --> 00:00:43.373
+Editing it requires the Manage Liquid templates permission, which the Administrator and Editor
+
+00:00:43.373 --> 00:00:45.090
+roles have by default.
+
+00:00:49.276 --> 00:00:54.746
+Let's open Design, Content Definition, Content Types, and select Create new type.
+
+00:00:55.723 --> 00:00:58.126
+Enter Liquid Widget as the Display Name.
+
+00:00:58.126 --> 00:01:01.522
+The Technical Name is filled in from it, and it is the name
+
+00:01:01.522 --> 00:01:03.508
+that templates use for the type.
+
+00:01:03.508 --> 00:01:04.553
+Select Create.
+
+00:01:05.052 --> 00:01:08.153
+The Add Parts page lists the parts you can attach.
+
+00:01:08.153 --> 00:01:12.914
+Select Liquid, which provides a Liquid formatted body for your content item, and
+
+00:01:12.914 --> 00:01:14.962
+then select Add Selected Parts.
+
+00:01:15.430 --> 00:01:19.037
+The Edit Content Type page lists the parts of the type.
+
+00:01:19.037 --> 00:01:24.360
+This widget needs no fields, so the list holds only Liquid, which provides the body.
+
+00:01:28.591 --> 00:01:33.562
+A type created here is Creatable and Listable by default, which suits content
+
+00:01:33.562 --> 00:01:35.658
+that editors create and list.
+
+00:01:35.658 --> 00:01:39.731
+A widget is added from a layer or a flow, so clear both boxes.
+
+00:01:40.210 --> 00:01:43.873
+In the Stereotype field, enter Widget, and select Save.
+
+00:01:43.873 --> 00:01:48.738
+The Widgets module offers Widget as a stereotype, and layers and flows list
+
+00:01:48.738 --> 00:01:50.480
+the types that have it.
+
+00:01:54.780 --> 00:01:56.512
+Let's open Design, Widgets.
+
+00:01:56.512 --> 00:02:00.553
+Each zone has a card, and its Add Widget button lists the widget types.
+
+00:02:00.553 --> 00:02:03.230
+Let's add a Liquid Widget to the Footer zone.
+
+00:02:03.697 --> 00:02:06.065
+Enter Opening hours as the Title.
+
+00:02:06.065 --> 00:02:10.983
+Select the Always layer, which shows its widgets on every page of the site.
+
+00:02:10.983 --> 00:02:12.987
+Render title stays cleared.
+
+00:02:13.440 --> 00:02:15.307
+In the Body, write Liquid.
+
+00:02:15.307 --> 00:02:19.798
+This paragraph starts with the name of the site, which Liquid fills in.
+
+00:02:19.798 --> 00:02:23.590
+Select Publish, because layers show only published widgets.
+
+00:02:24.042 --> 00:02:27.673
+The Widgets and Layers page lists the widget that you published in the
+
+00:02:27.673 --> 00:02:30.302
+Footer zone, tagged with the layer it belongs to.
+
+00:02:30.754 --> 00:02:33.745
+Let's open the home page and scroll to the footer.
+
+00:02:33.745 --> 00:02:37.645
+The paragraph appears in the Footer zone, with the name of the site
+
+00:02:37.645 --> 00:02:39.034
+filled in by Liquid.
+
+00:02:43.234 --> 00:02:46.581
+A widget renders as a shape named after its stereotype.
+
+00:02:46.581 --> 00:02:51.355
+Orchard Core also looks for a more specific alternate, built from the stereotype,
+
+00:02:51.355 --> 00:02:54.538
+two underscores, and the technical name of the type.
+
+00:02:54.538 --> 00:02:56.624
+The most specific template wins.
+
+00:02:57.374 --> 00:03:03.112
+The standard template, Widget.cshtml, wraps the content in a div that carries the
+
+00:03:03.112 --> 00:03:07.004
+widget classes, and a div with the class widget-body.
+
+00:03:07.004 --> 00:03:10.764
+A template of your own replaces all of that markup.
+
+00:03:11.514 --> 00:03:15.130
+In a layer, the Layers module also wraps the widget in a div
+
+00:03:15.130 --> 00:03:17.212
+with the class widget-container.
+
+00:03:17.212 --> 00:03:21.541
+It prints the title there when Render title is checked, and your template
+
+00:03:21.541 --> 00:03:23.514
+does not replace that wrapper.
+
+00:03:24.264 --> 00:03:26.925
+The template receives the shape as Model.
+
+00:03:26.925 --> 00:03:32.870
+Model.Classes holds the widget classes, Model.ContentItem is the content item, and the shape_render
+
+00:03:32.870 --> 00:03:36.040
+filter renders the Liquid part from Model.Content.
+
+00:03:36.040 --> 00:03:40.174
+The text-center class comes from the Bootstrap styles of the theme.
+
+00:03:44.359 --> 00:03:48.914
+Let's open Design, Templates, and select Add Template.
+
+00:03:48.914 --> 00:03:52.329
+Enter Widget__LiquidWidget as the Name.
+
+00:03:52.785 --> 00:03:56.847
+In Content, enter the template from the slide, and select Save.
+
+00:03:56.847 --> 00:04:01.205
+The template is saved with the site, so no module or file is needed.
+
+00:04:01.662 --> 00:04:05.485
+Back on the home page, the footer shows Opening hours as a heading.
+
+00:04:05.485 --> 00:04:09.152
+The template prints it above the paragraph from the Liquid part.
+
+00:04:09.603 --> 00:04:13.582
+The Edit Content Type page also has an Edit templates button.
+
+00:04:13.582 --> 00:04:17.976
+Its menu lists the detail and summary templates of the type, and the
+
+00:04:17.976 --> 00:04:22.133
+detail entry opens Widget__LiquidWidget, the template you saved.
+
+00:04:26.333 --> 00:04:30.835
+The template also renders the widget when a page holds it in a Flow part.
+
+00:04:30.835 --> 00:04:35.849
+There, Model.Classes holds two more classes, for the alignment and the size, which
+
+00:04:35.849 --> 00:04:37.273
+the Flow part adds.
+
+00:04:38.023 --> 00:04:47.971
+In a theme, the same override is a file named Widget-LiquidWidget.liquid, or Widget-LiquidWidget.cshtml for Razor.
+
+00:04:47.971 --> 00:04:52.613
+The Razor file renders the part with DisplayAsync.
+
+00:04:54.613 --> 00:04:58.004
+A Liquid widget is a content type with the Liquid part and the
+
+00:04:58.004 --> 00:05:02.342
+Widget stereotype, placed from a layer, with an optional template for its markup.
+
+00:05:02.342 --> 00:05:04.237
+All of it is built in the admin.
+
+00:05:04.237 --> 00:05:05.533
+Thanks for watching.
+
