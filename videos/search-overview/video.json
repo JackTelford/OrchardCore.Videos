@@ -23,7 +23,48 @@
     "Orchard Core",
     "Search and Indexing"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "How site search works"
+    },
+    {
+      "time": "1:00",
+      "title": "Enable the features"
+    },
+    {
+      "time": "1:37",
+      "title": "Create an index"
+    },
+    {
+      "time": "2:33",
+      "title": "Choose the default index"
+    },
+    {
+      "time": "2:59",
+      "title": "Let visitors search"
+    },
+    {
+      "time": "3:27",
+      "title": "Add a search box"
+    },
+    {
+      "time": "3:58",
+      "title": "Search as a visitor"
+    },
+    {
+      "time": "4:34",
+      "title": "Keep an index in step"
+    },
+    {
+      "time": "4:52",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Search documentation",
@@ -55,5 +96,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Search"
-  }
+  },
+  "length": "5:07"
 }

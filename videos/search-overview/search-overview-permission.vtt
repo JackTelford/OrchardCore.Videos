@@ -1,0 +1,17 @@
+WEBVTT
+
+00:00:03.240 --> 00:00:08.343
+A visitor can only search an index that the visitor has permission to query.
+
+00:00:08.343 --> 00:00:14.380
+Open Access Control, Roles, and edit Anonymous, the role of visitors who are not signed in.
+
+00:00:14.888 --> 00:00:19.461
+Filter the permissions for Query 'website' Index, and select it.
+
+00:00:19.461 --> 00:00:20.964
+Then select Save.
+
+00:00:20.964 --> 00:00:27.628
+The permission Query any index covers every index, and the Administrator role has it by default.
+

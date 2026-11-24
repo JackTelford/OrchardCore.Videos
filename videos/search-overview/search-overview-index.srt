@@ -1,0 +1,56 @@
+1
+00:00:03,225 --> 00:00:06,295
+Back at Search, Indexes, select Add index.
+
+2
+00:00:06,295 --> 00:00:10,518
+The Available Sources dialog groups the sources by provider.
+
+3
+00:00:10,518 --> 00:00:15,571
+Under Lucene, Content in Lucene builds an index from the content items of
+
+4
+00:00:15,571 --> 00:00:17,555
+your site, so select Add.
+
+5
+00:00:18,064 --> 00:00:21,912
+Index Name is the name of the index in the provider, and it
+
+6
+00:00:21,912 --> 00:00:24,398
+cannot change once the index exists.
+
+7
+00:00:24,398 --> 00:00:29,785
+Name is the unique name that the settings, the permission and the search address use.
+
+8
+00:00:29,785 --> 00:00:32,804
+Type website in Index Name, and Name follows.
+
+9
+00:00:33,259 --> 00:00:37,759
+Content types lists the types to index, and at least one is required.
+
+10
+00:00:37,759 --> 00:00:39,859
+Select Blog Post and Article.
+
+11
+00:00:39,859 --> 00:00:44,539
+Culture stays on Any culture, and the other options keep their defaults.
+
+12
+00:00:44,997 --> 00:00:46,004
+Select Save.
+
+13
+00:00:46,004 --> 00:00:51,485
+A message confirms that the index was created and that synchronizing runs in the background.
+
+14
+00:00:51,485 --> 00:00:55,457
+The index appears in the list with the labels Lucene and Content.
+

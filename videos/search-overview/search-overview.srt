@@ -1,0 +1,296 @@
+1
+00:00:01,000 --> 00:00:04,615
+Visitors expect to find a page by typing a few words.
+
+2
+00:00:04,615 --> 00:00:08,965
+In this video, let's set up site search for an Orchard Core site:
+
+3
+00:00:08,965 --> 00:00:14,051
+the features, an index, the default index, the permission for visitors, and a
+
+4
+00:00:14,051 --> 00:00:15,950
+search box on your pages.
+
+5
+00:00:20,550 --> 00:00:23,832
+An index stores your content items for searching.
+
+6
+00:00:23,832 --> 00:00:28,129
+By default, a search looks words up in the full text of each item:
+
+7
+00:00:28,129 --> 00:00:29,859
+its title and its body.
+
+8
+00:00:29,859 --> 00:00:35,170
+When someone publishes, changes or removes an item, Orchard Core updates the index.
+
+9
+00:00:35,920 --> 00:00:39,117
+A search provider creates and queries indexes.
+
+10
+00:00:39,117 --> 00:00:44,098
+Elasticsearch and Azure AI Search keep their indexes in a separate service.
+
+11
+00:00:44,098 --> 00:00:48,648
+Lucene keeps its indexes in files on the server that runs your site,
+
+12
+00:00:48,648 --> 00:00:50,370
+so this video uses it.
+
+13
+00:00:51,120 --> 00:00:55,010
+The Search feature adds the search page and the Search Form widget.
+
+14
+00:00:55,010 --> 00:00:59,060
+Visitors need permission to query an index, which you grant to a role.
+
+15
+00:01:03,360 --> 00:01:06,646
+Let's start at Search, Indexes, on a Blog site.
+
+16
+00:01:06,646 --> 00:01:08,073
+Select Add index:
+
+17
+00:01:08,073 --> 00:01:13,157
+the dialog lists the available sources, and with no provider enabled it asks
+
+18
+00:01:13,157 --> 00:01:16,940
+you to enable a feature which provides an index source.
+
+19
+00:01:17,526 --> 00:01:20,891
+Open Tools, Features, and filter the list for Lucene.
+
+20
+00:01:20,891 --> 00:01:24,996
+Select Enable on the row named Lucene, and the page reloads with a
+
+21
+00:01:24,996 --> 00:01:27,106
+message that names the feature.
+
+22
+00:01:27,573 --> 00:01:30,090
+Search is the second feature to enable.
+
+23
+00:01:30,090 --> 00:01:35,011
+Filter the list for frontend search, words from its description, and select Enable
+
+24
+00:01:35,011 --> 00:01:36,353
+on the Search row.
+
+25
+00:01:40,578 --> 00:01:43,649
+Back at Search, Indexes, select Add index.
+
+26
+00:01:43,649 --> 00:01:47,871
+The Available Sources dialog groups the sources by provider.
+
+27
+00:01:47,871 --> 00:01:52,925
+Under Lucene, Content in Lucene builds an index from the content items of
+
+28
+00:01:52,925 --> 00:01:54,908
+your site, so select Add.
+
+29
+00:01:55,417 --> 00:01:59,265
+Index Name is the name of the index in the provider, and it
+
+30
+00:01:59,265 --> 00:02:01,751
+cannot change once the index exists.
+
+31
+00:02:01,751 --> 00:02:07,138
+Name is the unique name that the settings, the permission and the search address use.
+
+32
+00:02:07,138 --> 00:02:10,157
+Type website in Index Name, and Name follows.
+
+33
+00:02:10,612 --> 00:02:15,112
+Content types lists the types to index, and at least one is required.
+
+34
+00:02:15,112 --> 00:02:17,212
+Select Blog Post and Article.
+
+35
+00:02:17,212 --> 00:02:21,892
+Culture stays on Any culture, and the other options keep their defaults.
+
+36
+00:02:22,350 --> 00:02:23,357
+Select Save.
+
+37
+00:02:23,357 --> 00:02:28,839
+A message confirms that the index was created and that synchronizing runs in the background.
+
+38
+00:02:28,839 --> 00:02:32,810
+The index appears in the list with the labels Lucene and Content.
+
+39
+00:02:37,063 --> 00:02:39,635
+Open Settings, Search, Site Search.
+
+40
+00:02:39,635 --> 00:02:43,212
+Default search index lists the indexes you created.
+
+41
+00:02:43,212 --> 00:02:48,923
+Select website, which the search page queries unless the address names another index.
+
+42
+00:02:49,419 --> 00:02:53,513
+Placeholder is the text that the search box of the search page shows
+
+43
+00:02:53,513 --> 00:02:55,117
+before a visitor types.
+
+44
+00:02:55,117 --> 00:02:58,159
+Enter Search articles and posts, and select Save.
+
+45
+00:03:02,399 --> 00:03:07,502
+A visitor can only search an index that the visitor has permission to query.
+
+46
+00:03:07,502 --> 00:03:13,539
+Open Access Control, Roles, and edit Anonymous, the role of visitors who are not signed in.
+
+47
+00:03:14,047 --> 00:03:18,620
+Filter the permissions for Query 'website' Index, and select it.
+
+48
+00:03:18,620 --> 00:03:20,123
+Then select Save.
+
+49
+00:03:20,123 --> 00:03:26,787
+The permission Query any index covers every index, and the Administrator role has it by default.
+
+50
+00:03:31,087 --> 00:03:33,819
+A widget puts the search box on your pages.
+
+51
+00:03:33,819 --> 00:03:38,836
+Open Design, Widgets, where zones are the regions of a page in which widgets appear.
+
+52
+00:03:38,836 --> 00:03:42,627
+In the Footer zone, select Add Widget, and choose Search Form.
+
+53
+00:03:43,141 --> 00:03:48,594
+Enter a Title, and select the Always layer, so the widget appears on every page.
+
+54
+00:03:48,594 --> 00:03:52,779
+Enter a Placeholder for the widget's box, which is required.
+
+55
+00:03:52,779 --> 00:03:57,471
+Leave Index Name empty to use the default index, and select Publish.
+
+56
+00:04:01,716 --> 00:04:03,404
+Let's search as a visitor:
+
+57
+00:04:03,404 --> 00:04:05,304
+this browser is not signed in.
+
+58
+00:04:05,304 --> 00:04:08,734
+The search box sits at the bottom of the home page, so type
+
+59
+00:04:08,734 --> 00:04:10,476
+harvest, and select Search.
+
+60
+00:04:11,501 --> 00:04:14,419
+The search page lists the content items that match:
+
+61
+00:04:14,419 --> 00:04:16,518
+the two posts that mention harvest.
+
+62
+00:04:16,518 --> 00:04:18,771
+Each result links to its content item.
+
+63
+00:04:19,237 --> 00:04:21,494
+Let's clear the search box of the page:
+
+64
+00:04:21,494 --> 00:04:25,457
+once it is empty, it shows the placeholder from the Site Search settings.
+
+65
+00:04:25,927 --> 00:04:28,416
+A search that matches nothing says so.
+
+66
+00:04:28,416 --> 00:04:30,056
+Let's search for zebra:
+
+67
+00:04:30,056 --> 00:04:33,507
+the page shows the message "There are no such results."
+
+68
+00:04:37,707 --> 00:04:40,706
+An index follows your content on its own.
+
+69
+00:04:40,706 --> 00:04:44,536
+When an index falls out of step, open Search, Indexes:
+
+70
+00:04:44,536 --> 00:04:50,152
+each index offers Synchronize, Reset and Rebuild, and a separate video covers when
+
+71
+00:04:50,152 --> 00:04:51,557
+to use each one.
+
+72
+00:04:53,557 --> 00:04:57,950
+A search provider, an index, the Search feature and a query permission give
+
+73
+00:04:57,950 --> 00:05:02,776
+visitors a search page, and the Search Form widget adds a search box to your pages.
+
+74
+00:05:02,776 --> 00:05:04,187
+Thanks for watching.
+
