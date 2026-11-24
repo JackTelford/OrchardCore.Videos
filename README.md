@@ -129,7 +129,7 @@ to make a video again, or to change how it appears on YouTube.
 | [HTML Sanitizer: Keep Unsafe Markup Out of Content](videos/html-sanitizer) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Indexing in Code: Index Your Own Data and Fields](videos/indexing-developer) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Indexes: Create, Rebuild and Reset Search Indexes](videos/indexing-indexes) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Layers: Show Widgets on the Right Pages](videos/layers-zones) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Layers: Show Widgets on the Right Pages](videos/layers-zones) | 5:41 | [https://youtu.be/pTtKqJHzB8E](https://youtu.be/pTtKqJHzB8E) | OrchardCMS/OrchardCore |
 | [Liquid: Objects, Filters and Tags in Orchard Core](videos/liquid-basics) | 6:42 | [https://youtu.be/CnTlbB-g9EE](https://youtu.be/CnTlbB-g9EE) | OrchardCMS/OrchardCore |
 | [Liquid: Display Content Items, Shapes and Zones](videos/liquid-display-content) | 5:57 | [https://youtu.be/LqerV-y6Rpc](https://youtu.be/LqerV-y6Rpc) | OrchardCMS/OrchardCore |
 | [Write a Liquid Filter](videos/liquid-filter-create) |  | not uploaded | OrchardCMS/OrchardCore |
