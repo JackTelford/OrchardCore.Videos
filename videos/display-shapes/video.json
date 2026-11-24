@@ -25,7 +25,52 @@
     "Orchard Core",
     "Display Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "What a shape is"
+    },
+    {
+      "time": "0:50",
+      "title": "A page made of shapes"
+    },
+    {
+      "time": "1:27",
+      "title": "Create and render a shape"
+    },
+    {
+      "time": "2:14",
+      "title": "The shape contract"
+    },
+    {
+      "time": "3:03",
+      "title": "How a shape renders"
+    },
+    {
+      "time": "3:52",
+      "title": "Templates and code bindings"
+    },
+    {
+      "time": "4:30",
+      "title": "Layouts and zones"
+    },
+    {
+      "time": "5:03",
+      "title": "Shapes from display drivers"
+    },
+    {
+      "time": "5:41",
+      "title": "Find the template of a shape"
+    },
+    {
+      "time": "6:39",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Shapes",
@@ -57,5 +102,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "topic:DisplayManagement"
-  }
+  },
+  "length": "6:53"
 }

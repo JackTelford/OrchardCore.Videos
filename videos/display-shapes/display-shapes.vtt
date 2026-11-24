@@ -1,0 +1,278 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.492
+Every page of an Orchard Core site is built from shapes.
+
+00:00:04.492 --> 00:00:09.281
+A shape holds the data to display and the metadata that says how to display it.
+
+00:00:09.281 --> 00:00:13.336
+In this video, you create a shape, follow how it renders, and find
+
+00:00:13.336 --> 00:00:14.970
+the template behind it.
+
+00:00:19.570 --> 00:00:24.298
+A shape has properties, which hold the data a template reads, and metadata,
+
+00:00:24.298 --> 00:00:27.450
+which names its type and says how to display it.
+
+00:00:27.450 --> 00:00:31.652
+It also has items, its ordered child shapes, so shapes form a tree
+
+00:00:31.652 --> 00:00:33.870
+and each one renders on its own.
+
+00:00:34.620 --> 00:00:38.310
+Layouts, content items, fields and menus are all shapes.
+
+00:00:38.310 --> 00:00:42.656
+A binding, the template or code that turns a shape into HTML, comes
+
+00:00:42.656 --> 00:00:46.882
+from a module, and a theme or your application can replace it for
+
+00:00:46.882 --> 00:00:49.620
+one content type, display type or shape.
+
+00:00:53.858 --> 00:00:57.481
+This is the home page of a blog, and everything on it is a shape.
+
+00:00:57.481 --> 00:01:01.054
+The links in the navigation bar are a Menu shape, and a template
+
+00:01:01.054 --> 00:01:02.688
+of the theme renders them.
+
+00:01:03.186 --> 00:01:06.955
+The large header comes from the template of the Blog content type.
+
+00:01:06.955 --> 00:01:10.306
+It adds the header to the Header zone, a named area of the
+
+00:01:10.306 --> 00:01:13.866
+layout, and the layout renders that zone under the navigation.
+
+00:01:14.331 --> 00:01:19.826
+Each post in the list is a content item shape that uses the display type Summary.
+
+00:01:19.826 --> 00:01:26.521
+The theme draws it with a template named Content-BlogPost.Summary, which applies to blog posts only.
+
+00:01:30.721 --> 00:01:35.226
+In a Razor template, New creates a shape and DisplayAsync renders it.
+
+00:01:35.226 --> 00:01:39.010
+This code creates a shape of type Car, with a Brand and a
+
+00:01:39.010 --> 00:01:40.751
+Color, then renders it.
+
+00:01:41.501 --> 00:01:44.040
+Orchard Core looks for a binding named Car.
+
+00:01:44.040 --> 00:01:47.719
+A binding can be a Razor template in the Views folder, also named
+
+00:01:47.719 --> 00:01:50.931
+Car, which reads the properties of the shape from Model.
+
+00:01:51.681 --> 00:01:54.118
+Liquid has the same three operations.
+
+00:01:54.118 --> 00:01:59.728
+The shape_new filter creates the shape, the shape_add_properties tag sets its properties, and
+
+00:01:59.728 --> 00:02:02.051
+the shape_render filter renders it.
+
+00:02:02.801 --> 00:02:06.893
+From a service, inject IShapeFactory and IDisplayHelper.
+
+00:02:06.893 --> 00:02:13.361
+Create the shape by its type name, set its properties, and render it with ShapeExecuteAsync.
+
+00:02:17.561 --> 00:02:19.432
+Every shape implements IShape.
+
+00:02:19.432 --> 00:02:21.563
+The default Shape class is dynamic:
+
+00:02:21.563 --> 00:02:25.513
+assigning a member it does not have stores the value in the Properties
+
+00:02:25.513 --> 00:02:28.891
+dictionary, and reading that member returns the same value.
+
+00:02:29.641 --> 00:02:32.765
+The Metadata describes how to render a shape:
+
+00:02:32.765 --> 00:02:37.235
+Type is the logical name used to find a binding, and DisplayType is
+
+00:02:37.235 --> 00:02:40.359
+the context, such as Detail, Summary or Edit.
+
+00:02:40.359 --> 00:02:47.401
+Alternates select another binding, wrappers render around the output, and a separate video covers alternates.
+
+00:02:48.151 --> 00:02:51.368
+The shape type does not depend on the .NET type.
+
+00:02:51.368 --> 00:02:57.563
+CreateAsync with a model class creates a proxy that derives from your class and implements IShape.
+
+00:02:57.563 --> 00:03:01.971
+The class must not be sealed, and needs a parameterless constructor.
+
+00:03:06.171 --> 00:03:11.424
+Rendering a shape calls IDisplayHelper, which delegates to IHtmlDisplay.
+
+00:03:11.424 --> 00:03:13.848
+Displaying handlers run first.
+
+00:03:13.848 --> 00:03:19.774
+Then Orchard Core resolves a binding, executes it, renders each wrapper around the
+
+00:03:19.774 --> 00:03:22.871
+result, and runs the Displayed handlers.
+
+00:03:23.621 --> 00:03:28.028
+In code, a binding is a delegate that returns the HTML of a shape.
+
+00:03:28.028 --> 00:03:32.619
+It can come from a Razor template, a Liquid template, a method marked
+
+00:03:32.619 --> 00:03:36.291
+with the Shape attribute, or an IShapeBindingResolver.
+
+00:03:37.041 --> 00:03:41.569
+The shape table lists the bindings of the current tenant and the active theme.
+
+00:03:41.569 --> 00:03:46.420
+The application overrides the theme and its base themes, which override the modules.
+
+00:03:46.420 --> 00:03:51.541
+Without a binding, rendering throws an exception that names the shape type and the theme.
+
+00:03:55.741 --> 00:04:01.080
+Template files live in Views and its Items, Parts, Fields and Elements folders;
+
+00:04:01.080 --> 00:04:03.216
+the last three add a prefix.
+
+00:04:03.216 --> 00:04:08.367
+A hyphen becomes a double underscore, a dot becomes a single underscore, and
+
+00:04:08.367 --> 00:04:11.821
+a dot after the last hyphen marks a display type.
+
+00:04:12.571 --> 00:04:17.991
+When a method suits better than a file, implement IShapeAttributeProvider and mark a
+
+00:04:17.991 --> 00:04:20.279
+method with the Shape attribute.
+
+00:04:20.279 --> 00:04:24.976
+The method returns the HTML, and AddShapeAttributes registers the class.
+
+00:04:24.976 --> 00:04:29.131
+Core shapes such as DateTime and TimeSpan are written this way.
+
+00:04:33.331 --> 00:04:35.739
+Layout is a shape that holds zones:
+
+00:04:35.739 --> 00:04:39.146
+named containers such as Header, Content and Footer.
+
+00:04:39.146 --> 00:04:43.316
+Each zone is a shape of type Zone and renders its items in order.
+
+00:04:43.316 --> 00:04:46.311
+The active theme decides which zones it uses.
+
+00:04:47.061 --> 00:04:51.370
+In code, ILayoutAccessor returns the Layout shape of the request.
+
+00:04:51.370 --> 00:04:56.285
+Reading a zone that does not exist returns an empty placeholder, and adding
+
+00:04:56.285 --> 00:04:58.592
+the first item creates the zone.
+
+00:04:58.592 --> 00:05:02.111
+Items are ordered by position, so 2 comes before 10.
+
+00:05:06.311 --> 00:05:12.181
+Display drivers are the classes that build the shapes of content items, parts and fields.
+
+00:05:12.181 --> 00:05:18.299
+A driver returns an IDisplayResult, and a ShapeResult resolves placement first, then creates,
+
+00:05:18.299 --> 00:05:22.871
+configures and places one shape, so a hidden shape is never created.
+
+00:05:23.621 --> 00:05:26.539
+Initialize creates a strongly typed shape.
+
+00:05:26.539 --> 00:05:30.550
+The string is its shape type, the model class is the base of
+
+00:05:30.550 --> 00:05:36.081
+its .NET type, and Location sets the default zone and position for each display type.
+
+00:05:36.081 --> 00:05:40.761
+Placement can override these locations, and a separate video covers it.
+
+00:05:44.973 --> 00:05:50.168
+To see which template rendered a fragment, open Settings, Debugging in the admin.
+
+00:05:50.168 --> 00:05:53.272
+Check Write shape debug information, and save.
+
+00:05:53.272 --> 00:05:57.093
+The setting belongs to the site, and it is off by default.
+
+00:05:57.830 --> 00:06:00.587
+The content of the page looks the same.
+
+00:06:00.587 --> 00:06:04.998
+In its page source, each shape rendered by a binding is wrapped in
+
+00:06:04.998 --> 00:06:08.490
+two HTML comments, and every visitor receives them.
+
+00:06:10.090 --> 00:06:14.656
+The start comment gives the shape type and the bindings that rendered it.
+
+00:06:14.656 --> 00:06:18.587
+Each binding shows its name, its source, such as the path of a
+
+00:06:18.587 --> 00:06:22.229
+template, and the engine, which is razor, liquid or code.
+
+00:06:22.229 --> 00:06:24.830
+The end comment repeats the shape type.
+
+00:06:25.580 --> 00:06:29.984
+When your template is not the one used, the comments show which binding won.
+
+00:06:29.984 --> 00:06:33.905
+Then check that the template sits in one of the Views folders, that
+
+00:06:33.905 --> 00:06:38.900
+its file name matches the binding name, and that a later alternate does not outrank it.
+
+00:06:40.900 --> 00:06:43.114
+A shape carries data and metadata:
+
+00:06:43.114 --> 00:06:47.322
+the shape factory or a display driver creates it, placement puts it in
+
+00:06:47.322 --> 00:06:50.810
+a zone, and rendering resolves its most specific binding.
+
+00:06:50.810 --> 00:06:52.250
+Thanks for watching.
+
