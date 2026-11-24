@@ -1,0 +1,48 @@
+1
+00:00:03,245 --> 00:00:04,934
+Let's search as a visitor:
+
+2
+00:00:04,934 --> 00:00:06,833
+this browser is not signed in.
+
+3
+00:00:06,833 --> 00:00:10,263
+The search box sits at the bottom of the home page, so type
+
+4
+00:00:10,263 --> 00:00:12,005
+harvest, and select Search.
+
+5
+00:00:13,030 --> 00:00:15,949
+The search page lists the content items that match:
+
+6
+00:00:15,949 --> 00:00:18,048
+the two posts that mention harvest.
+
+7
+00:00:18,048 --> 00:00:20,300
+Each result links to its content item.
+
+8
+00:00:20,766 --> 00:00:23,024
+Let's clear the search box of the page:
+
+9
+00:00:23,024 --> 00:00:26,986
+once it is empty, it shows the placeholder from the Site Search settings.
+
+10
+00:00:27,456 --> 00:00:29,945
+A search that matches nothing says so.
+
+11
+00:00:29,945 --> 00:00:31,585
+Let's search for zebra:
+
+12
+00:00:31,585 --> 00:00:35,036
+the page shows the message "There are no such results."
+
