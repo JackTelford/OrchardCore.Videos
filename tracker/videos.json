@@ -2363,14 +2363,14 @@
     "docs": [
       "src/docs/reference/modules/Liquid/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 4.4,
     "words": 656,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/355",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
