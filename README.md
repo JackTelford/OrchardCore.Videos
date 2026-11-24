@@ -186,7 +186,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Lucene and Elasticsearch Queries: Search From a Saved Query](videos/queries-lucene-elasticsearch) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Queries: Save and Reuse Search and Database Queries](videos/queries-overview) |  | not uploaded | OrchardCMS/OrchardCore |
 | [SQL Queries: Query Content Items With SQL](videos/queries-sql) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Razor Helpers and Tag Helpers for Orchard Core Themes](videos/razor-helpers) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Razor Helpers and Tag Helpers for Orchard Core Themes](videos/razor-helpers) | 5:32 | [https://youtu.be/lN1GW9Wna_U](https://youtu.be/lN1GW9Wna_U) | OrchardCMS/OrchardCore |
 | [Write a Recipe Step](videos/recipe-step-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Recipes: Set Up and Update Sites From a File](videos/recipes-overview) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Write a Recipe: Steps, Variables and Content](videos/recipes-write) |  | not uploaded | OrchardCMS/OrchardCore |
