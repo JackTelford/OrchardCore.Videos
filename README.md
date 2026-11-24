@@ -195,7 +195,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Response Compression: Smaller Responses With Gzip and Brotli](videos/response-compression) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Roles and Permissions: Control Who Can Do What](videos/roles-and-permissions) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Content Permissions: By Content Type and by Owner](videos/roles-content-permissions) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Rules: Conditions That Decide When a Layer Shows](videos/rules-conditions) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Rules: Conditions That Decide When a Layer Shows](videos/rules-conditions) | 5:39 | [https://youtu.be/hBkhnyMqNW8](https://youtu.be/hBkhnyMqNW8) | OrchardCMS/OrchardCore |
 | [Run Code When a Tenant Starts](videos/run-code-on-startup) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Scripting: JavaScript in Workflows and Recipes](videos/scripting-javascript) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Search: Add Site Search to Your Site](videos/search-overview) |  | not uploaded | OrchardCMS/OrchardCore |
