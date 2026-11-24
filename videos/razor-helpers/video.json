@@ -21,7 +21,32 @@
     "Orchard Core",
     "Display Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "The Orchard helper"
+    },
+    {
+      "time": "1:21",
+      "title": "Content items"
+    },
+    {
+      "time": "2:47",
+      "title": "Helpers for the page"
+    },
+    {
+      "time": "3:59",
+      "title": "Tag helpers"
+    },
+    {
+      "time": "5:22",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -43,5 +68,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "topic:Razor"
-  }
+  },
+  "length": "5:32"
 }
