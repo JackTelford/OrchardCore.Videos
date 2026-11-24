@@ -22,7 +22,48 @@
     "Orchard Core",
     "Layers and Widgets"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:13",
+      "title": "How a rule decides"
+    },
+    {
+      "time": "0:44",
+      "title": "The conditions"
+    },
+    {
+      "time": "1:55",
+      "title": "Open the rule of a layer"
+    },
+    {
+      "time": "2:24",
+      "title": "Add a group"
+    },
+    {
+      "time": "2:54",
+      "title": "Add conditions to the group"
+    },
+    {
+      "time": "3:42",
+      "title": "Check the result on the site"
+    },
+    {
+      "time": "4:15",
+      "title": "Add a condition about the visitor"
+    },
+    {
+      "time": "4:46",
+      "title": "Good to know"
+    },
+    {
+      "time": "5:26",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +85,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Rules"
-  }
+  },
+  "length": "5:39"
 }
