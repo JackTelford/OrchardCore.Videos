@@ -22,7 +22,40 @@
     "Orchard Core",
     "Display Management"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "How the Placements module works"
+    },
+    {
+      "time": "1:07",
+      "title": "Enabling the module"
+    },
+    {
+      "time": "1:32",
+      "title": "Creating a placement"
+    },
+    {
+      "time": "2:38",
+      "title": "Shortcuts in content type settings"
+    },
+    {
+      "time": "3:28",
+      "title": "Where placements are stored"
+    },
+    {
+      "time": "3:56",
+      "title": "Recipes and deployment"
+    },
+    {
+      "time": "4:26",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -48,5 +81,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Placements"
-  }
+  },
+  "length": "4:39"
 }

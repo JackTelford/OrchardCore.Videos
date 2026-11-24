@@ -1,0 +1,252 @@
+1
+00:00:01,000 --> 00:00:05,495
+Placement rules decide where shapes appear, and they usually live in a file
+
+2
+00:00:05,495 --> 00:00:07,105
+of a module or a theme.
+
+3
+00:00:07,105 --> 00:00:10,656
+The Placements module edits the same rules from the admin.
+
+4
+00:00:10,656 --> 00:00:15,540
+We'll create one, start another from a content type, and see where they're stored.
+
+5
+00:00:20,140 --> 00:00:23,870
+A placement.json file belongs to a module or a theme.
+
+6
+00:00:23,870 --> 00:00:27,980
+Each property is a shape type, and its value is an array of
+
+7
+00:00:27,980 --> 00:00:31,710
+rules, so changing a rule means changing the project.
+
+8
+00:00:32,460 --> 00:00:37,266
+The Placements module keeps the same shape types and rules with the site instead.
+
+9
+00:00:37,266 --> 00:00:41,630
+You edit them in the admin, and by default they're saved in the database.
+
+10
+00:00:42,380 --> 00:00:48,057
+When a theme or a module also places the shape, the Placements module takes precedence.
+
+11
+00:00:48,057 --> 00:00:54,040
+A location in its rule replaces theirs, and its alternates and wrappers are added to theirs.
+
+12
+00:00:54,790 --> 00:00:59,545
+In the Placements module, every rule of a shape type that matches applies,
+
+13
+00:00:59,545 --> 00:01:01,507
+from the first to the last.
+
+14
+00:01:01,507 --> 00:01:06,500
+A later place replaces an earlier one, and alternates and wrappers accumulate.
+
+15
+00:01:10,703 --> 00:01:13,725
+Placements is a feature of the Placements module.
+
+16
+00:01:13,725 --> 00:01:19,273
+It's listed under Tools, Features, in the Development category, so let's search for placements.
+
+17
+00:01:19,729 --> 00:01:21,192
+Two features match.
+
+18
+00:01:21,192 --> 00:01:26,286
+Placements adds the admin pages and saves rules in the database, while Placements
+
+19
+00:01:26,286 --> 00:01:29,682
+file storage depends on it and saves them in a file.
+
+20
+00:01:29,682 --> 00:01:31,439
+Let's enable Placements.
+
+21
+00:01:35,677 --> 00:01:40,611
+With the feature enabled, Design, Placements lists the placements of the site.
+
+22
+00:01:40,611 --> 00:01:44,487
+It's empty until you add one, so let's select Add Placement.
+
+23
+00:01:44,964 --> 00:01:47,929
+A placement is a shape type and its rules.
+
+24
+00:01:47,929 --> 00:01:52,624
+Let's enter MediaField_Edit, the shape of the editor of a media field.
+
+25
+00:01:53,076 --> 00:01:57,740
+The rules are a JSON array in a code editor, starting with one empty rule.
+
+26
+00:01:57,740 --> 00:02:01,414
+Saving it as it is shows an error, because a rule needs a
+
+27
+00:02:01,414 --> 00:02:04,096
+place, a shape, wrappers, or alternates.
+
+28
+00:02:04,548 --> 00:02:08,817
+Let's replace it with a rule for the Image field of the BlogPost part.
+
+29
+00:02:08,817 --> 00:02:13,647
+The differentiator, BlogPost-Image, names the part and the field, and a place of
+
+30
+00:02:13,647 --> 00:02:15,108
+"-" hides the shape.
+
+31
+00:02:15,595 --> 00:02:20,737
+Save returns to the list, where the placement is a row named after its shape type.
+
+32
+00:02:20,737 --> 00:02:25,761
+Edit reopens its rules, Delete removes the placement, and the search box filters
+
+33
+00:02:25,761 --> 00:02:27,455
+the list by shape type.
+
+34
+00:02:27,953 --> 00:02:31,127
+Let's check the result in the editor of a blog post.
+
+35
+00:02:31,127 --> 00:02:35,560
+The Banner Image field, whose technical name is Image, is gone, because the
+
+36
+00:02:35,560 --> 00:02:37,093
+rule hides its editor.
+
+37
+00:02:41,307 --> 00:02:45,004
+The settings of a content part, of a part in a type, and
+
+38
+00:02:45,004 --> 00:02:47,151
+of a field link to placements.
+
+39
+00:02:47,151 --> 00:02:52,517
+Let's open Content Types, edit the Blog Post type, and then edit its Subtitle field.
+
+40
+00:02:52,989 --> 00:02:56,105
+The field settings have an Edit placements button.
+
+41
+00:02:56,105 --> 00:03:00,166
+Its menu lists a placement for the field, one for detail views, one
+
+42
+00:03:00,166 --> 00:03:03,169
+for summary views, and one for the admin editor.
+
+43
+00:03:03,696 --> 00:03:09,259
+The editor entry opens Edit Placement with the shape type TextField_Edit, and a
+
+44
+00:03:09,259 --> 00:03:14,036
+rule whose differentiator, BlogPost-Subtitle, is already filled in.
+
+45
+00:03:14,515 --> 00:03:18,355
+The rule needs a place, so let's add a place of "-", which
+
+46
+00:03:18,355 --> 00:03:20,275
+hides the shape, and save.
+
+47
+00:03:20,738 --> 00:03:23,098
+Save returns to the field settings.
+
+48
+00:03:23,098 --> 00:03:27,818
+In Design, Placements, the list holds both placements, sorted by shape type.
+
+49
+00:03:32,018 --> 00:03:36,297
+A service that implements IPlacementStore loads and saves the placements.
+
+50
+00:03:36,297 --> 00:03:40,685
+The module registers a database store by default, so placements are part of
+
+51
+00:03:40,685 --> 00:03:42,148
+the data of the site.
+
+52
+00:03:42,898 --> 00:03:48,262
+Enabling Placements file storage replaces that registration with a file store.
+
+53
+00:03:48,262 --> 00:03:55,478
+The placements are then saved in PlacementsDocument.json, in the folder of the tenant under App_Data/Sites.
+
+54
+00:03:59,678 --> 00:04:04,238
+In a recipe, the Placements step holds an object with one property per
+
+55
+00:04:04,238 --> 00:04:06,698
+shape type, each an array of rules.
+
+56
+00:04:06,698 --> 00:04:12,638
+Executing the step saves the rules of every shape type it lists, replacing the existing ones.
+
+57
+00:04:13,388 --> 00:04:18,831
+With the Deployment module enabled, a deployment plan can include the All Placements step.
+
+58
+00:04:18,831 --> 00:04:22,970
+It exports every placement of the site as a Placements step in this
+
+59
+00:04:22,970 --> 00:04:25,578
+format, so another site can import them.
+
+60
+00:04:27,578 --> 00:04:29,526
+That's the Placements module:
+
+61
+00:04:29,526 --> 00:04:33,423
+the rules of a placement file, edited in the admin, saved in the
+
+62
+00:04:33,423 --> 00:04:36,930
+database or a file, and moved between sites with recipes.
+
+63
+00:04:36,930 --> 00:04:38,378
+Thanks for watching.
+
