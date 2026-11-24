@@ -22,7 +22,44 @@
     "Orchard Core",
     "Templates and Liquid"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Why Admin Templates"
+    },
+    {
+      "time": "0:55",
+      "title": "Name a shape"
+    },
+    {
+      "time": "1:28",
+      "title": "Enable Admin Templates"
+    },
+    {
+      "time": "2:02",
+      "title": "Create a template"
+    },
+    {
+      "time": "3:04",
+      "title": "Edit and delete"
+    },
+    {
+      "time": "3:32",
+      "title": "Ship with recipes"
+    },
+    {
+      "time": "4:01",
+      "title": "Before you rely on it"
+    },
+    {
+      "time": "4:45",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Notifications",
@@ -57,5 +94,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.AdminTemplates"
-  }
+  },
+  "length": "4:59"
 }
