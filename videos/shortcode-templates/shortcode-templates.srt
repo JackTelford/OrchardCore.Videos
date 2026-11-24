@@ -1,0 +1,264 @@
+1
+00:00:01,000 --> 00:00:05,538
+A shortcode is a name in square brackets that an editor types into content.
+
+2
+00:00:05,538 --> 00:00:09,796
+Shortcode Templates lets you write your own in the admin, with Liquid.
+
+3
+00:00:09,796 --> 00:00:13,493
+In this video, you create one, use it in an article, and see
+
+4
+00:00:13,493 --> 00:00:15,230
+what a template can read.
+
+5
+00:00:19,830 --> 00:00:23,508
+An editor writes a shortcode in the body of a content item:
+
+6
+00:00:23,508 --> 00:00:28,544
+a name, optional arguments, and optional text between an opening and a closing tag.
+
+7
+00:00:28,544 --> 00:00:33,750
+When the item is displayed, Orchard Core replaces it with the output of the shortcode.
+
+8
+00:00:34,500 --> 00:00:37,581
+A shortcode can be code that a module registers.
+
+9
+00:00:37,581 --> 00:00:40,890
+With Shortcode Templates, it can also be a template:
+
+10
+00:00:40,890 --> 00:00:44,541
+Liquid that you write in the admin and save with the site.
+
+11
+00:00:44,541 --> 00:00:46,880
+Editors find both in the same list.
+
+12
+00:00:47,630 --> 00:00:49,930
+A template receives three values.
+
+13
+00:00:49,930 --> 00:00:54,764
+Args holds the named arguments, Content holds the text between the tags, and
+
+14
+00:00:54,764 --> 00:01:00,130
+Context holds what the caller passes along, such as the content item being displayed.
+
+15
+00:01:04,420 --> 00:01:07,904
+Shortcode Templates belongs to the Shortcodes module.
+
+16
+00:01:07,904 --> 00:01:10,857
+Under Tools, Features, search for shortcode.
+
+17
+00:01:10,857 --> 00:01:14,400
+The row lists the dependencies, Liquid and Shortcodes.
+
+18
+00:01:14,863 --> 00:01:16,092
+Select Enable.
+
+19
+00:01:16,092 --> 00:01:20,883
+A notification confirms it, and the Design menu gets a Shortcodes entry.
+
+20
+00:01:25,083 --> 00:01:28,663
+This template is based on an example in the documentation.
+
+21
+00:01:28,663 --> 00:01:32,411
+If the shortcode has a text argument, the template prints it.
+
+22
+00:01:32,411 --> 00:01:35,543
+Otherwise, it prints the content between the tags.
+
+23
+00:01:36,293 --> 00:01:38,402
+Liquid encodes every output.
+
+24
+00:01:38,402 --> 00:01:43,734
+The template captures its markup, cleans it with the sanitize HTML filter, which
+
+25
+00:01:43,734 --> 00:01:49,253
+removes unsafe markup, and writes it with the raw filter, which skips the encoding.
+
+26
+00:01:50,953 --> 00:01:53,145
+Open Design, Shortcodes.
+
+27
+00:01:53,145 --> 00:01:57,383
+The list is empty, so select Add Shortcode Template.
+
+28
+00:01:59,348 --> 00:02:03,801
+Name is what editors type between the brackets, so type primary.
+
+29
+00:02:03,801 --> 00:02:09,208
+The name is mandatory, it must be valid inside brackets, and it must be unique.
+
+30
+00:02:09,673 --> 00:02:14,396
+Hint describes the shortcode, and Usage shows how to write it, in HTML.
+
+31
+00:02:14,396 --> 00:02:18,813
+A preview card follows what you type, as it appears in the picker.
+
+32
+00:02:19,297 --> 00:02:23,825
+Categories group shortcodes in the picker, so select HTML Content.
+
+33
+00:02:23,825 --> 00:02:29,737
+Default Shortcode Value is the text the picker inserts, here a shortcode with some text.
+
+34
+00:02:30,196 --> 00:02:32,433
+Content takes the Liquid template.
+
+35
+00:02:32,433 --> 00:02:37,466
+Orchard Core checks it when you save, and reports an error if it isn't valid Liquid.
+
+36
+00:02:37,944 --> 00:02:38,906
+Select Save.
+
+37
+00:02:38,906 --> 00:02:42,384
+The list shows the template with its hint and its category.
+
+38
+00:02:42,840 --> 00:02:47,195
+From the list, you can search templates by name, edit one, delete it,
+
+39
+00:02:47,195 --> 00:02:50,040
+or select several and delete them together.
+
+40
+00:02:54,230 --> 00:02:57,436
+Edit an article, and put the cursor in the body.
+
+41
+00:02:57,436 --> 00:03:01,890
+The Insert Shortcode button of the editor opens Available Shortcodes.
+
+42
+00:03:02,372 --> 00:03:06,803
+The list holds the shortcodes registered in code, and your templates.
+
+43
+00:03:06,803 --> 00:03:10,347
+The primary shortcode appears with its hint and usage.
+
+44
+00:03:10,347 --> 00:03:11,352
+Select Add.
+
+45
+00:03:11,943 --> 00:03:15,218
+The editor inserts the default value into the body.
+
+46
+00:03:15,218 --> 00:03:17,343
+Publish the article to save it.
+
+47
+00:03:18,332 --> 00:03:22,568
+On the page, the shortcode is replaced by the output of the template:
+
+48
+00:03:22,568 --> 00:03:25,392
+the text, in the primary color of the theme.
+
+49
+00:03:29,592 --> 00:03:32,345
+To read the content item, use Context.
+
+50
+00:03:32,345 --> 00:03:37,600
+This template, also based on the documentation, prints the display text of the
+
+51
+00:03:37,600 --> 00:03:39,852
+item that holds the shortcode.
+
+52
+00:03:39,852 --> 00:03:44,732
+Html and Markdown body parts and fields fill in Context dot ContentItem.
+
+53
+00:03:45,482 --> 00:03:50,005
+A template with the same name as a shortcode from code, such as
+
+54
+00:03:50,005 --> 00:03:53,937
+image, replaces it, because templates are asked first.
+
+55
+00:03:53,937 --> 00:03:59,902
+And an Html Body part with Sanitize Html on cleans the HTML after the shortcodes run.
+
+56
+00:04:00,652 --> 00:04:04,852
+In your own views, the shortcode filter in Liquid and the Orchard helper
+
+57
+00:04:04,852 --> 00:04:08,352
+in Razor render the shortcodes of any string you give them.
+
+58
+00:04:12,552 --> 00:04:14,705
+Templates also travel as data.
+
+59
+00:04:14,705 --> 00:04:20,565
+The ShortcodeTemplates recipe step creates them, keyed by name, with the fields of the form.
+
+60
+00:04:20,565 --> 00:04:27,382
+When Deployment is enabled, the All Shortcode Templates deployment step exports every template as that step.
+
+61
+00:04:28,132 --> 00:04:32,393
+Managing templates takes the Manage shortcode templates permission.
+
+62
+00:04:32,393 --> 00:04:35,720
+It is security critical, so assign it with caution.
+
+63
+00:04:35,720 --> 00:04:39,222
+The Administrator and Editor roles have it by default.
+
+64
+00:04:41,222 --> 00:04:43,062
+That's Shortcode Templates:
+
+65
+00:04:43,062 --> 00:04:48,582
+your own shortcodes, written in Liquid, with arguments, content and the content item at hand.
+
+66
+00:04:48,582 --> 00:04:50,032
+Thanks for watching.
+
