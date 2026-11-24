@@ -22,7 +22,44 @@
     "Orchard Core",
     "Templates and Liquid"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "What a Liquid widget is"
+    },
+    {
+      "time": "0:46",
+      "title": "Create the content type"
+    },
+    {
+      "time": "1:25",
+      "title": "Make it a widget"
+    },
+    {
+      "time": "1:51",
+      "title": "Add it to a layer"
+    },
+    {
+      "time": "2:40",
+      "title": "How a widget is rendered"
+    },
+    {
+      "time": "3:41",
+      "title": "Write the template"
+    },
+    {
+      "time": "4:23",
+      "title": "The same template elsewhere"
+    },
+    {
+      "time": "4:53",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -52,5 +89,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:guides/create-liquid-widget"
-  }
+  },
+  "length": "5:07"
 }
