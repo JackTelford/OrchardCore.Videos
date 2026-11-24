@@ -23,7 +23,44 @@
     "Orchard Core",
     "Templates and Liquid"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Shapes, alternates and templates"
+    },
+    {
+      "time": "1:26",
+      "title": "Create a template"
+    },
+    {
+      "time": "2:39",
+      "title": "Names and properties"
+    },
+    {
+      "time": "3:39",
+      "title": "Find the shape behind a fragment"
+    },
+    {
+      "time": "4:20",
+      "title": "Shortcuts in Content Types"
+    },
+    {
+      "time": "4:57",
+      "title": "Manage templates"
+    },
+    {
+      "time": "5:30",
+      "title": "Move templates between sites"
+    },
+    {
+      "time": "5:56",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +83,5 @@
     "pullRequest": null,
     "feature": "OrchardCore.Templates"
   },
-  "length": "6:07"
+  "length": "6:08"
 }
