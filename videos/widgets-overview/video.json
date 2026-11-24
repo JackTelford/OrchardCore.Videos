@@ -22,7 +22,40 @@
     "Orchard Core",
     "Layers and Widgets"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "What a widget is"
+    },
+    {
+      "time": "1:03",
+      "title": "The Widgets feature"
+    },
+    {
+      "time": "1:31",
+      "title": "Widget types"
+    },
+    {
+      "time": "2:16",
+      "title": "Allow widgets on a content type"
+    },
+    {
+      "time": "3:03",
+      "title": "Add widgets to a page"
+    },
+    {
+      "time": "4:01",
+      "title": "Move and remove widgets"
+    },
+    {
+      "time": "4:38",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +77,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Widgets"
-  }
+  },
+  "length": "4:53"
 }

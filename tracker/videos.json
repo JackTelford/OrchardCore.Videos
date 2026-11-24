@@ -2602,14 +2602,14 @@
     "docs": [
       "src/docs/reference/modules/Widgets/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 4.8,
     "words": 722,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/364",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
