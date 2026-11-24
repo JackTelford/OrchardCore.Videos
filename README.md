@@ -216,7 +216,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Setup: Install Your First Orchard Core Site](videos/setup-first-site) | 4:41 | [https://youtu.be/0SlLT1du0A0](https://youtu.be/0SlLT1du0A0) | OrchardCMS/OrchardCore |
 | [Shells and Configuration: How Tenants Are Configured](videos/shells-and-configuration) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Shortcode Templates: Write Your Own Shortcodes With Liquid](videos/shortcode-templates) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Shortcodes: Embed Images and Links in Your Text](videos/shortcodes-built-in) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Shortcodes: Embed Images and Links in Your Text](videos/shortcodes-built-in) | 3:60 | [https://youtu.be/fCV1jBAnXmE](https://youtu.be/fCV1jBAnXmE) | OrchardCMS/OrchardCore |
 | [SignalR: Real-Time Updates and Backplanes](videos/signalr) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Add Site Settings to Your Module](videos/site-settings-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Site Settings: Name, Time Zone, Page Size and More](videos/site-settings-general) | 5:26 | [https://youtu.be/6jg2SpIKvVY](https://youtu.be/6jg2SpIKvVY) | OrchardCMS/OrchardCore |
