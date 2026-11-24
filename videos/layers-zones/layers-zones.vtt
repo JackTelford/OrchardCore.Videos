@@ -1,0 +1,275 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.784
+Not every widget belongs on every page.
+
+00:00:03.784 --> 00:00:06.939
+Layers decide which pages show which widgets.
+
+00:00:06.939 --> 00:00:11.826
+In this video, you'll see how zones, layers and widgets fit together, and
+
+00:00:11.826 --> 00:00:14.300
+how to create a layer with a rule.
+
+00:00:18.900 --> 00:00:24.242
+The theme lays out every page in named areas called zones, such as Content and Footer.
+
+00:00:24.242 --> 00:00:28.306
+A widget is a block of content, such as a paragraph or an image.
+
+00:00:28.306 --> 00:00:31.500
+It sits in one zone, and it belongs to one layer.
+
+00:00:32.250 --> 00:00:34.675
+The layer decides when the widget shows.
+
+00:00:34.675 --> 00:00:38.366
+When a visitor opens a page of the site, Orchard Core checks the
+
+00:00:38.366 --> 00:00:40.686
+rule of each layer that holds widgets.
+
+00:00:40.686 --> 00:00:44.060
+The widgets of the layers that pass appear in their zones.
+
+00:00:44.810 --> 00:00:48.541
+A rule is a list of conditions that must all be true.
+
+00:00:48.541 --> 00:00:50.881
+A group holds other conditions:
+
+00:00:50.881 --> 00:00:55.181
+an All group needs every one, and an Any group needs only one.
+
+00:00:55.181 --> 00:01:00.050
+A rule with no conditions is never true, so its layer shows no widgets.
+
+00:01:04.256 --> 00:01:06.049
+Let's open Design, Widgets.
+
+00:01:06.049 --> 00:01:08.439
+The page is called Widgets and Layers.
+
+00:01:08.439 --> 00:01:11.969
+The zones are listed on the left, each in its own card, and
+
+00:01:11.969 --> 00:01:14.196
+the layers are listed on the right.
+
+00:01:14.652 --> 00:01:19.259
+The Content zone is empty, and the Footer zone holds one widget.
+
+00:01:19.259 --> 00:01:24.392
+A badge beside its title shows the layer it belongs to, which is Always.
+
+00:01:24.847 --> 00:01:27.573
+This site has two layers, Always and Homepage.
+
+00:01:27.573 --> 00:01:31.662
+A layer can have a description under its name, and here the descriptions
+
+00:01:31.662 --> 00:01:34.807
+tell you when the widgets of each layer are displayed.
+
+00:01:35.268 --> 00:01:39.538
+Select the checkbox next to Always, and the widgets of that layer are
+
+00:01:39.538 --> 00:01:41.303
+highlighted in the zones.
+
+00:01:41.303 --> 00:01:43.808
+Clear it, and the highlight goes away.
+
+00:01:48.033 --> 00:01:50.818
+The zones in the list come from a setting.
+
+00:01:50.818 --> 00:01:52.732
+Let's open Settings, Zones.
+
+00:01:52.732 --> 00:01:57.083
+Available zones for Layers holds the zone names, separated by commas.
+
+00:01:57.567 --> 00:02:02.101
+The theme has to render each zone, because zones do not render on their own.
+
+00:02:02.101 --> 00:02:06.193
+This theme renders one called Header, near the top of every page, so
+
+00:02:06.193 --> 00:02:07.907
+let's add it to the list.
+
+00:02:08.358 --> 00:02:09.398
+Select Save.
+
+00:02:09.398 --> 00:02:10.669
+A message reads:
+
+00:02:10.669 --> 00:02:13.038
+Site settings updated successfully.
+
+00:02:13.038 --> 00:02:16.158
+The list of zones is stored with those settings.
+
+00:02:16.622 --> 00:02:21.346
+Back on Widgets and Layers, a Header card joins Content and Footer in the list.
+
+00:02:21.346 --> 00:02:25.181
+Each zone card has its own Add Widget button, so widgets can be
+
+00:02:25.181 --> 00:02:26.682
+placed in Header too.
+
+00:02:30.919 --> 00:02:34.024
+To add a layer, select Add in the Layers column.
+
+00:02:34.024 --> 00:02:37.589
+The Create Layer page asks for a name and a description.
+
+00:02:38.056 --> 00:02:42.801
+Let's name the layer Posts, and describe it as the pages that show a blog post.
+
+00:02:42.801 --> 00:02:47.210
+A widget refers to its layer by name, so the name can't be changed later.
+
+00:02:47.210 --> 00:02:48.326
+Select Create.
+
+00:02:48.781 --> 00:02:51.476
+The Edit Layer page opens with a warning:
+
+00:02:51.476 --> 00:02:52.967
+No conditions found.
+
+00:02:52.967 --> 00:02:55.262
+Please add at least one condition.
+
+00:02:55.262 --> 00:02:59.391
+Until you do, the layer never passes, and its widgets stay hidden.
+
+00:02:59.858 --> 00:03:01.505
+Under Rules, select Add.
+
+00:03:01.505 --> 00:03:06.778
+The Available Rules window lists the kinds of condition, and a separate video covers them.
+
+00:03:06.778 --> 00:03:10.951
+Let's use the Filter box to find the Url condition, which compares the
+
+00:03:10.951 --> 00:03:13.368
+path of the page address with a value.
+
+00:03:13.819 --> 00:03:18.697
+Set Operation to Starts with, and Value to /blog/, the path that blog
+
+00:03:18.697 --> 00:03:21.623
+post addresses begin with on this site.
+
+00:03:21.623 --> 00:03:23.249
+Then select Create.
+
+00:03:23.703 --> 00:03:26.583
+The Rules list shows the condition:
+
+00:03:26.583 --> 00:03:28.690
+Url, Starts with /blog/.
+
+00:03:28.690 --> 00:03:35.363
+Select Save to return to Widgets and Layers, where Posts is listed with the other layers.
+
+00:03:39.568 --> 00:03:42.045
+In the Content zone, open Add Widget.
+
+00:03:42.045 --> 00:03:44.927
+The menu lists the widget types of the site.
+
+00:03:44.927 --> 00:03:46.598
+Let's choose Paragraph.
+
+00:03:47.058 --> 00:03:49.700
+Let's enter Follow the blog as the title.
+
+00:03:49.700 --> 00:03:54.758
+Render title shows the title with the widget on the site, and we leave it unchecked.
+
+00:03:55.227 --> 00:03:57.294
+Under The layer, select Posts.
+
+00:03:57.294 --> 00:04:00.451
+The layer controls the visibility of this widget.
+
+00:04:00.451 --> 00:04:03.437
+Then write the paragraph in the Content field.
+
+00:04:03.896 --> 00:04:05.044
+Select Publish.
+
+00:04:05.044 --> 00:04:08.270
+A widget shows on the site only once it is published.
+
+00:04:08.270 --> 00:04:12.589
+You return to Widgets and Layers, where the Content zone lists the widget
+
+00:04:12.589 --> 00:04:13.956
+with a Posts badge.
+
+00:04:18.207 --> 00:04:20.647
+Let's open a blog post on the site.
+
+00:04:20.647 --> 00:04:25.050
+Its address starts with /blog/, so the rule of Posts passes, and the
+
+00:04:25.050 --> 00:04:27.667
+paragraph appears in the Content zone.
+
+00:04:28.127 --> 00:04:32.214
+On the About page, the address does not match, so the rule fails
+
+00:04:32.214 --> 00:04:34.200
+and the paragraph is hidden.
+
+00:04:34.200 --> 00:04:39.047
+The footer widget belongs to Always, so it appears at the bottom of the page.
+
+00:04:39.564 --> 00:04:45.100
+The homepage does not start with /blog/ either, so the paragraph stays hidden there too.
+
+00:04:45.100 --> 00:04:49.694
+The rule of a layer is checked again on every page that a visitor opens.
+
+00:04:53.994 --> 00:04:57.698
+Back on Widgets and Layers, drag a widget by its row to change
+
+00:04:57.698 --> 00:05:00.912
+its order in a zone, or to move it into another zone.
+
+00:05:00.912 --> 00:05:03.254
+Let's drag the paragraph into Footer.
+
+00:05:03.782 --> 00:05:07.588
+The position is saved at once, and a message offers Undo.
+
+00:05:07.588 --> 00:05:11.272
+Select Undo to put the widget back in the Content zone.
+
+00:05:15.567 --> 00:05:21.299
+In the Layers column, Edit reopens a layer, to change its description or its conditions.
+
+00:05:21.299 --> 00:05:23.007
+The name is read-only.
+
+00:05:24.367 --> 00:05:26.330
+Delete asks you to confirm.
+
+00:05:26.330 --> 00:05:29.185
+A layer that holds widgets is not deleted.
+
+00:05:29.185 --> 00:05:32.337
+A message asks you to remove its widgets first.
+
+00:05:34.337 --> 00:05:38.713
+Zones say where a widget can appear, and layers say on which pages it does.
+
+00:05:38.713 --> 00:05:40.117
+Thanks for watching.
+
