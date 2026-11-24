@@ -2767,14 +2767,14 @@
     "docs": [
       "src/docs/reference/modules/Lucene/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 5.3,
     "words": 801,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/369",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
