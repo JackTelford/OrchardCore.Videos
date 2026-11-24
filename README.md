@@ -68,7 +68,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Drafts and Versions: Change Content Without Losing the Live Page](videos/contents-drafts-versions) | 4:51 | [https://youtu.be/wy2nPHfp2qE](https://youtu.be/wy2nPHfp2qE) | OrchardCMS/OrchardCore |
 | [Content Items List: Search, Filter and Act on Many Items](videos/contents-list-search-filter) | 5:16 | [https://youtu.be/c6qgnS49bKQ](https://youtu.be/c6qgnS49bKQ) | OrchardCMS/OrchardCore |
 | [Create a CMS Web Application With dotnet new](videos/create-cms-web-application) | 6:36 | [https://youtu.be/AL5UNqnC-W0](https://youtu.be/AL5UNqnC-W0) | OrchardCMS/OrchardCore |
-| [Create a Liquid Widget Without Writing a Module](videos/create-liquid-widget) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Create a Liquid Widget Without Writing a Module](videos/create-liquid-widget) | 5:07 | [https://youtu.be/hHRf-EUHeKc](https://youtu.be/hHRf-EUHeKc) | OrchardCMS/OrchardCore |
 | [Module Metadata in Your Project File](videos/csproj-module-metadata) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Custom Settings: Turn a Content Type Into Site Settings](videos/custom-settings) | 4:39 | [https://youtu.be/f0x_gSmC4JA](https://youtu.be/f0x_gSmC4JA) | OrchardCMS/OrchardCore |
 | [Data in Orchard Core: Databases, YesSql and Documents](videos/data-and-yessql) |  | not uploaded | OrchardCMS/OrchardCore |
