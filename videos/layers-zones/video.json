@@ -21,7 +21,44 @@
     "Orchard Core",
     "Layers and Widgets"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "Zones, widgets and layers"
+    },
+    {
+      "time": "1:01",
+      "title": "Widgets and Layers"
+    },
+    {
+      "time": "1:44",
+      "title": "Zones"
+    },
+    {
+      "time": "2:27",
+      "title": "Create a layer"
+    },
+    {
+      "time": "3:36",
+      "title": "Add a widget"
+    },
+    {
+      "time": "4:14",
+      "title": "See the result"
+    },
+    {
+      "time": "4:50",
+      "title": "Move a widget"
+    },
+    {
+      "time": "5:12",
+      "title": "Edit and delete a layer"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -43,5 +80,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Layers"
-  }
+  },
+  "length": "5:41"
 }
