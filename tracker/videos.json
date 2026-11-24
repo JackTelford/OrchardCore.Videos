@@ -2284,14 +2284,14 @@
     "docs": [
       "src/docs/reference/modules/Templates/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 5.8,
     "words": 869,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/353",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
