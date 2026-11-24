@@ -1,0 +1,228 @@
+1
+00:00:01,000 --> 00:00:04,908
+A shortcode is a small tag in square brackets that you type into
+
+2
+00:00:04,908 --> 00:00:06,304
+the text of a page.
+
+3
+00:00:06,304 --> 00:00:09,430
+The site replaces it with a picture or an address.
+
+4
+00:00:09,430 --> 00:00:14,510
+In this video, you insert an image, set its options, and pick shortcodes from a list.
+
+5
+00:00:19,110 --> 00:00:22,290
+Some of what a page shows depends on the site, such as a
+
+6
+00:00:22,290 --> 00:00:24,188
+picture from the media library.
+
+7
+00:00:24,188 --> 00:00:27,727
+You type a shortcode in the text, and the site replaces it with
+
+8
+00:00:27,727 --> 00:00:29,933
+the result when it displays the page.
+
+9
+00:00:29,933 --> 00:00:32,190
+The editor keeps the shortcode itself.
+
+10
+00:00:32,940 --> 00:00:36,302
+A shortcode starts with a name in square brackets.
+
+11
+00:00:36,302 --> 00:00:41,466
+Options can follow the name, and some shortcodes take content between an opening
+
+12
+00:00:41,466 --> 00:00:43,148
+tag and a closing tag.
+
+13
+00:00:43,148 --> 00:00:46,450
+For an image, that content is the name of a file.
+
+14
+00:00:47,200 --> 00:00:52,812
+With the Shortcodes feature enabled, the Media module adds the image shortcode, which
+
+15
+00:00:52,812 --> 00:00:58,116
+shows a picture, and the asset_url shortcode, which gives the address of a file.
+
+16
+00:00:58,116 --> 00:01:04,530
+The locale shortcode shows its content for a matching language, and needs the Localization module.
+
+17
+00:01:08,732 --> 00:01:12,252
+The Article list shows each article with an Edit button.
+
+18
+00:01:12,252 --> 00:01:13,445
+Let's open one.
+
+19
+00:01:13,445 --> 00:01:17,589
+Its body is a text editor, and the toolbar has buttons named Insert
+
+20
+00:01:17,589 --> 00:01:19,462
+Shortcode and Insert Media.
+
+21
+00:01:19,918 --> 00:01:23,794
+Let's add a picture after the line that introduces the photo.
+
+22
+00:01:23,794 --> 00:01:28,306
+Insert Media opens the media library in a dialog, with its files listed.
+
+23
+00:01:28,306 --> 00:01:31,198
+Each file you select adds its own shortcode.
+
+24
+00:01:31,652 --> 00:01:34,543
+We select home-bg.jpg and confirm.
+
+25
+00:01:34,543 --> 00:01:39,168
+The dialog closes, and the text holds the image shortcode:
+
+26
+00:01:39,168 --> 00:01:44,082
+the name in square brackets, the file name, and a closing tag.
+
+27
+00:01:44,533 --> 00:01:46,101
+Publish saves the change.
+
+28
+00:01:46,101 --> 00:01:50,197
+On the published page, the site has replaced the shortcode with the picture
+
+29
+00:01:50,197 --> 00:01:51,663
+from the media library.
+
+30
+00:01:55,863 --> 00:01:57,838
+Options go after the name.
+
+31
+00:01:57,838 --> 00:02:03,267
+The image shortcode takes alt, for alternative text, and class, for a style class.
+
+32
+00:02:03,267 --> 00:02:07,401
+Width and height ask for a resized copy in the sizes the site
+
+33
+00:02:07,401 --> 00:02:11,103
+accepts, and mode, format and quality shape that copy.
+
+34
+00:02:12,691 --> 00:02:15,947
+Let's ask for a copy that is 480 pixels wide.
+
+35
+00:02:15,947 --> 00:02:21,691
+Inside the opening tag, after the name, we type the width option with the value 480.
+
+36
+00:02:22,148 --> 00:02:23,785
+Next comes the alt option.
+
+37
+00:02:23,785 --> 00:02:27,521
+Its text describes the picture for visitors who can't see it, so we
+
+38
+00:02:27,521 --> 00:02:29,108
+type a short description.
+
+39
+00:02:29,559 --> 00:02:32,932
+After publishing, the page shows a smaller picture.
+
+40
+00:02:32,932 --> 00:02:36,659
+The site served a copy resized to the width we asked for.
+
+41
+00:02:40,869 --> 00:02:43,753
+Insert Shortcode opens Available Shortcodes.
+
+42
+00:02:43,753 --> 00:02:48,022
+Each shortcode is a card, with a hint and a note on how to write it.
+
+43
+00:02:48,022 --> 00:02:50,849
+The categories on the left narrow the list.
+
+44
+00:02:51,312 --> 00:02:57,515
+The Filter box matches the start of a name, so typing asset leaves the asset_url card.
+
+45
+00:02:57,515 --> 00:03:00,482
+Add puts that shortcode into the text.
+
+46
+00:03:00,944 --> 00:03:03,738
+Its two tags have a space between them.
+
+47
+00:03:03,738 --> 00:03:08,828
+We replace the space with the file name post-bg.jpg, so the shortcode points
+
+48
+00:03:08,828 --> 00:03:11,124
+at a file in the media library.
+
+49
+00:03:11,590 --> 00:03:16,329
+The asset_url shortcode gives only an address, with no picture.
+
+50
+00:03:16,329 --> 00:03:21,480
+After publishing, the page shows the address of the file on the site.
+
+51
+00:03:25,680 --> 00:03:30,154
+Shortcodes work in the HTML body and the Markdown body of a content
+
+52
+00:03:30,154 --> 00:03:33,280
+item, and in HTML fields and Markdown fields.
+
+53
+00:03:33,280 --> 00:03:38,980
+The Markdown editor with a toolbar has buttons named Insert Shortcode and Insert Image.
+
+54
+00:03:39,730 --> 00:03:44,782
+You can also type a shortcode by hand, since the buttons only save typing.
+
+55
+00:03:44,782 --> 00:03:50,530
+In the editor, a shortcode stays plain text, and the displayed page shows the result.
+
+56
+00:03:52,530 --> 00:03:57,020
+Shortcodes let your text carry a picture or an address that the site fills in.
+
+57
+00:03:57,020 --> 00:03:58,410
+Thanks for watching.
+

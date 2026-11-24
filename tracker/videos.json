@@ -2415,14 +2415,14 @@
     "docs": [
       "src/docs/reference/modules/Shortcodes/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 3.8,
     "words": 572,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/357",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
