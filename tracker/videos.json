@@ -2441,14 +2441,14 @@
     "docs": [
       "src/docs/reference/modules/Security/Permissions.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 4.3,
     "words": 652,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/358",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
