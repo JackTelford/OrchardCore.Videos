@@ -1,0 +1,35 @@
+WEBVTT
+
+00:00:03.226 --> 00:00:09.226
+Widget types are content types, so you find them under Design, Content Definition, Content Types.
+
+00:00:09.678 --> 00:00:13.295
+Searching the list for Widget shows the widget types:
+
+00:00:13.295 --> 00:00:16.974
+Blockquote, Container, Image, Paragraph, and Raw Html.
+
+00:00:16.974 --> 00:00:19.058
+Each carries a Widget badge.
+
+00:00:19.510 --> 00:00:21.020
+Let's open Paragraph.
+
+00:00:21.020 --> 00:00:23.760
+The Stereotype field holds the word Widget.
+
+00:00:23.760 --> 00:00:27.170
+That setting is the only requirement for a widget type.
+
+00:00:27.635 --> 00:00:32.185
+Lower on the page, the Fields list shows what the widget holds.
+
+00:00:32.185 --> 00:00:36.735
+Paragraph has one field, Content, edited with a Wysiwyg editor.
+
+00:00:37.202 --> 00:00:41.198
+To make your own widget type, choose Create new type, add the parts
+
+00:00:41.198 --> 00:00:44.592
+and fields you need, and enter Widget as its stereotype.
+

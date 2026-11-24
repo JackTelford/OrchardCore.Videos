@@ -1,0 +1,36 @@
+1
+00:00:03,217 --> 00:00:07,717
+In the WidgetsList section of an article, each card has a handle on its left.
+
+2
+00:00:07,717 --> 00:00:11,133
+Drag a card by its handle to change its order, or to move
+
+3
+00:00:11,133 --> 00:00:12,597
+it into another zone.
+
+4
+00:00:13,059 --> 00:00:15,963
+The arrow button collapses a card to its header.
+
+5
+00:00:15,963 --> 00:00:18,169
+Choose it again to expand the card.
+
+6
+00:00:18,636 --> 00:00:23,340
+Pointing at the header of a card reveals a plus button titled Insert Widget.
+
+7
+00:00:23,340 --> 00:00:28,616
+It opens the same list of widget types and inserts the chosen widget before that card.
+
+8
+00:00:29,091 --> 00:00:32,229
+The trash button removes a card after you confirm.
+
+9
+00:00:32,229 --> 00:00:36,151
+Changes to widgets are saved with the article, not on their own.
+

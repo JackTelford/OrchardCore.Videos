@@ -1,0 +1,36 @@
+1
+00:00:03,203 --> 00:00:06,077
+A part adds one capability to a content type.
+
+2
+00:00:06,077 --> 00:00:10,416
+To let each article choose its own widgets for named zones, the Article
+
+3
+00:00:10,416 --> 00:00:12,558
+type needs the WidgetsList part.
+
+4
+00:00:12,558 --> 00:00:17,123
+The About page is an Article, so let's edit that type and choose Add Parts.
+
+5
+00:00:17,599 --> 00:00:23,477
+WidgetsList is described as a way to add widgets to layout zones for your content item.
+
+6
+00:00:23,477 --> 00:00:27,459
+Add & Configure attaches the part and opens its settings.
+
+7
+00:00:28,103 --> 00:00:32,920
+Available widgets zones takes a comma separated list of zone names.
+
+8
+00:00:32,920 --> 00:00:38,133
+Let's enter Content and Footer, two zones of this theme, and choose Save.
+
+9
+00:00:38,628 --> 00:00:45,228
+The Parts list of Article includes WidgetsList, and every article offers those two zones for widgets.
+

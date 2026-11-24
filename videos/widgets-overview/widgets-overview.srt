@@ -1,0 +1,280 @@
+1
+00:00:01,000 --> 00:00:05,199
+Widgets are blocks of content, such as a paragraph or a quote, that
+
+2
+00:00:05,199 --> 00:00:07,270
+appear in the zones of a page.
+
+3
+00:00:07,270 --> 00:00:11,296
+In this video, you'll see what a widget is, how to allow widgets
+
+4
+00:00:11,296 --> 00:00:14,920
+on a content type, and how to add, move, and remove them.
+
+5
+00:00:19,520 --> 00:00:23,588
+A widget is a content item like any other, with fields to fill in.
+
+6
+00:00:23,588 --> 00:00:27,769
+What makes it a widget is its content type, which carries the Widget
+
+7
+00:00:27,769 --> 00:00:31,442
+stereotype, a setting that marks the type as a widget type.
+
+8
+00:00:31,442 --> 00:00:34,380
+Paragraph, Image, and Blockquote are examples.
+
+9
+00:00:35,130 --> 00:00:37,831
+A theme lays out each page in named zones.
+
+10
+00:00:37,831 --> 00:00:42,332
+The Blog Theme of this site has zones such as Header, Content, and Footer.
+
+11
+00:00:42,332 --> 00:00:46,721
+A widget appears wherever the theme renders its zone, so zone names must
+
+12
+00:00:46,721 --> 00:00:48,690
+match the zones of the theme.
+
+13
+00:00:49,440 --> 00:00:52,185
+Widgets can be placed in more than one way.
+
+14
+00:00:52,185 --> 00:00:56,443
+With the WidgetsList part, each item of a content type chooses its own
+
+15
+00:00:56,443 --> 00:00:59,581
+widgets for named zones, and this video shows how.
+
+16
+00:00:59,581 --> 00:01:02,830
+Layers and the Flow part each have a separate video.
+
+17
+00:01:07,088 --> 00:01:09,475
+Widgets is a feature of its own.
+
+18
+00:01:09,475 --> 00:01:12,490
+Under Tools, Features, search for Widgets.
+
+19
+00:01:12,490 --> 00:01:18,898
+Its description says it provides a part allowing content items to render widgets in theme zones.
+
+20
+00:01:19,482 --> 00:01:23,027
+The row offers Disable because the feature is enabled.
+
+21
+00:01:23,027 --> 00:01:26,808
+On a site where it is turned off, the button reads Enable.
+
+22
+00:01:26,808 --> 00:01:30,352
+The Blog recipe, which sets up this site, turns it on.
+
+23
+00:01:34,578 --> 00:01:40,578
+Widget types are content types, so you find them under Design, Content Definition, Content Types.
+
+24
+00:01:41,031 --> 00:01:44,648
+Searching the list for Widget shows the widget types:
+
+25
+00:01:44,648 --> 00:01:48,326
+Blockquote, Container, Image, Paragraph, and Raw Html.
+
+26
+00:01:48,326 --> 00:01:50,411
+Each carries a Widget badge.
+
+27
+00:01:50,863 --> 00:01:52,372
+Let's open Paragraph.
+
+28
+00:01:52,372 --> 00:01:55,112
+The Stereotype field holds the word Widget.
+
+29
+00:01:55,112 --> 00:01:58,523
+That setting is the only requirement for a widget type.
+
+30
+00:01:58,987 --> 00:02:03,537
+Lower on the page, the Fields list shows what the widget holds.
+
+31
+00:02:03,537 --> 00:02:08,087
+Paragraph has one field, Content, edited with a Wysiwyg editor.
+
+32
+00:02:08,554 --> 00:02:12,550
+To make your own widget type, choose Create new type, add the parts
+
+33
+00:02:12,550 --> 00:02:15,944
+and fields you need, and enter Widget as its stereotype.
+
+34
+00:02:20,147 --> 00:02:23,021
+A part adds one capability to a content type.
+
+35
+00:02:23,021 --> 00:02:27,360
+To let each article choose its own widgets for named zones, the Article
+
+36
+00:02:27,360 --> 00:02:29,502
+type needs the WidgetsList part.
+
+37
+00:02:29,502 --> 00:02:34,067
+The About page is an Article, so let's edit that type and choose Add Parts.
+
+38
+00:02:34,543 --> 00:02:40,421
+WidgetsList is described as a way to add widgets to layout zones for your content item.
+
+39
+00:02:40,421 --> 00:02:44,403
+Add & Configure attaches the part and opens its settings.
+
+40
+00:02:45,047 --> 00:02:49,864
+Available widgets zones takes a comma separated list of zone names.
+
+41
+00:02:49,864 --> 00:02:55,077
+Let's enter Content and Footer, two zones of this theme, and choose Save.
+
+42
+00:02:55,572 --> 00:03:02,172
+The Parts list of Article includes WidgetsList, and every article offers those two zones for widgets.
+
+43
+00:03:06,429 --> 00:03:10,313
+The Content Items menu entry opens the Manage Content page.
+
+44
+00:03:10,313 --> 00:03:12,404
+Let's edit the About article.
+
+45
+00:03:12,404 --> 00:03:16,646
+Further down, the WidgetsList section shows a card for each zone:
+
+46
+00:03:16,646 --> 00:03:18,139
+Content and Footer.
+
+47
+00:03:18,590 --> 00:03:23,077
+In the Footer zone, the plus button titled Add Widget opens a list.
+
+48
+00:03:23,077 --> 00:03:27,810
+It holds every content type with the Widget stereotype, sorted by name.
+
+49
+00:03:28,273 --> 00:03:29,837
+Let's choose Paragraph.
+
+50
+00:03:29,837 --> 00:03:32,424
+A card for the widget appears in the zone.
+
+51
+00:03:32,424 --> 00:03:36,413
+Expand it, and write the text that visitors will read in the footer.
+
+52
+00:03:36,901 --> 00:03:40,243
+Let's add a Blockquote to the Content zone the same way.
+
+53
+00:03:40,243 --> 00:03:42,561
+Its only field is Quote, a text area.
+
+54
+00:03:45,401 --> 00:03:49,427
+Let's choose Publish, which saves the widgets together with the article.
+
+55
+00:03:49,427 --> 00:03:54,021
+The widgets are stored in the article itself, so they belong to this article alone.
+
+56
+00:03:54,473 --> 00:03:58,222
+On the About page, the quote is shown in the Content zone, and
+
+57
+00:03:58,222 --> 00:04:00,373
+the paragraph in the Footer zone.
+
+58
+00:04:04,589 --> 00:04:09,090
+In the WidgetsList section of an article, each card has a handle on its left.
+
+59
+00:04:09,090 --> 00:04:12,505
+Drag a card by its handle to change its order, or to move
+
+60
+00:04:12,505 --> 00:04:13,969
+it into another zone.
+
+61
+00:04:14,431 --> 00:04:17,336
+The arrow button collapses a card to its header.
+
+62
+00:04:17,336 --> 00:04:19,541
+Choose it again to expand the card.
+
+63
+00:04:20,009 --> 00:04:24,712
+Pointing at the header of a card reveals a plus button titled Insert Widget.
+
+64
+00:04:24,712 --> 00:04:29,989
+It opens the same list of widget types and inserts the chosen widget before that card.
+
+65
+00:04:30,464 --> 00:04:33,601
+The trash button removes a card after you confirm.
+
+66
+00:04:33,601 --> 00:04:37,524
+Changes to widgets are saved with the article, not on their own.
+
+67
+00:04:39,524 --> 00:04:42,703
+Widgets are content items that fill the zones of a page:
+
+68
+00:04:42,703 --> 00:04:47,010
+mark a content type with the Widget stereotype, attach the WidgetsList part to
+
+69
+00:04:47,010 --> 00:04:50,650
+the types that need widgets, and choose the widgets of each item.
+
+70
+00:04:50,650 --> 00:04:51,984
+Thanks for watching.
+
