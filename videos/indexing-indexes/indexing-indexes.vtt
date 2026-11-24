@@ -1,0 +1,251 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:02.776
+Search needs an index.
+
+00:00:02.776 --> 00:00:08.422
+The Indexing module creates, edits and rebuilds indexes from one page of the admin.
+
+00:00:08.422 --> 00:00:13.370
+In this video, you add an index, see what Synchronize, Reset and Rebuild
+
+00:00:13.370 --> 00:00:15.780
+do, and keep indexes up to date.
+
+00:00:20.380 --> 00:00:23.957
+A search index is a copy of your content, arranged so that a
+
+00:00:23.957 --> 00:00:25.908
+search can find words quickly.
+
+00:00:25.908 --> 00:00:29.810
+The site searches the index instead of reading every content item.
+
+00:00:30.560 --> 00:00:33.309
+The Indexing module manages indexes.
+
+00:00:33.309 --> 00:00:35.207
+A provider stores them:
+
+00:00:35.207 --> 00:00:40.051
+Lucene, Elasticsearch or Azure AI Search, each enabled as a feature.
+
+00:00:40.051 --> 00:00:45.680
+A source decides what an index holds, for example the content items of the site.
+
+00:00:46.430 --> 00:00:50.860
+When a content item changes, the site updates the indexes that include its
+
+00:00:50.860 --> 00:00:53.739
+content type, and records the change in a log.
+
+00:00:53.739 --> 00:00:58.279
+The optional Indexing Worker is a background task that goes through that log
+
+00:00:58.279 --> 00:00:59.940
+every minute by default.
+
+00:01:04.201 --> 00:01:07.142
+This site has the Lucene feature enabled.
+
+00:01:07.142 --> 00:01:09.145
+Open Search, then Indexes.
+
+00:01:09.145 --> 00:01:13.151
+The list is empty, and the page says there are no indexes.
+
+00:01:13.643 --> 00:01:15.124
+Select Add index.
+
+00:01:15.124 --> 00:01:18.666
+Available Sources groups the sources by provider.
+
+00:01:18.666 --> 00:01:22.593
+Under Lucene, select Add on the Content in Lucene card.
+
+00:01:23.056 --> 00:01:28.100
+Index Name is the name the provider uses, and it can't be changed after you save.
+
+00:01:28.100 --> 00:01:31.406
+Type articles, and the Name field fills in from it.
+
+00:01:31.861 --> 00:01:35.720
+Name identifies the index in the list and must be unique.
+
+00:01:35.720 --> 00:01:40.621
+Culture is set to Any culture, which indexes the content of every culture.
+
+00:01:41.074 --> 00:01:44.065
+Content types lists the content types of the site.
+
+00:01:44.065 --> 00:01:45.453
+Choose at least one.
+
+00:01:45.453 --> 00:01:48.444
+Let's select Article, so the index holds articles.
+
+00:01:48.906 --> 00:01:55.418
+Index Latest version is unchecked, so only the published version of a content item is indexed.
+
+00:01:55.418 --> 00:01:59.846
+Lucene adds options of its own, which a separate video covers.
+
+00:02:00.308 --> 00:02:01.229
+Select Save.
+
+00:02:01.229 --> 00:02:05.373
+A message says that an index was created and that the synchronizing process
+
+00:02:05.373 --> 00:02:07.318
+was triggered in the background.
+
+00:02:11.518 --> 00:02:15.820
+Synchronize applies the content changes that the index has not processed.
+
+00:02:15.820 --> 00:02:18.598
+Entries that did not change stay as they are.
+
+00:02:19.348 --> 00:02:25.241
+Reset starts again from the beginning of the log, so every recorded update is processed again.
+
+00:02:25.241 --> 00:02:29.838
+The index keeps its entries, and entries are added or updated as needed.
+
+00:02:30.588 --> 00:02:35.644
+Rebuild deletes the index, creates it empty, and fills it again from the log.
+
+00:02:35.644 --> 00:02:41.798
+The refill runs in the background, so searches can return incomplete results until it finishes.
+
+00:02:46.029 --> 00:02:51.007
+On the Indexes page, a second index, pages, holds the Page content type.
+
+00:02:51.007 --> 00:02:55.219
+Each index has Edit and Delete buttons, and an Actions menu.
+
+00:02:55.219 --> 00:03:00.069
+The badges show the provider, Lucene, and the type of source, Content.
+
+00:03:00.594 --> 00:03:02.351
+Open the Actions menu.
+
+00:03:02.351 --> 00:03:04.609
+Query Index comes from Lucene.
+
+00:03:04.609 --> 00:03:09.814
+Synchronize, Reset and Rebuild manage the index, and Force Delete removes it.
+
+00:03:10.267 --> 00:03:11.664
+Select Synchronize.
+
+00:03:11.664 --> 00:03:16.077
+A message says the synchronizing process was triggered in the background.
+
+00:03:16.534 --> 00:03:17.570
+Select Reset.
+
+00:03:17.570 --> 00:03:21.931
+A message says the index was reset, and that the synchronizing process was
+
+00:03:21.931 --> 00:03:23.784
+triggered in the background.
+
+00:03:24.259 --> 00:03:25.352
+Select Rebuild.
+
+00:03:25.352 --> 00:03:29.620
+A message says the index was rebuilt, and that the synchronizing process was
+
+00:03:29.620 --> 00:03:31.389
+triggered in the background.
+
+00:03:35.628 --> 00:03:39.618
+On the Indexes page, select Edit on the articles index.
+
+00:03:39.618 --> 00:03:42.888
+Index Name is disabled and can't be changed.
+
+00:03:42.888 --> 00:03:47.728
+Name, Culture, Content types and Index Latest version can be edited.
+
+00:03:48.185 --> 00:03:52.715
+Let's select Blog Post as a second content type, and check Index Latest
+
+00:03:52.715 --> 00:03:56.127
+version, so a draft is indexed when an item has one.
+
+00:03:56.127 --> 00:03:57.185
+Select Save.
+
+00:03:57.989 --> 00:04:00.565
+A message says the index was updated.
+
+00:04:00.565 --> 00:04:05.117
+Saving does not process content again, so use Reset to process the log
+
+00:04:05.117 --> 00:04:10.329
+again and add content of the added type, or Rebuild to start from an empty index.
+
+00:04:10.831 --> 00:04:14.176
+Delete asks you to confirm before it removes the index.
+
+00:04:14.176 --> 00:04:18.452
+If Delete reports an error, Force Delete in the Actions menu removes the
+
+00:04:18.452 --> 00:04:22.235
+index from the site even when the provider could not delete it.
+
+00:04:22.235 --> 00:04:23.551
+Let's cancel both.
+
+00:04:25.219 --> 00:04:29.554
+To act on several indexes at once, select them in the list.
+
+00:04:29.554 --> 00:04:35.489
+The Actions menu above the list then offers Synchronize, Reset, Rebuild and Delete.
+
+00:04:39.699 --> 00:04:43.526
+Let's open Tools, Features and search for Indexing Worker.
+
+00:04:43.526 --> 00:04:50.163
+It adds a background task that periodically synchronizes the indexes with the content items that changed.
+
+00:04:50.163 --> 00:04:51.359
+Select Enable.
+
+00:04:52.446 --> 00:04:58.068
+With the Background Tasks feature enabled, Tools, Background Tasks lists it as Indexes
+
+00:04:58.068 --> 00:05:00.634
+Content Updater, with a description.
+
+00:05:00.634 --> 00:05:02.956
+By default it runs every minute.
+
+00:05:03.411 --> 00:05:07.261
+Saving content updates the indexes with or without the worker.
+
+00:05:07.261 --> 00:05:11.904
+The worker also synchronizes every content index on a schedule, so you don't
+
+00:05:11.904 --> 00:05:14.281
+have to select Synchronize yourself.
+
+00:05:18.481 --> 00:05:24.660
+The Indexes page, and adding, editing, deleting, synchronizing, resetting and rebuilding an index,
+
+00:05:24.660 --> 00:05:27.096
+need the Manage Indexes permission.
+
+00:05:27.096 --> 00:05:31.611
+Administrators have it by default, and you can give it to other roles.
+
+00:05:33.611 --> 00:05:38.601
+Add an index, choose its content types, use Synchronize, Reset or Rebuild when
+
+00:05:38.601 --> 00:05:43.947
+it needs attention, and let the Indexing Worker apply pending changes on a schedule.
+
+00:05:43.947 --> 00:05:45.491
+Thanks for watching.
+
