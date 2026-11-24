@@ -1,0 +1,368 @@
+1
+00:00:01,000 --> 00:00:05,388
+A display driver gives the shape of a part or a field a default place.
+
+2
+00:00:05,388 --> 00:00:09,083
+A placement file changes that place without touching code.
+
+3
+00:00:09,083 --> 00:00:13,124
+This video shows the file format, how to target a shape, and how
+
+4
+00:00:13,124 --> 00:00:15,260
+to move, hide and group shapes.
+
+5
+00:00:19,860 --> 00:00:23,527
+A display driver builds a shape for a part or a field, and
+
+6
+00:00:23,527 --> 00:00:25,476
+gives it a default location:
+
+7
+00:00:25,476 --> 00:00:27,768
+a zone, and optionally a position.
+
+8
+00:00:27,768 --> 00:00:33,040
+This text field driver uses the Content zone for the Detail and Summary display types.
+
+9
+00:00:33,790 --> 00:00:36,369
+A placement file overrides that default.
+
+10
+00:00:36,369 --> 00:00:40,350
+It moves a shape to another zone or position, hides it, or groups
+
+11
+00:00:40,350 --> 00:00:42,481
+it into tabs, cards and columns.
+
+12
+00:00:42,481 --> 00:00:46,630
+It works for the front end and for the content editors of the admin.
+
+13
+00:00:47,380 --> 00:00:52,203
+A rule finds a shape by its shape type, its differentiator and its display type.
+
+14
+00:00:52,203 --> 00:00:56,017
+It can also look at the content item the shape was built from,
+
+15
+00:00:56,017 --> 00:00:57,700
+and at the request path.
+
+16
+00:01:01,900 --> 00:01:06,497
+Any module or theme can contain a placement.json file at its root, and
+
+17
+00:01:06,497 --> 00:01:09,279
+so can the startup project of your site.
+
+18
+00:01:09,279 --> 00:01:12,969
+The file is an object whose properties are shape types.
+
+19
+00:01:12,969 --> 00:01:15,630
+Each property holds an array of rules.
+
+20
+00:01:16,380 --> 00:01:20,748
+A rule has two kinds of properties, and all of them are optional.
+
+21
+00:01:20,748 --> 00:01:23,577
+Filters choose the shapes it applies to:
+
+22
+00:01:23,577 --> 00:01:27,822
+displayType, differentiator, contentType, contentPart and path.
+
+23
+00:01:27,822 --> 00:01:31,143
+Placement information says what to do with them:
+
+24
+00:01:31,143 --> 00:01:33,850
+place, alternates, wrappers and shape.
+
+25
+00:01:34,600 --> 00:01:39,520
+The displayType and differentiator filters must equal the shape's own values.
+
+26
+00:01:39,520 --> 00:01:44,558
+The contentType filter accepts content types and stereotypes, and a star at the
+
+27
+00:01:44,558 --> 00:01:47,700
+end matches every name starting with that text.
+
+28
+00:01:48,450 --> 00:01:51,863
+The contentPart filter matches items that have the part.
+
+29
+00:01:51,863 --> 00:01:55,662
+The path filter matches the request path, and a star at the end
+
+30
+00:01:55,662 --> 00:01:58,360
+matches every path starting with that text.
+
+31
+00:01:59,110 --> 00:02:03,090
+The place property sets the location, and a dash hides the shape.
+
+32
+00:02:03,090 --> 00:02:08,190
+The alternates property adds alternate shape types, and wrappers adds wrapper shapes.
+
+33
+00:02:08,190 --> 00:02:12,170
+The shape property replaces the shape type with the one you name.
+
+34
+00:02:16,370 --> 00:02:21,307
+A rule's property name is the shape type, and it is not always the part's name.
+
+35
+00:02:21,307 --> 00:02:25,779
+A part with a display driver, such as TitlePart, is a shape of its own.
+
+36
+00:02:25,779 --> 00:02:29,670
+Its differentiator is the part's name, even for a named part.
+
+37
+00:02:30,420 --> 00:02:34,323
+A dynamic part, which has no class of its own, is displayed with
+
+38
+00:02:34,323 --> 00:02:38,616
+the ContentPart shape, and the differentiator is still the part's name.
+
+39
+00:02:38,616 --> 00:02:44,080
+For other display types, the shape type carries the display type, as in ContentPart_Summary.
+
+40
+00:02:44,830 --> 00:02:49,296
+A field is a shape named after its field type, such as TextField.
+
+41
+00:02:49,296 --> 00:02:55,208
+Its differentiator is the part name, a dash, and the field name, as in Article-Subtitle.
+
+42
+00:02:55,208 --> 00:02:58,730
+A content type's own part is named after the type.
+
+43
+00:02:59,480 --> 00:03:05,437
+Editor shapes end in Edit, such as TextField_Edit, and keep the same differentiator.
+
+44
+00:03:05,437 --> 00:03:09,938
+To move or hide a whole row of the editor, label included, use
+
+45
+00:03:09,938 --> 00:03:16,160
+ContentPart_Edit, with the content type, a dash and the part name as the differentiator.
+
+46
+00:03:16,910 --> 00:03:20,073
+A field with a display mode needs the longer form.
+
+47
+00:03:20,073 --> 00:03:25,156
+The shape type ends in Display, as in TextField_Display, and the differentiator ends
+
+48
+00:03:25,156 --> 00:03:28,770
+with the full shape type, which includes the display mode.
+
+49
+00:03:32,970 --> 00:03:35,199
+A place starts with a zone name.
+
+50
+00:03:35,199 --> 00:03:38,953
+A colon adds a position, and a dot reaches into a zone, as
+
+51
+00:03:38,953 --> 00:03:43,879
+in Parts.Article, where the editor holds the shapes of the part named Article.
+
+52
+00:03:43,879 --> 00:03:46,460
+A leading slash targets a layout zone.
+
+53
+00:03:47,210 --> 00:03:49,474
+Positions compare as numbers:
+
+54
+00:03:49,474 --> 00:03:54,133
+two comes before ten, and one point five fits between one and two.
+
+55
+00:03:54,133 --> 00:03:58,467
+Before and after mark the ends; start and end go beyond them.
+
+56
+00:03:58,467 --> 00:04:03,190
+No position counts as zero, or as the part's position in an editor.
+
+57
+00:04:03,940 --> 00:04:06,951
+In the editor, a place can also name groups.
+
+58
+00:04:06,951 --> 00:04:11,047
+A hash adds a tab, a percent sign a card, and a pipe a column.
+
+59
+00:04:11,047 --> 00:04:17,070
+A semicolon after the name sets the group's position, and an underscore sets a column's width.
+
+60
+00:04:17,820 --> 00:04:22,038
+These rules put a media field in a tab named Media, shown first,
+
+61
+00:04:22,038 --> 00:04:25,473
+and an HTML field in the Content tab, shown second.
+
+62
+00:04:25,473 --> 00:04:28,486
+Shapes without a group join the Content tab.
+
+63
+00:04:28,486 --> 00:04:31,740
+Tabs can hold cards, and cards can hold columns.
+
+64
+00:04:32,490 --> 00:04:37,081
+In a display driver, the Location method also takes a fluent builder.
+
+65
+00:04:37,081 --> 00:04:41,488
+Zone, Tab, Card and Column chain on one builder, and the result is
+
+66
+00:04:41,488 --> 00:04:44,610
+the string you would otherwise write by hand.
+
+67
+00:04:48,828 --> 00:04:52,981
+This is the editor of an Article, before the startup project of the
+
+68
+00:04:52,981 --> 00:04:54,802
+site has a placement file.
+
+69
+00:04:54,802 --> 00:04:58,273
+The Title comes first, then the Permalink and the body.
+
+70
+00:04:58,273 --> 00:05:01,118
+The Subtitle and the Banner Image come last.
+
+71
+00:05:01,570 --> 00:05:07,259
+The Subtitle is a TextField named Subtitle, so its editor shape is TextField_Edit
+
+72
+00:05:07,259 --> 00:05:10,332
+with the differentiator Article-Subtitle.
+
+73
+00:05:10,332 --> 00:05:17,460
+The Banner Image is a MediaField named Image, so its differentiator is Article-Image, not Banner Image.
+
+74
+00:05:19,060 --> 00:05:22,790
+The startup project of the site holds this placement.json.
+
+75
+00:05:22,790 --> 00:05:27,104
+The first rule moves the Subtitle to position zero point five of the
+
+76
+00:05:27,104 --> 00:05:30,252
+Parts zone, between the Title and the Permalink.
+
+77
+00:05:30,252 --> 00:05:33,750
+The second puts the Banner Image in a tab named Media.
+
+78
+00:05:35,354 --> 00:05:39,899
+With the file in place, the same editor has two tabs, Content and Media.
+
+79
+00:05:39,899 --> 00:05:44,676
+The Subtitle sits directly under the Title, because a position of zero point
+
+80
+00:05:44,676 --> 00:05:47,764
+five falls between the Title and the Permalink.
+
+81
+00:05:48,216 --> 00:05:50,711
+The Banner Image has left the Content tab.
+
+82
+00:05:50,711 --> 00:05:53,206
+Opening the Media tab shows it on its own.
+
+83
+00:05:57,406 --> 00:06:02,388
+When several placement files place the same shape, the startup project wins, then
+
+84
+00:06:02,388 --> 00:06:04,735
+the active theme, then the modules.
+
+85
+00:06:04,735 --> 00:06:07,713
+A module that depends on another wins over it.
+
+86
+00:06:07,713 --> 00:06:12,236
+The active theme is the front end theme, or the admin theme in the admin.
+
+87
+00:06:12,986 --> 00:06:17,658
+Inside one file, when several rules match a shape, the last one wins.
+
+88
+00:06:17,658 --> 00:06:22,517
+A property that placement does not know, such as a misspelled filter, is
+
+89
+00:06:22,517 --> 00:06:26,566
+ignored, so the rule matches more shapes than you intended.
+
+90
+00:06:28,566 --> 00:06:33,365
+Placement files keep the layout of parts and fields out of your drivers and templates.
+
+91
+00:06:33,365 --> 00:06:38,060
+A separate video covers the Placements module, which edits placement from the admin.
+
+92
+00:06:38,060 --> 00:06:39,416
+Thanks for watching.
+
