@@ -1,0 +1,203 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:03.974
+Liquid templates can live inside your content.
+
+00:00:03.974 --> 00:00:08.036
+The Liquid part and the Liquid field store a template, and run it
+
+00:00:08.036 --> 00:00:10.324
+whenever the content is displayed.
+
+00:00:10.324 --> 00:00:14.900
+In this video, you add each one, write a template, and see how it renders.
+
+00:00:19.500 --> 00:00:24.520
+The Liquid module provides two building blocks for content types that run templates.
+
+00:00:24.520 --> 00:00:27.420
+The Liquid part is the body of a content item.
+
+00:00:27.420 --> 00:00:32.050
+The Liquid field is a named block inside a part, and a part can have several.
+
+00:00:32.800 --> 00:00:38.456
+Their source is stored exactly as you submit it, and runs when the content is displayed.
+
+00:00:38.456 --> 00:00:42.788
+The HTML body part, the HTML field, and the Markdown body part and
+
+00:00:42.788 --> 00:00:44.594
+field do not run Liquid.
+
+00:00:44.594 --> 00:00:46.820
+They treat it as ordinary text.
+
+00:00:51.120 --> 00:00:56.058
+Let's add the Liquid part to a content type named Notice, which has a Title part.
+
+00:00:56.058 --> 00:00:59.860
+On the Edit Content Type page, under Parts, choose Add Parts.
+
+00:01:00.342 --> 00:01:03.800
+The part is listed as Liquid, with the description:
+
+00:01:03.800 --> 00:01:07.500
+Provides a Liquid formatted body for your content item.
+
+00:01:07.500 --> 00:01:10.352
+Select it, and choose Add Selected Parts.
+
+00:01:10.831 --> 00:01:13.822
+In Content Items, choose New, then Notice.
+
+00:01:13.822 --> 00:01:15.068
+Enter a title.
+
+00:01:15.068 --> 00:01:19.118
+The Liquid part adds an editor labeled Body, with the hint:
+
+00:01:19.118 --> 00:01:22.421
+The body of the content item, in Liquid format.
+
+00:01:22.940 --> 00:01:24.209
+Write the template.
+
+00:01:24.209 --> 00:01:27.915
+It prints the site name from the Site object, and the modified date
+
+00:01:27.915 --> 00:01:32.230
+of the ContentItem, converted to the time zone of the site by the local filter.
+
+00:01:32.690 --> 00:01:34.950
+Liquid is checked when you save.
+
+00:01:34.950 --> 00:01:38.221
+Add an if tag with no end tag and choose Publish:
+
+00:01:38.221 --> 00:01:42.741
+the item is not saved, and the message begins, The Liquid Body doesn't
+
+00:01:42.741 --> 00:01:45.120
+contain a valid Liquid expression.
+
+00:01:45.675 --> 00:01:49.024
+Correct the template and publish again, then choose View.
+
+00:01:49.024 --> 00:01:52.692
+The page shows the title in the header, and below it the output
+
+00:01:52.692 --> 00:01:55.615
+of the template, with the site name and the date.
+
+00:01:59.852 --> 00:02:01.878
+Next comes the Liquid field.
+
+00:02:01.878 --> 00:02:05.928
+On the Edit Content Type page, under Fields, choose Add Field.
+
+00:02:05.928 --> 00:02:10.752
+Enter Closing Note as the Display Name; the Technical Name follows from it.
+
+00:02:11.244 --> 00:02:13.950
+Choose the field type Liquid Field, and save.
+
+00:02:13.950 --> 00:02:17.664
+The field is added to the part named after the type, which holds
+
+00:02:17.664 --> 00:02:19.574
+the fields of the type itself.
+
+00:02:20.031 --> 00:02:21.325
+Edit the notice.
+
+00:02:21.325 --> 00:02:25.851
+The editor is labeled with the display name of the field, Closing Note,
+
+00:02:25.851 --> 00:02:27.321
+and its hint reads:
+
+00:02:27.321 --> 00:02:30.201
+The content of the field, in Liquid format.
+
+00:02:30.201 --> 00:02:34.551
+Write a template that links to the item with the display URL filter.
+
+00:02:35.008 --> 00:02:37.188
+Publish, then view the item again.
+
+00:02:37.188 --> 00:02:39.859
+The output of the field is on the page too:
+
+00:02:39.859 --> 00:02:41.658
+a link to the content item.
+
+00:02:45.858 --> 00:02:48.098
+A migration does the same from code.
+
+00:02:48.098 --> 00:02:52.044
+WithPart attaches the Liquid part by name, and the field goes on the
+
+00:02:52.044 --> 00:02:55.458
+part named after the type, with OfType set to LiquidField.
+
+00:02:59.658 --> 00:03:02.569
+Orchard Core renders content through shapes.
+
+00:03:02.569 --> 00:03:08.857
+The module describes the shapes LiquidPart, LiquidPart_Summary and LiquidField, and renders the stored
+
+00:03:08.857 --> 00:03:11.128
+source when a shape is processed.
+
+00:03:11.878 --> 00:03:17.266
+The shape itself is the Model, and the content item is passed in as ContentItem.
+
+00:03:17.266 --> 00:03:19.396
+The result is not sanitized:
+
+00:03:19.396 --> 00:03:24.158
+it becomes the Html property of the shape, and the shape's view writes
+
+00:03:24.158 --> 00:03:26.038
+it to the page as it is.
+
+00:03:26.788 --> 00:03:32.095
+The summary view removes the tags and cuts the text to about 200 characters.
+
+00:03:32.095 --> 00:03:37.468
+The field view wraps the Html in a div with the class field-type-liquidfield.
+
+00:03:38.218 --> 00:03:40.652
+Other code reads the same sources.
+
+00:03:40.652 --> 00:03:45.277
+A feed asks for the body aspect, which holds the rendered Liquid part.
+
+00:03:45.277 --> 00:03:51.058
+And in GraphQL, a Liquid field has a field named liquid that returns the rendered result.
+
+00:03:55.258 --> 00:03:59.339
+Editing Liquid takes its own permission, Manage Liquid templates.
+
+00:03:59.339 --> 00:04:04.858
+It is marked security-critical, and the Administrator and Editor roles have it by default.
+
+00:04:05.608 --> 00:04:10.082
+Without it, a user cannot edit or publish a content item that has
+
+00:04:10.082 --> 00:04:15.188
+a Liquid part or a Liquid field, even one nested inside a Flow or Bag part.
+
+00:04:17.188 --> 00:04:19.662
+That's the Liquid part and the Liquid field:
+
+00:04:19.662 --> 00:04:23.422
+templates that live in your content, run when it is displayed, and are
+
+00:04:23.422 --> 00:04:25.401
+protected by their own permission.
+
+00:04:25.401 --> 00:04:26.688
+Thanks for watching.
+

@@ -24,7 +24,40 @@
     "Orchard Core",
     "Templates and Liquid"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Two components that run Liquid"
+    },
+    {
+      "time": "0:47",
+      "title": "The Liquid part"
+    },
+    {
+      "time": "1:56",
+      "title": "The Liquid field"
+    },
+    {
+      "time": "2:42",
+      "title": "Adding them from code"
+    },
+    {
+      "time": "2:56",
+      "title": "From source to page"
+    },
+    {
+      "time": "3:52",
+      "title": "Who can edit Liquid"
+    },
+    {
+      "time": "4:16",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +79,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Liquid"
-  }
+  },
+  "length": "4:28"
 }
