@@ -2497,14 +2497,14 @@
     "docs": [
       "src/docs/reference/modules/DisplayManagement/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 5.4,
     "words": 806,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/360",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
