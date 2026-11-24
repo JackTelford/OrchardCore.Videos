@@ -21,7 +21,40 @@
     "Orchard Core",
     "Templates and Liquid"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "What a shortcode template is"
+    },
+    {
+      "time": "1:01",
+      "title": "Enable the feature"
+    },
+    {
+      "time": "1:21",
+      "title": "Create a template"
+    },
+    {
+      "time": "2:51",
+      "title": "Use it in content"
+    },
+    {
+      "time": "3:26",
+      "title": "More about templates"
+    },
+    {
+      "time": "4:09",
+      "title": "Recipes, deployment and permissions"
+    },
+    {
+      "time": "4:40",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Shortcodes",
@@ -52,5 +85,5 @@
     "pullRequest": null,
     "feature": "OrchardCore.Shortcodes.Templates"
   },
-  "length": "4:51"
+  "length": "4:52"
 }
