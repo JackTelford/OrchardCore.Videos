@@ -2576,14 +2576,14 @@
     "docs": [
       "src/docs/reference/modules/Razor/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 5.3,
     "words": 791,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/363",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
