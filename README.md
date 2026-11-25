@@ -266,7 +266,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Workflows in Depth: Expressions, Variables, Branches and Loops](videos/workflows-expressions-and-loops) |  | not uploaded | OrchardCMS/OrchardCore |
 | [HTTP Workflows: Handle Requests and Call Web APIs](videos/workflows-http) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Workflow Instances: Follow and Troubleshoot Each Run](videos/workflows-instances) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Workflows: Automate Tasks Without Writing Code](videos/workflows-overview) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows: Automate Tasks Without Writing Code](videos/workflows-overview) | 5:56 | [https://youtu.be/_nlyO00Cusc](https://youtu.be/_nlyO00Cusc) | OrchardCMS/OrchardCore |
 | [Workflows: Send an Email When Content Is Published](videos/workflows-send-email-on-publish) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Workflows and the Database Session: Commit, Fork and Join](videos/workflows-session-activities) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Timer Workflows: Run Tasks on a Schedule](videos/workflows-timers) |  | not uploaded | OrchardCMS/OrchardCore |
