@@ -23,7 +23,36 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:18",
+      "title": "How a timer works"
+    },
+    {
+      "time": "1:10",
+      "title": "Enable the timer"
+    },
+    {
+      "time": "1:34",
+      "title": "Build a scheduled workflow"
+    },
+    {
+      "time": "2:47",
+      "title": "Watch it run"
+    },
+    {
+      "time": "3:23",
+      "title": "Good to know"
+    },
+    {
+      "time": "3:56",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -45,5 +74,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows.Timers"
-  }
+  },
+  "length": "4:07"
 }
