@@ -23,7 +23,56 @@
     "Orchard Core",
     "Search and Indexing"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "How the search works"
+    },
+    {
+      "time": "0:46",
+      "title": "Enable the features"
+    },
+    {
+      "time": "1:14",
+      "title": "Create an index"
+    },
+    {
+      "time": "2:36",
+      "title": "Choose the search index"
+    },
+    {
+      "time": "2:54",
+      "title": "Grant access to the index"
+    },
+    {
+      "time": "3:26",
+      "title": "Try the search page"
+    },
+    {
+      "time": "3:57",
+      "title": "Choose what is indexed"
+    },
+    {
+      "time": "4:55",
+      "title": "Rebuild the index"
+    },
+    {
+      "time": "5:21",
+      "title": "Change the results page"
+    },
+    {
+      "time": "5:50",
+      "title": "Script the setup"
+    },
+    {
+      "time": "6:19",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -53,5 +102,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:guides/implement-fulltext-search"
-  }
+  },
+  "length": "6:33"
 }
