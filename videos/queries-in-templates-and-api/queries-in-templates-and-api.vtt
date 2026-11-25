@@ -1,0 +1,221 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.900
+A saved query has a name, and the name is all a caller needs.
+
+00:00:04.900 --> 00:00:09.091
+In this video, you run the same query from a Liquid template, from
+
+00:00:09.091 --> 00:00:13.980
+a Razor view, and through the web API, with its parameters and its permission.
+
+00:00:18.680 --> 00:00:22.836
+Let's open Search, Queries, All Queries in the admin menu.
+
+00:00:22.836 --> 00:00:28.485
+It lists the saved queries, and the Blog recipe saves one, named RecentBlogPosts.
+
+00:00:28.485 --> 00:00:33.420
+That name is what a template, a view, or an API caller uses to run it.
+
+00:00:33.872 --> 00:00:35.163
+Open the query.
+
+00:00:35.163 --> 00:00:39.838
+Its SQL selects the document ids of blog posts, most recent first, and
+
+00:00:39.838 --> 00:00:43.775
+ends with a parameter named limit, whose default is three.
+
+00:00:43.775 --> 00:00:48.512
+Return Documents is checked, so the query returns the posts themselves.
+
+00:00:52.712 --> 00:00:57.114
+In Liquid, the Queries property returns a saved query by name, and the
+
+00:00:57.114 --> 00:00:58.679
+query filter runs it.
+
+00:00:58.679 --> 00:01:00.764
+The result is a list of items.
+
+00:01:00.764 --> 00:01:04.762
+The Blog theme loops over them in its template for a blog post.
+
+00:01:06.380 --> 00:01:09.906
+On the front end, a blog post page lists the titles of the
+
+00:01:09.906 --> 00:01:12.385
+three most recent posts below the post.
+
+00:01:12.385 --> 00:01:15.910
+That is the loop at work, with the default limit of three.
+
+00:01:17.510 --> 00:01:21.221
+Named arguments of the filter are the parameters of the query.
+
+00:01:21.221 --> 00:01:24.223
+Here, limit is five instead of the default three.
+
+00:01:24.223 --> 00:01:26.460
+Parameter names are case-sensitive.
+
+00:01:27.210 --> 00:01:31.616
+A query that returns content items gives you content items, so you can
+
+00:01:31.616 --> 00:01:35.789
+use their properties and filters, such as the display text filter.
+
+00:01:35.789 --> 00:01:40.890
+A query that returns rows gives items whose properties are the columns of the row.
+
+00:01:41.640 --> 00:01:45.361
+If no query has that name, the property is nil, and so is
+
+00:01:45.361 --> 00:01:47.192
+the result of the filter.
+
+00:01:47.192 --> 00:01:52.212
+Once the Queries feature is enabled, the Queries property is available in every
+
+00:01:52.212 --> 00:01:54.220
+Liquid template of the site.
+
+00:01:58.420 --> 00:02:02.770
+In a Razor view, the Orchard helper provides ContentQueryAsync.
+
+00:02:02.770 --> 00:02:06.741
+Give it the name of a query and it returns content items.
+
+00:02:06.741 --> 00:02:11.280
+DisplayAsync renders each one, here with the Summary display type.
+
+00:02:12.030 --> 00:02:17.145
+A second overload takes a dictionary of parameters, the same values you pass
+
+00:02:17.145 --> 00:02:18.829
+to the Liquid filter.
+
+00:02:18.829 --> 00:02:20.450
+Here, limit is five.
+
+00:02:21.200 --> 00:02:26.985
+ContentQueryAsync keeps only the results that have a content item ID and skips the others.
+
+00:02:26.985 --> 00:02:32.167
+QueryAsync returns the items as they come, which suits queries that return rows,
+
+00:02:32.167 --> 00:02:35.360
+and it returns null when no query has the name.
+
+00:02:36.110 --> 00:02:40.570
+Views that use the Orchard Core Razor base class have the Orchard property.
+
+00:02:40.570 --> 00:02:43.157
+In any other view, inject IOrchardHelper:
+
+00:02:43.157 --> 00:02:46.020
+the query methods are extension methods of it.
+
+00:02:50.220 --> 00:02:54.601
+The Queries API is at api, queries, followed by the name of the
+
+00:02:54.601 --> 00:02:57.205
+query, and it accepts GET and POST.
+
+00:02:57.205 --> 00:03:02.094
+Parameters are a JSON object, sent in the parameters value of the query
+
+00:03:02.094 --> 00:03:04.570
+string, or as the body of a POST.
+
+00:03:05.320 --> 00:03:09.720
+Parameters from a caller reach the database as SQL parameters, so they are
+
+00:03:09.720 --> 00:03:11.590
+safe to take from a request.
+
+00:03:11.590 --> 00:03:15.550
+Output expressions in the query text are not, which is why the SQL
+
+00:03:15.550 --> 00:03:17.200
+editor warns about them.
+
+00:03:17.950 --> 00:03:20.093
+A caller needs a permission:
+
+00:03:20.093 --> 00:03:24.946
+Execute Api - All queries for every query, or one permission per query,
+
+00:03:24.946 --> 00:03:27.719
+such as Execute Api - RecentBlogPosts.
+
+00:03:27.719 --> 00:03:29.925
+Manage queries includes both.
+
+00:03:29.925 --> 00:03:33.770
+Without the permission, the endpoint answers Not Found.
+
+00:03:34.520 --> 00:03:39.283
+The query endpoint reads a bearer token, not the sign-in cookie of the admin.
+
+00:03:39.283 --> 00:03:44.620
+A request without a token is anonymous, so the permissions of the Anonymous role apply.
+
+00:03:44.620 --> 00:03:47.260
+A separate video covers getting a token.
+
+00:03:48.918 --> 00:03:53.735
+To let anonymous callers run this query, let's edit the Anonymous role on
+
+00:03:53.735 --> 00:03:56.358
+the Roles page, under Access Control.
+
+00:03:56.823 --> 00:04:03.480
+Search the permissions for RecentBlogPosts, allow Execute Api - RecentBlogPosts, and save.
+
+00:04:03.480 --> 00:04:07.433
+Requests with no token can then run this one query.
+
+00:04:09.057 --> 00:04:14.485
+A GET request to the RecentBlogPosts address, with no token, returns JSON.
+
+00:04:14.485 --> 00:04:18.827
+The items property holds the three most recent blog posts.
+
+00:04:19.281 --> 00:04:23.964
+With the parameters value set to a JSON object that sets limit to
+
+00:04:23.964 --> 00:04:26.998
+two, the same address returns two posts.
+
+00:04:26.998 --> 00:04:29.241
+The query text is unchanged.
+
+00:04:30.841 --> 00:04:34.283
+A SQL query returns an object holding its items.
+
+00:04:34.283 --> 00:04:38.044
+Lucene and Elasticsearch queries also return a count.
+
+00:04:38.044 --> 00:04:43.271
+The items are content items when the query returns them, and rows otherwise.
+
+00:04:47.471 --> 00:04:52.554
+Use Liquid in theme templates, Razor in views and code that needs content
+
+00:04:52.554 --> 00:04:55.901
+items, and the web API for other applications.
+
+00:04:55.901 --> 00:05:01.371
+All three run the same saved query by name, so one definition serves all three.
+
+00:05:03.371 --> 00:05:07.461
+A saved query is defined once and run by its name, from a
+
+00:05:07.461 --> 00:05:09.863
+template, a view, or a request.
+
+00:05:09.863 --> 00:05:11.551
+Thanks for watching.
+
