@@ -24,7 +24,36 @@
     "Orchard Core",
     "Queries"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "A query with a name"
+    },
+    {
+      "time": "0:49",
+      "title": "Queries in Liquid"
+    },
+    {
+      "time": "1:55",
+      "title": "Queries in Razor"
+    },
+    {
+      "time": "2:47",
+      "title": "Queries through the web API"
+    },
+    {
+      "time": "4:44",
+      "title": "Choosing a way"
+    },
+    {
+      "time": "5:02",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +75,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Queries"
-  }
+  },
+  "length": "5:13"
 }

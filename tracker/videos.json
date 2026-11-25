@@ -3091,14 +3091,14 @@
     "docs": [
       "src/docs/reference/modules/Queries/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 4.8,
     "words": 727,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/379",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
