@@ -22,7 +22,48 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "Content events and tasks"
+    },
+    {
+      "time": "0:59",
+      "title": "Start from a content event"
+    },
+    {
+      "time": "1:35",
+      "title": "Create Content"
+    },
+    {
+      "time": "2:32",
+      "title": "Update Content"
+    },
+    {
+      "time": "3:35",
+      "title": "Publish Content"
+    },
+    {
+      "time": "4:24",
+      "title": "Run the workflow"
+    },
+    {
+      "time": "5:00",
+      "title": "Loops and failures"
+    },
+    {
+      "time": "5:30",
+      "title": "Workflows in recipes"
+    },
+    {
+      "time": "5:48",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Workflows documentation",
@@ -49,5 +90,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows"
-  }
+  },
+  "length": "6:02"
 }
