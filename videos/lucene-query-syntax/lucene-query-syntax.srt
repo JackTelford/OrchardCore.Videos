@@ -1,0 +1,292 @@
+1
+00:00:01,000 --> 00:00:05,260
+When a visitor types into the search box of an Orchard Core site
+
+2
+00:00:05,260 --> 00:00:09,033
+with a Lucene index, the text is read as a Lucene query.
+
+3
+00:00:09,033 --> 00:00:13,536
+In this video, you see how it is parsed, and how operators, phrases,
+
+4
+00:00:13,536 --> 00:00:16,700
+wildcards, fields and ranges sharpen a search.
+
+5
+00:00:21,300 --> 00:00:25,366
+The search page hands the typed text to the Lucene search service.
+
+6
+00:00:25,366 --> 00:00:30,957
+The service creates a MultiFieldQueryParser from the index's default fields and its analyzer,
+
+7
+00:00:30,957 --> 00:00:33,160
+and parses the text into a query.
+
+8
+00:00:33,910 --> 00:00:36,155
+Three things shape every search.
+
+9
+00:00:36,155 --> 00:00:41,828
+A word with no field name is searched in the default fields, normally the full-text field.
+
+10
+00:00:41,828 --> 00:00:47,028
+The standard analyzer lowercases terms and drops common English words, and a query
+
+11
+00:00:47,028 --> 00:00:49,510
+that cannot be parsed finds nothing.
+
+12
+00:00:53,810 --> 00:00:55,798
+Let's search for quince cider.
+
+13
+00:00:55,798 --> 00:01:00,491
+With no operator between the words, a query finds documents that contain either
+
+14
+00:01:00,491 --> 00:01:02,810
+word, so the page lists three posts.
+
+15
+00:01:03,281 --> 00:01:07,628
+The operator AND, in capital letters, requires both words.
+
+16
+00:01:07,628 --> 00:01:12,111
+Quince AND cider lists only the one post that mentions both.
+
+17
+00:01:12,573 --> 00:01:15,150
+In lowercase, and is not an operator.
+
+18
+00:01:15,150 --> 00:01:19,526
+The analyzer drops it as a common word, so quince and cider behaves
+
+19
+00:01:19,526 --> 00:01:22,823
+like the first query and lists three posts again.
+
+20
+00:01:23,294 --> 00:01:28,203
+A plus sign requires the word that follows it, and the other word stays optional.
+
+21
+00:01:28,203 --> 00:01:31,814
+Plus quince cider lists the two posts that mention quince.
+
+22
+00:01:32,277 --> 00:01:35,559
+NOT excludes documents that contain the next word.
+
+23
+00:01:35,559 --> 00:01:39,604
+A minus sign or an exclamation mark does the same, but a hyphen
+
+24
+00:01:39,604 --> 00:01:41,773
+inside a word excludes nothing.
+
+25
+00:01:41,773 --> 00:01:44,177
+Quince NOT pruning leaves one post.
+
+26
+00:01:48,375 --> 00:01:51,773
+Quotation marks search for words side by side, in that order.
+
+27
+00:01:51,773 --> 00:01:55,627
+Fruit trees in quotation marks lists the two posts where the words are
+
+28
+00:01:55,627 --> 00:01:56,895
+next to each other.
+
+29
+00:01:57,361 --> 00:02:01,223
+A tilde and a number after a phrase allow up to that many
+
+30
+00:02:01,223 --> 00:02:03,062
+words between its words.
+
+31
+00:02:03,062 --> 00:02:05,085
+This is a proximity search.
+
+32
+00:02:05,085 --> 00:02:08,211
+Pruning trees with tilde two lists two posts.
+
+33
+00:02:12,457 --> 00:02:15,518
+A question mark stands for exactly one character.
+
+34
+00:02:15,518 --> 00:02:19,524
+Replace the letter i of quince with a question mark, and the query
+
+35
+00:02:19,524 --> 00:02:21,917
+lists both posts that contain quince.
+
+36
+00:02:22,389 --> 00:02:26,513
+An asterisk stands for any number of characters, including none.
+
+37
+00:02:26,513 --> 00:02:30,165
+The letters p r u n followed by an asterisk list the two
+
+38
+00:02:30,165 --> 00:02:32,109
+posts that contain pruning.
+
+39
+00:02:32,591 --> 00:02:35,589
+A wildcard at the start of a term is rejected.
+
+40
+00:02:35,589 --> 00:02:39,163
+An asterisk followed by i n c e cannot be parsed, so the
+
+41
+00:02:39,163 --> 00:02:41,641
+page shows There are no such results.
+
+42
+00:02:42,107 --> 00:02:45,100
+A tilde after a single word is a fuzzy search.
+
+43
+00:02:45,100 --> 00:02:49,359
+It finds words within two edits of the one typed, so the misspelling
+
+44
+00:02:49,359 --> 00:02:52,237
+quinse lists both posts that contain quince.
+
+45
+00:02:52,755 --> 00:02:58,599
+A pattern between forward slashes is a regular expression, and it must match a whole term.
+
+46
+00:02:58,599 --> 00:03:02,435
+This one matches terms that begin with p r and end with i
+
+47
+00:03:02,435 --> 00:03:05,235
+n g, so pruning and pressing both count.
+
+48
+00:03:09,435 --> 00:03:12,266
+Every indexed value has a field name.
+
+49
+00:03:12,266 --> 00:03:20,760
+The display text is indexed as Content.ContentItem.DisplayText.Analyzed, and the full text as Content.ContentItem.FullText.
+
+50
+00:03:20,760 --> 00:03:24,909
+A field of a content part is named after its part and its
+
+51
+00:03:24,909 --> 00:03:28,135
+own name, once it is included in the index.
+
+52
+00:03:29,730 --> 00:03:33,043
+A field name and a colon limit a term to that field.
+
+53
+00:03:33,043 --> 00:03:37,156
+Here quince must appear in the display text, so the page lists the
+
+54
+00:03:37,156 --> 00:03:40,870
+pruning post, not the one that mentions quince in its body.
+
+55
+00:03:41,329 --> 00:03:45,253
+Only the term right after the colon belongs to the field.
+
+56
+00:03:45,253 --> 00:03:50,484
+Parentheses put several terms under one field, and operators work inside them.
+
+57
+00:03:50,484 --> 00:03:54,719
+Fruit AND trees lists the one post whose title has both words.
+
+58
+00:03:55,190 --> 00:03:59,647
+Square brackets and the word TO make a range that includes both ends,
+
+59
+00:03:59,647 --> 00:04:02,142
+and curly braces leave the ends out.
+
+60
+00:04:02,142 --> 00:04:06,480
+The Normalized field holds the lowercase title, so p TO r lists the
+
+61
+00:04:06,480 --> 00:04:08,560
+three titles starting with p.
+
+62
+00:04:12,760 --> 00:04:17,653
+Lucene queries accept the same syntax in a query_string query, such as one
+
+63
+00:04:17,653 --> 00:04:20,651
+run from Search, Queries, Run Lucene Query.
+
+64
+00:04:20,651 --> 00:04:25,055
+The text goes to a QueryParser, whose default field is the one the
+
+65
+00:04:25,055 --> 00:04:27,930
+query names, or empty when it names none.
+
+66
+00:04:28,680 --> 00:04:34,159
+There, a query that cannot be parsed shows an error that starts with Invalid query.
+
+67
+00:04:34,159 --> 00:04:38,900
+And *:* matches every document in the index, whatever its content type.
+
+68
+00:04:43,100 --> 00:04:45,666
+Four habits avoid most surprises:
+
+69
+00:04:45,666 --> 00:04:50,667
+write AND, OR and NOT in capital letters, put a range inside brackets,
+
+70
+00:04:50,667 --> 00:04:55,800
+put a space before a minus sign, and never start a term with a wildcard.
+
+71
+00:04:57,800 --> 00:05:00,737
+That is how the search box reads a query:
+
+72
+00:05:00,737 --> 00:05:07,985
+default fields, an analyzer, and Lucene's classic syntax for operators, phrases, wildcards, fields and ranges.
+
+73
+00:05:07,985 --> 00:05:09,610
+Thanks for watching.
+
