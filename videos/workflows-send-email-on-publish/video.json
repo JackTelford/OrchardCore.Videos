@@ -23,7 +23,48 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "How the workflow works"
+    },
+    {
+      "time": "0:56",
+      "title": "What the site needs"
+    },
+    {
+      "time": "1:44",
+      "title": "Create the workflow"
+    },
+    {
+      "time": "2:07",
+      "title": "Start with an event"
+    },
+    {
+      "time": "2:44",
+      "title": "Add the email"
+    },
+    {
+      "time": "3:52",
+      "title": "Publish the workflow"
+    },
+    {
+      "time": "4:24",
+      "title": "Try it"
+    },
+    {
+      "time": "5:08",
+      "title": "Make it yours"
+    },
+    {
+      "time": "5:47",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Workflows documentation",
@@ -55,5 +96,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows"
-  }
+  },
+  "length": "5:58"
 }
