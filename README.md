@@ -199,7 +199,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Run Code When a Tenant Starts](videos/run-code-on-startup) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Scripting: JavaScript in Workflows and Recipes](videos/scripting-javascript) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Search: Add Site Search to Your Site](videos/search-overview) | 5:07 | [https://youtu.be/73AR8SVjZYQ](https://youtu.be/73AR8SVjZYQ) | OrchardCMS/OrchardCore |
-| [Site Search Settings: Index, Fields and Results Page](videos/search-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Site Search Settings: Index, Fields and Results Page](videos/search-settings) | 4:13 | [https://youtu.be/d3WzdaAHEw0](https://youtu.be/d3WzdaAHEw0) | OrchardCMS/OrchardCore |
 | [Secrets in Azure Key Vault](videos/secrets-azure-key-vault) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Secrets in Your Module: Offer Secret Inputs in Your Settings](videos/secrets-in-your-module) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Secrets: Store Passwords and API Keys Safely](videos/secrets-manage) |  | not uploaded | OrchardCMS/OrchardCore |
