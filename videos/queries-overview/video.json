@@ -24,7 +24,40 @@
     "Orchard Core",
     "Queries"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Why saved queries"
+    },
+    {
+      "time": "1:05",
+      "title": "The Queries screen"
+    },
+    {
+      "time": "1:44",
+      "title": "Create a query"
+    },
+    {
+      "time": "2:49",
+      "title": "Run a query"
+    },
+    {
+      "time": "3:24",
+      "title": "Recipes and deployment"
+    },
+    {
+      "time": "3:54",
+      "title": "Add a query source"
+    },
+    {
+      "time": "5:06",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +79,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Queries"
-  }
+  },
+  "length": "5:21"
 }

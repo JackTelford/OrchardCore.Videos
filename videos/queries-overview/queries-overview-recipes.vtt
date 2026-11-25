@@ -1,0 +1,20 @@
+WEBVTT
+
+00:00:03.200 --> 00:00:07.065
+The Queries recipe step saves queries when a recipe runs.
+
+00:00:07.065 --> 00:00:11.851
+Each entry gives a Source and a Name, plus the properties of its source.
+
+00:00:11.851 --> 00:00:14.550
+A query with the same Name is updated.
+
+00:00:15.300 --> 00:00:20.687
+In a deployment plan, the All Queries step exports every query as a Queries step.
+
+00:00:20.687 --> 00:00:25.950
+The Queried Content Items step exports the content items one query returns, and
+
+00:00:25.950 --> 00:00:29.480
+refuses a query that does not return content items.
+
