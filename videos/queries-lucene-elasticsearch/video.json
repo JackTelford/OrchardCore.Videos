@@ -94,5 +94,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Lucene"
   },
-  "length": "5:12"
+  "length": "5:12",
+  "youtube": {
+    "id": "oXM2A97Hvio",
+    "url": "https://youtu.be/oXM2A97Hvio",
+    "version": "v1"
+  }
 }
