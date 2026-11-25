@@ -24,7 +24,36 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "The building blocks"
+    },
+    {
+      "time": "1:08",
+      "title": "Start with an event"
+    },
+    {
+      "time": "1:54",
+      "title": "Outcomes and connections"
+    },
+    {
+      "time": "2:49",
+      "title": "Tasks"
+    },
+    {
+      "time": "4:04",
+      "title": "Publish and run"
+    },
+    {
+      "time": "5:04",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +75,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows"
-  }
+  },
+  "length": "5:14"
 }
