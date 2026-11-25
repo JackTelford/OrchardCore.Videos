@@ -270,7 +270,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Workflows: Send an Email When Content Is Published](videos/workflows-send-email-on-publish) | 5:58 | [https://youtu.be/1VGSI2vwPqg](https://youtu.be/1VGSI2vwPqg) | OrchardCMS/OrchardCore |
 | [Workflows and the Database Session: Commit, Fork and Join](videos/workflows-session-activities) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Timer Workflows: Run Tasks on a Schedule](videos/workflows-timers) | 4:07 | [https://youtu.be/afsRRLc6MW0](https://youtu.be/afsRRLc6MW0) | OrchardCMS/OrchardCore |
-| [Workflows: React to Registrations, Sign-Ins and Role Changes](videos/workflows-user-events) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows: React to Registrations, Sign-Ins and Role Changes](videos/workflows-user-events) | 5:10 | [https://youtu.be/5OSh78XTbI4](https://youtu.be/5OSh78XTbI4) | OrchardCMS/OrchardCore |
 | [X (Twitter): Sign In With X and Post From Workflows](videos/x-twitter-integration) |  | not uploaded | OrchardCMS/OrchardCore |
 | [XML-RPC: Publish From Desktop Blogging Clients](videos/xml-rpc-remote-publishing) |  | not uploaded | OrchardCMS/OrchardCore |
 | [YesSql Indexes: Query Your Own Documents](videos/yessql-indexes) |  | not uploaded | OrchardCMS/OrchardCore |

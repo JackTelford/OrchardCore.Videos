@@ -85,5 +85,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Workflows"
   },
-  "length": "5:10"
+  "length": "5:10",
+  "youtube": {
+    "id": "5OSh78XTbI4",
+    "url": "https://youtu.be/5OSh78XTbI4",
+    "version": "v1"
+  }
 }
