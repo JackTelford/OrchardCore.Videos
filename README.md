@@ -184,7 +184,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Publish Later and Archive Later: Schedule Your Content](videos/publish-later-archive-later) | 4:31 | [https://youtu.be/_s-RUUfGr_o](https://youtu.be/_s-RUUfGr_o) | OrchardCMS/OrchardCore |
 | [Queries in Liquid, Razor and the API](videos/queries-in-templates-and-api) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Lucene and Elasticsearch Queries: Search From a Saved Query](videos/queries-lucene-elasticsearch) | 5:12 | [https://youtu.be/oXM2A97Hvio](https://youtu.be/oXM2A97Hvio) | OrchardCMS/OrchardCore |
-| [Queries: Save and Reuse Search and Database Queries](videos/queries-overview) | 5:21 | not uploaded | OrchardCMS/OrchardCore |
+| [Queries: Save and Reuse Search and Database Queries](videos/queries-overview) | 5:21 | [https://youtu.be/wmHNPx2ksnM](https://youtu.be/wmHNPx2ksnM) | OrchardCMS/OrchardCore |
 | [SQL Queries: Query Content Items With SQL](videos/queries-sql) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Razor Helpers and Tag Helpers for Orchard Core Themes](videos/razor-helpers) | 5:32 | [https://youtu.be/lN1GW9Wna_U](https://youtu.be/lN1GW9Wna_U) | OrchardCMS/OrchardCore |
 | [Write a Recipe Step](videos/recipe-step-create) |  | not uploaded | OrchardCMS/OrchardCore |
