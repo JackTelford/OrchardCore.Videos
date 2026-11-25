@@ -24,7 +24,44 @@
     "Orchard Core",
     "Queries"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "Why a saved query"
+    },
+    {
+      "time": "0:50",
+      "title": "Run a Lucene query"
+    },
+    {
+      "time": "1:19",
+      "title": "The query is a Liquid template"
+    },
+    {
+      "time": "2:05",
+      "title": "Save the query"
+    },
+    {
+      "time": "2:52",
+      "title": "Documents or content items"
+    },
+    {
+      "time": "3:23",
+      "title": "Elasticsearch"
+    },
+    {
+      "time": "4:23",
+      "title": "Create queries from a recipe"
+    },
+    {
+      "time": "5:02",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Lucene",
@@ -56,5 +93,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Lucene"
-  }
+  },
+  "length": "5:12"
 }
