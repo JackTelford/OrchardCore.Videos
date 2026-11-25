@@ -87,6 +87,9 @@ embeds it) can watch an unlisted video, but it doesn't show on the channel or in
   a day. A full publish uses about 550 units (captions 400, thumbnail 50, 50 for each playlist, plus a playlist lookup),
   so about 18 videos a day, with the captions as the limit. The quota resets at midnight Pacific time; the audit form
   can ask for more.
+- **Brief errors**: YouTube sometimes answers 409 or 5xx for a moment, for example when a video is added to a playlist
+  that was just created. The tool tries such a call again a few times. If a publish still fails after the upload, record
+  the id in `video.json` as above: the metadata workflow then adds the video to the playlists it is missing from.
 - **Not in the API**: end screens, cards, monetization and pinning a comment are set in YouTube Studio.
 - **Custom thumbnails** need a channel with phone verification or channel history; the tool reports when YouTube
   refuses one.

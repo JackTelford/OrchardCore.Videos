@@ -10,7 +10,8 @@ Commands:
   python tools/youtube/youtube.py release <slug> --file <mp4>  create the draft GitHub release of the next version
   python tools/youtube/youtube.py publish <slug> --file <mp4>  upload with metadata, captions, thumbnail, playlists
          [--version vN] [--captions <srt>] [--thumbnail <jpg>] [--privacy private|unlisted|public] [--keep-previous]
-  python tools/youtube/youtube.py update <slug>... | --all     push video.json's title, description, tags to YouTube
+  python tools/youtube/youtube.py update <slug>... | --all     push video.json's title, description, tags to YouTube,
+                                                               and add the video to the playlists it is missing from
   python tools/youtube/youtube.py chapters <slug> --build <dir> compute chapter times from an assembled build
   python tools/youtube/youtube.py description <slug>           print the description exactly as YouTube gets it
   python tools/youtube/youtube.py docs-embed <slug> --docs <dir> write the YouTube id into the docs pages that embed it
@@ -27,6 +28,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -192,15 +194,44 @@ def playlist_ids(youtube, titles):
     ids = []
     for title in titles:
         if title not in existing:
-            created = youtube.playlists().insert(
+            created = execute(youtube.playlists().insert(
                 part="snippet,status",
                 body={"snippet": {"title": title, "defaultLanguage": "en"}, "status": {"privacyStatus": "unlisted"}},
-            ).execute()
+            ))
             existing[title] = created["id"]
             print(f"  created the playlist {title}")
         ids.append(existing[title])
 
     return ids
+
+
+def execute(request, tries=5):
+    """Runs a YouTube API request, and tries again when YouTube is briefly unavailable: a playlist that was just
+    created, for example, can refuse a video for a few seconds with 409 SERVICE_UNAVAILABLE."""
+    from googleapiclient.errors import HttpError
+
+    for attempt in range(1, tries + 1):
+        try:
+            return request.execute()
+        except HttpError as error:
+            if attempt == tries or not (error.resp.status == 409 or error.resp.status >= 500):
+                raise
+            print(f"  YouTube answered {error.resp.status}, trying again in {10 * attempt} seconds")
+            time.sleep(10 * attempt)
+
+
+def add_to_playlists(youtube, video_id, titles, check=False):
+    """Adds a video to the playlists of video.json. With check, the playlists that already hold it are skipped: YouTube
+    accepts the same video twice in a playlist."""
+    for title, playlist_id in zip(titles, playlist_ids(youtube, titles)):
+        if check and youtube.playlistItems().list(part="id", playlistId=playlist_id, videoId=video_id).execute().get("items"):
+            continue
+        execute(youtube.playlistItems().insert(
+            part="snippet",
+            body={"snippet": {"playlistId": playlist_id, "resourceId": {"kind": "youtube#video", "videoId": video_id}}},
+        ))
+        if check:
+            print(f"  added to the playlist {title}")
 
 
 # ----- Commands -----
@@ -275,11 +306,7 @@ def cmd_publish(args):
         except Exception as error:  # Custom thumbnails need a channel that is allowed to use them.
             print(f"  thumbnail not set: {error}")
 
-    for playlist_id in playlist_ids(youtube, video.get("playlists", [])):
-        youtube.playlistItems().insert(
-            part="snippet",
-            body={"snippet": {"playlistId": playlist_id, "resourceId": {"kind": "youtube#video", "videoId": video_id}}},
-        ).execute()
+    add_to_playlists(youtube, video_id, video.get("playlists", []))
 
     if video.get("playlists"):
         print(f'  playlists: {", ".join(video["playlists"])}')
@@ -353,6 +380,8 @@ def cmd_update(args):
 
         youtube.videos().update(part="snippet", body={"id": video_id, "snippet": snippet(video)}).execute()
         print(f"{slug}: updated https://youtu.be/{video_id}")
+        # A publish that failed after the upload can leave the video out of its playlists.
+        add_to_playlists(youtube, video_id, video.get("playlists", []), check=True)
 
 
 def cmd_chapters(args):
