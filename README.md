@@ -182,7 +182,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Placement: Decide Where Parts and Fields Appear](videos/placement-files) | 6:41 | [https://youtu.be/Sl51Xv2lO-E](https://youtu.be/Sl51Xv2lO-E) | OrchardCMS/OrchardCore |
 | [Placements Module: Edit Placement From the Admin](videos/placements-admin) | 4:39 | [https://youtu.be/G1T_-wch6gE](https://youtu.be/G1T_-wch6gE) | OrchardCMS/OrchardCore |
 | [Publish Later and Archive Later: Schedule Your Content](videos/publish-later-archive-later) | 4:31 | [https://youtu.be/_s-RUUfGr_o](https://youtu.be/_s-RUUfGr_o) | OrchardCMS/OrchardCore |
-| [Queries in Liquid, Razor and the API](videos/queries-in-templates-and-api) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Queries in Liquid, Razor and the API](videos/queries-in-templates-and-api) | 5:13 | [https://youtu.be/yVYgTTSOdbA](https://youtu.be/yVYgTTSOdbA) | OrchardCMS/OrchardCore |
 | [Lucene and Elasticsearch Queries: Search From a Saved Query](videos/queries-lucene-elasticsearch) | 5:12 | [https://youtu.be/oXM2A97Hvio](https://youtu.be/oXM2A97Hvio) | OrchardCMS/OrchardCore |
 | [Queries: Save and Reuse Search and Database Queries](videos/queries-overview) | 5:21 | [https://youtu.be/wmHNPx2ksnM](https://youtu.be/wmHNPx2ksnM) | OrchardCMS/OrchardCore |
 | [SQL Queries: Query Content Items With SQL](videos/queries-sql) |  | not uploaded | OrchardCMS/OrchardCore |
