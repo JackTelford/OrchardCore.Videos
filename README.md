@@ -96,7 +96,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Shapes: How Orchard Core Renders a Page](videos/display-shapes) | 6:53 | [https://youtu.be/sslz8AD1bu8](https://youtu.be/sslz8AD1bu8) | OrchardCMS/OrchardCore |
 | [Docker: Run Orchard Core in a Container](videos/docker-orchard-core) | 5:04 | [https://youtu.be/pP7y62hDsN4](https://youtu.be/pP7y62hDsN4) | OrchardCMS/OrchardCore |
 | [Dynamic Cache: Cache Parts of a Page](videos/dynamic-cache) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Elasticsearch: Search Indexes on an Elasticsearch Server](videos/elasticsearch-search) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Elasticsearch: Search Indexes on an Elasticsearch Server](videos/elasticsearch-search) | 5:16 | [https://youtu.be/Nmv3RxGGVgk](https://youtu.be/Nmv3RxGGVgk) | OrchardCMS/OrchardCore |
 | [Azure Communication Services Email](videos/email-azure-communication-services) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Send Email, SMS and Notifications From Your Module](videos/email-sms-in-code) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Email: Configure SMTP and Send a Test Email](videos/email-smtp) |  | not uploaded | OrchardCMS/OrchardCore |

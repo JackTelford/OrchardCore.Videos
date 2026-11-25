@@ -74,5 +74,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Elasticsearch"
   },
-  "length": "5:16"
+  "length": "5:16",
+  "youtube": {
+    "id": "Nmv3RxGGVgk",
+    "url": "https://youtu.be/Nmv3RxGGVgk",
+    "version": "v1"
+  }
 }
