@@ -24,7 +24,40 @@
     "Orchard Core",
     "Search and Indexing"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "How site search fits together"
+    },
+    {
+      "time": "0:47",
+      "title": "Choose the default index"
+    },
+    {
+      "time": "1:32",
+      "title": "Try the search page"
+    },
+    {
+      "time": "1:55",
+      "title": "The results page"
+    },
+    {
+      "time": "2:27",
+      "title": "Set the placeholder"
+    },
+    {
+      "time": "2:46",
+      "title": "Choose another index"
+    },
+    {
+      "time": "3:19",
+      "title": "Who can search"
+    },
+    {
+      "time": "4:02",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +79,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Search"
-  }
+  },
+  "length": "4:13"
 }
