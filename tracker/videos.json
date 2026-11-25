@@ -2874,14 +2874,14 @@
     "docs": [
       "src/docs/reference/modules/Search/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 3.9,
     "words": 588,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/371",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
