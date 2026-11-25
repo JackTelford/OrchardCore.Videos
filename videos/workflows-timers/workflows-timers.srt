@@ -1,0 +1,244 @@
+1
+00:00:01,000 --> 00:00:03,307
+Some jobs belong on a schedule:
+
+2
+00:00:03,307 --> 00:00:08,108
+a reminder every Monday, a cleanup every night, a report every morning.
+
+3
+00:00:08,108 --> 00:00:11,973
+The Timer Event runs a workflow at the times you choose.
+
+4
+00:00:11,973 --> 00:00:17,460
+In this video, you enable the timer, build a scheduled workflow, and watch it run.
+
+5
+00:00:22,060 --> 00:00:27,337
+A workflow usually starts when something happens, such as a content item being published.
+
+6
+00:00:27,337 --> 00:00:30,004
+The Timer Event makes the clock the event:
+
+7
+00:00:30,004 --> 00:00:33,170
+the workflow runs each time its schedule comes due.
+
+8
+00:00:33,920 --> 00:00:38,031
+Placed in the middle of a workflow, the Timer Event instead makes the
+
+9
+00:00:38,031 --> 00:00:42,691
+workflow wait until the next time its schedule matches, and then continues with
+
+10
+00:00:42,691 --> 00:00:44,500
+the activities that follow.
+
+11
+00:00:45,250 --> 00:00:50,179
+The schedule is a CRON expression, written as five fields separated by spaces:
+
+12
+00:00:50,179 --> 00:00:54,170
+the minute, the hour, the day of the month, the month, and the
+
+13
+00:00:54,170 --> 00:00:55,461
+day of the week.
+
+14
+00:00:55,461 --> 00:00:58,160
+A star matches every value of its field.
+
+15
+00:00:58,910 --> 00:01:00,808
+Here are four examples:
+
+16
+00:01:00,808 --> 00:01:05,912
+every five minutes, which is the default; every hour, on the hour; every
+
+17
+00:01:05,912 --> 00:01:09,970
+day at 8:00; and on the first day of each month at 9:00.
+
+18
+00:01:14,174 --> 00:01:17,293
+The Timer Event comes from a feature of its own.
+
+19
+00:01:17,293 --> 00:01:20,124
+Open Tools, Features, and search for Timer.
+
+20
+00:01:21,095 --> 00:01:26,779
+Timer Workflows Activities, in the Workflows category, needs the Workflows feature, which this
+
+21
+00:01:26,779 --> 00:01:28,541
+site already has enabled.
+
+22
+00:01:28,541 --> 00:01:32,975
+Click Enable, and the Timer Event is available in the workflow designer.
+
+23
+00:01:37,200 --> 00:01:39,685
+In the Design menu, open Workflows.
+
+24
+00:01:39,685 --> 00:01:43,080
+The list is empty, so let's click Create Workflow.
+
+25
+00:01:43,533 --> 00:01:45,394
+A workflow only needs a name.
+
+26
+00:01:45,394 --> 00:01:49,753
+Let's call this one Scheduled check, and click Create and open the designer.
+
+27
+00:01:51,869 --> 00:01:55,332
+An empty workflow offers common events to start it with.
+
+28
+00:01:55,332 --> 00:02:00,249
+A workflow that runs on a schedule starts with the Timer Event, so let's click it.
+
+29
+00:02:00,722 --> 00:02:05,910
+The Timer Event is marked Start, and its settings open in a panel on the canvas.
+
+30
+00:02:05,910 --> 00:02:10,134
+The CRON Expression field holds the default, every five minutes.
+
+31
+00:02:10,134 --> 00:02:14,116
+For this demonstration, type five stars separated by spaces:
+
+32
+00:02:14,116 --> 00:02:15,262
+every minute.
+
+33
+00:02:15,740 --> 00:02:18,342
+The expression is read in UTC by default.
+
+34
+00:02:18,342 --> 00:02:22,770
+Check Use site time zone to read it in the time zone of your site instead.
+
+35
+00:02:23,223 --> 00:02:27,027
+Click the Done outcome of the Timer Event, and choose Log Task.
+
+36
+00:02:27,027 --> 00:02:30,445
+The Log Task writes a line to the log of the site, which
+
+37
+00:02:30,445 --> 00:02:32,153
+keeps this example small.
+
+38
+00:02:32,605 --> 00:02:35,160
+In Text, enter the scheduled check ran.
+
+39
+00:02:35,160 --> 00:02:38,965
+The designer saves your changes as you make them, in a draft.
+
+40
+00:02:39,434 --> 00:02:40,933
+A draft doesn't run.
+
+41
+00:02:40,933 --> 00:02:44,333
+Click Publish, and the workflow runs on its schedule.
+
+42
+00:02:44,333 --> 00:02:46,754
+Each run is recorded as an instance.
+
+43
+00:02:50,929 --> 00:02:54,815
+The site checks its timers once a minute, so an instance appears within
+
+44
+00:02:54,815 --> 00:02:56,582
+about a minute of publishing.
+
+45
+00:02:56,582 --> 00:02:58,903
+Click Instances next to Scheduled check:
+
+46
+00:02:58,903 --> 00:03:02,739
+one instance is Halted, because it waits for the schedule to come due.
+
+47
+00:03:03,213 --> 00:03:08,016
+Each time the schedule comes due, the waiting instance continues through the Log
+
+48
+00:03:08,016 --> 00:03:11,647
+Task and is Finished, and the next instance starts waiting.
+
+49
+00:03:11,647 --> 00:03:14,663
+The Finished count goes up by one for every run.
+
+50
+00:03:15,121 --> 00:03:16,979
+Open a finished instance.
+
+51
+00:03:16,979 --> 00:03:22,851
+Its page highlights the Timer Event and the Log Task, the activities that this run executed.
+
+52
+00:03:27,051 --> 00:03:31,284
+A background task named Timed Workflow Starter does the checking, so a timer
+
+53
+00:03:31,284 --> 00:03:33,865
+can run up to about a minute after its time.
+
+54
+00:03:33,865 --> 00:03:36,601
+A schedule finer than a minute is not possible.
+
+55
+00:03:37,351 --> 00:03:39,847
+Timers work only while the site runs.
+
+56
+00:03:39,847 --> 00:03:45,011
+By default, after a restart they resume once the site has served its first request.
+
+57
+00:03:45,761 --> 00:03:49,509
+A timer that fires often leaves one instance for each run.
+
+58
+00:03:49,509 --> 00:03:55,891
+To keep the list short, check Delete successfully completed workflows on the Workflow tab, and publish.
+
+59
+00:03:57,891 --> 00:04:02,023
+The Timer Event turns a CRON expression into a schedule for a workflow,
+
+60
+00:04:02,023 --> 00:04:04,276
+or into a wait in the middle of one.
+
+61
+00:04:04,276 --> 00:04:05,671
+Thanks for watching.
+
