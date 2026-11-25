@@ -82,5 +82,10 @@
     "pullRequest": null,
     "feature": "guide:guides/lucene-query-syntax"
   },
-  "length": "5:11"
+  "length": "5:11",
+  "youtube": {
+    "id": "Q7wsGKFBbMw",
+    "url": "https://youtu.be/Q7wsGKFBbMw",
+    "version": "v1"
+  }
 }
