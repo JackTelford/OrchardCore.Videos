@@ -1,0 +1,233 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.193
+A site asks the same questions again and again:
+
+00:00:04.193 --> 00:00:07.989
+the posts of a blog, a search, a count from the database.
+
+00:00:07.989 --> 00:00:11.182
+The Queries module saves each one under a name.
+
+00:00:11.182 --> 00:00:15.640
+You create a query, run it, deploy it, and add a source of your own.
+
+00:00:20.240 --> 00:00:27.207
+Without saved queries, the same SQL or search text is copied into templates, scripts and controllers.
+
+00:00:27.207 --> 00:00:31.830
+When the question changes, every copy has to be found and edited.
+
+00:00:32.580 --> 00:00:37.137
+The Queries module keeps each question in one place, under a name.
+
+00:00:37.137 --> 00:00:41.314
+A query has a Name, a Source, an optional Schema, and a flag
+
+00:00:41.314 --> 00:00:44.415
+that says whether it returns content items.
+
+00:00:44.415 --> 00:00:47.200
+The source decides how the query runs.
+
+00:00:47.950 --> 00:00:53.345
+Queries Core Services holds the query manager, the recipe step and the Liquid
+
+00:00:53.345 --> 00:00:57.440
+filter, and is enabled by the features that depend on it.
+
+00:00:57.440 --> 00:01:00.820
+Queries adds the screens, permissions and API.
+
+00:01:00.820 --> 00:01:04.850
+SQL Queries, Lucene and Elasticsearch each add a source.
+
+00:01:09.070 --> 00:01:12.997
+Let's open Search, Queries, All Queries in the admin menu.
+
+00:01:12.997 --> 00:01:18.214
+A site created with the Blog recipe has one saved query, RecentBlogPosts, which
+
+00:01:18.214 --> 00:01:20.300
+the Blog theme runs by name.
+
+00:01:20.760 --> 00:01:24.101
+Each row shows the name and a badge for the source.
+
+00:01:24.101 --> 00:01:28.262
+SQL Queries adds a Run button to its queries, and every query has
+
+00:01:28.262 --> 00:01:30.020
+Edit and Delete buttons.
+
+00:01:30.472 --> 00:01:33.347
+Add Query opens Available Query Types.
+
+00:01:33.347 --> 00:01:36.811
+Each source feature adds a card to this dialog.
+
+00:01:36.811 --> 00:01:41.190
+On this site, SQL is the only one, because SQL Queries is the
+
+00:01:41.190 --> 00:01:43.412
+only source feature enabled.
+
+00:01:47.634 --> 00:01:52.293
+To create a query, choose Add Query, then Add on the card of its source.
+
+00:01:52.293 --> 00:01:56.474
+The page names the source in its title, and the form starts with
+
+00:01:56.474 --> 00:01:58.624
+the fields every query shares.
+
+00:01:59.078 --> 00:02:01.912
+Name is the technical name every caller uses.
+
+00:02:01.912 --> 00:02:06.136
+It takes letters and digits, starts with a letter, and must be unique.
+
+00:02:06.136 --> 00:02:08.748
+Let's call this query PublishedBlogPosts.
+
+00:02:09.204 --> 00:02:10.716
+Schema is optional.
+
+00:02:10.716 --> 00:02:13.983
+It tells the GraphQL API what the query returns.
+
+00:02:13.983 --> 00:02:16.948
+The rest of the form comes from the source:
+
+00:02:16.948 --> 00:02:22.514
+for SQL, Return Documents loads the content items whose document identifiers the query
+
+00:02:22.514 --> 00:02:24.874
+selects, and Query holds the SQL.
+
+00:02:25.357 --> 00:02:30.300
+Let's check Return Documents, and enter a query that selects the document identifiers
+
+00:02:30.300 --> 00:02:32.147
+of the published blog posts.
+
+00:02:32.625 --> 00:02:36.362
+Save adds the query to the list, and a message confirms it.
+
+00:02:36.362 --> 00:02:40.445
+Its row has the same source badge and buttons as RecentBlogPosts.
+
+00:02:40.895 --> 00:02:44.381
+As the list grows, the search box filters it by name.
+
+00:02:44.381 --> 00:02:48.575
+Let's search for Published, which leaves only PublishedBlogPosts.
+
+00:02:52.775 --> 00:02:55.013
+A saved query runs by its name.
+
+00:02:55.013 --> 00:03:00.032
+Liquid reads it from the Queries property and applies the query filter, while
+
+00:03:00.032 --> 00:03:03.720
+Razor, scripts and the API call the same query manager.
+
+00:03:03.720 --> 00:03:06.865
+A separate video covers templates and the API.
+
+00:03:07.615 --> 00:03:10.742
+The API checks a permission for each query:
+
+00:03:10.742 --> 00:03:15.082
+Execute Api - All queries, or one named for the query, such as
+
+00:03:15.082 --> 00:03:17.379
+Execute Api - RecentBlogPosts.
+
+00:03:17.379 --> 00:03:19.613
+Manage queries includes both.
+
+00:03:19.613 --> 00:03:22.995
+A caller without the permission gets Not Found.
+
+00:03:27.195 --> 00:03:31.060
+The Queries recipe step saves queries when a recipe runs.
+
+00:03:31.060 --> 00:03:35.846
+Each entry gives a Source and a Name, plus the properties of its source.
+
+00:03:35.846 --> 00:03:38.545
+A query with the same Name is updated.
+
+00:03:39.295 --> 00:03:44.682
+In a deployment plan, the All Queries step exports every query as a Queries step.
+
+00:03:44.682 --> 00:03:49.946
+The Queried Content Items step exports the content items one query returns, and
+
+00:03:49.946 --> 00:03:53.475
+refuses a query that does not return content items.
+
+00:03:57.675 --> 00:04:01.382
+To add a source of your own, implement IQuerySource.
+
+00:04:01.382 --> 00:04:08.667
+Its Name identifies the source, and ExecuteQueryAsync takes a Query and parameters, and returns the results.
+
+00:04:08.667 --> 00:04:13.268
+Values specific to the source, such as the SQL text, are read from
+
+00:04:13.268 --> 00:04:15.505
+metadata stored on the query.
+
+00:04:16.255 --> 00:04:19.535
+Register the source with AddQuerySource and its name.
+
+00:04:19.535 --> 00:04:23.260
+The query manager finds a source by that name, so a query can
+
+00:04:23.260 --> 00:04:26.985
+be created and run only when its Source is a registered name.
+
+00:04:27.735 --> 00:04:31.900
+A DisplayDriver for Query builds the source's part of the form, such as
+
+00:04:31.900 --> 00:04:34.117
+Return Documents and Query for SQL.
+
+00:04:34.117 --> 00:04:38.228
+It returns nothing unless the query's Source is its own, and on update
+
+00:04:38.228 --> 00:04:41.365
+it stores the source's values on the query with Put.
+
+00:04:42.115 --> 00:04:46.840
+A Link view named after the source draws its card in the Add Query dialog.
+
+00:04:46.840 --> 00:04:51.387
+SQL, Lucene and Elasticsearch each have one, and its Add link opens the
+
+00:04:51.387 --> 00:04:53.395
+create page for that source.
+
+00:04:54.145 --> 00:04:58.599
+A source reads its own properties from recipe data in an IQueryHandler.
+
+00:04:58.599 --> 00:05:03.170
+The SQL source checks the query's Source, then copies the Template when a
+
+00:05:03.170 --> 00:05:05.715
+recipe initializes or updates a query.
+
+00:05:07.715 --> 00:05:09.638
+That is the Queries module:
+
+00:05:09.638 --> 00:05:14.009
+a named query, kept in one place, run from templates, scripts and the
+
+00:05:14.009 --> 00:05:18.730
+API, moved with recipes and deployments, and extended with your own source.
+
+00:05:18.730 --> 00:05:20.245
+Thanks for watching.
+

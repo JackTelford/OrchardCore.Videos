@@ -1,0 +1,36 @@
+1
+00:00:03,200 --> 00:00:05,437
+A saved query runs by its name.
+
+2
+00:00:05,437 --> 00:00:10,457
+Liquid reads it from the Queries property and applies the query filter, while
+
+3
+00:00:10,457 --> 00:00:14,145
+Razor, scripts and the API call the same query manager.
+
+4
+00:00:14,145 --> 00:00:17,290
+A separate video covers templates and the API.
+
+5
+00:00:18,040 --> 00:00:21,167
+The API checks a permission for each query:
+
+6
+00:00:21,167 --> 00:00:25,507
+Execute Api - All queries, or one named for the query, such as
+
+7
+00:00:25,507 --> 00:00:27,804
+Execute Api - RecentBlogPosts.
+
+8
+00:00:27,804 --> 00:00:30,038
+Manage queries includes both.
+
+9
+00:00:30,038 --> 00:00:33,420
+A caller without the permission gets Not Found.
+
