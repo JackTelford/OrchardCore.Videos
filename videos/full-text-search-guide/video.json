@@ -103,5 +103,10 @@
     "pullRequest": null,
     "feature": "guide:guides/implement-fulltext-search"
   },
-  "length": "6:33"
+  "length": "6:33",
+  "youtube": {
+    "id": "2TT3osinTII",
+    "url": "https://youtu.be/2TT3osinTII",
+    "version": "v1"
+  }
 }

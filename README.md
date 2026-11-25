@@ -112,7 +112,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Forms: Build a Contact Form From Widgets](videos/forms-contact-form) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Forms: Validate What Visitors Type](videos/forms-validation) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Forms and Workflows: Process Each Submission](videos/forms-workflows) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Implement Full-Text Search: From Index to Results Page](videos/full-text-search-guide) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Implement Full-Text Search: From Index to Results Page](videos/full-text-search-guide) | 6:33 | [https://youtu.be/2TT3osinTII](https://youtu.be/2TT3osinTII) | OrchardCMS/OrchardCore |
 | [GitHub Sign-In: Let Developers Sign In With GitHub](videos/github-login) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Go to Production: A Checklist for a Live Orchard Core Site](videos/go-to-production) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Google Analytics and Tag Manager: Measure Your Visitors](videos/google-analytics-tag-manager) | 4:09 | [https://youtu.be/Vk-BUPp_Guo](https://youtu.be/Vk-BUPp_Guo) | OrchardCMS/OrchardCore |
