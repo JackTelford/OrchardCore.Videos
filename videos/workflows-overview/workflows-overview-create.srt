@@ -1,0 +1,48 @@
+1
+00:00:03,206 --> 00:00:06,266
+Workflows is under Design in the admin menu.
+
+2
+00:00:06,266 --> 00:00:08,470
+The page lists your workflows.
+
+3
+00:00:08,470 --> 00:00:11,346
+This site has none, so the list is empty.
+
+4
+00:00:11,833 --> 00:00:13,811
+Let's select Create Workflow.
+
+5
+00:00:13,811 --> 00:00:17,541
+It asks only for a name, and the name says what the workflow
+
+6
+00:00:17,541 --> 00:00:21,553
+does, such as notifying the editors when an article is published.
+
+7
+00:00:22,045 --> 00:00:23,699
+Let's open More settings.
+
+8
+00:00:23,699 --> 00:00:27,755
+It holds options, such as whether the workflow is enabled and how many
+
+9
+00:00:27,755 --> 00:00:29,356
+instances run at a time.
+
+10
+00:00:29,356 --> 00:00:32,825
+The defaults suit most workflows, so they stay as they are.
+
+11
+00:00:33,296 --> 00:00:35,936
+Let's select Create and open the designer.
+
+12
+00:00:35,936 --> 00:00:39,896
+It saves the workflow and opens the designer with an empty canvas.
+

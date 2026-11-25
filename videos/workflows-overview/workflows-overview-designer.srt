@@ -1,0 +1,36 @@
+1
+00:00:03,218 --> 00:00:06,830
+The toolbar shows the name of the workflow, with a link back to
+
+2
+00:00:06,830 --> 00:00:09,918
+Workflows, and the Publish and Discard draft buttons.
+
+3
+00:00:10,374 --> 00:00:15,623
+The Activities pane on the left lists everything you can add, grouped by category.
+
+4
+00:00:15,623 --> 00:00:18,844
+Search it by name, or show only Events or Tasks.
+
+5
+00:00:19,336 --> 00:00:23,303
+The canvas in the middle is where the workflow takes shape.
+
+6
+00:00:23,303 --> 00:00:28,796
+A workflow runs when something happens, so an empty one offers events to start with.
+
+7
+00:00:29,255 --> 00:00:32,529
+On the right, the workflow panel has three tabs.
+
+8
+00:00:32,529 --> 00:00:37,865
+Variables holds named values, Workflow holds settings such as the name, and Issues
+
+9
+00:00:37,865 --> 00:00:39,745
+lists the problems found.
+

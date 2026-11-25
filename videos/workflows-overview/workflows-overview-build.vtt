@@ -1,0 +1,50 @@
+WEBVTT
+
+00:00:03.206 --> 00:00:06.895
+Under Start with an event, let's pick the Content Published Event.
+
+00:00:06.895 --> 00:00:11.556
+The first event you add becomes the start activity, and its card shows a Start badge.
+
+00:00:12.037 --> 00:00:15.002
+Its settings open at the bottom of the canvas.
+
+00:00:15.002 --> 00:00:18.479
+Content Types limits the event to the types you choose.
+
+00:00:18.479 --> 00:00:22.527
+Let's pick Article, so other content does not start the workflow.
+
+00:00:23.009 --> 00:00:25.759
+Each activity shows its outcomes as ports.
+
+00:00:25.759 --> 00:00:29.942
+Let's point at the Done port, where a plus sign appears, then click
+
+00:00:29.942 --> 00:00:31.719
+it and search for Notify.
+
+00:00:32.180 --> 00:00:33.972
+Let's select Notify Task.
+
+00:00:33.972 --> 00:00:38.020
+It is added to the right, connected to Done by a transition, and
+
+00:00:38.020 --> 00:00:40.680
+it displays a notification when it runs.
+
+00:00:41.131 --> 00:00:45.420
+A message is required, so the card and the Issues tab flag a problem.
+
+00:00:45.420 --> 00:00:49.481
+Let's type a message and leave the field, and the problem clears.
+
+00:00:49.936 --> 00:00:53.717
+The designer saves your changes as a draft while you work, and a
+
+00:00:53.717 --> 00:00:55.067
+draft does not run.
+
+00:00:55.067 --> 00:00:58.956
+Let's select Publish, which makes the draft the version that runs.
+
