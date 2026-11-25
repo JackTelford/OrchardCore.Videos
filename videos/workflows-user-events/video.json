@@ -23,7 +23,40 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "User events"
+    },
+    {
+      "time": "1:22",
+      "title": "Respond to a created account"
+    },
+    {
+      "time": "2:18",
+      "title": "Create a user"
+    },
+    {
+      "time": "2:50",
+      "title": "Respond to a role change"
+    },
+    {
+      "time": "3:45",
+      "title": "Respond to a sign-in"
+    },
+    {
+      "time": "4:35",
+      "title": "Follow the runs"
+    },
+    {
+      "time": "4:59",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Workflows",
@@ -51,5 +84,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows"
-  }
+  },
+  "length": "5:10"
 }
