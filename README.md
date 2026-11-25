@@ -265,7 +265,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Workflows: Events, Tasks and Outcomes](videos/workflows-events-tasks-outcomes) | 5:14 | [https://youtu.be/0Nu728nj938](https://youtu.be/0Nu728nj938) | OrchardCMS/OrchardCore |
 | [Workflows in Depth: Expressions, Variables, Branches and Loops](videos/workflows-expressions-and-loops) |  | not uploaded | OrchardCMS/OrchardCore |
 | [HTTP Workflows: Handle Requests and Call Web APIs](videos/workflows-http) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Workflow Instances: Follow and Troubleshoot Each Run](videos/workflows-instances) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflow Instances: Follow and Troubleshoot Each Run](videos/workflows-instances) | 4:35 | [https://youtu.be/SoduJoUp6Rs](https://youtu.be/SoduJoUp6Rs) | OrchardCMS/OrchardCore |
 | [Workflows: Automate Tasks Without Writing Code](videos/workflows-overview) | 5:56 | [https://youtu.be/_nlyO00Cusc](https://youtu.be/_nlyO00Cusc) | OrchardCMS/OrchardCore |
 | [Workflows: Send an Email When Content Is Published](videos/workflows-send-email-on-publish) | 5:58 | [https://youtu.be/1VGSI2vwPqg](https://youtu.be/1VGSI2vwPqg) | OrchardCMS/OrchardCore |
 | [Workflows and the Database Session: Commit, Fork and Join](videos/workflows-session-activities) |  | not uploaded | OrchardCMS/OrchardCore |
