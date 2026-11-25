@@ -261,7 +261,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Run in a Web Farm: Distributed Tenants, Workers and Shared Storage](videos/web-farm) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Widgets: Add Content Blocks to Your Pages](videos/widgets-overview) | 4:53 | [https://youtu.be/rJ0HfwwpFCg](https://youtu.be/rJ0HfwwpFCg) | OrchardCMS/OrchardCore |
 | [Write a Workflow Activity](videos/workflow-activity-create) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Workflows: Create, Update and Publish Content Automatically](videos/workflows-content-tasks) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows: Create, Update and Publish Content Automatically](videos/workflows-content-tasks) | 6:02 | [https://youtu.be/d8eJUVHGMHI](https://youtu.be/d8eJUVHGMHI) | OrchardCMS/OrchardCore |
 | [Workflows: Events, Tasks and Outcomes](videos/workflows-events-tasks-outcomes) | 5:14 | [https://youtu.be/0Nu728nj938](https://youtu.be/0Nu728nj938) | OrchardCMS/OrchardCore |
 | [Workflows in Depth: Expressions, Variables, Branches and Loops](videos/workflows-expressions-and-loops) |  | not uploaded | OrchardCMS/OrchardCore |
 | [HTTP Workflows: Handle Requests and Call Web APIs](videos/workflows-http) |  | not uploaded | OrchardCMS/OrchardCore |
