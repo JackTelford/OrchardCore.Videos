@@ -1,0 +1,16 @@
+1
+00:00:03,225 --> 00:00:08,172
+Back in Design, Workflows, the workflow has an Instances badge, because each run
+
+2
+00:00:08,172 --> 00:00:10,645
+of a workflow is kept as an instance.
+
+3
+00:00:11,099 --> 00:00:15,047
+The page counts the instances by status, and this one is Finished.
+
+4
+00:00:15,047 --> 00:00:19,379
+Let's open it to see the activities that ran, highlighted on the diagram.
+
