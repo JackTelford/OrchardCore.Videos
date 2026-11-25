@@ -1,0 +1,272 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.067
+A workflow does work for you when something happens on your site.
+
+00:00:05.067 --> 00:00:09.077
+In this video, we build one that emails the editors each time an
+
+00:00:09.077 --> 00:00:13.430
+article is published, using the Workflows, Contents and Email modules.
+
+00:00:18.030 --> 00:00:21.423
+Editors often need to know when an article goes live.
+
+00:00:21.423 --> 00:00:26.772
+Without automation, someone has to notice it, then write and send each message by hand.
+
+00:00:26.772 --> 00:00:28.900
+A workflow can do that for you.
+
+00:00:29.650 --> 00:00:31.838
+A workflow connects activities.
+
+00:00:31.838 --> 00:00:36.686
+An event waits for something to happen, such as content being published, and
+
+00:00:36.686 --> 00:00:39.879
+a task does something, such as sending an email.
+
+00:00:39.879 --> 00:00:45.200
+An outcome says how an activity ended, such as Done, and leads to the next activity.
+
+00:00:45.950 --> 00:00:47.662
+Ours has two activities.
+
+00:00:47.662 --> 00:00:52.456
+Content Published Event starts the workflow, and Email Task sends the message.
+
+00:00:52.456 --> 00:00:55.310
+The Done outcome of the event connects them.
+
+00:00:59.510 --> 00:01:04.390
+The site needs the Workflows and Email features and an email provider, all
+
+00:01:04.390 --> 00:01:06.586
+enabled under Tools, Features.
+
+00:01:06.586 --> 00:01:09.696
+Here, SMTP Email Provider sends the messages.
+
+00:01:09.696 --> 00:01:14.271
+The Contents feature is enabled on this site, and it adds the content
+
+00:01:14.271 --> 00:01:16.650
+events when Workflows is enabled.
+
+00:01:18.339 --> 00:01:22.675
+The email settings are under Settings, Communication, Email.
+
+00:01:22.675 --> 00:01:27.538
+On the SMTP tab, Enable SMTP Provider is checked, and a Sender email
+
+00:01:27.538 --> 00:01:31.020
+address, a Host name and a Port number are set.
+
+00:01:31.020 --> 00:01:33.649
+A separate video covers this page.
+
+00:01:34.113 --> 00:01:39.359
+The messages go to a test mail server on this computer, so nothing leaves it.
+
+00:01:39.359 --> 00:01:43.973
+Its inbox is empty, and each email the workflow sends appears here.
+
+00:01:48.187 --> 00:01:50.003
+Open Design, Workflows.
+
+00:01:50.003 --> 00:01:54.887
+The list is empty, so click Create Workflow to start the first workflow.
+
+00:01:55.352 --> 00:01:56.946
+The form only needs a Name.
+
+00:01:56.946 --> 00:02:00.762
+The settings under More settings have defaults that you can change later.
+
+00:02:00.762 --> 00:02:04.820
+Let's type "Notify the editors when an article is published", and click Create
+
+00:02:04.820 --> 00:02:06.172
+and open the designer.
+
+00:02:10.383 --> 00:02:15.124
+The designer opens with the list of Activities on the left and an empty canvas.
+
+00:02:15.124 --> 00:02:19.809
+A workflow runs when something happens, so the canvas offers the common events
+
+00:02:19.809 --> 00:02:21.593
+under Start with an event.
+
+00:02:22.170 --> 00:02:24.063
+Click Content Published Event.
+
+00:02:24.063 --> 00:02:27.850
+It lands on the canvas with a Start badge, because the first event
+
+00:02:27.850 --> 00:02:29.902
+added becomes the start activity.
+
+00:02:29.902 --> 00:02:31.480
+Its settings open below.
+
+00:02:31.974 --> 00:02:35.694
+Content Types limits the event to some types of content.
+
+00:02:35.694 --> 00:02:40.494
+With none selected, any type starts the workflow, so let's select Article.
+
+00:02:40.494 --> 00:02:43.254
+The card on the canvas shows the choice.
+
+00:02:47.449 --> 00:02:49.835
+Click the Done outcome of the event.
+
+00:02:49.835 --> 00:02:53.016
+The menu offers the activities that can come next.
+
+00:02:53.016 --> 00:02:55.629
+Search for email, and choose Email Task.
+
+00:02:56.129 --> 00:03:00.260
+The Email Task is added next to the event, connected from Done, and
+
+00:03:00.260 --> 00:03:01.957
+its settings open below.
+
+00:03:01.957 --> 00:03:05.749
+Drag the top edge of the panel up to give the form more room.
+
+00:03:06.219 --> 00:03:11.423
+Leave From, Sender and ReplyTo empty, so the email uses the Sender email
+
+00:03:11.423 --> 00:03:13.758
+address of the SMTP settings.
+
+00:03:13.758 --> 00:03:16.960
+In Recipients, type "editors@example.com".
+
+00:03:16.960 --> 00:03:20.429
+A comma-separated list reaches several people.
+
+00:03:20.891 --> 00:03:24.062
+In Subject, type "An article was published".
+
+00:03:24.062 --> 00:03:28.691
+Then set Format to Text, so the email has a single plain text body.
+
+00:03:29.175 --> 00:03:31.322
+In Text Body, type a short message.
+
+00:03:31.322 --> 00:03:35.041
+The changes are applied when you leave a field, or when you click
+
+00:03:35.041 --> 00:03:37.555
+Apply, and the button confirms with Saved!
+
+00:03:38.033 --> 00:03:42.517
+Back on the canvas, the Email Task shows its subject and two outcomes.
+
+00:03:42.517 --> 00:03:47.297
+Done follows a sent message, and Failed follows one that could not be sent.
+
+00:03:47.297 --> 00:03:51.133
+Neither is connected, so the workflow ends after the email.
+
+00:03:55.407 --> 00:04:00.094
+The designer saves every change to a draft, and a draft does not run.
+
+00:04:00.094 --> 00:04:03.907
+When the toolbar says All changes saved, click Publish.
+
+00:04:04.365 --> 00:04:08.654
+A message confirms that the workflow is published, and a badge next to
+
+00:04:08.654 --> 00:04:10.516
+its name shows the version.
+
+00:04:10.516 --> 00:04:14.015
+From here on, publishing an article starts the workflow.
+
+00:04:14.489 --> 00:04:16.425
+Each publish creates a version.
+
+00:04:16.425 --> 00:04:20.086
+When you edit the workflow later, the changes go to a draft, and
+
+00:04:20.086 --> 00:04:23.539
+the published version keeps running until you publish again.
+
+00:04:27.764 --> 00:04:29.624
+Let's publish an article.
+
+00:04:29.624 --> 00:04:34.004
+Under Content, Content Items, open the New menu and choose Article.
+
+00:04:34.464 --> 00:04:35.559
+Type a Title.
+
+00:04:35.559 --> 00:04:40.512
+The workflow waits for content to be published, so Save Draft does not start it.
+
+00:04:40.512 --> 00:04:41.664
+Click Publish.
+
+00:04:42.121 --> 00:04:44.930
+A message confirms that the article is published.
+
+00:04:44.930 --> 00:04:46.921
+The workflow runs at that moment.
+
+00:04:47.383 --> 00:04:52.979
+Back under Design, Workflows, the Instances button lists the runs of every workflow.
+
+00:04:52.979 --> 00:04:56.523
+Ours has the status Finished, so it ran to its end.
+
+00:04:56.973 --> 00:05:00.070
+In the test mail server, the email has arrived.
+
+00:05:00.070 --> 00:05:05.328
+It comes from the Sender email address, goes to editors@example.com, and carries our
+
+00:05:05.328 --> 00:05:07.723
+subject and our plain text message.
+
+00:05:11.923 --> 00:05:16.309
+To adapt the workflow, select more content types in the event, or none
+
+00:05:16.309 --> 00:05:18.213
+to start it for every type.
+
+00:05:18.963 --> 00:05:24.850
+Content Created Event, Content Updated Event and Content Unpublished Event start a workflow
+
+00:05:24.850 --> 00:05:27.823
+in the same way as Content Published Event.
+
+00:05:28.573 --> 00:05:33.849
+Under Recipients, the Cc and Bcc fields take lists of addresses in the
+
+00:05:33.849 --> 00:05:36.903
+same way, for copies and blind copies.
+
+00:05:37.653 --> 00:05:42.007
+The Subject and Text Body fields can use values from the content item,
+
+00:05:42.007 --> 00:05:43.382
+such as its title.
+
+00:05:43.382 --> 00:05:46.533
+The Available data tab of an activity lists them.
+
+00:05:48.533 --> 00:05:53.003
+A workflow joins Content Published Event to Email Task, so the editors get
+
+00:05:53.003 --> 00:05:55.741
+an email each time an article is published.
+
+00:05:55.741 --> 00:05:57.193
+Thanks for watching.
+
