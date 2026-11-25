@@ -149,7 +149,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Media Cache: Purge the Local Copy of Remote Media](videos/media-cache) | 3:38 | [https://youtu.be/MTkbtx3ykaE](https://youtu.be/MTkbtx3ykaE) | OrchardCMS/OrchardCore |
 | [Media Field: Attach Images and Files to Content](videos/media-field) | 5:41 | [https://youtu.be/5wbolSzAOpg](https://youtu.be/5wbolSzAOpg) | OrchardCMS/OrchardCore |
 | [Media in Templates: Image Resizing, Asset URLs and Tag Helpers](videos/media-in-templates) | 6:15 | [https://youtu.be/aGWXBEQEa-0](https://youtu.be/aGWXBEQEa-0) | OrchardCMS/OrchardCore |
-| [Search Media Files: Index PDF, Office and Text Documents](videos/media-indexing) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Search Media Files: Index PDF, Office and Text Documents](videos/media-indexing) | 4:53 | [https://youtu.be/3XJtNZbw-xw](https://youtu.be/3XJtNZbw-xw) | OrchardCMS/OrchardCore |
 | [Media Library: Upload, Organize and Reuse Files](videos/media-library-basics) | 6:16 | [https://youtu.be/96HKBh1upho](https://youtu.be/96HKBh1upho) | OrchardCMS/OrchardCore |
 | [Media: Manage the Files of Your Site](videos/media-overview) | 4:15 | [https://youtu.be/rZ8-gT1Rcxg](https://youtu.be/rZ8-gT1Rcxg) | OrchardCMS/OrchardCore |
 | [Media Profiles: Resize and Crop Images Consistently](videos/media-profiles) | 5:02 | [https://youtu.be/kobmZSw_z_w](https://youtu.be/kobmZSw_z_w) | OrchardCMS/OrchardCore |
