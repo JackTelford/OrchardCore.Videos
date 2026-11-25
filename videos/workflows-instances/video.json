@@ -19,7 +19,36 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "What an instance is"
+    },
+    {
+      "time": "0:56",
+      "title": "The list of instances"
+    },
+    {
+      "time": "1:36",
+      "title": "Open an instance"
+    },
+    {
+      "time": "2:31",
+      "title": "Troubleshoot a faulted instance"
+    },
+    {
+      "time": "3:44",
+      "title": "Act on several instances"
+    },
+    {
+      "time": "4:21",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -41,5 +70,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows"
-  }
+  },
+  "length": "4:35"
 }
