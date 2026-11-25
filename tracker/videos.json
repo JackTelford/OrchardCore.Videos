@@ -3257,14 +3257,14 @@
     "docs": [
       "src/docs/reference/modules/Workflows/README.md"
     ],
-    "status": "recorded",
+    "status": "in-review",
     "estimatedMinutes": 4.3,
     "words": 652,
     "contentCommit": "",
     "recordedBy": "wipke",
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/385",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
