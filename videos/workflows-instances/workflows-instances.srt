@@ -1,0 +1,260 @@
+1
+00:00:01,000 --> 00:00:06,207
+Every time a workflow runs, Orchard Core creates an instance that records the run.
+
+2
+00:00:06,207 --> 00:00:10,645
+In this video, you'll see how to list instances, follow what each one
+
+3
+00:00:10,645 --> 00:00:13,840
+did, and retry or clean up the ones that failed.
+
+4
+00:00:18,440 --> 00:00:20,307
+A workflow is a definition:
+
+5
+00:00:20,307 --> 00:00:23,419
+its activities, and the connections between them.
+
+6
+00:00:23,419 --> 00:00:27,833
+Each time an event starts it, Orchard Core creates an instance, which is
+
+7
+00:00:27,833 --> 00:00:32,020
+one run of that definition, with its own values and its own history.
+
+8
+00:00:32,770 --> 00:00:34,851
+Some instances have not ended.
+
+9
+00:00:34,851 --> 00:00:38,840
+Halted means the instance waits for an event before it goes on.
+
+10
+00:00:38,840 --> 00:00:41,557
+Running counts the instances in progress:
+
+11
+00:00:41,557 --> 00:00:44,100
+Idle, Starting, Resuming or Executing.
+
+12
+00:00:44,850 --> 00:00:46,541
+The rest have stopped.
+
+13
+00:00:46,541 --> 00:00:50,166
+Finished means the instance reached its last activity.
+
+14
+00:00:50,166 --> 00:00:55,240
+Faulted means an activity failed, and Aborted means the instance was canceled.
+
+15
+00:00:59,437 --> 00:01:01,214
+Open Design, Workflows.
+
+16
+00:01:01,214 --> 00:01:06,483
+A workflow that has instances shows an Instances badge, and the Instances button
+
+17
+00:01:06,483 --> 00:01:10,097
+in the toolbar lists the instances of every workflow.
+
+18
+00:01:10,571 --> 00:01:15,111
+Each row shows the instance's ID, its status, the version of the workflow
+
+19
+00:01:15,111 --> 00:01:17,525
+it runs on, and when it was created.
+
+20
+00:01:17,525 --> 00:01:21,951
+The workflow's name comes first, and the newest instance is at the top.
+
+21
+00:01:22,445 --> 00:01:26,981
+The counts above the list show how many instances have each status.
+
+22
+00:01:26,981 --> 00:01:29,466
+Select Faulted to list only those.
+
+23
+00:01:29,466 --> 00:01:35,865
+The drop-downs in the toolbar filter by workflow, status and creation date, and change the order.
+
+24
+00:01:40,096 --> 00:01:42,775
+Select Halted, then open an instance.
+
+25
+00:01:42,775 --> 00:01:47,323
+Its page shows the workflow ID, when it was created and its status,
+
+26
+00:01:47,323 --> 00:01:49,316
+above the workflow itself.
+
+27
+00:01:49,774 --> 00:01:52,983
+The workflow appears as it was when the instance started.
+
+28
+00:01:52,983 --> 00:01:57,262
+The toolbar names the version the instance runs on, so changes published later
+
+29
+00:01:57,262 --> 00:01:58,434
+do not affect it.
+
+30
+00:01:58,901 --> 00:02:03,896
+The Blocking badge marks the activity the instance waits on, here Wait for payment.
+
+31
+00:02:03,896 --> 00:02:08,331
+The activities and connections the instance ran are highlighted in green.
+
+32
+00:02:08,800 --> 00:02:13,044
+The Variables tab lists the variables of the workflow, with the values this
+
+33
+00:02:13,044 --> 00:02:16,240
+instance has, such as the order number it started with.
+
+34
+00:02:16,695 --> 00:02:20,879
+The Journal tab lists the activities the instance ran, in order.
+
+35
+00:02:20,879 --> 00:02:24,705
+Select one to open its panel, then select its Details tab.
+
+36
+00:02:24,705 --> 00:02:30,205
+Under This instance, it says Waiting on this activity or Not waiting on this activity.
+
+37
+00:02:34,422 --> 00:02:37,906
+Back on the list, select Faulted and open an instance.
+
+38
+00:02:37,906 --> 00:02:42,377
+A faulted instance adds a Fault Message to the details, which shows the
+
+39
+00:02:42,377 --> 00:02:44,002
+error that stopped it.
+
+40
+00:02:44,457 --> 00:02:49,567
+On the canvas, a red outline marks the activity that faulted, here Check stock.
+
+41
+00:02:49,567 --> 00:02:54,197
+Nothing after it is highlighted, because the instance never reached it.
+
+42
+00:02:54,652 --> 00:02:59,204
+In the Journal tab, each record shows the activity, its status and how
+
+43
+00:02:59,204 --> 00:03:02,319
+long it took, and its outcome when it has one.
+
+44
+00:03:02,319 --> 00:03:06,272
+The record of the failed activity carries the error instead.
+
+45
+00:03:06,737 --> 00:03:08,415
+Select the failed record.
+
+46
+00:03:08,415 --> 00:03:12,422
+The activity panel opens on its Runs tab, which lists every time the
+
+47
+00:03:12,422 --> 00:03:15,617
+instance ran that activity, and the error of the run.
+
+48
+00:03:16,083 --> 00:03:21,017
+After you fix the cause, such as a service that was down, select Retry from here.
+
+49
+00:03:21,017 --> 00:03:26,461
+A dialog explains that the instance runs again from this activity, with its current state.
+
+50
+00:03:26,461 --> 00:03:29,523
+Retrying needs the Execute workflows permission.
+
+51
+00:03:29,990 --> 00:03:34,860
+Confirming runs the instance again, and a message reports the status it reached.
+
+52
+00:03:34,860 --> 00:03:37,975
+A retry uses the version the instance started on.
+
+53
+00:03:37,975 --> 00:03:43,410
+To use a later version, select Restart, which starts another instance with the same input.
+
+54
+00:03:47,619 --> 00:03:52,549
+To act on several instances at once, check two or more in the list.
+
+55
+00:03:52,549 --> 00:03:56,669
+An Actions menu appears, with Retry, Cancel and Delete.
+
+56
+00:03:57,145 --> 00:04:02,117
+Retry runs the faulted instances again from the activity they faulted at, and
+
+57
+00:04:02,117 --> 00:04:03,913
+leaves the others alone.
+
+58
+00:04:03,913 --> 00:04:08,405
+A message says how many ran again, and how many could not be retried.
+
+59
+00:04:08,868 --> 00:04:14,427
+Cancel sets every checked instance that is not Finished to Aborted, faulted ones included.
+
+60
+00:04:14,427 --> 00:04:17,496
+Halted instances stop waiting for their events.
+
+61
+00:04:17,496 --> 00:04:20,218
+Delete removes the instances you checked.
+
+62
+00:04:22,218 --> 00:04:24,279
+An instance records one run:
+
+63
+00:04:24,279 --> 00:04:28,583
+its status, the activities it ran, and the error that stopped it.
+
+64
+00:04:28,583 --> 00:04:32,402
+From the list, you can retry, cancel or delete instances.
+
+65
+00:04:32,402 --> 00:04:33,978
+Thanks for watching.
+
