@@ -1,0 +1,197 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:02.999
+Visitors search your site on one page, and that page queries one search index.
+
+00:00:02.999 --> 00:00:04.855
+In this video, you choose the default index, set the placeholder text of
+
+00:00:04.855 --> 00:00:06.640
+the search box, try the page, and give visitors permission to search.
+
+00:00:11.240 --> 00:00:15.883
+The Search module adds a search page to the front end of your site, at /search.
+
+00:00:15.883 --> 00:00:19.980
+It shows a search box and the results for the terms a visitor enters.
+
+00:00:20.730 --> 00:00:25.993
+The page queries an index, which a search provider builds, such as Lucene,
+
+00:00:25.993 --> 00:00:28.559
+Elasticsearch or Azure AI Search.
+
+00:00:28.559 --> 00:00:34.480
+This video starts with two Lucene indexes, named Posts and Pages, that the site has.
+
+00:00:35.230 --> 00:00:37.839
+Two choices belong to the page itself.
+
+00:00:37.839 --> 00:00:41.160
+You make both under Settings, Search, Site Search:
+
+00:00:41.160 --> 00:00:46.200
+the default index the page queries, and the placeholder text of the search box.
+
+00:00:50.457 --> 00:00:54.516
+When the address names no index and no default index is set, the
+
+00:00:54.516 --> 00:00:56.487
+search page shows a warning:
+
+00:00:56.487 --> 00:00:59.387
+No default search index has been configured.
+
+00:00:59.866 --> 00:01:04.868
+Let's open the admin menu and choose Settings, then Search, then Site Search.
+
+00:01:04.868 --> 00:01:06.675
+The page has two fields:
+
+00:01:06.675 --> 00:01:09.326
+Default search index, and Placeholder.
+
+00:01:09.789 --> 00:01:14.241
+The Default search index list holds the name of every index of the site.
+
+00:01:14.241 --> 00:01:15.668
+Let's choose Posts.
+
+00:01:15.668 --> 00:01:17.608
+A hint below the list reads:
+
+00:01:17.608 --> 00:01:20.519
+The default index to use for the search page.
+
+00:01:20.985 --> 00:01:22.077
+Select Save.
+
+00:01:22.077 --> 00:01:23.532
+The page confirms:
+
+00:01:23.532 --> 00:01:26.018
+Site settings updated successfully.
+
+00:01:26.018 --> 00:01:31.355
+The search page queries the Posts index whenever the address names no other index.
+
+00:01:35.614 --> 00:01:37.270
+Let's open the search page.
+
+00:01:37.270 --> 00:01:39.528
+The search box shows the standard text:
+
+00:01:39.528 --> 00:01:41.134
+Enter your search term(s).
+
+00:01:41.608 --> 00:01:43.510
+Let's search for exploration.
+
+00:01:43.510 --> 00:01:47.368
+The page lists the posts that match, each shown with its summary.
+
+00:01:48.661 --> 00:01:52.617
+A search that matches nothing shows a message in place of the list:
+
+00:01:52.617 --> 00:01:54.351
+There are no such results.
+
+00:01:58.551 --> 00:02:03.050
+The results page lists the content items that match, and shows each one
+
+00:02:03.050 --> 00:02:04.861
+with its Summary display.
+
+00:02:05.611 --> 00:02:10.493
+The number of results on a page is the Page size, under Settings, General.
+
+00:02:10.493 --> 00:02:15.191
+When more results match, previous and next links appear below the list.
+
+00:02:15.941 --> 00:02:18.133
+Some providers return highlights.
+
+00:02:18.133 --> 00:02:22.179
+When a search returns them, each result shows its title as a link,
+
+00:02:22.179 --> 00:02:26.001
+followed by the highlighted excerpts, in place of the summary.
+
+00:02:30.230 --> 00:02:34.853
+Back in Site Search, the Placeholder field sets the text inside the search box.
+
+00:02:34.853 --> 00:02:36.702
+Let's enter Search the blog.
+
+00:02:36.702 --> 00:02:39.640
+Leave the field empty to keep the standard text.
+
+00:02:40.140 --> 00:02:43.265
+Select Save, then open the search page again.
+
+00:02:43.265 --> 00:02:45.900
+The search box shows Search the blog.
+
+00:02:50.100 --> 00:02:54.527
+The default index applies when the address names no index.
+
+00:02:54.527 --> 00:03:00.613
+The address /search/Pages queries the index named Pages instead, and an index name
+
+00:03:00.613 --> 00:03:04.210
+that does not exist returns a not found error.
+
+00:03:04.960 --> 00:03:09.605
+The Search Form widget places a search box in a layer zone or on a page.
+
+00:03:09.605 --> 00:03:13.535
+Its Index Name field is left empty to use the default index.
+
+00:03:13.535 --> 00:03:18.060
+Its Placeholder field is required, and separate from the site setting.
+
+00:03:22.304 --> 00:03:25.219
+Searching needs permission, which roles grant.
+
+00:03:25.219 --> 00:03:27.406
+Let's open Access Control, Roles.
+
+00:03:27.406 --> 00:03:32.284
+The Administrator role has Manage Search Settings and Query any index by default.
+
+00:03:32.761 --> 00:03:37.642
+A visitor who is not signed in, and has no permission, is asked to sign in.
+
+00:03:37.642 --> 00:03:42.342
+To let visitors search, let's edit the Anonymous role, and type Query in
+
+00:03:42.342 --> 00:03:44.331
+the Search permissions box.
+
+00:03:44.857 --> 00:03:48.490
+Query any index lets a role search every index.
+
+00:03:48.490 --> 00:03:52.056
+Query 'Posts' Index lets it search only Posts.
+
+00:03:52.056 --> 00:03:55.347
+Let's check Allow for Query 'Posts' Index.
+
+00:03:55.843 --> 00:03:57.042
+Select Save.
+
+00:03:57.042 --> 00:03:59.041
+The roles list confirms:
+
+00:03:59.041 --> 00:04:01.173
+Role updated successfully.
+
+00:04:03.173 --> 00:04:07.095
+The Site Search settings choose the index the search page queries and the
+
+00:04:07.095 --> 00:04:10.472
+text of its search box, and permissions decide who can search.
+
+00:04:10.472 --> 00:04:11.763
+Thanks for watching.
+
