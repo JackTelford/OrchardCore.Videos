@@ -23,7 +23,48 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:19",
+      "title": "The HTTP activities"
+    },
+    {
+      "time": "0:55",
+      "title": "Find the activities"
+    },
+    {
+      "time": "1:33",
+      "title": "Receive a request"
+    },
+    {
+      "time": "2:20",
+      "title": "Read and answer the request"
+    },
+    {
+      "time": "3:15",
+      "title": "Call a web API"
+    },
+    {
+      "time": "4:30",
+      "title": "Run the workflow"
+    },
+    {
+      "time": "5:16",
+      "title": "Wait for a signal"
+    },
+    {
+      "time": "5:46",
+      "title": "More HTTP activities"
+    },
+    {
+      "time": "6:27",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Scripting",
@@ -49,5 +90,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows.Http"
-  }
+  },
+  "length": "6:42"
 }
