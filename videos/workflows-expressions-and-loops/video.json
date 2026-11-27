@@ -22,7 +22,32 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Expressions"
+    },
+    {
+      "time": "1:52",
+      "title": "Variables"
+    },
+    {
+      "time": "2:55",
+      "title": "Branches"
+    },
+    {
+      "time": "3:48",
+      "title": "Loops"
+    },
+    {
+      "time": "5:09",
+      "title": "Extending expressions"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -49,5 +74,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows"
-  }
+  },
+  "length": "6:28"
 }
