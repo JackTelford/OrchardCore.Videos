@@ -1,0 +1,230 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.676
+Users have a user name, an email address, and roles.
+
+00:00:04.676 --> 00:00:09.304
+Custom user settings add fields of your own, such as a nickname, as
+
+00:00:09.304 --> 00:00:11.395
+tabs on the Edit User page.
+
+00:00:11.395 --> 00:00:17.100
+In this video, we create a section, fill it in, grant access, and export its values.
+
+00:00:21.700 --> 00:00:26.367
+A site often needs more information about a user than the built-in details,
+
+00:00:26.367 --> 00:00:29.133
+such as a nickname or a newsletter choice.
+
+00:00:29.133 --> 00:00:33.800
+Custom user settings define those fields in the admin, using content types.
+
+00:00:34.550 --> 00:00:36.931
+Each group of fields is a section.
+
+00:00:36.931 --> 00:00:41.811
+A section is a content type marked with the stereotype Custom User Settings.
+
+00:00:41.811 --> 00:00:46.930
+Every section becomes a tab on the Edit User page, named after the content type.
+
+00:00:47.680 --> 00:00:51.716
+The tasks are to enable the feature, create a section, fill it in
+
+00:00:51.716 --> 00:00:55.468
+for a user, and share it, by granting a permission to a role
+
+00:00:55.468 --> 00:00:57.230
+and exporting the values.
+
+00:01:01.425 --> 00:01:05.085
+Custom User Settings is a feature of the Users module.
+
+00:01:05.085 --> 00:01:08.989
+Open Tools, Features, and search for Custom User Settings.
+
+00:01:08.989 --> 00:01:11.795
+Users and Contents are its dependencies.
+
+00:01:12.250 --> 00:01:13.366
+Select Enable.
+
+00:01:13.366 --> 00:01:17.550
+A message confirms that the feature Custom User Settings was enabled.
+
+00:01:21.757 --> 00:01:23.820
+A section is a content type.
+
+00:01:23.820 --> 00:01:29.584
+Create a dedicated type for each section, because the documentation warns against marking
+
+00:01:29.584 --> 00:01:32.253
+a type that already has content items.
+
+00:01:32.253 --> 00:01:37.167
+Open Design, Content Definition, Content Types, and select Create new type.
+
+00:01:37.621 --> 00:01:40.246
+Enter User Profile as the Display Name.
+
+00:01:40.246 --> 00:01:42.695
+The Technical Name fills in from it.
+
+00:01:42.695 --> 00:01:43.861
+Select Create.
+
+00:01:44.316 --> 00:01:47.558
+The next page offers parts to add to the type.
+
+00:01:47.558 --> 00:01:50.986
+This section only needs fields, so select Cancel.
+
+00:01:51.457 --> 00:01:53.318
+Fields hold the values.
+
+00:01:53.318 --> 00:01:58.516
+Select Add Field, enter Nickname as the Display Name, choose the Field Type
+
+00:01:58.516 --> 00:02:00.697
+Text Field, and select Save.
+
+00:02:01.151 --> 00:02:03.418
+Add a second field the same way.
+
+00:02:03.418 --> 00:02:07.356
+Name it Newsletter, and choose the Field Type Boolean Field.
+
+00:02:07.356 --> 00:02:09.861
+Both fields are listed under Fields.
+
+00:02:10.324 --> 00:02:15.344
+A section is not content that editors create, list, or publish.
+
+00:02:15.344 --> 00:02:21.964
+So clear Creatable, Listable, Draftable, Versionable, and Securable, and select Save.
+
+00:02:22.427 --> 00:02:25.011
+Select Edit on User Profile again.
+
+00:02:25.011 --> 00:02:31.408
+Once the stereotype is saved, the editor hides Creatable, Listable, Draftable and Versionable
+
+00:02:31.408 --> 00:02:35.543
+and leaves their values alone, so they were cleared first.
+
+00:02:35.543 --> 00:02:40.647
+Enter Custom User Settings without spaces in Stereotype, and select Save.
+
+00:02:41.099 --> 00:02:45.003
+The list shows the stereotype as a badge on User Profile.
+
+00:02:45.003 --> 00:02:49.279
+The type is a section, and it adds a tab to the Edit User page.
+
+00:02:53.578 --> 00:02:57.909
+Open Access Control, Users, and select Edit for the user jamie.
+
+00:02:57.909 --> 00:03:02.868
+Beside the tab with the account fields, a tab named User Profile appears.
+
+00:03:03.335 --> 00:03:05.266
+Select the User Profile tab.
+
+00:03:05.266 --> 00:03:07.595
+It shows the fields of the section:
+
+00:03:07.595 --> 00:03:10.605
+a Nickname text box and a Newsletter check box.
+
+00:03:11.067 --> 00:03:15.196
+Enter Jamie as the nickname, check Newsletter, and select Save.
+
+00:03:15.196 --> 00:03:18.247
+A message confirms that the user was updated.
+
+00:03:18.720 --> 00:03:20.906
+Select Edit for the same user again.
+
+00:03:20.906 --> 00:03:24.550
+The tab shows the saved nickname and the checked Newsletter box.
+
+00:03:25.004 --> 00:03:28.876
+Add User opens the Create User page, which shows the same tab, so
+
+00:03:28.876 --> 00:03:32.204
+a section can be filled in while an account is created.
+
+00:03:36.428 --> 00:03:39.146
+Each section has its own permission.
+
+00:03:39.146 --> 00:03:44.128
+Open Access Control, Roles, and select Edit for a role, such as Editor.
+
+00:03:44.607 --> 00:03:47.247
+In Search permissions, enter Custom User.
+
+00:03:47.247 --> 00:03:52.078
+The permission is named Manage Own Custom User Settings, followed by the display
+
+00:03:52.078 --> 00:03:54.157
+name of the type, User Profile.
+
+00:03:54.628 --> 00:03:56.689
+Check Allow, and select Save.
+
+00:03:56.689 --> 00:04:00.989
+People in this role see the User Profile tab when they edit a user.
+
+00:04:00.989 --> 00:04:03.698
+Editing a user is a separate permission.
+
+00:04:04.169 --> 00:04:07.332
+The Administrator role has every permission.
+
+00:04:07.332 --> 00:04:13.529
+A role with Manage security settings and all users also has the permission of every section.
+
+00:04:17.829 --> 00:04:22.469
+To move the values to another site, add a step to a deployment plan.
+
+00:04:22.469 --> 00:04:28.049
+Open Tools, Deployments, Plans, and select Manage Steps for the plan Team profiles.
+
+00:04:28.502 --> 00:04:32.449
+Select Add Step, and find the Custom User Settings card.
+
+00:04:32.449 --> 00:04:37.159
+It says that the step exports all or specified custom user settings.
+
+00:04:37.159 --> 00:04:38.242
+Choose Add.
+
+00:04:38.710 --> 00:04:42.222
+The step includes all custom user settings by default.
+
+00:04:42.222 --> 00:04:47.139
+Clearing Include all custom user settings lets you choose sections one by one.
+
+00:04:47.139 --> 00:04:48.310
+Select Create.
+
+00:04:48.765 --> 00:04:51.388
+The plan lists the step with the badge All.
+
+00:04:51.388 --> 00:04:55.081
+On the other site, an import fills in the sections of the users
+
+00:04:55.081 --> 00:04:58.025
+that have the same user ID, and skips the others.
+
+00:05:00.025 --> 00:05:04.755
+Custom user settings turn content types into tabs on the Edit User page,
+
+00:05:04.755 --> 00:05:08.818
+and the documentation page covers the details for developers.
+
+00:05:08.818 --> 00:05:10.395
+Thanks for watching.
+
