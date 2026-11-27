@@ -22,7 +22,40 @@
     "Orchard Core",
     "Users"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "What the feature adds"
+    },
+    {
+      "time": "0:43",
+      "title": "Enable the feature"
+    },
+    {
+      "time": "1:03",
+      "title": "Turn on the setting"
+    },
+    {
+      "time": "1:36",
+      "title": "Change an email address"
+    },
+    {
+      "time": "2:33",
+      "title": "What the page checks"
+    },
+    {
+      "time": "3:02",
+      "title": "Summary"
+    },
+    {
+      "time": "3:19",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +77,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Users.ChangeEmail"
-  }
+  },
+  "length": "3:30"
 }
