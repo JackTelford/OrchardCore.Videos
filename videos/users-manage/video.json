@@ -22,7 +22,40 @@
     "Orchard Core",
     "Users"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "How users work"
+    },
+    {
+      "time": "1:07",
+      "title": "The Users list"
+    },
+    {
+      "time": "1:31",
+      "title": "Create a user"
+    },
+    {
+      "time": "2:38",
+      "title": "Edit a user"
+    },
+    {
+      "time": "3:17",
+      "title": "The Actions menu"
+    },
+    {
+      "time": "4:18",
+      "title": "Find users and act on many"
+    },
+    {
+      "time": "5:19",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Users module",
