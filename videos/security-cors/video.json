@@ -22,7 +22,36 @@
     "Orchard Core",
     "Site Security"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "How CORS works"
+    },
+    {
+      "time": "1:00",
+      "title": "Enable CORS"
+    },
+    {
+      "time": "1:45",
+      "title": "Create a policy"
+    },
+    {
+      "time": "3:14",
+      "title": "An unsafe combination"
+    },
+    {
+      "time": "3:46",
+      "title": "Keep policies narrow"
+    },
+    {
+      "time": "4:38",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +73,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Cors"
-  }
+  },
+  "length": "4:51"
 }
