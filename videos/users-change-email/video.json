@@ -78,5 +78,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Users.ChangeEmail"
   },
-  "length": "3:30"
+  "length": "3:30",
+  "youtube": {
+    "id": "v6h8bw8iS6w",
+    "url": "https://youtu.be/v6h8bw8iS6w",
+    "version": "v1"
+  }
 }
