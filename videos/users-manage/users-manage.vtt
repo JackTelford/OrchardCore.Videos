@@ -1,0 +1,245 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:06.107
+Everyone who signs in to an Orchard Core site does so with a user account.
+
+00:00:06.107 --> 00:00:10.958
+In this video, you create users, edit them and give them roles, change
+
+00:00:10.958 --> 00:00:15.810
+passwords, disable and delete accounts, and find users in a long list.
+
+00:00:20.410 --> 00:00:24.804
+A user account holds a user name, an email address, and a password.
+
+00:00:24.804 --> 00:00:28.837
+A role groups permissions, and a user can have several roles.
+
+00:00:28.837 --> 00:00:32.870
+Together, the roles decide what that user can do on the site.
+
+00:00:33.620 --> 00:00:36.833
+An administrator creates accounts on the Users page.
+
+00:00:36.833 --> 00:00:41.764
+Visitors can sign themselves up when the Users Registration feature is enabled, and
+
+00:00:41.764 --> 00:00:48.025
+the External Authentication feature can register a user who signs in through an external identity provider.
+
+00:00:48.025 --> 00:00:50.130
+Separate videos cover those two.
+
+00:00:50.880 --> 00:00:56.097
+Permissions decide who can manage users, among them List all users, Edit any
+
+00:00:56.097 --> 00:00:59.787
+user, Delete any user, and Assign any role to users.
+
+00:00:59.787 --> 00:01:02.904
+The Administrator role has all permissions.
+
+00:01:02.904 --> 00:01:06.340
+You grant them to other roles on the Roles page.
+
+00:01:10.545 --> 00:01:12.899
+Open Access Control, then Users.
+
+00:01:12.899 --> 00:01:17.668
+The list shows every account with its user name, its email address, and
+
+00:01:17.668 --> 00:01:19.092
+the roles it has.
+
+00:01:19.092 --> 00:01:20.765
+Each user is one row.
+
+00:01:21.223 --> 00:01:25.163
+Each row has an Edit button, a View button, and an Actions menu.
+
+00:01:25.163 --> 00:01:27.865
+A badge marks an account that is Disabled.
+
+00:01:27.865 --> 00:01:30.003
+Your own row has no View button.
+
+00:01:34.265 --> 00:01:35.608
+Select Add User.
+
+00:01:35.608 --> 00:01:39.637
+The Create User page asks for a User name and an Email, both
+
+00:01:39.637 --> 00:01:42.384
+required, and an optional Phone Number.
+
+00:01:42.384 --> 00:01:45.925
+Let's enter morgan.ellis and an example.com address.
+
+00:01:46.405 --> 00:01:48.982
+Creating an account requires a password.
+
+00:01:48.982 --> 00:01:54.246
+Type one in Password and Password confirmation, or select Generate password, which fills
+
+00:01:54.246 --> 00:01:58.335
+both fields with a password that follows the site's password rules.
+
+00:01:58.335 --> 00:02:00.855
+Copy password puts it on the clipboard.
+
+00:02:01.312 --> 00:02:03.645
+Roles lists the roles you can assign.
+
+00:02:03.645 --> 00:02:05.598
+Tick Author, then select Save.
+
+00:02:05.598 --> 00:02:10.482
+The Users list opens with a confirmation message and a row for the user you created.
+
+00:02:10.941 --> 00:02:13.200
+The row has an Unconfirmed badge.
+
+00:02:13.200 --> 00:02:18.180
+An administrator created the account, so nobody has confirmed its email address.
+
+00:02:18.180 --> 00:02:24.261
+A site can require confirmed addresses before users sign in, a choice that belongs to registration.
+
+00:02:24.717 --> 00:02:28.890
+Open the Actions menu on the row and select Confirm email.
+
+00:02:28.890 --> 00:02:32.606
+In the dialog, select Ok, and the badge disappears.
+
+00:02:32.606 --> 00:02:37.627
+Confirm email marks the address as confirmed without sending a message.
+
+00:02:41.875 --> 00:02:45.095
+Select Edit on the row of the user you created.
+
+00:02:45.095 --> 00:02:50.015
+The Edit User page shows User name and Email as read-only, unless Settings,
+
+00:02:50.015 --> 00:02:52.931
+Security, User Login allows changing them.
+
+00:02:52.931 --> 00:02:54.935
+Phone Number can be edited.
+
+00:02:55.400 --> 00:02:58.243
+Type the phone number with its country code.
+
+00:02:58.243 --> 00:02:59.778
+Roles can change too:
+
+00:02:59.778 --> 00:03:02.734
+Author stays ticked, and Contributor is added.
+
+00:03:02.734 --> 00:03:05.860
+Select Save, and the list shows both role badges.
+
+00:03:06.323 --> 00:03:09.162
+View opens a read-only page for the user.
+
+00:03:09.162 --> 00:03:13.814
+User Info lists the user name, the email address, the phone number, and
+
+00:03:13.814 --> 00:03:16.473
+the status, and Roles lists the roles.
+
+00:03:20.725 --> 00:03:25.148
+The Actions menu on a row holds the actions that change an account:
+
+00:03:25.148 --> 00:03:28.358
+Change password, Disable or Enable, and Delete.
+
+00:03:28.358 --> 00:03:32.295
+Confirm email appears too, while an address is unconfirmed.
+
+00:03:32.787 --> 00:03:37.849
+Change password asks for a New password and its confirmation, and Submit saves it.
+
+00:03:37.849 --> 00:03:40.956
+For another user, no current password is needed.
+
+00:03:40.956 --> 00:03:45.097
+On your own account, the page also asks for your Current password.
+
+00:03:45.583 --> 00:03:47.700
+Disable asks for confirmation.
+
+00:03:47.700 --> 00:03:51.873
+A disabled user stays in the list with a Disabled badge and keeps
+
+00:03:51.873 --> 00:03:54.107
+their roles, but cannot sign in.
+
+00:03:54.107 --> 00:03:58.163
+Orchard Core refuses to disable the only enabled administrator.
+
+00:03:58.651 --> 00:04:02.254
+For a disabled user, the same menu offers Enable.
+
+00:04:02.254 --> 00:04:06.381
+Select it and confirm, and the account can sign in again.
+
+00:04:06.854 --> 00:04:09.584
+Delete removes the account from the site:
+
+00:04:09.584 --> 00:04:12.314
+select Delete, and confirm in the dialog.
+
+00:04:12.314 --> 00:04:14.405
+Your own row offers no Delete.
+
+00:04:14.405 --> 00:04:17.774
+To keep an account but block it, disable it instead.
+
+00:04:22.031 --> 00:04:26.536
+To find a user, type part of a user name in Search, and press Enter.
+
+00:04:26.536 --> 00:04:30.311
+Typing sam leaves only the users whose name contains it.
+
+00:04:30.768 --> 00:04:38.393
+The filter button beside the box offers Only enabled users, Only disabled users, and Filter syntax.
+
+00:04:38.393 --> 00:04:44.348
+Filter syntax opens Available Filters, which lists the filters you can type:
+
+00:04:44.348 --> 00:04:47.398
+Name, Email, Status, Role, and Sort.
+
+00:04:47.934 --> 00:04:52.479
+Above the rows, three pickers narrow the list without typing:
+
+00:04:52.479 --> 00:04:57.566
+Role, Show for enabled or disabled users, and Sort, by Name or Email.
+
+00:04:57.566 --> 00:05:01.974
+With Author and Disabled Users chosen, one account remains.
+
+00:05:02.449 --> 00:05:05.905
+Tick two or more rows to act on several users.
+
+00:05:05.905 --> 00:05:11.088
+The Actions menu then offers Confirm email, Enable, Disable, and Delete:
+
+00:05:11.088 --> 00:05:13.680
+let's choose Disable and confirm.
+
+00:05:13.680 --> 00:05:17.999
+Your own account is skipped by Enable, Disable, and Delete.
+
+00:05:19.999 --> 00:05:23.097
+You manage accounts under Access Control, Users:
+
+00:05:23.097 --> 00:05:28.089
+create them, edit their roles, change passwords, disable or delete them, and find
+
+00:05:28.089 --> 00:05:30.097
+them with search and filters.
+
+00:05:30.097 --> 00:05:31.589
+Thanks for watching.
+

@@ -171,7 +171,7 @@
           "steps": [
             {
               "id": "find-1",
-              "text": "To find a user, type part of a user name in Search, and select the magnifying glass. Typing sam leaves only the users whose name contains it."
+              "text": "To find a user, type part of a user name in Search, and press Enter. Typing sam leaves only the users whose name contains it."
             },
             {
               "id": "find-2",
