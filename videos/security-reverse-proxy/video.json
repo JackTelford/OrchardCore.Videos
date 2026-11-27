@@ -23,7 +23,32 @@
     "Orchard Core",
     "Site Security"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:18",
+      "title": "Why forwarded headers"
+    },
+    {
+      "time": "1:09",
+      "title": "Enable the feature"
+    },
+    {
+      "time": "1:41",
+      "title": "Choose the headers"
+    },
+    {
+      "time": "2:43",
+      "title": "Keep it safe"
+    },
+    {
+      "time": "3:44",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -45,5 +70,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.ReverseProxy"
-  }
+  },
+  "length": "3:55"
 }
