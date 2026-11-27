@@ -1,0 +1,251 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:04.699
+Who can create, edit, publish, or delete a content item?
+
+00:00:04.699 --> 00:00:07.324
+Orchard Core answers with permissions.
+
+00:00:07.324 --> 00:00:11.380
+In this video, you allow a role to work with one content type,
+
+00:00:11.380 --> 00:00:14.900
+and you see how ownership changes what a user can do.
+
+00:00:19.500 --> 00:00:22.068
+Content permissions come in two levels.
+
+00:00:22.068 --> 00:00:25.435
+The Contents permissions apply to every content type.
+
+00:00:25.435 --> 00:00:29.772
+The permissions of one content type apply to that type only, and exist
+
+00:00:29.772 --> 00:00:32.340
+only when the type is marked Securable.
+
+00:00:33.090 --> 00:00:39.499
+For a securable type, you can allow viewing, previewing, editing, cloning, publishing, deleting,
+
+00:00:39.499 --> 00:00:41.259
+and listing its items.
+
+00:00:41.259 --> 00:00:45.280
+A separate permission covers editing the owner of an item.
+
+00:00:46.030 --> 00:00:48.350
+Most actions come in two forms:
+
+00:00:48.350 --> 00:00:52.677
+one for items you own, and one for items that belong to others.
+
+00:00:52.677 --> 00:00:58.697
+Edit Article covers your own articles, and Edit Article for others covers everyone else's.
+
+00:00:58.697 --> 00:01:01.770
+The owner is the user who created the item.
+
+00:01:02.520 --> 00:01:05.597
+A higher permission includes the lower ones.
+
+00:01:05.597 --> 00:01:10.952
+The Contents permission Edit content for others includes Edit Article for others.
+
+00:01:10.952 --> 00:01:16.060
+Publish includes edit, and edit for others includes view, preview, and clone.
+
+00:01:20.265 --> 00:01:24.674
+Permissions for a single type appear only when the type is Securable.
+
+00:01:24.674 --> 00:01:28.496
+The Content Types page is under Design, Content Definition.
+
+00:01:28.496 --> 00:01:29.965
+Let's find Article.
+
+00:01:30.416 --> 00:01:31.601
+We open Article.
+
+00:01:31.601 --> 00:01:36.555
+Among its settings, Securable determines whether the type can have custom permissions.
+
+00:01:36.555 --> 00:01:39.516
+It is not checked for Article, so let's check it.
+
+00:01:39.970 --> 00:01:41.125
+We save the type.
+
+00:01:41.125 --> 00:01:44.790
+Types you create with Create new type are securable from the start.
+
+00:01:48.929 --> 00:01:51.017
+Permissions are granted to roles.
+
+00:01:51.017 --> 00:01:55.141
+Under Access Control, Roles, let's choose Add Role to create a role for
+
+00:01:55.141 --> 00:01:57.069
+the people who write articles.
+
+00:01:57.605 --> 00:02:02.318
+We name the role Writer, add a description, and choose Save & Configure.
+
+00:02:02.318 --> 00:02:04.735
+The role's permissions page opens.
+
+00:02:06.619 --> 00:02:09.068
+Every permission has two checkboxes.
+
+00:02:09.068 --> 00:02:11.925
+Allow is a permission you grant explicitly.
+
+00:02:11.925 --> 00:02:17.639
+Effective is what the role gets in the end, including permissions that a higher one implies.
+
+00:02:18.112 --> 00:02:21.605
+Users need Access admin panel to use the admin at all.
+
+00:02:21.605 --> 00:02:24.282
+We search for admin panel, and allow it.
+
+00:02:24.737 --> 00:02:26.689
+Next, we search for Article.
+
+00:02:26.689 --> 00:02:31.568
+Its permissions have their own group, Article Content Type - Article, and every
+
+00:02:31.568 --> 00:02:33.117
+label names the type.
+
+00:02:33.587 --> 00:02:38.519
+We allow Publish or unpublish Article, which applies to articles the user owns,
+
+00:02:38.519 --> 00:02:42.464
+and List Article content items, so the role can open the list.
+
+00:02:42.464 --> 00:02:44.727
+The for others versions stay off.
+
+00:02:45.193 --> 00:02:49.633
+We open the menu beside Save and choose the entry labeled and continue,
+
+00:02:49.633 --> 00:02:51.940
+which saves and stays on the role.
+
+00:02:51.940 --> 00:02:55.054
+The Effective column shows more than we allowed:
+
+00:02:55.054 --> 00:02:58.803
+Edit Article is ticked, because publishing implies editing.
+
+00:02:59.263 --> 00:03:02.436
+Hovering over an Effective checkbox explains it.
+
+00:03:02.436 --> 00:03:06.080
+Edit Article is implied by Publish or unpublish Article.
+
+00:03:06.080 --> 00:03:10.663
+View Article by others comes from the Anonymous and Authenticated roles.
+
+00:03:14.871 --> 00:03:17.215
+Many roles hold Contents permissions.
+
+00:03:17.215 --> 00:03:20.321
+Let's open the Editor role, and search for Article.
+
+00:03:20.777 --> 00:03:27.089
+In the Article group, nothing is allowed explicitly, but the Effective column is ticked almost everywhere.
+
+00:03:27.089 --> 00:03:30.977
+The Editor role gets those permissions from the Contents group.
+
+00:03:31.458 --> 00:03:35.332
+Searching for content for others shows the Contents permissions.
+
+00:03:35.332 --> 00:03:40.035
+Editor is allowed Edit content for others, and that permission applies to every
+
+00:03:40.035 --> 00:03:42.138
+content type, including Article.
+
+00:03:46.362 --> 00:03:49.977
+This is the list of articles as Jamie sees it, a user who
+
+00:03:49.977 --> 00:03:51.813
+was given the Writer role.
+
+00:03:51.813 --> 00:03:58.182
+The New Article button is there because creating an article needs Edit Article, which publishing implies.
+
+00:03:58.182 --> 00:04:01.222
+The list also holds articles by the admin user.
+
+00:04:01.694 --> 00:04:05.901
+Jamie chooses New Article, enters a title, and publishes.
+
+00:04:05.901 --> 00:04:11.844
+The Publish button is there because the role allows publishing articles Jamie owns.
+
+00:04:12.312 --> 00:04:17.200
+Back in the list, Team Offsite Notes has a linked title and an Edit button.
+
+00:04:17.200 --> 00:04:22.872
+Jamie owns this article, so the Edit Article permission, implied by publishing, applies.
+
+00:04:23.329 --> 00:04:26.087
+About and Press Kit belong to the admin user.
+
+00:04:26.087 --> 00:04:30.089
+Their titles are plain text and there is no Edit button, because the
+
+00:04:30.089 --> 00:04:32.739
+role does not have Edit Article for others.
+
+00:04:33.238 --> 00:04:37.130
+Jamie can see the articles of the admin user as well, because the
+
+00:04:37.130 --> 00:04:40.529
+Anonymous and Authenticated roles hold View all content.
+
+00:04:40.529 --> 00:04:44.038
+Seeing an article and editing it are separate permissions.
+
+00:04:48.238 --> 00:04:52.758
+To let the role edit every article, allow Edit Article for others.
+
+00:04:52.758 --> 00:04:58.848
+To cover every content type, allow the Contents permission Edit content for others instead.
+
+00:04:59.598 --> 00:05:01.684
+Permissions only add access.
+
+00:05:01.684 --> 00:05:08.064
+A user gets everything that any of their roles allows, plus what Anonymous and Authenticated hold.
+
+00:05:08.064 --> 00:05:11.378
+No role removes access that another role grants.
+
+00:05:12.128 --> 00:05:16.878
+Anonymous holds View all content by default, so every visitor can read the
+
+00:05:16.878 --> 00:05:19.016
+published items of every type.
+
+00:05:19.016 --> 00:05:22.164
+Taking that permission away affects every type.
+
+00:05:22.164 --> 00:05:25.668
+A separate video covers building a members-only area.
+
+00:05:27.668 --> 00:05:29.536
+That's content permissions:
+
+00:05:29.536 --> 00:05:33.557
+grant them for all content or for one securable type, for items a
+
+00:05:33.557 --> 00:05:36.445
+user owns or for items that belong to others.
+
+00:05:36.445 --> 00:05:37.918
+Thanks for watching.
+
