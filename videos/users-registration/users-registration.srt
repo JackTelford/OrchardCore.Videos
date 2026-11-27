@@ -1,0 +1,292 @@
+1
+00:00:01,000 --> 00:00:06,912
+The Users Registration feature lets visitors create their own accounts on an Orchard Core site.
+
+2
+00:00:06,912 --> 00:00:11,829
+In this video, you enable it, follow three visitors through the Register page,
+
+3
+00:00:11,829 --> 00:00:16,980
+check their accounts by email and by approval, and see how login providers fit in.
+
+4
+00:00:21,580 --> 00:00:28,219
+Without the Users Registration feature, only administrators create accounts, one by one, in the Users list.
+
+5
+00:00:28,219 --> 00:00:32,860
+The login page has no link for visitors who want an account of their own.
+
+6
+00:00:33,610 --> 00:00:37,869
+The feature adds a Register page, and a link to it on the login page.
+
+7
+00:00:37,869 --> 00:00:39,856
+It also adds a settings page.
+
+8
+00:00:39,856 --> 00:00:44,115
+Its options decide how each account is checked before it can be used,
+
+9
+00:00:44,115 --> 00:00:46,670
+and which theme the Register page uses.
+
+10
+00:00:50,909 --> 00:00:55,491
+Registration is a feature, so it stays off until you enable it.
+
+11
+00:00:55,491 --> 00:00:59,409
+Under Tools, Features, search for Users Registration.
+
+12
+00:00:59,876 --> 00:01:01,016
+Select Enable.
+
+13
+00:01:01,016 --> 00:01:05,349
+A message confirms that the feature was enabled, and its row lists the
+
+14
+00:01:05,349 --> 00:01:07,002
+features it depends on:
+
+15
+00:01:07,002 --> 00:01:08,256
+Users and Email.
+
+16
+00:01:09,202 --> 00:01:15,259
+Email matters here, because confirmation messages leave through the Default provider chosen under
+
+17
+00:01:15,259 --> 00:01:19,964
+Settings, Communication, Email, and without a provider no message is sent.
+
+18
+00:01:19,964 --> 00:01:23,962
+This site uses an SMTP provider that delivers to a test inbox.
+
+19
+00:01:28,231 --> 00:01:31,904
+The options live under Settings, Security, Registration.
+
+20
+00:01:31,904 --> 00:01:35,874
+The page has three checkboxes, and all of them start cleared.
+
+21
+00:01:35,874 --> 00:01:40,141
+Two decide how an account is checked, and the third sets the theme
+
+22
+00:01:40,141 --> 00:01:41,741
+of the Register page.
+
+23
+00:01:42,267 --> 00:01:47,237
+The first checkbox, Users must verify their email address, sends each visitor a
+
+24
+00:01:47,237 --> 00:01:48,758
+message with a link.
+
+25
+00:01:48,758 --> 00:01:53,319
+Selecting it shows a warning that users whose email address has not been
+
+26
+00:01:53,319 --> 00:01:56,477
+confirmed cannot log in or reset their password.
+
+27
+00:01:56,935 --> 00:02:01,681
+The second checkbox, Users must be approved before they can log in, creates
+
+28
+00:02:01,681 --> 00:02:06,075
+every registered account disabled, until an administrator enables it.
+
+29
+00:02:06,543 --> 00:02:11,256
+The third checkbox, Use site theme for registration page, shows the Register page
+
+30
+00:02:11,256 --> 00:02:14,560
+in the design of your site, instead of the admin theme.
+
+31
+00:02:14,560 --> 00:02:16,673
+It requires an active site theme.
+
+32
+00:02:20,888 --> 00:02:24,193
+A visitor who is not signed in opens the login page.
+
+33
+00:02:24,193 --> 00:02:27,898
+Under the Log in button is the link Register as a new user,
+
+34
+00:02:27,898 --> 00:02:30,178
+which opens the registration form.
+
+35
+00:02:30,630 --> 00:02:35,372
+The form, headed Register a new account, asks for a username, an email
+
+36
+00:02:35,372 --> 00:02:38,741
+address, and a password, which is entered twice.
+
+37
+00:02:38,741 --> 00:02:41,860
+Let's fill it in for a visitor called Jamie.
+
+38
+00:02:42,323 --> 00:02:44,911
+Selecting Register creates the account.
+
+39
+00:02:44,911 --> 00:02:49,455
+Because no option is selected, the account works at once, and the visitor
+
+40
+00:02:49,455 --> 00:02:52,043
+is signed in and sent to the home page.
+
+41
+00:02:56,262 --> 00:03:01,927
+On the Registration settings page, select Users must verify their email address, and save.
+
+42
+00:03:01,927 --> 00:03:06,412
+The site confirms with the message Site settings updated successfully.
+
+43
+00:03:08,035 --> 00:03:11,970
+A second visitor, Morgan, registers with the same form.
+
+44
+00:03:11,970 --> 00:03:18,355
+This time, Register opens the page Email confirmation sent, and the visitor is not signed in.
+
+45
+00:03:18,810 --> 00:03:22,483
+The message Confirm your account is waiting in the test inbox.
+
+46
+00:03:22,483 --> 00:03:26,480
+It greets the visitor by username, and holds a link that stays valid
+
+47
+00:03:26,480 --> 00:03:27,830
+for a limited time.
+
+48
+00:03:28,297 --> 00:03:33,920
+Following the link opens the Email confirmation page, which thanks the visitor for confirming.
+
+49
+00:03:33,920 --> 00:03:36,337
+From then on, the visitor can log in.
+
+50
+00:03:40,539 --> 00:03:45,391
+To review each registration yourself, clear the email option on the same page,
+
+51
+00:03:45,391 --> 00:03:48,164
+so that this example shows approval alone.
+
+52
+00:03:48,164 --> 00:03:52,439
+Then select Users must be approved before they can log in, and save.
+
+53
+00:03:54,091 --> 00:03:56,393
+A third visitor, Riley, registers.
+
+54
+00:03:56,393 --> 00:04:00,710
+The account is created disabled, so the visitor is not signed in, and
+
+55
+00:04:00,710 --> 00:04:05,661
+the User Registration Pending page explains that the account has to be approved.
+
+56
+00:04:07,246 --> 00:04:12,689
+Under Access Control, Users, the list shows Riley's account with a Disabled badge.
+
+57
+00:04:12,689 --> 00:04:15,596
+Open its Actions menu, and select Enable.
+
+58
+00:04:16,048 --> 00:04:17,240
+Confirm with Ok.
+
+59
+00:04:17,240 --> 00:04:22,006
+The message User account was successfully enabled appears, and the visitor can log
+
+60
+00:04:22,006 --> 00:04:23,198
+in from then on.
+
+61
+00:04:27,398 --> 00:04:30,823
+Visitors can also register with a login provider.
+
+62
+00:04:30,823 --> 00:04:37,610
+Enabling Google Authentication, GitHub Authentication or Meta Login adds an External Authentication tab
+
+63
+00:04:37,610 --> 00:04:41,658
+to the Registration settings page, next to the General tab.
+
+64
+00:04:42,408 --> 00:04:47,495
+Among its options are Disable new external registration, Do not ask username, Do
+
+65
+00:04:47,495 --> 00:04:51,163
+not ask email address, and Do not create local password.
+
+66
+00:04:51,163 --> 00:04:56,664
+Selecting the username, email and password options together lets the account be created
+
+67
+00:04:56,664 --> 00:04:59,208
+without showing the visitor any form.
+
+68
+00:04:59,958 --> 00:05:05,920
+Accounts created through a provider follow the same email and approval options as the Register page.
+
+69
+00:05:05,920 --> 00:05:11,376
+Each provider also needs credentials from its own developer portal, which the documentation
+
+70
+00:05:11,376 --> 00:05:13,738
+of Google, GitHub and Meta explains.
+
+71
+00:05:15,738 --> 00:05:21,223
+Users Registration gives visitors a Register page, and with an email provider configured,
+
+72
+00:05:21,223 --> 00:05:25,207
+its options let you check each account by email or by approval.
+
+73
+00:05:25,207 --> 00:05:26,708
+Thanks for watching.
+
