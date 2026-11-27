@@ -1,0 +1,263 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.662
+A workflow becomes useful when it can compute a value, remember it, choose
+
+00:00:05.662 --> 00:00:07.527
+a path, and repeat a step.
+
+00:00:07.527 --> 00:00:12.480
+In this video, we'll look at expressions, variables, branches, and loops in the
+
+00:00:12.480 --> 00:00:15.860
+Workflows module, and at how to extend them in code.
+
+00:00:20.460 --> 00:00:25.341
+Many settings are expressions, evaluated each time the activity runs.
+
+00:00:25.341 --> 00:00:31.525
+In If/Else, For Each, Set Variable and a few others, you choose each expression's syntax.
+
+00:00:31.525 --> 00:00:36.406
+Literal means the text is the value itself, Liquid is a template, and
+
+00:00:36.406 --> 00:00:39.400
+JavaScript runs in the Scripting module.
+
+00:00:40.150 --> 00:00:43.579
+The activity stores the expression with its syntax.
+
+00:00:43.579 --> 00:00:48.391
+This If/Else condition could be the Literal true, a Liquid comparison on a
+
+00:00:48.391 --> 00:00:51.339
+property, or a JavaScript test on an input.
+
+00:00:51.339 --> 00:00:55.730
+A JavaScript result must already have the type the setting expects.
+
+00:00:57.380 --> 00:01:00.555
+This workflow counts the coffees in a list.
+
+00:01:00.555 --> 00:01:05.221
+Double-click Each item, a For Each activity, to open its settings.
+
+00:01:05.221 --> 00:01:10.080
+Its Items setting uses the Literal syntax, so the list is plain text.
+
+00:01:10.611 --> 00:01:13.098
+Check the item is an If/Else activity.
+
+00:01:13.098 --> 00:01:18.071
+Its Condition is a JavaScript expression, and the property function reads the item
+
+00:01:18.071 --> 00:01:19.541
+that the loop is on.
+
+00:01:20.022 --> 00:01:24.933
+Write the summary is a Set Variable activity that uses Liquid, and reads
+
+00:01:24.933 --> 00:01:27.577
+the variables as Workflow.Variables.
+
+00:01:27.577 --> 00:01:32.362
+Each expression has its own syntax, so one workflow can mix all three.
+
+00:01:39.350 --> 00:01:44.000
+The Available data tab lists what the expressions of an activity can read:
+
+00:01:44.000 --> 00:01:48.533
+variables, values from earlier activities, global values, and functions.
+
+00:01:48.533 --> 00:01:51.090
+Click one to insert it in the setting.
+
+00:01:55.370 --> 00:01:59.966
+Variables are declared in the Variables tab of the workflow panel.
+
+00:01:59.966 --> 00:02:05.648
+Each has a name, a type, an optional default value, and the Input and Output flags.
+
+00:02:05.648 --> 00:02:09.670
+Here, summary is an Output, so the Run dialog reports it.
+
+00:02:11.270 --> 00:02:15.941
+The types are Text, Number, Yes or no, Date and time, Object, List,
+
+00:02:15.941 --> 00:02:17.733
+Content item, and Any.
+
+00:02:17.733 --> 00:02:21.317
+Setting a variable converts the value to its type.
+
+00:02:21.317 --> 00:02:26.244
+Set Variable faults the workflow when the value does not convert, but a
+
+00:02:26.244 --> 00:02:28.740
+script logs the error by default.
+
+00:02:29.490 --> 00:02:35.924
+In JavaScript, the variable function reads a variable, and the setVariable function writes it.
+
+00:02:35.924 --> 00:02:38.819
+In Liquid, Workflow.Variables reads it.
+
+00:02:38.819 --> 00:02:44.030
+The Set Variable activity stores the result of an expression in a variable.
+
+00:02:44.780 --> 00:02:46.894
+Some activities produce outputs.
+
+00:02:46.894 --> 00:02:50.789
+On the Outputs tab, Store in binds an output, such as the Result
+
+00:02:50.789 --> 00:02:54.740
+of a Script, to a variable that the activities after it can read.
+
+00:02:58.940 --> 00:03:04.633
+Each activity has outcomes, and a transition connects an outcome to the next activity.
+
+00:03:04.633 --> 00:03:08.470
+If/Else evaluates its Condition and takes True or False.
+
+00:03:08.470 --> 00:03:12.740
+A Script activity lists its own outcomes in Available Outcomes.
+
+00:03:13.490 --> 00:03:16.677
+The script calls setOutcome with one of those names.
+
+00:03:16.677 --> 00:03:20.577
+Here, the outcome is the value of a state variable, so each state
+
+00:03:20.577 --> 00:03:22.610
+can lead to its own activities.
+
+00:03:24.310 --> 00:03:28.779
+On the canvas, Check the item shows its two outcomes, True and False,
+
+00:03:28.779 --> 00:03:31.580
+and each one has a transition of its own.
+
+00:03:32.062 --> 00:03:35.903
+By default, an outcome follows only its first transition.
+
+00:03:35.903 --> 00:03:41.512
+The Workflow tab can set Outcomes with several transitions to Follow every transition,
+
+00:03:41.512 --> 00:03:44.499
+which runs every branch in the order added.
+
+00:03:44.499 --> 00:03:47.182
+A separate video covers Fork and Join.
+
+00:03:51.382 --> 00:03:53.941
+Three activities repeat part of a workflow.
+
+00:03:53.941 --> 00:03:57.597
+For Each goes through a list, For Loop counts from a start value
+
+00:03:57.597 --> 00:04:01.462
+to an end value, and While Loop repeats while its condition is true.
+
+00:04:02.212 --> 00:04:05.261
+Each loop has two outcomes, Iterate and Done.
+
+00:04:05.261 --> 00:04:10.043
+Connect Iterate to the activities to repeat, connect the last of them back
+
+00:04:10.043 --> 00:04:13.152
+to the loop, and connect Done to what follows.
+
+00:04:13.902 --> 00:04:18.250
+Each pass of For Each sets the property named by Looping Variable and
+
+00:04:18.250 --> 00:04:20.686
+the last result, then takes Iterate.
+
+00:04:20.686 --> 00:04:23.237
+When the items run out, it takes Done.
+
+00:04:23.237 --> 00:04:27.992
+For Loop works the same way with a number, and its To value is not included.
+
+00:04:29.640 --> 00:04:33.086
+Here, Iterate leads from Each item to Check the item.
+
+00:04:33.086 --> 00:04:37.466
+Its True outcome leads to Count the coffee, and that activity and the
+
+00:04:37.466 --> 00:04:40.211
+False outcome both lead back to the loop.
+
+00:04:40.211 --> 00:04:42.430
+Done leads to Write the summary.
+
+00:04:42.899 --> 00:04:46.086
+Run, in the toolbar, starts the published version.
+
+00:04:46.086 --> 00:04:50.753
+The dialog reports the status of the instance and the output variables, here
+
+00:04:50.753 --> 00:04:52.859
+the summary the workflow wrote.
+
+00:04:53.360 --> 00:04:55.807
+Open the instance to see what happened.
+
+00:04:55.807 --> 00:04:59.941
+The path it ran is highlighted, and a badge on the repeated activities
+
+00:04:59.941 --> 00:05:01.900
+shows how many times they ran.
+
+00:05:02.421 --> 00:05:05.841
+The Variables tab shows the values this instance has:
+
+00:05:05.841 --> 00:05:08.681
+the number of coffees and the summary text.
+
+00:05:12.881 --> 00:05:18.841
+A module adds a syntax by implementing IWorkflowExpressionProvider, with a name, a display
+
+00:05:18.841 --> 00:05:22.131
+name, and an editor language as static members.
+
+00:05:22.131 --> 00:05:27.471
+AddWorkflowExpressionProvider registers it, and it appears in the syntax select.
+
+00:05:28.221 --> 00:05:36.338
+An activity evaluates its expressions through IWorkflowExpressionManager, which finds the provider for each expression's syntax.
+
+00:05:36.338 --> 00:05:40.821
+If/Else evaluates its Condition this way, and returns True or False.
+
+00:05:41.571 --> 00:05:46.611
+The functions that JavaScript expressions call come from global method providers.
+
+00:05:46.611 --> 00:05:51.188
+Only the Script activity passes setOutcome, as a method scoped to its own
+
+00:05:51.188 --> 00:05:55.591
+evaluation, which is why the other built-in activities do not have it.
+
+00:05:56.341 --> 00:06:00.745
+The JavaScript engine sets no time or statement limit by default, so you
+
+00:06:00.745 --> 00:06:02.609
+can set one on its options.
+
+00:06:02.609 --> 00:06:06.731
+A script that reaches a limit faults the workflow at that activity.
+
+00:06:07.481 --> 00:06:12.384
+Any other script error is logged, and the activity goes on with a default value.
+
+00:06:12.384 --> 00:06:17.971
+To stop there instead, check Fault the workflow on script errors in the workflow's settings.
+
+00:06:19.971 --> 00:06:25.477
+Expressions compute, variables remember, outcomes choose a path, and loops repeat it.
+
+00:06:25.477 --> 00:06:27.051
+Thanks for watching.
+
