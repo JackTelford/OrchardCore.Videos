@@ -249,7 +249,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Title Part: Titles, Generated Titles and Display Text](videos/title-part) | 4:26 | [https://youtu.be/Ah_1UmINVcU](https://youtu.be/Ah_1UmINVcU) | OrchardCMS/OrchardCore |
 | [URL Rewriting: Redirect and Rewrite Requests](videos/url-rewriting) | 6:00 | [https://youtu.be/qS6sm_CT4i0](https://youtu.be/qS6sm_CT4i0) | OrchardCMS/OrchardCore |
 | [Change Email: Let Users Update Their Email Address](videos/users-change-email) | 3:30 | [https://youtu.be/v6h8bw8iS6w](https://youtu.be/v6h8bw8iS6w) | OrchardCMS/OrchardCore |
-| [Custom User Settings: Add Your Own Fields to User Profiles](videos/users-custom-user-settings) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Custom User Settings: Add Your Own Fields to User Profiles](videos/users-custom-user-settings) | 5:12 | [https://youtu.be/kBhPHCNqQYY](https://youtu.be/kBhPHCNqQYY) | OrchardCMS/OrchardCore |
 | [User Login Settings: Sign-In Options and Lockout](videos/users-login-settings) | 5:01 | [https://youtu.be/e5b3QRTfdO0](https://youtu.be/e5b3QRTfdO0) | OrchardCMS/OrchardCore |
 | [Users: Create, Edit, Disable and Delete Accounts](videos/users-manage) | 5:33 | [https://youtu.be/zuhO5OFcxmA](https://youtu.be/zuhO5OFcxmA) | OrchardCMS/OrchardCore |
 | [Password and Lockout Options: Configure ASP.NET Core Identity](videos/users-password-and-lockout-options) |  | not uploaded | OrchardCMS/OrchardCore |
