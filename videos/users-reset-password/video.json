@@ -24,7 +24,44 @@
     "Orchard Core",
     "Users"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:18",
+      "title": "How password recovery works"
+    },
+    {
+      "time": "0:51",
+      "title": "Prepare the site"
+    },
+    {
+      "time": "1:42",
+      "title": "Allow password reset"
+    },
+    {
+      "time": "2:21",
+      "title": "Ask for a reset link"
+    },
+    {
+      "time": "2:54",
+      "title": "The reset email"
+    },
+    {
+      "time": "3:18",
+      "title": "Choose a new password"
+    },
+    {
+      "time": "3:57",
+      "title": "Good to know"
+    },
+    {
+      "time": "4:29",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -46,5 +83,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Users.ResetPassword"
-  }
+  },
+  "length": "4:41"
 }
