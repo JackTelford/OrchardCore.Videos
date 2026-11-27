@@ -23,7 +23,40 @@
     "Orchard Core",
     "Users"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Where the rules come from"
+    },
+    {
+      "time": "1:06",
+      "title": "Password requirements"
+    },
+    {
+      "time": "1:42",
+      "title": "Lockout"
+    },
+    {
+      "time": "2:07",
+      "title": "Where to set the options"
+    },
+    {
+      "time": "2:46",
+      "title": "Password rules at work"
+    },
+    {
+      "time": "3:25",
+      "title": "Lockout at work"
+    },
+    {
+      "time": "4:07",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: password requirements",
@@ -50,5 +83,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:guides/password-configuration"
-  }
+  },
+  "length": "4:21"
 }
