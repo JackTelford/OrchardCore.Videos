@@ -1,0 +1,179 @@
+WEBVTT
+
+00:00:01.000 --> 00:00:05.402
+Behind a reverse proxy or a load balancer, your site sees the proxy
+
+00:00:05.402 --> 00:00:07.151
+instead of the visitor.
+
+00:00:07.151 --> 00:00:12.758
+The Reverse Proxy Configuration feature tells the site which forwarded headers to read.
+
+00:00:12.758 --> 00:00:17.100
+In this video, we enable it, choose the headers, and keep it safe.
+
+00:00:21.700 --> 00:00:25.927
+A reverse proxy or a load balancer sits in front of your site.
+
+00:00:25.927 --> 00:00:30.527
+Visitors connect to the proxy, and the proxy passes each request on.
+
+00:00:30.527 --> 00:00:35.500
+So the site sees the address of the proxy, not the address of the visitor.
+
+00:00:36.250 --> 00:00:40.849
+The proxy can pass the original details along in HTTP headers.
+
+00:00:40.849 --> 00:00:48.086
+X-Forwarded-For carries the client IP address, X-Forwarded-Proto carries the protocol, HTTP or HTTPS,
+
+00:00:48.086 --> 00:00:52.550
+and X-Forwarded-Host carries the host the visitor asked for.
+
+00:00:53.300 --> 00:00:56.267
+Some features depend on the visitor's address.
+
+00:00:56.267 --> 00:01:00.660
+The Audit Trail can record the client IP address, and Rate Limits count
+
+00:01:00.660 --> 00:01:03.684
+the requests of anonymous visitors per address.
+
+00:01:03.684 --> 00:01:08.590
+Behind a proxy, without the headers, all of them share the address of the proxy.
+
+00:01:12.799 --> 00:01:16.226
+The settings come with a feature that you enable first.
+
+00:01:16.226 --> 00:01:19.709
+Let's open Tools, then Features, and search for reverse.
+
+00:01:20.180 --> 00:01:24.650
+Reverse Proxy Configuration is listed in the Infrastructure category.
+
+00:01:24.650 --> 00:01:26.200
+Let's select Enable.
+
+00:01:26.666 --> 00:01:30.947
+A message confirms that the feature was enabled, and the Settings menu has
+
+00:01:30.947 --> 00:01:32.445
+a Reverse Proxy entry.
+
+00:01:32.445 --> 00:01:37.581
+Opening the page takes two permissions, Manage Reverse Proxy Settings and Manage settings,
+
+00:01:37.581 --> 00:01:40.416
+and the Administrator role has both by default.
+
+00:01:44.637 --> 00:01:47.215
+Let's open Settings, then Reverse Proxy.
+
+00:01:47.215 --> 00:01:49.008
+A warning at the top says:
+
+00:01:49.008 --> 00:01:54.333
+The website might be restarted upon saving the settings, potentially leading to temporary
+
+00:01:54.333 --> 00:01:56.687
+unresponsiveness during the process.
+
+00:01:57.140 --> 00:01:59.981
+The page has one option for each header:
+
+00:01:59.981 --> 00:02:03.872
+X-Forwarded-For, X-Forwarded-Proto, and X-Forwarded-Host.
+
+00:02:03.872 --> 00:02:09.677
+Each label reads Enables the forwarding of the HTTP header, followed by the header name.
+
+00:02:09.677 --> 00:02:11.160
+All three are off.
+
+00:02:11.626 --> 00:02:16.598
+Under each option, Current request value shows what the site sees for this page:
+
+00:02:16.598 --> 00:02:19.836
+the client IP address, the protocol, and the host.
+
+00:02:19.836 --> 00:02:24.346
+Here there is no proxy, so these are the values of the local connection.
+
+00:02:24.805 --> 00:02:26.856
+Let's turn on all three options.
+
+00:02:26.856 --> 00:02:30.904
+Behind a proxy that sends the headers, turning an option on makes the
+
+00:02:30.904 --> 00:02:33.225
+site use the forwarded value instead.
+
+00:02:33.681 --> 00:02:34.707
+Select Save.
+
+00:02:34.707 --> 00:02:36.075
+The site confirms:
+
+00:02:36.075 --> 00:02:38.412
+Site settings updated successfully.
+
+00:02:38.412 --> 00:02:42.631
+The three options stay selected, and they are saved for this tenant.
+
+00:02:46.831 --> 00:02:51.042
+Forwarded headers are only as trustworthy as whoever sends them.
+
+00:02:51.042 --> 00:02:57.299
+The documentation warns that wrong settings can expose a site to IP spoofing and header injection.
+
+00:02:57.299 --> 00:03:01.451
+So trust the headers only when they come from your own proxies.
+
+00:03:02.201 --> 00:03:06.272
+Known proxies lists the IP addresses of the proxies you trust, and known
+
+00:03:06.272 --> 00:03:08.464
+networks lists their network ranges.
+
+00:03:08.464 --> 00:03:10.500
+This page has no fields for them.
+
+00:03:10.500 --> 00:03:14.623
+Set them in the Settings recipe step, or in the server configuration when
+
+00:03:14.623 --> 00:03:16.241
+the application reads it.
+
+00:03:16.991 --> 00:03:20.924
+When the application is set up to read these settings from the server
+
+00:03:20.924 --> 00:03:23.441
+configuration, its values take precedence.
+
+00:03:23.441 --> 00:03:25.382
+This page then shows a message:
+
+00:03:25.382 --> 00:03:30.468
+The current settings are coming from configuration sources, saving the settings will affect
+
+00:03:30.468 --> 00:03:32.881
+the AdminSettings not the configuration.
+
+00:03:33.631 --> 00:03:37.718
+The options of this page belong to the current tenant, so each tenant
+
+00:03:37.718 --> 00:03:39.735
+of an installation has its own.
+
+00:03:39.735 --> 00:03:43.931
+A deployment plan can export them with the Reverse Proxy settings step.
+
+00:03:45.931 --> 00:03:50.997
+Enable Reverse Proxy Configuration, turn on the headers your proxy sends, and trust
+
+00:03:50.997 --> 00:03:52.591
+only your own proxies.
+
+00:03:52.591 --> 00:03:54.071
+Thanks for watching.
+
