@@ -120,7 +120,7 @@
             },
             {
               "id": "theme-2",
-              "text": "The login form appears inside the layout of the site theme, with the site name in the navigation bar."
+              "text": "The login form appears inside the layout of the site theme, with the theme's fonts, button colors, and footer."
             }
           ]
         }
