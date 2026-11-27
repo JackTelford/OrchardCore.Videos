@@ -79,5 +79,10 @@
     "pullRequest": null,
     "feature": "OrchardCore.Users.Authentication.CacheTicketStore"
   },
-  "length": "3:49"
+  "length": "3:49",
+  "youtube": {
+    "id": "X1TKmwKmo3g",
+    "url": "https://youtu.be/X1TKmwKmo3g",
+    "version": "v1"
+  }
 }
