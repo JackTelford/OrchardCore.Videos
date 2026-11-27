@@ -3643,18 +3643,18 @@
       "src/docs/guides/password-configuration/README.md",
       "src/docs/guides/lockout-configuration/README.md"
     ],
-    "status": "content-ready",
+    "status": "recorded",
     "estimatedMinutes": 3.8,
     "words": 573,
     "contentCommit": "",
     "recordedBy": "",
-    "recordedOn": "",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
-    "notes": ""
+    "notes": "2026-11-17 blocked: 2026-11-17 blocked: the narration (rules-2, lock-1) depends on non-default Identity options (RequireDigit and RequireNonAlphanumeric off, 3 failed attempts) that can only be set in the site's Program.cs (IdentityOptions); the shared site build C:/Code/oc-video-site must not be changed and no separate build is available."
   },
   {
     "slug": "users-ticket-store",
