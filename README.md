@@ -251,7 +251,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Change Email: Let Users Update Their Email Address](videos/users-change-email) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Custom User Settings: Add Your Own Fields to User Profiles](videos/users-custom-user-settings) |  | not uploaded | OrchardCMS/OrchardCore |
 | [User Login Settings: Sign-In Options and Lockout](videos/users-login-settings) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Users: Create, Edit, Disable and Delete Accounts](videos/users-manage) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Users: Create, Edit, Disable and Delete Accounts](videos/users-manage) | 5:33 | [https://youtu.be/zuhO5OFcxmA](https://youtu.be/zuhO5OFcxmA) | OrchardCMS/OrchardCore |
 | [Password and Lockout Options: Configure ASP.NET Core Identity](videos/users-password-and-lockout-options) |  | not uploaded | OrchardCMS/OrchardCore |
 | [User Registration: Let Visitors Create Accounts](videos/users-registration) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Reset Password: Let Users Recover Their Accounts](videos/users-reset-password) |  | not uploaded | OrchardCMS/OrchardCore |
