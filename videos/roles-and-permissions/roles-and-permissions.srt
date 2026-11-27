@@ -1,0 +1,316 @@
+1
+00:00:01,000 --> 00:00:05,001
+Not everyone who uses your site should be able to do everything.
+
+2
+00:00:05,001 --> 00:00:09,574
+Roles and permissions decide who can view, edit, publish, and manage what.
+
+3
+00:00:09,574 --> 00:00:14,490
+In this video, you create a role, choose its permissions, and give it to a user.
+
+4
+00:00:19,090 --> 00:00:23,137
+A permission is one thing a person may do, such as editing content
+
+5
+00:00:23,137 --> 00:00:25,892
+that other people wrote, or managing users.
+
+6
+00:00:25,892 --> 00:00:28,140
+Modules add their own permissions.
+
+7
+00:00:28,890 --> 00:00:32,222
+A role is a named set of permissions, such as Editor.
+
+8
+00:00:32,222 --> 00:00:36,006
+You grant permissions to a role, and then give the role to as
+
+9
+00:00:36,006 --> 00:00:37,700
+many people as you like.
+
+10
+00:00:38,450 --> 00:00:42,693
+A user can have several roles, and receives the permissions of all of them.
+
+11
+00:00:42,693 --> 00:00:47,040
+When you change a role, you change what everyone who has it is allowed to do.
+
+12
+00:00:47,790 --> 00:00:50,245
+Three system roles are always there.
+
+13
+00:00:50,245 --> 00:00:55,330
+Administrator is allowed to do everything, and its permissions cannot be changed.
+
+14
+00:00:56,080 --> 00:00:59,777
+Anonymous stands for every visitor who is not signed in.
+
+15
+00:00:59,777 --> 00:01:05,084
+Authenticated stands for everyone who is signed in, and signed-in users receive the
+
+16
+00:01:05,084 --> 00:01:07,410
+permissions of Anonymous as well.
+
+17
+00:01:08,160 --> 00:01:10,614
+Every other role is yours to create.
+
+18
+00:01:10,614 --> 00:01:15,173
+A site set up with the Blog recipe also has Author, Contributor, Editor,
+
+19
+00:01:15,173 --> 00:01:20,140
+and Moderator, and modules grant default permissions to roles with those names.
+
+20
+00:01:24,423 --> 00:01:28,017
+Roles are under Access Control, Roles in the admin menu.
+
+21
+00:01:28,017 --> 00:01:31,843
+The page lists every role of the site, with its description.
+
+22
+00:01:32,341 --> 00:01:34,879
+The three system roles carry a System badge.
+
+23
+00:01:34,879 --> 00:01:38,330
+Every role has an Edit button, and only the roles that are not
+
+24
+00:01:38,330 --> 00:01:40,361
+system roles have a Delete button.
+
+25
+00:01:40,849 --> 00:01:46,338
+Edit on Administrator opens a page with a notice instead of a list of permissions.
+
+26
+00:01:46,338 --> 00:01:50,329
+This system role already grants all available permissions.
+
+27
+00:01:50,803 --> 00:01:54,773
+Anonymous and Authenticated are edited like any other role.
+
+28
+00:01:54,773 --> 00:01:59,903
+Whatever you allow there applies to every visitor, or to every signed-in user.
+
+29
+00:02:00,412 --> 00:02:03,712
+Opening this page takes the View Roles permission.
+
+30
+00:02:03,712 --> 00:02:07,660
+A user who has View Roles but not Manage Roles sees the list,
+
+31
+00:02:07,660 --> 00:02:10,782
+without the Add Role, Edit, and Delete buttons.
+
+32
+00:02:11,242 --> 00:02:14,831
+Adding, editing, and deleting roles takes Manage Roles.
+
+33
+00:02:14,831 --> 00:02:19,832
+Both are permissions like any other, so you give them to roles in the same way.
+
+34
+00:02:24,132 --> 00:02:27,443
+Let's create a role for someone who proofreads posts.
+
+35
+00:02:27,443 --> 00:02:32,102
+Add Role opens the Create Role page, which asks for a Name and a Description.
+
+36
+00:02:32,636 --> 00:02:36,321
+We name the role Proofreader, and describe what it is for.
+
+37
+00:02:36,321 --> 00:02:40,986
+A role name must be unique, and it cannot be changed after the role exists.
+
+38
+00:02:41,441 --> 00:02:44,593
+Create saves the role and returns to the list.
+
+39
+00:02:44,593 --> 00:02:49,501
+Save & Configure saves it and opens its permissions, so let's use that one.
+
+40
+00:02:53,720 --> 00:02:58,329
+Permissions are listed in groups, usually one for each feature that provides them.
+
+41
+00:02:58,329 --> 00:03:01,420
+Each row has an Allow column and an Effective column.
+
+42
+00:03:01,877 --> 00:03:06,504
+No permission is allowed for this role, but View all content is effective.
+
+43
+00:03:06,504 --> 00:03:09,684
+Allow means the permission is granted explicitly.
+
+44
+00:03:09,684 --> 00:03:16,567
+Effective also counts permissions implied by another one, and permissions granted by Anonymous and Authenticated.
+
+45
+00:03:17,024 --> 00:03:19,631
+Search permissions narrows the list.
+
+46
+00:03:19,631 --> 00:03:23,727
+Let's search for access admin, and allow Access admin panel.
+
+47
+00:03:23,727 --> 00:03:29,004
+A user needs this permission, from any of their roles, to use the admin at all.
+
+48
+00:03:29,464 --> 00:03:33,617
+Next, search for list content and allow List content items, so the role
+
+49
+00:03:33,617 --> 00:03:35,343
+can open the content list.
+
+50
+00:03:35,343 --> 00:03:39,658
+Then search for edit content for others and allow Edit content for others,
+
+51
+00:03:39,658 --> 00:03:43,164
+which lets the role change content written by other people.
+
+52
+00:03:43,616 --> 00:03:47,310
+Some rows carry a Security Critical badge, like Manage Roles.
+
+53
+00:03:47,310 --> 00:03:51,831
+Such a permission could let a user elevate their other permissions, so grant
+
+54
+00:03:51,831 --> 00:03:53,816
+it with extreme consideration.
+
+55
+00:03:54,267 --> 00:03:59,017
+Save stores the role and returns to the list, with a confirmation message.
+
+56
+00:03:59,475 --> 00:04:02,146
+Open Proofreader again to check the result.
+
+57
+00:04:02,146 --> 00:04:05,962
+Hovering the Effective box of View all content shows the reason:
+
+58
+00:04:05,962 --> 00:04:08,525
+it is implied by Edit content for others.
+
+59
+00:04:12,732 --> 00:04:14,905
+Roles are given to users.
+
+60
+00:04:14,905 --> 00:04:19,882
+Under Access Control, Users, Add User opens the Create User page.
+
+61
+00:04:20,337 --> 00:04:23,063
+Enter a user name and an email address.
+
+62
+00:04:23,063 --> 00:04:28,877
+Generate password fills in the password and its confirmation, so nobody has to invent one.
+
+63
+00:04:29,333 --> 00:04:32,051
+The Roles field lists the roles you can give.
+
+64
+00:04:32,051 --> 00:04:36,528
+Anonymous and Authenticated are not offered, because they apply automatically.
+
+65
+00:04:36,528 --> 00:04:38,073
+Let's tick Proofreader.
+
+66
+00:04:38,534 --> 00:04:42,850
+Save creates the user, and the list shows Proofreader on the user's row.
+
+67
+00:04:42,850 --> 00:04:47,554
+The same field appears when you edit a user, and a user can have several roles.
+
+68
+00:04:51,765 --> 00:04:55,538
+Back on the Roles page, let's remove a role we no longer need.
+
+69
+00:04:55,538 --> 00:04:59,755
+Guest Blogger has a Delete button, and a dialog asks for confirmation.
+
+70
+00:05:00,212 --> 00:05:04,188
+Choosing Ok deletes the role and shows a confirmation message.
+
+71
+00:05:04,188 --> 00:05:06,352
+Users who had the role lose it.
+
+72
+00:05:10,552 --> 00:05:11,467
+To sum up:
+
+73
+00:05:11,467 --> 00:05:14,957
+permissions belong to roles, and roles belong to users.
+
+74
+00:05:14,957 --> 00:05:20,563
+Allow grants a permission explicitly, Effective shows the full result, and Security Critical
+
+75
+00:05:20,563 --> 00:05:23,252
+marks the permissions to grant with care.
+
+76
+00:05:25,252 --> 00:05:28,543
+Roles and permissions decide who can do what on your site.
+
+77
+00:05:28,543 --> 00:05:32,760
+A separate video covers permissions for each content type, and for the owner
+
+78
+00:05:32,760 --> 00:05:33,995
+of a content item.
+
+79
+00:05:33,995 --> 00:05:35,332
+Thanks for watching.
+
