@@ -23,7 +23,32 @@
     "Orchard Core",
     "Workflows"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "The database session"
+    },
+    {
+      "time": "0:52",
+      "title": "Commit Transaction"
+    },
+    {
+      "time": "2:30",
+      "title": "Fork and Join"
+    },
+    {
+      "time": "4:17",
+      "title": "Where to commit"
+    },
+    {
+      "time": "4:45",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Workflows",
@@ -53,5 +78,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Workflows.Session"
-  }
+  },
+  "length": "4:59"
 }
