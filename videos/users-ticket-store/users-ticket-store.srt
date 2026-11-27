@@ -1,0 +1,192 @@
+1
+00:00:01,000 --> 00:00:04,956
+Orchard Core keeps the ticket of a signed-in user in a cookie.
+
+2
+00:00:04,956 --> 00:00:09,784
+The Users Authentication Ticket Store feature keeps it on the server instead.
+
+3
+00:00:09,784 --> 00:00:13,623
+In this video, we'll see why, how to enable it, how its code
+
+4
+00:00:13,623 --> 00:00:15,950
+works, and where the tickets live.
+
+5
+00:00:20,550 --> 00:00:25,173
+By default, the application cookie holds the whole authentication ticket.
+
+6
+00:00:25,173 --> 00:00:29,797
+With the Roles module enabled, the ticket carries the claims of the user,
+
+7
+00:00:29,797 --> 00:00:34,420
+including one for each role and, unless the user is an administrator, one
+
+8
+00:00:34,420 --> 00:00:36,820
+for each permission of those roles.
+
+9
+00:00:37,570 --> 00:00:41,690
+The more roles and permissions a user has, the larger the cookie.
+
+10
+00:00:41,690 --> 00:00:48,130
+The documentation describes requests that fail when the cookie pushes the request headers over the limit.
+
+11
+00:00:48,880 --> 00:00:52,835
+With the ticket store, the ticket stays on the server, in a cache.
+
+12
+00:00:52,835 --> 00:00:56,680
+The browser keeps a cookie that holds only a session identifier.
+
+13
+00:01:00,898 --> 00:01:04,858
+You enable the ticket store on the Features page, under Tools.
+
+14
+00:01:04,858 --> 00:01:10,738
+Search for ticket, and the Users Authentication Ticket Store appears, in the Security category.
+
+15
+00:01:11,202 --> 00:01:16,650
+The row shows the name, the identifier that recipes use, and the description.
+
+16
+00:01:16,650 --> 00:01:21,112
+The Users badge is its dependency, and its status is Disabled.
+
+17
+00:01:21,568 --> 00:01:23,840
+To turn it on, you select Enable.
+
+18
+00:01:23,840 --> 00:01:27,858
+The feature has no settings page and no permissions of its own.
+
+19
+00:01:29,458 --> 00:01:33,617
+In a recipe, the Feature step enables a feature by its identifier.
+
+20
+00:01:33,617 --> 00:01:38,988
+List the ticket store there, and any site that runs the recipe has the feature enabled.
+
+21
+00:01:43,188 --> 00:01:46,829
+The feature has one startup class, tied to its identifier.
+
+22
+00:01:46,829 --> 00:01:51,549
+It registers the configuration of the cookie options, so nothing changes in a
+
+23
+00:01:51,549 --> 00:01:53,938
+tenant until the feature is enabled.
+
+24
+00:01:54,688 --> 00:02:00,738
+That configuration sets the SessionStore of the Identity application cookie, and of no other cookie.
+
+25
+00:02:00,738 --> 00:02:06,160
+The store is a CacheTicketStore, an ITicketStore built from the IDistributedCache and the
+
+26
+00:02:06,160 --> 00:02:08,728
+Data Protection provider of the tenant.
+
+27
+00:02:09,478 --> 00:02:14,535
+StoreAsync serializes the ticket, protects it with Data Protection, and writes it to
+
+28
+00:02:14,535 --> 00:02:16,502
+the cache under a unique key.
+
+29
+00:02:16,502 --> 00:02:20,828
+The entry expires when the ticket does, and the method returns the key.
+
+30
+00:02:21,578 --> 00:02:27,354
+RetrieveAsync reads the entry by its key, unprotects it, and deserializes the ticket.
+
+31
+00:02:27,354 --> 00:02:30,781
+When the entry is missing, it returns no ticket.
+
+32
+00:02:30,781 --> 00:02:36,048
+When the entry can't be unprotected, it logs the error and returns no ticket.
+
+33
+00:02:36,798 --> 00:02:39,135
+RemoveAsync deletes the entry.
+
+34
+00:02:39,135 --> 00:02:45,494
+RenewAsync writes the ticket again with its expiration, and logs a failure without throwing.
+
+35
+00:02:45,494 --> 00:02:49,258
+StoreAsync also logs a failure, but throws it again.
+
+36
+00:02:53,458 --> 00:02:57,525
+The store uses whichever IDistributedCache the tenant registers.
+
+37
+00:02:57,525 --> 00:03:01,534
+By default, that is a memory cache, one for each tenant, so the
+
+38
+00:03:01,534 --> 00:03:06,298
+tickets live in memory, and a restart or a reload of the tenant clears them.
+
+39
+00:03:07,048 --> 00:03:12,043
+With several instances, enable Redis Cache and set the Redis configuration, and the
+
+40
+00:03:12,043 --> 00:03:16,084
+tickets go to Redis under the instance prefix and the tenant name.
+
+41
+00:03:16,084 --> 00:03:20,798
+If the configuration is missing or invalid, the tenant keeps the memory cache.
+
+42
+00:03:21,548 --> 00:03:26,819
+Because tickets are protected with Data Protection, instances that share a cache must
+
+43
+00:03:26,819 --> 00:03:28,382
+share their keys too.
+
+44
+00:03:28,382 --> 00:03:35,158
+Distributed Data Protection (Redis) and Distributed Data Protection (Azure Storage) keep the keys in one place.
+
+45
+00:03:37,158 --> 00:03:39,852
+That's the Users Authentication Ticket Store:
+
+46
+00:03:39,852 --> 00:03:43,391
+it keeps the ticket on the server, in memory or in Redis, and
+
+47
+00:03:43,391 --> 00:03:46,085
+leaves the browser with a session identifier.
+
+48
+00:03:46,085 --> 00:03:47,458
+Thanks for watching.
+
