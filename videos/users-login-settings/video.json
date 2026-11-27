@@ -23,7 +23,44 @@
     "Orchard Core",
     "Users"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "What the settings control"
+    },
+    {
+      "time": "0:56",
+      "title": "The login page and its settings"
+    },
+    {
+      "time": "1:29",
+      "title": "Remember me"
+    },
+    {
+      "time": "2:20",
+      "title": "Login page theme"
+    },
+    {
+      "time": "2:41",
+      "title": "Local password login"
+    },
+    {
+      "time": "3:10",
+      "title": "Editing user details"
+    },
+    {
+      "time": "3:48",
+      "title": "Account lockout"
+    },
+    {
+      "time": "4:46",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Login",
@@ -51,5 +88,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Users"
-  }
+  },
+  "length": "5:01"
 }
