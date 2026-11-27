@@ -205,7 +205,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Secrets: Store Passwords and API Keys Safely](videos/secrets-manage) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Secrets: Move Existing Credentials and Change Stores](videos/secrets-migrate-and-stores) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Secure Your Site: A Checklist for Administrators](videos/secure-your-site) | 7:17 | [https://youtu.be/PxKUWRXGKas](https://youtu.be/PxKUWRXGKas) | OrchardCMS/OrchardCore |
-| [CORS: Allow Other Sites to Call Your APIs](videos/security-cors) |  | not uploaded | OrchardCMS/OrchardCore |
+| [CORS: Allow Other Sites to Call Your APIs](videos/security-cors) | 4:51 | [https://youtu.be/jkep9BfFLXM](https://youtu.be/jkep9BfFLXM) | OrchardCMS/OrchardCore |
 | [Security Headers: Content Security Policy and More](videos/security-headers) |  | not uploaded | OrchardCMS/OrchardCore |
 | [HTTPS: Require Secure Connections](videos/security-https) | 4:22 | [https://youtu.be/GuGGh5yTkD4](https://youtu.be/GuGGh5yTkD4) | OrchardCMS/OrchardCore |
 | [Rate Limits: Protect Your Site From Floods of Requests](videos/security-rate-limits) |  | not uploaded | OrchardCMS/OrchardCore |
