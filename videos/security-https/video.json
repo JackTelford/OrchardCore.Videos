@@ -22,7 +22,32 @@
     "Orchard Core",
     "Site Security"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "How the module works"
+    },
+    {
+      "time": "1:43",
+      "title": "Turn on the module"
+    },
+    {
+      "time": "2:06",
+      "title": "Set up HTTPS"
+    },
+    {
+      "time": "3:23",
+      "title": "After you save"
+    },
+    {
+      "time": "4:09",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -44,5 +69,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Https"
-  }
+  },
+  "length": "4:22"
 }
