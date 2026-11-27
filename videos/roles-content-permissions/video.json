@@ -23,7 +23,40 @@
     "Orchard Core",
     "Roles and Permissions"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:16",
+      "title": "How content permissions work"
+    },
+    {
+      "time": "1:17",
+      "title": "Make a type securable"
+    },
+    {
+      "time": "1:45",
+      "title": "Grant permissions to a role"
+    },
+    {
+      "time": "3:11",
+      "title": "Permissions for all content"
+    },
+    {
+      "time": "3:43",
+      "title": "See it as a writer"
+    },
+    {
+      "time": "4:45",
+      "title": "What to remember"
+    },
+    {
+      "time": "5:26",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
