@@ -263,7 +263,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Write a Workflow Activity](videos/workflow-activity-create) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Workflows: Create, Update and Publish Content Automatically](videos/workflows-content-tasks) | 6:02 | [https://youtu.be/d8eJUVHGMHI](https://youtu.be/d8eJUVHGMHI) | OrchardCMS/OrchardCore |
 | [Workflows: Events, Tasks and Outcomes](videos/workflows-events-tasks-outcomes) | 5:14 | [https://youtu.be/0Nu728nj938](https://youtu.be/0Nu728nj938) | OrchardCMS/OrchardCore |
-| [Workflows in Depth: Expressions, Variables, Branches and Loops](videos/workflows-expressions-and-loops) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows in Depth: Expressions, Variables, Branches and Loops](videos/workflows-expressions-and-loops) | 6:28 | [https://youtu.be/jcUHIQeiUR0](https://youtu.be/jcUHIQeiUR0) | OrchardCMS/OrchardCore |
 | [HTTP Workflows: Handle Requests and Call Web APIs](videos/workflows-http) | 6:42 | [https://youtu.be/iJ1bmOI-bvg](https://youtu.be/iJ1bmOI-bvg) | OrchardCMS/OrchardCore |
 | [Workflow Instances: Follow and Troubleshoot Each Run](videos/workflows-instances) | 4:35 | [https://youtu.be/SoduJoUp6Rs](https://youtu.be/SoduJoUp6Rs) | OrchardCMS/OrchardCore |
 | [Workflows: Automate Tasks Without Writing Code](videos/workflows-overview) | 5:56 | [https://youtu.be/_nlyO00Cusc](https://youtu.be/_nlyO00Cusc) | OrchardCMS/OrchardCore |

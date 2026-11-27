@@ -3366,7 +3366,7 @@
       "src/docs/reference/modules/Workflows/README.md",
       "src/docs/reference/modules/Scripting/README.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 6.0,
     "words": 894,
     "contentCommit": "",
@@ -3374,9 +3374,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/389",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "workflows-expressions-and-loops/v1",
+    "youtubeId": "jcUHIQeiUR0",
+    "publishedOn": "2026-11-27",
     "notes": ""
   },
   {
