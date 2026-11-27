@@ -3392,14 +3392,14 @@
     "docs": [
       "src/docs/reference/modules/Tenants/README.md"
     ],
-    "status": "content-ready",
+    "status": "in-review",
     "estimatedMinutes": 4.6,
     "words": 688,
     "contentCommit": "",
-    "recordedBy": "",
-    "recordedOn": "",
+    "recordedBy": "wipke",
+    "recordedOn": "2026-11-17",
     "reviewedBy": "",
-    "pullRequest": "",
+    "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/390",
     "release": "",
     "youtubeId": "",
     "publishedOn": "",
