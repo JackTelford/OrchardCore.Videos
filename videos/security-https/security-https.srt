@@ -1,0 +1,228 @@
+1
+00:00:01,000 --> 00:00:06,599
+The HTTPS module can redirect visitors from HTTP to HTTPS, and can tell
+
+2
+00:00:06,599 --> 00:00:09,144
+browsers to keep using HTTPS.
+
+3
+00:00:09,144 --> 00:00:13,871
+In this video, you turn the module on, set it up, and learn
+
+4
+00:00:13,871 --> 00:00:15,980
+what each setting does.
+
+5
+00:00:20,580 --> 00:00:26,720
+Over plain HTTP, the data between a browser and your site travels as readable text.
+
+6
+00:00:26,720 --> 00:00:32,170
+HTTPS encrypts that connection, so the data cannot be read along the way.
+
+7
+00:00:32,920 --> 00:00:39,519
+When Require HTTPS is on, a request that arrives over HTTP receives a redirect.
+
+8
+00:00:39,519 --> 00:00:46,740
+The browser follows it to the HTTPS address, and the rest of the exchange is encrypted.
+
+9
+00:00:47,490 --> 00:00:50,562
+The settings page has four settings.
+
+10
+00:00:50,562 --> 00:00:56,997
+Require HTTPS turns the redirect on, and HSTS mode controls a header for browsers.
+
+11
+00:00:56,997 --> 00:01:04,530
+Require HTTPS Permanent chooses a permanent redirect, and SSL Port names the port to redirect to.
+
+12
+00:01:05,280 --> 00:01:12,889
+HTTP Strict Transport Security, or HSTS, is a header that tells browsers to use HTTPS only.
+
+13
+00:01:12,889 --> 00:01:18,771
+The module sends it with a lifetime of 365 days, subdomains included.
+
+14
+00:01:18,771 --> 00:01:21,909
+HSTS mode decides when it is sent:
+
+15
+00:01:21,909 --> 00:01:26,380
+never, in every environment, or only in Production.
+
+16
+00:01:27,130 --> 00:01:32,147
+The settings can be changed only when the page is opened over HTTPS.
+
+17
+00:01:32,147 --> 00:01:37,909
+Over plain HTTP, a message says that changing HTTPS-only settings over HTTP has
+
+18
+00:01:37,909 --> 00:01:42,180
+been prevented, and the changes you save are not applied.
+
+19
+00:01:46,412 --> 00:01:48,579
+Let's turn the module on.
+
+20
+00:01:48,579 --> 00:01:52,842
+Open Tools, Features, and type HTTPS in the search box.
+
+21
+00:01:53,299 --> 00:01:58,989
+HTTPS is listed in the Security category, with a description of what the module does.
+
+22
+00:01:59,453 --> 00:02:00,816
+Select Enable.
+
+23
+00:02:00,816 --> 00:02:02,520
+A message confirms:
+
+24
+00:02:02,520 --> 00:02:04,973
+The feature HTTPS was enabled.
+
+25
+00:02:09,203 --> 00:02:11,882
+Open Settings, Security, HTTPS.
+
+26
+00:02:11,882 --> 00:02:18,253
+A warning at the top says the website might be restarted upon saving the settings.
+
+27
+00:02:18,713 --> 00:02:21,099
+Let's select Require HTTPS.
+
+28
+00:02:21,099 --> 00:02:26,523
+It applies to all requests, so once the settings are saved, a request
+
+29
+00:02:26,523 --> 00:02:30,283
+that arrives over HTTP is redirected to HTTPS.
+
+30
+00:02:30,735 --> 00:02:32,432
+Below it is HSTS mode.
+
+31
+00:02:32,432 --> 00:02:37,644
+The notice under the drop-down list warns that browsers may stop connecting over
+
+32
+00:02:37,644 --> 00:02:42,130
+HTTP after receiving the header, if HTTPS later becomes unavailable.
+
+33
+00:02:42,130 --> 00:02:47,585
+Let's choose the option From environment, enabled in Production, disabled otherwise.
+
+34
+00:02:48,042 --> 00:02:53,809
+Require HTTPS Permanent switches the redirect from a temporary one to a permanent one.
+
+35
+00:02:53,809 --> 00:02:58,072
+Let's leave it unselected, which keeps the temporary redirect.
+
+36
+00:02:58,545 --> 00:03:00,955
+SSL Port is the port to redirect to.
+
+37
+00:03:00,955 --> 00:03:03,825
+Here it already shows the port of this page.
+
+38
+00:03:03,825 --> 00:03:07,785
+Leave it empty to let the site try to work the port out itself.
+
+39
+00:03:08,241 --> 00:03:09,351
+Select Save.
+
+40
+00:03:09,351 --> 00:03:10,892
+A message confirms:
+
+41
+00:03:10,892 --> 00:03:13,421
+Site settings updated successfully.
+
+42
+00:03:13,881 --> 00:03:16,624
+The page shows the saved settings:
+
+43
+00:03:16,624 --> 00:03:22,181
+Require HTTPS is selected, and HSTS mode shows the From environment option.
+
+44
+00:03:26,381 --> 00:03:33,057
+Once the saved settings are applied, a request that arrives over HTTP is redirected to HTTPS.
+
+45
+00:03:33,057 --> 00:03:37,441
+This applies to every page of the site, not only the admin.
+
+46
+00:03:38,191 --> 00:03:42,305
+The settings belong to the tenant, so each tenant of a site has
+
+47
+00:03:42,305 --> 00:03:44,034
+its own HTTPS settings.
+
+48
+00:03:44,034 --> 00:03:48,625
+Saving reloads the tenant, which the warning on the page describes as a
+
+49
+00:03:48,625 --> 00:03:50,891
+possible restart of the website.
+
+50
+00:03:51,641 --> 00:03:56,308
+If a load balancer handles HTTPS and passes plain HTTP to the site,
+
+51
+00:03:56,308 --> 00:04:01,231
+the site sees HTTP requests, and the page ignores the changes you save.
+
+52
+00:04:01,231 --> 00:04:05,963
+The Reverse Proxy settings can forward the protocol the client used.
+
+53
+00:04:05,963 --> 00:04:08,201
+A separate video covers them.
+
+54
+00:04:10,201 --> 00:04:12,342
+That's the HTTPS module:
+
+55
+00:04:12,342 --> 00:04:17,482
+a redirect from HTTP to HTTPS, a choice of redirect type and port,
+
+56
+00:04:17,482 --> 00:04:19,124
+and an HSTS mode.
+
+57
+00:04:19,124 --> 00:04:20,981
+Thanks for watching.
+
