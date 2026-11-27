@@ -252,7 +252,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Custom User Settings: Add Your Own Fields to User Profiles](videos/users-custom-user-settings) | 5:12 | [https://youtu.be/kBhPHCNqQYY](https://youtu.be/kBhPHCNqQYY) | OrchardCMS/OrchardCore |
 | [User Login Settings: Sign-In Options and Lockout](videos/users-login-settings) | 5:01 | [https://youtu.be/e5b3QRTfdO0](https://youtu.be/e5b3QRTfdO0) | OrchardCMS/OrchardCore |
 | [Users: Create, Edit, Disable and Delete Accounts](videos/users-manage) | 5:33 | [https://youtu.be/zuhO5OFcxmA](https://youtu.be/zuhO5OFcxmA) | OrchardCMS/OrchardCore |
-| [Password and Lockout Options: Configure ASP.NET Core Identity](videos/users-password-and-lockout-options) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Password and Lockout Options: Configure ASP.NET Core Identity](videos/users-password-and-lockout-options) | 4:21 | [https://youtu.be/nrdNWZz-wds](https://youtu.be/nrdNWZz-wds) | OrchardCMS/OrchardCore |
 | [User Registration: Let Visitors Create Accounts](videos/users-registration) | 5:28 | [https://youtu.be/bEGdevqvzPk](https://youtu.be/bEGdevqvzPk) | OrchardCMS/OrchardCore |
 | [Reset Password: Let Users Recover Their Accounts](videos/users-reset-password) | 4:41 | [https://youtu.be/IN4Y8boTxd8](https://youtu.be/IN4Y8boTxd8) | OrchardCMS/OrchardCore |
 | [Authentication Ticket Store: Keep Sign-In Tickets on the Server](videos/users-ticket-store) |  | not uploaded | OrchardCMS/OrchardCore |

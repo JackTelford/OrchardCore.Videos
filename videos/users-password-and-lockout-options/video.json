@@ -84,5 +84,10 @@
     "pullRequest": null,
     "feature": "guide:guides/password-configuration"
   },
-  "length": "4:21"
+  "length": "4:21",
+  "youtube": {
+    "id": "nrdNWZz-wds",
+    "url": "https://youtu.be/nrdNWZz-wds",
+    "version": "v1"
+  }
 }
