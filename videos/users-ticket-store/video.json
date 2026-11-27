@@ -23,7 +23,32 @@
     "Orchard Core",
     "Users"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:17",
+      "title": "Why a ticket store"
+    },
+    {
+      "time": "0:57",
+      "title": "Enable the feature"
+    },
+    {
+      "time": "1:40",
+      "title": "How it works"
+    },
+    {
+      "time": "2:50",
+      "title": "Where the tickets live"
+    },
+    {
+      "time": "3:36",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -53,5 +78,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Users.Authentication.CacheTicketStore"
-  }
+  },
+  "length": "3:49"
 }
