@@ -27,7 +27,48 @@
     "Orchard Core",
     "Site Security"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:13",
+      "title": "The checklist"
+    },
+    {
+      "time": "0:32",
+      "title": "Turn on what you need"
+    },
+    {
+      "time": "1:00",
+      "title": "Who can do what"
+    },
+    {
+      "time": "2:08",
+      "title": "How people sign in"
+    },
+    {
+      "time": "2:57",
+      "title": "Protect the connection"
+    },
+    {
+      "time": "4:18",
+      "title": "Stop abuse"
+    },
+    {
+      "time": "5:31",
+      "title": "Keep records and secrets"
+    },
+    {
+      "time": "6:28",
+      "title": "Review the checklist"
+    },
+    {
+      "time": "7:01",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Security",
@@ -54,5 +95,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "guide:topics/security"
-  }
+  },
+  "length": "7:17"
 }
