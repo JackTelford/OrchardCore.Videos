@@ -21,7 +21,36 @@
     "Orchard Core",
     "Users"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:14",
+      "title": "Why personal preferences"
+    },
+    {
+      "time": "0:45",
+      "title": "Prepare the site"
+    },
+    {
+      "time": "1:37",
+      "title": "Choose a time zone and a culture"
+    },
+    {
+      "time": "2:28",
+      "title": "See the difference"
+    },
+    {
+      "time": "2:46",
+      "title": "Which setting applies"
+    },
+    {
+      "time": "3:32",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation",
@@ -43,5 +72,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Users.TimeZone"
-  }
+  },
+  "length": "3:42"
 }
