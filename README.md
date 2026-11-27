@@ -268,7 +268,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Workflow Instances: Follow and Troubleshoot Each Run](videos/workflows-instances) | 4:35 | [https://youtu.be/SoduJoUp6Rs](https://youtu.be/SoduJoUp6Rs) | OrchardCMS/OrchardCore |
 | [Workflows: Automate Tasks Without Writing Code](videos/workflows-overview) | 5:56 | [https://youtu.be/_nlyO00Cusc](https://youtu.be/_nlyO00Cusc) | OrchardCMS/OrchardCore |
 | [Workflows: Send an Email When Content Is Published](videos/workflows-send-email-on-publish) | 5:58 | [https://youtu.be/1VGSI2vwPqg](https://youtu.be/1VGSI2vwPqg) | OrchardCMS/OrchardCore |
-| [Workflows and the Database Session: Commit, Fork and Join](videos/workflows-session-activities) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Workflows and the Database Session: Commit, Fork and Join](videos/workflows-session-activities) | 4:59 | [https://youtu.be/qGmjXRYENVI](https://youtu.be/qGmjXRYENVI) | OrchardCMS/OrchardCore |
 | [Timer Workflows: Run Tasks on a Schedule](videos/workflows-timers) | 4:07 | [https://youtu.be/afsRRLc6MW0](https://youtu.be/afsRRLc6MW0) | OrchardCMS/OrchardCore |
 | [Workflows: React to Registrations, Sign-Ins and Role Changes](videos/workflows-user-events) | 5:10 | [https://youtu.be/5OSh78XTbI4](https://youtu.be/5OSh78XTbI4) | OrchardCMS/OrchardCore |
 | [X (Twitter): Sign In With X and Post From Workflows](videos/x-twitter-integration) |  | not uploaded | OrchardCMS/OrchardCore |
