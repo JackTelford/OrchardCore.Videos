@@ -96,5 +96,10 @@
     "pullRequest": null,
     "feature": "guide:topics/security"
   },
-  "length": "7:17"
+  "length": "7:17",
+  "youtube": {
+    "id": "PxKUWRXGKas",
+    "url": "https://youtu.be/PxKUWRXGKas",
+    "version": "v1"
+  }
 }

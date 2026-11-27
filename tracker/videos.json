@@ -3756,7 +3756,7 @@
       "src/docs/topics/security/README.md",
       "src/docs/topics/security/security-settings.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 6.4,
     "words": 962,
     "contentCommit": "",
@@ -3764,9 +3764,9 @@
     "recordedOn": "2026-11-16",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/402",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "secure-your-site/v1",
+    "youtubeId": "PxKUWRXGKas",
+    "publishedOn": "2026-11-27",
     "notes": ""
   },
   {
