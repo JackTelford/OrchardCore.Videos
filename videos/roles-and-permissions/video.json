@@ -24,7 +24,44 @@
     "Orchard Core",
     "Roles and Permissions"
   ],
-  "chapters": [],
+  "chapters": [
+    {
+      "time": "0:00",
+      "title": "Introduction"
+    },
+    {
+      "time": "0:15",
+      "title": "Roles and permissions"
+    },
+    {
+      "time": "1:21",
+      "title": "The Roles page"
+    },
+    {
+      "time": "2:20",
+      "title": "Create a role"
+    },
+    {
+      "time": "2:50",
+      "title": "Choose permissions"
+    },
+    {
+      "time": "4:09",
+      "title": "Give a role to a user"
+    },
+    {
+      "time": "4:48",
+      "title": "Delete a role"
+    },
+    {
+      "time": "5:07",
+      "title": "To sum up"
+    },
+    {
+      "time": "5:24",
+      "title": "Wrap-up"
+    }
+  ],
   "links": [
     {
       "label": "Documentation: Roles",
@@ -56,5 +93,6 @@
     "repository": "OrchardCMS/OrchardCore",
     "pullRequest": null,
     "feature": "OrchardCore.Roles"
-  }
+  },
+  "length": "5:36"
 }
