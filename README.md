@@ -254,7 +254,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Users: Create, Edit, Disable and Delete Accounts](videos/users-manage) | 5:33 | [https://youtu.be/zuhO5OFcxmA](https://youtu.be/zuhO5OFcxmA) | OrchardCMS/OrchardCore |
 | [Password and Lockout Options: Configure ASP.NET Core Identity](videos/users-password-and-lockout-options) |  | not uploaded | OrchardCMS/OrchardCore |
 | [User Registration: Let Visitors Create Accounts](videos/users-registration) | 5:28 | [https://youtu.be/bEGdevqvzPk](https://youtu.be/bEGdevqvzPk) | OrchardCMS/OrchardCore |
-| [Reset Password: Let Users Recover Their Accounts](videos/users-reset-password) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Reset Password: Let Users Recover Their Accounts](videos/users-reset-password) | 4:41 | [https://youtu.be/IN4Y8boTxd8](https://youtu.be/IN4Y8boTxd8) | OrchardCMS/OrchardCore |
 | [Authentication Ticket Store: Keep Sign-In Tickets on the Server](videos/users-ticket-store) |  | not uploaded | OrchardCMS/OrchardCore |
 | [User Time Zone and Culture: Personal Preferences for Each User](videos/users-time-zone-and-culture) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Two-Factor Authentication: Authenticator App, Email and SMS](videos/users-two-factor-authentication) |  | not uploaded | OrchardCMS/OrchardCore |
