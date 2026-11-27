@@ -193,7 +193,7 @@ to make a video again, or to change how it appears on YouTube.
 | [Redis: Distributed Cache, Locks, Bus and Data Protection](videos/redis) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Resources: Declare and Include Scripts and Stylesheets](videos/resources-scripts-styles) | 6:03 | [https://youtu.be/Iy_tJVNDFRs](https://youtu.be/Iy_tJVNDFRs) | OrchardCMS/OrchardCore |
 | [Response Compression: Smaller Responses With Gzip and Brotli](videos/response-compression) |  | not uploaded | OrchardCMS/OrchardCore |
-| [Roles and Permissions: Control Who Can Do What](videos/roles-and-permissions) |  | not uploaded | OrchardCMS/OrchardCore |
+| [Roles and Permissions: Control Who Can Do What](videos/roles-and-permissions) | 5:36 | [https://youtu.be/Jz57DRQlIts](https://youtu.be/Jz57DRQlIts) | OrchardCMS/OrchardCore |
 | [Content Permissions: By Content Type and by Owner](videos/roles-content-permissions) |  | not uploaded | OrchardCMS/OrchardCore |
 | [Rules: Conditions That Decide When a Layer Shows](videos/rules-conditions) | 5:39 | [https://youtu.be/hBkhnyMqNW8](https://youtu.be/hBkhnyMqNW8) | OrchardCMS/OrchardCore |
 | [Run Code When a Tenant Starts](videos/run-code-on-startup) |  | not uploaded | OrchardCMS/OrchardCore |

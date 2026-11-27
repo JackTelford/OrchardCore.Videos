@@ -3699,7 +3699,7 @@
       "src/docs/reference/modules/Security/Permissions.md",
       "src/docs/topics/security/roles.md"
     ],
-    "status": "in-review",
+    "status": "published",
     "estimatedMinutes": 5.4,
     "words": 811,
     "contentCommit": "",
@@ -3707,9 +3707,9 @@
     "recordedOn": "2026-11-17",
     "reviewedBy": "",
     "pullRequest": "https://github.com/OrchardCMS/OrchardCore.Videos/pull/400",
-    "release": "",
-    "youtubeId": "",
-    "publishedOn": "",
+    "release": "roles-and-permissions/v1",
+    "youtubeId": "Jz57DRQlIts",
+    "publishedOn": "2026-11-27",
     "notes": ""
   },
   {
